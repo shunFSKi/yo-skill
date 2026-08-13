@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>状态配色三选一 · yo-skill</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="yo.css">
+<script src="yo.js"></script>
+<style>
+/* ---- 三套非蓝紫候选（只覆盖 accent 族；ok/danger 三列统一 Radix 低饱和绿红，琥珀提醒系共用现有定稿） ---- */
+
+/* A · 翡翠 —— Radix jade 同族，克制的高级绿，小众不廉价 */
+.scheme-a {
+  --accent: #29A383; --accent-deep: #26997B; --accent-ink: #208368;
+  --accent-soft: #E6F7ED; --accent-softer: #F2FAF6;
+}
+[data-mode="dark"] .scheme-a {
+  --accent: #27B08B; --accent-deep: #1FD8A4; --accent-ink: #1FD8A4;
+  --accent-soft: rgba(39,176,139,.18); --accent-softer: rgba(39,176,139,.10);
+}
+/* A 列：主色与成功绿同族，徽章改中性灰 + 翡翠勾，避免两个绿打架 */
+.scheme-a .chip-mint { background: var(--neutral-soft); color: var(--ink-2); }
+
+/* B · 番茄红 —— Raycast 式点睛红，个性最强 */
+.scheme-b {
+  --accent: #E54D2E; --accent-deep: #DD4425; --accent-ink: #D13415;
+  --accent-soft: #FEEBE7; --accent-softer: #FFF5F2;
+}
+[data-mode="dark"] .scheme-b {
+  --accent: #EC6142; --accent-deep: #FF977D; --accent-ink: #FF977D;
+  --accent-soft: rgba(236,97,66,.18); --accent-softer: rgba(236,97,66,.10);
+}
+
+/* C · 墨黑 + 翡翠点缀 —— 按钮回归墨黑高级感，翡翠只做开关/选中/焦点指示 */
+.scheme-c {
+  --accent: #29A383; --accent-deep: #26997B; --accent-ink: #208368;
+  --accent-soft: #E6F7ED; --accent-softer: #F2FAF6;
+}
+[data-mode="dark"] .scheme-c {
+  --accent: #27B08B; --accent-deep: #1FD8A4; --accent-ink: #1FD8A4;
+  --accent-soft: rgba(39,176,139,.18); --accent-softer: rgba(39,176,139,.10);
+}
+.scheme-c .btn:not(.btn-quiet):not(.btn-ghost):not(.btn-outline-mint) { background: var(--ink); color: var(--paper); }
+.scheme-c .btn:not(.btn-quiet):not(.btn-ghost):not(.btn-outline-mint):hover { background: var(--ink-2); }
+.scheme-c .btn-outline-mint { border-color: var(--ink-3); color: var(--ink); }
+.scheme-c .btn-outline-mint:hover { background: var(--paper-deep); }
+/* C 列：徽章同样改中性灰 + 翡翠勾 */
+.scheme-c .chip-mint { background: var(--neutral-soft); color: var(--ink-2); }
+
+/* 三列共享的成功绿 / 危险红（Radix 低饱和系） */
+.scheme-a, .scheme-b, .scheme-c {
+  --ok: #30A46C; --ok-ink: #218358; --ok-soft: #E6F6EB; --ok-softer: #F2FBF5;
+  --danger: #E5484D; --danger-ink: #CE2C31; --danger-soft: #FEEBEC;
+}
+[data-mode="dark"] .scheme-a, [data-mode="dark"] .scheme-b, [data-mode="dark"] .scheme-c {
+  --ok: #33B074; --ok-ink: #3DD68C; --ok-soft: rgba(61,214,140,.14); --ok-softer: rgba(61,214,140,.08);
+  --danger: #EC5D5E; --danger-ink: #FF9592; --danger-soft: rgba(229,72,77,.16);
+}
+/* B 列：危险红要比番茄主色更正更纯，两个红才不打架 */
+.scheme-b { --danger: #CE2C31; --danger-ink: #B3271E; }
+[data-mode="dark"] .scheme-b { --danger: #FF6369; --danger-ink: #FF9592; }
+
+/* ---- 对比页布局 ---- */
+.cmp-wrap { max-width: 1240px; margin: 0 auto; padding: 40px 32px 64px; }
+.cmp-head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 8px; }
+.cmp-title { font-size: 26px; font-weight: 800; letter-spacing: -0.025em; white-space: nowrap; }
+.cmp-sub { color: var(--ink-3); font-size: 13.5px; margin-bottom: 28px; }
+.cmp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.cmp-col { background: var(--paper); border: 1px solid var(--hairline); border-radius: var(--radius); padding: 22px; }
+.cmp-name { font-size: 16px; font-weight: 750; letter-spacing: -0.01em; }
+.cmp-src { font-size: 12.5px; color: var(--ink-3); margin: 4px 0 18px; }
+.cmp-sec { margin-bottom: 18px; }
+.cmp-label { font-size: 11px; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
+.cmp-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.cmp-col .list { margin-top: 4px; }
+.cmp-col .agent-tab { padding: 14px; }
+@media (max-width: 1080px) { .cmp-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="cmp-wrap">
+
+  <div class="cmp-head">
+    <div class="cmp-title">状态配色三选一</div>
+    <button class="nav-item mode-toggle" onclick="yoToggleMode()" style="margin-left:auto;border:1px solid var(--hairline);border-radius:9px;padding:7px 12px;">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px;"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      <span class="label label-to-dark">深色模式</span>
+      <span class="label label-to-light">浅色模式</span>
+    </button>
+  </div>
+  <p class="cmp-sub">三套都不含蓝紫：翡翠（克制高级绿）/ 番茄红（Raycast 式点睛）/ 墨黑 + 翡翠点缀（按钮回归黑白，彩色只做指示）；成功绿、危险红、琥珀提醒色三套共用定稿，不参与对比。右上角切深色看暗态。</p>
+
+  <div class="cmp-grid">
+
+    <!-- A · 翡翠 -->
+    <div class="cmp-col scheme-a">
+      <div class="cmp-name">A · 翡翠</div>
+      <div class="cmp-src">Radix jade 同族 · 克制的高级绿，小众不廉价（#29A383 / #30A46C / #E5484D）</div>
+
+      <div class="cmp-sec">
+        <div class="cmp-label">按钮</div>
+        <div class="cmp-row">
+          <button class="btn btn-sm">安装</button>
+          <button class="btn btn-sm btn-outline-mint">更新到 v1.4</button>
+          <button class="btn btn-sm btn-quiet">卸载</button>
+        </div>
+      </div>
+
+      <div class="cmp-sec">
+        <div class="cmp-label">开关</div>
+        <div class="cmp-row">
+          <button class="switch on" role="switch" aria-checked="true"></button>
+          <button class="switch" role="switch" aria-checked="false"></button>
+        </div>
+      </div>
+
+      <div class="cmp-sec">
+        <div class="cmp-label">徽章</div>
+        <div class="cmp-row">
+          <span class="chip chip-mint"><span style="color:var(--accent)">✓</span> 已安装</span>
+          <span class="chip chip-mint">已是最新</span>
+          <span class="chip chip-orange">需要 API Key</span>
+        </div>
+      </div>
+
+      <div class="cmp-sec">
+        <div class="cmp-label">标签卡选中</div>
+        <div class="card agent-tab active">
+          <div class="card-top" style="margin-bottom:0;">
+            <div class="agent-logo"><img src="logos/claude.svg" alt="Claude Code"></div>
+            <div>
+              <div class="card-name">Claude Code</div>
+              <div class="card-sub">v2.1.4 · 8 个 Skill、4 个 MCP</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cmp-sec" style="margin-bottom:0;">
+        <div class="cmp-label">列表行</div>
+        <div class="list">
+          <a class="list-row" href="#">
+            <div class="card-icon tone-mint">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+            </div>
+            <div class="list-main">
+              <div class="list-name">小红书文案助手</div>
+              <div class="list-sub">爆款标题与正文一键生成</div>
+            </div>
+            <div class="list-side">
+              <span class="update-flag">有新版本</span>
+            </div>
+          </a>
+          <div class="list-row">
+            <div class="card-icon tone-mint">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <div class="list-main">
+              <div class="list-name">网页搜索</div>
+              <div class="list-sub">让 AI 自己上网查资料</div>
+            </div>
+            <div class="list-side">
+              <span class="chip chip-mint"><span style="color:var(--accent)">✓</span> 自包含</span>
+              <button class="switch on" role="switch" aria-checked="true"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- B · 番茄红 -->
+    <div class="cmp-col scheme-b">
+      <div class="cmp-name">B · 番茄红</div>
+      <div class="cmp-src">Raycast 式点睛 · 工具产品里的个性派（#E54D2E / #30A46C / #CE2C31）</div>
+
+      <div class="cmp-sec">
+        <div class="cmp-label">按钮</div>
+        <div class="cmp-row">
+          <button class="btn btn-sm">安装</button>
+          <button class="btn btn-sm btn-outline-mint">更新到 v1.4</button>
+          <button class="btn btn-sm btn-quiet">卸载</button>
+        </div>
+      </div>
+
+      <div class="cmp-sec">
+        <div class="cmp-label">开关</div>
+        <div class="cmp-row">
+          <button class="switch on" role="switch" aria-checked="true"></button>
+          <button class="switch" role="switch" aria-checked="false"></button>
+        </div>
+      </div>
+
+      <div class="cmp-sec">
+        <div class="cmp-label">徽章</div>
+        <div class="cmp-row">
+          <span class="chip chip-mint">✓ 已安装</span>
+          <span class="chip chip-mint">已是最新</span>
+          <span class="chip chip-orange">需要 API Key</span>
+        </div>
+      </div>
+
+      <div class="cmp-sec">
+        <div class="cmp-label">标签卡选中</div>
+        <div class="card agent-tab active">
+          <div class="card-top" style="margin-bottom:0;">
+            <div class="agent-logo"><img src="logos/claude.svg" alt="Claude Code"></div>
+            <div>
+              <div class="card-name">Claude Code</div>
+              <div class="card-sub">v2.1.4 · 8 个 Skill、4 个 MCP</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cmp-sec" style="margin-bottom:0;">
+        <div class="cmp-label">列表行</div>
+        <div class="list">
+          <a class="list-row" href="#">
+            <div class="card-icon tone-mint">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+            </div>
+            <div class="list-main">
+              <div class="list-name">小红书文案助手</div>
+              <div class="list-sub">爆款标题与正文一键生成</div>
+            </div>
+            <div class="list-side">
+              <span class="update-flag">有新版本</span>
+            </div>
+          </a>
+          <div class="list-row">
+            <div class="card-icon tone-mint">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <div class="list-main">
+              <div class="list-name">网页搜索</div>
+              <div class="list-sub">让 AI 自己上网查资料</div>
+            </div>
+            <div class="list-side">
+              <span class="chip chip-mint">✓ 自包含</span>
+              <button class="switch on" role="switch" aria-checked="true"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- C · 墨黑 + 翡翠点缀 -->
+    <div class="cmp-col scheme-c">
+      <div class="cmp-name">C · 墨黑 + 翡翠点缀</div>
+      <div class="cmp-src">按钮回归墨黑高级感 · 翡翠只做开关/选中/焦点指示，最克制</div>
+
+      <div class="cmp-sec">
+        <div class="cmp-label">按钮</div>
+        <div class="cmp-row">
+          <button class="btn btn-sm">安装</button>
+          <button class="btn btn-sm btn-outline-mint">更新到 v1.4</button>
+          <button class="btn btn-sm btn-quiet">卸载</button>
+        </div>
+      </div>
+
+      <div class="cmp-sec">
+        <div class="cmp-label">开关</div>
+        <div class="cmp-row">
+          <button class="switch on" role="switch" aria-checked="true"></button>
+          <button class="switch" role="switch" aria-checked="false"></button>
+        </div>
+      </div>
+
+      <div class="cmp-sec">
+        <div class="cmp-label">徽章</div>
+        <div class="cmp-row">
+          <span class="chip chip-mint"><span style="color:var(--accent)">✓</span> 已安装</span>
+          <span class="chip chip-mint">已是最新</span>
+          <span class="chip chip-orange">需要 API Key</span>
+        </div>
+      </div>
+
+      <div class="cmp-sec">
+        <div class="cmp-label">标签卡选中</div>
+        <div class="card agent-tab active">
+          <div class="card-top" style="margin-bottom:0;">
+            <div class="agent-logo"><img src="logos/claude.svg" alt="Claude Code"></div>
+            <div>
+              <div class="card-name">Claude Code</div>
+              <div class="card-sub">v2.1.4 · 8 个 Skill、4 个 MCP</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cmp-sec" style="margin-bottom:0;">
+        <div class="cmp-label">列表行</div>
+        <div class="list">
+          <a class="list-row" href="#">
+            <div class="card-icon tone-mint">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+            </div>
+            <div class="list-main">
+              <div class="list-name">小红书文案助手</div>
+              <div class="list-sub">爆款标题与正文一键生成</div>
+            </div>
+            <div class="list-side">
+              <span class="update-flag">有新版本</span>
+            </div>
+          </a>
+          <div class="list-row">
+            <div class="card-icon tone-mint">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <div class="list-main">
+              <div class="list-name">网页搜索</div>
+              <div class="list-sub">让 AI 自己上网查资料</div>
+            </div>
+            <div class="list-side">
+              <span class="chip chip-mint"><span style="color:var(--accent)">✓</span> 自包含</span>
+              <button class="switch on" role="switch" aria-checked="true"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="demo-note">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+    配色决策对比页 · 色值取自 @radix-ui/colors 3.0 官方发布（jade / tomato / green / red）
+  </div>
+
+</div>
+</body>
+</html>

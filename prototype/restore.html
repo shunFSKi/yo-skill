@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>在新电脑上恢复 · yo-skill</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="yo.css">
+<script src="yo.js"></script>
+</head>
+<body>
+<!-- 屏 7：换电脑恢复向导（旅程 4，核心付费场景）。设计判断：一次点击出结果清单——
+     输主密码解锁后只剩一个「一键恢复」按钮，恢复完成直接给清单式结果 + 成功态，这是"值了"的瞬间。
+     未安装的助手给出"顺便安装"引导；旧设备在已信任设备列表可管理。 -->
+<div class="ob-wrap">
+
+  <div class="ob-brand">
+    <span class="ob-brand-mark">yo</span><span class="ob-brand-name">yo-skill</span>
+  </div>
+
+  <div class="ob-steps" aria-hidden="true">
+    <span class="ob-step-dot active" data-dot="1"></span>
+    <span class="ob-step-dot" data-dot="2"></span>
+    <span class="ob-step-dot" data-dot="3"></span>
+  </div>
+
+  <!-- 第 1 步：主密码解锁 -->
+  <section class="ob-panel" data-ob-step="1">
+    <h1 class="ob-title">在新电脑上恢复</h1>
+    <p class="ob-sub">输入主密码，找回你的 <b>12 个 Skill、5 个 MCP、3 个 API Key</b>。<br>数据在云端是密文，只在这台电脑上解开。</p>
+    <div class="ob-pw">
+      <input class="set-input" type="password" placeholder="主密码（演示可随便输）" data-pw aria-label="主密码">
+      <button class="btn" data-go="2">解锁</button>
+    </div>
+    <div class="ob-actions" style="margin-top:22px;">
+      <a class="ob-quiet" href="onboarding.html">我没有账号，第一次用 →</a>
+    </div>
+  </section>
+
+  <!-- 第 2 步：一键点「一键恢复」→ 进度 -->
+  <section class="ob-panel" data-ob-step="2" hidden>
+    <div data-re-intro>
+      <h1 class="ob-title">解锁成功</h1>
+      <p class="ob-sub">云端找到了你的配置，最后一次同步于 <b>昨天 23:41 · 家里电脑</b>。</p>
+      <div class="ob-actions">
+        <button class="btn" data-restore>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          一键恢复
+        </button>
+      </div>
+    </div>
+    <div data-re-progress hidden>
+      <h1 class="ob-title">正在恢复</h1>
+      <p class="ob-sub">全自动进行，大概几秒钟。</p>
+      <div class="install-progress" style="max-width:360px;">
+        <div class="install-track"><div class="install-bar" data-re-bar></div></div>
+        <div class="install-step" data-re-step-text>正在从云端取回加密库…</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 第 3 步：结果清单（成功态 + 未安装助手引导） -->
+  <section class="ob-panel" data-ob-step="3" hidden>
+    <div style="text-align:center;">
+      <span class="install-done-icon ob-done-icon-lg">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      </span>
+      <h1 class="ob-title">欢迎回来</h1>
+      <p class="ob-sub">你的配置已经全部恢复到这台电脑。</p>
+    </div>
+
+    <div class="list ob-agents">
+      <div class="list-row">
+        <div class="list-main">
+          <div class="list-name">12 个 Skill</div>
+          <div class="list-sub">小红书文案助手、代码审查员、中英互译润色 等</div>
+        </div>
+        <span class="chip chip-mint">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          已恢复
+        </span>
+      </div>
+      <div class="list-row">
+        <div class="list-main">
+          <div class="list-name">5 个 MCP</div>
+          <div class="list-sub">文件读写、网页搜索、日历 等</div>
+        </div>
+        <span class="chip chip-mint">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          已恢复
+        </span>
+      </div>
+      <div class="list-row">
+        <div class="list-main">
+          <div class="list-name">3 个 API Key</div>
+          <div class="list-sub">已按助手自动填好，不用重新找</div>
+        </div>
+        <span class="chip chip-mint">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          已恢复
+        </span>
+      </div>
+    </div>
+
+    <div class="list ob-agents">
+      <div class="list-row">
+        <img class="ob-logo-img" src="logos/claude.svg" alt="Claude Code">
+        <div class="list-main">
+          <div class="list-name">Claude Code</div>
+          <div class="list-sub">这台电脑已安装 · 配置已写入</div>
+        </div>
+        <span class="chip chip-mint">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          已生效
+        </span>
+      </div>
+      <div class="list-row" data-codex-row>
+        <img class="ob-logo-img logo-invert" src="logos/openai.svg" alt="Codex">
+        <div class="list-main">
+          <div class="list-name">Codex</div>
+          <div class="list-sub" data-codex-sub>这台电脑还没安装</div>
+        </div>
+        <div class="list-side" data-codex-side>
+          <button class="btn btn-ghost btn-sm" data-codex-install>顺便安装</button>
+        </div>
+      </div>
+    </div>
+
+    <p class="ob-device-note">家里电脑（MacBook Pro）也在同步中，可在 设置 → 云同步与设备 里管理。</p>
+
+    <div class="ob-actions">
+      <a class="btn" href="index.html">进入主屏</a>
+    </div>
+  </section>
+
+  <div class="demo-note">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+    本页为设计原型，恢复与安装过程均为演示动画
+  </div>
+
+</div>
+
+<script>
+(function () {
+  var panels = document.querySelectorAll('[data-ob-step]');
+  var dots = document.querySelectorAll('.ob-step-dot');
+  function showStep(n) {
+    panels.forEach(function (p) { p.hidden = p.getAttribute('data-ob-step') !== String(n); });
+    dots.forEach(function (d) {
+      var k = +d.getAttribute('data-dot');
+      d.classList.toggle('active', k === n);
+      d.classList.toggle('done', k < n);
+    });
+  }
+
+  document.querySelectorAll('[data-go]').forEach(function (btn) {
+    btn.addEventListener('click', function () { showStep(+btn.getAttribute('data-go')); });
+  });
+
+  /* 一键恢复：取回 → 解密 → 写入 → 完成进结果清单 */
+  document.querySelector('[data-restore]').addEventListener('click', function () {
+    document.querySelector('[data-re-intro]').hidden = true;
+    document.querySelector('[data-re-progress]').hidden = false;
+    var bar = document.querySelector('[data-re-bar]');
+    var txt = document.querySelector('[data-re-step-text]');
+    requestAnimationFrame(function () { bar.style.width = '30%'; });
+    setTimeout(function () { txt.textContent = '正在这台电脑上解密…'; bar.style.width = '58%'; }, 800);
+    setTimeout(function () { txt.textContent = '正在写入 Claude Code 的配置…'; bar.style.width = '86%'; }, 1600);
+    setTimeout(function () {
+      bar.style.width = '100%';
+      setTimeout(function () { showStep(3); }, 300);
+    }, 2350);
+  });
+
+  /* 顺便安装 Codex：行内按钮 → 进度文案 → 成功变"已生效" */
+  var installBtn = document.querySelector('[data-codex-install]');
+  installBtn.addEventListener('click', function () {
+    var sub = document.querySelector('[data-codex-sub]');
+    var side = document.querySelector('[data-codex-side]');
+    installBtn.remove();
+    side.innerHTML = '<span class="ob-ver">安装中…</span>';
+    sub.textContent = '正在下载并安装 Codex';
+    setTimeout(function () { sub.textContent = '正在写入配置'; }, 1100);
+    setTimeout(function () {
+      sub.textContent = '已安装 · 配置已写入';
+      side.innerHTML = '<span class="chip chip-mint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>已生效</span>';
+    }, 2100);
+  });
+})();
+</script>
+</body>
+</html>

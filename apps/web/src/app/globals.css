@@ -1,0 +1,284 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ═══════════════════════════════════════════════════════════
+   yo-skill · 纸上墨字 + 一笔翡翠
+   暖纸为底、温墨为字，全站唯一强调色是翡翠——只出现在
+   可点行动与「一笔」手绘笔触签名上。
+   红线：不出现 cindy 招牌（mono 编号 / marquee / ghost 水印 /
+   crosshair / 黑段顶边线卡）；不摆放桌面端截图，产品一律以
+   活组件预览呈现。
+   ═══════════════════════════════════════════════════════════ */
+
+@layer base {
+  :root {
+    /* —— 纸 —— */
+    --paper: #f7f6f2;
+    --paper-2: #efede6;
+    --card: #ffffff;
+
+    /* —— 墨 —— */
+    --ink: #1b1b18;
+    --ink-2: #53534b;
+    --ink-3: #84837a;
+
+    --line: #e4e2d9;
+    --line-strong: #d3d1c5;
+
+    /* —— 翡翠（唯一强调色）—— */
+    --jade: #29a383;
+    --jade-ink: #1c7a61;
+    --jade-soft: rgba(41, 163, 131, 0.13);
+    --jade-softer: rgba(41, 163, 131, 0.07);
+
+    /* —— 行动按钮：深翡翠 —— */
+    --btn: #1e7d60;
+    --btn-hover: #196a52;
+    --btn-ink: #ffffff;
+
+    --danger: #e5484d;
+
+    /* —— 墨块段（换机恢复）—— */
+    --block: #1b1b18;
+    --block-2: #23231f;
+    --on-block: #f4f3ee;
+    --on-block-2: #a9a89e;
+
+    --shadow-card: 0 1px 2px rgba(27, 27, 24, 0.04),
+      0 10px 30px -14px rgba(27, 27, 24, 0.14);
+    --shadow-pop: 0 2px 6px rgba(27, 27, 24, 0.05),
+      0 20px 44px -16px rgba(27, 27, 24, 0.22);
+
+    --font-sans-stack: var(--font-sans), var(--font-sc), "PingFang SC",
+      "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+    --font-mono-stack: ui-monospace, "SF Mono", SFMono-Regular, Menlo,
+      Consolas, monospace;
+  }
+
+  .dark {
+    --paper: #131311;
+    --paper-2: #1b1b18;
+    --card: #1f1f1b;
+
+    --ink: #f2f1eb;
+    --ink-2: #c8c7bd;
+    --ink-3: #8e8d84;
+
+    --line: #2a2a25;
+    --line-strong: #3b3a33;
+
+    --jade: #2fb490;
+    --jade-ink: #45cba6;
+    --jade-soft: rgba(47, 180, 144, 0.16);
+    --jade-softer: rgba(47, 180, 144, 0.08);
+
+    --btn: #33c69e;
+    --btn-hover: #4cd3ab;
+    --btn-ink: #0b1410;
+
+    --danger: #f2555a;
+
+    --block: #1c1d19;
+    --block-2: #25261f;
+    --on-block: #f4f3ee;
+    --on-block-2: #98978e;
+
+    --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.3),
+      0 10px 30px -14px rgba(0, 0, 0, 0.5);
+    --shadow-pop: 0 2px 6px rgba(0, 0, 0, 0.35),
+      0 20px 44px -16px rgba(0, 0, 0, 0.6);
+  }
+
+  * {
+    border-color: var(--line);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-sans-stack);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
+  ::selection {
+    background: var(--jade);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--jade);
+    outline-offset: 3px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--line-strong);
+    border-radius: 999px;
+    border: 2px solid var(--paper);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+@layer components {
+  .yo-container {
+    width: 100%;
+    max-width: 1120px;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+
+  /* 按钮：圆角 12、深翡翠实心 / 墨线描边 */
+  .yo-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.4rem;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.2;
+    transition: background-color 0.15s ease, border-color 0.15s ease,
+      transform 0.15s ease, box-shadow 0.15s ease;
+    cursor: pointer;
+  }
+  .yo-btn:hover {
+    transform: translateY(-1px);
+  }
+  .yo-btn:active {
+    transform: translateY(0);
+  }
+  .yo-btn--primary {
+    background: var(--btn);
+    color: var(--btn-ink);
+    box-shadow: 0 1px 2px rgba(27, 27, 24, 0.12);
+  }
+  .yo-btn--primary:hover {
+    background: var(--btn-hover);
+  }
+  .yo-btn--ghost {
+    background: transparent;
+    border-color: var(--line-strong);
+    color: var(--ink);
+  }
+  .yo-btn--ghost:hover {
+    background: var(--paper-2);
+    border-color: var(--ink-3);
+  }
+
+  /* 卡片：白卡（深色为浅墨卡）+ 发丝描边 + 轻浮起 */
+  .yo-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    box-shadow: var(--shadow-card);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+  .yo-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-pop);
+  }
+
+  /* 翡翠小徽章 */
+  .yo-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.28rem 0.6rem;
+    border-radius: 999px;
+    background: var(--jade-soft);
+    color: var(--jade-ink);
+    font-size: 0.72rem;
+    font-weight: 600;
+    line-height: 1.1;
+    white-space: nowrap;
+  }
+
+  .yo-link {
+    color: var(--jade-ink);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.15s;
+  }
+  .yo-link:hover {
+    color: var(--jade);
+  }
+
+  /* 数据条数字 */
+  .yo-num {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer utilities {
+  .reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  /* 签名「一笔」：翡翠手绘笔触，随 reveal 描画 */
+  .stroke-path {
+    stroke-dasharray: 132;
+    stroke-dashoffset: 132;
+  }
+  .reveal.is-visible .stroke-path {
+    animation: yo-draw 1s 0.35s cubic-bezier(0.5, 0, 0.2, 1) forwards;
+  }
+  @keyframes yo-draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}

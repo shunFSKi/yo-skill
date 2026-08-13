@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>发现 · yo-skill</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="yo.css">
+<script src="yo.js"></script>
+</head>
+<body>
+<!-- 方向契约同 index.html：品类标准（1Password × Raycast × Linear），seed 17bf85bd。 -->
+<div class="app">
+
+  <aside class="sidebar">
+    <div class="logo"><span class="logo-mark">yo</span><span class="label">yo-skill</span></div>
+    <nav class="nav">
+      <a class="nav-item" href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <span class="label">已安装</span>
+      </a>
+      <a class="nav-item active" href="store.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+        <span class="label">发现</span>
+      </a>
+    </nav>
+    <div class="sidebar-foot">
+      <div class="sync-pill"><span class="sync-dot"></span><span>已同步 · 2 台电脑</span></div>
+      <button class="nav-item mode-toggle" onclick="yoToggleMode()" aria-label="切换深浅色模式">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41M17.66 6.34l1.41 1.41M2 12a10 10 0 0 0 10 10h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        <span class="label label-to-dark">深色模式</span>
+        <span class="label label-to-light">浅色模式</span>
+      </button>
+      <a class="nav-item" href="settings.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        <span class="label">设置</span>
+      </a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="main-inner">
+
+      <div class="page-head fade-up" style="margin-bottom:22px;">
+        <h1 class="page-title">发现</h1>
+        <p class="page-sub">给 AI 装新 Skill、添新 MCP。每一个都经过安全扫描，一键安装。</p>
+      </div>
+
+      <!-- Skill / MCP 分段切换（同主屏约定，一页只看一组，2026-08-12 用户选定） -->
+      <div class="subtabs fade-up" role="tablist" aria-label="类型">
+        <button class="subtab active" role="tab" aria-selected="true" data-seg="skill">Skill<span class="subtab-count" data-seg-count="skill"></span></button>
+        <button class="subtab" role="tab" aria-selected="false" data-seg="mcp">MCP<span class="subtab-count" data-seg-count="mcp"></span></button>
+      </div>
+
+      <!-- 分类 tabs + 计数 + 搜索 + 排序（全部真过滤） -->
+      <div class="store-tabs fade-up">
+        <button class="store-tab active" data-cat="推荐">推荐</button>
+        <button class="store-tab" data-cat="写作">写作</button>
+        <button class="store-tab" data-cat="编程">编程</button>
+        <button class="store-tab" data-cat="设计">设计</button>
+        <button class="store-tab" data-cat="办公">办公</button>
+        <button class="store-tab" data-cat="生活">生活</button>
+        <span class="store-count" data-store-count></span>
+        <label class="list-filter store-search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="text" placeholder="搜索 Skill…" data-store-q>
+        </label>
+        <select class="list-sort store-sort-sel" data-store-sort aria-label="排序方式">
+          <option value="stars" selected>最受欢迎</option>
+          <option value="new">最新</option>
+          <option value="rating">评分</option>
+        </select>
+      </div>
+
+      <!-- 卡片网格：JS 按演示数据渲染（卡片字段对齐 §4.3：名称/一句话/作者/星标/已扫描/平台图标） -->
+      <div class="card-grid" id="store-grid"></div>
+
+      <div class="demo-note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+        本页为设计原型，所有条目均为演示数据
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<!-- 安装弹层：装到哪些助手（默认全选已装助手，2026-08-12 用户选定） -->
+<div class="pop-mask" hidden data-pop-mask>
+  <div class="pop" data-pop-body></div>
+</div>
+
+<script>
+(function () {
+  /* ---- 助手名册（与 index.html 同一份口径：logo 文件名、纯黑 logo 深色垫浅色底托） ---- */
+  var LOGOS = { claude: 'claude', codex: 'openai', gemini: 'googlegemini', cursor: 'cursor', windsurf: 'windsurf', copilot: 'githubcopilot', kimi: 'kimi', cline: 'cline', roocode: 'roocode', 'continue': 'continue', aider: 'aider', trae: 'trae', qwen: 'qwen', opencode: 'opencode', replit: 'replit' };
+  var BLACK = { openai: 1, cursor: 1, windsurf: 1, githubcopilot: 1, kimi: 1, cline: 1, 'continue': 1, roocode: 1, aider: 1 };
+  var NAMES = { claude: 'Claude Code', codex: 'Codex', gemini: 'Gemini CLI', cursor: 'Cursor', windsurf: 'Windsurf', copilot: 'GitHub Copilot', kimi: 'Kimi Code', cline: 'Cline', 'continue': 'Continue', roocode: 'Roo Code', aider: 'Aider', trae: 'Trae', qwen: 'Qwen Code', opencode: 'OpenCode', replit: 'Replit' };
+  var BASE_INSTALLED = ['claude', 'codex', 'gemini', 'cursor', 'windsurf', 'copilot', 'kimi', 'cline', 'continue'];
+  var installedAgents = {};
+  BASE_INSTALLED.forEach(function (a) { installedAgents[a] = 1; });
+  try { JSON.parse(localStorage.getItem('yo-installed') || '[]').forEach(function (a) { installedAgents[a] = 1; }); } catch (e) {}
+  function mine(a) { return !!installedAgents[a]; }
+  function myAgents() { return Object.keys(NAMES).filter(mine); }
+
+  /* ---- 演示数据：[名称, 作者, 一句话, 分类, 星标(k), 日期, 评分, 支持的助手, 推荐位, 需要APIKey] ---- */
+  var SKILLS = [
+    ['小红书文案助手', 'xiaohongshu-lab', '爆款标题 + 正文 + 话题标签，一条笔记一次出稿。', '写作', 54.5, '2026-08-02', 4.8, ['claude', 'codex', 'kimi', 'trae'], 1, 0],
+    ['PPT 制作师', 'daymade', '给一个主题，产出结构清晰的整套幻灯片初稿。', '写作', 32.1, '2026-07-28', 4.6, ['claude', 'codex'], 1, 0],
+    ['合同条款体检', 'legal-eye', '把合同里的风险条款挑出来，用大白话讲清楚。', '写作', 18.9, '2026-07-20', 4.5, ['claude'], 0, 0],
+    ['公众号排版师', 'mdnice', 'Markdown 一键变公众号排版，样式不翻车。', '写作', 15.2, '2026-08-05', 4.4, ['claude', 'codex', 'kimi', 'cursor'], 0, 0],
+    ['视频脚本写手', 'reel-writer', '口播脚本带分镜和钩子，照着就能拍。', '写作', 9.4, '2026-07-15', 4.2, ['claude', 'kimi'], 0, 0],
+    ['周报生成器', 'weekly-bot', '把零散的待办和提交记录收成一份像样的周报。', '写作', 7.8, '2026-08-08', 4.3, ['claude', 'codex', 'gemini'], 0, 0],
+    ['代码审查员', 'review-pal', '提交前替你过一遍坑，给出可执行的修改建议。', '编程', 41.3, '2026-08-06', 4.9, ['claude', 'codex', 'kimi', 'cursor', 'gemini'], 1, 0],
+    ['报错翻译官', 'err-reader', '把一屏报错翻成人话，顺便给修法。', '编程', 28.7, '2026-07-30', 4.7, ['claude', 'codex'], 1, 0],
+    ['SQL 优化师', 'sql-tuner', '慢查询给它，还你优化后的语句和解释。', '编程', 16.5, '2026-07-22', 4.5, ['claude', 'codex', 'kimi'], 0, 0],
+    ['Git 提交助手', 'commit-craft', '自动归纳改动，写出规范的提交说明。', '编程', 12.9, '2026-08-09', 4.4, ['claude', 'codex', 'cursor', 'gemini', 'cline'], 0, 0],
+    ['API 文档生成', 'doc-forge', '读代码注释，产出可发布的接口文档。', '编程', 8.6, '2026-07-18', 4.1, ['claude', 'codex'], 0, 0],
+    ['正则小裁缝', 'regex-tailor', '用大白话描述需求，给你能用的正则和测试用例。', '编程', 5.3, '2026-08-01', 4.0, ['claude', 'kimi'], 0, 0],
+    ['截图美化', 'shot-factory', '给截图加边框、阴影和背景，社媒配图一秒出片。', '设计', 12.4, '2026-07-25', 4.5, ['claude', 'codex'], 1, 0],
+    ['配色顾问', 'palette-pal', '给一个主色，配出整套可落地的界面色板。', '设计', 10.8, '2026-08-03', 4.3, ['claude', 'gemini', 'qwen'], 0, 0],
+    ['Banner 生成器', 'banner-press', '输入文案和尺寸，产出多版式 Banner 初稿。', '设计', 6.7, '2026-08-07', 4.2, ['claude', 'kimi', 'gemini'], 0, 0],
+    ['图标命名师', 'icon-namer', '几百个图标文件一次性规范命名。', '设计', 4.2, '2026-07-12', 4.0, ['claude', 'codex'], 0, 0],
+    ['会议纪要员', 'meeting-scribe', '录音转文字后自动整理决议和待办。', '办公', 22.6, '2026-08-04', 4.6, ['claude', 'codex', 'kimi'], 1, 0],
+    ['Excel 公式医生', 'sheet-doc', '看不懂的公式给它，逐段翻译并修错。', '办公', 13.5, '2026-07-26', 4.4, ['claude', 'codex'], 0, 0],
+    ['邮件润色', 'mail-polish', '口气不对重写到对，正式程度可调。', '办公', 8.9, '2026-07-29', 4.2, ['claude', 'kimi'], 0, 0],
+    ['待办整理术', 'todo-ranger', '把散在各处的待办收拢排优先级。', '办公', 5.6, '2026-08-10', 4.1, ['claude', 'codex', 'gemini'], 0, 0],
+    ['旅行规划师', 'trip-craft', '说目的地和天数，给可执行的每日行程。', '生活', 19.7, '2026-08-01', 4.6, ['claude', 'codex', 'kimi', 'gemini'], 1, 0],
+    ['记账分析师', 'money-lens', '导出的账单给它，告诉你钱花哪儿了。', '生活', 9.1, '2026-08-06', 4.3, ['claude', 'codex'], 0, 0],
+    ['菜谱换算师', 'recipe-scale', '几人份随手换，调料克数自动算。', '生活', 7.3, '2026-07-17', 4.2, ['claude'], 0, 0],
+    ['睡眠日记', 'sleep-log', '一句话记录，自动分析睡眠规律。', '生活', 3.8, '2026-07-09', 3.9, ['claude', 'kimi'], 0, 0]
+  ];
+  var MCPS = [
+    ['网页搜索', 'web-fetch', '让 AI 自己上网查资料，答案带来源。', '办公', 26.4, '2026-08-05', 4.7, ['claude', 'codex', 'kimi', 'gemini', 'cursor', 'copilot'], 1, 0],
+    ['文件管理', 'fs-keeper', '读写你电脑里的文件，整理下载文件夹。', '办公', 21.8, '2026-07-31', 4.6, ['claude', 'codex', 'kimi', 'cursor', 'cline'], 1, 0],
+    ['浏览器自动化', 'auto-browser', '替你点网页、填表单、抓数据。', '编程', 14.6, '2026-08-07', 4.5, ['claude', 'codex', 'kimi'], 1, 0],
+    ['图片生成', 'img-forge', '一句话出图，风格可选。', '设计', 12.1, '2026-08-03', 4.3, ['claude', 'gemini', 'qwen'], 0, 1],
+    ['Git 仓库', 'git-lens', '读懂分支、提交与改动，代码考古不费劲。', '编程', 11.2, '2026-08-02', 4.4, ['claude', 'codex', 'kimi', 'cline'], 1, 0],
+    ['设计稿读取', 'figma-peek', '对着设计稿写界面，标注自动提取。', '设计', 10.3, '2026-08-09', 4.4, ['claude', 'codex', 'cursor'], 0, 0],
+    ['数据库查询', 'db-whisper', '用大白话查业务数据，不用学查询语句。', '编程', 9.8, '2026-07-24', 4.3, ['codex'], 0, 1],
+    ['终端命令', 'term-runner', '替你跑命令、看输出，出错会解释。', '编程', 8.4, '2026-07-27', 4.2, ['claude', 'codex', 'gemini', 'windsurf'], 0, 0],
+    ['日历日程', 'cal-mate', '安排会议、查空档、定提醒，一句话搞定。', '办公', 7.2, '2026-07-21', 4.4, ['claude', 'codex'], 1, 0],
+    ['邮箱助手', 'mail-mate', '收发邮件都能代办，支持主流邮箱。', '办公', 6.9, '2026-08-08', 4.1, ['claude', 'kimi', 'opencode'], 0, 1],
+    ['地图路线', 'map-quest', '查路线、算通勤时间。', '生活', 5.5, '2026-07-19', 4.0, ['claude', 'codex', 'kimi'], 0, 1],
+    ['翻译服务', 'trans-bridge', '多引擎翻译，术语表可自定义。', '写作', 4.6, '2026-07-14', 3.9, ['claude', 'codex', 'kimi'], 0, 1]
+  ];
+  /* 初始已装：与主屏演示数据一致（小红书文案助手 Skill、日历日程 MCP） */
+  var installedNames = { '小红书文案助手': 1, '日历日程': 1 };
+  try { JSON.parse(localStorage.getItem('yo-store-installed') || '[]').forEach(function (n) { installedNames[n] = 1; }); } catch (e) {}
+  function saveInstalled() {
+    try { localStorage.setItem('yo-store-installed', JSON.stringify(Object.keys(installedNames))); } catch (e) {}
+  }
+
+  var ICON_SHIELD = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>';
+  var ICON_KEY = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="4.5"/><path d="m10.8 12.2 9.7-9.7M17 5l3 3M14 8l2 2"/></svg>';
+  var ICON_CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>';
+  var ICON_STAR = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+  var ICON_SKILL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/></svg>';
+  var ICON_MCP = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7V3M15 7V3M7 7h10v4a5 5 0 0 1-10 0zM12 16v5"/></svg>';
+
+  var state = { seg: 'skill', cat: '推荐', sort: 'stars', q: '' };
+  var grid = document.getElementById('store-grid');
+  var qInput = document.querySelector('[data-store-q]');
+  var mask = document.querySelector('[data-pop-mask]');
+  var popBody = document.querySelector('[data-pop-body]');
+
+  function items() {
+    var src = state.seg === 'skill' ? SKILLS : MCPS;
+    var list = src.filter(function (it) {
+      if (state.cat === '推荐') { if (!it[8]) return false; }
+      else if (it[3] !== state.cat) return false;
+      if (state.q) {
+        var hay = (it[0] + ' ' + it[1] + ' ' + it[2]).toLowerCase();
+        if (hay.indexOf(state.q.toLowerCase()) === -1) return false;
+      }
+      return true;
+    });
+    var key = { stars: 4, new: 5, rating: 6 }[state.sort];
+    return list.sort(function (a, b) {
+      return key === 5 ? b[5].localeCompare(a[5]) : b[key] - a[key];
+    });
+  }
+
+  function platformIcons(agents) {
+    var sorted = agents.slice().sort(function (a, b) { return (mine(b) ? 1 : 0) - (mine(a) ? 1 : 0); });
+    var html = sorted.slice(0, 4).map(function (a) {
+      var f = LOGOS[a] || a;
+      var yes = mine(a);
+      return '<span class="platform-icon' + (yes ? '' : ' dim') + '" title="' + NAMES[a] + (yes ? ' 可学' : ' 可学（你还没装）') + '">'
+        + '<img' + (BLACK[f] ? ' class="logo-invert"' : '') + ' src="logos/' + f + '.svg" alt="' + NAMES[a] + '"></span>';
+    }).join('');
+    if (sorted.length > 4) html += '<span class="store-more">+' + (sorted.length - 4) + '</span>';
+    return html;
+  }
+
+  function cardHTML(it) {
+    var installed = !!installedNames[it[0]];
+    var action = installed
+      ? '<span class="learned-flag">' + ICON_CHECK + '已安装</span>'
+      : '<button class="btn btn-sm" data-install="' + it[0] + '">安装</button>';
+    return '<div class="card hoverable is-link" data-name="' + it[0] + '">'
+      + '<div class="card-top">'
+      + '<div class="card-icon">' + (state.seg === 'skill' ? ICON_SKILL : ICON_MCP) + '</div>'
+      + '<div><div class="card-name">' + it[0] + '</div><div class="card-sub">@' + it[1] + '</div></div>'
+      + '<div class="platform-icons">' + platformIcons(it[7]) + '</div>'
+      + '</div>'
+      + '<p class="card-desc">' + it[2] + '</p>'
+      + '<div class="store-btn-col">'
+      + '<div class="store-meta">'
+      + '<span style="display:inline-flex;align-items:center;gap:4px;">' + ICON_STAR + it[4].toFixed(1) + 'k</span>'
+      + '<span style="display:inline-flex;align-items:center;gap:4px;">' + ICON_SHIELD + '已扫描</span>'
+      + (it[9] ? '<span class="store-key">' + ICON_KEY + '需要 API Key</span>' : '')
+      + '</div>' + action + '</div></div>';
+  }
+
+  function render() {
+    var list = items();
+    var total = (state.seg === 'skill' ? SKILLS : MCPS).length;
+    document.querySelector('[data-store-count]').textContent = list.length + ' / ' + total + ' 个';
+    grid.innerHTML = list.length
+      ? list.map(cardHTML).join('')
+      : '<div class="store-empty">没有找到匹配的' + (state.seg === 'skill' ? ' Skill' : ' MCP') + '，换个关键词或分类试试。</div>';
+    if (window.yoPaintIcons) window.yoPaintIcons();
+  }
+
+  /* ---- 分段切换 ---- */
+  Array.prototype.forEach.call(document.querySelectorAll('[data-seg]'), function (t) {
+    t.addEventListener('click', function () {
+      state.seg = t.getAttribute('data-seg');
+      Array.prototype.forEach.call(document.querySelectorAll('[data-seg]'), function (x) {
+        var on = x === t;
+        x.classList.toggle('active', on);
+        x.setAttribute('aria-selected', on ? 'true' : 'false');
+      });
+      qInput.placeholder = state.seg === 'skill' ? '搜索 Skill…' : '搜索 MCP…';
+      render();
+    });
+  });
+  /* ---- 分类 / 排序 / 搜索 ---- */
+  Array.prototype.forEach.call(document.querySelectorAll('[data-cat]'), function (t) {
+    t.addEventListener('click', function () {
+      state.cat = t.getAttribute('data-cat');
+      Array.prototype.forEach.call(document.querySelectorAll('[data-cat]'), function (x) { x.classList.toggle('active', x === t); });
+      render();
+    });
+  });
+  document.querySelector('[data-store-sort]').addEventListener('change', function () { state.sort = this.value; render(); });
+  qInput.addEventListener('input', function () { state.q = this.value.trim(); render(); });
+
+  /* ---- 安装弹层：选助手 → 进度 → 成功 ---- */
+  function openPop(it) {
+    var agents = myAgents();
+    popBody.innerHTML = '<div class="pop-title">把「' + it[0] + '」装到哪些助手？</div>'
+      + '<div class="pop-sub">默认全选你已装的助手，装完立即可用。'
+      + (it[9] ? '这个' + (state.seg === 'skill' ? ' Skill' : ' MCP') + '需要 API Key，装完会提示你填。' : '') + '</div>'
+      + '<div class="pop-list">' + agents.map(function (a) {
+        var f = LOGOS[a] || a;
+        return '<label class="pop-row"><img' + (BLACK[f] ? ' class="logo-invert"' : '') + ' src="logos/' + f + '.svg" alt="' + NAMES[a] + '">' + NAMES[a]
+          + '<input type="checkbox" checked data-pop-agent="' + a + '"></label>';
+      }).join('') + '</div>'
+      + '<div class="pop-foot"><button class="btn-ghost btn btn-sm" data-pop-cancel>取消</button>'
+      + '<button class="btn btn-sm" data-pop-go>安装到 ' + agents.length + ' 个助手</button></div>';
+    mask.hidden = false;
+    var goBtn = popBody.querySelector('[data-pop-go]');
+    popBody.querySelectorAll('[data-pop-agent]').forEach(function (cb) {
+      cb.addEventListener('change', function () {
+        var n = popBody.querySelectorAll('[data-pop-agent]:checked').length;
+        goBtn.textContent = n ? '安装到 ' + n + ' 个助手' : '至少选一个助手';
+        goBtn.disabled = !n;
+      });
+    });
+    popBody.querySelector('[data-pop-cancel]').addEventListener('click', closePop);
+    goBtn.addEventListener('click', function () {
+      var n = popBody.querySelectorAll('[data-pop-agent]:checked').length;
+      runInstall(it, n);
+    });
+  }
+  function runInstall(it, n) {
+    popBody.innerHTML = '<div class="pop-center"><div class="pop-title">正在安装「' + it[0] + '」</div>'
+      + '<div class="install-progress"><div class="install-track"><div class="install-bar" data-bar></div></div>'
+      + '<div class="install-step" data-step>下载中…</div></div></div>';
+    var bar = popBody.querySelector('[data-bar]');
+    var step = popBody.querySelector('[data-step]');
+    var steps = [[0, '下载中…', 32], [600, '安全扫描…', 66], [1200, state.seg === 'skill' ? '写入助手目录…' : '写入助手配置…', 100]];
+    steps.forEach(function (s) {
+      setTimeout(function () { step.textContent = s[1]; bar.style.width = s[2] + '%'; }, s[0]);
+    });
+    setTimeout(function () {
+      installedNames[it[0]] = 1;
+      saveInstalled();
+      popBody.innerHTML = '<div class="pop-center"><div class="install-done-icon">' + ICON_CHECK + '</div>'
+        + '<div class="pop-title">「' + it[0] + '」装好了</div>'
+        + '<div class="pop-sub">已装到 ' + n + ' 个助手，去「已安装」页就能看到。'
+        + (it[9] ? '记得在那里填上 API Key。' : '') + '</div></div>';
+      render();
+      setTimeout(closePop, 1100);
+    }, 1900);
+  }
+  function closePop() { mask.hidden = true; }
+  mask.addEventListener('click', function (e) { if (e.target === mask) closePop(); });
+
+  /* ---- 卡片点击：安装按钮进弹层；Skill 卡片本体进详情页 ---- */
+  grid.addEventListener('click', function (e) {
+    var installBtn = e.target.closest('[data-install]');
+    if (installBtn) {
+      var src = state.seg === 'skill' ? SKILLS : MCPS;
+      var it = src.filter(function (x) { return x[0] === installBtn.getAttribute('data-install'); })[0];
+      if (it) openPop(it);
+      return;
+    }
+    var card = e.target.closest('.card.is-link');
+    if (card) location.href = 'skill.html?name=' + encodeURIComponent(card.dataset.name) + '&type=' + state.seg + '&from=store';
+  });
+
+  /* 分段计数 + 首次渲染 */
+  document.querySelector('[data-seg-count="skill"]').textContent = SKILLS.length;
+  document.querySelector('[data-seg-count="mcp"]').textContent = MCPS.length;
+  render();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>重复项 · yo-skill</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="yo.css">
+<script src="yo.js"></script>
+<script src="yo-dedupe.js"></script>
+</head>
+<body>
+<!-- 方向契约同 index.html：品类标准（1Password × Raycast × Linear），seed 17bf85bd。 -->
+<div class="app">
+
+  <aside class="sidebar">
+    <div class="logo"><span class="logo-mark">yo</span><span class="label">yo-skill</span></div>
+    <nav class="nav">
+      <a class="nav-item active" href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <span class="label">已安装</span>
+      </a>
+      <a class="nav-item" href="store.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+        <span class="label">发现</span>
+      </a>
+    </nav>
+    <div class="sidebar-foot">
+      <div class="sync-pill"><span class="sync-dot"></span><span>已同步 · 2 台电脑</span></div>
+      <button class="nav-item mode-toggle" onclick="yoToggleMode()" aria-label="切换深浅色模式">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <span class="label label-to-dark">深色模式</span>
+        <span class="label label-to-light">浅色模式</span>
+      </button>
+      <a class="nav-item" href="settings.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        <span class="label">设置</span>
+      </a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="main-inner">
+
+      <div class="page-head fade-up">
+        <a class="back-link" href="index.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+          已安装
+        </a>
+        <h1 class="page-title">重复项</h1>
+        <p class="page-sub">同一个 Skill 装了多份，合并成一份：一处更新、多处生效。</p>
+      </div>
+
+      <!-- 待处理组 1：跨助手重复（data-dupe 接 yo-dedupe.js：合并/保持现状真持久化） -->
+      <div class="dupe-group fade-up" data-dupe="xhs-copy">
+        <div class="dupe-head">
+          <div class="card-icon tone-mint">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+          </div>
+          <div>
+            <div class="dupe-title">小红书文案助手</div>
+            <div class="dupe-count">同一个 Skill，装了 2 份</div>
+          </div>
+        </div>
+        <div class="dupe-instances">
+          <div class="dupe-instance">
+            <img class="agent-logo-xs" src="logos/claude.svg" alt="Claude Code">
+            <span class="where">Claude Code 里的那份</span>
+            <span class="when">家里电脑 · 6 月 30 日装的</span>
+          </div>
+          <div class="dupe-instance">
+            <img class="agent-logo-xs logo-invert" src="logos/openai.svg" alt="Codex">
+            <span class="where">Codex 里的那份</span>
+            <span class="when">公司电脑 · 7 月 12 日装的</span>
+          </div>
+        </div>
+        <div class="dupe-actions">
+          <button class="btn" data-act="merged">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h1"/><path d="M16 3h1a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-1"/><rect x="8" y="8" width="8" height="13" rx="2"/></svg>
+            合并成一份
+          </button>
+          <button class="btn btn-ghost" data-act="dismissed">保持现状</button>
+          <span class="dupe-hint">推荐合并 · 内容完全一样，合并不影响使用</span>
+        </div>
+      </div>
+
+      <!-- 待处理组 2：同助手内相似 -->
+      <div class="dupe-group fade-up" data-dupe="translate-pair">
+        <div class="dupe-head">
+          <div class="card-icon tone-ink">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
+          </div>
+          <div>
+            <div class="dupe-title">中英互译润色 · 翻译小帮手</div>
+            <div class="dupe-count">两个 Skill 很像，可能只需要留一个</div>
+          </div>
+        </div>
+        <div class="dupe-instances">
+          <div class="dupe-instance">
+            <img class="agent-logo-xs" src="logos/claude.svg" alt="Claude Code">
+            <span class="where">中英互译润色</span>
+            <span class="when">5 月 18 日装的 · 用得最多</span>
+          </div>
+          <div class="dupe-instance">
+            <img class="agent-logo-xs" src="logos/claude.svg" alt="Claude Code">
+            <span class="where">翻译小帮手</span>
+            <span class="when">7 月 3 日装的 · 只用过 1 次</span>
+          </div>
+        </div>
+        <div class="dupe-actions">
+          <button class="btn" data-act="kept-a">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            留「中英互译润色」
+          </button>
+          <button class="btn btn-ghost" data-act="kept-b">留「翻译小帮手」</button>
+          <button class="btn btn-ghost" data-act="kept-both">两个都留</button>
+          <span class="dupe-hint">推荐留常用的那个</span>
+        </div>
+      </div>
+
+      <!-- 已完成组 -->
+      <div class="dupe-group resolved fade-up">
+        <div class="dupe-head" style="margin-bottom:0;">
+          <div class="card-icon tone-mint">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <div>
+            <div class="dupe-title">代码审查员</div>
+            <div class="dupe-count">已合并成一份 · 一处更新、2 个助手同时生效</div>
+          </div>
+          <span class="resolved-flag" style="margin-left:auto;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            已处理
+          </span>
+        </div>
+      </div>
+
+      <p style="font-size:12.5px;color:var(--ink-3);margin-top:20px;">你的选择会被记住，同一组不会再来打扰你。</p>
+
+      <div class="demo-note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+        本页为设计原型，所有条目均为演示数据
+      </div>
+
+    </div>
+  </main>
+</div>
+</body>
+</html>

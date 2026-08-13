@@ -1,0 +1,1737 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>已安装 · yo-skill</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="yo.css">
+<script src="yo.js"></script>
+<script src="yo-dedupe.js"></script>
+</head>
+<body>
+<!--
+THESIS: 品类标准工具界面（1Password 信息架构 × Raycast 单一入口 × Linear 精致度）——首屏即"你的助手列表"：标签卡切换每个 AI 助手，下方即看它的 Skill 与 MCP；搜索框是唯一入口，拒绝开发者仪表盘与统计图表。
+OWN-WORLD: E 墨极黑白极简中性栈（视觉定稿 V2），琥珀橙仅用于"需要照料"的提醒；Inter + 思源黑体，stroke 1.7 线性图标。
+STORY: 小白用户打开就知道"我有哪些 AI 助手、每个装了什么、开没开"，任何意图一键完成。
+FIRST VIEWPORT: 左侧窄边栏（logo/已安装/发现/底部同步状态与深浅切换），主区顶部全局搜索框（⌘K），温和提醒条（重复项），助手标签卡（点按/键盘切换），下方该助手的 Skill 与 MCP。
+FORM: 品类标准（canon），用户经由 standing exit 选定；对标 1Password / Raycast / Linear 的工艺水位。seed 17bf85bd。
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+-->
+<div class="app">
+
+  <aside class="sidebar">
+    <div class="logo"><span class="logo-mark">yo</span><span class="label">yo-skill</span></div>
+    <nav class="nav">
+      <a class="nav-item active" href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <span class="label">已安装</span>
+      </a>
+      <a class="nav-item" href="store.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+        <span class="label">发现</span>
+      </a>
+    </nav>
+    <div class="sidebar-foot">
+      <div class="sync-pill"><span class="sync-dot"></span><span>已同步 · 2 台电脑</span></div>
+      <button class="nav-item mode-toggle" onclick="yoToggleMode()" aria-label="切换深浅色模式">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <span class="label label-to-dark">深色模式</span>
+        <span class="label label-to-light">浅色模式</span>
+      </button>
+      <a class="nav-item" href="settings.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0-4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        <span class="label">设置</span>
+      </a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="main-inner">
+
+      <div class="search fade-up">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" placeholder="搜索 Skill、MCP 或助手…" aria-label="全局搜索">
+        <span class="kbd">⌘ K</span>
+      </div>
+
+      <!-- 提醒条：数字由 yo-dedupe.js 按未处理组数实时渲染；全部处理完整条隐藏 -->
+      <div class="notice fade-up" data-dupe-notice>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h1"/><path d="M16 3h1a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-1"/><rect x="8" y="8" width="8" height="13" rx="2"/></svg>
+        <div>有 <b data-dupe-num>2</b> 组 Skill 重复或相似，合并成一份，一处更新、多处生效。</div>
+        <a class="btn btn-sm" href="dedupe.html">去处理</a>
+      </div>
+
+      <!-- 视图切换：默认按助手看（2026-08-12 用户改定：瓷砖墙优先，统一视图退为第二个标签）；
+           统一视图 = 跨助手按名合并 Skill/MCP（一处更新多处生效——产品的核心） -->
+      <div class="subtabs view-switch fade-up" role="tablist" aria-label="查看方式">
+        <button class="subtab active" role="tab" aria-selected="true" data-view-tab="agents">按助手看</button>
+        <button class="subtab" role="tab" aria-selected="false" data-view-tab="unified">统一视图</button>
+      </div>
+
+      <!-- 统一视图：两个列表都由 JS 从各助手面板 + 演示数据聚合生成（按名合并，自动去重）；
+           Skill/MCP 分段切换（一页只看一组，MCP 不被长 Skill 列表压到屏外——同按助手面板的约定） -->
+      <div data-view="unified" hidden>
+        <div class="subtabs fade-up" role="tablist" aria-label="统一视图的分组">
+          <button class="subtab active" role="tab" aria-selected="true" data-uni-tab="skills">Skill<span class="subtab-count" data-uni-tabnum="skills"></span></button>
+          <button class="subtab" role="tab" aria-selected="false" data-uni-tab="mcp">MCP<span class="subtab-count" data-uni-tabnum="mcp"></span></button>
+        </div>
+        <section class="section fade-up" data-uni-panel="skills">
+          <div class="section-head">
+            <h2 class="section-title">所有 Skill</h2>
+            <span class="section-count" data-uni-count="skills"></span>
+            <span class="section-more" style="cursor:default;">同名自动合并，一处更新、多处生效</span>
+          </div>
+          <div class="list-toolbar" data-for="unified-skills" hidden>
+            <label class="list-filter">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+              <input type="text" placeholder="过滤这些 Skill…" data-filter-input>
+            </label>
+            <select class="list-sort" data-sort-select aria-label="排序方式">
+              <option value="update" selected>有更新优先</option>
+              <option value="name">名称 A→Z</option>
+            </select>
+            <span class="list-count" data-list-count></span>
+          </div>
+          <div class="list" id="unified-skills"></div>
+        </section>
+        <section class="section fade-up" data-uni-panel="mcp" hidden>
+          <div class="section-head">
+            <h2 class="section-title">所有 MCP</h2>
+            <span class="section-count" data-uni-count="mcp"></span>
+            <span class="section-more" style="cursor:default;">开关一次，对所有助手生效</span>
+          </div>
+          <div class="list-toolbar" data-for="unified-mcp" hidden>
+            <label class="list-filter">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+              <input type="text" placeholder="过滤这些 MCP…" data-filter-input>
+            </label>
+            <select class="list-sort" data-sort-select aria-label="排序方式">
+              <option value="update" selected>有更新优先</option>
+              <option value="name">名称 A→Z</option>
+            </select>
+            <span class="list-count" data-list-count></span>
+          </div>
+          <div class="list" id="unified-mcp"></div>
+        </section>
+      </div>
+
+      <div data-view="agents">
+      <!-- 我的 AI 助手：瓷砖墙换行展示，助手多了也不用拖；点瓷砖切换下方内容；超过 12 个出现过滤框 -->
+      <section class="section fade-up">
+        <div class="section-head">
+          <h2 class="section-title">我的 AI 助手</h2>
+          <span class="section-count">9 个已安装 · 6 个未安装</span>
+          <span class="section-more" style="cursor:default;">点瓷砖，看每个助手都会什么</span>
+        </div>
+        <label class="list-filter agent-filter">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="text" placeholder="过滤 15 个助手…" data-agent-filter>
+        </label>
+        <div class="agent-grid" role="tablist" aria-label="选择要查看的助手">
+          <div class="card agent-tile active" role="tab" tabindex="0" aria-selected="true" data-agent="claude" data-skill-path="~/.claude/skills/" data-mcp-path="~/.claude.json" data-name="Claude Code" data-version="v2.1.4" data-skills="16" data-mcps="6" data-update="v2.2.0">
+            <span class="tile-dot" title="有新版本"></span>
+            <div class="agent-logo tone-tomato"><img src="logos/claude.svg" alt=""></div>
+            <div class="tile-main">
+              <div class="tile-name">Claude Code</div>
+              <div class="tile-sub warn">有新版本 v2.2.0</div>
+            </div>
+          </div>
+          <div class="card agent-tile" role="tab" tabindex="0" aria-selected="false" data-agent="codex" data-skill-path="~/.codex/skills/" data-mcp-path="~/.codex/config.toml" data-name="Codex" data-version="v0.8.2" data-skills="6" data-mcps="4">
+            <div class="agent-logo tone-green"><svg class="logo-glyph" viewBox="-1 -.1 949.1 959.8" fill="#000000" role="img" aria-label="Codex"><path d="m925.8 456.3c10.4 23.2 17 48 19.7 73.3 2.6 25.3 1.3 50.9-4.1 75.8-5.3 24.9-14.5 48.8-27.3 70.8-8.4 14.7-18.3 28.5-29.7 41.2-11.3 12.6-23.9 24-37.6 34-13.8 10-28.5 18.4-44.1 25.3-15.5 6.8-31.7 12-48.3 15.4-7.8 24.2-19.4 47.1-34.4 67.7-14.9 20.6-33 38.7-53.6 53.6-20.6 15-43.4 26.6-67.6 34.4-24.2 7.9-49.5 11.8-75 11.8-16.9.1-33.9-1.7-50.5-5.1-16.5-3.5-32.7-8.8-48.2-15.7s-30.2-15.5-43.9-25.5c-13.6-10-26.2-21.5-37.4-34.2-25 5.4-50.6 6.7-75.9 4.1-25.3-2.7-50.1-9.3-73.4-19.7-23.2-10.3-44.7-24.3-63.6-41.4s-35-37.1-47.7-59.1c-8.5-14.7-15.5-30.2-20.8-46.3s-8.8-32.7-10.6-49.6c-1.8-16.8-1.7-33.8.1-50.7 1.8-16.8 5.5-33.4 10.8-49.5-17-18.9-31-40.4-41.4-63.6-10.3-23.3-17-48-19.6-73.3-2.7-25.3-1.3-50.9 4-75.8s14.5-48.8 27.3-70.8c8.4-14.7 18.3-28.6 29.6-41.2s24-24 37.7-34 28.5-18.5 44-25.3c15.6-6.9 31.8-12 48.4-15.4 7.8-24.3 19.4-47.1 34.3-67.7 15-20.6 33.1-38.7 53.7-53.7 20.6-14.9 43.4-26.5 67.6-34.4 24.2-7.8 49.5-11.8 75-11.7 16.9-.1 33.9 1.6 50.5 5.1s32.8 8.7 48.3 15.6c15.5 7 30.2 15.5 43.9 25.5 13.7 10.1 26.3 21.5 37.5 34.2 24.9-5.3 50.5-6.6 75.8-4s50 9.3 73.3 19.6c23.2 10.4 44.7 24.3 63.6 41.4 18.9 17 35 36.9 47.7 59 8.5 14.6 15.5 30.1 20.8 46.3 5.3 16.1 8.9 32.7 10.6 49.6 1.8 16.9 1.8 33.9-.1 50.8-1.8 16.9-5.5 33.5-10.8 49.6 17.1 18.9 31 40.3 41.4 63.6zm-333.2 426.9c21.8-9 41.6-22.3 58.3-39s30-36.5 39-58.4c9-21.8 13.7-45.2 13.7-68.8v-223q-.1-.3-.2-.7-.1-.3-.3-.6-.2-.3-.5-.5-.3-.3-.6-.4l-80.7-46.6v269.4c0 2.7-.4 5.5-1.1 8.1-.7 2.7-1.7 5.2-3.1 7.6s-3 4.6-5 6.5a32.1 32.1 0 0 1 -6.5 5l-191.1 110.3c-1.6 1-4.3 2.4-5.7 3.2 7.9 6.7 16.5 12.6 25.5 17.8 9.1 5.2 18.5 9.6 28.3 13.2 9.8 3.5 19.9 6.2 30.1 8 10.3 1.8 20.7 2.7 31.1 2.7 23.6 0 47-4.7 68.8-13.8zm-455.1-151.4c11.9 20.5 27.6 38.3 46.3 52.7 18.8 14.4 40.1 24.9 62.9 31s46.6 7.7 70 4.6 45.9-10.7 66.4-22.5l193.2-111.5.5-.5q.2-.2.3-.6.2-.3.3-.6v-94l-233.2 134.9c-2.4 1.4-4.9 2.4-7.5 3.2-2.7.7-5.4 1-8.2 1-2.7 0-5.4-.3-8.1-1-2.6-.8-5.2-1.8-7.6-3.2l-191.1-110.4c-1.7-1-4.2-2.5-5.6-3.4-1.8 10.3-2.7 20.7-2.7 31.1s1 20.8 2.8 31.1c1.8 10.2 4.6 20.3 8.1 30.1 3.6 9.8 8 19.2 13.2 28.2zm-50.2-417c-11.8 20.5-19.4 43.1-22.5 66.5s-1.5 47.1 4.6 70c6.1 22.8 16.6 44.1 31 62.9 14.4 18.7 32.3 34.4 52.7 46.2l193.1 111.6q.3.1.7.2h.7q.4 0 .7-.2.3-.1.6-.3l81-46.8-233.2-134.6c-2.3-1.4-4.5-3.1-6.5-5a32.1 32.1 0 0 1 -5-6.5c-1.3-2.4-2.4-4.9-3.1-7.6-.7-2.6-1.1-5.3-1-8.1v-227.1c-9.8 3.6-19.3 8-28.3 13.2-9 5.3-17.5 11.3-25.5 18-7.9 6.7-15.3 14.1-22 22.1-6.7 7.9-12.6 16.5-17.8 25.5zm663.3 154.4c2.4 1.4 4.6 3 6.6 5 1.9 1.9 3.6 4.1 5 6.5 1.3 2.4 2.4 5 3.1 7.6.6 2.7 1 5.4.9 8.2v227.1c32.1-11.8 60.1-32.5 80.8-59.7 20.8-27.2 33.3-59.7 36.2-93.7s-3.9-68.2-19.7-98.5-39.9-55.5-69.5-72.5l-193.1-111.6q-.3-.1-.7-.2h-.7q-.3.1-.7.2-.3.1-.6.3l-80.6 46.6 233.2 134.7zm80.5-121h-.1v.1zm-.1-.1c5.8-33.6 1.9-68.2-11.3-99.7-13.1-31.5-35-58.6-63-78.2-28-19.5-61-30.7-95.1-32.2-34.2-1.4-68 6.9-97.6 23.9l-193.1 111.5q-.3.2-.5.5l-.4.6q-.1.3-.2.7-.1.3-.1.7v93.2l233.2-134.7c2.4-1.4 5-2.4 7.6-3.2 2.7-.7 5.4-1 8.1-1 2.8 0 5.5.3 8.2 1 2.6.8 5.1 1.8 7.5 3.2l191.1 110.4c1.7 1 4.2 2.4 5.6 3.3zm-505.3-103.2c0-2.7.4-5.4 1.1-8.1.7-2.6 1.7-5.2 3.1-7.6 1.4-2.3 3-4.5 5-6.5 1.9-1.9 4.1-3.6 6.5-4.9l191.1-110.3c1.8-1.1 4.3-2.5 5.7-3.2-26.2-21.9-58.2-35.9-92.1-40.2-33.9-4.4-68.3 1-99.2 15.5-31 14.5-57.2 37.6-75.5 66.4-18.3 28.9-28 62.3-28 96.5v223q.1.4.2.7.1.3.3.6.2.3.5.6.2.2.6.4l80.7 46.6zm43.8 294.7 103.9 60 103.9-60v-119.9l-103.8-60-103.9 60z"/></svg></div>
+            <div class="tile-main">
+              <div class="tile-name">Codex</div>
+              <div class="tile-sub">v0.8.2</div>
+            </div>
+          </div>
+          <div class="card agent-tile" role="tab" tabindex="0" aria-selected="false" data-agent="gemini" data-skill-path="~/.gemini/skills/" data-mcp-path="~/.gemini/settings.json" data-name="Gemini CLI" data-version="v0.4.1" data-skills="5" data-mcps="3">
+            <div class="agent-logo tone-iris"><img src="logos/googlegemini.svg" alt=""></div>
+            <div class="tile-main">
+              <div class="tile-name">Gemini CLI</div>
+              <div class="tile-sub">v0.4.1</div>
+            </div>
+          </div>
+          <div class="card agent-tile" role="tab" tabindex="0" aria-selected="false" data-agent="cursor" data-skill-path="~/.cursor/skills/" data-mcp-path="~/.cursor/mcp.json" data-name="Cursor" data-version="v1.4.6" data-skills="7" data-mcps="5">
+            <div class="agent-logo tone-blue"><svg class="logo-glyph" viewBox="0 0 24 24" fill="#000000" role="img" aria-label="Cursor"><path d="M11.503.131 1.891 5.678a.84.84 0 0 0-.42.726v11.188c0 .3.162.575.42.724l9.609 5.55a1 1 0 0 0 .998 0l9.61-5.55a.84.84 0 0 0 .42-.724V6.404a.84.84 0 0 0-.42-.726L12.497.131a1.01 1.01 0 0 0-.996 0M2.657 6.338h18.55c.263 0 .43.287.297.515L12.23 22.918c-.062.107-.229.064-.229-.06V12.335a.59.59 0 0 0-.295-.51l-9.11-5.257c-.109-.063-.064-.23.061-.23"/></svg></div>
+            <div class="tile-main">
+              <div class="tile-name">Cursor</div>
+              <div class="tile-sub">v1.4.6</div>
+            </div>
+          </div>
+          <div class="card agent-tile" role="tab" tabindex="0" aria-selected="false" data-agent="windsurf" data-skill-path="~/.codeium/windsurf/skills/" data-mcp-path="~/.codeium/windsurf/mcp_config.json" data-name="Windsurf" data-version="v1.9.2" data-skills="3" data-mcps="2">
+            <div class="agent-logo tone-teal"><svg class="logo-glyph" viewBox="0 0 24 24" fill="#0B100F" role="img" aria-label="Windsurf"><path d="M23.55 5.067c-1.2038-.002-2.1806.973-2.1806 2.1765v4.8676c0 .972-.8035 1.7594-1.7597 1.7594-.568 0-1.1352-.286-1.4718-.7659l-4.9713-7.1003c-.4125-.5896-1.0837-.941-1.8103-.941-1.1334 0-2.1533.9635-2.1533 2.153v4.8957c0 .972-.7969 1.7594-1.7596 1.7594-.57 0-1.1363-.286-1.4728-.7658L.4076 5.1598C.2822 4.9798 0 5.0688 0 5.2882v4.2452c0 .2147.0656.4228.1884.599l5.4748 7.8183c.3234.462.8006.8052 1.3509.9298 1.3771.313 2.6446-.747 2.6446-2.0977v-4.893c0-.972.7875-1.7593 1.7596-1.7593h.003a1.798 1.798 0 0 1 1.4718.7658l4.9723 7.0994c.4135.5905 1.05.941 1.8093.941 1.1587 0 2.1515-.9645 2.1515-2.153v-4.8948c0-.972.7875-1.7594 1.7596-1.7594h.194a.22.22 0 0 0 .2204-.2202v-4.622a.22.22 0 0 0-.2203-.2203Z"/></svg></div>
+            <div class="tile-main">
+              <div class="tile-name">Windsurf</div>
+              <div class="tile-sub">v1.9.2</div>
+            </div>
+          </div>
+          <div class="card agent-tile" role="tab" tabindex="0" aria-selected="false" data-agent="copilot" data-skill-path="~/.github-copilot/skills/" data-mcp-path="~/.config/Code/User/mcp.json" data-name="GitHub Copilot" data-version="v1.372.0" data-skills="4" data-mcps="2">
+            <div class="agent-logo tone-violet"><svg class="logo-glyph" viewBox="0 0 24 24" fill="#000000" role="img" aria-label="GitHub Copilot"><path d="M23.922 16.997C23.061 18.492 18.063 22.02 12 22.02 5.937 22.02.939 18.492.078 16.997A.641.641 0 0 1 0 16.741v-2.869a.883.883 0 0 1 .053-.22c.372-.935 1.347-2.292 2.605-2.656.167-.429.414-1.055.644-1.517a10.098 10.098 0 0 1-.052-1.086c0-1.331.282-2.499 1.132-3.368.397-.406.89-.717 1.474-.952C7.255 2.937 9.248 1.98 11.978 1.98c2.731 0 4.767.957 6.166 2.093.584.235 1.077.546 1.474.952.85.869 1.132 2.037 1.132 3.368 0 .368-.014.733-.052 1.086.23.462.477 1.088.644 1.517 1.258.364 2.233 1.721 2.605 2.656a.841.841 0 0 1 .053.22v2.869a.641.641 0 0 1-.078.256Zm-11.75-5.992h-.344a4.359 4.359 0 0 1-.355.508c-.77.947-1.918 1.492-3.508 1.492-1.725 0-2.989-.359-3.782-1.259a2.137 2.137 0 0 1-.085-.104L4 11.746v6.585c1.435.779 4.514 2.179 8 2.179 3.486 0 6.565-1.4 8-2.179v-6.585l-.098-.104s-.033.045-.085.104c-.793.9-2.057 1.259-3.782 1.259-1.59 0-2.738-.545-3.508-1.492a4.359 4.359 0 0 1-.355-.508Zm2.328 3.25c.549 0 1 .451 1 1v2c0 .549-.451 1-1 1-.549 0-1-.451-1-1v-2c0-.549.451-1 1-1Zm-5 0c.549 0 1 .451 1 1v2c0 .549-.451 1-1 1-.549 0-1-.451-1-1v-2c0-.549.451-1 1-1Zm3.313-6.185c.136 1.057.403 1.913.878 2.497.442.544 1.134.938 2.344.938 1.573 0 2.292-.337 2.657-.751.384-.435.558-1.15.558-2.361 0-1.14-.243-1.847-.705-2.319-.477-.488-1.319-.862-2.824-1.025-1.487-.161-2.192.138-2.533.529-.269.307-.437.808-.438 1.578v.021c0 .265.021.562.063.893Zm-1.626 0c.042-.331.063-.628.063-.894v-.02c-.001-.77-.169-1.271-.438-1.578-.341-.391-1.046-.69-2.533-.529-1.505.163-2.347.537-2.824 1.025-.462.472-.705 1.179-.705 2.319 0 1.211.175 1.926.558 2.361.365.414 1.084.751 2.657.751 1.21 0 1.902-.394 2.344-.938.475-.584.742-1.44.878-2.497Z"/></svg></div>
+            <div class="tile-main">
+              <div class="tile-name">GitHub Copilot</div>
+              <div class="tile-sub">v1.372.0</div>
+            </div>
+          </div>
+          <div class="card agent-tile" role="tab" tabindex="0" aria-selected="false" data-agent="kimi" data-skill-path="~/.kimi-code/skills/" data-mcp-path="~/.kimi-code/config.toml" data-name="Kimi Code" data-version="v0.3.0" data-skills="4" data-mcps="3">
+            <div class="agent-logo tone-indigo"><svg class="logo-glyph" viewBox="0 0 24 24" fill="#000000" role="img" aria-label="Kimi Code"><path d="M21.765.351C22.998.351 24 1.353 24 2.586S22.998 4.82 21.765 4.82h-1.974c-.15 0-.26-.12-.26-.26V2.586A2.237 2.237 0 0 1 21.765.35M9.41 13.388l8.447-8.377c.16-.16.07-.471-.14-.471h-4.55s-.1.02-.14.06l-9.099 9.029c-.14.14-.35.02-.35-.21V4.81c0-.15-.1-.27-.221-.27H.22c-.12 0-.22.12-.22.27v18.57c0 .15.1.27.22.27h3.137c.12 0 .22-.12.22-.27v-3.79c0-.08.03-.16.08-.21l2.826-2.796c.07-.07.16-.08.241-.03l7.546 5.551a8.9 8.9 0 0 0 4.018 1.493c.12.01.23-.11.23-.27V19.76c0-.14-.08-.25-.19-.26a5.8 5.8 0 0 1-2.355-.942l-6.533-4.73c-.14-.09-.15-.32-.03-.441"/></svg></div>
+            <div class="tile-main">
+              <div class="tile-name">Kimi Code</div>
+              <div class="tile-sub">v0.3.0</div>
+            </div>
+          </div>
+          <div class="card agent-tile" role="tab" tabindex="0" aria-selected="false" data-agent="cline" data-skill-path="~/.cline/skills/" data-mcp-path="…/globalStorage/cline_mcp_settings.json" data-name="Cline" data-version="v3.28.0" data-skills="5" data-mcps="4">
+            <div class="agent-logo tone-pink"><svg class="logo-glyph" viewBox="0 0 24 24" fill="#18181B" role="img" aria-label="Cline"><path d="m23.365 13.556-1.442-2.895V8.994c0-2.764-2.218-5.002-4.954-5.002h-2.464c.178-.367.276-.779.276-1.213A2.77 2.77 0 0 0 12.018 0a2.77 2.77 0 0 0-2.763 2.779c0 .434.098.846.276 1.213H7.067c-2.736 0-4.954 2.238-4.954 5.002v1.667L.64 13.549c-.149.29-.149.636 0 .927l1.472 2.855v1.667C2.113 21.762 4.33 24 7.067 24h9.902c2.736 0 4.954-2.238 4.954-5.002V17.33l1.44-2.865c.143-.286.143-.622.002-.91m-12.854 2.36a2.27 2.27 0 0 1-2.261 2.273 2.27 2.27 0 0 1-2.261-2.273v-4.042A2.27 2.27 0 0 1 8.249 9.6a2.267 2.267 0 0 1 2.262 2.274zm7.285 0a2.27 2.27 0 0 1-2.26 2.273 2.27 2.27 0 0 1-2.262-2.273v-4.042A2.267 2.267 0 0 1 15.535 9.6a2.267 2.267 0 0 1 2.261 2.274z"/></svg></div>
+            <div class="tile-main">
+              <div class="tile-name">Cline</div>
+              <div class="tile-sub">v3.28.0</div>
+            </div>
+          </div>
+          <div class="card agent-tile" role="tab" tabindex="0" aria-selected="false" data-agent="continue" data-skill-path="~/.continue/skills/" data-mcp-path="~/.continue/config.json" data-name="Continue" data-version="v1.2.4" data-skills="3" data-mcps="3" data-update="v1.3.0">
+            <span class="tile-dot" title="有新版本"></span>
+            <div class="agent-logo tone-lime"><svg class="logo-glyph" viewBox="0 0 13 13" fill="#000000" role="img" aria-label="Continue">
+    <path d="M10.4742 1.6668L9.77141 2.88516L11.5477 5.95951C11.5607 5.98283 11.5685 6.01135 11.5685 6.03728C11.5685 6.0632 11.5607 6.09172 11.5477 6.11505L9.77141 9.19199L10.4742 10.4104L13 6.03728L10.4742 1.66421V1.6668ZM9.4991 2.72702L10.2019 1.50867H8.79634L8.09357 2.72702H9.5017H9.4991ZM8.09097 3.0433L9.73249 5.88173H11.138L9.4991 3.0433H8.09097ZM9.4991 9.03645L11.138 6.19542H9.73249L8.09097 9.03645H9.4991ZM8.09097 9.35273L8.79374 10.5659H10.1993L9.4965 9.35273H8.08837H8.09097ZM3.32716 10.8666C3.29864 10.8666 3.27271 10.8588 3.24939 10.8458C3.22599 10.8329 3.20527 10.8122 3.19227 10.7889L1.41332 7.71183H0.00777705L2.53362 12.0824H7.58267L6.87991 10.8666H3.32976H3.32716ZM7.15222 10.7085L7.85498 11.9242L8.55775 10.7059L7.85498 9.48755L7.15222 10.7059V10.7085ZM7.58267 9.33201H4.30484L3.60207 10.5503H6.87991L7.58267 9.33201ZM4.02992 9.17647L2.38841 6.33536L1.68562 7.55376L3.32716 10.3948L4.02992 9.17647ZM0.00518489 7.39562H1.41073L2.1135 6.17729H0.71055L0.00518489 7.39562ZM3.18454 1.29611C3.19746 1.27278 3.21826 1.25205 3.24159 1.23908C3.26491 1.22612 3.29344 1.21834 3.31936 1.21834H6.87471L7.57747 0H2.52582L0 4.37305H1.40555L3.17934 1.29871L3.18454 1.29611ZM2.1135 5.90506L1.41073 4.68673H0.00518489L0.707957 5.90506H2.1135ZM3.32196 1.69013L1.68303 4.52859L2.38581 5.74699L4.02472 2.90848L3.32196 1.69013ZM6.87731 1.532H3.59427L4.29704 2.75034H7.58007L6.87731 1.532ZM7.85498 2.5922L8.55515 1.37647L7.85498 0.158126L7.15222 1.37388L7.85498 2.5922Z"
+          fill="#6C707E"/>
+</svg></div>
+            <div class="tile-main">
+              <div class="tile-name">Continue</div>
+              <div class="tile-sub warn">有新版本 v1.3.0</div>
+            </div>
+          </div>
+          <div class="agent-divider">还没装 · 6 个</div>
+          <div class="card agent-tile is-absent" role="tab" tabindex="0" aria-selected="false" data-agent="roocode" data-skill-path="~/.roo/skills/" data-mcp-path="…/roo-cline/settings/mcp_settings.json" data-installed="false" data-name="Roo Code" data-version="v3.11.2" data-skills="4" data-mcps="3">
+            <div class="agent-logo tone-plum"><svg class="logo-glyph" viewBox="0 0 21 21" fill="#000000" role="img" aria-label="Roo Code">
+<path d="M27.6939 0.698856L27.0853 2.88004C27.0531 2.99552 26.9315 3.06224 26.8157 3.02799L16.6072 0.00893058C16.5393 -0.0111487 16.4658 0.00308892 16.4106 0.047029L6.30049 8.08333C6.27097 8.10679 6.23575 8.12215 6.19836 8.12786L0.18292 9.04674C0.0715357 9.06375 -0.0078759 9.16286 0.000622655 9.27425L0.0267609 9.61687C0.035109 9.72631 0.125665 9.81172 0.236347 9.81456L7.22353 9.99359L7.30322 9.9958L12.4661 7.2622C12.5383 7.22393 12.6263 7.22955 12.693 7.27669L16.3507 9.86111C16.408 9.90164 16.4418 9.96737 16.4412 10.0372L16.4103 13.4664C16.4099 13.5108 16.4235 13.5542 16.4491 13.5906L21.5943 20.9084C21.6346 20.9658 21.7007 21 21.7713 21H23.4001C23.5626 21 23.6668 20.8287 23.5909 20.6863L19.9237 13.8002C19.8878 13.7328 19.8908 13.6516 19.9315 13.5871L21.8435 10.551C21.8643 10.5179 21.8939 10.4912 21.9289 10.4735L28.7648 7.03514C28.8342 7.00021 28.9173 7.00508 28.9821 7.0479L30.9355 8.33851C30.971 8.36193 31.0126 8.37442 31.0552 8.37442H32.83C33.0019 8.37442 33.1047 8.18497 33.0101 8.04276L28.082 0.63809C27.98 0.484786 27.7433 0.521844 27.6939 0.698856Z" fill="black"/>
+<path d="M46.6228 8.1575H49.66C50.2957 8.1575 50.7725 8.0175 51.0903 7.7375C51.4082 7.4575 51.5671 7.0025 51.5671 6.3725C51.5671 5.76583 51.4082 5.32833 51.0903 5.06C50.7725 4.78 50.2957 4.64 49.66 4.64H46.6228V8.1575ZM43.8504 2.505H50.6489C51.2139 2.505 51.7201 2.59833 52.1675 2.785C52.6266 2.96 53.0151 3.205 53.3329 3.52C53.6625 3.835 53.9097 4.2025 54.0745 4.6225C54.2511 5.03083 54.3394 5.47417 54.3394 5.9525C54.3394 6.6875 54.1805 7.32333 53.8627 7.86C53.5566 8.39667 53.0504 8.805 52.344 9.085V9.12C52.6854 9.21333 52.968 9.35917 53.1916 9.5575C53.4153 9.74417 53.5978 9.97167 53.739 10.24C53.8803 10.4967 53.9804 10.7825 54.0392 11.0975C54.1099 11.4125 54.157 11.7275 54.1805 12.0425C54.1923 12.2408 54.204 12.4742 54.2158 12.7425C54.2276 13.0108 54.2452 13.285 54.2688 13.565C54.3041 13.845 54.3512 14.1133 54.4101 14.37C54.4807 14.615 54.5808 14.825 54.7102 15H51.9379C51.7849 14.6033 51.6907 14.1308 51.6554 13.5825C51.6201 13.0342 51.5671 12.5092 51.4964 12.0075C51.4023 11.3542 51.2021 10.8758 50.8961 10.5725C50.59 10.2692 50.0897 10.1175 49.3951 10.1175H46.6228V15H43.8504V2.505Z" fill="black"/>
+<path d="M57.6712 10.485C57.6712 10.8467 57.7065 11.2025 57.7771 11.5525C57.8478 11.8908 57.9655 12.2 58.1303 12.48C58.3069 12.7483 58.5364 12.9642 58.819 13.1275C59.1015 13.2908 59.4547 13.3725 59.8785 13.3725C60.3023 13.3725 60.6554 13.2908 60.9379 13.1275C61.2322 12.9642 61.4618 12.7483 61.6266 12.48C61.8032 12.2 61.9268 11.8908 61.9974 11.5525C62.0681 11.2025 62.1034 10.8467 62.1034 10.485C62.1034 10.1233 62.0681 9.7675 61.9974 9.4175C61.9268 9.0675 61.8032 8.75833 61.6266 8.49C61.4618 8.22167 61.2322 8.00583 60.9379 7.8425C60.6554 7.6675 60.3023 7.58 59.8785 7.58C59.4547 7.58 59.1015 7.6675 58.819 7.8425C58.5364 8.00583 58.3069 8.22167 58.1303 8.49C57.9655 8.75833 57.8478 9.0675 57.7771 9.4175C57.7065 9.7675 57.6712 10.1233 57.6712 10.485ZM55.1637 10.485C55.1637 9.76167 55.2755 9.10833 55.4992 8.525C55.7229 7.93 56.0407 7.42833 56.4528 7.02C56.8648 6.6 57.3592 6.27917 57.936 6.0575C58.5129 5.82417 59.1604 5.7075 59.8785 5.7075C60.5966 5.7075 61.244 5.82417 61.8209 6.0575C62.4095 6.27917 62.9098 6.6 63.3218 7.02C63.7338 7.42833 64.0517 7.93 64.2754 8.525C64.499 9.10833 64.6109 9.76167 64.6109 10.485C64.6109 11.2083 64.499 11.8617 64.2754 12.445C64.0517 13.0283 63.7338 13.53 63.3218 13.95C62.9098 14.3583 62.4095 14.6733 61.8209 14.895C61.244 15.1167 60.5966 15.2275 59.8785 15.2275C59.1604 15.2275 58.5129 15.1167 57.936 14.895C57.3592 14.6733 56.8648 14.3583 56.4528 13.95C56.0407 13.53 55.7229 13.0283 55.4992 12.445C55.2755 11.8617 55.1637 11.2083 55.1637 10.485Z" fill="black"/>
+<path d="M67.5832 10.485C67.5832 10.8467 67.6185 11.2025 67.6892 11.5525C67.7598 11.8908 67.8775 12.2 68.0424 12.48C68.2189 12.7483 68.4485 12.9642 68.731 13.1275C69.0135 13.2908 69.3667 13.3725 69.7905 13.3725C70.2143 13.3725 70.5675 13.2908 70.85 13.1275C71.1443 12.9642 71.3739 12.7483 71.5387 12.48C71.7153 12.2 71.8389 11.8908 71.9095 11.5525C71.9801 11.2025 72.0155 10.8467 72.0155 10.485C72.0155 10.1233 71.9801 9.7675 71.9095 9.4175C71.8389 9.0675 71.7153 8.75833 71.5387 8.49C71.3739 8.22167 71.1443 8.00583 70.85 7.8425C70.5675 7.6675 70.2143 7.58 69.7905 7.58C69.3667 7.58 69.0135 7.6675 68.731 7.8425C68.4485 8.00583 68.2189 8.22167 68.0424 8.49C67.8775 8.75833 67.7598 9.0675 67.6892 9.4175C67.6185 9.7675 67.5832 10.1233 67.5832 10.485ZM65.0758 10.485C65.0758 9.76167 65.1876 9.10833 65.4113 8.525C65.6349 7.93 65.9528 7.42833 66.3648 7.02C66.7768 6.6 67.2713 6.27917 67.8481 6.0575C68.4249 5.82417 69.0724 5.7075 69.7905 5.7075C70.5086 5.7075 71.1561 5.82417 71.7329 6.0575C72.3215 6.27917 72.8218 6.6 73.2339 7.02C73.6459 7.42833 73.9637 7.93 74.1874 8.525C74.4111 9.10833 74.5229 9.76167 74.5229 10.485C74.5229 11.2083 74.4111 11.8617 74.1874 12.445C73.9637 13.0283 73.6459 13.53 73.2339 13.95C72.8218 14.3583 72.3215 14.6733 71.7329 14.895C71.1561 15.1167 70.5086 15.2275 69.7905 15.2275C69.0724 15.2275 68.4249 15.1167 67.8481 14.895C67.2713 14.6733 66.7768 14.3583 66.3648 13.95C65.9528 13.53 65.6349 13.0283 65.4113 12.445C65.1876 11.8617 65.0758 11.2083 65.0758 10.485Z" fill="black"/>
+<path d="M87.9723 6.705C87.9252 6.39 87.8192 6.10417 87.6544 5.8475C87.4896 5.57917 87.2836 5.34583 87.0364 5.1475C86.7892 4.94917 86.5067 4.7975 86.1888 4.6925C85.8827 4.57583 85.559 4.5175 85.2176 4.5175C84.5937 4.5175 84.0639 4.64 83.6284 4.885C83.1928 5.11833 82.8396 5.43917 82.5689 5.8475C82.2981 6.24417 82.098 6.69917 81.9685 7.2125C81.8508 7.72583 81.7919 8.25667 81.7919 8.805C81.7919 9.33 81.8508 9.84333 81.9685 10.345C82.098 10.835 82.2981 11.2783 82.5689 11.675C82.8396 12.0717 83.1928 12.3925 83.6284 12.6375C84.0639 12.8708 84.5937 12.9875 85.2176 12.9875C86.0652 12.9875 86.7244 12.7308 87.1953 12.2175C87.678 11.7042 87.9723 11.0275 88.0782 10.1875H90.7623C90.6916 10.9692 90.5092 11.675 90.2149 12.305C89.9206 12.935 89.5321 13.4717 89.0494 13.915C88.5668 14.3583 88.0017 14.6967 87.3542 14.93C86.7068 15.1633 85.9946 15.28 85.2176 15.28C84.2523 15.28 83.3811 15.1167 82.6042 14.79C81.839 14.4517 81.1915 13.9908 80.6618 13.4075C80.132 12.8242 79.7259 12.1417 79.4434 11.36C79.1608 10.5667 79.0196 9.715 79.0196 8.805C79.0196 7.87167 79.1608 7.00833 79.4434 6.215C79.7259 5.41 80.132 4.71 80.6618 4.115C81.1915 3.52 81.839 3.05333 82.6042 2.715C83.3811 2.37667 84.2523 2.2075 85.2176 2.2075C85.9122 2.2075 86.5655 2.30667 87.1777 2.505C87.8016 2.70333 88.3549 2.995 88.8375 3.38C89.332 3.75333 89.7381 4.22 90.056 4.78C90.3738 5.34 90.5739 5.98167 90.6563 6.705H87.9723Z" fill="black"/>
+<path d="M93.7326 10.485C93.7326 10.8467 93.7679 11.2025 93.8385 11.5525C93.9092 11.8908 94.0269 12.2 94.1917 12.48C94.3683 12.7483 94.5978 12.9642 94.8804 13.1275C95.1629 13.2908 95.5161 13.3725 95.9399 13.3725C96.3637 13.3725 96.7168 13.2908 96.9994 13.1275C97.2937 12.9642 97.5232 12.7483 97.688 12.48C97.8646 12.2 97.9882 11.8908 98.0589 11.5525C98.1295 11.2025 98.1648 10.8467 98.1648 10.485C98.1648 10.1233 98.1295 9.7675 98.0589 9.4175C97.9882 9.0675 97.8646 8.75833 97.688 8.49C97.5232 8.22167 97.2937 8.00583 96.9994 7.8425C96.7168 7.6675 96.3637 7.58 95.9399 7.58C95.5161 7.58 95.1629 7.6675 94.8804 7.8425C94.5978 8.00583 94.3683 8.22167 94.1917 8.49C94.0269 8.75833 93.9092 9.0675 93.8385 9.4175C93.7679 9.7675 93.7326 10.1233 93.7326 10.485ZM91.2251 10.485C91.2251 9.76167 91.337 9.10833 91.5606 8.525C91.7843 7.93 92.1021 7.42833 92.5142 7.02C92.9262 6.6 93.4206 6.27917 93.9975 6.0575C94.5743 5.82417 95.2218 5.7075 95.9399 5.7075C96.658 5.7075 97.3054 5.82417 97.8823 6.0575C98.4709 6.27917 98.9712 6.6 99.3832 7.02C99.7953 7.42833 100.113 7.93 100.337 8.525C100.56 9.10833 100.672 9.76167 100.672 10.485C100.672 11.2083 100.56 11.8617 100.337 12.445C100.113 13.0283 99.7953 13.53 99.3832 13.95C98.9712 14.3583 98.4709 14.6733 97.8823 14.895C97.3054 15.1167 96.658 15.2275 95.9399 15.2275C95.2218 15.2275 94.5743 15.1167 93.9975 14.895C93.4206 14.6733 92.9262 14.3583 92.5142 13.95C92.1021 13.53 91.7843 13.0283 91.5606 12.445C91.337 11.8617 91.2251 11.2083 91.2251 10.485Z" fill="black"/>
+<path d="M107.9 10.45C107.9 10.0767 107.865 9.72083 107.794 9.3825C107.724 9.0325 107.6 8.72917 107.424 8.4725C107.259 8.20417 107.041 7.98833 106.77 7.825C106.499 7.66167 106.158 7.58 105.746 7.58C105.334 7.58 104.987 7.66167 104.704 7.825C104.422 7.98833 104.192 8.20417 104.015 8.4725C103.851 8.74083 103.727 9.05 103.645 9.4C103.574 9.73833 103.539 10.0942 103.539 10.4675C103.539 10.8175 103.58 11.1675 103.662 11.5175C103.745 11.8675 103.874 12.1825 104.051 12.4625C104.239 12.7308 104.469 12.9525 104.739 13.1275C105.022 13.2908 105.357 13.3725 105.746 13.3725C106.158 13.3725 106.499 13.2908 106.77 13.1275C107.053 12.9642 107.276 12.7483 107.441 12.48C107.606 12.2 107.724 11.885 107.794 11.535C107.865 11.185 107.9 10.8233 107.9 10.45ZM107.936 13.845H107.9C107.606 14.335 107.218 14.6908 106.735 14.9125C106.264 15.1225 105.728 15.2275 105.128 15.2275C104.445 15.2275 103.845 15.0992 103.327 14.8425C102.809 14.5742 102.379 14.2183 102.038 13.775C101.708 13.32 101.455 12.8008 101.278 12.2175C101.114 11.6342 101.031 11.0275 101.031 10.3975C101.031 9.79083 101.114 9.2075 101.278 8.6475C101.455 8.07583 101.708 7.57417 102.038 7.1425C102.379 6.71083 102.803 6.36667 103.309 6.11C103.815 5.84167 104.404 5.7075 105.075 5.7075C105.616 5.7075 106.129 5.82417 106.611 6.0575C107.106 6.27917 107.494 6.61167 107.777 7.055H107.812V2.505H110.319V15H107.936V13.845Z" fill="black"/>
+<path d="M117.477 9.505C117.359 8.875 117.147 8.39667 116.841 8.07C116.547 7.74333 116.094 7.58 115.481 7.58C115.081 7.58 114.746 7.65 114.475 7.79C114.216 7.91833 114.004 8.08167 113.839 8.28C113.686 8.47833 113.574 8.68833 113.504 8.91C113.445 9.13167 113.41 9.33 113.398 9.505H117.477ZM113.398 11.08C113.433 11.885 113.639 12.4683 114.016 12.83C114.393 13.1917 114.934 13.3725 115.64 13.3725C116.147 13.3725 116.582 13.25 116.947 13.005C117.312 12.7483 117.536 12.48 117.618 12.2H119.825C119.472 13.285 118.931 14.0608 118.201 14.5275C117.471 14.9942 116.588 15.2275 115.552 15.2275C114.834 15.2275 114.187 15.1167 113.61 14.895C113.033 14.6617 112.544 14.335 112.144 13.915C111.744 13.495 111.432 12.9933 111.208 12.41C110.996 11.8267 110.89 11.185 110.89 10.485C110.89 9.80833 111.002 9.17833 111.226 8.595C111.449 8.01167 111.767 7.51 112.179 7.09C112.591 6.65833 113.08 6.32 113.645 6.075C114.222 5.83 114.858 5.7075 115.552 5.7075C116.329 5.7075 117.006 5.85917 117.583 6.1625C118.16 6.45417 118.631 6.85083 118.995 7.3525C119.372 7.85417 119.643 8.42583 119.808 9.0675C119.973 9.70917 120.031 10.38 119.984 11.08H113.398Z" fill="black"/>
+</svg></div>
+            <div class="tile-main">
+              <div class="tile-name">Roo Code</div>
+              <div class="tile-sub">未安装</div>
+            </div>
+          </div>
+          <div class="card agent-tile is-absent" role="tab" tabindex="0" aria-selected="false" data-agent="aider" data-skill-path="~/.aider/skills/" data-mcp-path="~/.aider.conf.yml" data-installed="false" data-name="Aider" data-version="v0.86.1" data-skills="2" data-mcps="2">
+            <div class="agent-logo tone-crimson"><svg class="logo-glyph" viewBox="0 0 436.000000 436.000000" fill="#000000" role="img" aria-label="Aider"><?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="436.000000pt" height="436.000000pt" viewBox="0 0 436.000000 436.000000"
+ preserveAspectRatio="xMidYMid meet">
+<metadata>
+Created by potrace 1.14, written by Peter Selinger 2001-2017
+</metadata>
+<g transform="translate(0.000000,436.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M0 2180 l0 -2180 2180 0 2180 0 0 2180 0 2180 -2180 0 -2180 0 0
+-2180z m2705 1818 c20 -20 28 -121 30 -398 l2 -305 216 -5 c118 -3 218 -8 222
+-12 3 -3 10 -46 15 -95 5 -48 16 -126 25 -172 17 -86 17 -81 -17 -233 -14 -67
+-13 -365 2 -438 21 -100 22 -159 5 -247 -24 -122 -24 -363 1 -458 23 -88 23
+-213 1 -330 -9 -49 -17 -109 -17 -132 l0 -43 203 0 c111 0 208 -4 216 -9 10
+-6 18 -51 27 -148 8 -76 16 -152 20 -168 7 -39 -23 -361 -37 -387 -10 -18 -21
+-19 -214 -16 -135 2 -208 7 -215 14 -22 22 -33 301 -21 501 6 102 8 189 5 194
+-8 13 -417 12 -431 -2 -12 -12 -8 -146 8 -261 8 -55 8 -95 1 -140 -6 -35 -14
+-99 -17 -143 -9 -123 -14 -141 -41 -154 -18 -8 -217 -11 -679 -11 l-653 0 -11
+33 c-31 97 -43 336 -27 533 5 56 6 113 2 128 l-6 26 -194 0 c-211 0 -252 4
+-261 28 -12 33 -17 392 -6 522 15 186 -2 174 260 180 115 3 213 8 217 12 4 4
+1 52 -5 105 -7 54 -17 130 -22 168 -7 56 -5 91 11 171 10 55 22 130 26 166 4
+36 10 72 15 79 7 12 128 15 665 19 l658 5 8 30 c5 18 4 72 -3 130 -12 115 -7
+346 11 454 10 61 10 75 -1 82 -8 5 -300 9 -650 9 l-636 0 -27 25 c-18 16 -26
+34 -26 57 0 18 -5 87 -10 153 -10 128 5 449 22 472 5 7 26 13 46 15 78 6 1281
+3 1287 -4z"/>
+<path d="M1360 1833 c0 -5 -1 -164 -3 -356 l-2 -347 625 -1 c704 -1 708 -1
+722 7 5 4 7 20 4 38 -29 141 -32 491 -6 595 9 38 8 45 -7 57 -15 11 -139 13
+-675 14 -362 0 -658 -3 -658 -7z"/>
+</g>
+</svg></div>
+            <div class="tile-main">
+              <div class="tile-name">Aider</div>
+              <div class="tile-sub">未安装</div>
+            </div>
+          </div>
+          <div class="card agent-tile is-absent" role="tab" tabindex="0" aria-selected="false" data-agent="trae" data-skill-path="~/.trae/skills/" data-mcp-path="~/.trae/mcp.json" data-installed="false" data-name="Trae" data-version="v2.1.0" data-skills="3" data-mcps="2">
+            <div class="agent-logo tone-cyan"><img src="logos/trae.svg" alt=""></div>
+            <div class="tile-main">
+              <div class="tile-name">Trae</div>
+              <div class="tile-sub">未安装</div>
+            </div>
+          </div>
+          <div class="card agent-tile is-absent" role="tab" tabindex="0" aria-selected="false" data-agent="qwen" data-skill-path="~/.qwen/skills/" data-mcp-path="~/.qwen/settings.json" data-installed="false" data-name="Qwen Code" data-version="v0.0.9" data-skills="2" data-mcps="2">
+            <div class="agent-logo tone-purple"><img src="logos/qwen.svg" alt=""></div>
+            <div class="tile-main">
+              <div class="tile-name">Qwen Code</div>
+              <div class="tile-sub">未安装</div>
+            </div>
+          </div>
+          <div class="card agent-tile is-absent" role="tab" tabindex="0" aria-selected="false" data-agent="opencode" data-skill-path="~/.opencode/skills/" data-mcp-path="~/.opencode/config.json" data-installed="false" data-name="OpenCode" data-version="v0.6.3" data-skills="3" data-mcps="3">
+            <div class="agent-logo tone-ink"><svg class="logo-glyph" viewBox="0 0 24 24" fill="currentColor" role="img" aria-label="OpenCode"><path d="M22 24H2V0h20zM17 4.8H7v14.4h10z"/></svg></div>
+            <div class="tile-main">
+              <div class="tile-name">OpenCode</div>
+              <div class="tile-sub">未安装</div>
+            </div>
+          </div>
+          <div class="card agent-tile is-absent" role="tab" tabindex="0" aria-selected="false" data-agent="replit" data-skill-path="~/.replit/skills/" data-mcp-path="~/.replit/mcp.json" data-installed="false" data-name="Replit" data-version="v1.1.0" data-skills="2" data-mcps="1">
+            <div class="agent-logo tone-orange"><img src="logos/replit.svg" alt=""></div>
+            <div class="tile-main">
+              <div class="tile-name">Replit</div>
+              <div class="tile-sub">未安装</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 当前助手：点中的助手在这里亮出完整信息（版本 / Skill 与 MCP 数 / 更新动作），由 JS 随瓷砖切换填充 -->
+      <div class="agent-current" data-agent-current>
+        <div class="agent-logo tone-tomato"><img src="logos/claude.svg" alt=""></div>
+        <div>
+          <div class="agent-current-name">Claude Code</div>
+          <div class="agent-current-sub">v2.1.4 · 16 个 Skill、6 个 MCP</div>
+        </div>
+        <div class="agent-current-side"><button class="btn btn-sm">更新到 v2.2.0</button></div>
+      </div>
+
+      <!-- 配置位置：当前助手的 Skill 目录与 MCP 配置文件（JS 随瓷砖切换填充；未安装时整条隐藏） -->
+      <div class="config-bar" data-config-bar>
+        <span class="config-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg>
+          Skill 目录<code class="config-path" data-skill-path>~/.claude/skills/</code><button class="config-copy" data-copy="skill">复制</button>
+        </span>
+        <span class="config-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/></svg>
+          MCP 配置<code class="config-path" data-mcp-path>~/.claude.json</code><button class="config-copy" data-copy="mcp">复制</button>
+        </span>
+      </div>
+
+      <!-- Claude Code 的 Skill 与 MCP -->
+      <div data-agent-panel="claude">
+        <div class="subtabs" role="tablist" aria-label="Claude Code 的分组">
+          <button class="subtab active" role="tab" aria-selected="true" data-subtab="skills">Skills<span class="subtab-count">16</span></button>
+          <button class="subtab" role="tab" aria-selected="false" data-subtab="mcp">MCP<span class="subtab-count">6</span></button>
+        </div>
+        <section class="section fade-up" data-subpanel="skills">
+          <!-- 超过 12 条才出现的工具条：过滤 / 排序 / 计数 -->
+          <div class="list-toolbar" data-for="claude-skills">
+            <label class="list-filter">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+              <input type="text" placeholder="过滤这 16 个 Skill…" data-filter-input>
+            </label>
+            <select class="list-sort" data-sort-select aria-label="排序方式">
+              <option value="update" selected>有更新优先</option>
+              <option value="name">名称 A→Z</option>
+            </select>
+            <span class="list-count" data-list-count>16 个 · <b>2 个有更新</b></span>
+          </div>
+          <div class="list" id="claude-skills">
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-mint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">小红书文案助手</div>
+                <div class="list-sub">爆款标题与正文一键生成</div>
+              </div>
+              <div class="list-side">
+                <span class="update-flag">有新版本</span>
+                <span class="chip"><img class="agent-logo-xs" src="logos/claude.svg" alt="Claude Code"><img class="agent-logo-xs logo-invert" src="logos/openai.svg" alt="Codex" style="margin-left:-2px;">2 个助手</span>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">PDF 提取</div>
+                <div class="list-sub">长文档秒变结构化笔记</div>
+              </div>
+              <div class="list-side">
+                <span class="update-flag">有新版本</span>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">代码审查员</div>
+                <div class="list-sub">提交前替你过一遍坑</div>
+              </div>
+              <div class="list-side">
+                <span class="chip"><img class="agent-logo-xs" src="logos/claude.svg" alt="Claude Code"><img class="agent-logo-xs logo-invert" src="logos/openai.svg" alt="Codex" style="margin-left:-2px;">2 个助手</span>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">Excel 大师</div>
+                <div class="list-sub">公式、透视表、清洗一把抓</div>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">中英互译润色</div>
+                <div class="list-sub">地道表达，保留你的语气</div>
+              </div>
+              <div class="list-side">
+                <span class="chip"><img class="agent-logo-xs" src="logos/claude.svg" alt="Claude Code"><img class="agent-logo-xs logo-invert" src="logos/openai.svg" alt="Codex" style="margin-left:-2px;">2 个助手</span>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M8 2v4"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">周报生成器</div>
+                <div class="list-sub">从聊天记录自动攒周报</div>
+              </div>
+              <div class="list-side">
+                <span class="chip"><img class="agent-logo-xs" src="logos/claude.svg" alt="Claude Code"><img class="agent-logo-xs logo-invert" src="logos/openai.svg" alt="Codex" style="margin-left:-2px;">2 个助手</span>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v3"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">会议纪要整理</div>
+                <div class="list-sub">录音转文字，自动提炼待办</div>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="6" r="3"/><path d="M6 9v6"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">Git 提交助手</div>
+                <div class="list-sub">看懂改动，帮你写提交说明</div>
+              </div>
+              <div class="list-side">
+                <span class="chip"><img class="agent-logo-xs" src="logos/claude.svg" alt="Claude Code"><img class="agent-logo-xs logo-invert" src="logos/openai.svg" alt="Codex" style="margin-left:-2px;">2 个助手</span>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">口语陪练</div>
+                <div class="list-sub">每天 10 分钟英语对话</div>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">读书笔记</div>
+                <div class="list-sub">划线自动变知识卡片</div>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">思维导图</div>
+                <div class="list-sub">大纲一键变脑图</div>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M16 13H8M16 17H8M10 9H8"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">简历医生</div>
+                <div class="list-sub">按岗位 JD 改简历</div>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">视频脚本</div>
+                <div class="list-sub">口播稿分镜一次出</div>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">数据可视化</div>
+                <div class="list-sub">表格变图表，带解读</div>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">面试押题</div>
+                <div class="list-sub">按职位生成题库</div>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">记账助手</div>
+                <div class="list-sub">聊天式记一笔，月底有账单</div>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <section class="section fade-up" data-subpanel="mcp" hidden>
+          <!-- 超过 12 条才出现的工具条：过滤 / 排序 / 计数 -->
+          <div class="list-toolbar" data-for="claude-mcp">
+            <label class="list-filter">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+              <input type="text" placeholder="过滤这 6 个 MCP…" data-filter-input>
+            </label>
+            <select class="list-sort" data-sort-select aria-label="排序方式">
+              <option value="update" selected>有更新优先</option>
+              <option value="name">名称 A→Z</option>
+            </select>
+            <span class="list-count" data-list-count>6 个 · <b>1 个有更新</b></span>
+          </div>
+          <div class="list" id="claude-mcp">
+            <div class="list-row">
+              <div class="card-icon tone-mint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name"><i class="status-dot dot-ok"></i>网页搜索</div>
+                <div class="list-sub">让 AI 自己上网查资料</div>
+              </div>
+              <div class="list-side">
+                <span class="chip chip-mint"><span class="mark">✓</span> 自包含</span>
+                <span class="chip"><img class="agent-logo-xs" src="logos/claude.svg" alt="Claude Code"><img class="agent-logo-xs logo-invert" src="logos/openai.svg" alt="Codex" style="margin-left:-2px;">2 个助手</span>
+                <button class="switch on" role="switch" aria-checked="true" aria-label="网页搜索开关"></button>
+              </div>
+            </div>
+            <div class="list-row">
+              <div class="card-icon tone-mint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name"><i class="status-dot dot-ok"></i>文件管理</div>
+                <div class="list-sub">读写你电脑里的文件</div>
+              </div>
+              <div class="list-side">
+                <span class="chip chip-orange">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="width:12px;height:12px;"><path d="m21 2-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0 3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+                  需要 API Key
+                </span>
+                <span class="chip"><img class="agent-logo-xs" src="logos/claude.svg" alt="Claude Code"><img class="agent-logo-xs logo-invert" src="logos/openai.svg" alt="Codex" style="margin-left:-2px;">2 个助手</span>
+                <button class="switch on" role="switch" aria-checked="true" aria-label="文件管理开关"></button>
+              </div>
+            </div>
+            <div class="list-row">
+              <div class="card-icon tone-mint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name"><i class="status-dot dot-ok"></i>日历日程</div>
+                <div class="list-sub">安排会议、提醒事项</div>
+              </div>
+              <div class="list-side">
+                <span class="update-flag">有新版本</span>
+                <span class="chip chip-mint"><span class="mark">✓</span> 自包含</span>
+                <button class="switch on" role="switch" aria-checked="true" aria-label="日历日程开关"></button>
+              </div>
+            </div>
+            <div class="list-row is-off">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name"><i class="status-dot dot-off"></i>数据库查询</div>
+                <div class="list-sub">用大白话查业务数据</div>
+              </div>
+              <div class="list-side">
+                <span class="chip chip-orange">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="width:12px;height:12px;"><path d="m21 2-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0 3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+                  需要 API Key
+                </span>
+                <button class="switch" role="switch" aria-checked="false" aria-label="数据库查询开关"></button>
+              </div>
+            </div>
+            <div class="list-row is-off">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name"><i class="status-dot dot-off"></i>邮箱助手</div>
+                <div class="list-sub">收发邮件都能代办</div>
+              </div>
+              <div class="list-side">
+                <span class="chip chip-orange">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="width:12px;height:12px;"><path d="m21 2-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0 3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+                  需要 API Key
+                </span>
+                <button class="switch" role="switch" aria-checked="false" aria-label="邮箱助手开关"></button>
+              </div>
+            </div>
+            <div class="list-row">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name"><i class="status-dot dot-fail"></i>图片生成</div>
+                <div class="list-sub">一句话出图，风格可选</div>
+              </div>
+              <div class="list-side"><span class="conn conn-fail"><i></i>连接超时</span>
+                <button class="switch on" role="switch" aria-checked="true" aria-label="图片生成开关"></button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Codex 的 Skill 与 MCP -->
+      <div data-agent-panel="codex" hidden>
+        <div class="subtabs" role="tablist" aria-label="Codex 的分组">
+          <button class="subtab active" role="tab" aria-selected="true" data-subtab="skills">Skills<span class="subtab-count">6</span></button>
+          <button class="subtab" role="tab" aria-selected="false" data-subtab="mcp">MCP<span class="subtab-count">4</span></button>
+        </div>
+        <section class="section" data-subpanel="skills">
+          <div class="list">
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-mint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">小红书文案助手</div>
+                <div class="list-sub">爆款标题与正文一键生成</div>
+              </div>
+              <div class="list-side">
+                <span class="update-flag">有新版本</span>
+                <span class="chip"><img class="agent-logo-xs" src="logos/claude.svg" alt="Claude Code"><img class="agent-logo-xs logo-invert" src="logos/openai.svg" alt="Codex" style="margin-left:-2px;">2 个助手</span>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">代码审查员</div>
+                <div class="list-sub">提交前替你过一遍坑</div>
+              </div>
+              <div class="list-side">
+                <span class="chip"><img class="agent-logo-xs" src="logos/claude.svg" alt="Claude Code"><img class="agent-logo-xs logo-invert" src="logos/openai.svg" alt="Codex" style="margin-left:-2px;">2 个助手</span>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">周报生成器</div>
+                <div class="list-sub">从聊天记录自动攒周报</div>
+              </div>
+              <div class="list-side">
+                <span class="chip"><img class="agent-logo-xs" src="logos/claude.svg" alt="Claude Code"><img class="agent-logo-xs logo-invert" src="logos/openai.svg" alt="Codex" style="margin-left:-2px;">2 个助手</span>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">中英互译润色</div>
+                <div class="list-sub">地道表达，保留你的语气</div>
+              </div>
+              <div class="list-side">
+                <span class="chip"><img class="agent-logo-xs" src="logos/claude.svg" alt="Claude Code"><img class="agent-logo-xs logo-invert" src="logos/openai.svg" alt="Codex" style="margin-left:-2px;">2 个助手</span>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">SQL 生成器</div>
+                <div class="list-sub">大白话变查询语句，附解释</div>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="6" r="3"/><path d="M6 9v6"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">Git 提交助手</div>
+                <div class="list-sub">看懂改动，帮你写提交说明</div>
+              </div>
+              <div class="list-side">
+                <span class="chip"><img class="agent-logo-xs" src="logos/claude.svg" alt="Claude Code"><img class="agent-logo-xs logo-invert" src="logos/openai.svg" alt="Codex" style="margin-left:-2px;">2 个助手</span>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <section class="section" data-subpanel="mcp" hidden>
+          <div class="list">
+            <div class="list-row">
+              <div class="card-icon tone-mint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name"><i class="status-dot dot-ok"></i>网页搜索</div>
+                <div class="list-sub">让 AI 自己上网查资料</div>
+              </div>
+              <div class="list-side">
+                <span class="chip chip-mint"><span class="mark">✓</span> 自包含</span>
+                <span class="chip"><img class="agent-logo-xs" src="logos/claude.svg" alt="Claude Code"><img class="agent-logo-xs logo-invert" src="logos/openai.svg" alt="Codex" style="margin-left:-2px;">2 个助手</span>
+                <button class="switch on" role="switch" aria-checked="true" aria-label="网页搜索开关"></button>
+              </div>
+            </div>
+            <div class="list-row">
+              <div class="card-icon tone-mint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name"><i class="status-dot dot-ok"></i>文件管理</div>
+                <div class="list-sub">读写你电脑里的文件</div>
+              </div>
+              <div class="list-side">
+                <span class="chip chip-orange">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="width:12px;height:12px;"><path d="m21 2-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0 3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+                  需要 API Key
+                </span>
+                <span class="chip"><img class="agent-logo-xs" src="logos/claude.svg" alt="Claude Code"><img class="agent-logo-xs logo-invert" src="logos/openai.svg" alt="Codex" style="margin-left:-2px;">2 个助手</span>
+                <button class="switch on" role="switch" aria-checked="true" aria-label="文件管理开关"></button>
+              </div>
+            </div>
+            <div class="list-row is-off">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name"><i class="status-dot dot-off"></i>数据库查询</div>
+                <div class="list-sub">用大白话查业务数据</div>
+              </div>
+              <div class="list-side">
+                <span class="chip chip-orange">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="width:12px;height:12px;"><path d="m21 2-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0 3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+                  需要 API Key
+                </span>
+                <button class="switch" role="switch" aria-checked="false" aria-label="数据库查询开关"></button>
+              </div>
+            </div>
+            <div class="list-row is-off">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name"><i class="status-dot dot-off"></i>浏览器自动化</div>
+                <div class="list-sub">替你点网页、填表单、抓数据</div>
+              </div>
+              <div class="list-side">
+                <span class="chip chip-orange">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="width:12px;height:12px;"><path d="m21 2-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0 3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+                  需要 API Key
+                </span>
+                <button class="switch" role="switch" aria-checked="false" aria-label="浏览器自动化开关"></button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div data-agent-panel="gemini" hidden>
+        <div class="subtabs" role="tablist" aria-label="Gemini CLI 的分组">
+          <button class="subtab active" role="tab" aria-selected="true" data-subtab="skills">Skills<span class="subtab-count">5</span></button>
+          <button class="subtab" role="tab" aria-selected="false" data-subtab="mcp">MCP<span class="subtab-count">3</span></button>
+        </div>
+        <section class="section" data-subpanel="skills">
+          <div class="list">
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-mint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">网页摘要</div>
+                <div class="list-sub">长网页压成三行要点</div>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">邮件润色</div>
+                <div class="list-sub">语气得体，一键回邮件</div>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 19v3"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">会议录音转写</div>
+                <div class="list-sub">录音变纪要和待办</div>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">图片理解问答</div>
+                <div class="list-sub">截张图直接问它</div>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">旅行规划师</div>
+                <div class="list-sub">机酒行程一次排好</div>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <section class="section" data-subpanel="mcp" hidden>
+          <div class="list">
+            <div class="list-row">
+              <div class="card-icon tone-mint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name"><i class="status-dot dot-ok"></i>网页搜索</div>
+                <div class="list-sub">让 AI 自己上网查资料</div>
+              </div>
+              <div class="list-side">
+                <span class="chip chip-mint"><span class="mark">✓</span> 自包含</span>
+                <button class="switch on" role="switch" aria-checked="true" aria-label="网页搜索开关"></button>
+              </div>
+            </div>
+            <div class="list-row">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name"><i class="status-dot dot-ok"></i>文件管理</div>
+                <div class="list-sub">帮你整理、查找本地文件</div>
+              </div>
+              <div class="list-side">
+                <button class="switch on" role="switch" aria-checked="true" aria-label="文件管理开关"></button>
+              </div>
+            </div>
+            <div class="list-row is-off">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name"><i class="status-dot dot-off"></i>地图路线</div>
+                <div class="list-sub">查路线、算通勤时间</div>
+              </div>
+              <div class="list-side">
+                <span class="chip chip-orange">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="width:12px;height:12px;"><path d="m21 2-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0 3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+                  需要 API Key
+                </span>
+                <button class="switch" role="switch" aria-checked="false" aria-label="地图路线开关"></button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div data-agent-panel="cursor" hidden>
+        <div class="subtabs" role="tablist" aria-label="Cursor 的分组">
+          <button class="subtab active" role="tab" aria-selected="true" data-subtab="skills">Skills<span class="subtab-count">7</span></button>
+          <button class="subtab" role="tab" aria-selected="false" data-subtab="mcp">MCP<span class="subtab-count">5</span></button>
+        </div>
+        <section class="section" data-subpanel="skills">
+          <div class="list">
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-mint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">代码解释器</div>
+                <div class="list-sub">选中代码，讲给你听</div>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5 8.5A2.5 2.5 0 0 0 7.2 21h9.6a2.5 2.5 0 0 0 2.2-3.5L14 9V3"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">单元测试生成</div>
+                <div class="list-sub">补上你懒得写的测试</div>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">重构助手</div>
+                <div class="list-sub">老代码安全翻新</div>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">报错翻译官</div>
+                <div class="list-sub">报错信息说人话</div>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">提交信息润色</div>
+                <div class="list-sub">commit 一键写规范</div>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">API 文档速查</div>
+                <div class="list-sub">不离开编辑器查文档</div>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">正则表达式助手</div>
+                <div class="list-sub">描述需求，给你正则</div>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <section class="section" data-subpanel="mcp" hidden>
+          <div class="list">
+            <div class="list-row">
+              <div class="card-icon tone-mint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="6" r="3"/><path d="M6 9v6"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name"><i class="status-dot dot-ok"></i>Git 仓库</div>
+                <div class="list-sub">读懂分支、提交与改动</div>
+              </div>
+              <div class="list-side">
+                <button class="switch on" role="switch" aria-checked="true" aria-label="Git 仓库开关"></button>
+              </div>
+            </div>
+            <div class="list-row">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name"><i class="status-dot dot-ok"></i>终端命令</div>
+                <div class="list-sub">替你跑命令、看输出</div>
+              </div>
+              <div class="list-side">
+                <button class="switch on" role="switch" aria-checked="true" aria-label="终端命令开关"></button>
+              </div>
+            </div>
+            <div class="list-row">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name"><i class="status-dot dot-ok"></i>设计稿读取</div>
+                <div class="list-sub">对着设计稿写界面</div>
+              </div>
+              <div class="list-side">
+                <button class="switch on" role="switch" aria-checked="true" aria-label="设计稿读取开关"></button>
+              </div>
+            </div>
+            <div class="list-row is-off">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name"><i class="status-dot dot-off"></i>数据库查询</div>
+                <div class="list-sub">大白话查业务数据</div>
+              </div>
+              <div class="list-side">
+                <span class="chip chip-orange">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="width:12px;height:12px;"><path d="m21 2-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0 3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+                  需要 API Key
+                </span>
+                <button class="switch" role="switch" aria-checked="false" aria-label="数据库查询开关"></button>
+              </div>
+            </div>
+            <div class="list-row is-off">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name"><i class="status-dot dot-off"></i>浏览器自动化</div>
+                <div class="list-sub">替你点网页、填表单</div>
+              </div>
+              <div class="list-side">
+                <span class="chip chip-orange">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="width:12px;height:12px;"><path d="m21 2-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0 3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+                  需要 API Key
+                </span>
+                <button class="switch" role="switch" aria-checked="false" aria-label="浏览器自动化开关"></button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div data-agent-panel="windsurf" hidden>
+        <div class="subtabs" role="tablist" aria-label="Windsurf 的分组">
+          <button class="subtab active" role="tab" aria-selected="true" data-subtab="skills">Skills<span class="subtab-count">3</span></button>
+          <button class="subtab" role="tab" aria-selected="false" data-subtab="mcp">MCP<span class="subtab-count">2</span></button>
+        </div>
+        <section class="section" data-subpanel="skills">
+          <div class="list">
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-mint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">整库问答</div>
+                <div class="list-sub">整个代码库随问随答</div>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">补全审查</div>
+                <div class="list-sub">大段补全先过一遍</div>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.3 7 12 12 20.7 7"/><line x1="12" y1="22" x2="12" y2="12"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">依赖升级顾问</div>
+                <div class="list-sub">升级前先看清影响</div>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <section class="section" data-subpanel="mcp" hidden>
+          <div class="list">
+            <div class="list-row">
+              <div class="card-icon tone-mint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name"><i class="status-dot dot-ok"></i>文件管理</div>
+                <div class="list-sub">帮你整理、查找本地文件</div>
+              </div>
+              <div class="list-side">
+                <button class="switch on" role="switch" aria-checked="true" aria-label="文件管理开关"></button>
+              </div>
+            </div>
+            <div class="list-row">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name"><i class="status-dot dot-ok"></i>终端命令</div>
+                <div class="list-sub">替你跑命令、看输出</div>
+              </div>
+              <div class="list-side">
+                <button class="switch on" role="switch" aria-checked="true" aria-label="终端命令开关"></button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div data-agent-panel="copilot" hidden>
+        <div class="subtabs" role="tablist" aria-label="GitHub Copilot 的分组">
+          <button class="subtab active" role="tab" aria-selected="true" data-subtab="skills">Skills<span class="subtab-count">4</span></button>
+          <button class="subtab" role="tab" aria-selected="false" data-subtab="mcp">MCP<span class="subtab-count">2</span></button>
+        </div>
+        <section class="section" data-subpanel="skills">
+          <div class="list">
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-mint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">行内补全调优</div>
+                <div class="list-sub">补全更贴你的风格</div>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">聊天问答</div>
+                <div class="list-sub">侧边栏随问随答</div>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5 8.5A2.5 2.5 0 0 0 7.2 21h9.6a2.5 2.5 0 0 0 2.2-3.5L14 9V3"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">测试用例建议</div>
+                <div class="list-sub">帮你想到漏掉的用例</div>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">文档注释生成</div>
+                <div class="list-sub">函数说明一键补齐</div>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <section class="section" data-subpanel="mcp" hidden>
+          <div class="list">
+            <div class="list-row">
+              <div class="card-icon tone-mint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="6" r="3"/><path d="M6 9v6"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name"><i class="status-dot dot-ok"></i>Git 仓库</div>
+                <div class="list-sub">读懂分支、提交与改动</div>
+              </div>
+              <div class="list-side">
+                <button class="switch on" role="switch" aria-checked="true" aria-label="Git 仓库开关"></button>
+              </div>
+            </div>
+            <div class="list-row">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name"><i class="status-dot dot-ok"></i>终端命令</div>
+                <div class="list-sub">替你跑命令、看输出</div>
+              </div>
+              <div class="list-side">
+                <button class="switch on" role="switch" aria-checked="true" aria-label="终端命令开关"></button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div data-agent-panel="kimi" hidden>
+        <div class="subtabs" role="tablist" aria-label="Kimi Code 的分组">
+          <button class="subtab active" role="tab" aria-selected="true" data-subtab="skills">Skills<span class="subtab-count">4</span></button>
+          <button class="subtab" role="tab" aria-selected="false" data-subtab="mcp">MCP<span class="subtab-count">3</span></button>
+        </div>
+        <section class="section" data-subpanel="skills">
+          <div class="list">
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-mint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">长文档速读</div>
+                <div class="list-sub">百页 PDF 三分钟读完</div>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">公众号排版</div>
+                <div class="list-sub">草稿直接变排版稿</div>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">资料收集员</div>
+                <div class="list-sub">全网资料整理成表</div>
+              </div>
+            </a>
+            <a class="list-row" href="skill.html">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name">翻译腔修复</div>
+                <div class="list-sub">译文改成像人写的</div>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <section class="section" data-subpanel="mcp" hidden>
+          <div class="list">
+            <div class="list-row">
+              <div class="card-icon tone-mint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name"><i class="status-dot dot-ok"></i>网页搜索</div>
+                <div class="list-sub">让 AI 自己上网查资料</div>
+              </div>
+              <div class="list-side">
+                <span class="chip chip-mint"><span class="mark">✓</span> 自包含</span>
+                <button class="switch on" role="switch" aria-checked="true" aria-label="网页搜索开关"></button>
+              </div>
+            </div>
+            <div class="list-row">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name"><i class="status-dot dot-ok"></i>文件管理</div>
+                <div class="list-sub">帮你整理、查找本地文件</div>
+              </div>
+              <div class="list-side">
+                <button class="switch on" role="switch" aria-checked="true" aria-label="文件管理开关"></button>
+              </div>
+            </div>
+            <div class="list-row">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+              </div>
+              <div class="list-main">
+                <div class="list-name"><i class="status-dot dot-ok"></i>日历日程</div>
+                <div class="list-sub">安排会议、查空档、定提醒</div>
+              </div>
+              <div class="list-side">
+                <button class="switch on" role="switch" aria-checked="true" aria-label="日历日程开关"></button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      </div>
+      <!-- /data-view="agents" -->
+
+      <div class="demo-note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+        本页为设计原型，所有条目均为演示数据
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script>
+/* Agent 瓷砖墙：点选 / Enter / Space 切换；选中即填充"当前助手"行；
+   无静态面板的 8 个助手用演示数据现场生成面板；?agent=codex 可直达；过滤框即时过滤瓷砖 */
+(function () {
+  var tiles = Array.prototype.slice.call(document.querySelectorAll('.agent-tile'));
+  var current = document.querySelector('[data-agent-current]');
+
+  /* 8 个新助手的演示条目：skills=[名称, 说明]，mcps=[名称, 说明, 开关] */
+  var EXTRA = {
+    cline: { skills: [['代码库问答', '整个项目随问随答'], ['大文件重构', '跨文件改动一次成型'], ['终端排错', '看懂报错，给出修法'], ['提交信息润色', 'commit 一键写规范'], ['单元测试生成', '补上你懒得写的测试']], mcps: [['终端命令', '替你跑命令、看输出', true], ['浏览器自动化', '替你点网页、填表单', true, 'fail'], ['Git 仓库', '读懂分支、提交与改动', true], ['数据库查询', '用大白话查业务数据', false]] },
+    roocode: { skills: [['整库问答', '整个代码库随问随答'], ['代码审查员', '提交前替你过一遍坑'], ['重构助手', '老代码安全翻新'], ['报错翻译官', '报错信息说人话']], mcps: [['终端命令', '替你跑命令、看输出', true], ['文件管理', '读写你电脑里的文件', true], ['网页搜索', '让 AI 自己上网查资料', true]] },
+    continue: { skills: [['代码解释器', '选中代码，讲给你听'], ['文档注释生成', '函数说明一键补齐'], ['单元测试生成', '帮你想到漏掉的用例']], mcps: [['Git 仓库', '读懂分支、提交与改动', true], ['数据库查询', '用大白话查业务数据', false], ['网页搜索', '让 AI 自己上网查资料', true]] },
+    aider: { skills: [['提交信息润色', 'commit 一键写规范'], ['代码审查员', '提交前替你过一遍坑']], mcps: [['Git 仓库', '读懂分支、提交与改动', true], ['终端命令', '替你跑命令、看输出', true]] },
+    trae: { skills: [['整库问答', '整个代码库随问随答'], ['报错翻译官', '报错信息说人话'], ['API 文档速查', '不离开编辑器查文档']], mcps: [['终端命令', '替你跑命令、看输出', true], ['文件管理', '读写你电脑里的文件', true]] },
+    qwen: { skills: [['代码解释器', '选中代码，讲给你听'], ['注释生成', '函数说明一键补齐']], mcps: [['终端命令', '替你跑命令、看输出', true], ['网页搜索', '让 AI 自己上网查资料', false]] },
+    opencode: { skills: [['代码审查员', '提交前替你过一遍坑'], ['重构助手', '老代码安全翻新'], ['提交信息润色', 'commit 一键写规范']], mcps: [['终端命令', '替你跑命令、看输出', true], ['Git 仓库', '读懂分支、提交与改动', true], ['文件管理', '读写你电脑里的文件', true]] },
+    replit: { skills: [['报错翻译官', '报错信息说人话'], ['代码解释器', '选中代码，讲给你听']], mcps: [['网页搜索', '让 AI 自己上网查资料', true]] }
+  };
+  window.YO_EXTRA = EXTRA; /* 统一视图聚合要用 */
+  var ICON_SKILL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/></svg>';
+  var ICON_MCP = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7V3M15 7V3M7 7h10v4a5 5 0 0 1-10 0zM12 16v5"/></svg>';
+  function rowSkill(n, s) {
+    return '<a class="list-row" href="skill.html"><div class="card-icon">' + ICON_SKILL + '</div><div class="list-main"><div class="list-name">' + n + '</div><div class="list-sub">' + s + '</div></div></a>';
+  }
+  function rowMcp(n, s, on, st) {
+    var dot = '<i class="status-dot ' + (st === 'fail' ? 'dot-fail' : on ? 'dot-ok' : 'dot-off') + '"></i>';
+    var reason = st === 'fail' ? '<span class="conn conn-fail"><i></i>启动失败</span>' : '';
+    return '<div class="list-row' + (on ? '' : ' is-off') + '"><div class="card-icon">' + ICON_MCP + '</div><div class="list-main"><div class="list-name">' + dot + n + '</div><div class="list-sub">' + s + '</div></div><div class="list-side">' + reason + '<button class="switch' + (on ? ' on' : '') + '" role="switch" aria-checked="' + on + '" aria-label="' + n + '开关"></button></div></div>';
+  }
+  function buildExtra(agent) {
+    var d = EXTRA[agent];
+    return '<div class="subtabs" role="tablist" aria-label="分组">'
+      + '<button class="subtab active" role="tab" aria-selected="true" data-subtab="skills">Skills<span class="subtab-count">' + d.skills.length + '</span></button>'
+      + '<button class="subtab" role="tab" aria-selected="false" data-subtab="mcp">MCP<span class="subtab-count">' + d.mcps.length + '</span></button></div>'
+      + '<section class="section" data-subpanel="skills"><div class="list">' + d.skills.map(function (r) { return rowSkill(r[0], r[1]); }).join('') + '</div></section>'
+      + '<section class="section" data-subpanel="mcp" hidden><div class="list">' + d.mcps.map(function (r) { return rowMcp(r[0], r[1], r[2], r[3]); }).join('') + '</div></section>';
+  }
+
+  /* 生成面板的容器：始终放在最后一个静态面板之后 */
+  var staticPanels = Array.prototype.slice.call(document.querySelectorAll('[data-agent-panel]'));
+  var extraPanel = document.createElement('div');
+  extraPanel.setAttribute('data-agent-panel', '__extra');
+  extraPanel.hidden = true;
+  staticPanels[staticPanels.length - 1].after(extraPanel);
+  var panels = staticPanels.concat(extraPanel);
+
+  function fillCurrent(tab) {
+    var absent = tab.getAttribute('data-installed') === 'false';
+    current.querySelector('.agent-logo').replaceWith(tab.querySelector('.agent-logo').cloneNode(true));
+    current.querySelector('.agent-current-name').textContent = tab.getAttribute('data-name');
+    current.querySelector('.agent-current-sub').textContent = absent
+      ? '未安装'
+      : tab.getAttribute('data-version') + ' · ' + tab.getAttribute('data-skills') + ' 个 Skill、' + tab.getAttribute('data-mcps') + ' 个 MCP';
+    var upd = tab.getAttribute('data-update');
+    current.querySelector('.agent-current-side').innerHTML = absent
+      ? '<button class="btn btn-sm" data-install="' + tab.getAttribute('data-agent') + '">一键安装</button>'
+      : upd
+        ? '<button class="btn btn-sm">更新到 ' + upd + '</button>'
+        : '<span class="chip chip-mint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>已是最新</span>';
+    var bar = document.querySelector('[data-config-bar]');
+    bar.hidden = absent;
+    if (!absent) {
+      bar.querySelector('[data-skill-path]').textContent = tab.getAttribute('data-skill-path');
+      bar.querySelector('[data-mcp-path]').textContent = tab.getAttribute('data-mcp-path');
+    }
+  }
+
+  /* 未安装助手：面板是安装卡（一键安装为主，官网为次），不展示 Skill/MCP 列表 */
+  var INSTALL = {
+    roocode: { version: 'v3.14.0', method: 'VS Code 扩展，装完重启编辑器生效' },
+    aider: { version: 'v0.86.1', method: '通过 pip 安装，需要电脑里有 Python' },
+    trae: { version: 'v2.4.0', method: '下载官方安装包，约 80 MB' },
+    qwen: { version: 'v0.0.14', method: '通过 npm 安装，需要电脑里有 Node.js' },
+    opencode: { version: 'v0.6.3', method: '官方一键安装脚本，约 30 秒' },
+    replit: { version: 'v1.0.8', method: '下载官方安装包，约 60 MB' }
+  };
+  function buildAbsent(agent, name) {
+    var d = INSTALL[agent] || { version: '', method: '' };
+    return '<div class="card install-empty">'
+      + '<div class="install-empty-text">这台电脑还没有装 <b>' + name + '</b></div>'
+      + '<div class="install-empty-sub">装好后，它的 Skill 和 MCP 都会出现在这里，一并管理。</div>'
+      + '<div class="install-actions">'
+      + '<button class="btn btn-sm" data-install="' + agent + '">一键安装' + (d.version ? ' ' + d.version : '') + '</button>'
+      + '<button class="btn btn-sm btn-outline-mint" data-install-site>去官网看看</button>'
+      + '</div>'
+      + (d.method ? '<div class="install-method">' + d.method + '</div>' : '')
+      + '</div>';
+  }
+  function buildInstalling(name) {
+    return '<div class="card install-empty">'
+      + '<div class="install-empty-text">正在安装 <b>' + name + '</b></div>'
+      + '<div class="install-progress"><div class="install-track"><div class="install-bar" data-install-bar></div></div>'
+      + '<div class="install-step" data-install-step>正在下载安装包…</div></div></div>';
+  }
+  function buildInstalled(name, version) {
+    return '<div class="card install-empty">'
+      + '<div class="install-done-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>'
+      + '<div class="install-empty-text"><b>' + name + '</b> 装好了</div>'
+      + '<div class="install-empty-sub">' + version + ' · 它的 Skill 和 MCP 已经能看到了。</div>'
+      + '<div class="install-actions"><button class="btn btn-sm" data-start-manage>开始管理</button></div></div>';
+  }
+
+  /* 瓷砖从未安装翻成已安装：去灰化、补版本与数量、挪到分隔线之前、刷新计数、记住状态 */
+  var divider = document.querySelector('.agent-divider');
+  var sectionCount = document.querySelector('.section-count');
+  function refreshCounts() {
+    var absent = tiles.filter(function (t) { return t.getAttribute('data-installed') === 'false'; }).length;
+    sectionCount.textContent = (tiles.length - absent) + ' 个已安装' + (absent ? ' · ' + absent + ' 个未安装' : '');
+    if (divider) {
+      divider.textContent = '还没装 · ' + absent + ' 个';
+      divider.hidden = absent === 0;
+    }
+  }
+  function flipInstalled(tile) {
+    var agent = tile.getAttribute('data-agent');
+    var d = INSTALL[agent] || { version: '' };
+    var ex = EXTRA[agent] || { skills: [], mcps: [] };
+    tile.setAttribute('data-installed', 'true');
+    tile.classList.remove('is-absent');
+    tile.setAttribute('data-version', d.version);
+    tile.setAttribute('data-skills', ex.skills.length);
+    tile.setAttribute('data-mcps', ex.mcps.length);
+    tile.querySelector('.tile-sub').textContent = d.version;
+    if (divider) divider.before(tile);
+    refreshCounts();
+    var saved = [];
+    try { saved = JSON.parse(localStorage.getItem('yo-installed') || '[]'); } catch (e) {}
+    if (saved.indexOf(agent) === -1) {
+      saved.push(agent);
+      try { localStorage.setItem('yo-installed', JSON.stringify(saved)); } catch (e) {}
+    }
+    if (window.yoRebuildUnified) window.yoRebuildUnified(); /* 新装助手立刻并进统一视图 */
+  }
+  /* 上次装过的助手，刷新页面后仍是已安装 */
+  try {
+    JSON.parse(localStorage.getItem('yo-installed') || '[]').forEach(function (agent) {
+      var tile = tiles.filter(function (t) { return t.getAttribute('data-agent') === agent; })[0];
+      if (tile && tile.getAttribute('data-installed') === 'false') flipInstalled(tile);
+    });
+  } catch (e) {}
+
+  /* 一键安装流程：安装卡/当前行按钮 → 进度态（约 2.5s）→ 成功态 → 开始管理进面板 */
+  var installing = null;
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('[data-install]');
+    if (btn && !installing) {
+      var agent = btn.getAttribute('data-install');
+      var tile = tiles.filter(function (t) { return t.getAttribute('data-agent') === agent; })[0];
+      if (!tile || tile.getAttribute('data-installed') !== 'false') return;
+      installing = agent;
+      var name = tile.getAttribute('data-name');
+      extraPanel.innerHTML = buildInstalling(name);
+      var sideBtn = current.querySelector('.agent-current-side button');
+      if (sideBtn) { sideBtn.disabled = true; sideBtn.textContent = '安装中…'; }
+      var barEl = extraPanel.querySelector('[data-install-bar]');
+      var stepEl = extraPanel.querySelector('[data-install-step]');
+      var steps = [['正在下载安装包…', 35], ['正在安装…', 78], ['正在验证…', 96]];
+      var i = 0;
+      barEl.style.width = '8%';
+      (function tick() {
+        if (i < steps.length) {
+          stepEl.textContent = steps[i][0];
+          barEl.style.width = steps[i][1] + '%';
+          i++;
+          setTimeout(tick, 800);
+        } else {
+          setTimeout(function () {
+            flipInstalled(tile);
+            installing = null;
+            var active = tiles.filter(function (t) { return t.classList.contains('active'); })[0];
+            if (active === tile) {
+              extraPanel.innerHTML = buildInstalled(name, tile.getAttribute('data-version'));
+              fillCurrent(tile);
+            }
+          }, 500);
+        }
+      })();
+      return;
+    }
+    if (e.target.closest('[data-start-manage]')) {
+      var active = tiles.filter(function (t) { return t.classList.contains('active'); })[0];
+      if (active) select(active);
+    }
+  });
+
+  function select(tab) {
+    var agent = tab.getAttribute('data-agent');
+    tiles.forEach(function (t) {
+      var on = t === tab;
+      t.classList.toggle('active', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    var hit = panels.filter(function (p) { return p.getAttribute('data-agent-panel') === agent; })[0];
+    panels.forEach(function (p) { p.hidden = p !== hit; });
+    if (!hit) {
+      if (tab.getAttribute('data-installed') === 'false') {
+        extraPanel.innerHTML = buildAbsent(agent, tab.getAttribute('data-name'));
+      } else {
+        extraPanel.innerHTML = buildExtra(agent);
+        if (window.yoPaintIcons) window.yoPaintIcons();
+      }
+      extraPanel.hidden = false;
+    }
+    fillCurrent(tab);
+  }
+  tiles.forEach(function (tab) {
+    tab.addEventListener('click', function () { select(tab); });
+    tab.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(tab); }
+    });
+  });
+  var want = new URLSearchParams(location.search).get('agent');
+  if (want) {
+    var deep = tiles.filter(function (t) { return t.getAttribute('data-agent') === want; })[0];
+    if (deep) select(deep);
+  }
+
+  /* 助手过滤：即时按名称过滤瓷砖 */
+  var filter = document.querySelector('[data-agent-filter]');
+  if (filter) {
+    filter.addEventListener('input', function () {
+      var q = filter.value.trim().toLowerCase();
+      tiles.forEach(function (t) { t.hidden = !!q && t.getAttribute('data-name').toLowerCase().indexOf(q) === -1; });
+    });
+  }
+})();
+
+/* 配置位置条：复制路径到剪贴板，按钮短暂反馈"已复制" */
+(function () {
+  document.querySelectorAll('.config-copy').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var path = btn.parentElement.querySelector('.config-path').textContent;
+      function ok() {
+        btn.classList.add('copied');
+        btn.textContent = '已复制';
+        setTimeout(function () { btn.classList.remove('copied'); btn.textContent = '复制'; }, 1200);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(path).then(ok, ok);
+      } else {
+        var ta = document.createElement('textarea');
+        ta.value = path;
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); } catch (e) {}
+        ta.remove();
+        ok();
+      }
+    });
+  });
+})();
+
+/* 统一视图：跨助手按名合并 Skill / MCP（产品的核心——收拢到一处管理）。
+   列表由 JS 从静态面板 DOM + window.YO_EXTRA 演示数据聚合生成；装新助手后自动重建 */
+(function () {
+  var LOGOS = { claude: 'claude', codex: 'openai', gemini: 'googlegemini', cursor: 'cursor', windsurf: 'windsurf', copilot: 'githubcopilot', kimi: 'kimi', cline: 'cline', roocode: 'roocode', continue: 'continue', aider: 'aider', trae: 'trae', qwen: 'qwen', opencode: 'opencode', replit: 'replit' };
+  var BLACK = { openai: 1, cursor: 1, windsurf: 1, githubcopilot: 1, kimi: 1, cline: 1, continue: 1, roocode: 1, aider: 1 };
+  var ICON_SKILL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/></svg>';
+  var ICON_MCP = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7V3M15 7V3M7 7h10v4a5 5 0 0 1-10 0zM12 16v5"/></svg>';
+  function tileOf(agent) { return document.querySelector('.agent-tile[data-agent="' + agent + '"]'); }
+  function agentName(agent) { var t = tileOf(agent); return t ? t.getAttribute('data-name') : agent; }
+  function installed(agent) { var t = tileOf(agent); return !!t && t.getAttribute('data-installed') !== 'false'; }
+  function chips(agents) {
+    var imgs = agents.slice(0, 3).map(function (a, i) {
+      var f = LOGOS[a] || a;
+      return '<img class="agent-logo-xs' + (BLACK[f] ? ' logo-invert' : '') + '" src="logos/' + f + '.svg" alt="' + agentName(a) + '"' + (i ? ' style="margin-left:-2px;"' : '') + '>';
+    }).join('');
+    return '<span class="chip">' + imgs + agents.length + ' 个助手</span>';
+  }
+  function collect() {
+    var skills = [], mcps = [], si = {}, mi = {}, totals = { skills: 0, mcps: 0 };
+    function addSkill(name, sub, update, agent) {
+      totals.skills++;
+      var e = si[name];
+      if (!e) { e = si[name] = { name: name, sub: '', update: false, agents: [] }; skills.push(e); }
+      if (!e.sub) e.sub = (sub || '').trim();
+      e.update = e.update || update;
+      e.agents.push(agent);
+    }
+    function addMcp(name, sub, on, fail, reason, agent) {
+      totals.mcps++;
+      var e = mi[name];
+      if (!e) { e = mi[name] = { name: name, sub: '', on: false, fail: false, reason: '', agents: [] }; mcps.push(e); }
+      if (!e.sub) e.sub = (sub || '').trim();
+      e.on = e.on || on;
+      if (fail) { e.fail = true; if (!e.reason) e.reason = reason; }
+      e.agents.push(agent);
+    }
+    document.querySelectorAll('[data-agent-panel]').forEach(function (panel) {
+      var agent = panel.getAttribute('data-agent-panel');
+      if (agent === '__extra' || !installed(agent)) return;
+      panel.querySelectorAll('[data-subpanel="skills"] .list-row').forEach(function (row) {
+        var s = row.querySelector('.list-sub');
+        addSkill(row.querySelector('.list-name').textContent.trim(),
+          s ? s.textContent.trim() : '', !!row.querySelector('.update-flag'), agent);
+      });
+      panel.querySelectorAll('[data-subpanel="mcp"] .list-row').forEach(function (row) {
+        var sw = row.querySelector('.switch');
+        var fail = row.querySelector('.conn-fail');
+        var s = row.querySelector('.list-sub');
+        addMcp(row.querySelector('.list-name').textContent.trim(),
+          s ? s.textContent.trim() : '',
+          !!(sw && sw.classList.contains('on')),
+          !!fail, fail ? fail.textContent.trim() : '', agent);
+      });
+    });
+    var EXTRA = window.YO_EXTRA || {};
+    Object.keys(EXTRA).forEach(function (agent) {
+      if (!installed(agent)) return;
+      EXTRA[agent].skills.forEach(function (r) { addSkill(r[0], r[1], false, agent); });
+      EXTRA[agent].mcps.forEach(function (r) { addMcp(r[0], r[1], !!r[2], r[3] === 'fail', r[3] === 'fail' ? '启动失败' : '', agent); });
+    });
+    return { skills: skills, mcps: mcps, totals: totals };
+  }
+  function byMergeThenName(a, b) {
+    return b.agents.length - a.agents.length || a.name.localeCompare(b.name, 'zh-Hans-CN');
+  }
+  function rowSkill(e) {
+    return '<a class="list-row" href="skill.html"><div class="card-icon">' + ICON_SKILL + '</div>'
+      + '<div class="list-main"><div class="list-name">' + e.name + '</div><div class="list-sub">' + e.sub + '</div></div>'
+      + '<div class="list-side">' + (e.update ? '<span class="update-flag">有新版本</span>' : '') + chips(e.agents) + '</div></a>';
+  }
+  function rowMcpU(e) {
+    var dot = e.fail ? 'dot-fail' : e.on ? 'dot-ok' : 'dot-off';
+    return '<div class="list-row' + (e.on ? '' : ' is-off') + '"><div class="card-icon">' + ICON_MCP + '</div>'
+      + '<div class="list-main"><div class="list-name"><i class="status-dot ' + dot + '"></i>' + e.name + '</div><div class="list-sub">' + e.sub + '</div></div>'
+      + '<div class="list-side">' + (e.fail ? '<span class="conn conn-fail"><i></i>' + e.reason + '</span>' : '') + chips(e.agents)
+      + '<button class="switch' + (e.on ? ' on' : '') + '" role="switch" aria-checked="' + e.on + '" aria-label="' + e.name + '开关"></button></div></div>';
+  }
+  function build() {
+    var d = collect();
+    document.getElementById('unified-skills').innerHTML = d.skills.sort(byMergeThenName).map(rowSkill).join('');
+    document.getElementById('unified-mcp').innerHTML = d.mcps.sort(byMergeThenName).map(rowMcpU).join('');
+    document.querySelector('[data-uni-count="skills"]').textContent = d.totals.skills + ' 条 · 去重后 ' + d.skills.length + ' 个';
+    document.querySelector('[data-uni-count="mcp"]').textContent = d.totals.mcps + ' 条 · 去重后 ' + d.mcps.length + ' 个';
+    /* 分段计数 + 琥珀点（组内有"有新版本"行时挂点，同按助手面板约定） */
+    ['skills', 'mcp'].forEach(function (key) {
+      var arr = key === 'skills' ? d.skills : d.mcps;
+      document.querySelector('[data-uni-tabnum="' + key + '"]').textContent = arr.length;
+      var tab = document.querySelector('[data-uni-tab="' + key + '"]');
+      Array.prototype.forEach.call(tab.querySelectorAll('.subtab-dot'), function (x) { x.remove(); });
+      if (document.getElementById('unified-' + key).querySelector('.update-flag')) {
+        var dot = document.createElement('span');
+        dot.className = 'subtab-dot';
+        dot.title = '有新版本';
+        tab.appendChild(dot);
+      }
+    });
+    /* 工具条只在超过 12 条时出现（设计约定）；行已重建，需要重新绑定 */
+    [['unified-skills', d.skills.length], ['unified-mcp', d.mcps.length]].forEach(function (p) {
+      var bar = document.querySelector('.list-toolbar[data-for="' + p[0] + '"]');
+      if (bar) bar.hidden = p[1] <= 12;
+    });
+    if (window.yoPaintIcons) window.yoPaintIcons();
+    if (window.yoInitToolbars) window.yoInitToolbars();
+  }
+  window.yoRebuildUnified = build;
+
+  /* 视图切换；?agent= 直达"按助手看" */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[data-view-tab]'));
+  function setView(v) {
+    tabs.forEach(function (t) {
+      var on = t.getAttribute('data-view-tab') === v;
+      t.classList.toggle('active', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    document.querySelector('[data-view="unified"]').hidden = v !== 'unified';
+    document.querySelector('[data-view="agents"]').hidden = v !== 'agents';
+  }
+  tabs.forEach(function (t) { t.addEventListener('click', function () { setView(t.getAttribute('data-view-tab')); }); });
+  if (new URLSearchParams(location.search).get('agent')) setView('agents');
+
+  /* 统一视图内 Skill/MCP 分段切换（一页只看一组） */
+  var uniTabs = Array.prototype.slice.call(document.querySelectorAll('[data-uni-tab]'));
+  uniTabs.forEach(function (t) {
+    t.addEventListener('click', function () {
+      var key = t.getAttribute('data-uni-tab');
+      uniTabs.forEach(function (x) {
+        var on = x === t;
+        x.classList.toggle('active', on);
+        x.setAttribute('aria-selected', on ? 'true' : 'false');
+      });
+      Array.prototype.forEach.call(document.querySelectorAll('[data-uni-panel]'), function (p) {
+        p.hidden = p.getAttribute('data-uni-panel') !== key;
+      });
+    });
+  });
+
+  build();
+})();
+
+/* 列表工具条：即时过滤（匹配行内全部文字）+ 排序（有更新优先 / 名称 A→Z）+ 计数回写。
+   行快照挂在元素上（bar._rows），统一视图重建列表后可经 yoInitToolbars 刷新而事件只绑一次 */
+(function () {
+  function initBar(bar) {
+    var list = document.getElementById(bar.getAttribute('data-for'));
+    if (!list) return;
+    bar._rows = Array.prototype.slice.call(list.querySelectorAll('.list-row'));
+    var input = bar.querySelector('[data-filter-input]');
+    var sort = bar.querySelector('[data-sort-select]');
+    var count = bar.querySelector('[data-list-count]');
+    function name(r) { var el = r.querySelector('.list-name'); return el ? el.textContent.trim() : ''; }
+    function byName(a, b) { return name(a).localeCompare(name(b), 'zh-Hans-CN'); }
+    function apply() {
+      var rows = bar._rows;
+      var total = rows.length;
+      var updates = rows.filter(function (r) { return r.querySelector('.update-flag'); }).length;
+      var q = (input.value || '').trim().toLowerCase();
+      rows.forEach(function (r) { r.hidden = !!q && r.textContent.toLowerCase().indexOf(q) === -1; });
+      var visible = rows.filter(function (r) { return !r.hidden; });
+      if (sort.value === 'name') {
+        visible.sort(byName);
+      } else {
+        visible.sort(function (a, b) {
+          var ua = a.querySelector('.update-flag') ? 0 : 1, ub = b.querySelector('.update-flag') ? 0 : 1;
+          return ua - ub || byName(a, b);
+        });
+      }
+      visible.forEach(function (r) { list.appendChild(r); });
+      if (count) {
+        count.innerHTML = (q ? visible.length + ' / ' + total + ' 个' : total + ' 个') + (updates ? ' · <b>' + updates + ' 个有更新</b>' : '');
+      }
+    }
+    if (bar.getAttribute('data-bound') !== '1') {
+      input.addEventListener('input', apply);
+      sort.addEventListener('change', apply);
+      bar.setAttribute('data-bound', '1');
+    }
+    bar._apply = apply;
+    apply();
+  }
+  window.yoInitToolbars = function () {
+    document.querySelectorAll('.list-toolbar[data-for]').forEach(function (bar) {
+      initBar(bar);
+      if (bar._apply) bar._apply();
+    });
+  };
+  window.yoInitToolbars();
+})();
+
+/* MCP 开关切换：行随开关置灰/恢复，状态点同步（失败行重新打开仍是红点） */
+(function () {
+  document.addEventListener('click', function (e) {
+    var sw = e.target.closest('.switch');
+    if (!sw) return;
+    var on = sw.classList.toggle('on');
+    sw.setAttribute('aria-checked', on ? 'true' : 'false');
+    var row = sw.closest('.list-row');
+    if (!row) return;
+    row.classList.toggle('is-off', !on);
+    var dot = row.querySelector('.status-dot');
+    if (dot) {
+      var fail = !!row.querySelector('.conn-fail');
+      dot.className = 'status-dot ' + (on ? (fail ? 'dot-fail' : 'dot-ok') : 'dot-off');
+    }
+  });
+})();
+
+/* 面板内分组切换：Skills / MCP 一页只看一组（事件委托，生成面板同样生效）；
+   组内有"有新版本"行时标签自动挂琥珀点 */
+(function () {
+  function selectIn(panel, tab) {
+    var key = tab.getAttribute('data-subtab');
+    panel.querySelectorAll('[data-subtab]').forEach(function (t) {
+      var on = t === tab;
+      t.classList.toggle('active', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    panel.querySelectorAll('[data-subpanel]').forEach(function (p) { p.hidden = p.getAttribute('data-subpanel') !== key; });
+  }
+  document.addEventListener('click', function (e) {
+    var tab = e.target.closest('[data-subtab]');
+    if (!tab) return;
+    var panel = tab.closest('[data-agent-panel]');
+    if (panel) selectIn(panel, tab);
+  });
+  document.querySelectorAll('[data-agent-panel]').forEach(function (panel) {
+    panel.querySelectorAll('[data-subtab]').forEach(function (tab) {
+      var key = tab.getAttribute('data-subtab');
+      var target = panel.querySelector('[data-subpanel="' + key + '"]');
+      if (target && target.querySelector('.update-flag')) {
+        var dot = document.createElement('span');
+        dot.className = 'subtab-dot';
+        dot.title = '有新版本';
+        tab.appendChild(dot);
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>欢迎使用 yo-skill</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="yo.css">
+<script src="yo.js"></script>
+</head>
+<body>
+<!-- 屏 6：首次启动收拢向导（旅程 1）。设计判断：先给价值再要账号——
+     先自动扫描出用户已有的助手与 Skill/MCP 并一键收拢，云同步（要密码）放在最后一步且可跳过。
+     术语遵守冻结约定：AI 助手 / Skill / MCP / API Key 原文，无隐喻。 -->
+<div class="ob-wrap">
+
+  <div class="ob-brand">
+    <span class="ob-brand-mark">yo</span><span class="ob-brand-name">yo-skill</span>
+  </div>
+
+  <div class="ob-steps" aria-hidden="true">
+    <span class="ob-step-dot active" data-dot="1"></span>
+    <span class="ob-step-dot" data-dot="2"></span>
+    <span class="ob-step-dot" data-dot="3"></span>
+    <span class="ob-step-dot" data-dot="4"></span>
+  </div>
+
+  <!-- 第 1 步：自动扫描（无需任何点击，约 2 秒） -->
+  <section class="ob-panel" data-ob-step="1">
+    <h1 class="ob-title">正在找你电脑上的 AI 助手</h1>
+    <p class="ob-sub">自动检测已安装的助手、Skill 和 MCP，不用你动手。</p>
+    <div class="ob-scan">
+      <div class="ob-scan-line" style="animation-delay:.25s;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        <span>发现 <span class="p">~/.claude/</span> — Claude Code</span>
+      </div>
+      <div class="ob-scan-line" style="animation-delay:.9s;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        <span>发现 <span class="p">~/.codex/</span> — Codex</span>
+      </div>
+      <div class="ob-scan-line" style="animation-delay:1.5s;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        <span>读完配置：12 个 Skill、5 个 MCP</span>
+      </div>
+    </div>
+    <div class="ob-spinner"></div>
+  </section>
+
+  <!-- 第 2 步：发现结果（一键点：统一管理起来） -->
+  <section class="ob-panel" data-ob-step="2" hidden>
+    <h1 class="ob-title">找到了你的 2 个 AI 助手</h1>
+    <p class="ob-sub">它们的 Skill 和 MCP 现在各放各的，收拢以后<b>一处更新、多处生效</b>。</p>
+    <div class="list ob-agents">
+      <div class="list-row">
+        <img class="ob-logo-img" src="logos/claude.svg" alt="Claude Code">
+        <div class="list-main">
+          <div class="list-name">Claude Code</div>
+          <div class="list-sub">8 个 Skill · 3 个 MCP</div>
+        </div>
+        <div class="list-side">
+          <span class="ob-ver">v1.9.2</span>
+          <span class="chip chip-orange">有新版本</span>
+        </div>
+      </div>
+      <div class="list-row">
+        <img class="ob-logo-img logo-invert" src="logos/openai.svg" alt="Codex">
+        <div class="list-main">
+          <div class="list-name">Codex</div>
+          <div class="list-sub">6 个 Skill · 3 个 MCP</div>
+        </div>
+        <div class="list-side">
+          <span class="ob-ver">v0.8.0</span>
+        </div>
+      </div>
+    </div>
+    <div class="ob-summary">
+      <div class="ob-stat"><b>12</b><span>个 Skill</span></div>
+      <div class="ob-stat"><b>5</b><span>个 MCP</span></div>
+    </div>
+    <div class="ob-actions">
+      <button class="btn" data-go="3">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h1"/><path d="M16 3h1a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-1"/><rect x="8" y="8" width="8" height="13" rx="2"/></svg>
+        统一管理起来
+      </button>
+      <a class="ob-quiet" href="index.html">先随便看看 →</a>
+    </div>
+  </section>
+
+  <!-- 第 3 步：收拢进行中 → 完成（去重结果直接亮出） -->
+  <section class="ob-panel" data-ob-step="3" hidden>
+    <div data-ob3-progress>
+      <h1 class="ob-title">正在收拢</h1>
+      <p class="ob-sub">导入索引，并检查有没有重复安装。</p>
+      <div class="install-progress" style="max-width:360px;">
+        <div class="install-track"><div class="install-bar" data-ob3-bar></div></div>
+        <div class="install-step" data-ob3-step-text>正在导入索引…</div>
+      </div>
+    </div>
+    <div data-ob3-done hidden>
+      <div style="text-align:center;">
+        <span class="install-done-icon ob-done-icon-lg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </span>
+        <h1 class="ob-title">12 个 Skill、5 个 MCP 已统一管理</h1>
+        <p class="ob-sub">以后在任何助手里装的，都会自动收拢到这里。</p>
+      </div>
+      <div class="notice" style="margin:22px 0 0;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h1"/><path d="M16 3h1a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-1"/><rect x="8" y="8" width="8" height="13" rx="2"/></svg>
+        <div>顺带发现 <b>2 组 Skill 重复或相似</b>，合并后更干净。</div>
+        <a class="btn btn-sm" href="dedupe.html">去合并</a>
+      </div>
+      <div class="ob-actions">
+        <button class="btn" data-go="4">下一步</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 第 4 步：云同步选择（可跳过；选开启才要主密码） -->
+  <section class="ob-panel" data-ob-step="4" hidden>
+    <h1 class="ob-title">要不要跨电脑随身带？</h1>
+    <p class="ob-sub">开启后换电脑一键恢复全部配置。云端只存密文，yo-skill 也看不到内容。</p>
+    <div class="place-options ob-sync-opts">
+      <button class="place-option is-active" data-sync="on">
+        <span class="place-name">开启云同步<span class="place-rec">推荐</span></span>
+        <span class="place-desc">设一个主密码就能用。换电脑、重装系统都不怕，一键恢复原样。</span>
+        <span class="place-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>
+      </button>
+      <button class="place-option" data-sync="off">
+        <span class="place-name">先用本地模式</span>
+        <span class="place-desc">功能一样完整，数据只留在这台电脑。以后随时能在设置里开启同步。</span>
+        <span class="place-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>
+      </button>
+    </div>
+
+    <div data-sync-on-block>
+      <div class="ob-pw">
+        <input class="set-input" type="password" placeholder="设置主密码（演示可随便输）" data-pw-input aria-label="设置主密码">
+        <button class="btn" data-pw-gen>设置并生成恢复码</button>
+      </div>
+      <div data-pw-code hidden>
+        <div class="pair-code" data-pw-code-text>——</div>
+        <p class="ob-code-note">恢复码只显示这一次，是找回数据的唯一凭证，请抄写保存。</p>
+        <div class="ob-actions" style="margin-top:14px;">
+          <button class="btn btn-ghost btn-sm" data-pw-copy>复制恢复码</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="ob-actions">
+      <a class="btn" href="index.html" data-finish hidden>完成，进入主屏</a>
+      <a class="ob-quiet" href="index.html" data-skip>先不用，直接进入 →</a>
+    </div>
+  </section>
+
+  <div class="demo-note">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+    本页为设计原型，扫描与收拢过程均为演示动画
+  </div>
+
+</div>
+
+<script>
+(function () {
+  var panels = document.querySelectorAll('[data-ob-step]');
+  var dots = document.querySelectorAll('.ob-step-dot');
+  function showStep(n) {
+    panels.forEach(function (p) { p.hidden = p.getAttribute('data-ob-step') !== String(n); });
+    dots.forEach(function (d) {
+      var k = +d.getAttribute('data-dot');
+      d.classList.toggle('active', k === n);
+      d.classList.toggle('done', k < n);
+    });
+  }
+
+  /* 第 1 步：扫描动画播完自动进第 2 步 */
+  var t = setTimeout(function () { showStep(2); }, 2100);
+
+  /* 一键点与步骤推进 */
+  document.querySelectorAll('[data-go]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var n = +btn.getAttribute('data-go');
+      showStep(n);
+      if (n === 3) playGather();
+    });
+  });
+
+  /* 第 3 步：收拢进度（导入索引 → 查重 → 完成态） */
+  var played = false;
+  function playGather() {
+    if (played) return; played = true;
+    var bar = document.querySelector('[data-ob3-bar]');
+    var txt = document.querySelector('[data-ob3-step-text]');
+    requestAnimationFrame(function () { bar.style.width = '45%'; });
+    setTimeout(function () { txt.textContent = '正在检查重复项…'; bar.style.width = '82%'; }, 900);
+    setTimeout(function () {
+      bar.style.width = '100%';
+      setTimeout(function () {
+        document.querySelector('[data-ob3-progress]').hidden = true;
+        document.querySelector('[data-ob3-done]').hidden = false;
+      }, 260);
+    }, 1800);
+  }
+
+  /* 第 4 步：云同步 A/B 选择 */
+  var opts = document.querySelectorAll('[data-sync]');
+  var onBlock = document.querySelector('[data-sync-on-block]');
+  var finish = document.querySelector('[data-finish]');
+  var skip = document.querySelector('[data-skip]');
+  opts.forEach(function (opt) {
+    opt.addEventListener('click', function () {
+      opts.forEach(function (o) { o.classList.toggle('is-active', o === opt); });
+      var on = opt.getAttribute('data-sync') === 'on';
+      onBlock.style.display = on ? '' : 'none';
+      /* 选本地模式直接可完成；选开启需先生成恢复码 */
+      finish.hidden = on;
+      skip.style.display = on ? '' : 'none';
+    });
+  });
+  onBlock.style.display = '';
+
+  /* 主密码 → 生成恢复码（演示：6 位随机码，沿用配对码样式） */
+  var gen = document.querySelector('[data-pw-gen]');
+  var codeWrap = document.querySelector('[data-pw-code]');
+  var codeText = document.querySelector('[data-pw-code-text]');
+  gen.addEventListener('click', function () {
+    var code = String(Math.floor(100000 + Math.random() * 900000));
+    codeText.textContent = code;
+    codeWrap.hidden = false;
+    finish.hidden = false;
+    skip.style.display = 'none';
+  });
+  document.querySelector('[data-pw-copy]').addEventListener('click', function () {
+    var btn = this;
+    try { navigator.clipboard.writeText(codeText.textContent); } catch (e) {}
+    btn.textContent = '已复制';
+    setTimeout(function () { btn.textContent = '复制恢复码'; }, 1400);
+  });
+})();
+</script>
+</body>
+</html>

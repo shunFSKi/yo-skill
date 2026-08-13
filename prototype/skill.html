@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小红书文案助手 · yo-skill</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="yo.css">
+<script src="yo.js"></script>
+</head>
+<body>
+<!-- 方向契约同 index.html：品类标准（1Password × Raycast × Linear），seed 17bf85bd。 -->
+<div class="app">
+
+  <aside class="sidebar">
+    <div class="logo"><span class="logo-mark">yo</span><span class="label">yo-skill</span></div>
+    <nav class="nav">
+      <a class="nav-item active" href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <span class="label">已安装</span>
+      </a>
+      <a class="nav-item" href="store.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+        <span class="label">发现</span>
+      </a>
+    </nav>
+    <div class="sidebar-foot">
+      <div class="sync-pill"><span class="sync-dot"></span><span>已同步 · 2 台电脑</span></div>
+      <button class="nav-item mode-toggle" onclick="yoToggleMode()" aria-label="切换深浅色模式">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <span class="label label-to-dark">深色模式</span>
+        <span class="label label-to-light">浅色模式</span>
+      </button>
+      <a class="nav-item" href="settings.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        <span class="label">设置</span>
+      </a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="main-inner">
+
+      <div class="page-head fade-up">
+        <a class="back-link" href="index.html" data-back>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+          <span data-back-label>已安装</span>
+        </a>
+      </div>
+
+      <!-- 头部：名称 + 价值 + 主操作 -->
+      <div class="detail-hero fade-up">
+        <div class="detail-hero-top">
+          <div class="detail-icon tone-mint">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+          </div>
+          <div>
+            <h1 class="detail-title" data-d-title>小红书文案助手</h1>
+            <p class="detail-sub" data-d-sub>给它一个主题，还你一条带爆款标题、正文和话题标签的小红书笔记。</p>
+          </div>
+        </div>
+        <div class="detail-actions">
+          <button class="btn" data-btn-install>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+            安装到助手
+          </button>
+          <button class="btn btn-outline-mint" data-btn-update>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg>
+            更新到 v1.4
+          </button>
+          <button class="btn btn-quiet" style="margin-left:auto;" data-btn-uninstall>卸载</button>
+        </div>
+        <div class="detail-badges">
+          <div class="badge-row" data-d-badges>
+            <span class="badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              会联网
+            </span>
+            <span class="badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+              会读你的文件
+            </span>
+            <span class="badge ok">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              已通过安全扫描
+            </span>
+            <span class="badge ok"><span class="mark">✓</span> 不需要 API Key</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail-cols">
+        <!-- 左栏：它会做什么 + 版本历史 -->
+        <div>
+          <div class="panel fade-up">
+            <h3 class="panel-title">它会做什么</h3>
+            <ul class="tick-list" data-d-ticks>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                生成 5 个候选标题，标注各自的点击逻辑（好奇 / 干货 / 情绪）
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                正文自动带口语化分段、emoji 节奏和结尾互动提问
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                按你的历史笔记模仿语气，越用越像你写的
+              </li>
+            </ul>
+          </div>
+
+          <div class="panel fade-up">
+            <h3 class="panel-title">源 README</h3>
+            <div class="readme-file">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8m8 4H8"/></svg>
+              <span class="file-name">README.md</span>
+              <span style="margin-left:auto;">来自仓库收录页</span>
+            </div>
+            <div class="readme" data-d-readme>
+              <h1>小红书文案助手</h1>
+              <p>给它一个主题，还你一条带爆款标题、正文和话题标签的小红书笔记。会按你的历史笔记模仿语气，越用越像你写的。</p>
+              <h2>为什么好用</h2>
+              <ul>
+                <li>5 个候选标题，各自标注点击逻辑（好奇 / 干货 / 情绪）</li>
+                <li>正文自动带口语化分段、emoji 节奏和结尾互动提问</li>
+                <li>内置"避坑词"过滤，减少限流风险</li>
+              </ul>
+              <h2>使用方法</h2>
+              <p>装好后直接对你的 AI 助手说：</p>
+              <blockquote>「帮我写一篇关于平价防晒的小红书笔记，目标读者是学生党」</blockquote>
+              <p>助手会依次给出标题候选、正文初稿和话题标签，确认后复制即可发布。</p>
+              <h2>输出示例</h2>
+              <pre><code>输入：平价防晒测评，学生党
+输出：
+  标题候选 × 5（各附点击逻辑）
+  正文 × 1（约 600 字，口语化分段）
+  话题标签 × 8</code></pre>
+              <h2>更新说明</h2>
+              <p>v1.4（2026-08-02）：新增"避坑词"过滤，减少限流风险；v1.3：修复标题超长被截断的问题。</p>
+            </div>
+          </div>
+
+          <div class="panel fade-up">
+            <h3 class="panel-title">版本记录</h3>
+            <div data-d-versions>
+            <div class="version-row">
+              <span class="version-tag">v1.4</span>
+              <div>
+                <div>新增"避坑词"过滤，减少限流风险</div>
+                <div class="version-meta">仓库最新版 · 2026-08-02 · 可一键更新</div>
+              </div>
+            </div>
+            <div class="version-row">
+              <span class="version-tag">v1.3</span>
+              <div>
+                <div>修复标题超长被截断的问题</div>
+                <div class="version-meta">你当前使用的版本 · 2026-07-19</div>
+              </div>
+            </div>
+            <div class="version-row">
+              <span class="version-tag">v1.2</span>
+              <div>
+                <div>首次安装</div>
+                <div class="version-meta">2026-06-30</div>
+              </div>
+            </div>
+            </div>
+          </div>
+
+          <!-- 高级区：默认折叠 -->
+          <div class="fold fade-up">
+            <button class="fold-head">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+              试运行
+              <span class="fold-tag">改一改，马上看效果</span>
+            </button>
+          </div>
+          <div class="fold fade-up">
+            <button class="fold-head">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+              查看原始定义
+              <span class="fold-tag">高级</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 右栏：存放方式 + 已安装的助手 + 来源 -->
+        <div>
+          <!-- 存放方式：2026-08-12 用户定稿（模式 A/B 小白话术，不出现 symlink/junction/copy） -->
+          <div class="panel fade-up" data-place-panel>
+            <h3 class="panel-title">存放方式</h3>
+            <div class="place-options">
+              <button class="place-option is-active" data-place="shared">
+                <span class="place-name">所有助手共用一份 <span class="place-rec">推荐</span></span>
+                <span class="place-desc">省空间，更新一处生效，卸载干净。文件放在公共目录，支持的助手直接用；不支持的（如 Claude Code）由 yo-skill 自动搭好通道。</span>
+                <span class="place-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+              </button>
+              <button class="place-option" data-place="copies">
+                <span class="place-name">每个助手单独放一份</span>
+                <span class="place-desc">兼容性最好。用 Cursor、文件放在云同步盘（OneDrive 等）、或公司电脑权限受限时选这个。</span>
+                <span class="place-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+              </button>
+            </div>
+            <p class="place-note">新装的 Skill 默认"共用一份"，可在设置里改全局默认。不管选哪种，yo-skill 的总账都会记住，更新和卸载全部代劳。</p>
+          </div>
+
+          <div class="panel fade-up" data-agents-panel>
+            <h3 class="panel-title">已安装到这些助手</h3>
+            <div class="agent-row">
+              <img class="agent-logo-xs" src="logos/claude.svg" alt="Claude Code">
+              Claude Code
+              <span class="chip" data-place-chip="claude" style="margin-left:auto;">已搭通道</span>
+            </div>
+            <div class="agent-row">
+              <img class="agent-logo-xs logo-invert" src="logos/openai.svg" alt="Codex">
+              Codex
+              <span class="chip chip-mint" data-place-chip="codex" style="margin-left:auto;">共用目录直接生效</span>
+            </div>
+            <p id="placeNote" style="font-size:12.5px;color:var(--ink-3);margin-top:12px;">共用一份：更新这个 Skill 时，两个助手会一起变新；卸载也一次收干净。</p>
+          </div>
+
+          <div class="panel fade-up">
+            <h3 class="panel-title">来源</h3>
+            <dl data-d-meta>
+              <div class="meta-row"><dt>作者</dt><dd>@xiaohongshu-lab</dd></div>
+              <div class="meta-row"><dt>星标</dt><dd>54.5k ★</dd></div>
+              <div class="meta-row"><dt>最近更新</dt><dd>2026-08-02</dd></div>
+              <div class="meta-row"><dt>收录于</dt><dd>yo-skill 仓库 · 写作</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+
+      <div class="demo-note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+        本页为设计原型，所有条目均为演示数据
+      </div>
+
+    </div>
+  </main>
+</div>
+<script>
+/* 存放方式演示：切换时联动"已安装到这些助手"的生效方式 chip 与说明文案 */
+(function () {
+  var opts = document.querySelectorAll('.place-option');
+  var chips = document.querySelectorAll('[data-place-chip]');
+  var note = document.getElementById('placeNote');
+  var MODES = {
+    shared: {
+      chips: { claude: ['已搭通道', 'chip'], codex: ['共用目录直接生效', 'chip chip-mint'] },
+      note: '共用一份：更新这个 Skill 时，两个助手会一起变新；卸载也一次收干净。'
+    },
+    copies: {
+      chips: { claude: ['单独副本', 'chip'], codex: ['单独副本', 'chip'] },
+      note: '单独放一份：更新和卸载由 yo-skill 逐一代劳，不会留残留。'
+    }
+  };
+  opts.forEach(function (opt) {
+    opt.addEventListener('click', function () {
+      opts.forEach(function (o) { o.classList.remove('is-active'); });
+      opt.classList.add('is-active');
+      var m = MODES[opt.dataset.place];
+      chips.forEach(function (c) {
+        var conf = m.chips[c.dataset.placeChip];
+        c.textContent = conf[0];
+        c.className = conf[1];
+        c.style.marginLeft = 'auto';
+      });
+      note.textContent = m.note;
+    });
+  });
+})();
+</script>
+<script>
+/* 条目详情数据驱动（2026-08-12 新增）：store.html 卡片带 ?name=&type=&from=store 跳转过来，
+   用演示数据重建标题 / 徽章 / 要点 / 版本 / 来源 / 源 README；无参数 = 默认静态页（小红书文案助手），保持不动 */
+(function () {
+  var qs = new URLSearchParams(location.search);
+  var name = qs.get('name');
+  var type = qs.get('type') === 'mcp' ? 'mcp' : 'skill';
+  var from = qs.get('from');
+  if (from === 'store') {
+    var back = document.querySelector('[data-back]');
+    back.href = 'store.html';
+    back.querySelector('[data-back-label]').textContent = '发现';
+  }
+  if (!name || name === '小红书文案助手') return;
+
+  /* [作者, 一句话, 分类, 星标k, 日期, 需要APIKey] —— 与 store.html 演示数据同口径 */
+  var ITEMS = {
+    'PPT 制作师': ['daymade', '给一个主题，产出结构清晰的整套幻灯片初稿。', '写作', 32.1, '2026-07-28', 0],
+    '合同条款体检': ['legal-eye', '把合同里的风险条款挑出来，用大白话讲清楚。', '写作', 18.9, '2026-07-20', 0],
+    '公众号排版师': ['mdnice', 'Markdown 一键变公众号排版，样式不翻车。', '写作', 15.2, '2026-08-05', 0],
+    '视频脚本写手': ['reel-writer', '口播脚本带分镜和钩子，照着就能拍。', '写作', 9.4, '2026-07-15', 0],
+    '周报生成器': ['weekly-bot', '把零散的待办和提交记录收成一份像样的周报。', '写作', 7.8, '2026-08-08', 0],
+    '代码审查员': ['review-pal', '提交前替你过一遍坑，给出可执行的修改建议。', '编程', 41.3, '2026-08-06', 0],
+    '报错翻译官': ['err-reader', '把一屏报错翻成人话，顺便给修法。', '编程', 28.7, '2026-07-30', 0],
+    'SQL 优化师': ['sql-tuner', '慢查询给它，还你优化后的语句和解释。', '编程', 16.5, '2026-07-22', 0],
+    'Git 提交助手': ['commit-craft', '自动归纳改动，写出规范的提交说明。', '编程', 12.9, '2026-08-09', 0],
+    'API 文档生成': ['doc-forge', '读代码注释，产出可发布的接口文档。', '编程', 8.6, '2026-07-18', 0],
+    '正则小裁缝': ['regex-tailor', '用大白话描述需求，给你能用的正则和测试用例。', '编程', 5.3, '2026-08-01', 0],
+    '截图美化': ['shot-factory', '给截图加边框、阴影和背景，社媒配图一秒出片。', '设计', 12.4, '2026-07-25', 0],
+    '配色顾问': ['palette-pal', '给一个主色，配出整套可落地的界面色板。', '设计', 10.8, '2026-08-03', 0],
+    'Banner 生成器': ['banner-press', '输入文案和尺寸，产出多版式 Banner 初稿。', '设计', 6.7, '2026-08-07', 0],
+    '图标命名师': ['icon-namer', '几百个图标文件一次性规范命名。', '设计', 4.2, '2026-07-12', 0],
+    '会议纪要员': ['meeting-scribe', '录音转文字后自动整理决议和待办。', '办公', 22.6, '2026-08-04', 0],
+    'Excel 公式医生': ['sheet-doc', '看不懂的公式给它，逐段翻译并修错。', '办公', 13.5, '2026-07-26', 0],
+    '邮件润色': ['mail-polish', '口气不对重写到对，正式程度可调。', '办公', 8.9, '2026-07-29', 0],
+    '待办整理术': ['todo-ranger', '把散在各处的待办收拢排优先级。', '办公', 5.6, '2026-08-10', 0],
+    '旅行规划师': ['trip-craft', '说目的地和天数，给可执行的每日行程。', '生活', 19.7, '2026-08-01', 0],
+    '记账分析师': ['money-lens', '导出的账单给它，告诉你钱花哪儿了。', '生活', 9.1, '2026-08-06', 0],
+    '菜谱换算师': ['recipe-scale', '几人份随手换，调料克数自动算。', '生活', 7.3, '2026-07-17', 0],
+    '睡眠日记': ['sleep-log', '一句话记录，自动分析睡眠规律。', '生活', 3.8, '2026-07-09', 0],
+    '网页搜索': ['web-fetch', '让 AI 自己上网查资料，答案带来源。', '办公', 26.4, '2026-08-05', 0],
+    '文件管理': ['fs-keeper', '读写你电脑里的文件，整理下载文件夹。', '办公', 21.8, '2026-07-31', 0],
+    '浏览器自动化': ['auto-browser', '替你点网页、填表单、抓数据。', '编程', 14.6, '2026-08-07', 0],
+    '图片生成': ['img-forge', '一句话出图，风格可选。', '设计', 12.1, '2026-08-03', 1],
+    'Git 仓库': ['git-lens', '读懂分支、提交与改动，代码考古不费劲。', '编程', 11.2, '2026-08-02', 0],
+    '设计稿读取': ['figma-peek', '对着设计稿写界面，标注自动提取。', '设计', 10.3, '2026-08-09', 0],
+    '数据库查询': ['db-whisper', '用大白话查业务数据，不用学查询语句。', '编程', 9.8, '2026-07-24', 1],
+    '终端命令': ['term-runner', '替你跑命令、看输出，出错会解释。', '编程', 8.4, '2026-07-27', 0],
+    '日历日程': ['cal-mate', '安排会议、查空档、定提醒，一句话搞定。', '办公', 7.2, '2026-07-21', 0],
+    '邮箱助手': ['mail-mate', '收发邮件都能代办，支持主流邮箱。', '办公', 6.9, '2026-08-08', 1],
+    '地图路线': ['map-quest', '查路线、算通勤时间。', '生活', 5.5, '2026-07-19', 1],
+    '翻译服务': ['trans-bridge', '多引擎翻译，术语表可自定义。', '写作', 4.6, '2026-07-14', 1]
+  };
+  var it = ITEMS[name];
+  if (!it) return;
+  var author = it[0], desc = it[1], cat = it[2], stars = it[3], date = it[4], needKey = it[5];
+
+  document.title = name + ' · yo-skill';
+  document.querySelector('[data-d-title]').textContent = name;
+  document.querySelector('[data-d-sub]').textContent = desc;
+
+  /* 徽章：安全扫描 + API Key 状态（MCP 多一个"即连即用"提示） */
+  document.querySelector('[data-d-badges]').innerHTML =
+    '<span class="badge ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>已通过安全扫描</span>'
+    + (needKey
+      ? '<span class="badge warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m21 2-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0 3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>需要 API Key</span>'
+      : '<span class="badge ok"><span class="mark">✓</span> 不需要 API Key</span>');
+
+  /* 它会做什么：通用三点（演示口径） */
+  var TICK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>';
+  document.querySelector('[data-d-ticks]').innerHTML =
+    '<li>' + TICK + desc + '</li>'
+    + '<li>' + TICK + '对你的 AI 助手说大白话就能用，不用记命令</li>'
+    + '<li>' + TICK + '随仓库持续维护，有更新会提醒你一键升级</li>';
+
+  /* 版本记录 */
+  document.querySelector('[data-d-versions]').innerHTML =
+    '<div class="version-row"><span class="version-tag">最新</span><div>'
+    + '<div>仓库最新收录版本</div><div class="version-meta">' + date + ' · 可一键安装</div></div></div>'
+    + '<div class="version-row"><span class="version-tag">首发</span><div>'
+    + '<div>首次收录进 yo-skill 仓库</div><div class="version-meta">收录前已经过安全扫描</div></div></div>';
+
+  /* 来源 */
+  document.querySelector('[data-d-meta]').innerHTML =
+    '<div class="meta-row"><dt>作者</dt><dd>@' + author + '</dd></div>'
+    + '<div class="meta-row"><dt>星标</dt><dd>' + stars.toFixed(1) + 'k ★</dd></div>'
+    + '<div class="meta-row"><dt>最近更新</dt><dd>' + date + '</dd></div>'
+    + '<div class="meta-row"><dt>收录于</dt><dd>yo-skill 仓库 · ' + cat + '</dd></div>';
+
+  /* 源 README：通用模板（MCP 附配置示例代码块） */
+  var readme = '<h1>' + name + '</h1>'
+    + '<p>' + desc + '</p>'
+    + '<h2>使用方法</h2>'
+    + (type === 'skill'
+      ? '<p>装好后对你的 AI 助手说出需求即可，例如：</p><blockquote>「用' + name + '帮我处理一下今天的工作」</blockquote>'
+      : '<p>装好后 AI 助手会自动连上这项能力，直接提需求即可，例如：</p><blockquote>「帮我' + (cat === '办公' ? '整理一下今天的日程和文件' : cat === '编程' ? '看看这个项目里能改进的地方' : '处理一下手头的' + cat + '任务') + '」</blockquote>')
+    + '<h2>适配范围</h2>'
+    + '<ul><li>支持主流 AI 助手，一处安装处处生效</li><li>收录分类：' + cat + '</li>'
+    + (needKey ? '<li>首次使用需要在「已安装」页填上 API Key</li>' : '<li>不需要 API Key，装完即用</li>') + '</ul>';
+  if (type === 'mcp') {
+    readme += '<h2>配置示例</h2>'
+      + '<pre><code>{\n  "mcpServers": {\n    "' + author + '": {\n      "command": "npx",\n      "args": ["-y", "@yo-skill/' + author + '"]\n    }\n  }\n}</code></pre>'
+      + '<p>手动配置只是备选项——用 yo-skill 安装会自动写好这段配置。</p>';
+  }
+  readme += '<h2>更新说明</h2><p>最新版本 ' + date + ' 发布，随 yo-skill 仓库持续维护。</p>';
+  document.querySelector('[data-d-readme]').innerHTML = readme;
+
+  /* 商店上下文（还没装）：隐藏已安装专属的区域与按钮；MCP 无"存放方式"概念 */
+  if (from === 'store') {
+    document.querySelector('[data-btn-update]').style.display = 'none';
+    document.querySelector('[data-btn-uninstall]').style.display = 'none';
+    document.querySelector('[data-agents-panel]').style.display = 'none';
+  }
+  if (type === 'mcp' || from === 'store') {
+    document.querySelector('[data-place-panel]').style.display = 'none';
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="a" data-mode="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>配色方案对比 · yo-skill</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="yo.css">
+<style>
+/*
+  三套候选配色 × 浅色/深色。覆盖 yo.css 的全部调色变量，组件不动。
+  --on-accent 是新增变量：实心主按钮上的文字色（薄荷时代深浅同色的 --mint-ink 已不够分饰两角）。
+*/
+
+/* ============ A · 深空靛（Linear / Raycast 气质：冷靛紫 + 冷灰中性） ============ */
+[data-theme="a"][data-mode="light"] {
+  --paper: #F6F7F9; --paper-deep: #EDEEF2; --card: #FFFFFF;
+  --ink: #101216; --ink-2: #3B404B; --ink-3: #6B7180; --ink-4: #9CA1AC;
+  --hairline: #E5E6EB; --hairline-strong: #D6D8E0;
+  --accent: #5554D4; --accent-deep: #4341B4; --accent-ink: #383A96;
+  --accent-soft: #E9E9FA; --accent-softer: #F3F3FC; --on-accent: #FFFFFF;
+  --warn: #E8890C; --warn-deep: #C97408; --warn-ink: #8A4E04; --warn-soft: #FCEED7;
+  --knob: #FFFFFF; --neutral-soft: #E9EBF0; --id-claude: #101216; --id-claude-ink: #FFFFFF;
+}
+[data-theme="a"][data-mode="dark"] {
+  --paper: #0E0F14; --paper-deep: #12141A; --card: #181B22;
+  --ink: #ECEEF3; --ink-2: #B6BBC6; --ink-3: #858B98; --ink-4: #5D6370;
+  --hairline: #262A34; --hairline-strong: #363B48;
+  --accent: #8382F2; --accent-deep: #9C9BF5; --accent-ink: #B8B7F8;
+  --accent-soft: #24263F; --accent-softer: #1C1E30; --on-accent: #0D0E1A;
+  --warn: #F0A63C; --warn-deep: #F5B761; --warn-ink: #F5C886; --warn-soft: #3A2C15;
+  --knob: #FFFFFF; --neutral-soft: #262B33; --id-claude: #E5E7EB; --id-claude-ink: #101216;
+}
+
+/* ============ B · 深翠（薄荷的成熟版：玉石绿 + 暖青中性，品牌延续） ============ */
+[data-theme="b"][data-mode="light"] {
+  --paper: #F7F8F5; --paper-deep: #EFF0EA; --card: #FFFFFF;
+  --ink: #0D1411; --ink-2: #37423D; --ink-3: #68746E; --ink-4: #97A19B;
+  --hairline: #E5E6DF; --hairline-strong: #D5D7CC;
+  --accent: #0B8465; --accent-deep: #096B52; --accent-ink: #0A5C46;
+  --accent-soft: #DEF0E8; --accent-softer: #EFF7F2; --on-accent: #FFFFFF;
+  --warn: #E8890C; --warn-deep: #C97408; --warn-ink: #8A4E04; --warn-soft: #FCEED7;
+  --knob: #FFFFFF; --neutral-soft: #E9EBE6; --id-claude: #0D1411; --id-claude-ink: #FFFFFF;
+}
+[data-theme="b"][data-mode="dark"] {
+  --paper: #0C100E; --paper-deep: #101512; --card: #151B18;
+  --ink: #EBF0ED; --ink-2: #B0BDB6; --ink-3: #7E8B84; --ink-4: #5A665F;
+  --hairline: #232B26; --hairline-strong: #333C36;
+  --accent: #2FCF9E; --accent-deep: #5ADCB4; --accent-ink: #8FE9CB;
+  --accent-soft: #173528; --accent-softer: #12271E; --on-accent: #04241A;
+  --warn: #F0A63C; --warn-deep: #F5B761; --warn-ink: #F5C886; --warn-soft: #3A2C15;
+  --knob: #FFFFFF; --neutral-soft: #232B26; --id-claude: #E5EBE8; --id-claude-ink: #0D1411;
+}
+
+/* ============ C · 石墨电蓝（1Password / Vercel 气质：信赖蓝 + 石墨中性） ============ */
+[data-theme="c"][data-mode="light"] {
+  --paper: #F6F7F8; --paper-deep: #ECEEF1; --card: #FFFFFF;
+  --ink: #0F1419; --ink-2: #3D4650; --ink-3: #6B7280; --ink-4: #9AA1AB;
+  --hairline: #E4E6EA; --hairline-strong: #D6D9DE;
+  --accent: #2463EB; --accent-deep: #1C4FD0; --accent-ink: #1A3FA8;
+  --accent-soft: #E4EDFC; --accent-softer: #F0F5FE; --on-accent: #FFFFFF;
+  --warn: #E8890C; --warn-deep: #C97408; --warn-ink: #8A4E04; --warn-soft: #FCEED7;
+  --knob: #FFFFFF; --neutral-soft: #E9EBEF; --id-claude: #0F1419; --id-claude-ink: #FFFFFF;
+}
+[data-theme="c"][data-mode="dark"] {
+  --paper: #0C0E12; --paper-deep: #10131A; --card: #161920;
+  --ink: #EDEEF2; --ink-2: #B2B7C2; --ink-3: #818898; --ink-4: #5C6370;
+  --hairline: #252A33; --hairline-strong: #353B47;
+  --accent: #5B96FF; --accent-deep: #7FAEFF; --accent-ink: #A9CBFF;
+  --accent-soft: #1B2C4A; --accent-softer: #14203A; --on-accent: #07173A;
+  --warn: #F0A63C; --warn-deep: #F5B761; --warn-ink: #F5C886; --warn-soft: #3A2C15;
+  --knob: #FFFFFF; --neutral-soft: #252A32; --id-claude: #E5E7EB; --id-claude-ink: #0F1419;
+}
+
+/* ============ D · 珊瑚赭（Claude / Anthropic 陶土色：暖纸 + 书卷气，AI 生态原生） ============ */
+[data-theme="d"][data-mode="light"] {
+  --paper: #FAF6F2; --paper-deep: #F2ECE5; --card: #FFFFFF;
+  --ink: #1C1410; --ink-2: #4A3E36; --ink-3: #7A6E64; --ink-4: #A69A8E;
+  --hairline: #EAE2D9; --hairline-strong: #DBD0C3;
+  --accent: #C05A38; --accent-deep: #A84A2C; --accent-ink: #9E4A2A;
+  --accent-soft: #F7E3D9; --accent-softer: #FBF0E9; --on-accent: #FFFFFF;
+  --warn: #DF9200; --warn-deep: #C07F00; --warn-ink: #7A5200; --warn-soft: #FBEDD3;
+  --knob: #FFFFFF; --neutral-soft: #EFE8E1; --id-claude: #1C1410; --id-claude-ink: #FFFFFF;
+}
+[data-theme="d"][data-mode="dark"] {
+  --paper: #141010; --paper-deep: #191413; --card: #1F1917;
+  --ink: #F2EAE4; --ink-2: #C9BBB2; --ink-3: #94857B; --ink-4: #685C53;
+  --hairline: #322823; --hairline-strong: #463A33;
+  --accent: #E08A6B; --accent-deep: #EBA285; --accent-ink: #F0B29C;
+  --accent-soft: #3E241B; --accent-softer: #2C1A14; --on-accent: #2A1108;
+  --warn: #F0B23C; --warn-deep: #F5C261; --warn-ink: #F5CE86; --warn-soft: #3A2E14;
+  --knob: #FFFFFF; --neutral-soft: #2B2420; --id-claude: #EDE4DC; --id-claude-ink: #1C1410;
+}
+
+/* ============ E · 墨极（cc-switch 同款 shadcn/zinc 中性栈：黑白极简，提醒橙成唯一彩色） ============ */
+[data-theme="e"][data-mode="light"] {
+  --paper: #FAFAFA; --paper-deep: #F0F0F1; --card: #FFFFFF;
+  --ink: #18181B; --ink-2: #3F3F46; --ink-3: #71717A; --ink-4: #A1A1AA;
+  --hairline: #E4E4E7; --hairline-strong: #D4D4D8;
+  --accent: #18181B; --accent-deep: #27272A; --accent-ink: #18181B;
+  --accent-soft: #E9E9EB; --accent-softer: #F4F4F5; --on-accent: #FAFAFA;
+  --warn: #E8890C; --warn-deep: #C97408; --warn-ink: #8A4E04; --warn-soft: #FCEED7;
+  --knob: #FFFFFF; --neutral-soft: #EBEBED; --id-claude: #18181B; --id-claude-ink: #FFFFFF;
+}
+[data-theme="e"][data-mode="dark"] {
+  --paper: #0A0A0B; --paper-deep: #131314; --card: #18181A;
+  --ink: #FAFAFA; --ink-2: #D4D4D8; --ink-3: #8E8E96; --ink-4: #5C5C64;
+  --hairline: #27272A; --hairline-strong: #3F3F46;
+  --accent: #FAFAFA; --accent-deep: #D4D4D8; --accent-ink: #E4E4E7;
+  --accent-soft: #2A2A2E; --accent-softer: #1F1F22; --on-accent: #09090B;
+  --warn: #F0A63C; --warn-deep: #F5B761; --warn-ink: #F5C886; --warn-soft: #332A15;
+  --knob: #18181B; --neutral-soft: #26262A; --id-claude: #E4E4E7; --id-claude-ink: #18181B;
+}
+
+/* ---- 方案切换条（截图时用 ?bar=0 隐藏） ---- */
+.theme-bar {
+  position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%);
+  display: flex; align-items: center; gap: 6px; z-index: 99;
+  background: var(--card); border: 1px solid var(--hairline);
+  border-radius: 99px; padding: 6px;
+  box-shadow: 0 8px 28px -10px rgba(0, 0, 0, 0.28);
+  font-size: 13px;
+}
+.theme-bar .tb-label { color: var(--ink-3); padding: 0 6px 0 10px; font-size: 12px; }
+.theme-bar button {
+  padding: 6px 13px; border-radius: 99px; font-size: 13px; font-weight: 550;
+  color: var(--ink-2); transition: background 0.15s, color 0.15s;
+}
+.theme-bar button:hover { background: var(--paper-deep); }
+.theme-bar button.on { background: var(--ink); color: var(--paper); }
+.theme-bar .tb-div { width: 1px; height: 18px; background: var(--hairline); margin: 0 4px; }
+[data-bar="0"] .theme-bar { display: none; }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <aside class="sidebar">
+    <div class="logo"><span class="logo-mark">yo</span><span class="label">yo-skill</span></div>
+    <nav class="nav">
+      <a class="nav-item active" href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <span class="label">已安装</span>
+      </a>
+      <a class="nav-item" href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+        <span class="label">发现</span>
+      </a>
+    </nav>
+    <div class="sidebar-foot">
+      <div class="sync-pill"><span class="sync-dot"></span><span>已同步 · 2 台电脑</span></div>
+      <a class="nav-item" href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0-4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        <span class="label">设置</span>
+      </a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="main-inner">
+
+      <div class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" placeholder="搜索 Skill、MCP 或助手…" aria-label="全局搜索">
+        <span class="kbd">⌘ K</span>
+      </div>
+
+      <div class="notice">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h1"/><path d="M16 3h1a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-1"/><rect x="8" y="8" width="8" height="13" rx="2"/></svg>
+        <div>有 <b>2 个 Skill 重复了</b>，合并成一份以后，一处更新、多处生效。</div>
+        <a class="btn btn-sm" href="#">去处理</a>
+      </div>
+
+      <section class="section">
+        <div class="section-head">
+          <h2 class="section-title">我的 AI 助手</h2>
+          <span class="section-count">2</span>
+        </div>
+        <div class="card-grid two">
+          <div class="card hoverable">
+            <div class="card-top">
+              <div class="card-icon agent-icon-claude">C</div>
+              <div>
+                <div class="card-name">Claude Code</div>
+                <div class="card-sub">v2.1.4 · 9 个 Skill、3 个 MCP</div>
+              </div>
+            </div>
+            <div class="card-foot">
+              <span class="update-flag">有新版本 v2.2.0</span>
+              <button class="btn btn-sm" style="margin-left:auto;">更新</button>
+            </div>
+          </div>
+          <div class="card hoverable">
+            <div class="card-top">
+              <div class="card-icon agent-icon-codex">◆</div>
+              <div>
+                <div class="card-name">Codex</div>
+                <div class="card-sub">v0.8.2 · 7 个 Skill、4 个 MCP</div>
+              </div>
+            </div>
+            <div class="card-foot">
+              <span class="chip chip-mint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                已是最新
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2 class="section-title">Skills</h2>
+          <span class="section-count">6 个 Skill</span>
+        </div>
+        <div class="card-grid">
+          <div class="card hoverable">
+            <div class="card-top">
+              <div class="card-icon tone-mint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+              </div>
+              <div>
+                <div class="card-name">小红书文案助手</div>
+                <div class="card-sub">爆款标题与正文一键生成</div>
+              </div>
+            </div>
+            <div class="card-foot">
+              <span class="chip"><span class="agent-dot dot-claude"></span>Claude Code</span>
+              <span class="chip"><span class="agent-dot dot-codex"></span>Codex</span>
+              <span class="update-flag" style="margin-left:auto;font-size:12px;">有新版本</span>
+            </div>
+          </div>
+          <div class="card hoverable">
+            <div class="card-top">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+              </div>
+              <div>
+                <div class="card-name">PDF 提取</div>
+                <div class="card-sub">长文档秒变结构化笔记</div>
+              </div>
+            </div>
+            <div class="card-foot">
+              <span class="chip"><span class="agent-dot dot-claude"></span>Claude Code</span>
+            </div>
+          </div>
+          <div class="card hoverable">
+            <div class="card-top">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <div>
+                <div class="card-name">代码审查员</div>
+                <div class="card-sub">提交前替你过一遍坑</div>
+              </div>
+            </div>
+            <div class="card-foot">
+              <span class="chip"><span class="agent-dot dot-claude"></span>Claude Code</span>
+              <span class="chip"><span class="agent-dot dot-codex"></span>Codex</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2 class="section-title">MCP</h2>
+          <span class="section-count">4 个 MCP</span>
+        </div>
+        <div class="card-grid two">
+          <div class="card">
+            <div class="card-top">
+              <div class="card-icon tone-mint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <div>
+                <div class="card-name">文件管理</div>
+                <div class="card-sub">读写你电脑里的文件</div>
+              </div>
+              <button class="switch on" style="margin-left:auto;" role="switch" aria-checked="true" aria-label="文件管理开关"></button>
+            </div>
+            <div class="card-foot">
+              <span class="chip chip-orange">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="width:12px;height:12px;"><path d="m21 2-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0 3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+                需要 API Key
+              </span>
+              <span class="chip"><span class="agent-dot dot-claude"></span><span class="agent-dot dot-codex" style="margin-left:-2px;"></span>2 个助手</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-top">
+              <div class="card-icon tone-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg>
+              </div>
+              <div>
+                <div class="card-name">数据库查询</div>
+                <div class="card-sub">用大白话查业务数据</div>
+              </div>
+              <button class="switch" style="margin-left:auto;" role="switch" aria-checked="false" aria-label="数据库查询开关"></button>
+            </div>
+            <div class="card-foot">
+              <span class="chip chip-orange">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="width:12px;height:12px;"><path d="m21 2-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0 3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+                需要 API Key
+              </span>
+              <span class="chip"><span class="agent-dot dot-codex"></span>Codex</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="demo-note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+        配色方案对比页 · 主屏代表性切片，所有条目均为演示数据
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<div class="theme-bar" id="themeBar">
+  <span class="tb-label">配色</span>
+  <button data-t="a">A 深空靛</button>
+  <button data-t="b">B 深翠</button>
+  <button data-t="c">C 石墨蓝</button>
+  <button data-t="d">D 珊瑚赭</button>
+  <button data-t="e">E 墨极</button>
+  <span class="tb-div"></span>
+  <button data-m="light">浅色</button>
+  <button data-m="dark">深色</button>
+</div>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var params = new URLSearchParams(location.search);
+  var theme = params.get('t') || localStorage.getItem('yo-theme') || 'a';
+  var mode = params.get('mode') || localStorage.getItem('yo-mode') || 'light';
+  if (params.get('bar') === '0') root.setAttribute('data-bar', '0');
+  function apply() {
+    root.setAttribute('data-theme', theme);
+    root.setAttribute('data-mode', mode);
+    document.querySelectorAll('.theme-bar button').forEach(function (b) {
+      b.classList.toggle('on', b.dataset.t === theme || b.dataset.m === mode);
+    });
+  }
+  document.getElementById('themeBar').addEventListener('click', function (e) {
+    var b = e.target.closest('button');
+    if (!b) return;
+    if (b.dataset.t) { theme = b.dataset.t; localStorage.setItem('yo-theme', theme); }
+    if (b.dataset.m) { mode = b.dataset.m; localStorage.setItem('yo-mode', mode); }
+    apply();
+  });
+  apply();
+})();
+</script>
+</body>
+</html>

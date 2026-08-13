@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>设置 · yo-skill</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="yo.css">
+<script src="yo.js"></script>
+</head>
+<body>
+<!-- 设置页：Cindy 式分区 tab（SettingsView 的 activeTab 架构）+ 区内 section 纵向堆叠 + 150ms 淡入（2026-08-12 用户选定） -->
+<div class="app">
+
+  <aside class="sidebar">
+    <div class="logo"><span class="logo-mark">yo</span><span class="label">yo-skill</span></div>
+    <nav class="nav">
+      <a class="nav-item" href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <span class="label">已安装</span>
+      </a>
+      <a class="nav-item" href="store.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+        <span class="label">发现</span>
+      </a>
+    </nav>
+    <div class="sidebar-foot">
+      <div class="sync-pill"><span class="sync-dot"></span><span>已同步 · 2 台电脑</span></div>
+      <button class="nav-item mode-toggle" onclick="yoToggleMode()" aria-label="切换深浅色模式">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <span class="label label-to-dark">深色模式</span>
+        <span class="label label-to-light">浅色模式</span>
+      </button>
+      <a class="nav-item active" href="settings.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1-1.51H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82.33l.06.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0 .33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        <span class="label">设置</span>
+      </a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="main-inner">
+
+      <div class="page-head fade-up">
+        <h1 class="page-title">设置</h1>
+        <p class="page-sub">同步、钥匙、存放方式和外观，都收在这里。改完即时生效，不用找"保存"按钮。</p>
+      </div>
+
+      <div class="settings-layout fade-up">
+
+        <!-- 分区导航（Cindy SettingsView：activeTab 条件渲染） -->
+        <nav class="settings-nav">
+          <button class="stab active" data-stab="general">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3"/></svg>
+            通用
+          </button>
+          <button class="stab" data-stab="sync">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 0 0 .42-8.98 6 6 0 0 0-11.7 1.62A3.5 3.5 0 0 0 7 19h10.5z"/></svg>
+            云同步与设备
+          </button>
+          <button class="stab" data-stab="keys">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="4.5"/><path d="m11 11.5 9.5-9.5M15.5 7l3 3"/></svg>
+            API Key
+          </button>
+          <button class="stab" data-stab="storage">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            Skill 存放
+          </button>
+          <button class="stab" data-stab="about">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4m0-4h.01"/></svg>
+            关于
+          </button>
+        </nav>
+
+        <div class="settings-col">
+
+          <!-- ===== 通用 ===== -->
+          <div class="spanel" data-spanel="general">
+            <div class="panel">
+              <h3 class="panel-title">外观</h3>
+              <div class="subtabs" style="align-self:flex-start;">
+                <button class="subtab" data-theme-opt="light">浅色</button>
+                <button class="subtab" data-theme-opt="dark">深色</button>
+                <button class="subtab" data-theme-opt="system">跟随系统</button>
+              </div>
+              <p class="place-note">选"跟随系统"时，早晚自动切换，不用你动手。</p>
+            </div>
+
+            <div class="panel">
+              <h3 class="panel-title">偏好</h3>
+              <div class="set-row">
+                <div>
+                  <div class="set-label">语言</div>
+                  <div class="set-desc">界面文字。目前只有中文，英文在筹备中。</div>
+                </div>
+                <div class="set-ctrl">
+                  <select class="set-input" disabled title="英文版筹备中">
+                    <option>简体中文</option>
+                  </select>
+                </div>
+              </div>
+              <div class="set-row">
+                <div>
+                  <div class="set-label">开机时自动打开</div>
+                  <div class="set-desc">电脑启动后 yo-skill 在后台待命，同步不中断。</div>
+                </div>
+                <div class="set-ctrl"><button class="switch" data-pref="autolaunch" aria-label="开机时自动打开"></button></div>
+              </div>
+              <div class="set-row">
+                <div>
+                  <div class="set-label">自动检查更新</div>
+                  <div class="set-desc">有新版本时在主屏提醒你，一键升级。</div>
+                </div>
+                <div class="set-ctrl"><button class="switch" data-pref="autoupdate" aria-label="自动检查更新"></button></div>
+              </div>
+              <div class="set-row">
+                <div>
+                  <div class="set-label">发送匿名使用数据</div>
+                  <div class="set-desc"><b>默认关闭，不开也能正常用全部功能。</b>打开也只发送"点了哪些按钮"的计数，绝不包含你的 Skill 内容、路径或 Key。</div>
+                </div>
+                <div class="set-ctrl"><button class="switch" data-pref="telemetry" aria-label="发送匿名使用数据"></button></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== 云同步与设备 ===== -->
+          <div class="spanel" data-spanel="sync" hidden>
+            <div class="panel">
+              <h3 class="panel-title">云同步</h3>
+              <div class="set-row">
+                <div>
+                  <div class="set-label">端到端加密同步 <span class="chip chip-mint" style="margin-left:6px;"><span class="mark">✓</span> 已开启</span></div>
+                  <div class="set-desc">Skill、MCP 和 Key 加密后才离开这台电脑，<b>云端只存密文</b>，钥匙不出本机，谁都偷看不了——包括我们自己。</div>
+                </div>
+                <div class="set-ctrl"><button class="switch" data-pref="sync" aria-label="云同步"></button></div>
+              </div>
+            </div>
+
+            <div class="panel">
+              <h3 class="panel-title">我的设备</h3>
+              <div class="agent-row">
+                <svg class="device-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+                <div>
+                  <div class="set-label">这台电脑 · Windows 11 <span class="chip chip-mint" style="margin-left:6px;">当前设备</span></div>
+                  <div class="set-desc">上次同步：2 分钟前</div>
+                </div>
+              </div>
+              <div class="agent-row" data-device-row>
+                <svg class="device-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg>
+                <div>
+                  <div class="set-label">MacBook Pro 13"</div>
+                  <div class="set-desc">上次同步：昨天 21:14</div>
+                </div>
+                <button class="btn-quiet" data-device-remove style="margin-left:auto;">移除</button>
+              </div>
+              <p class="place-note">移除后那台电脑会立刻断开同步，存在它本地的内容不受影响。</p>
+            </div>
+
+            <div class="panel">
+              <h3 class="panel-title">添加设备</h3>
+              <p class="set-desc" style="margin-bottom:4px;">在新电脑上装 yo-skill、选"我已有账号"，输入配对码就能接手全部 Skill 和 MCP。</p>
+              <div data-pair-idle>
+                <button class="btn btn-outline-mint" data-pair-gen>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+                  生成配对码
+                </button>
+              </div>
+              <div data-pair-live hidden>
+                <div class="pair-code" data-pair-code>——————</div>
+                <p class="set-desc" style="text-align:center;">10 分钟内有效，只能配一台新电脑。</p>
+                <div style="display:flex;justify-content:center;gap:10px;margin-top:10px;">
+                  <button class="btn btn-sm" data-pair-copy>复制配对码</button>
+                  <button class="btn btn-ghost btn-sm" data-pair-regen>重新生成</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== API Key ===== -->
+          <div class="spanel" data-spanel="keys" hidden>
+            <div class="panel">
+              <h3 class="panel-title">API Key 保险库</h3>
+              <div class="set-row">
+                <div>
+                  <div class="set-label" style="display:flex;align-items:center;gap:7px;">
+                    <svg style="width:14px;height:14px;color:var(--accent-deep);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    只在这台电脑上加密保存（AES-256）
+                  </div>
+                  <div class="set-desc">同步上云前会再加密一次，服务器永远看不到明文。填一次，所有助手和电脑都能用。</div>
+                </div>
+              </div>
+              <div class="set-row" data-key-row="img-forge">
+                <div>
+                  <div class="set-label">图片生成</div>
+                  <div class="set-desc">@img-forge · MCP</div>
+                </div>
+                <div class="set-ctrl">
+                  <span class="chip" data-key-chip>未填写</span>
+                  <input class="set-input" type="password" placeholder="粘贴 Key 后保存" data-key-input>
+                  <button class="key-eye" data-key-eye title="显示 / 隐藏">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+                  </button>
+                  <button class="btn btn-sm" data-key-save>保存</button>
+                </div>
+              </div>
+              <div class="set-row" data-key-row="db-whisper">
+                <div>
+                  <div class="set-label">数据库查询</div>
+                  <div class="set-desc">@db-whisper · MCP</div>
+                </div>
+                <div class="set-ctrl">
+                  <span class="chip" data-key-chip>未填写</span>
+                  <input class="set-input" type="password" placeholder="粘贴 Key 后保存" data-key-input>
+                  <button class="key-eye" data-key-eye title="显示 / 隐藏">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+                  </button>
+                  <button class="btn btn-sm" data-key-save>保存</button>
+                </div>
+              </div>
+              <div class="set-row" data-key-row="mail-mate">
+                <div>
+                  <div class="set-label">邮箱助手</div>
+                  <div class="set-desc">@mail-mate · MCP</div>
+                </div>
+                <div class="set-ctrl">
+                  <span class="chip" data-key-chip>未填写</span>
+                  <input class="set-input" type="password" placeholder="粘贴 Key 后保存" data-key-input>
+                  <button class="key-eye" data-key-eye title="显示 / 隐藏">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+                  </button>
+                  <button class="btn btn-sm" data-key-save>保存</button>
+                </div>
+              </div>
+              <div class="set-row" data-key-row="map-quest">
+                <div>
+                  <div class="set-label">地图路线</div>
+                  <div class="set-desc">@map-quest · MCP</div>
+                </div>
+                <div class="set-ctrl">
+                  <span class="chip" data-key-chip>未填写</span>
+                  <input class="set-input" type="password" placeholder="粘贴 Key 后保存" data-key-input>
+                  <button class="key-eye" data-key-eye title="显示 / 隐藏">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+                  </button>
+                  <button class="btn btn-sm" data-key-save>保存</button>
+                </div>
+              </div>
+              <div class="set-row" data-key-row="trans-bridge">
+                <div>
+                  <div class="set-label">翻译服务</div>
+                  <div class="set-desc">@trans-bridge · MCP</div>
+                </div>
+                <div class="set-ctrl">
+                  <span class="chip" data-key-chip>未填写</span>
+                  <input class="set-input" type="password" placeholder="粘贴 Key 后保存" data-key-input>
+                  <button class="key-eye" data-key-eye title="显示 / 隐藏">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+                  </button>
+                  <button class="btn btn-sm" data-key-save>保存</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== Skill 存放 ===== -->
+          <div class="spanel" data-spanel="storage" hidden>
+            <div class="panel">
+              <h3 class="panel-title">新装 Skill 的默认存放方式</h3>
+              <div class="place-options">
+                <button class="place-option is-active" data-splace="shared">
+                  <span class="place-name">所有助手共用一份 <span class="place-rec">推荐</span></span>
+                  <span class="place-desc">省空间，更新一处生效，卸载干净。文件放在通用目录，支持的助手直接用；不支持的由 yo-skill 自动搭好通道。</span>
+                  <span class="place-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                </button>
+                <button class="place-option" data-splace="copies">
+                  <span class="place-name">每个助手单独放一份</span>
+                  <span class="place-desc">兼容性最好。用 Cursor、文件放在云同步盘（OneDrive 等）、或公司电脑权限受限时选这个。</span>
+                  <span class="place-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                </button>
+              </div>
+              <p class="place-note"><b>只影响之后新装的 Skill</b>；已经装好的保持原样，更新也绝不会悄悄改变它们的存放方式。单个 Skill 想换方式，去它的详情页调。</p>
+            </div>
+
+            <div class="panel">
+              <h3 class="panel-title">通用目录</h3>
+              <div class="set-row">
+                <div>
+                  <div class="set-label">共用一份的 Skill 都放在这里</div>
+                  <div class="set-desc">Codex、Gemini CLI、Kimi Code、GitHub Copilot、OpenCode、Replit 直接认这个目录，装上零配置生效；其他助手由 yo-skill 自动搭桥。</div>
+                </div>
+                <div class="set-ctrl">
+                  <code class="set-path" data-common-path>~/.agents/skills/</code>
+                  <button class="btn btn-ghost btn-sm" data-path-copy>复制</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== 关于 ===== -->
+          <div class="spanel" data-spanel="about" hidden>
+            <div class="panel">
+              <h3 class="panel-title">关于 yo-skill</h3>
+              <div class="set-row">
+                <div style="display:flex;align-items:center;gap:12px;">
+                  <span class="logo-mark" style="width:38px;height:38px;font-size:15px;border-radius:11px;">yo</span>
+                  <div>
+                    <div class="set-label">yo-skill <span style="color:var(--ink-3);font-weight:500;">v0.1.0</span></div>
+                    <div class="set-desc">让 AI 学会新本事，跨电脑随身带。</div>
+                  </div>
+                </div>
+                <div class="set-ctrl"><button class="btn btn-ghost btn-sm" data-check-update>检查更新</button></div>
+              </div>
+              <div class="set-row">
+                <div>
+                  <div class="set-label">使用帮助</div>
+                  <div class="set-desc">新手引导和常见问题。</div>
+                </div>
+                <div class="set-ctrl"><span class="set-soon">筹备中</span></div>
+              </div>
+              <div class="set-row">
+                <div>
+                  <div class="set-label">反馈问题</div>
+                  <div class="set-desc">遇到不对劲的地方，告诉我们。</div>
+                </div>
+                <div class="set-ctrl"><span class="set-soon">筹备中</span></div>
+              </div>
+              <div class="set-row">
+                <div>
+                  <div class="set-label">隐私与数据说明</div>
+                  <div class="set-desc">我们存什么、不存什么，写得明明白白。</div>
+                </div>
+                <div class="set-ctrl"><span class="set-soon">筹备中</span></div>
+              </div>
+            </div>
+
+            <div class="panel">
+              <h3 class="panel-title" style="color:var(--danger-ink);">危险区</h3>
+              <div class="set-row">
+                <div>
+                  <div class="set-label">清除本机演示数据</div>
+                  <div class="set-desc">把原型演示时装过的助手、Skill、填过的 Key 和偏好全部还原到初始状态，页面会自动刷新。</div>
+                </div>
+                <div class="set-ctrl"><button class="btn-quiet" data-danger-clear>清除…</button></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="demo-note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+        本页为设计原型，开关与输入均为本地演示状态（localStorage），不代表真实账户
+      </div>
+
+    </div>
+  </main>
+</div>
+<script>
+/* 设置页交互（2026-08-12）：分区切换（Cindy 式 activeTab + 150ms 淡入）、外观三选一联动 yo-mode、
+   开关/配对码/Key 遮蔽/存放默认/清数据，全部 localStorage 演示持久化 */
+(function () {
+  var $ = function (s) { return document.querySelector(s); };
+  var $$ = function (s) { return Array.prototype.slice.call(document.querySelectorAll(s)); };
+  var store = {
+    get: function (k, d) { try { var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } },
+    set: function (k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+  };
+
+  /* ---- 分区切换：?tab= > localStorage > general；切换 150ms 淡入（Cindy 纪律） ---- */
+  var tabs = $$('[data-stab]');
+  var panels = $$('[data-spanel]');
+  function showTab(name) {
+    tabs.forEach(function (t) { t.classList.toggle('active', t.dataset.stab === name); });
+    panels.forEach(function (p) {
+      var on = p.dataset.spanel === name;
+      p.hidden = !on;
+      if (on) { p.classList.remove('fade-in'); void p.offsetWidth; p.classList.add('fade-in'); }
+    });
+    store.set('yo-settings-tab', name);
+  }
+  tabs.forEach(function (t) { t.addEventListener('click', function () { showTab(t.dataset.stab); }); });
+  var initTab = new URLSearchParams(location.search).get('tab') || store.get('yo-settings-tab', 'general');
+  if (!panels.some(function (p) { return p.dataset.spanel === initTab; })) initTab = 'general';
+  showTab(initTab);
+
+  /* ---- 外观三选一：联动 yo-mode（system = 清除记忆跟随系统） ---- */
+  var themeOpts = $$('[data-theme-opt]');
+  function paintTheme() {
+    var stored = null;
+    try { stored = localStorage.getItem('yo-mode'); } catch (e) {}
+    var cur = stored || 'system';
+    themeOpts.forEach(function (o) { o.classList.toggle('active', o.dataset.themeOpt === cur); });
+  }
+  themeOpts.forEach(function (o) {
+    o.addEventListener('click', function () { window.yoSetMode(o.dataset.themeOpt); paintTheme(); });
+  });
+  paintTheme();
+
+  /* ---- 开关：默认 开机自启关 / 自动更新开 / 遥测关 / 云同步开 ---- */
+  var PREFS = { autolaunch: false, autoupdate: true, telemetry: false, sync: true };
+  $$('[data-pref]').forEach(function (sw) {
+    var key = 'yo-pref-' + sw.dataset.pref;
+    sw.classList.toggle('on', store.get(key, PREFS[sw.dataset.pref]));
+    sw.addEventListener('click', function () {
+      var on = !sw.classList.contains('on');
+      sw.classList.toggle('on', on);
+      store.set(key, on);
+    });
+  });
+
+  /* ---- 配对码：生成 / 复制 / 重新生成 ---- */
+  var pairIdle = $('[data-pair-idle]'), pairLive = $('[data-pair-live]'), pairCode = $('[data-pair-code]');
+  function genCode() {
+    var c = '';
+    for (var i = 0; i < 6; i++) c += Math.floor(Math.random() * 10);
+    pairCode.textContent = c;
+    pairIdle.hidden = true; pairLive.hidden = false;
+  }
+  $('[data-pair-gen]').addEventListener('click', genCode);
+  $('[data-pair-regen]').addEventListener('click', genCode);
+  $('[data-pair-copy]').addEventListener('click', function () {
+    var btn = this;
+    try { navigator.clipboard.writeText(pairCode.textContent); } catch (e) {}
+    btn.textContent = '已复制';
+    setTimeout(function () { btn.textContent = '复制配对码'; }, 1200);
+  });
+
+  /* ---- API Key：遮蔽 / 显示 / 保存（演示持久化，第一个预填） ---- */
+  var savedKeys = store.get('yo-keys', { 'img-forge': 'sk-demo-xh8f2m9q3f9a' });
+  $$('[data-key-row]').forEach(function (row) {
+    var id = row.dataset.keyRow;
+    var input = row.querySelector('[data-key-input]');
+    var chip = row.querySelector('[data-key-chip]');
+    var eye = row.querySelector('[data-key-eye]');
+    var save = row.querySelector('[data-key-save]');
+    function paint() {
+      if (savedKeys[id]) {
+        chip.textContent = '已填写';
+        chip.className = 'chip chip-mint';
+        input.value = savedKeys[id];
+      } else {
+        chip.textContent = '未填写';
+        chip.className = 'chip chip-orange';
+      }
+    }
+    paint();
+    eye.addEventListener('click', function () {
+      input.type = input.type === 'password' ? 'text' : 'password';
+    });
+    save.addEventListener('click', function () {
+      var v = input.value.trim();
+      if (!v) { input.focus(); return; }
+      savedKeys[id] = v;
+      store.set('yo-keys', savedKeys);
+      paint();
+      save.textContent = '已存好';
+      input.type = 'password';
+      setTimeout(function () { save.textContent = '保存'; }, 1200);
+    });
+  });
+
+  /* ---- Skill 存放默认：复用 place-option，持久化 ---- */
+  var placeOpts = $$('[data-splace]');
+  var placeCur = store.get('yo-place-default', 'shared');
+  function paintPlace() {
+    placeOpts.forEach(function (o) { o.classList.toggle('is-active', o.dataset.splace === placeCur); });
+  }
+  placeOpts.forEach(function (o) {
+    o.addEventListener('click', function () { placeCur = o.dataset.splace; store.set('yo-place-default', placeCur); paintPlace(); });
+  });
+  paintPlace();
+
+  /* ---- 通用目录复制 ---- */
+  $('[data-path-copy]').addEventListener('click', function () {
+    var btn = this;
+    try { navigator.clipboard.writeText($('[data-common-path]').textContent); } catch (e) {}
+    btn.textContent = '已复制';
+    setTimeout(function () { btn.textContent = '复制'; }, 1200);
+  });
+
+  /* ---- 设备移除（演示） ---- */
+  var devRow = $('[data-device-row]');
+  $('[data-device-remove]').addEventListener('click', function () {
+    this.textContent = '已移除';
+    this.disabled = true;
+    devRow.style.opacity = '.45';
+  });
+
+  /* ---- 检查更新（演示） ---- */
+  $('[data-check-update]').addEventListener('click', function () {
+    this.outerHTML = '<span class="chip chip-mint"><span class="mark">✓</span> 已是最新</span>';
+  });
+
+  /* ---- 危险区：两步确认清演示数据 ---- */
+  var danger = $('[data-danger-clear]');
+  var armed = false;
+  danger.addEventListener('click', function () {
+    if (!armed) { armed = true; danger.textContent = '再点一次确认清除'; setTimeout(function () { armed = false; danger.textContent = '清除…'; }, 3000); return; }
+    try {
+      Object.keys(localStorage).forEach(function (k) { if (k.indexOf('yo-') === 0) localStorage.removeItem(k); });
+    } catch (e) {}
+    location.reload();
+  });
+})();
+</script>
+</body>
+</html>

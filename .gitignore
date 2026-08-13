@@ -1,0 +1,38 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# build outputs
+.next/
+out/
+dist/
+build/
+.turbo/
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# env
+.env
+.env.local
+.env.*.local
+
+# misc
+.DS_Store
+*.log
+npm-debug.log*
+pnpm-debug.log*
+.vercel
+.idea/
+.vscode/
+*.swp
+
+# 本地工具产物（截图 / Playwright 会话 / 编辑器状态）
+output/
+.playwright-cli/
+.zcode/
+
+# 本地素材仓库（424MB 图片与原始数据，不进 git 历史；注意另行备份）
+self-media/
+e-commerce/
