@@ -53,12 +53,12 @@ items/*.json  # 每条完整档案（安装配方 / env / 扫描明细 / README�
 
 接入 Gitee 国内镜像：
 
-> 镜像仓已建：**Gitee `shunFSKi/yo-skill-registry`**（开源）。走 Gitee 官方「仓库镜像」功能单向 Pull GitHub 数据仓，**不由工作流推送**。自动同步已配通（2026-08-14）：GitHub 数据仓 push → webhook → Gitee 自动拉取。
+> 镜像仓已建：**Gitee `shunFSKi/yo-skill-registry`**（开源）。走 Gitee 官方「仓库镜像」功能单向 Pull GitHub 数据仓，**不由工作流推送**。自动同步已配通（2026-08-14 终版）：CI 推完数据仓后直接 curl Gitee `remote_mirror/pull` API 触发同步（主仓 secret `GITEE_TOKEN`）——GitHub webhook 方案实测不可靠：2 万+ 文件的 push payload 太大，Gitee 接收超过 GitHub 10s 投递超时，永远显示失败。webhook 留作兜底。
 
 1. Gitee 建同名公开仓库（不初始化 README/.gitignore）
 2. 仓库 → 管理 → 仓库镜像管理 → 添加镜像：方向 **Pull**，镜像仓库选 GitHub 数据仓，私人令牌填 GitHub PAT（classic，勾 `repo` + `admin:repo_hook`）
 3. 已知坑：勾选「自动从 GitHub 同步仓库」会报「webhook生成失败」（Gitee 侧问题，2026-08-14 实测），先取消勾选把镜像建成，再按下一条手动配 webhook
-4. **手动配 webhook 实现自动同步**（官方文档做法，已验证）：Gitee 生成私人令牌（scope 勾 `projects`，user_info 强制附带；过期时间留空 = 永不过期）→ GitHub 数据仓 Settings → Webhooks 加 `https://gitee.com/api/v5/repos/shunFSKi/yo-skill-registry/remote_mirror/pull?access_token=<Gitee令牌>`，事件选 Just the push event。创建后 ping 返回 201 即通；之后 GitHub 有新 push，Gitee 分钟内自动跟（最短同步间隔 5 分钟）
+4. **自动同步终版（2026-08-14）**：CI 工作流推完数据仓后 curl Gitee API 触发同步，无需任何 webhook 配置；主仓 secret 配 `GITEE_TOKEN`（Gitee 私人令牌，scope 勾 `projects`，user_info 强制附带；过期时间留空 = 永不过期）。**webhook 方案已弃用为主**：GitHub push 携带 2 万+ 文件的 payload 巨大，Gitee 接收慢于 GitHub 10s 投递超时，投递永远显示 500（实测两次）；webhook 保留作兜底——GitHub 数据仓 `https://gitee.com/api/v5/repos/shunFSKi/yo-skill-registry/remote_mirror/pull?access_token=<Gitee令牌>`，Just the push event
 5. 前提：Gitee 账号需已绑定手机号 + GitHub 第三方账号（账号设置里可查）
 
 下游读取地址（**GitHub 系对应海外，Gitee 对应国内**）：

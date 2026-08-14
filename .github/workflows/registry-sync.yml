@@ -85,3 +85,15 @@ jobs:
           git add -A
           git commit -s -m "chore: registry 数据刷新 $(date -u +%F)"
           git push
+
+      - name: 触发 Gitee 镜像同步（配了才执行）
+        # 为什么不用 GitHub webhook 通知 Gitee：2 万+ 文件的 push payload 巨大，
+        # Gitee 接收慢于 GitHub 10s 投递超时 → 永远假失败（2026-08-14 两次实测）。
+        # 改为 CI 里直接 curl Gitee API（无 body，秒回 204，同步异步执行）。webhook 留作兜底。
+        if: vars.REGISTRY_REPO != ''
+        env:
+          GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
+        run: |
+          if [ -z "$GITEE_TOKEN" ]; then echo "未配置 GITEE_TOKEN，跳过 Gitee 同步"; exit 0; fi
+          curl -s -X POST "https://gitee.com/api/v5/repos/shunFSKi/yo-skill-registry/remote_mirror/pull?access_token=$GITEE_TOKEN" \
+            -w "gitee mirror pull: HTTP %{http_code}\n"
