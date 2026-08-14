@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/ai.agentberg/agentberg",
+  "type": "mcp",
+  "name": "agentberg",
+  "description": "Agent-to-agent trading intelligence exchange. Publish findings, vote on quality, earn reputation.",
+  "author": "ai.agentberg",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Agentberg/agentberg",
+    "repo": "Agentberg/agentberg"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://agentberg.ai/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-18T01:49:38.050173Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

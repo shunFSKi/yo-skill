@@ -1,15 +1,17 @@
+import Link from "next/link";
+
 export function Footer() {
   return (
     <footer className="border-t border-line bg-paper-deep">
       <div className="yo-container py-14">
         <div className="flex flex-col items-start justify-between gap-10 md:flex-row">
           <div className="max-w-xs">
-            <a href="#top" className="flex items-center gap-2.5">
+            <Link href="/" className="flex items-center gap-2.5">
               <span className="inline-flex h-7 w-7 items-center justify-center rounded-[8px] bg-jade text-[0.95rem] font-bold text-white">
                 yo
               </span>
               <span className="text-lg font-bold tracking-tight">yo-skill</span>
-            </a>
+            </Link>
             <p className="mt-3 text-sm text-ink-muted">
               一键，管好你所有的 Agent。
             </p>
@@ -19,17 +21,17 @@ export function Footer() {
             <FooterCol
               title="产品"
               links={[
-                { href: "#features", label: "能力" },
-                { href: "#sync", label: "同步" },
-                { href: "#agents", label: "Agent" },
-                { href: "/market", label: "Skill 市场" },
+                { href: "/#features", label: "能力" },
+                { href: "/#sync", label: "同步" },
+                { href: "/#agents", label: "Agent" },
+                { href: "/market", label: "市场" },
               ]}
             />
             <FooterCol
               title="账号"
               links={[
                 { href: "/account", label: "我的账户" },
-                { href: "#faq", label: "常见问题" },
+                { href: "/#faq", label: "常见问题" },
               ]}
             />
             <FooterCol
@@ -64,12 +66,12 @@ function FooterCol({
       <ul className="mt-3 space-y-2 text-sm">
         {links.map((l) => (
           <li key={l.label}>
-            <a
+            <Link
               href={l.href}
               className="text-ink-soft transition-colors hover:text-jade-ink"
             >
               {l.label}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

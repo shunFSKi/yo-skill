@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/ai.agentutility/mcp-statline",
+  "type": "mcp",
+  "name": "AgentUtility Statline",
+  "description": "MCP server for the @agentutility statline cluster — pay-per-call x402 tools, no API keys, USDC on…",
+  "author": "ai.agentutility",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/rooz21/x402",
+    "repo": "rooz21/x402"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@agentutility/mcp-statline"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-14T21:10:20.828032Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

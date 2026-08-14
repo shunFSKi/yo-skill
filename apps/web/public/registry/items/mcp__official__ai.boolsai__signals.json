@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/ai.boolsai/signals",
+  "type": "mcp",
+  "name": "Boolsai Signals",
+  "description": "Quant-research MCP — tradeable signals from public-company website stack changes. 7 tools.",
+  "author": "ai.boolsai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Boolsai-ai/mcp",
+    "repo": "Boolsai-ai/mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://signals.boolsai.ai/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-19T13:30:36.922608Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# Boolsai — MCP server suite\n\n[![MCP](https://img.shields.io/badge/MCP-streamable--http-blue)](https://modelcontextprotocol.io)\n[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)\n[![No-auth](https://img.shields.io/badge/auth-public-success)](https://boolsai.ai)\n\n**Stack-intelligence MCPs for AI agents.** Live, no-auth, public access to every commerce site's tech stack — every vendor, every account ID, every inline script signature, plus a quant-research signal layer on top.\n\nBuilt for AI agents doing competitive intel, agency prospect research, ecommerce due diligence, and ad-hoc commerce-data discovery.\n\nThis repo contains the **Anthropic MCP Registry manifests** for the four-server Boolsai suite. The actual servers live at `*.boolsai.ai`.\n\n---\n\n## The four servers\n\n| Server | Connect URL | Tools | What it does |\n|---|---|---|---|\n| **[Boolsai Scan](./boolsai-scan/server.json)** | `https://boolsai.ai/mcp` | `boolsai_scan`, `boolsai_scan_paths` | Live tech-stack scan of any public site. Returns every external host, inline script signature, route, vendor, account ID, and JSON-LD organisation block in one response. |\n| **[Boolsai Directory](./boolsai-directory/server.json)** | `https://directory.boolsai.ai/mcp` | `summary`, `site_dossier`, `sites_using_vendor`, `lookup_id`, `brands_in_city`, `brands_in_market`, `stack_archetype`, `compare_sites`, `similar_sites`, `brands_by_founder` | Pre-indexed directory of tens of thousands of ecommerce sites by vendor, account ID, country, founder, city, archetype. |\n| **[Boolsai Grep](./boolsai-grep/server.json)** | `https://grep.boolsai.ai/mcp` | `grep_pattern`, `count_pattern`, `sites_with_signal`, `list_signal_types` | Parallel regex search across the R2 corpus of every scan we've ever taken. Use when a signal isn't pre-indexed — discover new vendor patterns, leaked account IDs, niche tracking pixels. |\n| **[Boolsai Signals](./boolsai-signals/server.json)** | `https://signals.boolsai.ai/mcp` | `universe_summary`, `find_signals`, `test_filter`, `recent_events`, `event_dossier`, `scan_at_date`, `ticker_history` | **Quant-research MCP.** Hunts for tradeable signals in 316 public-company website stack changes (1,761 events), SPY-benchmarked. Wayback Machine integration. Methodology baked into the `initialize` response. |\n\nEach server is independently published to the Anthropic MCP Registry under the **`ai.boolsai/*`** namespace (DNS-verified via `boolsai.ai`).\n\n---\n\n## Why Boolsai\n\n- **No auth, no key, no rate limit gymnastics.** Paste a URL into Claude.ai → Settings → Connectors. Done.\n- **First-party data.** Every scan runs live on demand. No third-party feeds, no stale catalogue.\n- **Built for AI consumption.** Each server's `initialize` response includes a detailed `instructions` block — vendor recognition tips, output schemas, methodology. Agents don't have to guess.\n- **Suite, not silo.** Cross-discovery: each server's instructions reference the other three so agents can chain queries (scan → look up in directory → grep historical → test as signal).\n\n---\n\n## Install\n\n### Claude Desktop / Claude Code / Cursor\n\n```json\n{\n  \"mcpServers\": {\n    \"boolsai-scan\":      { \"url\": \"https://boolsai.ai/mcp\" },\n    \"boolsai-directory\": { \"url\": \"https://directory.boolsai.ai/mcp\" },\n    \"boolsai-grep\":      { \"url\": \"https://grep.boolsai.ai/mcp\" },\n    \"boolsai-signals\":   { \"url\": \"https://signals.boolsai.ai/mcp\" }\n  }\n}\n```\n\nRestart the client. All four servers show up with their tools.\n\n### ChatGPT / Claude.ai Custom Connectors\n\nSettings → Connectors → Add custom connector → paste any of the four URLs above. Add all four for the full suite.\n\n### One-liner test from a terminal\n\n```bash\ncurl -sS https://boolsai.ai/mcp \\\n  -H 'content-type: application/json' \\\n  -d '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"tools/list\"}' | jq .\n```\n\n---\n\n## Example agent prompts\n\n> \"What's the full tech stack of gymshark.com?\"\n> → `boolsai_scan({ url: \"https://gymshark.com\" })`\n\n> \"List ten stores using Klaviyo with their company IDs.\"\n> → `boolsai-directory.sites_using_vendor({ vendor: \"klaviyo\" })`\n\n> \"Show me sites with `window._fs_org` (FullStory) in their inline scripts.\"\n> → `boolsai-grep.sites_with_signal({ pattern: \"window._fs_org\" })`\n\n> \"Find the highest-α tradeable signal in the last 30 days with n ≥ 20.\"\n> → `boolsai-signals.find_signals({ horizon_days: 30, min_n: 20 })`\n\n---\n\n## Architecture\n\n```\n                   ┌──────────────────────────┐\n                   │  AI agent (Claude / etc) │\n                   └────────────┬─────────────┘\n                                │ JSON-RPC 2.0 (Streamable HTTP)\n            ┌───────────────────┼─────────────────────┐\n            ▼                   ▼                     ▼\n   boolsai.ai/mcp     directory.boolsai.ai/mcp   grep.boolsai.ai/mcp\n   (live scanner)     (indexed corpus query)     (raw R2 search)\n            │                   │                     │\n            │                   │                     │\n            ▼                   ▼                     ▼\n     ┌──────────────────────────────────────────────────────┐\n     │  R2 corpus (hundreds of thousands of historical scans) │\n     └──────────────────────────────────────────────────────┘\n                                ▲\n                                │ derived\n                signals.boolsai.ai/mcp  (quant signals from stack changes)\n```\n\nAll four servers run on Cloudflare Workers with R2 for the historical corpus.\n\n---\n\n## Publishing to the MCP Registry\n\nSee **[PUBLISHING.md](./PUBLISHING.md)** for the one-time DNS verification + per-server publish commands.\n\n---\n\n## License\n\nMIT — see [LICENSE](LICENSE).\n\nBuilt by [Boolsai](https://boolsai.ai) · Contact: [founder@boolsai.ai](mailto:founder@boolsai.ai)\n",
+  "status": "curated"
+}

@@ -8,9 +8,9 @@
 
 这是独立开发者产品 **yo-skill**（跨 Agent 工具的 Skill / Prompt / MCP 同步管理工具，定位 "AI 工具的 1Password"）的**调研与规划工作区**。
 
-**当前状态：调研文档仓库 + 桌面端静态 UI 原型（`prototype/`，双击即开）+ 官网 Web 应用（`apps/web`，Next.js 15，已可 `pnpm dev` 跑起来）。**
+**当前状态：调研文档仓库 + 桌面端静态 UI 原型（`prototype/`，双击即开）+ 官网 Web 应用（`apps/web`，Next.js 15，已可 `pnpm dev` 跑起来，含真实数据的 Skill 与 MCP 市场）。**
 
-- 已有代码：`apps/web`（官网落地页 + 等待列表 API，pnpm workspace）与 `packages/ui-kit`（共享 UI 骨架）；桌面端（Tauri/Rust）尚未动工
+- 已有代码：`apps/web`（官网落地页 + 等待列表 API + `/market` 市场，pnpm workspace）、`packages/ui-kit`（共享 UI 骨架）与 `tools/registry-pipeline`（市场数据管线，Node TS）；桌面端（Tauri/Rust）尚未动工
 - 没有测试、没有 CI/CD、没有部署流程
 - 主体内容仍是 **Markdown 调研报告**（中文撰写）+ 产品设计定稿 V2 + 桌面端 7 屏 HTML 原型
 
@@ -25,9 +25,11 @@ skill-manager/
 ├── DESIGN.md                        # 视觉设计系统（从 7 屏原型归纳：色彩 / 字体 / 组件约定）
 ├── package.json / pnpm-workspace.yaml / tsconfig.base.json  # pnpm monorepo 根（Node 22+ / pnpm 10+）
 ├── apps/
-│   └── web/                         # 官网 Web 应用 @yo-skill/web（Next.js 15 App Router + React 18 + Tailwind + next-themes；落地页 + /api/waitlist + market/account 占位；视觉「纸上墨字 + 一笔翡翠」，详见本目录 README）
+│   └── web/                         # 官网 Web 应用 @yo-skill/web（Next.js 15 App Router + React 18 + Tailwind + next-themes；落地页 + /api/waitlist + /market 真实数据市场（209 条 SSG，详情页含源仓库 README）+ account 占位；视觉「纸上墨字 + 一笔翡翠」，详见本目录 README）
 ├── packages/
 │   └── ui-kit/                      # 共享 UI 原语骨架（TS，与未来的 apps/desktop 复用）
+├── tools/
+│   └── registry-pipeline/           # 市场数据管线 @yo-skill/registry-pipeline（Node 22 直跑 TS：拉 claudeskills.info + MCP 官方 Registry 真实元数据 + 源仓库 README → 5 条静态扫描 + 场景分类 → 落盘 apps/web/public/registry/*.json；根目录 pnpm fetch:registry 重跑即更新；fetch 走环境变量代理）
 ├── prototype/                       # 桌面端 UI 设计稿（纯静态 HTML/CSS，仅供视觉参考、非产品代码，双击 index.html 进入）
 │   ├── README.md                    # 原型说明 + 7 屏清单（先读这个）
 │   ├── yo.css                       # 共享设计系统（E 墨极调色层 + 深色模式，变量已语义化 --accent/--warn；尾部 .ob-* 向导组件）
@@ -135,7 +137,7 @@ skill-manager/
 
 ## 五、测试与构建
 
-**官网（已存在）**：根目录 `pnpm dev`（:3000）/ `pnpm build` / `pnpm lint` / `pnpm typecheck`，均 filter 到 `@yo-skill/web`（typecheck 为全 workspace）。⚠️ 踩坑：跑过 `pnpm build` 后 `pnpm dev` 会样式丢失，删掉 `apps/web/.next` 再 dev 即可（见 `apps/web/README.md`）。
+**官网（已存在）**：根目录 `pnpm dev`（:3000）/ `pnpm build` / `pnpm lint` / `pnpm typecheck`，均 filter 到 `@yo-skill/web`（typecheck 为全 workspace）；`pnpm fetch:registry` 重跑市场数据管线刷新 `apps/web/public/registry/`。⚠️ 踩坑：跑过 `pnpm build` 后 `pnpm dev` 会样式丢失，删掉 `apps/web/.next` 再 dev 即可（见 `apps/web/README.md`）。
 
 **调研报告**：没有测试框架。验证一份报告的正确方式是：检查事实与数据来源是否一致、引用是否可追溯、与已冻结结论是否冲突。
 

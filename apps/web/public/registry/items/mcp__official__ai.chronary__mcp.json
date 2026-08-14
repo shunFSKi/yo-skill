@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/ai.chronary/mcp",
+  "type": "mcp",
+  "name": "Chronary",
+  "description": "Calendar API for AI agents: events, availability, Google/Microsoft setup, scheduling, and iCal.",
+  "author": "ai.chronary",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Chronary/chronary-mcp",
+    "repo": "Chronary/chronary-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@chronary/mcp"
+    ],
+    "env": [
+      {
+        "name": "CHRONARY_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-14T21:12:59.153451Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "# @chronary/mcp\n\n[![Smithery](https://smithery.ai/badge/chronary/agent-calendar)](https://smithery.ai/server/chronary/agent-calendar)\n\nMCP server for [Chronary](https://chronary.ai) — calendar tools for AI assistants.\n\nDrops 50 calendar tools (manage agents, calendars, and events, request human Google/Microsoft setup, find meeting times, run scheduling proposals, configure availability rules, manage webhooks, iCal subscriptions, scoped keys, audit log, and usage) into any MCP-compatible client: Claude Desktop, Cursor, VS Code Copilot, Claude Code, Windsurf.\n\n**One-click install via [Smithery](https://smithery.ai/server/chronary/agent-calendar):** `npx -y @smithery/cli mcp add chronary/agent-calendar --client claude` (swap `--client` for `cursor`, `vscode`, `claude-code`, `windsurf`, …).\n\n## Prerequisites\n\n1. A Chronary account — sign up at [chronary.ai](https://chronary.ai).\n2. An API key from the console (starts with `chr_sk_`).\n3. Node.js ≥ 18 on the machine where the MCP client runs.\n\n## Client configurations\n\nAll examples use `npx -y @chronary/mcp`, which downloads and runs the latest version on demand. No install step required.\n\n### Claude Desktop\n\nEdit `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS) or `%APPDATA%\\Claude\\claude_desktop_config.json` (Windows):\n\n**macOS / Linux:**\n\n```json\n{\n  \"mcpServers\": {\n    \"chronary\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@chronary/mcp\"],\n      \"env\": {\n        \"CHRONARY_API_KEY\": \"chr_sk_...\"\n      }\n    }\n  }\n}\n```\n\n**Windows** (uses `cmd /c` because `spawn` can't resolve `npx.cmd` directly):\n\n```json\n{\n  \"mcpServers\": {\n    \"chronary\": {\n      \"command\": \"cmd\",\n      \"args\": [\"/c\", \"npx\", \"-y\", \"@chronary/mcp\"],\n      \"env\": {\n        \"CHRONARY_API_KEY\": \"chr_sk_...\"\n      }\n    }\n  }\n}\n```\n\nRestart Claude Desktop after saving.\n\n### Cursor\n\nEdit `.cursor/mcp.json` (project-level) or `~/.cursor/mcp.json` (user-level):\n\n**macOS / Linux:**\n\n```json\n{\n  \"mcpServers\": {\n    \"chronary\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@chronary/mcp\"],\n      \"env\": { \"CHRONARY_API_KEY\": \"chr_sk_...\" }\n    }\n  }\n}\n```\n\n**Windows:**\n\n```json\n{\n  \"mcpServers\": {\n    \"chronary\": {\n      \"command\": \"cmd\",\n      \"args\": [\"/c\", \"npx\", \"-y\", \"@chronary/mcp\"],\n      \"env\": { \"CHRONARY_API_KEY\": \"chr_sk_...\" }\n    }\n  }\n}\n```\n\n### VS Code Copilot\n\nEdit `.vscode/mcp.json` (workspace) or run the **MCP: Open User Configuration** command for a user-level config. VS Code uses a different top-level key (`servers`) and requires an explicit `type`:\n\n**macOS / Linux:**\n\n```json\n{\n  \"servers\": {\n    \"chronary\": {\n      \"type\": \"stdio\",\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@chronary/mcp\"],\n      \"env\": { \"CHRONARY_API_KEY\": \"chr_sk_...\" }\n    }\n  }\n}\n```\n\n**Windows:**\n\n```json\n{\n  \"servers\": {\n    \"chronary\": {\n      \"type\": \"stdio\",\n      \"command\": \"cmd\",\n      \"args\": [\"/c\", \"npx\", \"-y\", \"@chronary/mcp\"],\n      \"env\": { \"CHRONARY_API_KEY\": \"chr_sk_...\" }\n    }\n  }\n}\n```\n\n### Claude Code\n\nEdit `.mcp.json` at the project root, or `~/.claude.json` for user-level:\n\n**macOS / Linux:**\n\n```json\n{\n  \"mcpServers\": {\n    \"chronary\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@chronary/mcp\"],\n      \"env\": { \"CHRONARY_API_KEY\": \"chr_sk_...\" }\n    }\n  }\n}\n```\n\n**Windows:**\n\n```json\n{\n  \"mcpServers\": {\n    \"chronary\": {\n      \"command\": \"cmd\",\n      \"args\": [\"/c\", \"npx\", \"-y\", \"@chronary/mcp\"],\n      \"env\": { \"CHRONARY_API_KEY\": \"chr_sk_...\" }\n    }\n  }\n}\n```\n\n### Windsurf\n\nEdit `~/.codeium/windsurf/mcp_config.json` (`%USERPROFILE%\\.codeium\\windsurf\\mcp_config.json` on Windows):\n\n**macOS / Linux:**\n\n```json\n{\n  \"mcpServers\": {\n    \"chronary\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@chronary/mcp\"],\n      \"env\": { \"CHRONARY_API_KEY\": \"chr_sk_...\" }\n    }\n  }\n}\n```\n\n**Windows:**\n\n```json\n{\n  \"mcpServers\": {\n    \"chronary\": {\n      \"command\": \"cmd\",\n      \"args\": [\"/c\", \"npx\", \"-y\", \"@chronary/mcp\"],\n      \"env\": { \"CHRONARY_API_KEY\": \"chr_sk_...\" }\n    }\n  }\n}\n```\n\n> **Windsurf limit:** Cascade enforces a hard cap of 100 total tools across all MCP servers and 20 tool calls per prompt. Chronary exposes 50; consider `--tools` filtering if you stack multiple servers.\n\n## Reducing context with `--tools`\n\nExposing all 50 tools uses LLM tokens on every request. For focused workflows, whitelist only what you need:\n\n```json\n{\n  \"mcpServers\": {\n    \"chronary\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\", \"@chronary/mcp\",\n        \"--tools\", \"list_events,find_meeting_time,create_event\"\n      ],\n      \"env\": { \"CHRONARY_API_KEY\": \"chr_sk_...\" }\n    }\n  }\n}\n```\n\n## Pointing at a non-production API\n\nFor self-hosted Chronary instances or development against a local API:\n\n```json\n{\n  \"args\": [\"-y\", \"@chronary/mcp\", \"--base-url\", \"http://localhost:8787\"]\n}\n```\n\n## Tools exposed\n\n| Tool | Read-only | Destructive |\n|------|-----------|-------------|\n| `list_calendars`, `get_calendar` | ✓ | |\n| `create_calendar`, `update_calendar` | | |\n| `delete_calendar` | | ✓ |\n| `list_events`, `get_event` | ✓ | |\n| `create_event`, `update_event`, `confirm_event` | | |\n| `cancel_event`, `release_event` | | ✓ |\n| `list_agents`, `get_agent` | ✓ | |\n| `create_agent`, `update_agent` | | |\n| `delete_agent` | | ✓ |\n| `get_availability`, `find_meeting_time` | ✓ | |\n| `get_calendar_context` | ✓ | |\n| `list_proposals`, `get_proposal` | ✓ | |\n| `create_proposal`, `respond_to_proposal`, `resolve_proposal` | | |\n| `cancel_proposal` | | ✓ |\n| `get_availability_rules` | ✓ | |\n| `set_availability_rules` | | |\n| `clear_availability_rules` | | ✓ |\n| `list_webhooks`, `get_webhook`, `list_webhook_deliveries` | ✓ | |\n| `create_webhook`, `update_webhook` | | |\n| `delete_webhook` | | ✓ |\n| `list_ical_subscriptions`, `get_ical_subscription` | ✓ | |\n| `subscribe_ical`, `update_ical_subscription`, `sync_ical_subscription` | | |\n| `delete_ical_subscription` | | ✓ |\n| `list_scoped_keys` | ✓ | |\n| `create_scoped_key` | | |\n| `revoke_scoped_key` | | ✓ |\n| `get_audit_log` | ✓ | |\n| `accept_terms` | | |\n| `get_usage` | ✓ | |\n\nTool annotations (`readOnlyHint`, `destructiveHint`, `idempotentHint`) are surfaced to MCP clients so hosts can decide whether to require user confirmation.\n\n## Troubleshooting\n\n**\"spawn npx ENOENT\" on Windows** — use the `cmd /c npx ...` form shown above.\n\n**\"CHRONARY_API_KEY is required\"** — the env block must be nested under the server entry, not at the top of the config file.\n\n**Tools aren't showing up** — restart the MCP client after editing the config. Most clients only read the config on startup.\n\n**Verify the binary runs locally:**\n\n```sh\nCHRONARY_API_KEY=test npx -y @chronary/mcp --help\n```\n\n## Links\n\n- [Chronary docs](https://docs.chronary.ai)\n- [MCP spec](https://modelcontextprotocol.io)\n- [Report an issue](https://github.com/Chronary/chronary/issues)\n\n## License\n\nApache-2.0\n",
+  "status": "curated"
+}

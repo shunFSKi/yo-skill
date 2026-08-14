@@ -1,0 +1,89 @@
+{
+  "id": "mcp:official/ai.dinglebear/rapprise",
+  "type": "mcp",
+  "name": "Apprise RMCP",
+  "description": "Apprise notifications over MCP and CLI with authenticated stdio and HTTP transports.",
+  "author": "ai.dinglebear",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dinglebear-ai/rapprise",
+    "repo": "dinglebear-ai/rapprise"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@dinglebear/rapprise"
+    ],
+    "env": [
+      {
+        "name": "APPRISE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "APPRISE_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "APPRISE_RMCP_VERSION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "APPRISE_RMCP_REPO",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "APPRISE_RMCP_RELEASE_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RUST_LOG",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-04T19:27:05.76537Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# apprise-rmcp\n\nApprise notifications over MCP and CLI with authenticated stdio and HTTP transports.\n\nIt exposes one MCP tool, `apprise`, plus the `rapprise` CLI. Agents can send\ntagged notifications through a preconfigured Apprise server, run one-off\nApprise URL sends, and check upstream health through stdio MCP, Streamable HTTP\nMCP, or direct shell commands.\n\n**30-second path:** run `npx -y @dinglebear/rapprise health --json` -> start loopback\nHTTP with `APPRISE_MCP_HOST=127.0.0.1 npx -y @dinglebear/rapprise serve` -> call\n`tools/call` with `{\"action\":\"health\"}`.\n\n**Status:** operational RMCP upstream-client server. Write-capable; notification\nsends are intentional side effects. HTTP MCP supports loopback dev mode, static\nbearer tokens, and Google OAuth through `lab-auth`.\n\n**Not for:** replacing Apprise API, storing notification destinations in this\nrepo, scheduling reminders, building a generic webhook relay, multi-tenant\nisolation, or passing upstream Apprise bearer tokens through MCP tool arguments.\n\n## Contents\n\n- [Naming](#naming)\n- [Capabilities And Boundaries](#capabilities-and-boundaries)\n- [Install](#install)\n- [Quickstart](#quickstart)\n- [Client Configuration](#client-configuration)\n- [Runtime Surfaces](#runtime-surfaces)\n- [MCP Tool Reference](#mcp-tool-reference)\n- [CLI Reference](#cli-reference)\n- [Configuration](#configuration)\n- [Authentication](#authentication)\n- [Safety And Trust Model](#safety-and-trust-model)\n- [Architecture](#architecture)\n- [Distribution Contract](#distribution-contract)\n- [Development](#development)\n- [Verification](#verification)\n- [Deployment](#deployment)\n- [Troubleshooting](#troubleshooting)\n- [Related Servers](#related-servers)\n- [Documentation](#documentation)\n- [License](#license)\n\n## Naming\n\n| Surface | This repo |\n|---|---|\n| Repository | `apprise-rmcp` |\n| Rust crate | `apprise-mcp` |\n| Binary / CLI | `rapprise` |\n| npm package | `@dinglebear/rapprise` |\n| npm binary aliases | `apprise-rmcp`, `rapprise` |\n| MCP tool | `apprise` |\n| Config home | `~/.apprise` on hosts, `/data` in containers |\n| Env prefixes | `APPRISE_*`, `APPRISE_MCP_*`, `APPRISE_RMCP_*` for npm launcher controls |\n\nThe repo and npm package use the RMCP family name, while the shipped binary uses\nthe short Rust CLI name `rapprise`.\n\n## Capabilities And Boundaries\n\n- Send notifications through tags configured in the upstream Apprise API server.\n- Send one-off notifications to Apprise URL schemas with `notify_url`.\n- Check upstream Apprise API health.\n- Expose the `send_alert` prompt for critical alert workflows.\n- Provide setup and doctor commands for local plugin/runtime checks.\n\n| This repo owns | Apprise owns | Explicitly out of scope |\n|---|---|---|\n| MCP/CLI projection, request validation, auth policy, response shaping, setup checks, and transport wiring. | Notification delivery, configured destinations, tags, delivery backend credentials, upstream API semantics. | Destination storage, scheduling, retry policy beyond upstream behavior, multi-tenant sandboxing, arbitrary webhook relay behavior. |\n\n## Install\n\n| Path | Command | Best for | Notes |\n|---|---|---|---|\n| npm / npx | `npx -y @dinglebear/rapprise --help` | Linux/Windows x86_64 clients. | Verifies the release archive SHA-256 before atomic install. |\n| Release installer | [Verified installer procedure](#verified-release-installer) | Linux x86_64 without Node. | Verifies checksum and offline provenance before executing installer code. |\n| Docker / Compose | `docker compose up -d` | Shared HTTP MCP deployments. | Reads `.env` and exposes container port `40050`. Needs the external network first — see [Deployment](#docker--compose). |\n| Build from source | `cargo build --release` | Development and audits. | Produces `target/release/rapprise`. |\n| Plugin | `just build-plugin && claude plugin install ./plugins/apprise` | Claude Code from this checkout. | Bundled `rapprise` stdio plugin. Ships no hooks. |\n\nReleases publish SHA-256 files and offline GitHub build-provenance bundles. The\ninstallers verify both the checksum and provenance identity with GitHub CLI 2.68+.\nThe npm launcher supports x86_64 Linux and Windows release assets.\n\n### npm / npx\n\nRun the stdio MCP server or CLI without a manual binary install:\n\n```bash\nnpx -y @dinglebear/rapprise --help\nnpx -y @dinglebear/rapprise mcp\nnpx -y @dinglebear/rapprise health --json\n```\n\nThe npm package downloads `rapprise` during `postinstall`. Override download\nbehavior only when testing packaging:\n\n| Variable | Purpose |\n|---|---|\n| `APPRISE_RMCP_SKIP_DOWNLOAD=1` | Skip postinstall binary download. |\n| `APPRISE_RMCP_VERSION` or `APPRISE_RMCP_BINARY_VERSION` | Select the GitHub Release tag. |\n| `APPRISE_RMCP_REPO` | Select the GitHub repo used for release downloads. |\n| `APPRISE_RMCP_RELEASE_BASE_URL` | Select a custom release base URL. |\n\nVerified binary installation is fail-closed and pins the repository, release\nworkflow, and source tag. Install `gh` 2.68 or newer before using npm or the\nrelease installer.\n\n### Verified Release Installer\n\nDownload the installer and its verification material without executing it,\nthen verify both integrity and provenance before running it:\n\nReplace `version` with the release tag you want; `v0.2.0` is current.\n\n```bash\nversion=v0.2.0\nbase=\"https://github.com/dinglebear-ai/rapprise/releases/download/${version}/rapprise-installer.sh\"\ncurl -fsSLO \"$base\"\ncurl -fsSLO \"$base.sha256\"\ncurl -fsSLO \"$base.sigstore.json\"\nsha256sum --check rapprise-installer.sh.sha256\ngh attestation verify rapprise-installer.sh \\\n  --repo dinglebear-ai/rapprise \\\n  --bundle rapprise-installer.sh.sigstore.json \\\n  --signer-workflow dinglebear-ai/rapprise/.github/workflows/release.yml \\\n  --source-ref \"refs/tags/${version}\" \\\n  --deny-self-hosted-runners\nAPPRISE_RMCP_VERSION=\"$version\" bash rapprise-installer.sh\n```\n\nThe `--repo` and `--signer-workflow` values must match the identity recorded in\nthe attestation at build time. Releases cut before the repository moved to the\n`dinglebear-ai` org are attested as `jmagar/rapprise`; use `dinglebear-ai/rapprise`\nfor releases cut afterwards.\n\nThe npm launcher supports Windows x86_64 only when GitHub CLI 2.68+ is installed\nand `gh.exe` is available on `PATH`; provenance verification is not skipped.\n\n### Build From Source\n\n```bash\ngit clone https://github.com/dinglebear-ai/rapprise\ncd rapprise\ncargo build --release\n./target/release/rapprise --help\n```\n\nMinimum supported Rust version: 1.90. Rust edition 2021. The Cargo workspace has\ntwo members: the root `apprise-mcp` package and `xtask`.\n\n## Quickstart\n\n### 1. Start Or Point At Apprise API\n\nThe default upstream is `http://localhost:8000`.\n\n```bash\ndocker run --rm -p 8000:8000 caronc/apprise:latest\n```\n\nUse `APPRISE_URL` when the API server is elsewhere:\n\n```bash\nexport APPRISE_URL=http://100.120.242.29:8766\n```\n\nSet `APPRISE_TOKEN` only when your Apprise API server requires bearer auth:\n\n```bash\nexport APPRISE_TOKEN=...\n```\n\n### 2. Run A Safe CLI Call\n\n```bash\nnpx -y @dinglebear/rapprise health --json\n```\n\n### 3. Start Loopback HTTP MCP\n\n```bash\nAPPRISE_MCP_HOST=127.0.0.1 npx -y @dinglebear/rapprise serve\n```\n\nIn another shell:\n\n```bash\ncurl -sf http://127.0.0.1:40050/health\n```\n\n### 4. Make A First MCP Call\n\n```bash\ncurl -s -X POST http://127.0.0.1:40050/mcp \\\n  -H \"Content-Type: application/json\" \\\n  -H \"Accept: application/json, text/event-stream\" \\\n  -d '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"tools/call\",\"params\":{\"name\":\"apprise\",\"arguments\":{\"action\":\"health\"}}}'\n```\n\n## Client Configuration\n\n### Claude Code Stdio\n\n```json\n{\n  \"mcpServers\": {\n    \"apprise\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"apprise-rmcp\", \"mcp\"],\n      \"env\": {\n        \"APPRISE_URL\": \"http://localhost:8000\"\n      }\n    }\n  }\n}\n```\n\n### Claude Code HTTP\n\n```json\n{\n  \"mcpServers\": {\n    \"apprise\": {\n      \"type\": \"http\",\n      \"url\": \"http://127.0.0.1:40050/mcp\",\n      \"headers\": {\n        \"Authorization\": \"Bearer ${APPRISE_MCP_TOKEN}\"\n      }\n    }\n  }\n}\n```\n\n### Codex / Labby Gateway\n\nRegister Apprise through Labby as an HTTP upstream when sharing one long-running\nserver, or run it directly as stdio for local-only use.\n\n```toml\n[mcp_servers.apprise]\ncommand = \"npx\"\nargs = [\"-y\", \"apprise-rmcp\", \"mcp\"]\n```\n\n### Generic MCP JSON\n\n```json\n{\n  \"command\": \"rapprise\",\n  \"args\": [\"mcp\"],\n  \"env\": {\n    \"APPRISE_URL\": \"http://localhost:8000\"\n  }\n}\n```\n\nDo not put `APPRISE_TOKEN`, OAuth secrets, SSH keys, passwords, or upstream\nbearer tokens in MCP tool arguments. Use env, config files, or the MCP client's\nsecret storage.\n\n## Runtime Surfaces\n\n| Surface | Status | Entry point | Purpose |\n|---|---:|---|---|\n| MCP stdio | Supported | `rapprise mcp`, `npx -y @dinglebear/rapprise mcp` | Local child-process MCP clients. |\n| MCP HTTP | Supported | `rapprise serve`, `POST /mcp` | Streamable HTTP MCP for local or shared server deployments. |\n| Liveness | Supported | `GET /health` | Always unauthenticated. |\n| Readiness / status | Supported | `GET /ready`, `GET /status` | Behind the same auth layer as `/mcp`. |\n| OAuth discovery | Conditional | `/mcp/.well-known/*` and `lab-auth` routes | Mounted only when `auth_mode = oauth`. |\n| CLI | Supported | `rapprise <command>` | Scriptable parity and debugging. |\n| Prompt | Supported | `send_alert` | Reusable critical-alert workflow. |\n| REST API | Not shipped | N/A | Apprise API already owns the REST API. |\n| Web UI | Not shipped | N/A | Apprise API already owns the web UI. |\n\n## MCP Tool Reference\n\nOne MCP tool is exposed: `apprise`. Pass the required `action` argument to select\nthe operation.\n\n### Read Actions\n\n| Action | Description | Required params | Optional params |\n|---|---|---|---|\n| `health` | Check Apprise API server health. | none | none |\n| `status` | Return authenticated deployment and runtime status. | none | none |\n| `help` | Return built-in markdown tool help. | none | none |\n\n### Write Actions\n\n| Action | Description | Required params | Optional params |\n|---|---|---|---|\n| `notify` | Send to a configured Apprise tag, or all configured services when `tag` is omitted. | `body` | `tag`, `title`, `type` |\n| `notify_url` | Send a stateless one-off notification to one or more Apprise URL schemas. | `urls`, `body` | `title`, `type` |\n\n### Notification Types\n\n| Type | Meaning |\n|---|---|\n| `info` | Informational notification. |\n| `success` | Successful operation. |\n| `warning` | Non-critical warning. |\n| `failure` | Critical failure or error. |\n\n### MCP Call Examples\n\n```bash\ncurl -s -X POST http://127.0.0.1:40050/mcp \\\n  -H \"Content-Type: application/json\" \\\n  -H \"Accept: application/json, text/event-stream\" \\\n  -d '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"tools/call\",\"params\":{\"name\":\"apprise\",\"arguments\":{\"action\":\"health\"}}}'\n```\n\n```json\n{\n  \"name\": \"apprise\",\n  \"arguments\": {\n    \"action\": \"notify\",\n    \"body\": \"Deployment succeeded\",\n    \"tag\": \"ops\",\n    \"title\": \"Deploy complete\",\n    \"type\": \"success\"\n  }\n}\n```\n\nCurated action summaries live here. `docs/INVENTORY.md` is the current\nsource of truth for complete parameters until a generated `docs/MCP_SCHEMA.md`\nis added.\n\n## CLI Reference\n\nThe CLI calls the same service methods as the MCP tool.\n\n```bash\nrapprise health [--json]\nrapprise notify <body> [--tag TAG] [--title T] [--type info|success|warning|failure] [--json]\nrapprise notify-url <urls> <body> [--title T] [--type info|success|warning|failure] [--json]\n\nrapprise serve                          # Streamable HTTP MCP on :40050\nrapprise serve mcp                      # same as `serve`\nrapprise mcp                            # stdio MCP\nrapprise doctor [--json]                # pre-flight environment validation\nrapprise setup check                    # read-only audit of appdata/env\nrapprise setup repair                   # idempotent: create missing setup files\nrapprise setup install                  # copy this binary into ~/.local/bin\nrapprise setup plugin-hook [--no-repair]\n\nrapprise help                           # or --help / -h\n\n\n…",
+  "status": "curated"
+}

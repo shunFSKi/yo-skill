@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/ai.deinai/creator-skill",
+  "type": "mcp",
+  "name": "Creator SKILL — Influencer Discovery",
+  "description": "AI influencer search on TikTok, Instagram, YouTube. Deinai MCP token required; credits per result.",
+  "author": "ai.deinai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/deinai/deinai_backend",
+    "repo": "deinai/deinai_backend"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "deinai-mcp"
+    ],
+    "env": [
+      {
+        "name": "DEINAI_MCP_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "DEINAI_MCP_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-05T10:16:43.633426Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,104 @@
+{
+  "id": "mcp:official/ai.bolthub/mcp",
+  "type": "mcp",
+  "name": "bolthub",
+  "description": "The bolthub API marketplace, L402 gateways, and your other MCP servers, on one Lightning budget.",
+  "author": "ai.bolthub",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/signaltech-org/bolthub-sdk",
+    "repo": "signaltech-org/bolthub-sdk"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@bolthub/mcp"
+    ],
+    "env": [
+      {
+        "name": "LND_REST_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LND_MACAROON",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "NWC_URI",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "LNBITS_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LNBITS_ADMIN_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PHOENIXD_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PHOENIXD_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "BUDGET_SATS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BOLTHUB_ACCOUNT_TOKEN",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-25T02:10:18.959626Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "# bolthub SDK\n\nSource code for every publicly published [bolthub.ai](https://bolthub.ai) package: the npm `@bolthub/*` scope and the `bolthub` / `bolthub-verify` PyPI packages.\n\nbolthub is a payment layer for agent-to-tool commerce: charge agents for your MCP tools and APIs per call, settling straight to your wallet over Lightning (L402), with bolthub never in the funds path. These packages are the open-source side of that: the tool-payment SDK, payment clients, MCP servers, a CLI, and origin-verification middleware.\n\n| Package | Registry | Directory | What it is |\n| --- | --- | --- | --- |\n| [`@bolthub/pay`](https://www.npmjs.com/package/@bolthub/pay) | npm | `packages/pay` | The payments SDK, both sides: price an MCP tool or HTTP endpoint (`createPaywall`), pay for tools within a budget (`ToolClient` for MCP, `L402Client` for HTTP), wallet adapters (LND, LNbits, Phoenixd, NWC, WebLN); rails: L402, facilitator. Zero runtime dependencies |\n| [`@bolthub/mcp`](https://www.npmjs.com/package/@bolthub/mcp) | npm | `packages/mcp` | The bolthub MCP server: marketplace + specific gateways + your other MCP servers behind one config entry, with one shared Lightning budget |\n| [`@bolthub/cli`](https://www.npmjs.com/package/@bolthub/cli) | npm | `packages/cli` | Terminal client for the marketplace |\n| [`@bolthub/verify`](https://www.npmjs.com/package/@bolthub/verify) | npm | `packages/verify` | Gateway signature verification middleware (Express/Fastify/Node) |\n| [`bolthub`](https://pypi.org/project/bolthub/) | PyPI | `packages/agent-python` | The payments SDK in Python: L402 client + wallets, and the seller-side paywall |\n| [`bolthub-verify`](https://pypi.org/project/bolthub-verify/) | PyPI | `packages/verify-python` | Python gateway signature verification (Flask/Django/FastAPI) |\n\n`packages/shared` is internal (never published); it is here because `@bolthub/mcp` bundles it.\n\n> **Consolidation (2026-07):** `@bolthub/agent` merged into `@bolthub/pay` (≥0.4.0); `@bolthub/mcp-registry` and `@bolthub/mcp-bridge` merged into `@bolthub/mcp`. The old names are deprecated on npm and point here.\n\n## Relationship to the bolthub platform\n\nThe bolthub platform (gateway, API, web app) lives in a private monorepo. The SDK packages above are developed there and synced to this repository, which is the **publish origin**: releases are tagged here and built + published by [CI](.github/workflows/publish.yml) with [npm provenance](https://docs.npmjs.com/generating-provenance-statements), so what's on npm is verifiably built from this public source.\n\nIssues and PRs are welcome here, but note that this repo is a generated mirror: PRs are never merged directly. Accepted changes are applied to the monorepo first (with attribution), then sync back out with the next release. See [CONTRIBUTING.md](CONTRIBUTING.md) before opening a PR.\n\n## Verifying what you install\n\nPublished `dist/` bundles are built with Bun from this source and ship source maps with embedded sources, so the tarball itself is readable.\n\n```bash\n# provenance: confirm the tarball was built from this repo by GitHub Actions\nnpm audit signatures\n\n# or rebuild and compare yourself\ngit clone https://github.com/signaltech-org/bolthub-sdk\ncd bolthub-sdk && bun install\ncd packages/mcp && bun run build\n```\n\nSee [SECURITY.md](SECURITY.md) for the trust model (what touches your wallet credentials and what doesn't) and how to report vulnerabilities.\n\n## Development\n\n```bash\nbun install\nbun test\n```\n\nEach TypeScript package builds with `bun run build` from its directory (`@bolthub/pay` must be built before the packages that bundle it).\n\n## License\n\nMIT\n",
+  "status": "curated"
+}

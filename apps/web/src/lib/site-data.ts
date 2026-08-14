@@ -75,10 +75,11 @@ export const restorePoints: string[] = [
 ];
 
 export const nav = [
-  { href: "#features", label: "能力" },
-  { href: "#sync", label: "同步" },
-  { href: "#agents", label: "Agent" },
-  { href: "#faq", label: "常见问题" },
+  { href: "/#features", label: "能力" },
+  { href: "/#sync", label: "同步" },
+  { href: "/#agents", label: "Agent" },
+  { href: "/market", label: "市场" },
+  { href: "/#faq", label: "常见问题" },
 ] as const;
 
 export const faqs = [

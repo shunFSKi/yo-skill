@@ -1,0 +1,52 @@
+{
+  "id": "skill:claudeskills/wordpress-router",
+  "type": "skill",
+  "name": "wordpress-router",
+  "description": "Use when the user asks about WordPress codebases (plugins, themes, block themes, Gutenberg blocks, WP core checkouts) and you need to quickly classify the repo and route to the correct workflow/skill (blocks, theme.json, REST API, WP-CLI, performance, security, testing, release packaging).",
+  "author": "Automattic",
+  "source": {
+    "registry": "claudeskills",
+    "url": "https://github.com/Automattic/agent-skills",
+    "repo": "Automattic/agent-skills"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 208,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": true
+  },
+  "readme": "# Agent Skills for WordPress\n\n> **⚠️ This repository has moved to [WordPress/agent-skills](https://github.com/WordPress/agent-skills)**\n>\n> This repository is now archived. All future development happens in the WordPress organization.\n> Please update your bookmarks, clones, and references to use the new repository.\n\n**Teach AI coding assistants how to build WordPress the right way.**\n\nAgent Skills are portable bundles of instructions, checklists, and scripts that help AI assistants (Claude, Copilot, Codex, Cursor, etc.) understand WordPress development patterns, avoid common mistakes, and follow best practices.\n\n<img width=\"2400\" height=\"1260\" alt=\"Agent Skills banner\" src=\"https://github.com/user-attachments/assets/def9a6f9-cbba-4249-866f-b9a274b84188\" />\n\n## Why Agent Skills?\n\nAI coding assistants are powerful, but they often:\n- Generate outdated WordPress patterns (pre-Gutenberg, pre-block themes)\n- Miss critical security considerations in plugin development\n- Skip proper block deprecations, causing \"Invalid block\" errors\n- Ignore existing tooling in your repo\n\nAgent Skills solve this by giving AI assistants **expert-level WordPress knowledge** in a format they can actually use.\n\n## Available Skills\n\n| Skill | What it teaches |\n|-------|-----------------|\n| **wordpress-router** | Classifies WordPress repos and routes to the right workflow |\n| **wp-project-triage** | Detects project type, tooling, and versions automatically |\n| **wp-block-development** | Gutenberg blocks: `block.json`, attributes, rendering, deprecations |\n| **wp-block-themes** | Block themes: `theme.json`, templates, patterns, style variations |\n| **wp-plugin-development** | Plugin architecture, hooks, settings API, security |\n| **wp-rest-api** | REST API routes/endpoints, schema, auth, and response shaping |\n| **wp-interactivity-api** | Frontend interactivity with `data-wp-*` directives and stores |\n| **wp-abilities-api** | Capability-based permissions and REST API authentication |\n| **wp-wpcli-and-ops** | WP-CLI commands, automation, multisite, search-replace |\n| **wp-performance** | Profiling, caching, database optimization, Server-Timing |\n| **wp-phpstan** | PHPStan static analysis for WordPress projects (config, baselines, WP-specific typing) |\n| **wp-playground** | WordPress Playground for instant local environments |\n| **wpds** | WordPress Design System |\n\n## Quick Start\n\n### Install globally for Claude Code\n\n```bash\n# Clone agent-skills\ngit clone https://github.com/WordPress/agent-skills.git\ncd agent-skills\n\n# Build the distribution\nnode shared/scripts/skillpack-build.mjs --clean\n\n# Install all skills globally (available across all projects)\nnode shared/scripts/skillpack-install.mjs --global\n\n# Or install specific skills only\nnode shared/scripts/skillpack-install.mjs --global --skills=wp-playground,wp-block-development\n```\n\nThis installs skills to `~/.claude/skills/` where Claude Code will automatically discover them.\n\n### Install into your repo\n\n```bash\n# Clone agent-skills\ngit clone https://github.com/Automattic/agent-skills.git\ncd agent-skills\n\n# Build the distribution\nnode shared/scripts/skillpack-build.mjs --clean\n\n# Install into your WordPress project\nnode shared/scripts/skillpack-install.mjs --dest=../your-wp-project --targets=codex,vscode,claude\n```\n\nThis copies skills into:\n- `.codex/skills/` for OpenAI Codex\n- `.github/skills/` for VS Code / GitHub Copilot\n- `.claude/skills/` for Claude Code (project-level)\n\n### Available options\n\n```bash\n# List available skills\nnode shared/scripts/skillpack-install.mjs --list\n\n# Dry run (preview without installing)\nnode shared/scripts/skillpack-install.mjs --global --dry-run\n\n# Install specific skills to a project\nnode shared/scripts/skillpack-install.mjs --dest=../my-repo --targets=claude --skills=wp-wpcli-and-ops\n```\n\n### Manual installation\n\nCopy any skill folder from `skills/` into your project's instructions directory for your AI assistant.\n\n## How It Works\n\nEach skill contains:\n\n```\nskills/wp-block-development/\n├── SKILL.md              # Main instructions (when to use, procedure, verification)\n├── references/           # Deep-dive docs on specific topics\n│   ├── block-json.md\n│   ├── deprecations.md\n│   └── ...\n└── scripts/              # Deterministic helpers (detection, validation)\n    └── list_blocks.mjs\n```\n\nWhen you ask your AI assistant to work on WordPress code, it reads these skills and follows the documented procedures rather than guessing.\n\n## Compatibility\n\n- **WordPress 6.9+** (PHP 7.2.24+)\n- Works with any AI assistant that supports project-level instructions\n\n## Contributing\n\n**We welcome contributions!** This project is a great way to share your WordPress expertise—you don't need to be a coding wizard. Most skills are written in Markdown, focusing on clear procedures and best practices.\n\nSee [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to get started.\n\nQuick commands:\n\n```bash\n# Scaffold a new skill\nnode shared/scripts/scaffold-skill.mjs <skill-name> \"<description>\"\n\n# Validate skills\nnode eval/harness/run.mjs\n```\n\n## Documentation\n\n- [Authoring Guide](docs/authoring-guide.md) - How to create and improve skills\n- [Principles](docs/principles.md) - Design philosophy\n- [Packaging](docs/packaging.md) - Build and distribution\n- [Compatibility Policy](docs/compatibility-policy.md) - Version targeting\n\n## License\n\nMIT\n",
+  "status": "curated"
+}

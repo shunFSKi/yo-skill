@@ -1,0 +1,94 @@
+{
+  "id": "mcp:official/ai.dinglebear/synapse",
+  "type": "mcp",
+  "name": "Synapse RMCP",
+  "description": "Host, Docker, Compose, SSH, logs, ZFS, and file operations over MCP and CLI.",
+  "author": "ai.dinglebear",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dinglebear-ai/synapse",
+    "repo": "dinglebear-ai/synapse"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@dinglebear/synapse"
+    ],
+    "env": [
+      {
+        "name": "SYNAPSE_HOME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SYNAPSE_HOSTS_CONFIG",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SYNAPSE_CONFIG_FILE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SYNAPSE_RMCP_VERSION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SYNAPSE_RMCP_REPO",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SYNAPSE_RMCP_RELEASE_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RUST_LOG",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-04T21:53:02.736003Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": "# synapse-rmcp\n\nHost, Docker, Compose, SSH, logs, ZFS, and file operations over MCP and CLI.\n\nSynapse is a full-parity Rust port of\n[synapse-mcp](https://github.com/dinglebear-ai/synapse-mcp), built with the\n[rmcp](https://github.com/modelcontextprotocol/rust-sdk) framework.\n\nThe server exposes two MCP tools (`flux` and `scout`) plus equivalent CLI\ncommands, covering all 59 production actions from the original TypeScript server.\n\n## Contents\n\n- [Naming](#naming)\n- [Capabilities And Boundaries](#capabilities-and-boundaries)\n- [Install](#install)\n- [Quickstart](#quickstart)\n- [Client Configuration](#client-configuration)\n- [Plugin Packages](#plugin-packages)\n- [Runtime Surfaces](#runtime-surfaces)\n- [MCP Tool Reference](#mcp-tool-reference)\n- [CLI Reference](#cli-reference)\n- [Authentication](#authentication)\n- [Safety And Trust Model](#safety-and-trust-model)\n- [Distribution Contract](#distribution-contract)\n- [Verification](#verification)\n- [Deployment](#deployment)\n- [Troubleshooting](#troubleshooting)\n- [Tools and Actions](#tools-and-actions)\n- [Known Parity Gaps](#known-parity-gaps)\n- [Configuration](#configuration)\n- [Run](#run)\n- [Architecture](#architecture)\n- [Development](#development)\n- [Documentation](#documentation)\n- [Related Servers](#related-servers)\n- [License](#license)\n\n## Naming\n\nThe repository is `synapse-rmcp`, the Rust crate is `synapse`, the MCP server\nidentity is `synapse`, and the installed binary is `synapse`. The npm launcher\npackage is `synapse-rmcp`.\n\nAcross most of the RMCP family, naming follows\n`repo=<service>-rmcp`, `npm=<service>-rmcp`, and `CLI=r<service>`. Synapse is an\nexception because it is a Rust port of the older TypeScript `synapse-mcp`\nproject and keeps the operator-facing `synapse` binary.\n\n## Capabilities And Boundaries\n\nSynapse provides local Docker, Compose, host, SSH, log, ZFS, and file-operation\nworkflows through two MCP tools and the equivalent CLI:\n\n- `flux` manages Docker infrastructure, containers, Compose projects, and host\n  inspection.\n- `scout` handles SSH/local host inspection, safe file reads, allowlisted\n  command execution, bounded descriptor-confined file transfer, ZFS introspection,\n  and log retrieval.\n- REST exists only as a compatibility shim for a subset of actions.\n- The web surface is a lightweight static admin shell, not a full dashboard.\n\n**Not for:** arbitrary shell access, unaudited remote mutation, or bypassing\nhost SSH trust. Destructive Docker/Compose/exec/file-transfer actions require\nexplicit host targets and confirmation policy.\n\nMCP callers never provide credentials, tokens, keys, or secrets as action\narguments. Tokens, OAuth settings, host topology, SSH trust, and allowlists live\nin server-side configuration or the local SSH environment.\n\n## Install\n\nUse the npm launcher for stdio MCP or CLI access without a manual binary\ninstall:\n\n```bash\nnpx -y @dinglebear/synapse --help\nnpx -y @dinglebear/synapse mcp\n```\n\nFor a permanent command:\n\n```bash\nnpm i -g @dinglebear/synapse\nsynapse --version\n```\n\nThe npm package downloads the `synapse` binary from GitHub Releases during\n`postinstall`, keeping the release tag aligned with\n`packages/synapse-rmcp/package.json`.\n\nFrom source:\n\n```bash\ncargo build --release\n```\n\nThe production image includes Python 3 plus the official Docker CLI/Compose\nplugin because Scout's remote descriptor wrappers and Flux Compose operations\ninvoke those runtime tools. The image does not contain a Docker daemon; Flux\nuses the mounted socket or SSH-forwarded remote socket. Persistent appdata lives\nat `~/.synapse` on the host and `/data` in the container.\n\n## Quickstart\n\nThe first-screen 30-second path is:\n\n```bash\nnpx -y @dinglebear/synapse mcp\n```\n\nThen configure an MCP client with stdio:\n\n```json\n{\n  \"mcpServers\": {\n    \"synapse\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"synapse-rmcp\", \"mcp\"]\n    }\n  }\n}\n```\n\nStart with a read-only call:\n\n```json\n{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"tools/call\",\n  \"params\": {\n    \"name\": \"scout\",\n    \"arguments\": {\n      \"action\": \"nodes\"\n    }\n  }\n}\n```\n\n## Client Configuration\n\nstdio is preferred for local MCP clients:\n\n```json\n{\n  \"mcpServers\": {\n    \"synapse\": {\n      \"command\": \"synapse\",\n      \"args\": [\"mcp\"]\n    }\n  }\n}\n```\n\nStreamable HTTP uses `/mcp` on the configured host and port:\n\n```json\n{\n  \"mcpServers\": {\n    \"synapse\": {\n      \"url\": \"http://127.0.0.1:40080/mcp\",\n      \"headers\": {\n        \"Authorization\": \"Bearer ${SYNAPSE_MCP_TOKEN}\"\n      }\n    }\n  }\n}\n```\n\n## Plugin Packages\n\n`plugins/synapse/` ships Claude Code, Codex, and Gemini CLI manifests that all\npoint at the same HTTP MCP endpoint and the same shared skill.\n\nThese packages contain **no lifecycle hooks**. Connecting to a server that is\nalready running needs no setup — the manifests substitute your `server_url` and\n`api_token` directly. If this machine also *runs* the server, bootstrap it once\nby hand:\n\n```bash\nsynapse setup install                  # put/refresh the binary on PATH\nsynapse setup plugin-hook              # check, then repair on blocking failures\nsynapse setup plugin-hook --no-repair  # audit only; never mutates appdata\n```\n\nExport the relevant `SYNAPSE_*` variables (or write them to `~/.synapse/.env`)\nfirst; `plugins/README.md` maps each plugin option to its variable. Re-run\n`synapse setup install` after a plugin update.\n\n## Runtime Surfaces\n\n| Surface | Status | Purpose |\n|---|---:|---|\n| MCP | Required | Agent-facing `flux` and `scout` tools |\n| CLI | Required | Scriptable parity surface for operators |\n| REST | Compatibility | Thin local action endpoint for 14 of 59 actions |\n| Web | Present | Lightweight static admin shell |\n\n## MCP Tool Reference\n\nSynapse exposes two MCP tools:\n\n- `flux`: Docker daemon, container, host, and Compose operations.\n- `scout`: SSH/local host inspection, filesystem reads, allowlisted exec,\n  multi-host emit, file beam, ZFS, and logs.\n\nBoth tools use an action-dispatched JSON shape:\n\n```json\n{\"name\":\"flux\",\"arguments\":{\"action\":\"docker\",\"subaction\":\"info\"}}\n{\"name\":\"scout\",\"arguments\":{\"action\":\"nodes\"}}\n```\n\nThe detailed action tables below are curated README reference material. The\ngenerated runtime MCP schema and the Rust action definitions are the source of\ntruth for the live tool contract.\n\n## CLI Reference\n\nCommon commands:\n\n```bash\nsynapse flux docker info\nsynapse flux container list\nsynapse flux compose list --host myhost\nsynapse scout nodes\nsynapse scout exec --host myhost --command hostname\nsynapse scout zfs pools --host myhost\nsynapse scout logs journal --host myhost --unit docker\n```\n\n## Authentication\n\nMounted HTTP supports bearer and Google OAuth modes. Loopback stdio/local dev\ncan run without mounted HTTP auth. Important variables:\n\n```bash\nSYNAPSE_MCP_HOST=127.0.0.1\nSYNAPSE_MCP_PORT=40080\nSYNAPSE_MCP_TOKEN=change-me\nSYNAPSE_MCP_AUTH_MODE=bearer\n```\n\nSee [Configuration](#configuration) and `docs/CONFIG.md` for the full auth\nmatrix.\n\n## Safety And Trust Model\n\nSynapse separates read and write scopes (`synapse:read`, `synapse:write`) and\nuses confirmation gates for destructive operations. `SYNAPSE_MCP_ALLOW_DESTRUCTIVE`\ncan skip prompts only in loopback-safe contexts. Host `protocol` is authoritative\nand defaults to SSH when omitted; local execution requires the explicit built-in\n`local` host or `protocol: \"local\"`. SSH host trust is delegated to OpenSSH\nknown-hosts behavior, and command execution uses execvp/argv semantics without\nshell interpolation. `scout beam` enforces both endpoints' configured read roots,\nblocks sensitive and symlinked paths, and caps each transfer at 64 MiB.\n\n`scout exec` and `scout emit` accept only these 18 typed commands\n(`ALLOWED_READ_COMMANDS` in `src/synapse/command_policy.rs`):\n\n`cat`, `head`, `tail`, `grep`, `rg`, `ls`, `tree`, `wc`, `uniq`, `diff`, `stat`,\n`file`, `du`, `df`, `pwd`, `hostname`, `uptime`, `whoami`\n\n`git` is deliberately excluded, as are shells, interpreters, network clients, and\nmutating tools (`EXEC_DENYLIST`). There is no `find` or `sort` in the allowlist —\nuse the dedicated `scout find` action for filesystem search. Per-host custom\ncommands may be enabled via `execAllowlist`, but receive a zero-argument policy\nuntil a typed argument policy is registered.\n\n## Distribution Contract\n\nThe source of truth for release identity is the version shared by `Cargo.toml`,\n`.release-please-manifest.json`, `packages/synapse-rmcp/package.json`, release\nartifacts, and `server.json`.\n\nDistribution/version invariants:\n\n- The npm package downloads the matching GitHub Release binary.\n- The installed binary remains `synapse`.\n- `server.json` must point at `ghcr.io/dinglebear-ai/synapse:<version>`.\n- Plugin manifests stay versionless where marketplaces derive identity from git\n  state.\n- Generated docs and schemas must come from source-controlled generation\n  inputs; curated README/docs should point at source-of-truth files for details.\n\n## Verification\n\n```bash\njust validate-plugin          # plugin manifests, MCP config, monitors, skills\nnpm --prefix packages/synapse-rmcp run check\ncargo fmt --check\ncargo check\ncargo test\ngit diff --check\n```\n\n## Deployment\n\nFor a persistent mounted HTTP server:\n\n```bash\nSYNAPSE_MCP_HOST=0.0.0.0 \\\nSYNAPSE_MCP_PORT=40080 \\\nSYNAPSE_MCP_TOKEN=change-me \\\nsynapse serve\n```\n\nUse bearer or OAuth before exposing the endpoint beyond loopback. Production\nDocker/Compose notes live in `docs/DEPLOYMENT.md` and `docs/DOCKER.md` when\npresent; local operator usage can stay on stdio.\n\n## Troubleshooting\n\n- `401` or `403` from `/mcp`: check bearer/OAuth settings and gateway headers.\n- no hosts appear: check `SYNAPSE_HOSTS_CONFIG`, `SYNAPSE_CONFIG_FILE`, and\n  `~/.ssh/config`.\n- destructive actions are refused: confirm the host target and confirmation\n  policy.\n- SSH errors: verify OpenSSH known_hosts, mux/socket availability, and host\n  reachability outside Synapse first.\n\n## Tools and Actions\n\n### `flux` — Docker infrastructure management\n\n#### `flux docker` — Docker daemon operations (9 actions)\n\n| Subaction | Scope | Description |\n|---|---|---|\n| `info` | `synapse:read` | Docker daemon information |\n| `df` | `synapse:read` | Docker disk usage |\n| `images` | `synapse:read` | List Docker images; `dangling_only` to filter untagged |\n| `networks` | `synapse:read` | List Docker networks |\n| `volumes` | `synapse:read` | List Docker volumes |\n| `pull` | `synapse:write` | Pull a Docker image; requires `host`, `image` |\n| `build` | `synapse:write` | Build a Docker image; requires `host`, `context`, `tag`; optional `dockerfile`, `no_cache` |\n| `rmi` | `synapse:write` | Remove a Docker image; requires `host`, `image`, `force=true` |\n| `prune` | `synapse:write` | Remove unused resources; requires `host`, `prune_target`, `force=true` |\n\n#### `flux container` — Container lifecycle + inspection (14 actions)\n\n| Subaction | Scope | Description |\n|---|---|---|\n| `list` | `synapse:read` | List containers; optional `state`, `name_filter`, `image_filter`, `label_filter` |\n| `inspect` | `synapse:read` | Detailed container info; requires `container_id`; optional `summary` |\n| `logs` | `synapse:read` | Container logs; requires `container_id`; optional `lines`, `since`, `until`, `grep`, `stream` |\n| `stats` | `synapse:read` | Resource usage stats; optional `container_id` |\n| `top` | `synapse:read` | Show running processes; requires `container_id` |\n| `search` | `synapse:read` | Full-text search by name/image/labels; requires `query` |\n| `start` | `synapse:write` | Start a stopped container; requires `host`, `container_id` |\n| `stop` | `synapse:write` | Stop a running container (destructive); requires `host`, `container_id` |\n| `restart` | `synapse:write` | Restart a container; requires `host`, `container_id` |\n| `pause` | `synapse:write` | Pause a running container; requires `host`, `container_id` |\n| `resume` | `synapse:write` | Resume a paused container; requires `host`, `container_id` |\n| `pull` | `synapse:write` | Pull latest image for a container; requires `host`\n\n…",
+  "status": "curated"
+}

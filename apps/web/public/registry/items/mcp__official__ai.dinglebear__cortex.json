@@ -1,0 +1,94 @@
+{
+  "id": "mcp:official/ai.dinglebear/cortex",
+  "type": "mcp",
+  "name": "Cortex RMCP",
+  "description": "Self-hosted homelab log intelligence over MCP, CLI, and REST with SQLite/FTS.",
+  "author": "ai.dinglebear",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dinglebear-ai/cortex",
+    "repo": "dinglebear-ai/cortex"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@dinglebear/cortex"
+    ],
+    "env": [
+      {
+        "name": "CORTEX_HOME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CORTEX_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "CORTEX_API_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "CORTEX_RMCP_VERSION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CORTEX_RMCP_REPO",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CORTEX_RMCP_RELEASE_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RUST_LOG",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T01:53:24.068345Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "# Cortex\n\n[![CI](https://github.com/dinglebear-ai/cortex/actions/workflows/ci.yml/badge.svg)](https://github.com/dinglebear-ai/cortex/actions/workflows/ci.yml)\n[![Release](https://img.shields.io/github/v/release/dinglebear-ai/cortex)](https://github.com/dinglebear-ai/cortex/releases)\n[![npm](https://img.shields.io/npm/v/cortex-rmcp)](https://www.npmjs.com/package/cortex-rmcp)\n[![crates.io](https://img.shields.io/crates/v/cortex)](https://crates.io/crates/cortex)\n[![License: AGPL-3.0-only](https://img.shields.io/badge/license-AGPL--3.0--only-blue.svg)](LICENSE)\n\nSelf-hosted homelab log intelligence over MCP, CLI, and REST with SQLite/FTS.\n\nIt collects logs and operational evidence, stores them in SQLite with FTS5 search, and exposes one shared intelligence layer through CLI, REST, MCP, and a bundled browser workspace.\n\nCortex began as a syslog receiver. It now covers network logs, Docker, managed files, OpenTelemetry logs, host heartbeats, fleet inventory, shell and agent activity, and Claude, Codex, and Gemini transcripts. It correlates those sources into timelines, incidents, and an evidence-backed topology graph without making the graph a second source of truth.\n\n## At a glance\n\n| Area | What Cortex provides |\n| --- | --- |\n| Ingest | UDP/TCP syslog, OTLP/HTTP logs, Docker logs and events, managed file tails, host heartbeats, AI transcripts, shell history, agent command records, and fleet inventory |\n| Storage | SQLite in WAL mode, FTS5 full-text search, bounded metadata, retention, storage budgets, maintenance jobs, checkpoints, and 43 sequential schema migrations |\n| Investigation | Search, filtering, context, timelines, patterns, anomaly comparison, cross-source correlation, recurring error signatures, deterministic incident bundles, and graph explanations |\n| Fleet intelligence | SSH and API inventory collectors, host state, service topology, container and route relationships, redacted evidence, and rebuildable graph projections |\n| AI operations | Claude, Codex, and Gemini session indexing; skill, MCP, and hook event extraction; incident clustering; and guarded local LLM assessments |\n| Interfaces | Native CLI, one action-dispatched MCP tool, authenticated REST APIs, MCP prompts and resources, an MCP Apps search widget, and a bundled investigation workspace |\n| Operations | Setup and repair, diagnostics, Compose control, backup, integrity checks, WAL checkpoints, vacuum, update workflows, agents, and health endpoints |\n\n> [!IMPORTANT]\n> Cortex is designed for a trusted homelab or small private fleet. It is not a clustered log warehouse, a general-purpose SIEM, or a safe place to expose unauthenticated administrative surfaces to the public internet.\n\n## Contents\n\n- [Quick start](#quick-start)\n- [How Cortex is built](#how-cortex-is-built)\n- [Ingestion](#ingestion)\n- [Investigation and intelligence](#investigation-and-intelligence)\n- [Fleet inventory and graph](#fleet-inventory-and-graph)\n- [AI session intelligence](#ai-session-intelligence)\n- [Alerts and notifications](#alerts-and-notifications)\n- [Interfaces](#interfaces)\n- [Configuration](#configuration)\n- [Authentication and trust boundaries](#authentication-and-trust-boundaries)\n- [Storage and maintenance](#storage-and-maintenance)\n- [Deployment and distribution](#deployment-and-distribution)\n- [Operations](#operations)\n- [Development and verification](#development-and-verification)\n- [Documentation](#documentation)\n- [Current boundaries](#current-boundaries)\n- [License](#license)\n\n## Quick start\n\n### Install the CLI\n\nThe npm launcher is the fastest path for local CLI and stdio MCP use:\n\n```bash\nnpx -y @dinglebear/cortex --help\nnpx -y @dinglebear/cortex mcp\n```\n\nInstall it permanently with:\n\n```bash\nnpm install --global @dinglebear/cortex\ncortex --version\n```\n\nThe launcher requires Node.js 18 or newer. It downloads a checksum-verified native release binary and currently supports Linux x64 and Windows x64.\n\nBuild from source with the current stable Rust toolchain:\n\n```bash\ngit clone https://github.com/dinglebear-ai/cortex.git\ncd cortex\nmise install       # optional, but pins the repository tools\njust build\n./.cache/cargo/debug/cortex --version\n```\n\n### Start a local server\n\nThe full daemon starts UDP and TCP syslog receivers plus the shared HTTP server. Use separate MCP and REST tokens:\n\n```bash\nmkdir -p \"$HOME/.cortex/data\"\nexport CORTEX_DB_PATH=\"$HOME/.cortex/data/cortex.db\"\nexport CORTEX_TOKEN=\"$(openssl rand -hex 32)\"\nexport CORTEX_API_TOKEN=\"$(openssl rand -hex 32)\"\n\ncortex serve mcp\n```\n\nDefaults:\n\n- Syslog: `0.0.0.0:1514` over UDP and TCP\n- HTTP: `127.0.0.1:3100`\n- MCP: `http://127.0.0.1:3100/mcp`\n- REST: `http://127.0.0.1:3100/api/*`\n- Investigation workspace: `http://127.0.0.1:3100/app`\n\nVerify it from another terminal:\n\n```bash\ncurl -fsS http://127.0.0.1:3100/health\nlogger -n 127.0.0.1 -P 1514 --tcp \"cortex quickstart from $(hostname)\"\n\nexport CORTEX_API_TOKEN=\"the-same-api-token\"\ncortex tail --limit 10\n```\n\nFor a managed local deployment, `cortex setup repair` creates or repairs the Cortex home, Compose assets, data paths, and missing 64-character MCP and REST tokens without replacing existing token values.\n\n### Connect an MCP client\n\nQuery-only stdio mode reads the configured local database and starts no network listeners:\n\n```json\n{\n  \"mcpServers\": {\n    \"cortex\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"cortex-rmcp\", \"mcp\"],\n      \"env\": {\n        \"CORTEX_DB_PATH\": \"/absolute/path/to/cortex.db\"\n      }\n    }\n  }\n}\n```\n\nStreamable HTTP mode connects to the persistent daemon:\n\n```json\n{\n  \"mcpServers\": {\n    \"cortex\": {\n      \"url\": \"http://127.0.0.1:3100/mcp\",\n      \"headers\": {\n        \"Authorization\": \"Bearer your-cortex-token\"\n      }\n    }\n  }\n}\n```\n\nA useful first call is:\n\n```json\n{\"action\":\"status\"}\n```\n\nThen narrow the investigation with `tail`, `errors`, `search`, `timeline`, or `context` before using broader analysis operations.\n\n## How Cortex is built\n\nCortex is one Rust binary with multiple operating modes. The same application and service layer backs the CLI, REST handlers, and MCP handlers, so validation, limits, identity resolution, redaction, and business rules do not belong to one transport alone.\n\n```text\n                         INGESTION\n\n  Syslog UDP/TCP       OTLP logs          Docker agent / pull\n  Managed file tails  Heartbeats         Claude / Codex / Gemini\n  Shell history       Agent commands     Fleet inventory\n          \\               |                    /\n           \\              |                   /\n            +---- bounded parsing and enrichment ----+\n                              |\n                    scrub, normalize, batch\n                              |\n                    SQLite WAL + FTS5\n                              |\n             +----------------+----------------+\n             |                                 |\n    authoritative records             derived accelerators\n    logs, heartbeats,                 rollups, signatures,\n    inventory, sessions              graph projections\n             |                                 |\n             +----------------+----------------+\n                              |\n                     shared service layer\n                              |\n          CLI       REST       MCP       Web workspace\n```\n\nThe daemon supervises its receivers and background services with cooperative cancellation. Shutdown drains HTTP requests, maintenance work, and ingest queues before checkpointing the WAL.\n\nBackground services include:\n\n- Retention and storage-budget enforcement\n- WAL and FTS maintenance\n- Docker ingest supervision\n- File-tail supervision\n- Error-signature scanning\n- Notification evaluation, dispatch, and digest scheduling\n- Inventory refresh and backfill\n- Graph projection refresh\n- AI-session and timeline rollups\n- Database optimization and maintenance jobs\n\nHeavy analytical reads and maintenance jobs have separate concurrency controls so one expensive investigation cannot starve the ingest path.\n\n## Ingestion\n\nAll log-like sources are normalized into the same durable log model, enriched where safe, scrubbed where configured, and written through bounded batch paths.\n\n### Syslog over UDP and TCP\n\nCortex listens on the same configurable port for UDP and TCP syslog. It parses common RFC 3164 and RFC 5424 shapes, preserves the raw frame, records sender identity, normalizes severity and facility, and enriches known application formats.\n\nRelevant defaults:\n\n- Bind: `0.0.0.0:1514`\n- Maximum message: 8 KiB\n- Maximum concurrent TCP connections: 512\n- TCP idle timeout: 300 seconds\n- Writer batch: 100 records or 500 ms\n- Write queue capacity: 10,000 records\n\nSyslog has no application-layer authentication. Restrict senders with network controls and `CORTEX_ALLOWED_SOURCE_CIDRS` when the listener is reachable beyond a trusted network.\n\nBuilt-in enrichment recognizes useful signals from AdGuard, Authelia, Docker lifecycle events, fail2ban, Linux kernel and OOM events, SWAG, reverse-proxy logs, and host-local Cortex Docker agent metadata. Source gates can restrict enrichment that would otherwise trust a marker inside an unauthenticated syslog body.\n\n### OpenTelemetry logs\n\nCortex accepts OTLP/HTTP log export requests at `POST /v1/logs` on the shared HTTP listener. Requests are bounded to 4 MiB and flow into the normal Cortex writer.\n\nCurrent OTLP scope is intentionally narrow:\n\n- Logs over HTTP are supported.\n- OTLP traces are not accepted.\n- OTLP metrics are not accepted.\n- OTLP/gRPC is not implemented.\n\n`POST /v1/logs` authenticates with **`CORTEX_TOKEN`** — the same static MCP bearer token that guards `POST /mcp`, read from the managed `~/.cortex/.env` on a deployed host. It is **not** `CORTEX_API_TOKEN` (REST `/api/*`) and **not** `CORTEX_API_ADMIN_TOKEN`. Loopback and trusted-gateway policies skip the check. An OAuth-only deployment with no static token denies OTLP outright, because machine exporters have no OAuth flow — so a non-loopback OAuth-only `/v1/logs` exposure is rejected at startup unless `CORTEX_TOKEN` is set.\n\n### Docker logs and events\n\nCortex supports two Docker collection paths:\n\n1. **Host-local agent**, the preferred multi-host path. The host-local cortex agent reads the local Docker socket, converts logs and lifecycle events into bounded records, and forwards them to the server without changing Docker's daemon logging driver.\n2. **Central pull compatibility mode**, an optional server-side collector for explicitly configured Docker Engine or docker-socket-proxy HTTP endpoints. It records per-container checkpoints and reconnects with bounded exponential backoff.\n\nCentral pull is disabled by default. The `CORTEX_DOCKER_HOSTS` shorthand expands hosts into insecure `http://host:2375` endpoints and should only be used on a tightly controlled private network. A hosts file supports explicit base URLs and safer endpoint configuration.\n\n### Managed file tails\n\nManaged file-tail sources are persisted in a registry and supervised by the daemon. Add, remove, list, and inspect sources through the CLI, REST, or the `file_tails` MCP admin action.\n\nThe path policy rejects unsafe targets, including paths outside configured roots, symlink escapes, non-regular files, and sensitive mounts. Container deployments expose an explicit read-only file-tail root rather than the entire host filesystem.\n\n### Host heartbeats\n\nThe host agent can post bounded JSON snapshots to `POST /v1/heartbeats`. Heartbeats include host state such as load, memory, disks, networking, processes, and container summaries. They power `host_state`, `fleet_state`, and `correlate_state`.\n\nHeartbeat request bodies are capped at 256 KiB. Heartbeat data has short operational retention separate from the main log-retention policy.\n\n### AI transcripts\n\nCortex indexes local and forwarded transcript data from:\n\n- Claude Code projects under `~/.claude/projects`\n- Codex sessions and worktrees under `~/.codex/sessions` and `~/.codex/worktrees`\n- Gemini chat data under\n\n…",
+  "status": "curated"
+}

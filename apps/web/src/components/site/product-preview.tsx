@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { RefreshCw } from "lucide-react";
+import { dotColor } from "@/lib/colors";
 
 /**
  * Hero 右侧：活的产品预览窗（非截图）。
@@ -22,23 +23,6 @@ const MCPS: Row[] = [
   { name: "postgres", agents: 1 },
   { name: "github", agents: 3 },
 ];
-
-/** 条目图标哈希着色（与桌面端原型同一思路：名字决定颜色，稳定不乱跳） */
-const DOT_COLORS = [
-  "#d97757",
-  "#8e75b2",
-  "#6950ef",
-  "#f26207",
-  "#2f9e7e",
-  "#c2850c",
-  "#5b82d0",
-];
-
-function dotColor(name: string) {
-  let sum = 0;
-  for (let i = 0; i < name.length; i++) sum += name.charCodeAt(i);
-  return DOT_COLORS[sum % DOT_COLORS.length];
-}
 
 export function ProductPreview() {
   const [tab, setTab] = useState<"skill" | "mcp">("skill");

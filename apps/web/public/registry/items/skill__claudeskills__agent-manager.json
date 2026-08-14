@@ -1,0 +1,52 @@
+{
+  "id": "skill:claudeskills/agent-manager",
+  "type": "skill",
+  "name": "Agent Manager",
+  "description": "Manage local CLI AI agents via tmux (start/stop/monitor/assign + cron scheduling)",
+  "author": "fractalmind-ai",
+  "source": {
+    "registry": "claudeskills",
+    "url": "https://github.com/fractalmind-ai/agent-manager-skill",
+    "repo": "fractalmind-ai/agent-manager-skill"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 24,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": true
+  },
+  "readme": "# Agent Manager (agent-manager)\n\nSimple, installation-agnostic agent lifecycle management using **tmux + Python**.\n\nManage multiple AI agents without running a server, wiring HTTP APIs, or pulling in heavy dependencies.\n\n![agent-manager demo](assets/demo.svg)\n\n## Why agent-manager?\n\nManaging multiple AI agents is deceptively complex:\n\n- Each agent needs its own long-running process\n- You need a reliable way to start/stop/monitor them\n- Scheduling (cron) should keep working even if you move the skill around\n\n**agent-manager** solves this with a tiny architecture: **tmux sessions + a single Python CLI**.\n\n**Advantages:**\n\n- **Zero dependencies** beyond `tmux` + `python3`\n- **Cross-platform** (where tmux runs)\n- **Cron-friendly**: `schedule sync` writes crontab entries calling the installed `main.py` by absolute path\n\n## Highlights\n\n- 🚀 Simple agent lifecycle management\n- 📅 Scheduled task execution via cron\n- 🔧 Installation-agnostic design\n- 🎯 Zero dependencies beyond tmux + Python\n\n## Installation\n\n### via openskills (recommended)\n\n```bash\n# Project installation (works even when `openskills` is not globally installed)\nnpx --yes openskills install fractalmind-ai/agent-manager-skill\n\n# Global installation\nnpx --yes openskills install fractalmind-ai/agent-manager-skill --global\n\n# If you already have a global openskills binary, this also works:\n# openskills install fractalmind-ai/agent-manager-skill\n```\n\n### Manual installation\n\n```bash\ngit clone https://github.com/fractalmind-ai/agent-manager-skill.git\ncd agent-manager-skill\ncp -r agent-manager ~/.claude/skills/agent-manager\n```\n\n## Usage\n\nAfter installation, read the skill documentation:\n\n```bash\n# Preferred (portable)\nnpx --yes openskills read agent-manager\n\n# Optional when openskills is globally installed:\n# openskills read agent-manager\n```\n\nOr view directly:\n\n```bash\ncat ~/.claude/skills/agent-manager/SKILL.md\n```\n\n## Quick Start\n\n```bash\n# From your repository root (where `agents/` lives)\ncd your-project\n\n# If installed (project-local; path varies by tool):\npython3 .agent/skills/agent-manager/scripts/main.py list\n# (or, if you use `.claude/skills/` instead of `.agent/skills/`)\npython3 .claude/skills/agent-manager/scripts/main.py list\n\n# If installed (global):\npython3 ~/.claude/skills/agent-manager/scripts/main.py list\n# (or, if you use `~/.agent/skills/` instead of `~/.claude/skills/`)\npython3 ~/.agent/skills/agent-manager/scripts/main.py list\n\n# Sanity check your setup\n# (use the same install path as above; replace `.agent/skills/` with `.claude/skills/` if needed)\npython3 .agent/skills/agent-manager/scripts/main.py doctor\n\n# Start / monitor / stop\n# (same note: replace `.agent/skills/` with `.claude/skills/` if needed)\npython3 .agent/skills/agent-manager/scripts/main.py start EMP_0001\npython3 .agent/skills/agent-manager/scripts/main.py status EMP_0001\npython3 .agent/skills/agent-manager/scripts/main.py monitor EMP_0001 --follow\npython3 .agent/skills/agent-manager/scripts/main.py stop EMP_0001\n\n# Optional: keep all agents in one shared tmux session (tabs/windows)\npython3 .agent/skills/agent-manager/scripts/main.py start EMP_0001 --tmux-layout windows\ntmux attach -t agent-manager\n# (Optional) Customize the shared session name via: $AGENT_MANAGER_TMUX_GROUP_SESSION\n\n# If you want to run the CLI from a cloned copy of this repo:\nREPO_ROOT=\"$PWD/your-project\" python3 agent-manager/scripts/main.py doctor\n```\n\n### Command Path Parity (Docs Baseline)\n\nTo avoid path drift across docs and runbooks, define one CLI alias and reuse it:\n\n```bash\n# Installed skill path (pick one that exists in your environment)\nCLI=\"python3 .agent/skills/agent-manager/scripts/main.py\"\n# CLI=\"python3 .claude/skills/agent-manager/scripts/main.py\"\n\n# If running from a cloned repo (not installed):\n# CLI=\"python3 agent-manager/scripts/main.py\"\n\n$CLI doctor\n$CLI list\n$CLI status EMP_0001\n```\n\n## Getting Started\n\nSee `examples/getting-started.md` for a 2-minute end-to-end walkthrough.\n\n## Scenario Config Examples\n\nSee [examples/agent-configs/README.md](examples/agent-configs/README.md) for six ready-to-adapt agent YAML templates:\n\n- Code review agent\n- Documentation generator agent\n- Test runner agent\n- Deployment assistant agent\n- Monitoring and alert agent\n- Data analysis agent\n\n## Demo\n\nThe screenshot above shows a real run of:\n\n- `list` (see configured agents + status)\n- `start` (launches an agent into `tmux`)\n- `status` (quick runtime + heartbeat snapshot)\n- `monitor` (captures output from the tmux pane)\n- `stop` (kills the agent's tmux session)\n\nWant an animated GIF instead? You can record it with tools like `termttogif` (or any terminal recorder) and replace `assets/demo.svg`.\n\n## Path & Repo Root Resolution\n\n- Repo root is resolved in this priority order: `$REPO_ROOT` → git superproject (submodule-safe) → git toplevel → parent-walk fallback.\n- `schedule sync` writes crontab entries that call the *installed* `main.py` absolute path (so cron keeps working regardless of where the skill is installed).\n\n## Skills Resolution\n\nWhen injecting agent skills into the system prompt, `agent-manager` searches for `SKILL.md` in the following locations (first match wins):\n\n1) `<repo>/.agent/skills/<skill>/SKILL.md`\n2) `~/.agent/skills/<skill>/SKILL.md`\n3) `<repo>/.claude/skills/<skill>/SKILL.md`\n4) `~/.claude/skills/<skill>/SKILL.md`\n\n## Documentation\n\nSee [agent-manager/SKILL.md](agent-manager/SKILL.md) for complete documentation.\n\nFor CLI refactor progress and migration notes, see [agent-manager/docs/cli-modularization-plan.md](agent-manager/docs/cli-modularization-plan.md).\nFor heartbeat serviceization notes, see [agent-manager/docs/heartbeat-serviceization.md](agent-manager/docs/heartbeat-serviceization.md).\n\nFor operational SOPs and failure handling checklists, see [agent-manager/docs/runbook-checklist.md](agent-manager/docs/runbook-checklist.md).\nFor heartbeat observability and SLO metrics, see [agent-manager/docs/heartbeat-observability.md](agent-manager/docs/heartbeat-observability.md).\nFor local team-chat skill mounting and team rollout steps, see [docs/team-chat-skill-install.md](docs/team-chat-skill-install.md).\n\n## Testing\n\n```bash\n# Full suite\npython3 -m unittest discover -s agent-manager/scripts/tests -p 'test_*.py' -v\n\n# Integration matrix suite (with flaky-control retries + artifacts)\npython3 agent-manager/scripts/tests/run_integration_suite.py \\\n  --attempts 2 \\\n  --pattern 'test_integration_*.py' \\\n  --artifact-dir .artifacts/integration\n```\n\n## Requirements\n\n- Python 3.x\n- tmux\n- Agents defined under `agents/` (supports `agents/EMP_0001.md` and `agents/EMP_0001/AGENTS.md`)\n\n## Codex Launcher Notes\n\nWhen using `launcher: codex` with cron schedules, `agent-manager` will best-effort auto-dismiss Codex's first-run/upgrade model selection prompt to keep scheduled jobs non-interactive.\n\nFor provider-specific startup overrides, use a flat `launcher_config` mapping in the agent file. Providers adapt the same field differently; for Codex, each entry becomes a `-c key=value` override.\n\nReserved `main` agents default to the bundled skill prompt at `agent-manager/.codex/main-codex-model.md` when `launcher: codex` is used and no explicit `launcher_config.model_instructions_file` override is provided in the workspace agent config.\n\n## Features\n\n- 🚀 Simple agent lifecycle management (start/stop/monitor)\n- 📅 Scheduled task execution via cron (`schedule list`, `schedule sync`, `schedule run`)\n- 💓 Heartbeat observability (`heartbeat trace --since/--until`, `heartbeat slo`)\n- 🔧 Installation-agnostic (works from any location)\n- 🎯 Zero dependencies beyond tmux + Python\n- 💡 Dynamic path resolution (submodule-safe repo root detection)\n\n## License\n\nMIT\n",
+  "status": "curated"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "skill:claudeskills/hashicorp-skills",
+  "type": "skill",
+  "name": "HashiCorp Skills",
+  "description": "12 official HashiCorp skills for Terraform, Vault, Consul, and infrastructure as code",
+  "author": "hashicorp",
+  "source": {
+    "registry": "claudeskills",
+    "url": "https://github.com/hashicorp/agent-skills",
+    "repo": "hashicorp/agent-skills"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 699,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": true
+  },
+  "readme": "# HashiCorp Agent Skills\n\nHashiCorp Agent Skills for Terraform and Packer.\n\n| Product | Skills | Product bundle |\n| --- | ---: | --- |\n| [Terraform](plugins/terraform/README.md) | 16 | `terraform` |\n| [Packer](plugins/packer/README.md) | 4 | `packer` |\n\nSee [SKILLS.md](SKILLS.md) for the complete catalog and lifecycle status of each\nSkill.\n\n> **Legal note:** Your use of a third-party MCP client or LLM is subject solely\n> to that provider's terms. IBM is not responsible for the performance of those\n> third-party tools and may be unable to support issues caused by them.\n\n## Table of Contents\n\n- [Recent Updates](#recent-updates)\n- [Install an Individual Skill](#install-an-individual-skill)\n- [Install a Product Plugin Bundle](#install-a-product-plugin-bundle)\n- [Repository Structure](#repository-structure)\n- [Governance and Support](#governance-and-support)\n- [License](#license)\n\n## Recent Updates\n\nThis repository now organizes its 20 Skills under two product plugin roots:\n`plugins/terraform/skills/` and `plugins/packer/skills/`.\n\n### Migration from Legacy Plugin IDs and Paths\n\nThe product plugin bundles replace these legacy plugin IDs:\n`terraform-code-generation`, `terraform-module-generation`,\n`terraform-provider-development`, `terraform-policy-code`, `packer-builders`,\nand `packer-hcp`.\n\nReplace any legacy plugin installation with `terraform@hashicorp` or\n`packer@hashicorp`. Replace individual paths under `terraform/<category>/skills`\nor `packer/<category>/skills` with\n`plugins/<product>/skills/<skill-name>`.\n\n## Install an Individual Skill\n\nInstall Agent Skills in GitHub Copilot, Claude Code, Opencode, Cursor, IBM Bob,\nand more.\n\nList the repository's Skills:\n\n```bash\nnpx skills add hashicorp/agent-skills\n```\n\nInstall one Skill from its path:\n\n```bash\nnpx skills add hashicorp/agent-skills/plugins/terraform/skills/terraform-style-guide\nnpx skills add hashicorp/agent-skills/plugins/packer/skills/aws-ami-builder\n```\n\nEvery supported path appears in [SKILLS.md](SKILLS.md).\n\n## Install a Product Plugin Bundle\n\n### Claude Code\n\n```bash\nclaude plugin marketplace add hashicorp/agent-skills\nclaude plugin install terraform@hashicorp\nclaude plugin install packer@hashicorp\n```\n\n### Codex\n\nAdd this repository's `.agents/plugins/marketplace.json` as a repository\nmarketplace, then install the `terraform` or `packer` plugin in Codex. Both\nmarketplaces expose the same product bundles and Skill directories.\n\n## Repository Structure\n\n```text\nagent-skills/\n├── .agents/plugins/marketplace.json\n├── .claude-plugin/marketplace.json\n├── plugins/\n│   ├── terraform/\n│   │   ├── .claude-plugin/plugin.json\n│   │   ├── .codex-plugin/plugin.json\n│   │   └── skills/\n│   └── packer/\n│       ├── .claude-plugin/plugin.json\n│       ├── .codex-plugin/plugin.json\n│       └── skills/\n└── SKILLS.md\n```\n\n## Governance and Support\n\n- [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidance. Contributions\n  are restricted to HashiCorp-internal contributors until further notice.\n- [SECURITY.md](SECURITY.md) for instructions on reporting security or data\n  sensitivity issues related to this repository's Agent Skills.\n- [SUPPORT.md](SUPPORT.md) defines repository support boundaries.\n- `CODEOWNERS` for canonical Skill ownership and review-routing source.\n\n## License\n\nMPL-2.0\n",
+  "status": "curated"
+}

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { nav } from "@/lib/site-data";
 import { ThemeToggle } from "./theme-toggle";
 import { WaitlistButton } from "./waitlist-button";
@@ -38,12 +39,12 @@ export function Nav() {
       }
     >
       <div className="yo-container flex h-16 items-center justify-between gap-4">
-        <a href="#top" className="flex items-center gap-2.5" aria-label="yo-skill 首页">
+        <Link href="/" className="flex items-center gap-2.5" aria-label="yo-skill 首页">
           <span className="inline-flex h-7 w-7 items-center justify-center rounded-[8px] bg-jade text-[0.95rem] font-bold text-white">
             yo
           </span>
           <span className="text-lg font-bold tracking-tight">yo-skill</span>
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-7 md:flex">
           {nav.map((n) => (

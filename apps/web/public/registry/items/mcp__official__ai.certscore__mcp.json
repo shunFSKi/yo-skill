@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/ai.certscore/mcp",
+  "type": "mcp",
+  "name": "CertScore MCP",
+  "description": "CertScore website risk-signal tools for scans, findings, evidence, and latest-domain lookups.",
+  "author": "ai.certscore",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ergoveritas1-alt/certscore.ai",
+    "repo": "ergoveritas1-alt/certscore"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@certscore/mcp"
+    ],
+    "env": [
+      {
+        "name": "CERTSCORE_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "CERTSCORE_BASE_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-07T21:17:12.620633Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

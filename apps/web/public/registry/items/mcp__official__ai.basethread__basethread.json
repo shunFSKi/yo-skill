@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/ai.basethread/basethread",
+  "type": "mcp",
+  "name": "basethread",
+  "description": "One shared context your team's AI tools read & write over MCP. No re-explaining. Free.",
+  "author": "ai.basethread",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/navbuildz/basethread-mcp",
+    "repo": "navbuildz/basethread-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.basethread.ai/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-08T17:57:42.454703Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": "# BaseThread MCP\n\nThe public home for [BaseThread](https://basethread.ai)'s Model Context Protocol server , its registry\nmanifest, install guide, and security page.\n\nBaseThread is one shared context your whole team's AI tools read and write over MCP. Claude Code, Cursor,\nChatGPT, Windsurf, and Copilot each read the relevant slice of a shared, company-structured context graph\nat the start of a session and write activity, decisions, and tasks back as work happens , so no one\nre-explains the project and answers stop contradicting. Free to start, no card.\n\n## Connect\n\nThe server is hosted (remote, streamable-HTTP + OAuth) , no local install needed:\n\n```bash\nclaude mcp add --transport http basethread https://mcp.basethread.ai/mcp\n```\n\nOr add `https://mcp.basethread.ai/mcp` in any MCP client that supports remote servers. Full instructions\nfor every client, plus the tool list: **[llms-install.md](./llms-install.md)**.\n\n## In this repo\n\n- **[server.json](./server.json)** , the Official MCP Registry manifest (`ai.basethread/basethread`).\n- **[llms-install.md](./llms-install.md)** , agent-readable install + configuration guide.\n- **[Security & privacy](https://basethread.ai/security)** , the canonical security page (access model,\n  OAuth, tenancy). Mirrored in [SECURITY.md](./SECURITY.md).\n- **[PUBLISHING.md](./PUBLISHING.md)** , how the registry listing is published and republished.\n\n## Links\n\n- Product: https://basethread.ai\n- App: https://app.basethread.ai\n- Live demo (no signup): https://app.basethread.ai/demo\n- MCP endpoint: https://mcp.basethread.ai/mcp\n",
+  "status": "curated"
+}

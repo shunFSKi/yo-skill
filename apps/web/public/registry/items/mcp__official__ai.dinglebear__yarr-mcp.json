@@ -1,0 +1,109 @@
+{
+  "id": "mcp:official/ai.dinglebear/yarr-mcp",
+  "type": "mcp",
+  "name": "Yarr MCP",
+  "description": "Rust MCP and CLI server for Sonarr, Radarr, Prowlarr, Plex, Jellyfin, and download clients.",
+  "author": "ai.dinglebear",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/jmagar/yarr",
+    "repo": "jmagar/yarr"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "yarr-mcp"
+    ],
+    "env": [
+      {
+        "name": "YARR_SONARR_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "YARR_SONARR_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "YARR_RADARR_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "YARR_RADARR_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "YARR_PLEX_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "YARR_PLEX_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "YARR_VERSION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "YARR_REPO",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "YARR_RELEASE_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RUST_LOG",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-12T12:00:38.673496Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# yarr\n\nSelf-hosted media fleet operations across Sonarr, Radarr, Plex, and related apps over MCP and CLI.\n\nIf you run Claude Code, Codex, or Gemini CLI against a self-hosted media stack,\n`yarr` gives an agent one consistent way to query and control all of it instead\nof eleven different ad hoc integrations. It is an upstream-client MCP server:\nit does not replace those applications or mirror every REST endpoint as a web\nUI. Its job is to provide one consistent tool surface for agents and one\nequivalent CLI surface for operators.\n\n**Not for:** a general-purpose REST gateway to arbitrary services, or a\nscheduler/automation engine in its own right. `yarr` only talks to the service\nkinds it knows about, and only does what you or your agent ask it to do.\n\n## Contents\n\n- [Naming](#naming)\n- [Capabilities And Boundaries](#capabilities-and-boundaries)\n- [Install](#install)\n- [Unraid Plugin](#unraid-plugin)\n- [Quickstart](#quickstart)\n- [Client Configuration](#client-configuration)\n- [Runtime Surfaces](#runtime-surfaces)\n- [MCP Tool Reference](#mcp-tool-reference)\n- [CLI Reference](#cli-reference)\n- [Configuration](#configuration)\n- [Authentication](#authentication)\n- [Safety And Trust Model](#safety-and-trust-model)\n- [Architecture](#architecture)\n- [Distribution Contract](#distribution-contract)\n- [Development](#development)\n- [Verification](#verification)\n- [Deployment](#deployment)\n- [Troubleshooting](#troubleshooting)\n- [Related Servers](#related-servers)\n- [Documentation](#documentation)\n- [License](#license)\n\n## Naming\n\nThis repository is published at `github.com/dinglebear-ai/yarr`.\n\nThe Rust package and installed binary are both `yarr`. The npm launcher package\nis `yarr-mcp` because the shorter `yarr` name is occupied on npm; installing the\nlauncher still gives you a `yarr` command. The MCP registry name is\n`ai.dinglebear/yarr`, and Docker images use `ghcr.io/dinglebear-ai/yarr`.\nProduction Compose deployments select that image by immutable manifest digest.\n\nPlugin naming is intentionally split:\n\n- `yarr` is the full MCP server plugin. It launches the repository-coupled\n  `@dinglebear/yarr` npm package over stdio and includes every per-service fallback\n  skill; it does not commit a platform-specific binary.\n- `sonarr`, `radarr`, `prowlarr`, `overseerr`, `sabnzbd`, `qbittorrent`, `plex`,\n  `jellyfin`, `tautulli`, `tracearr`, and `bazarr` are skills-only plugins with\n  no MCP server and no bundled binary.\n\n## Capabilities And Boundaries\n\n`yarr` wraps a configured media automation fleet through one action-dispatched\nservice layer. The same implementation backs MCP and CLI calls, so behavior\ndoes not drift between \"agent used the tool\" and \"operator ran the command.\"\n\nPrimary capabilities:\n\n- Fleet status checks across the configured services.\n- Credentialed upstream API passthrough for known service kinds.\n- Table-driven OpenAPI operation metadata for Sonarr, Radarr, Prowlarr,\n  Overseerr, Jellyfin, and Plex. The executor preserves the declared parameter,\n  request-media, and successful-response transport contract; unsupported rows\n  are excluded and listed in the generated\n  [capability matrix](https://github.com/dinglebear-ai/yarr/blob/main/docs/TOOLS_ACTIONS_ENDPOINTS.md#generated-operations-spec-backed-services).\n- Curated commands for SABnzbd, qBittorrent, Tautulli, Bazarr, and Tracearr,\n  whose upstreams do not ship usable machine-readable specs.\n- Code Mode over MCP for multi-step media automation scripts.\n- Snippet storage and execution for repeatable Code Mode workflows.\n- Skills-only direct-HTTP plugin fallbacks for each individual service.\n\nBoundaries:\n\n- `yarr` does not store or schedule media jobs on its own.\n- It does not expose a local REST action API or embedded web UI.\n- It does not accept arbitrary unknown service kinds.\n- MCP callers never provide credentials, tokens, keys, or secrets as action\n  arguments. Credentials come from environment variables, config files, or\n  strict per-service plugin config JSON.\n\n## Install\n\nThe native release installer is the safest default because it verifies the\nrelease archive and SHA-256 before installing `yarr` into `~/.local/bin`:\n\n```bash\ncurl -fsSL https://raw.githubusercontent.com/dinglebear-ai/yarr/main/install.sh | bash\nyarr --version\n```\n\nThe npm launcher is a coupled distribution, not an alias for whatever version\nhappens to be tagged `latest`. Verify the exact release version exists on npm\nbefore using it:\n\n```bash\nYARR_VERSION=2.1.0\nnpm view \"@dinglebear/yarr@${YARR_VERSION}\" version\nnpx -y \"@dinglebear/yarr@${YARR_VERSION}\" mcp\n# Or, after the same availability check:\nnpm i -g \"@dinglebear/yarr@${YARR_VERSION}\"\n```\n\nNever use an unpinned `npx @dinglebear/yarr` or `@latest` in an MCP manifest: npm may\nstill point at an older launcher after a partial release. At the time of this\ndocumentation refresh, GitHub release `v2.1.0` is public but\n`@dinglebear/yarr@2.1.0` is not yet available on npm; recovery is tracked in\n[issue #80](https://github.com/dinglebear-ai/yarr/issues/80). Use the native\ninstaller, a verified release archive, a source build, or the independent\nUnraid package until the exact npm version resolves.\n\n## Unraid Plugin\n\nThe coordinated Unraid distribution lives under\n[`unraid-plugin/`](https://github.com/dinglebear-ai/yarr/tree/main/unraid-plugin). It combines the classic `.plg`\ninstaller and privileged service lifecycle, an external NestJS GraphQL\nextension, and Vue settings/dashboard custom elements.\n\nInstall the plugin URL from Unraid's **Plugins > Install Plugin** page:\n\n```text\nhttps://raw.githubusercontent.com/dinglebear-ai/yarr/main/unraid-plugin/yarr.plg\n```\n\nFresh installs bind Yarr to loopback. LAN or custom-address binding is rejected\nuntil authentication is configured; Tailscale Serve is the supported\ntailnet-only option. Service credentials stay in server-side boot\nconfiguration and are never returned to the browser. See the\n[Unraid operator and release guide](https://github.com/dinglebear-ai/yarr/blob/main/unraid-plugin/README.md) for persistence,\ndiscovery, updates, rollback, uninstall retention, troubleshooting, and\nrelease gates.\n\n## Quickstart\n\nThe first-screen 30-second path is:\n\n```bash\nexport YARR_SERVICES=sonarr\nexport YARR_SONARR_URL=http://127.0.0.1:8989\nexport YARR_SONARR_API_KEY=...\n\nyarr sonarr status\nyarr mcp\n```\n\nThen point an MCP client at the stdio command:\n\n```json\n{\n  \"mcpServers\": {\n    \"yarr\": {\n      \"command\": \"yarr\",\n      \"args\": [\"mcp\"],\n      \"env\": {\n        \"YARR_SERVICES\": \"sonarr\",\n        \"YARR_SONARR_URL\": \"http://127.0.0.1:8989\",\n        \"YARR_SONARR_API_KEY\": \"${YARR_SONARR_API_KEY}\"\n      }\n    }\n  }\n}\n```\n\nFor Claude Code plugin installs, use the marketplace commands inside a Claude\nCode chat session, not in a shell:\n\n```text\n/plugin marketplace add dinglebear-ai/yarr\n/plugin install yarr@yarr\n```\n\nThe full plugin starts the exact launcher pinned in its manifest. Confirm that\nversion exists before installing or debugging the plugin:\n\n```bash\nnpm view @dinglebear/yarr@2.1.0 version\n```\n\nUntil issue #80 is resolved, the full plugin cannot start from npm. The\nservice-specific skills-only plugins do not depend on that launcher and remain\navailable for direct upstream workflows.\n\nInstall one skills-only plugin when you want direct service scripts without the\nMCP server:\n\n```text\n/plugin install sonarr@yarr\n/plugin install plex@yarr\n```\n\n## Client Configuration\n\n### stdio\n\nstdio is the preferred local MCP transport. It starts `yarr mcp` on demand and\ndoes not require binding a local HTTP port.\n\n```json\n{\n  \"mcpServers\": {\n    \"yarr\": {\n      \"command\": \"yarr\",\n      \"args\": [\"mcp\"],\n      \"env\": {\n        \"RUST_LOG\": \"info,yarr=debug\"\n      }\n    }\n  }\n}\n```\n\n### Streamable HTTP\n\nRun a persistent server when several clients or machines should share one MCP\nendpoint:\n\n```bash\nYARR_MCP_TOKEN=change-me yarr serve\n```\n\n```json\n{\n  \"mcpServers\": {\n    \"yarr\": {\n      \"url\": \"http://127.0.0.1:40070/mcp\",\n      \"headers\": {\n        \"Authorization\": \"Bearer ${YARR_MCP_TOKEN}\"\n      }\n    }\n  }\n}\n```\n\nHTTP MCP initialization smoke call:\n\n```bash\ncurl --fail http://127.0.0.1:40070/mcp \\\n  -H \"Authorization: Bearer $YARR_MCP_TOKEN\" \\\n  -H \"Content-Type: application/json\" \\\n  -H \"Accept: application/json, text/event-stream\" \\\n  -d '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"initialize\",\"params\":{\"protocolVersion\":\"2025-11-25\",\"capabilities\":{},\"clientInfo\":{\"name\":\"curl-smoke\",\"version\":\"1\"}}}'\n```\n\nUse an MCP client such as mcporter for session-aware `tools/list` and Code Mode\ncalls; a raw one-shot `tools/call` is not a complete MCP session.\n\n## Runtime Surfaces\n\n| Surface | Status | Purpose |\n|---|---:|---|\n| MCP | Required | One default `yarr` Code Mode tool over the whole fleet |\n| CLI | Required | Scriptable parity surface for debugging and automation |\n| REST | Not shipped | Upstream-client servers do not expose a local REST action API |\n| Web | Core: not shipped | The core server has no embedded UI; the classic Unraid distribution ships a separate settings/dashboard web surface |\n\nSet `YARR_MCP_TOOL_MODE=flat` to advertise one action-dispatched MCP tool per\nconfigured service instead of the single Code Mode tool. That mode is useful\nbehind a gateway such as Labby that already provides its own discovery and\nsandbox layer. `codemode` is the default and the right choice for standalone\nMCP clients.\n\n## MCP Tool Reference\n\nBy default, MCP exposes one tool named `yarr`.\n\n| Field | Type | Required | Notes |\n|---|---|---:|---|\n| `code` | string | yes | JavaScript async arrow function executed in the in-process Code Mode sandbox |\n\nInside Code Mode, scripts can use:\n\n- Per-service callables such as `sonarr.get_series()`,\n  `radarr.post_movie({ body })`, `prowlarr.get_indexer()`, and\n  `plex.get_sessions()`.\n- Curated commands such as `qbittorrent.download_queue()` and\n  `tautulli.stats_activity()`.\n- Raw passthrough helpers at `api.<service>.get/post/put/delete(path, body)`.\n- `callTool(action, params)` for the underlying action-dispatch escape hatch.\n- `codemode.search(query)` and `codemode.describe(path)` for discovery.\n- `codemode.run(name, input)`, `codemode.snippets()`, and `writeArtifact(...)`\n  for reusable scripts and artifacts.\n\nGenerated callables come from metadata tables. They preserve method/path,\nrequired path arguments, known query names, JSON-body presence, and a bounded\nsingle-file multipart escape hatch. They do not enforce every required query,\nheader/cookie parameter, style/explode rule, form schema, media type, or\nresponse schema. See `docs/API.md` before relying on a generated operation for\na non-JSON or serialization-sensitive endpoint.\n\nExample:\n\n```js\nasync () => {\n  const queue = await radarr.get_queue();\n  await radarr.post_command({\n    body: { name: \"MoviesSearch\", movieIds: [456] }\n  });\n  return { queued: queue.records?.length };\n}\n```\n\n### Generic Actions\n\nThese actions work for every configured service kind:\n\n| Action | Scope | CLI | Description |\n|---|---|---|---|\n| `service_status` | `yarr:read` | `yarr <service> status` | Fetch an upstream service status endpoint |\n| `api_get` | `yarr:write` | `yarr <service> get --path <path>` | Proxy a credentialed GET request |\n| `api_post` | `yarr:write` | `yarr <service> post --path <path> --body <json>` | Proxy a POST request |\n| `api_put` | `yarr:write` | `yarr <service> put --path <path> --body <json>` | Proxy a PUT request |\n| `api_delete` | `yarr:write` | `yarr <service> delete --path <path>` | Proxy a DELETE request |\n| `help` | public | `yarr help` | Return action reference |\n\n### Code Mode Actions\n\n| Action | Scope | Surface | Description |\n|---|---|---|---|\n| `codemode` | `yarr:write` | `yarr` tool / `yarr codemode --code <JS>` | Run a JS arrow function over the fleet |\n| `op` | `yarr:write` | `<service>.<operation>()` / `yarr <service> op <name>` | Dispatch a generated OpenAPI operation |\n| `snippet_list` | `yarr:read` | `yarr snippet list` / `codemode.snippets()` | List saved snippets |\n| `s\n\n…",
+  "status": "curated"
+}

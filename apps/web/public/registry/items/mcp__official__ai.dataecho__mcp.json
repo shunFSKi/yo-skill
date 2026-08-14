@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/ai.dataecho/mcp",
+  "type": "mcp",
+  "name": "mcp",
+  "description": "Deploy files, sites, and Dockerfile apps to live URLs + private drives for agent memory.",
+  "author": "ai.dataecho",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mohocp/dataecho",
+    "repo": "mohocp/dataecho"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://dataecho.ai/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-04T19:46:27.691356Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "# DataEcho — agent skills\n\n[![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)\n\nTwo [Agent Skills](https://agentskills.io) for the **[DataEcho](https://dataecho.ai)** platform:\n\n| Skill | What it does |\n|---|---|\n| [`dataecho`](skills/dataecho/SKILL.md) | **Deploy anything to a live URL in seconds** — a single file, a static site, or a full server-side app (any stack, via Dockerfile). Anonymous publish with a claim flow, incremental deploys, private Drives with scoped share tokens. |\n| [`dataecho-memory`](skills/dataecho-memory/SKILL.md) | **Persistent memory for agents** — durable across sessions, machines, sandboxes, and platforms. A ~1 KB index + one fact per file on a private versioned drive; atomic concurrent-safe writes, full history/undo, one-command handoff to another agent. |\n\nBoth are plain `SKILL.md` + self-contained scripts (bash + python3 stdlib, zero dependencies), so they work in **any agent that supports the open Agent Skills format** — Claude Code, OpenAI Codex, Gemini CLI, Cursor, GitHub Copilot / VS Code, Goose, opencode, Qwen Code, Amp, Cline, Kilo, Hermes, OpenClaw, and more.\n\n## Install\n\n```bash\n# both skills, any supported agent (global; drop -g for project-local)\nnpx skills add mohocp/dataecho -g\n\n# just one of them\nnpx skills add mohocp/dataecho --skill dataecho -g\nnpx skills add mohocp/dataecho --skill dataecho-memory -g\n```\n\nClaude Code plugin route:\n\n```\n/plugin marketplace add mohocp/dataecho\n/plugin install dataecho@dataecho\n```\n\nNo npm? Install the deploy helper scripts directly:\n\n```bash\ncurl -fsSL https://dataecho.ai/install.sh | bash        # macOS / Linux\n```\n```powershell\nirm https://dataecho.ai/install.ps1 | iex               # Windows PowerShell\n```\n\n## What's inside\n\n- [`skills/dataecho/SKILL.md`](skills/dataecho/SKILL.md) — publish handshake, Dockerfile app contract, claim contract, Drives, API-key flow\n  - [`scripts/publish.sh`](skills/dataecho/scripts/publish.sh) — 3-call publish (create → upload → finalize), incremental deploys, anonymous-claim handling\n  - [`scripts/drive.sh`](skills/dataecho/scripts/drive.sh) — drive CRUD, import/export, scoped share tokens, ETag-safe writes\n  - [`scripts/publish.ps1`](skills/dataecho/scripts/publish.ps1) — Windows PowerShell publisher\n- [`skills/dataecho-memory/SKILL.md`](skills/dataecho-memory/SKILL.md) — the memory discipline (recall-first, update-don't-duplicate, forget-what's-wrong)\n  - [`scripts/memory.sh`](skills/dataecho-memory/scripts/memory.sh) — `recall / remember / forget / reindex / history / restore / handoff`; every mutation commits fact + index in one atomic CAS batch\n\n## Security & privacy\n\n- **Credentials**: the API key (obtained via an email one-time code) is stored at `~/.artifact/credentials` (`chmod 600`), or passed via `$ARTIFACT_API_KEY`. Nothing else is written outside the project. Revoke keys any time from the [dashboard](https://dataecho.ai/dashboard).\n- **Network**: scripts talk only to `https://dataecho.ai` (override: `$ARTIFACT_BASE_URL`). No telemetry, no third-party calls.\n- **Anonymous publishes** need no account; they expire in 24 h unless claimed. Claim tokens are saved locally under `~/.artifact/claims/`.\n- **Memory is private storage**, scoped to your account; share access is via revocable, prefix/TTL-scoped drive tokens. Don't store secrets in memories — it's not a vault.\n- The `curl | bash` installer above is a convenience mirror of [`install.sh`](https://dataecho.ai/install.sh); the canonical scripts are versioned in this repo.\n\n## Links\n\nDocs: https://dataecho.ai/docs · Agent context: https://dataecho.ai/llms.txt · [llms-full.txt](https://dataecho.ai/llms-full.txt) · OpenAPI: https://dataecho.ai/openapi.json · Discovery: https://dataecho.ai/.well-known/agent.json\n\n## License\n\n[MIT](LICENSE)\n",
+  "status": "curated"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "skill:claudeskills/d3-js-visualization",
+  "type": "skill",
+  "name": "D3.js Visualization",
+  "description": "Teaches Claude to produce D3 charts and interactive data visualizations",
+  "author": "chrisvoncsefalvay",
+  "source": {
+    "registry": "claudeskills",
+    "url": "https://github.com/chrisvoncsefalvay/claude-d3js-skill",
+    "repo": "chrisvoncsefalvay/claude-d3js-skill"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 205,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": true
+  },
+  "readme": null,
+  "status": "curated"
+}

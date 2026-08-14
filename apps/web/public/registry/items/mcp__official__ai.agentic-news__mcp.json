@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/ai.agentic-news/mcp",
+  "type": "mcp",
+  "name": "Agentic News",
+  "description": "AI-powered news intelligence — 21 tools for personalized monitoring, briefings, and semantic search",
+  "author": "ai.agentic-news",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/u00dxk2/agentic-news",
+    "repo": "u00dxk2/agentic-news"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.agentic-news.ai/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-06T18:34:53.583541Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}
