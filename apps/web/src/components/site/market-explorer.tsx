@@ -185,7 +185,7 @@ export function MarketExplorer({
         <>
           <ul
             className={cn(
-              "mt-4 grid gap-4 transition-opacity sm:grid-cols-2 lg:grid-cols-3",
+              "mt-4 grid gap-4 transition-opacity sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4",
               isPending && "opacity-50",
             )}
           >

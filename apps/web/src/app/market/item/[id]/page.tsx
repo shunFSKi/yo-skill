@@ -76,7 +76,7 @@ export default async function MarketItemPage({ params }: Props) {
   return (
     <>
       <Nav />
-      <main className="yo-container max-w-3xl pb-24 pt-28">
+      <main className="yo-container yo-container--wide pb-24 pt-28">
         <Link
           href="/market"
           className="inline-flex items-center gap-1.5 text-sm text-ink-muted transition-colors hover:text-jade-ink"
@@ -152,6 +152,9 @@ export default async function MarketItemPage({ params }: Props) {
           <InfoCell label="更新" value={updated ?? "暂无"} />
         </dl>
 
+        {/* 主体双栏：左安装方式 + README，右栏扫描 + CTA（宽屏不再一条窄列） */}
+        <div className="mt-10 grid gap-10 lg:grid-cols-[minmax(0,1fr)_340px]">
+          <div className="min-w-0">
         {/* 安装方式 */}
         {install && (
           <section className="mt-8">
@@ -233,11 +236,14 @@ export default async function MarketItemPage({ params }: Props) {
             </p>
           </section>
         )}
+          </div>
 
+          {/* 右栏：扫描明细 + CTA（桌面端吸附） */}
+          <aside className="flex flex-col gap-8 self-start lg:sticky lg:top-24">
         {/* 安全扫描明细 */}
-        <section className="mt-8">
+        <section>
           <h2 className="text-xl font-bold">静态扫描</h2>
-          <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+          <ul className="mt-3 grid gap-2">
             {item.security.checks.map((c) => (
               <li
                 key={c.name}
@@ -261,7 +267,7 @@ export default async function MarketItemPage({ params }: Props) {
         </section>
 
         {/* CTA */}
-        <section className="mt-10 rounded-card border border-line bg-card p-6 text-center shadow-card">
+        <section className="rounded-card border border-line bg-card p-6 text-center shadow-card">
           <h2 className="text-xl font-bold">想用这条？</h2>
           <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-ink-soft">
             yo-skill 桌面端上线后，这条可以一键安装到你的所有 Agent。
@@ -279,6 +285,8 @@ export default async function MarketItemPage({ params }: Props) {
             </a>
           </div>
         </section>
+          </aside>
+        </div>
       </main>
       <Footer />
     </>

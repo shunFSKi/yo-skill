@@ -36,7 +36,7 @@ export default async function MarketPage({
   return (
     <>
       <Nav />
-      <main className="yo-container pb-24 pt-28">
+      <main className="yo-container yo-container--wide pb-24 pt-28">
         <header className="max-w-2xl">
           <h1 className="text-4xl sm:text-5xl">Skill 与 MCP 市场</h1>
           <p className="mt-4 text-lg leading-relaxed text-ink-soft">
