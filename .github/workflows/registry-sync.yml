@@ -5,8 +5,10 @@
 # 接入数据仓库：GitHub 仓库 Settings → Secrets and variables → Actions 里配：
 #   Variables: REGISTRY_REPO（本项目为 shunFSKi/yo-skill-registry）
 #   Secrets:   REGISTRY_TOKEN（对数据仓有写权限的 PAT）
-# Gitee 国内镜像不在此推送：数据仓已通过 Gitee 官方镜像功能单向 Pull
-# （webhook 自动配置失败，GitHub 有新提交后在镜像管理页点「更新」手动同步）。
+# Gitee 国内镜像不在此推送：数据仓已通过 Gitee 官方镜像功能单向 Pull，
+# GitHub 数据仓上配了 push webhook 自动触发 Gitee 同步（2026-08-14 配通）。
+# 注意：Gitee 处理 pull 常超 GitHub 10s 投递超时，投递记录显示 500 但同步实际会执行；
+# 兜底：镜像管理页点「更新」，或手动 POST remote_mirror/pull?access_token=<Gitee令牌>。
 # 详见 tools/registry-pipeline/README.md
 
 name: registry-sync
@@ -36,7 +38,10 @@ jobs:
       - run: pnpm install --frozen-lockfile
 
       - name: 跑管线刷新 apps/web/public/registry
-        run: pnpm fetch:registry
+        # 直接 node 跑，不走 pnpm 脚本：pnpm 11 在 CI 会先 "Recreating node_modules"
+        #（verify-deps 重建）然后空跑退出 0，脚本根本没执行（2026-08-14 实测踩坑）。
+        # 依赖解析不受影响：pnpm install 后包内 node_modules 软链已就位。
+        run: node tools/registry-pipeline/src/index.ts
         env:
           # GitHub 全量采集用（代码搜索 API 必须登录）；未配置则自动跳过该源
           GITHUB_TOKEN: ${{ secrets.REGISTRY_TOKEN }}
