@@ -50,6 +50,8 @@ export interface RegistryItem {
     pushed_at: string | null;
     /** 综合质量分 0-100（score.ts），推荐排序依据；null = 未评分 */
     score: number | null;
+    /** 该 repo 的每日 star 快照（github-stars.ts 自采，最多 30 个点）；新收录 repo 为 null/缺省 */
+    star_history?: Array<{ d: string; s: number }> | null;
   };
   security: {
     /** 100 制；≥70 且无高危命中才给「已扫描」徽章 */
@@ -61,7 +63,7 @@ export interface RegistryItem {
     category: Category | null;
     featured: boolean;
   };
-  /** 源仓库根 README 原文（markdown，管线抓取，截断 40KB；抓不到为 null） */
+  /** 源仓库根 README 原文（markdown，管线抓取，截断 200KB；抓不到为 null） */
   readme: string | null;
   status: "curated" | "blocked";
 }

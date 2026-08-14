@@ -17,9 +17,11 @@
  * 收录口径（同日拍板，对齐 skills.sh 质量门槛思路）：文件 ≥500B 才采、
  * description ≥20 字符、test/example/template 等路径黑名单、同名同描述 fork 洪水去重
  * （留 stars 最高的）；github-search 源的 stars/pushedAt 由 github-stars.ts 富化
- * （GraphQL 批量 + stars-cache.json 缓存，每日增量，STARS_MAX_REPOS 默认 4500）。
+ * （GraphQL 批量 + stars-cache.json 缓存，每日增量，STARS_MAX_REPOS 默认 4500；
+ * 每个 repo 记每日 star 快照〔最多 30 个点〕，官网详情页画「近段时间」曲线）。
  * 综合质量分（score.ts，0-100）：stars 对数 45 + 维护新鲜度 20 + 扫描 15 + README 10 + 描述 10。
- * README 分层：只给 featured + stars 前 500 + MCP 新近 300 抓，其余 readme=null（体积与 CI 时长纪律）。
+ * README 分层：只给 featured + stars 前 1500 + MCP 新近 300 抓，全文截断 200KB，
+ * 其余 readme=null（体积与 CI 时长纪律）。
  *
  * 用法：pnpm fetch:registry（根目录）或 pnpm --filter @yo-skill/registry-pipeline fetch
  */
@@ -43,8 +45,8 @@ const OUT_DIR =
   process.env.REGISTRY_OUT_DIR ??
   fileURLToPath(new URL("../../../apps/web/public/registry/", import.meta.url));
 
-/** README 抓取上限：featured 全抓 + stars 前 500 + MCP 按更新近的前 300（MCP 无 stars） */
-const README_TOP_N = 500;
+/** README 抓取上限：featured 全抓 + stars 前 1500 + MCP 按更新近的前 300（MCP 无 stars） */
+const README_TOP_N = 1_500;
 const README_MCP_RECENT_N = 300;
 
 /** 本地开发从本包 .env 读 GITHUB_TOKEN（CI 由 workflow 注入，无文件不报错） */
@@ -111,9 +113,10 @@ async function main(): Promise<void> {
   const harvested = await fetchGitHubSkills(known, OUT_DIR);
   console.log(`github 采集完成：${harvested.length} 条`);
 
-  // stars 富化要在 fork 去重之前：留哪份由 stars 决定
+  // stars 富化要在 fork 去重之前：留哪份由 stars 决定。
+  // 连 claudeskills 条目一起传：它的 repo 也要记 star 快照，只是不回填 stars（自带元数据不覆盖）
   console.log("== GitHub repo stars 富化 ==");
-  await enrichGitHubStars(harvested, OUT_DIR);
+  await enrichGitHubStars([...skills, ...harvested], OUT_DIR);
 
   // 复制/fork 洪水去重（仅 github-search 源）：同名同描述只留一份。
   // 留 stars 最高的（null 视为 -1）；平手留 id 字典序靠前的（确定性，保幂等）
@@ -166,7 +169,7 @@ async function main(): Promise<void> {
     .filter((i) => i.status === "curated")
     .sort((a, b) => (a.id < b.id ? -1 : 1)); // 确定性排序，保幂等
 
-  console.log("== 抓取源仓库 README（featured + stars 前 500 + MCP 新近 300） ==");
+  console.log("== 抓取源仓库 README（featured + stars 前 1500 + MCP 新近 300） ==");
   const readmeTargets = new Set<RegistryItem>(
     curated.filter((i) => i.tags.featured),
   );

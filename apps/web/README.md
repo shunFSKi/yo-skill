@@ -30,7 +30,9 @@ src/
 │   ├── page.tsx            # 官网落地页（9 区块）
 │   ├── globals.css         # 纸上墨字 + 一笔翡翠设计系统（CSS 变量 + 组件类）
 │   ├── market/             # 市场发现页（4 万+ 条：服务端过滤，URL 即状态——分段/分类/分词搜索/排序/分页全走 searchParams，客户端岛只渲染当前页 48 条并回写 URL；见 lib/market-query.ts）
-│   │   └── item/[id]/      # 条目详情：头部 200 条 SSG 预渲染 + 长尾按需 ISR（1d）
+│   │   └── item/[id]/      # 条目详情：GitHub 作者头像 + 来源仓库链接 + star 变化曲线
+│   │                       #（管线自采每日快照 star-curve.tsx）+ 源仓库 README 全文；
+│   │                       # 头部 200 条 SSG 预渲染 + 长尾按需 ISR（1d）
 │   ├── account/            # Phase 3 会员占位
 │   └── api/waitlist/       # 等待列表（Phase 1 仅日志，Phase 2 接 DB）
 ├── components/
@@ -46,7 +48,7 @@ src/
 （claudeskills.info 全量 + MCP 官方 Registry 全分页 + GitHub 代码搜索采集 SKILL.md）
 拉真实条目元数据，过 5 条静态扫描规则 +
 场景分类打标，并按 repo 去重抓取源仓库 README（raw.githubusercontent.com，
-截断 12KB，抓不到不显示），落盘 `public/registry/`（`index.json` + `items/*.json` +
+完整抓取截断 200KB，抓不到不显示），落盘 `public/registry/`（`index.json` + `items/*.json` +
 `meta.json`）。页面构建期/请求期直接读 JSON（进程内缓存），不需要运行时数据库；重跑管线即更新，
 真部署时用 GitHub Actions 定时跑即可。徽章只说「已扫描」不说「安全」，被拦条目不出库。
 README 用 react-markdown + `skipHtml` 渲染（丢弃原始 HTML，无注入面）。

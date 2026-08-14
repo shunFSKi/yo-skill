@@ -24,11 +24,21 @@ const STALE_MS = 7 * 24 * 3600 * 1000; // 7 天算过期
 const MAX_REPOS = Number(process.env.STARS_MAX_REPOS ?? 4_500);
 /** 剩余配额低于这个数就提前收工，给搜索/内容抓取留余地 */
 const QUOTA_FLOOR = 300;
+/** star 快照保留天数：详情页「近段时间」曲线用，30 天够了，再多缓存体积失控 */
+const HISTORY_MAX = 30;
+
+interface StarPoint {
+  /** YYYY-MM-DD */
+  d: string;
+  s: number;
+}
 
 interface RepoMeta {
   stars: number;
   pushed_at: string;
   fetched_at: string;
+  /** 每日快照：每次富化追加/更新当天一个点 */
+  history?: StarPoint[];
 }
 
 type StarsCache = Record<string, RepoMeta>;
@@ -108,14 +118,25 @@ export async function enrichGitHubStars(
     }
     const json = (await res.json()) as GraphqlResponse;
     const data = json.data ?? {};
+    const today = new Date().toISOString().slice(0, 10);
     for (let j = 0; j < chunk.length; j++) {
       const node = data[`r${j}`];
       // NOT_FOUND（改名/删库/转私有）：保留旧缓存，没有就跳过，不清零
       if (node) {
+        const prev = cache[chunk[j]!];
+        const history = [...(prev?.history ?? [])];
+        const last = history[history.length - 1];
+        // 同一天多次跑只更新当天点，不重复追加（幂等）
+        if (last?.d === today) last.s = node.stargazerCount;
+        else history.push({ d: today, s: node.stargazerCount });
+        if (history.length > HISTORY_MAX) {
+          history.splice(0, history.length - HISTORY_MAX);
+        }
         cache[chunk[j]!] = {
           stars: node.stargazerCount,
           pushed_at: node.pushedAt,
           fetched_at: new Date().toISOString(),
+          history,
         };
       }
     }
@@ -126,18 +147,24 @@ export async function enrichGitHubStars(
     }
   }
 
-  // 回填条目（只动 github-search 源；claudeskills / MCP 官方自带元数据，不覆盖）
+  // 回填条目（stars 只动 github-search 源；claudeskills / MCP 官方自带元数据，不覆盖）
   let filled = 0;
+  let histAttached = 0;
   for (const it of items) {
-    if (it.source.registry !== "github-search" || !it.source.repo) continue;
+    if (!it.source.repo) continue;
     const c = cache[it.source.repo];
-    if (c) {
-      it.quality.stars = c.stars;
-      it.quality.pushed_at = c.pushed_at;
-      filled++;
+    if (!c) continue;
+    // star 变化曲线数据不分源：repo 在缓存里就挂上，详情页画「近段时间」曲线
+    if (c.history && c.history.length > 0) {
+      it.quality.star_history = c.history;
+      histAttached++;
     }
+    if (it.source.registry !== "github-search") continue;
+    it.quality.stars = c.stars;
+    it.quality.pushed_at = c.pushed_at;
+    filled++;
   }
-  console.log(`  stars: 回填 ${filled} 条`);
+  console.log(`  stars: 回填 ${filled} 条，挂 star 快照 ${histAttached} 条`);
 
   // 只有真补过才写缓存（内容不变不重写，保持 git diff 干净）
   if (stale.length > 0) {

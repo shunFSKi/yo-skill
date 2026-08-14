@@ -11,8 +11,8 @@
 | claudeskills.info | Skill 全量（按源仓库去重的 repo 级条目） | 免 key JSON API |
 | MCP 官方 Registry | MCP server 全量（active + 最新版去重，全分页） | 免 key JSON API |
 | GitHub 代码搜索 | **每日定额增量**采集 SKILL.md（size 分片绕 1000 上限；`GITHUB_HARVEST_DAILY` 默认 8000/次，状态存 `harvest-cache.json`：分片队列 + 全量记录含墓碑，队列扫完自动重置专扫新文件；需 `GITHUB_TOKEN`/`REGISTRY_TOKEN`） | search/code API |
-| GitHub GraphQL | repo stars/pushedAt 富化（100 repo/批，缓存 `stars-cache.json`，每日增量，`STARS_MAX_REPOS` 默认 4500） | graphql API |
-| GitHub 源仓库 | 根 README（按 repo 去重，截断 12KB；分层：featured + stars 前 500 + MCP 新近 300） | raw.githubusercontent.com |
+| GitHub GraphQL | repo stars/pushedAt 富化 + 每日 star 快照（100 repo/批，缓存 `stars-cache.json`，每日增量，`STARS_MAX_REPOS` 默认 4500；快照每 repo 最多 30 个点，详情页画「近段时间」曲线） | graphql API |
+| GitHub 源仓库 | 根 README 完整抓取（按 repo 去重，截断 200KB；分层：featured + stars 前 1500 + MCP 新近 300） | raw.githubusercontent.com |
 
 **增量采集（2026-08-14 拍板）**：不搞一次性全量（会顶到 CI 6 小时上限且配额风险大），每天固定采一批，官网随每日提交实时增长，十几天爬完全量（参照 agentskillshub 标称 13 万+）。已采文件的内容变化不回溯——换 CI 时长与配额的确定性。
 
@@ -38,7 +38,7 @@ pnpm typecheck             # 本包 TS 检查
 meta.json           # schema_version + generated_at + counts：同步锚点，客户端先拉它比对
 index.json          # 全量卡片索引（每条最小集），列表页一次拉完
 items/*.json        # 每条完整档案（安装配方 / env / 扫描明细 / README），详情页按需懒拉
-stars-cache.json    # GitHub repo stars/pushedAt 富化缓存：每日增量补新 + 7 天过期刷新
+stars-cache.json    # GitHub repo stars/pushedAt 富化缓存 + 每日 star 快照（每 repo 最多 30 点）：每日增量补新 + 7 天过期刷新
 harvest-cache.json  # SKILL.md 增量采集状态：待采分片队列 + 全量采集记录（含墓碑）
 ```
 

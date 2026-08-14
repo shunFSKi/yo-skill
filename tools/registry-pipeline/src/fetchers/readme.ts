@@ -1,12 +1,14 @@
 /**
  * 源仓库 README 抓取：按 repo 去重（多个条目共享同一仓库时只抓一次），
- * raw.githubusercontent.com + HEAD ref，依次尝试常见文件名，限长 40KB。
+ * raw.githubusercontent.com + HEAD ref，依次尝试常见文件名，限长 200KB。
+ * （2026-08-14 用户要求详情页完整展示 README，从 12KB 提到 200KB——
+ * 绝大多数 README 在 50KB 内，200KB 只防个别超大文件拖垮详情页 JSON）
  * 抓不到 → readme = null（界面不显示该区块，不造假）。
  */
 
 import type { RegistryItem } from "../schema.ts";
 
-const MAX_BYTES = 12_000;
+const MAX_BYTES = 200_000;
 const CONCURRENCY = 8;
 const CANDIDATES = ["README.md", "readme.md", "README.markdown", "README"];
 

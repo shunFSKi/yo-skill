@@ -53,7 +53,13 @@ export interface RegistryItem {
     remote_url?: string;
     env?: EnvVar[];
   } | null;
-  quality: { stars: number | null; pushed_at: string | null; score: number | null };
+  quality: {
+    stars: number | null;
+    pushed_at: string | null;
+    score: number | null;
+    /** 该 repo 的每日 star 快照（管线自采，最多 30 个点）；新收录为 null/缺省 */
+    star_history?: Array<{ d: string; s: number }> | null;
+  };
   security: {
     score: number;
     scanned: boolean;

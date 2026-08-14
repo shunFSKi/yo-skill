@@ -13,6 +13,7 @@ import { Nav } from "@/components/site/nav";
 import { Footer } from "@/components/site/footer";
 import { WaitlistButton } from "@/components/site/waitlist-button";
 import { ReadmePanel } from "@/components/site/readme-panel";
+import { StarCurve } from "@/components/site/star-curve";
 import {
   getRegistryIndex,
   getRegistryItem,
@@ -85,15 +86,26 @@ export default async function MarketItemPage({ params }: Props) {
           回市场
         </Link>
 
-        {/* 头部：色块 + 名称 + 徽章 */}
+        {/* 头部：GitHub 作者头像（无 repo 的条目用色块首字母兜底）+ 名称 + 徽章 */}
         <header className="mt-6 flex items-start gap-4">
-          <span
-            aria-hidden
-            className="flex h-14 w-14 shrink-0 items-center justify-center rounded-[14px] text-xl font-bold text-white"
-            style={{ backgroundColor: dotColor(item.name) }}
-          >
-            {item.name.charAt(0).toUpperCase()}
-          </span>
+          {item.source.repo ? (
+            // GitHub 官方头像接口，next/image 白名单外域名，用原生 img
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={`https://github.com/${item.source.repo.split("/")[0]}.png?size=96`}
+              alt={item.author}
+              loading="lazy"
+              className="h-14 w-14 shrink-0 rounded-[14px] border border-line bg-paper-deep"
+            />
+          ) : (
+            <span
+              aria-hidden
+              className="flex h-14 w-14 shrink-0 items-center justify-center rounded-[14px] text-xl font-bold text-white"
+              style={{ backgroundColor: dotColor(item.name) }}
+            >
+              {item.name.charAt(0).toUpperCase()}
+            </span>
+          )}
           <div className="min-w-0">
             <h1 className="text-3xl sm:text-4xl">{item.name}</h1>
             <div className="mt-2.5 flex flex-wrap gap-1.5">
@@ -134,12 +146,25 @@ export default async function MarketItemPage({ params }: Props) {
           <InfoCell label="作者" value={item.author} />
           <InfoCell
             label="来源"
-            value={REGISTRY_LABEL[item.source.registry]}
+            value={
+              item.source.repo ? (
+                <a
+                  href={`https://github.com/${item.source.repo}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="yo-link"
+                >
+                  {item.source.repo}
+                </a>
+              ) : (
+                REGISTRY_LABEL[item.source.registry]
+              )
+            }
           />
           <InfoCell
             label="Stars"
             value={
-              item.quality.stars !== null ? (
+              typeof item.quality.stars === "number" ? (
                 <span className="inline-flex items-center gap-1">
                   <Star className="h-3.5 w-3.5 fill-current" />
                   {formatStars(item.quality.stars)}
@@ -152,7 +177,9 @@ export default async function MarketItemPage({ params }: Props) {
           <InfoCell
             label="质量分"
             value={
-              item.quality.score !== null ? `${item.quality.score} / 100` : "暂无"
+              typeof item.quality.score === "number"
+                ? `${item.quality.score} / 100`
+                : "暂无"
             }
           />
           <InfoCell label="更新" value={updated ?? "暂无"} />
@@ -244,8 +271,18 @@ export default async function MarketItemPage({ params }: Props) {
         )}
           </div>
 
-          {/* 右栏：扫描明细 + CTA（桌面端吸附） */}
+          {/* 右栏：star 曲线 + 扫描明细 + CTA（桌面端吸附） */}
           <aside className="flex flex-col gap-8 self-start lg:sticky lg:top-24">
+        {/* Star 变化：管线自采每日快照，有数据才占版面（首日收录的 repo 只有 1 个点，显示「明天见」） */}
+        {(item.quality.star_history?.length ?? 0) >= 1 && (
+          <section>
+            <h2 className="text-xl font-bold">Star 变化</h2>
+            <div className="yo-card mt-3 p-4">
+              <StarCurve history={item.quality.star_history!} />
+            </div>
+          </section>
+        )}
+
         {/* 安全扫描明细 */}
         <section>
           <h2 className="text-xl font-bold">静态扫描</h2>
