@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/yuhangjiang22/chart-review-platform/role-c-proposal",
+  "type": "skill",
+  "name": "role-c-proposal",
+  "description": "Draft a v.next of the chart-review-guideline-skill when drift detection flags a criterion as needing revision. Use to mechanize Role C proposals from drift signals into a methodologist-reviewable patch.",
+  "author": "yuhangjiang22",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/yuhangjiang22/chart-review-platform/blob/HEAD/server/lib/skills/role-c-proposal/SKILL.md",
+    "repo": "yuhangjiang22/chart-review-platform",
+    "path": "server/lib/skills/role-c-proposal/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

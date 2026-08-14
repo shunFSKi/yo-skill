@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/eliperkins/dotfiles/recap",
+  "type": "skill",
+  "name": "recap",
+  "description": "Finalizes a session, compounding learnings from the session in memory or in CLAUDE.md files, rules and skills by understanding what should be repeated in subsequent sessions.",
+  "author": "eliperkins",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/eliperkins/dotfiles/blob/HEAD/claude/skills/recap/SKILL.md",
+    "repo": "eliperkins/dotfiles",
+    "path": "claude/skills/recap/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-07-06T16:38:40Z",
+    "score": 44
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

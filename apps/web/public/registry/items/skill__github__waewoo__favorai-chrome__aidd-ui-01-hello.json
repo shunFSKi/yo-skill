@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/waewoo/favorai-chrome/aidd-ui-01-hello",
+  "type": "skill",
+  "name": "aidd-ui-01-hello",
+  "description": "Smoke-test that confirms the aidd-ui plugin loads. Use when the user wants to verify the alpha aidd-ui plugin is installed and reachable. Not for real UI or UX design work.",
+  "author": "waewoo",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/waewoo/favorai-chrome/blob/HEAD/.codex/skills/aidd-ui-01-hello/SKILL.md",
+    "repo": "waewoo/favorai-chrome",
+    "path": ".codex/skills/aidd-ui-01-hello/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

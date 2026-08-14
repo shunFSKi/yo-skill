@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/WaipopDev/Daddy-Pay-API/daddy-pay-api",
+  "type": "skill",
+  "name": "daddy-pay-api",
+  "description": "Implements and debugs Daddy Pay API (NestJS, TypeORM, admin JWT, IoT auth, repositories, migrations). Use when working in Daddy-Pay-API, adding endpoints, fixing auth/payment/shop/machine modules, or running migrations.",
+  "author": "WaipopDev",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/WaipopDev/Daddy-Pay-API/blob/HEAD/.cursor/skills/daddy-pay-api/SKILL.md",
+    "repo": "WaipopDev/Daddy-Pay-API",
+    "path": ".cursor/skills/daddy-pay-api/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-05-27T12:40:59Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

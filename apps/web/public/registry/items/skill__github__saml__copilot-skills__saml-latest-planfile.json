@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/saml/copilot-skills/saml-latest-planfile",
+  "type": "skill",
+  "name": "saml-latest-planfile",
+  "description": "Finds the latest plan file in `./.plan/` directory (excludes *.review.md and *.fixplan.md). Trigger this automatically when you need to locate the latest plan file.",
+  "author": "saml",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/saml/copilot-skills/blob/HEAD/saml-latest-planfile/SKILL.md",
+    "repo": "saml/copilot-skills",
+    "path": "saml-latest-planfile/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

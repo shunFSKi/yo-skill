@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/sainzs/reckoner/review-diff",
+  "type": "skill",
+  "name": "review-diff",
+  "description": "Reviews a staged or branch diff for correctness, regressions, security issues, performance problems, and missing tests.",
+  "author": "sainzs",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/sainzs/reckoner/blob/HEAD/skills/review-diff/SKILL.md",
+    "repo": "sainzs/reckoner",
+    "path": "skills/review-diff/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

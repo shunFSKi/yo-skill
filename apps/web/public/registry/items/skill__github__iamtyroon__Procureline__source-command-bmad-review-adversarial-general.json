@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/iamtyroon/Procureline/source-command-bmad-review-adversarial-general",
+  "type": "skill",
+  "name": "source-command-bmad-review-adversarial-general",
+  "description": "Perform a Cynical Review and produce a findings report. Use when the user requests a critical review of something",
+  "author": "iamtyroon",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/iamtyroon/Procureline/blob/HEAD/.agents/skills/source-command-bmad-review-adversarial-general/SKILL.md",
+    "repo": "iamtyroon/Procureline",
+    "path": ".agents/skills/source-command-bmad-review-adversarial-general/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-07-29T17:55:34Z",
+    "score": 49
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

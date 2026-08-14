@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/stumpigit/nanoclaw-klapp/klapp",
+  "type": "skill",
+  "name": "klapp",
+  "description": "Klapp (klapp.mobi) school communication integration. Read messages from the Klapp inbox. Triggers on \"klapp\", \"check klapp\", \"klapp nachrichten\", \"klapp messages\".",
+  "author": "stumpigit",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/stumpigit/nanoclaw-klapp/blob/HEAD/container/skills/klapp/SKILL.md",
+    "repo": "stumpigit/nanoclaw-klapp",
+    "path": "container/skills/klapp/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

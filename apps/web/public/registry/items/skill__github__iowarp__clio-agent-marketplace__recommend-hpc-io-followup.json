@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/iowarp/clio-agent-marketplace/recommend-hpc-io-followup",
+  "type": "skill",
+  "name": "recommend_hpc_io_followup",
+  "description": "Recommend concrete follow-up checks for an HPC I/O regression.",
+  "author": "iowarp",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/iowarp/clio-agent-marketplace/blob/HEAD/old/hpc-io-regression/skills/recommend_hpc_io_followup/SKILL.md",
+    "repo": "iowarp/clio-agent-marketplace",
+    "path": "old/hpc-io-regression/skills/recommend_hpc_io_followup/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-14T06:37:24Z",
+    "score": 42
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

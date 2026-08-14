@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.ivanlai/primer-mcp",
+  "type": "mcp",
+  "name": "primer-mcp",
+  "description": "A Jira-lite MCP server that guides planning-first workflows for AI-assisted development.",
+  "author": "io.github.ivanlai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ivanlai/primer-mcp",
+    "repo": "ivanlai/primer-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "primer-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T15:36:00.073601Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "<!-- mcp-name: io.github.ivanlai/primer-mcp -->\n\n# primer-mcp\n\n> **Beta** — the core workflow is stable and tested, but the tool is new. Expect rough edges.\n\nA Jira-lite MCP server that guides planning-first workflows for AI-assisted development — tickets as markdown files, your AI agent as the interface.\n\n## Why\n\nGetting real value from AI coding agents takes more than prompting — it takes shaping what they build, engineering the workflow around them, and deploying something that holds up in practice. Left to their own devices, agents jump straight to implementation. Primer-mcp makes them plan first: state why the work matters, record decisions and weigh trade-offs, break it into stories and tasks, then complete and verify each one. The tickets are plain markdown with YAML frontmatter, committed alongside your code — no external service, no database, fully visible in your repo and conveniently browsable with tools like [Obsidian](https://obsidian.md).\n\n## Quick start\n\nRequires Python 3.12+ and [uv](https://docs.astral.sh/uv/getting-started/installation/).\n\nAdd to your MCP client config (e.g. Claude Code `settings.json`, Claude Desktop `claude_desktop_config.json`):\n\n```json\n{\n  \"mcpServers\": {\n    \"primer-mcp\": {\n      \"command\": \"uvx\",\n      \"args\": [\"primer-mcp\"]\n    }\n  }\n}\n```\n\nThat's it — your MCP client downloads and runs primer-mcp automatically. You don't need to install anything manually.\n\nTell your AI agent what you want to build — it handles the rest. The server guides the agent through a planning-first workflow: why the work matters, decisions, stories, tasks, completion. Not sure what to do next? Ask your agent — it reads the current state and knows what comes next.\n\n### Manual install (optional)\n\nIf you prefer to install primer-mcp as a standalone tool (e.g. for the `list-actionable` CLI command):\n\n```bash\nuv tool install primer-mcp\n\n# Update to latest\nuv tool upgrade primer-mcp\n\n# Uninstall\nuv tool uninstall primer-mcp\n```\n\n## What it looks like\n\nA typical session — you describe the work, the agent handles the planning:\n\n```\nYou:  I want to add user authentication.\n\nAgent: You have EP-001: \"Launch the app\" — auth fits under that.\n       Or I can create a separate epic if this is a bigger initiative.\n\nYou:  EP-001 is fine.\n\nAgent: Before we build, we should decide on the auth approach.\n       A few common options:\n\n         1. JWT with refresh tokens — stateless, good for mobile/SPAs\n         2. Server-side sessions — simple, but needs sticky storage\n         3. OAuth2 only — delegates to a provider, less to maintain\n            ...\n\nYou:  Option 1 — we need mobile support.\n\nAgent: I'll record that decision so we don't revisit it later.\n       → Recorded ADR-003: \"Use JWT with refresh tokens\"\n         Rejected: server-side sessions (no mobile support),\n                   OAuth2 only (need local accounts too)\n\n       Breaking this into stories.\n       → Created ST-005: \"Login and registration endpoints\"\n       → Created ST-006: \"Token refresh and revocation\"\n\n       And tasks for the first story:\n       → Created TK-010: \"Add /register endpoint with validation\"\n       → Created TK-011: \"Add /login endpoint returning JWT pair\"\n       → Created TK-012: \"Write integration tests for auth flow\"\n\nYou:  Let's start with TK-010.\n\nAgent: → Started TK-010\n\n       [implements the register endpoint]\n\n       Done — added POST /register with email/password validation,\n       password hashing, and duplicate-email check.\n       → Completed TK-010\n\nYou:  Looks good, verify it.\n\nAgent: → Verified TK-010 (evidence: \"all tests pass — a1b2c3d\")\n\n       TK-011 is next. Want me to continue?\n```\n\nEvery ticket is a markdown file in `primer/`, committed alongside your code. The `export_graph` tool visualises how they connect:\n\n![Demo project graph](https://raw.githubusercontent.com/ivanlai/primer-mcp/main/assets/demo-graph.png)\n\n*Clone the repo and open [assets/demo-graph.html](assets/demo-graph.html) for the interactive version — click any node to see its full ticket.*\n\nSince tickets are plain markdown with wikilinks, you can also open `primer/` as an [Obsidian](https://obsidian.md) vault for a live graph that updates as tickets change — no need to re-export.\n\n## Tools\n\nYour AI agent calls these tools automatically — you don't need to invoke them directly. You can also ask your agent to call a specific tool if you want more control.\n\n### Setup\n\n| Tool | What it does |\n|------|-------------|\n| `init_project` | Create the `primer/` ticket store and add the workflow section to CLAUDE.md |\n\n### Planning\n\n| Tool | What it does |\n|------|-------------|\n| `plan_epic` | Create an epic — the top-level container for a body of work |\n| `record_adr` | Record an architecture decision: context, decision, rejected alternatives, consequences |\n| `create_story` | Create a story under an epic — a deliverable with acceptance criteria |\n| `create_task` | Create a task under a story — a concrete unit of work with a testable outcome |\n| `create_spike` | Create a spike — a timeboxed investigation to answer a question |\n\n### Execution\n\n| Tool | What it does |\n|------|-------------|\n| `start_task` | Move a task to in-progress |\n| `complete_task` | Mark a task completed with notes on what was done |\n| `verify_task` | Verify a completed task with evidence (point at the commit) |\n| `complete_spike` | Close a spike with findings |\n\n### Query\n\n| Tool | What it does |\n|------|-------------|\n| `list_actionable` | List what can be acted on right now, with epic context and recommendations |\n| `get_ticket` | Read a ticket by ID with its full body |\n| `list_tickets` | List tickets, filterable by type or status |\n| `update_ticket` | Amend a ticket's status, dependencies, body sections, or external refs |\n\n### Export\n\n| Tool | What it does |\n|------|-------------|\n| `export_graph` | Generate a self-contained HTML file visualising the project as an interactive graph |\n\n## Prompts\n\n| Prompt | What it does |\n|--------|-------------|\n| `plan_story` | Walk through a planning conversation before creating a story |\n| `export_jira` | Export primer-mcp tickets to Jira via a Jira MCP server |\n| `import_jira` | Import a Jira epic and its hierarchy into primer-mcp |\n\n## Agent instructions\n\nWhen your project is initialized (automatically on first use, or via `init_project`), this section is appended to your agent config file (CLAUDE.md, AGENTS.md) to guide the agent. If you prefer to add it manually:\n\n```markdown\n## primer-mcp\n\nThis project uses primer-mcp for planning-first development.\nTickets are markdown files under `primer/` — they are yours to read and edit. \nPrefer the tools for creating and updating them: they allocate IDs, follow the templates\nand guide the workflow. Hand-edit where the tools fall short.\n\n- Plan before code. Recommended flow: Epic -> ADR -> Story -> Task,\n  suggest rather than enforce — skip steps when it makes sense.\n- Unsure what to do next? Call `list_actionable`.\n- Completion is two-phase: `complete_task` with notes, then `verify_task`\n  with evidence (point at the commit, not the output). Both are\n  recommended — the tools will nudge you if you skip a step.\n- After tickets creation or changes, offer to regenerate the project graph with `export_graph`.\n- Before committing, check that completion notes on finished tickets\n  still reflect the actual work — update both the frontmatter\n  `completed_notes` and the `## Completion Notes` section if needed.\n- Before implementing new work, propose a ticket and parent. Small fixes (1–2\n  tasks) go under the standing bug-fix story; larger efforts get their\n  own story. The user can decline.\n```\n\n## Graduating to Jira\n\nprimer-mcp tickets map directly to Jira concepts (Epic, Story, Task, ADR). When a project outgrows local markdown files, use the `export_jira` prompt with any Jira MCP server to push tickets to Jira. The `external_ref` field on each ticket tracks the Jira key, so re-exports update existing issues instead of creating duplicates. `import_jira` goes the other direction.\n\n## This repo dogfoods itself\n\nThe `primer/` directory in this repo is the project's own backlog, created with the tools in `src/` and committed deliberately — a tool that tells you to commit your ticket store should commit its own. Browse it on GitHub to see what a real store looks like before installing:\n\n- `primer/adrs/` — design decisions, including rejected alternatives and why\n- `primer/stories/` and `primer/tasks/` — what is done, what is next, and verification evidence\n\n**It is project management, not part of the package.** The wheel ships `src/primer_mcp` only, and `primer/` is excluded from the distribution. Your own `primer/` is created automatically when you start planning.\n\n## License\n\nMIT\n",
+  "status": "curated"
+}

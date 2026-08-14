@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/tiendung/flow-next/hook-test",
+  "type": "skill",
+  "name": "hook-test",
+  "description": "Test skill to verify frontmatter hooks work. Use when asked to test skill hooks.",
+  "author": "tiendung",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/tiendung/flow-next/blob/HEAD/skills/hook-test/SKILL.md",
+    "repo": "tiendung/flow-next",
+    "path": "skills/hook-test/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

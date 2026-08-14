@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/maxyeh0817/Forge/cmd-plan",
+  "type": "skill",
+  "name": "cmd-plan",
+  "description": "查看或修改計畫。展示 spec 並允許變更。",
+  "author": "maxyeh0817",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/maxyeh0817/Forge/blob/HEAD/.claude/skills/cmd-plan/SKILL.md",
+    "repo": "maxyeh0817/Forge",
+    "path": ".claude/skills/cmd-plan/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 19
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/sfgray26/CBB_Betting/source-command-emac",
+  "type": "skill",
+  "name": "source-command-emac",
+  "description": "Initiates the next EMAC mission by reading HANDOFF.md and delegating to the appropriate sub-agent.",
+  "author": "sfgray26",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/sfgray26/CBB_Betting/blob/HEAD/.agents/skills/source-command-emac/SKILL.md",
+    "repo": "sfgray26/CBB_Betting",
+    "path": ".agents/skills/source-command-emac/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

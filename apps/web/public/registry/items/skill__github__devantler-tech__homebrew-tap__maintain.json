@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/devantler-tech/homebrew-tap/maintain",
+  "type": "skill",
+  "name": "maintain",
+  "description": "Repository maintenance for the devantler-tech Homebrew tap — Cask hygiene and CI health. Never chase version/sha bumps (release automation owns those). Use when performing autonomous or on-request maintenance of this repo.",
+  "author": "devantler-tech",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/devantler-tech/homebrew-tap/blob/HEAD/.claude/skills/maintain/SKILL.md",
+    "repo": "devantler-tech/homebrew-tap",
+    "path": ".claude/skills/maintain/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-14T15:32:11Z",
+    "score": 48
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

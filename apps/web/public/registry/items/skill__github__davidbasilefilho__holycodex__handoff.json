@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/davidbasilefilho/holycodex/handoff",
+  "type": "skill",
+  "name": "handoff",
+  "description": "Use only when resumable context must transfer to another agent or session, or work must pause; do not use for routine summaries, delegation, or completed work. Produces one redacted temporary handoff.",
+  "author": "davidbasilefilho",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/davidbasilefilho/holycodex/blob/HEAD/packages/plugin/plugin/skills/handoff/SKILL.md",
+    "repo": "davidbasilefilho/holycodex",
+    "path": "packages/plugin/plugin/skills/handoff/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-11T17:04:26Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

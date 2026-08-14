@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/harche/node-skills/node",
+  "type": "skill",
+  "name": "node",
+  "description": "OpenShift Node team assistant. Covers kubelet, MCO, CRI-O, crun, conmonrs, Kueue operator, Jira (OCPNODE/OCPBUGS), Red Hat KB/support cases, Prometheus, and K8s/OCP docs. Triggers on any OpenShift node-layer development, deployment, debugging, or workflow task.",
+  "author": "harche",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/harche/node-skills/blob/HEAD/node-assistant/skills/node/SKILL.md",
+    "repo": "harche/node-skills",
+    "path": "node-assistant/skills/node/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

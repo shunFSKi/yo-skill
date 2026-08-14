@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/uxudjs/UXUCode/commit",
+  "type": "skill",
+  "name": "commit",
+  "description": "Generate an intentional project-conformant commit message from the verified diff.",
+  "author": "uxudjs",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/uxudjs/UXUCode/blob/HEAD/Claude/skills/commit/SKILL.md",
+    "repo": "uxudjs/UXUCode",
+    "path": "Claude/skills/commit/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-08T14:47:37Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

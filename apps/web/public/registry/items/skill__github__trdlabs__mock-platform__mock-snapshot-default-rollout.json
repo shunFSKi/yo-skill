@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/trdlabs/mock-platform/mock-snapshot-default-rollout",
+  "type": "skill",
+  "name": "mock-snapshot-default-rollout",
+  "description": "VPS snapshot → ecosystem default. Delegates to control-center (SSOT + rollout script). Use when fetching VPS slice or changing default mock fixture.",
+  "author": "trdlabs",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/trdlabs/mock-platform/blob/HEAD/.cursor/skills/mock-snapshot-default-rollout/SKILL.md",
+    "repo": "trdlabs/mock-platform",
+    "path": ".cursor/skills/mock-snapshot-default-rollout/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

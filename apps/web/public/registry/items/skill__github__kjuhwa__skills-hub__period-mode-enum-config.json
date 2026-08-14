@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/kjuhwa/skills-hub/period-mode-enum-config",
+  "type": "skill",
+  "name": "period-mode-enum-config",
+  "description": "One enum `Mode` holds all (intervalMs, isFullData, dateFormat, retention, chartFormat) tuples for every time-series granularity — single source of truth across repository/service/chart layers.",
+  "author": "kjuhwa",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/kjuhwa/skills-hub/blob/HEAD/skills/backend/period-mode-enum-config/SKILL.md",
+    "repo": "kjuhwa/skills-hub",
+    "path": "skills/backend/period-mode-enum-config/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-04-26T15:42:32Z",
+    "score": 35
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

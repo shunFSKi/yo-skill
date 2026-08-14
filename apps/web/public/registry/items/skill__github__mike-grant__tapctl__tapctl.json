@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/mike-grant/tapctl/tapctl",
+  "type": "skill",
+  "name": "tapctl",
+  "description": "Control, inspect, test, and capture screenshots from Android and iOS apps using the tapctl reference-based CLI. Use when an agent needs to explore a mobile app, reproduce a flow, verify behavior, or collect screenshots from a connected device, emulator, or simulator.",
+  "author": "mike-grant",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/mike-grant/tapctl/blob/HEAD/skills/tapctl/SKILL.md",
+    "repo": "mike-grant/tapctl",
+    "path": "skills/tapctl/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

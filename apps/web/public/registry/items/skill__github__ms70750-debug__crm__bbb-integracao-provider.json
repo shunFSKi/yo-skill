@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/ms70750-debug/crm/bbb-integracao-provider",
+  "type": "skill",
+  "name": "bbb-integracao-provider",
+  "description": "Criar adapters futuros FullConsig, Facta, iCred, Daycoval ou similares sem realizar chamadas externas.",
+  "author": "ms70750-debug",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ms70750-debug/crm/blob/HEAD/.codex/skills/bbb-integracao-provider/SKILL.md",
+    "repo": "ms70750-debug/crm",
+    "path": ".codex/skills/bbb-integracao-provider/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-14T14:42:34Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

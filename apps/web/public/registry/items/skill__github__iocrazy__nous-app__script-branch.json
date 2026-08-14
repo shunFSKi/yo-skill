@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/iocrazy/nous-app/script-branch",
+  "type": "skill",
+  "name": "Script Branch",
+  "description": "Propose N alternative scene versions with distinct creative angles.",
+  "author": "iocrazy",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/iocrazy/nous-app/blob/HEAD/backend/seeds/skills/script-branch/SKILL.md",
+    "repo": "iocrazy/nous-app",
+    "path": "backend/seeds/skills/script-branch/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

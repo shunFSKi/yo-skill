@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/GrLynn12/HyMed-Agent/prognosis-and-risk",
+  "type": "skill",
+  "name": "prognosis_and_risk",
+  "description": "处理不治疗后果、自愈、严重程度、复发、风险和预后",
+  "author": "GrLynn12",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/GrLynn12/HyMed-Agent/blob/HEAD/medical_rag/skills/prognosis_and_risk/SKILL.md",
+    "repo": "GrLynn12/HyMed-Agent",
+    "path": "medical_rag/skills/prognosis_and_risk/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-12T15:32:10Z",
+    "score": 34
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

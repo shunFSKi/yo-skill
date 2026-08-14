@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/bluealpha-labs/bluealpha-mcp-plugins/mmm-test-roadmap",
+  "type": "skill",
+  "name": "mmm-test-roadmap",
+  "description": "Build a prioritized quarterly incrementality testing roadmap from the trust-router output. Given a test budget and a cap on concurrent tests, schedules which channels to test in which weeks, with pre-staged expected lifts as test priors. Use when the user mentions \"testing roadmap\", \"quarterly test plan\", \"what should we test this quarter\", \"incrementality calendar\", \"test prioritization\", \"sequence my tests\", \"build a test plan\", or \"which tests are worth running\".",
+  "author": "bluealpha-labs",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/bluealpha-labs/bluealpha-mcp-plugins/blob/HEAD/plugins/bluealpha-marketing-plugin/skills/mmm-test-roadmap/SKILL.md",
+    "repo": "bluealpha-labs/bluealpha-mcp-plugins",
+    "path": "plugins/bluealpha-marketing-plugin/skills/mmm-test-roadmap/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 9,
+    "pushed_at": "2026-06-28T00:13:41Z",
+    "score": 49
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Andamio-Platform/andamio-dev/learn",
+  "type": "skill",
+  "name": "learn",
+  "description": "Compatibility wrapper for the portable Build on Andamio course orchestrator. Canonical instructions live in skills/learn/SKILL.md.",
+  "author": "Andamio-Platform",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Andamio-Platform/andamio-dev/blob/HEAD/.claude/skills/learn/SKILL.md",
+    "repo": "Andamio-Platform/andamio-dev",
+    "path": ".claude/skills/learn/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-07-31T10:53:11Z",
+    "score": 48
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

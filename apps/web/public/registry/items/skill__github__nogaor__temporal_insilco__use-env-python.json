@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/nogaor/temporal_insilco/use-env-python",
+  "type": "skill",
+  "name": "use-env-python",
+  "description": "Use this skill when the task involves running Python scripts, tests, notebooks, or CLI commands in this repository. Do not use it for pure code review with no execution. Prefer this skill whenever environment activation or interpreter selection matters.",
+  "author": "nogaor",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/nogaor/temporal_insilco/blob/HEAD/.agents/skills/use-env-python/SKILL.md",
+    "repo": "nogaor/temporal_insilco",
+    "path": ".agents/skills/use-env-python/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

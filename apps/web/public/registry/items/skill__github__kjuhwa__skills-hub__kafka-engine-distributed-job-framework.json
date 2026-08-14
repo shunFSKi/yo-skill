@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/kjuhwa/skills-hub/kafka-engine-distributed-job-framework",
+  "type": "skill",
+  "name": "kafka-engine-distributed-job-framework",
+  "description": "Kafka 이벤트 기반 분산 작업 실행 프레임워크 스켈레톤 — Publisher→Topic→Consumer→Queue→Worker + Admission Control + Strategy SPI",
+  "author": "kjuhwa",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/kjuhwa/skills-hub/blob/HEAD/skills/arch/kafka-engine-distributed-job-framework/SKILL.md",
+    "repo": "kjuhwa/skills-hub",
+    "path": "skills/arch/kafka-engine-distributed-job-framework/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-04-26T15:42:32Z",
+    "score": 35
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

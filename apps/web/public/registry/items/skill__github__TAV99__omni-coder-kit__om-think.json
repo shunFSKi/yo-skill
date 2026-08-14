@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/TAV99/omni-coder-kit/om-think",
+  "type": "skill",
+  "name": "om-think",
+  "description": "Interview the user and advise on architecture before any code. Use at the start of a new feature/project.",
+  "author": "TAV99",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/TAV99/omni-coder-kit/blob/HEAD/.agents/skills/om-think/SKILL.md",
+    "repo": "TAV99/omni-coder-kit",
+    "path": ".agents/skills/om-think/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-07-22T17:29:51Z",
+    "score": 48
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

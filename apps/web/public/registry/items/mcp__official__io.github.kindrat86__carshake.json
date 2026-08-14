@@ -2,12 +2,12 @@
   "id": "mcp:official/io.github.kindrat86/carshake",
   "type": "mcp",
   "name": "CarShake",
-  "description": "AI car condition scan before valet handover. Prevent damage disputes with timestamped proof",
+  "description": "Vehicle handover checklists, damage-documentation best practices, valet/rental/service FAQs.",
   "author": "io.github.kindrat86",
   "source": {
     "registry": "mcp-official",
-    "url": "https://carshake.online/api/mcp",
-    "repo": null
+    "url": "https://github.com/kindrat86/carshake-mcp",
+    "repo": "kindrat86/carshake-mcp"
   },
   "license": null,
   "install": {
@@ -16,7 +16,8 @@
   },
   "quality": {
     "stars": null,
-    "pushed_at": "2026-07-19T10:49:27.684536Z"
+    "pushed_at": "2026-08-14T10:27:47.404543Z",
+    "score": 52
   },
   "security": {
     "score": 100,
@@ -45,9 +46,9 @@
     ]
   },
   "tags": {
-    "category": null,
+    "category": "写作",
     "featured": false
   },
-  "readme": null,
+  "readme": "# carshake MCP server\n\nVehicle handover documentation tools for AI agents. Generate vehicle handover checklists, get damage-documentation best practices, and query valet/rental/service FAQs — all through MCP. Built for valet, rental, and service handover scenarios.\n\n**Live endpoint:** `https://carshake.online/api/mcp` (HTTP, MCP 2024-11-05)\n\n## Tools\n\n| Tool | What it does |\n|---|---|\n| `create_handover_checklist` | Generate a vehicle handover checklist by use case (valet, rental, service) |\n| `get_damage_documentation_guide` | Get best practices for documenting pre-existing damage |\n| `list_valet_faq` | Query valet/handover FAQs |\n\n## Usage\n\n```json\n{\n  \"mcpServers\": {\n    \"carshake\": { \"url\": \"https://carshake.online/api/mcp\" }\n  }\n}\n```\n\nMIT License. Free.\n",
   "status": "curated"
 }

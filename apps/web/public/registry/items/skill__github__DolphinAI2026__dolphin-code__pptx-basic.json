@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/DolphinAI2026/dolphin-code/pptx-basic",
+  "type": "skill",
+  "name": "pptx-basic",
+  "description": "基础PPT导出——把要点/大纲生成一个简洁 .pptx；适合通用汇报/宣传",
+  "author": "DolphinAI2026",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/DolphinAI2026/dolphin-code/blob/HEAD/agent-build-ai/backend/desktop/preset-skills/pptx-basic/SKILL.md",
+    "repo": "DolphinAI2026/dolphin-code",
+    "path": "agent-build-ai/backend/desktop/preset-skills/pptx-basic/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 267,
+    "pushed_at": "2026-07-22T12:18:52Z",
+    "score": 71
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": "# OrcaMatrix / aPaaS AI Workspace\n\nThis repository is an open-source aggregation of the OrcaMatrix / aPaaS AI workspace. It contains product design material, platform services, frontend console code, runtime tooling, generated app seed code, and integration examples.\n\n## Modules\n\n| Path | Purpose |\n| --- | --- |\n| `product-design/` | Product specs, design sources, prototypes, and cross-module handoff documents. |\n| `agentic-coding/` | Agentic coding toolchain, CLI wrappers, skills, runtime evidence helpers, and tests. |\n| `agent-runtime/` | Sandbox runtime, workspace/session orchestration, runtime web UI, and runtime contracts. |\n| `app-seed/` | Generated application seed runtime, SDK integration baseline, frontend template, DB scripts, and deploy assets. |\n| `approve-engine/` | Approval workflow engine modules and Flowable integration. |\n| `control-plane/` | Platform control plane backend, API contracts, adapters, and deployment scripts. |\n| `web-console/` | React-based platform console frontend. |\n| `platform-integration/` | DevOps and integration baseline for GitLab, registry, observability, Helm, and E2E examples. |\n| `agent-build-ai/` | AI Builder application, backend, frontend, desktop sidecar, and deployment assets. |\n\n## Security And Configuration\n\nReal credentials, local environment files, run logs, generated evidence, private network exports, and machine-specific tool state are intentionally excluded. Use the checked-in `.env.example` files and replace `example.com` placeholders with your own deployment values.\n\nBefore publishing a fork or pushing to a public remote, run a fresh secret scan and rotate any credential that may have existed in local files before this cleanup.\n\n## Development\n\nEach module keeps its own build and test commands in its local `README.md` and `AGENTS.md`. This root repository is intentionally a source aggregation; run module-specific commands from the module directory.\n\nNo build was run as part of the open-source cleanup.\n\n## License\n\nGNU General Public License v3.0. See [LICENSE](LICENSE).\n",
+  "status": "curated"
+}

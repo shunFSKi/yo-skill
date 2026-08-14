@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/stonefruit/Data2Evidence-coding-agent-tools/dev-functions",
+  "type": "skill",
+  "name": "dev-functions",
+  "description": "Use for D2E backend function development and debugging under repos/Data2Evidence/plugins/functions, including Trex-hosted Deno/Express services, function route tracing through plugins/functions/package.json, temporary diagnostic logging, WATCH-mode function reloads, trex restart fallback, and filtered Docker logs.",
+  "author": "stonefruit",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/stonefruit/Data2Evidence-coding-agent-tools/blob/HEAD/.claude/skills/dev-functions/SKILL.md",
+    "repo": "stonefruit/Data2Evidence-coding-agent-tools",
+    "path": ".claude/skills/dev-functions/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 3,
+    "pushed_at": "2026-07-01T07:20:33Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

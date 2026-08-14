@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/kjuhwa/skills-hub/status-effect-enum-system",
+  "type": "skill",
+  "name": "status-effect-enum-system",
+  "description": "Model status effects (burn, stun, buff, debuff) as enum-tagged records attached to units, with per-turn tick logic split between application, duration decay, and removal. Keeps damage-over-time and crowd control uniform and testable.",
+  "author": "kjuhwa",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/kjuhwa/skills-hub/blob/HEAD/skills/game-dev/status-effect-enum-system/SKILL.md",
+    "repo": "kjuhwa/skills-hub",
+    "path": "skills/game-dev/status-effect-enum-system/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-04-26T15:42:32Z",
+    "score": 35
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/aphrody-code/bxc/bxc-scraper-monorepo",
+  "type": "skill",
+  "name": "bxc Scraper Monorepo",
+  "description": "This skill should be used when creating or maintaining scraper packages under packages/ (fut, voiranime, xcom, zukan, worldbeyblade, challonge, etc.), following the monorepo workspace pattern, CLI integration in src/cli/, profile mapping (stealth/http/static...), and publishing as @aphrody/*.",
+  "author": "aphrody-code",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/aphrody-code/bxc/blob/HEAD/plugins/bxc/skills/bxc-scraper/SKILL.md",
+    "repo": "aphrody-code/bxc",
+    "path": "plugins/bxc/skills/bxc-scraper/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-08-12T09:09:22Z",
+    "score": 49
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

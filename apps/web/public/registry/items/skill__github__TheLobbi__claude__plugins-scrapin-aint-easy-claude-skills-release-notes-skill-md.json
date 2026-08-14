@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/TheLobbi/claude/plugins-scrapin-aint-easy-claude-skills-release-notes-skill-md",
+  "type": "skill",
+  "name": "plugins-scrapin-aint-easy-claude-skills-release-notes-skill-md",
+  "description": "Generate changelog entries from diffs and PRs",
+  "author": "TheLobbi",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/TheLobbi/claude/blob/HEAD/plugins/scrapin-aint-easy/.claude/skills/release-notes/SKILL.md",
+    "repo": "TheLobbi/claude",
+    "path": "plugins/scrapin-aint-easy/.claude/skills/release-notes/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 18,
+    "pushed_at": "2026-08-13T05:26:51Z",
+    "score": 54
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

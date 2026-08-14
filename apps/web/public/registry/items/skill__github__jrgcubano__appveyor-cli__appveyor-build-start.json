@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/jrgcubano/appveyor-cli/appveyor-build-start",
+  "type": "skill",
+  "name": "appveyor-build-start",
+  "description": "Start a new build for an AppVeyor project.",
+  "author": "jrgcubano",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/jrgcubano/appveyor-cli/blob/HEAD/skills/appveyor-build-start/SKILL.md",
+    "repo": "jrgcubano/appveyor-cli",
+    "path": "skills/appveyor-build-start/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Occhima/nix-conf/amp-rush",
+  "type": "skill",
+  "name": "amp-rush",
+  "description": "Fast mechanical mode for tiny, well-defined edits. No refactors, no abstractions, no cleanup. Return a short summary and validation command.",
+  "author": "Occhima",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Occhima/nix-conf/blob/HEAD/modules/home-manager/profiles/collection/ai/skills/amp-rush/SKILL.md",
+    "repo": "Occhima/nix-conf",
+    "path": "modules/home-manager/profiles/collection/ai/skills/amp-rush/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 8,
+    "pushed_at": "2026-08-13T02:07:24Z",
+    "score": 54
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

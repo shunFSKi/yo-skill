@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Mic92/dotfiles/http",
+  "type": "skill",
+  "name": "http",
+  "description": "Make HTTP requests using hurl. Use for accessing websites/apis",
+  "author": "Mic92",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Mic92/dotfiles/blob/HEAD/machines/eve/modules/opencrow/skills/http/SKILL.md",
+    "repo": "Mic92/dotfiles",
+    "path": "machines/eve/modules/opencrow/skills/http/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 769,
+    "pushed_at": "2026-08-14T08:34:56Z",
+    "score": 68
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

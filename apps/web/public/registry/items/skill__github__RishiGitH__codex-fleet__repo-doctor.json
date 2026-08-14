@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/RishiGitH/codex-fleet/repo-doctor",
+  "type": "skill",
+  "name": "repo-doctor",
+  "description": "Audit a repository for Codex readiness before running automated work.",
+  "author": "RishiGitH",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/RishiGitH/codex-fleet/blob/HEAD/.agents/skills/repo-doctor/SKILL.md",
+    "repo": "RishiGitH/codex-fleet",
+    "path": ".agents/skills/repo-doctor/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-01T15:07:37Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/yshihao636/minicode/commit",
+  "type": "skill",
+  "name": "commit",
+  "description": "Inspect changes and draft a conventional commit.",
+  "author": "yshihao636",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/yshihao636/minicode/blob/HEAD/minicode/skills/builtins/commit/SKILL.md",
+    "repo": "yshihao636/minicode",
+    "path": "minicode/skills/builtins/commit/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

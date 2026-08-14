@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/TerenceLiu98/prewalk/pw-doctor",
+  "type": "skill",
+  "name": "pw-doctor",
+  "description": "Diagnose the Prewalk installation, presets, hook manifest, state directory, and Codex model-routing capability.",
+  "author": "TerenceLiu98",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/TerenceLiu98/prewalk/blob/HEAD/codex/skills/pw-doctor/SKILL.md",
+    "repo": "TerenceLiu98/prewalk",
+    "path": "codex/skills/pw-doctor/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 4,
+    "pushed_at": "2026-07-27T03:43:15Z",
+    "score": 51
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

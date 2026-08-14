@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/cloneisyou/clone-loop/clone-api-key",
+  "type": "skill",
+  "name": "clone-api-key",
+  "description": "Manage the Clone API key used by Clone Loop.",
+  "author": "cloneisyou",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/cloneisyou/clone-loop/blob/HEAD/skills/clone-api-key/SKILL.md",
+    "repo": "cloneisyou/clone-loop",
+    "path": "skills/clone-api-key/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-02T08:17:47Z",
+    "score": 37
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

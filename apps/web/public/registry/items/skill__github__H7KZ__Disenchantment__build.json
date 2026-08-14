@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/H7KZ/Disenchantment/build",
+  "type": "skill",
+  "name": "build",
+  "description": "Build the Disenchantment plugin with Maven. Use after making code changes to verify compilation.",
+  "author": "H7KZ",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/H7KZ/Disenchantment/blob/HEAD/.claude/skills/build/SKILL.md",
+    "repo": "H7KZ/Disenchantment",
+    "path": ".claude/skills/build/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 7,
+    "pushed_at": "2026-08-12T22:34:00Z",
+    "score": 50
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

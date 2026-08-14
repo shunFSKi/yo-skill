@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/databricks/dbt-databricks/dbt-databricks-pr-ready",
+  "type": "skill",
+  "name": "dbt-databricks-pr-ready",
+  "description": "Use for an open dbt-databricks pull request, including your own PR or a fork PR, to assess merge readiness and optionally repair selected gaps on the PR head branch. Accepts a PR link or number and optional --auto.",
+  "author": "databricks",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/databricks/dbt-databricks/blob/HEAD/.claude/skills/dbt-databricks-pr-ready/SKILL.md",
+    "repo": "databricks/dbt-databricks",
+    "path": ".claude/skills/dbt-databricks-pr-ready/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 372,
+    "pushed_at": "2026-08-14T05:51:06Z",
+    "score": 78
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "<p align=\"center\">\n  <img src=\"https://bynder-public-us-west-2.s3.amazonaws.com/styleguide/ABB317701CA31CB7F29268E32B303CAE-pdf-column-1.png\" alt=\"databricks logo\" width=\"50%\" />\n  <img src=\"https://raw.githubusercontent.com/dbt-labs/dbt/ec7dee39f793aa4f7dd3dae37282cc87664813e4/etc/dbt-logo-full.svg\" alt=\"dbt logo\" width=\"250\"/>\n</p>\n<p align=\"center\">\n  <a href=\"https://github.com/databricks/dbt-databricks/actions/workflows/main.yml\">\n    <img src=\"https://github.com/databricks/dbt-databricks/actions/workflows/main.yml/badge.svg?event=push\" alt=\"Unit Tests Badge\"/>\n  </a>\n  <a href=\"https://github.com/databricks/dbt-databricks/actions/workflows/integration.yml\">\n    <img src=\"https://github.com/databricks/dbt-databricks/actions/workflows/integration.yml/badge.svg?event=push\" alt=\"Integration Tests Badge\"/>\n  </a>\n</p>\n\n**[dbt](https://www.getdbt.com/)** enables data analysts and engineers to transform their data using the same practices that software engineers use to build applications.\n\nThe **[Databricks Lakehouse](https://www.databricks.com/)** provides one simple platform to unify all your data, analytics and AI workloads.\n\n# dbt-databricks\n\nThe `dbt-databricks` adapter contains all of the code enabling dbt to work with Databricks. This adapter is based off the amazing work done in [dbt-spark](https://github.com/dbt-labs/dbt-spark). Some key features include:\n\n- **Easy setup**. No need to install an ODBC driver as the adapter uses pure Python APIs.\n- **Open by default**. For example, it uses the the open and performant [Delta](https://delta.io/) table format by default. This has many benefits, including letting you use `MERGE` as the the default incremental materialization strategy.\n- **Support for Unity Catalog**. dbt-databricks supports the 3-level namespace of Unity Catalog (catalog / schema / relations) so you can organize and secure your data the way you like.\n- **Performance**. The adapter generates SQL expressions that are automatically accelerated by the native, vectorized [Photon](https://databricks.com/product/photon) execution engine.\n\n## Choosing between dbt-databricks and dbt-spark\n\nIf you are developing a dbt project on Databricks, we recommend using `dbt-databricks` for the reasons noted above.\n\n`dbt-spark` is an actively developed adapter which works with Databricks as well as Apache Spark anywhere it is hosted e.g. on AWS EMR.\n\n## Getting started\n\n### Installation\n\nInstall using pip:\n\n```nofmt\npip install dbt-databricks\n```\n\nUpgrade to the latest version\n\n```nofmt\npip install --upgrade dbt-databricks\n```\n\n### Profile Setup\n\n```nofmt\nyour_profile_name:\n  target: dev\n  outputs:\n    dev:\n      type: databricks\n      catalog: [optional catalog name, if you are using Unity Catalog]\n      schema: [database/schema name]\n      host: [your.databrickshost.com]\n      http_path: [/sql/your/http/path]\n      token: [dapiXXXXXXXXXXXXXXXXXXXXXXX]\n```\n\n### Documentation\n\nFor documentation on Databricks-specific features, configurations, and capabilities:\n\n- **[Databricks configurations](https://docs.getdbt.com/reference/resource-configs/databricks-configs)** - Complete reference for all Databricks-specific model configurations, materializations, and incremental strategies\n- **[Connect to Databricks](https://docs.getdbt.com/docs/core/connect-data-platform/databricks-setup)** - Setup and authentication guide\n\n### Quick Starts\n\nThese following quick starts will get you up and running with the `dbt-databricks` adapter:\n\n- [Set up your dbt project with Databricks](https://docs.getdbt.com/guides/set-up-your-databricks-dbt-project)\n- Using dbt Cloud with Databricks ([Azure](https://docs.microsoft.com/en-us/azure/databricks/integrations/prep/dbt-cloud) | [AWS](https://docs.databricks.com/integrations/prep/dbt-cloud.html))\n- [Submitting Python models as Databricks Workflows](https://github.com/databricks/dbt-databricks/blob/main/docs/guides/workflow-job-submission.md)\n- [Running a dbt project as a Databricks job](https://github.com/databricks/dbt-databricks/blob/main/docs/guides/databricks-jobs.md)\n- [Using Unity Catalog with dbt-databricks](https://github.com/databricks/dbt-databricks/blob/main/docs/guides/uc.md)\n- [Continuous integration in dbt](https://docs.getdbt.com/docs/deploy/continuous-integration)\n- [Loading data from S3 into Delta using the databricks_copy_into macro](https://github.com/databricks/dbt-databricks/blob/main/docs/guides/databricks-copy-into-macro-aws.md)\n- [Contribute to this repository](CONTRIBUTING.MD)\n\n### Compatibility\n\nThe `dbt-databricks` adapter has been tested:\n\n- with Python 3.7 or above.\n- against `Databricks SQL` and `Databricks runtime releases 9.1 LTS` and later.\n\n### Tips and Tricks\n\n## Choosing compute for a Python model\n\nYou can override the compute used for a specific Python model by setting the `http_path` property in model configuration. This can be useful if, for example, you want to run a Python model on an All Purpose cluster, while running SQL models on a SQL Warehouse. Note that this capability is only available for Python models.\n\n```\ndef model(dbt, session):\n    dbt.config(\n      http_path=\"sql/protocolv1/...\"\n    )\n```\n\n## Python models and ANSI mode\n\nWhen ANSI mode is enabled (`spark.sql.ansi.enabled=true`), there are limitations when using pandas DataFrames in Python models:\n\n1. **Regular pandas DataFrames**: dbt-databricks will automatically handle conversion even when ANSI mode is enabled, falling back to `spark.createDataFrame()` if needed.\n\n2. **pandas-on-Spark DataFrames**: If you create pandas-on-Spark DataFrames directly in your model (using `pyspark.pandas` or `databricks.koalas`), you may encounter errors with ANSI mode enabled. In this case, you have two options:\n   - Disable ANSI mode for your session: Set `spark.sql.ansi.enabled=false` in your cluster or SQL warehouse configuration\n   - Set the pandas-on-Spark option in your model code:\n     ```python\n     import pyspark.pandas as ps\n     ps.set_option('compute.fail_on_ansi_mode', False)\n     ```\n     Note: This may cause unexpected behavior as pandas-on-Spark follows pandas semantics (returning null/NaN for invalid operations) rather than ANSI SQL semantics (raising errors).\n\nFor more information about ANSI mode and its implications, see the [Spark documentation on ANSI compliance](https://spark.apache.org/docs/latest/sql-ref-ansi-compliance.html).\n",
+  "status": "curated"
+}

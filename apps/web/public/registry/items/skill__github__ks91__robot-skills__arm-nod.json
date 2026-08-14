@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/ks91/robot-skills/arm-nod",
+  "type": "skill",
+  "name": "arm-nod",
+  "description": "Small, safe robot-arm nod motion. Use when the user asks for a nod/acknowledgement gesture, or when a brief, friendly nod reaction is needed during dialogue.",
+  "author": "ks91",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ks91/robot-skills/blob/HEAD/skills/arm-nod/SKILL.md",
+    "repo": "ks91/robot-skills",
+    "path": "skills/arm-nod/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-02-22T00:47:04Z",
+    "score": 35
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

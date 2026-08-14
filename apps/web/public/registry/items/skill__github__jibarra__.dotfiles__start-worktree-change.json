@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/jibarra/.dotfiles/start-worktree-change",
+  "type": "skill",
+  "name": "start-worktree-change",
+  "description": "Create a new branch under the jibarra/* naming scheme based on the latest main and set up a dedicated git worktree under .ai_coding_agent/worktrees/ to make coding changes in. Use when the user asks to start a new worktree change, kick off work in a worktree, or begin changes on a fresh branch.",
+  "author": "jibarra",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/jibarra/.dotfiles/blob/HEAD/config/claude/skills/start-worktree-change/SKILL.md",
+    "repo": "jibarra/.dotfiles",
+    "path": "config/claude/skills/start-worktree-change/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/MimicHunterZ/PocketMind/code-reviewer",
+  "type": "skill",
+  "name": "code-reviewer",
+  "description": "Reviews Java code for best practices, security issues, and Spring Framework conventions. Use when user asks to review, analyze, or audit code.",
+  "author": "MimicHunterZ",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/MimicHunterZ/PocketMind/blob/HEAD/backend/.claude/skills/code-reviewer/SKILL.md",
+    "repo": "MimicHunterZ/PocketMind",
+    "path": "backend/.claude/skills/code-reviewer/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 56,
+    "pushed_at": "2026-07-19T08:02:10Z",
+    "score": 61
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

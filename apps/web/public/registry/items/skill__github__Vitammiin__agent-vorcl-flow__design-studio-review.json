@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Vitammiin/agent-vorcl-flow/design-studio-review",
+  "type": "skill",
+  "name": "design-studio-review",
+  "description": "Read-only ревью визуального артефакта, UX, адаптива, a11y и соблюдения design system. Use для проверки без изменения файлов.",
+  "author": "Vitammiin",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Vitammiin/agent-vorcl-flow/blob/HEAD/codex/skills/design-studio-review/SKILL.md",
+    "repo": "Vitammiin/agent-vorcl-flow",
+    "path": "codex/skills/design-studio-review/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-08-13T18:16:38Z",
+    "score": 49
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

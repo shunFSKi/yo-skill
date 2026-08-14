@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/kyokosawada/PocketPA/incident-reporting",
+  "type": "skill",
+  "name": "incident-reporting",
+  "description": "Handles incident reports for UK care settings. Use when staff describe incidents involving children - physical altercations, injuries, accidents, property damage, self-harm, absconding, or physical interventions.",
+  "author": "kyokosawada",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/kyokosawada/PocketPA/blob/HEAD/pocketpa-backend/.claude/skills/incident-reporting/SKILL.md",
+    "repo": "kyokosawada/PocketPA",
+    "path": "pocketpa-backend/.claude/skills/incident-reporting/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/jairosoft-com/jodex-plugins/plugins-jx-local-commands-create-skill-md",
+  "type": "skill",
+  "name": "plugins-jx-local-commands-create-skill-md",
+  "description": "Scaffold a local project-level skill in .agent/skills/<name>/",
+  "author": "jairosoft-com",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/jairosoft-com/jodex-plugins/blob/HEAD/plugins/jx-local/commands/create-skill.md",
+    "repo": "jairosoft-com/jodex-plugins",
+    "path": "plugins/jx-local/commands/create-skill.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/PrashantSinghal619/walquest/claude-skills-code-review-skill-md",
+  "type": "skill",
+  "name": "claude-skills-code-review-skill-md",
+  "description": "Review walquest code changes for correctness, security, and consistency. Use when asked \"review this\", \"is this safe?\", or before committing to a critical path. Covers coordinate order, auth guards, PostGIS RPC usage, cache invalidation, and RLS coverage.",
+  "author": "PrashantSinghal619",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/PrashantSinghal619/walquest/blob/HEAD/.claude/skills/code-review/SKILL.md",
+    "repo": "PrashantSinghal619/walquest",
+    "path": ".claude/skills/code-review/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-11T10:16:50Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

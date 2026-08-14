@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/davesheffer/hunch/source-command-hunch-fragile",
+  "type": "skill",
+  "name": "source-command-hunch-fragile",
+  "description": "Report the most fragile parts of this codebase, with evidence",
+  "author": "davesheffer",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/davesheffer/hunch/blob/HEAD/.agents/skills/source-command-hunch-fragile/SKILL.md",
+    "repo": "davesheffer/hunch",
+    "path": ".agents/skills/source-command-hunch-fragile/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-08-13T14:09:59Z",
+    "score": 46
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

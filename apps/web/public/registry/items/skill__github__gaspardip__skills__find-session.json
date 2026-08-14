@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/gaspardip/skills/find-session",
+  "type": "skill",
+  "name": "find-session",
+  "description": "Find a Claude Code session matching a natural language description. Use when the user types /find-session, asks to \"find a session\", \"search sessions\", or wants to resume a past conversation.",
+  "author": "gaspardip",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/gaspardip/skills/blob/HEAD/find-session/SKILL.md",
+    "repo": "gaspardip/skills",
+    "path": "find-session/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

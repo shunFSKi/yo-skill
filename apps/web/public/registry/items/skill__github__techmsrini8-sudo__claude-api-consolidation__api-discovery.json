@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/techmsrini8-sudo/claude-api-consolidation/api-discovery",
+  "type": "skill",
+  "name": "api-discovery",
+  "description": "Scans the codebase to discover all REST API endpoints. Use automatically when the user mentions scanning APIs, finding endpoints, listing controllers, or when working on a new project and needs an API inventory.",
+  "author": "techmsrini8-sudo",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/techmsrini8-sudo/claude-api-consolidation/blob/HEAD/skills/api-discovery/SKILL.md",
+    "repo": "techmsrini8-sudo/claude-api-consolidation",
+    "path": "skills/api-discovery/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-04-09T10:46:55Z",
+    "score": 35
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

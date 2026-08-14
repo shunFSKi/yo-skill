@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/platootalp/claude-harness/build-search-index",
+  "type": "skill",
+  "name": "build-search-index",
+  "description": "内部技能——从 raw + wiki 内容构建搜索索引。由 serve 技能自动调用。",
+  "author": "platootalp",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/platootalp/claude-harness/blob/HEAD/plugins/kb/skills/build-search-index/SKILL.md",
+    "repo": "platootalp/claude-harness",
+    "path": "plugins/kb/skills/build-search-index/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/i-inose/demo/explain",
+  "type": "skill",
+  "name": "explain",
+  "description": "ファイルや関数の内容を日本語でわかりやすく説明する",
+  "author": "i-inose",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/i-inose/demo/blob/HEAD/.claude/skills/explain/SKILL.md",
+    "repo": "i-inose/demo",
+    "path": ".claude/skills/explain/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 19
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

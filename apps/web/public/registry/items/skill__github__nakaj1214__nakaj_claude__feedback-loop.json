@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/nakaj1214/nakaj_claude/feedback-loop",
+  "type": "skill",
+  "name": "feedback-loop",
+  "description": "ユーザーから修正・指摘を受けた際にフィードバックを分類・記録し、同カテゴリ3件で自動対策を提案する。否定フィードバック、繰り返し指摘、修正指示を受けた場合に使用する。",
+  "author": "nakaj1214",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/nakaj1214/nakaj_claude/blob/HEAD/.claude/skills/feedback-loop/SKILL.md",
+    "repo": "nakaj1214/nakaj_claude",
+    "path": ".claude/skills/feedback-loop/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

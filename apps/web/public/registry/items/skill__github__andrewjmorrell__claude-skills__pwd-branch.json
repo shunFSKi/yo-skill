@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/andrewjmorrell/claude-skills/pwd-branch",
+  "type": "skill",
+  "name": "pwd_branch",
+  "description": "Print the current working directory and the current git branch. Use when the user asks \"where am I\", \"what branch am I on\", \"pwd\", \"show my branch\", or wants to know their current directory and branch.",
+  "author": "andrewjmorrell",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/andrewjmorrell/claude-skills/blob/HEAD/skills/pwd_branch/SKILL.md",
+    "repo": "andrewjmorrell/claude-skills",
+    "path": "skills/pwd_branch/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-03-29T03:19:23Z",
+    "score": 35
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

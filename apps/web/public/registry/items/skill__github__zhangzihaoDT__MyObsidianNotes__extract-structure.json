@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/zhangzihaoDT/MyObsidianNotes/extract-structure",
+  "type": "skill",
+  "name": "extract-structure",
+  "description": "从一篇 Obsidian 笔记中提取结构（标题层级/列表/关键段落）并输出大纲",
+  "author": "zhangzihaoDT",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/zhangzihaoDT/MyObsidianNotes/blob/HEAD/.opencode/skills/core/extract-structure/SKILL.md",
+    "repo": "zhangzihaoDT/MyObsidianNotes",
+    "path": ".opencode/skills/core/extract-structure/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 19
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

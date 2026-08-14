@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/shubhamtaywade82/claude-config/intraday-risk-sizing",
+  "type": "skill",
+  "name": "intraday-risk-sizing",
+  "description": "Calculate position size and enforce capital protection rules for intraday options trading. Risk per trade capped at 1%.",
+  "author": "shubhamtaywade82",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/shubhamtaywade82/claude-config/blob/HEAD/trading-workspace/skills/intraday-risk-sizing/SKILL.md",
+    "repo": "shubhamtaywade82/claude-config",
+    "path": "trading-workspace/skills/intraday-risk-sizing/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/psilon2000/graylog-mcp/workflow-txt-copy",
+  "type": "skill",
+  "name": "workflow-txt-copy",
+  "description": "Скопировать простой текст (без markdown) в буфер обмена (через custom tool clipboard).",
+  "author": "psilon2000",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/psilon2000/graylog-mcp/blob/HEAD/.opencode/skills/workflow-txt-copy/SKILL.md",
+    "repo": "psilon2000/graylog-mcp",
+    "path": ".opencode/skills/workflow-txt-copy/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

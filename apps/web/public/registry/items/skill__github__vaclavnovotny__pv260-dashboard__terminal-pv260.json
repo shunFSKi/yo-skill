@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/vaclavnovotny/pv260-dashboard/terminal-pv260",
+  "type": "skill",
+  "name": "terminal-pv260",
+  "description": "Use when user asks to open terminal for pv260-dashboard, navigate to the dashboard directory, or start working on the pv260-dashboard project.",
+  "author": "vaclavnovotny",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/vaclavnovotny/pv260-dashboard/blob/HEAD/.claude/skills/terminal-pv260/SKILL.md",
+    "repo": "vaclavnovotny/pv260-dashboard",
+    "path": ".claude/skills/terminal-pv260/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

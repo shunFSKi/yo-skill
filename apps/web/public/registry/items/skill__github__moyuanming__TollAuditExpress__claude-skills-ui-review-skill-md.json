@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/moyuanming/TollAuditExpress/claude-skills-ui-review-skill-md",
+  "type": "skill",
+  "name": "claude-skills-ui-review-skill-md",
+  "description": "评审 `apps/web` 中的前端实现质量。适用于在实现前后检查 UI 改动的一致性、可访问性、响应式表现、loading state 和多余客户端复杂度的场景。",
+  "author": "moyuanming",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/moyuanming/TollAuditExpress/blob/HEAD/.claude/skills/ui-review/SKILL.md",
+    "repo": "moyuanming/TollAuditExpress",
+    "path": ".claude/skills/ui-review/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-18T04:38:01Z",
+    "score": 37
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

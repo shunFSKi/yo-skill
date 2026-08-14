@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/ACB-CORE-Labs/builder-2/core-pre-edit-sweep",
+  "type": "skill",
+  "name": "core-pre-edit-sweep",
+  "description": "Before editing CORE sensitive modules, trace imports and all call sites across algebra, field, generate, vault, cognition, teaching, calibration.",
+  "author": "ACB-CORE-Labs",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ACB-CORE-Labs/builder-2/blob/HEAD/.agents/skills/core-pre-edit-sweep/SKILL.md",
+    "repo": "ACB-CORE-Labs/builder-2",
+    "path": ".agents/skills/core-pre-edit-sweep/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-14T01:53:55Z",
+    "score": 48
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/kslhunter/simplysm/sd-wiki-login",
+  "type": "skill",
+  "name": "sd-wiki-login",
+  "description": "원격 공용 위키에 브라우저 재로그인을 강제 (기존 토큰 폐기). Use when 사용자가 직접 호출할 때만.",
+  "author": "kslhunter",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/kslhunter/simplysm/blob/HEAD/plugins/sd-wiki/skills/sd-wiki-login/SKILL.md",
+    "repo": "kslhunter/simplysm",
+    "path": "plugins/sd-wiki/skills/sd-wiki-login/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

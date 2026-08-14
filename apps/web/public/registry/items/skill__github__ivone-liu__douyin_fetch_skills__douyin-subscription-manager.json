@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/ivone-liu/douyin_fetch_skills/douyin-subscription-manager",
+  "type": "skill",
+  "name": "douyin-subscription-manager",
+  "description": "旧版订阅管理入口的兼容适配器。适用于仍使用老命令名做订阅、取消订阅、查看订阅状态或增量同步的场景。新用法优先走 dy-subscribe。",
+  "author": "ivone-liu",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ivone-liu/douyin_fetch_skills/blob/HEAD/skills/douyin-subscription-manager/SKILL.md",
+    "repo": "ivone-liu/douyin_fetch_skills",
+    "path": "skills/douyin-subscription-manager/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

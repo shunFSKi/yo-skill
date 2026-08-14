@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/yanniedog/telegram-medical-channels/discovery-expert",
+  "type": "skill",
+  "name": "discovery-expert",
+  "description": "Lyzem shards, swarm manifest, merge_agent_discoveries, channel_seeds, discovered_channels.json.",
+  "author": "yanniedog",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/yanniedog/telegram-medical-channels/blob/HEAD/.cursor/skills/discovery-expert/SKILL.md",
+    "repo": "yanniedog/telegram-medical-channels",
+    "path": ".cursor/skills/discovery-expert/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

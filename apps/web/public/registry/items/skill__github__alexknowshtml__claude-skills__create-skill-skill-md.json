@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/alexknowshtml/claude-skills/create-skill-skill-md",
+  "type": "skill",
+  "name": "create-skill-skill-md",
+  "description": "Turn a session into a high quality Claude skill with research and planning",
+  "author": "alexknowshtml",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/alexknowshtml/claude-skills/blob/HEAD/create-skill/SKILL.md",
+    "repo": "alexknowshtml/claude-skills",
+    "path": "create-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 138,
+    "pushed_at": "2026-06-12T18:43:44Z",
+    "score": 66
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# Claude Skills\n\nA curated collection of Claude Code skills for professional AI-assisted workflows.\n\nThese are battle-tested skills from a real production setup. Each one is a reusable prompt with full tool access — copy it into your project and it becomes a `/command` in any Claude Code session.\n\n## What's a Skill?\n\nSkills are markdown files that live in `.claude/skills/<name>/SKILL.md` (or `.claude/commands/<name>.md` for simpler setups). They act as reusable, parameterized prompts with access to all Claude Code tools. Drop one in and invoke it with `/name`.\n\n## Skills\n\n| Skill | Description |\n|-------|-------------|\n| [/reflect](./reflect/) | Session retrospective — find friction, capture learnings, auto-implement quick wins |\n| [/pause](./pause/) | Save session state and generate a return prompt (quick or full mode) |\n| [/upskill](./upskill/) | Scan current session for stale skills and new skill candidates, then apply updates |\n| [/create-skill](./create-skill/) | Turn a session into a reusable skill with research, planning, and approval flow |\n| [/pretty-page](./pretty-page/) | Convert markdown to a beautifully styled, shareable HTML page and upload to S3-compatible storage |\n| [/teach](./teach/) | Socratic teaching loop — quiz yourself on a session, confirm mastery item by item, don't finish until everything's locked in |\n\n## Installation\n\nEach skill lives in its own directory. Copy the folder into your project:\n\n```bash\n# As a skill (recommended)\ncp -r reflect /your-project/.claude/skills/reflect\n\n# Or as a simple command\ncp reflect/SKILL.md /your-project/.claude/commands/reflect.md\n```\n\nThen invoke it in Claude Code with `/reflect`.\n\n## Customization\n\nEach `SKILL.md` has placeholder values (marked with `<angle-brackets>`) for paths and project-specific config. Replace these before using.\n\n## More\n\nMore skills added as they're polished and generalized. Built by [@alexknowshtml](https://github.com/alexknowshtml).\n",
+  "status": "curated"
+}

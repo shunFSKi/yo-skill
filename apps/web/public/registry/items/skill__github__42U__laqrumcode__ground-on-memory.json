@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/42U/laqrumcode/ground-on-memory",
+  "type": "skill",
+  "name": "ground-on-memory",
+  "description": "Activate when the user asks about state, history, prior work, codebase knowledge, or anything where injected memory should inform the response. Triggers include \"what do you know about\", \"remember\", \"earlier\", \"last time\", \"we discussed\", \"in this codebase\", \"prior work\", \"previously\", or any direct question about project/session state.",
+  "author": "42U",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/42U/laqrumcode/blob/HEAD/skills/ground-on-memory/SKILL.md",
+    "repo": "42U/laqrumcode",
+    "path": "skills/ground-on-memory/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 11,
+    "pushed_at": "2026-08-04T14:14:52Z",
+    "score": 55
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

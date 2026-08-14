@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/sandraschi/gtfs-mcp/session-context",
+  "type": "skill",
+  "name": "session-context",
+  "description": "GTFS MCP session start prompt - tool awareness for transit data queries",
+  "author": "sandraschi",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/sandraschi/gtfs-mcp/blob/HEAD/.opencode/skills/session-context/SKILL.md",
+    "repo": "sandraschi/gtfs-mcp",
+    "path": ".opencode/skills/session-context/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/DMT123/claude-skills-collection/deploy",
+  "type": "skill",
+  "name": "deploy",
+  "description": "Deploy applications to Vercel. Use when the user says \"deploy\", \"deploy to Vercel\", \"push to production\", \"deploy my app\", or \"go live\".",
+  "author": "DMT123",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/DMT123/claude-skills-collection/blob/HEAD/plugins/vercel/deploy/SKILL.md",
+    "repo": "DMT123/claude-skills-collection",
+    "path": "plugins/vercel/deploy/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-03-02T12:15:42Z",
+    "score": 35
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/mazum01/desktop-assistant/joke",
+  "type": "skill",
+  "name": "joke",
+  "description": "Tell a random dad joke aloud via VERA's text-to-speech system. Use for \"tell me a joke\", \"say something funny\", \"make me laugh\", \"dad joke\".",
+  "author": "mazum01",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/mazum01/desktop-assistant/blob/HEAD/.github/skills/joke/SKILL.md",
+    "repo": "mazum01/desktop-assistant",
+    "path": ".github/skills/joke/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

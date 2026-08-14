@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/DaFum/company-sim/skill-gap-creator",
+  "type": "skill",
+  "name": "skill-gap-creator",
+  "description": "Skill-gap workflow for this project. Use when no existing repo skill fits a task after consulting skill-router, or when repeated work reveals a missing reusable workflow; guides agents to decide whether to create a new skill, define its scope, scaffold it, validate it, and route future tasks to it.",
+  "author": "DaFum",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/DaFum/company-sim/blob/HEAD/.agents/skills/skill-gap-creator/SKILL.md",
+    "repo": "DaFum/company-sim",
+    "path": ".agents/skills/skill-gap-creator/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-07-28T22:43:19Z",
+    "score": 48
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

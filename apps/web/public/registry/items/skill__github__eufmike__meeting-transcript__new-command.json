@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/eufmike/meeting-transcript/new-command",
+  "type": "skill",
+  "name": "new-command",
+  "description": "Scaffold a new Typer CLI command following project conventions",
+  "author": "eufmike",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/eufmike/meeting-transcript/blob/HEAD/.github/skills/new-command/SKILL.md",
+    "repo": "eufmike/meeting-transcript",
+    "path": ".github/skills/new-command/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

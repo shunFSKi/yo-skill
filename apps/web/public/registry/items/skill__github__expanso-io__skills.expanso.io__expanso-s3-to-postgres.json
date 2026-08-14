@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/expanso-io/skills.expanso.io/expanso-s3-to-postgres",
+  "type": "skill",
+  "name": "expanso-s3-to-postgres",
+  "description": "Load JSON files from S3 into PostgreSQL with upsert support",
+  "author": "expanso-io",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/expanso-io/skills.expanso.io/blob/HEAD/skills/recipes/s3-to-postgres/SKILL.md",
+    "repo": "expanso-io/skills.expanso.io",
+    "path": "skills/recipes/s3-to-postgres/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

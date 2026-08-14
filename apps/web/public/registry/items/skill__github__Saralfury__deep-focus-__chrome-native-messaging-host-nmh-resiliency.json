@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Saralfury/deep-focus-/chrome-native-messaging-host-nmh-resiliency",
+  "type": "skill",
+  "name": "Chrome Native Messaging Host (NMH) Resiliency",
+  "description": "Rules for implementing a bulletproof NMH in Rust, handling panics, and stdout pollution.",
+  "author": "Saralfury",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Saralfury/deep-focus-/blob/HEAD/deep_focus_v1/.agents/skills/chrome_nmh_rust/SKILL.md",
+    "repo": "Saralfury/deep-focus-",
+    "path": "deep_focus_v1/.agents/skills/chrome_nmh_rust/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-30T11:36:39Z",
+    "score": 42
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/nishiryo23/shopify-app-templete/webhook-safety",
+  "type": "skill",
+  "name": "webhook-safety",
+  "description": "Use when implementing or changing HTTPS webhooks, raw-body/HMAC validation, dedupe, inbox, compliance topics, uninstall, or redact handling.",
+  "author": "nishiryo23",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/nishiryo23/shopify-app-templete/blob/HEAD/.agents/skills/webhook-safety/SKILL.md",
+    "repo": "nishiryo23/shopify-app-templete",
+    "path": ".agents/skills/webhook-safety/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

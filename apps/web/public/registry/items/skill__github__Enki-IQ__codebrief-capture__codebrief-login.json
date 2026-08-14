@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Enki-IQ/codebrief-capture/codebrief-login",
+  "type": "skill",
+  "name": "codebrief-login",
+  "description": "Log in Codebrief Capture from Codex using browser authorization or a secure local key prompt.",
+  "author": "Enki-IQ",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Enki-IQ/codebrief-capture/blob/HEAD/codex/codebrief-capture/skills/codebrief-login/SKILL.md",
+    "repo": "Enki-IQ/codebrief-capture",
+    "path": "codex/codebrief-capture/skills/codebrief-login/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-18T21:09:56Z",
+    "score": 42
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

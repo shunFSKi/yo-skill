@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/iskim1018/paper-md-studio/security-check",
+  "type": "skill",
+  "name": "security-check",
+  "description": "npm 의존성 보안 감사 및 코드 보안 점검을 실행합니다.",
+  "author": "iskim1018",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/iskim1018/paper-md-studio/blob/HEAD/.claude/skills/security-check/SKILL.md",
+    "repo": "iskim1018/paper-md-studio",
+    "path": ".claude/skills/security-check/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 19
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

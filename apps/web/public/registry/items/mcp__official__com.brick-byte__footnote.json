@@ -1,0 +1,75 @@
+{
+  "id": "mcp:official/com.brick-byte/footnote",
+  "type": "mcp",
+  "name": "footnote",
+  "description": "Every number in an AI answer traces back to the rows that produced it.",
+  "author": "com.brick-byte",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/brick-byte/footnote",
+    "repo": "brick-byte/footnote"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@brick-byte/footnote"
+    ],
+    "env": [
+      {
+        "name": "DATABASE_URL",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PROVENANCE_DB",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PROVENANCE_ACTOR",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T14:59:43.021164Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# Footnote\n\n[![CI](https://github.com/brick-byte/footnote/actions/workflows/ci.yml/badge.svg)](https://github.com/brick-byte/footnote/actions/workflows/ci.yml)\n\n**Claim-level provenance for AI over business data.** Every number in an answer traces back to the rows that produced it — clickable at read time, exportable for an auditor, and tamper-evident.\n\nAn MCP server, a provenance store, and a demo UI showing what the combination looks like.\n\n```\nnpm install\nnpm run demo      # http://localhost:4711\nnpm test          # 25 tests, including the invariants below\n```\n\nNode 22.5+ required (uses the built-in `node:sqlite`, so there is no database to install).\n\nPostgres is opt-in. The same schema, seed and query set run against it, and the\nsame suite has to pass on both:\n\n```\nnpm run db:up     # Postgres 17 in Docker, seeded from migrations/001_init.sql\nnpm run test:pg   # the identical 25 tests, against Postgres\nnpm run demo:pg   # the demo, against Postgres\n```\n\n![demo](docs/screenshot.png)\n\n---\n\n## The problem\n\nLanguage models produce plausible continuations, not true ones. Point one at a business database and it will confidently report a number that no query produced — and the fabricated figure is indistinguishable from the real one, because both come out of the same machinery.\n\nThe usual answers don't hold up here. Uncertainty signals catch the fuzzy cases, not the fluent ones. A verifier built from the same model can confirm a fabrication as easily as catch it. And in finance, inventory or procurement, \"the model said so\" is not an answer anyone can act on.\n\nWhat does work is structural: **never let the model produce the number.**\n\n## The architecture\n\n```\n  question\n     │\n     ▼\n  model ──────────► picks an operation from a catalog and supplies typed args\n     │                (it cannot write SQL, cannot invent an operation)\n     ▼\n  contract layer ─► validates params, resolves entities against the database,\n     │                rejects anything that does not exist\n     ▼\n  deterministic ──► executes the query; SQL does all aggregation\n  core                returns values + the evidence behind each one\n     │\n     ▼\n  provenance ─────► appends a hash-chained record, server-side,\n  store               where the model cannot influence it\n     │\n     ▼\n  host UI ────────► fills slots from structured output and renders each\n                      claim as a clickable citation\n```\n\nThe model handles translation and phrasing — the two things it is reliable at. Numbers come from the system of record.\n\n## What it enforces\n\nThese are tests, not guidelines. `npm test` fails if any of them breaks.\n\n**No number is generated.** Values are copied verbatim from an operation's structured output into template slots. A test asserts every monetary figure in an answer is covered by a claim with evidence behind it, and that the stated total equals the sum of the records it cites.\n\n**Entities are validated before any query runs.** A fabricated customer produces a recoverable error listing real alternatives — not a silent empty result the model narrates around.\n\n**Aggregation happens in SQL.** The model chooses which aggregation to run, never what it equals.\n\n**Empty results are handled in code.** This is the single biggest fabrication trigger: hand a model an empty result set mid-sentence and it invents something to finish the sentence. Operations set an explicit `emptyReason` instead.\n\n**Unroutable questions are refused.** \"What will revenue be next quarter?\" maps to no operation, so no answer is produced. Refusal is a first-class outcome, not a failure.\n\n**Provenance is written server-side.** The model never reports its own provenance. Provenance that depends on the model choosing to cite is worthless.\n\n**The log is tamper-evident.** Each record carries the hash of its predecessor. `npm run verify` walks the chain and reports the first record that was modified after it was written.\n\n## Interpretations, not just figures\n\nThe harder case is judgement. \"Bergmann is at risk\" is a conclusion with no row to check it against — and an ungrounded interpretation is more dangerous than an ungrounded number, because it reads as insight and survives review.\n\nThe answer here states the conclusion and then lays out each premise as a separately cited fact:\n\n```\nBergmann Logistik GmbH shows two independent risk signals.\nThis is an interpretation — the underlying facts are:\n\n  · 43.805,00 € overdue across 4 invoices, oldest 104 days past due\n  · 2 open support tickets, 1 high severity\n  · agreed payment terms of 30 days, account owned by Ana Kovač\n\nThe conclusion is the model's. Every fact above is a record you can open.\n```\n\nA human can disagree with the reasoning while trusting the inputs.\n\n## Provenance record format\n\n```jsonc\n{\n  \"id\": \"…\", \"sequence\": 1, \"timestamp\": \"2026-08-14T09:12:04.000Z\",\n  \"actor\": { \"id\": \"zoran\", \"role\": \"controller\" },\n  \"question\": \"How much does Bergmann owe?\",\n  \"answer\": \"Bergmann Logistik GmbH is 43.805,00 € overdue across 4 invoices…\",\n\n  // Each claim indexes a span of the answer and names its evidence.\n  \"claims\": [\n    {\n      \"text\": \"43.805,00 €\",\n      \"span\": { \"start\": 25, \"end\": 36 },\n      \"evidenceIds\": [\"invoice:8812\", \"invoice:8834\", \"invoice:8901\", \"invoice:8977\"],\n      \"origin\": \"structured\"        // never \"generated\" for a value\n    }\n  ],\n\n  // The query, so the result is reproducible.\n  \"operations\": [\n    { \"name\": \"getOverdueInvoices\",\n      \"arguments\": { \"customer\": \"Bergmann\", \"asOfDate\": \"2026-08-14\" },\n      \"query\": { \"sql\": \"SELECT …\", \"params\": [\"2026-08-14\", 4471, \"2026-08-14\"] },\n      \"durationMs\": 0.42 }\n  ],\n\n  // Field values, not just IDs — the export stands alone if the source moves on.\n  \"evidence\": [\n    { \"id\": \"invoice:8812\", \"type\": \"invoice\", \"recordId\": \"8812\",\n      \"uri\": \"erp://invoice/8812\",\n      \"fields\": { \"number\": \"INV-2026-8812\", \"due_on\": \"2026-05-02\",\n                  \"outstanding\": \"18.450,00 €\", \"days_overdue\": 104 } }\n  ],\n\n  \"previousHash\": \"0000…\", \"hash\": \"9aa2ba…\"\n}\n```\n\n`origin` is the field that matters. `structured` means the value was copied from an operation's output. `generated` means a model produced it — which for a number is exactly what this project exists to prevent.\n\n## MCP details\n\nThe server uses the parts of the protocol that carry this work:\n\n| Feature | Use |\n|---|---|\n| `inputSchema` | The model gets a typed catalog, not a query language |\n| `structuredContent` | Values return as validated JSON beside the prose, so figures never have to survive a round trip through generated tokens |\n| `resource_link` | Every record touched comes back as an `erp://` URI — the deep-link primitive behind a clickable citation |\n| `annotations.audience` | Record links are marked user-facing |\n| `_meta` | Carries the provenance record ID and hash so a host can fetch the full trace |\n| `isError` | A fabricated entity is a recoverable tool error the model can correct, not a protocol failure |\n\nWhat MCP does **not** give you, and what this repo adds: nothing in the protocol binds *this claim* to *that evidence*. The protocol hands you links; the claim-to-evidence mapping and its rendering live in the host. That binding is the actual product.\n\nRun standalone over stdio:\n\n```bash\nnpm run mcp\n```\n\n```jsonc\n// claude_desktop_config.json\n{ \"mcpServers\": {\n    \"footnote\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@brick-byte/footnote\"],\n      \"env\": {\n        \"PROVENANCE_DB\": \"/path/to/provenance.db\",\n        \"PROVENANCE_ACTOR\": \"your-name\",\n        // Omit for the built-in SQLite sample data.\n        \"DATABASE_URL\": \"postgres://user:pass@localhost:5432/erp\"\n      }\n    } } }\n```\n\nFrom a clone, before the package is published:\n\n```jsonc\n{ \"mcpServers\": {\n    \"footnote\": {\n      \"command\": \"npx\",\n      \"args\": [\"tsx\", \"--experimental-sqlite\", \"/path/to/footnote/src/mcp-server.ts\"],\n      \"env\": { \"PROVENANCE_DB\": \"/path/to/provenance.db\", \"PROVENANCE_ACTOR\": \"your-name\" }\n    } } }\n```\n\n## Try these in the demo\n\n| Question | What it shows |\n|---|---|\n| How much does Bergmann owe? | Every figure clickable to the invoice behind it |\n| Is Bergmann Logistik at risk? | An interpretation with separately cited premises |\n| Show me the receivables aging | Portfolio aggregation, computed in SQL |\n| How much does **Acme Corporation** owe? | Fabricated entity → refusal with real alternatives |\n| What will revenue be next quarter? | Unroutable → refusal rather than improvisation |\n\nToggle **\"show what this looks like when the model produces the numbers itself\"** for the contrast: identical formatting, fluent prose, every figure wrong, nothing in the output marking which.\n\n## Layout\n\n```\nmigrations/001_init.sql  schema + seed, shared by both backends and Docker\nsrc/database.ts     the Db seam — SqliteDb and PostgresDb behind one interface\nsrc/db.ts           opens the ERP database, applies the migration\nsrc/operations.ts   the catalog — the model's entire callable surface\nsrc/compose.ts      slot-filling; claims and spans are emitted here\nsrc/provenance.ts   append-only hash-chained store, export, verification\nsrc/mcp-server.ts   MCP server over stdio\nsrc/web.ts          demo host application\nsrc/verify.ts       npm run verify / npm run export\ntest/run.ts         25 tests covering the invariants above, on both backends\ndocker-compose.yml  Postgres 17, seeded from the same migration\n```\n\nOnly `operations.ts` writes ERP SQL, in one dialect, with `?` placeholders.\n`PostgresDb` rewrites those to `$1..$n`, and the single expression that genuinely\ndiffers between the engines — whole days between two dates, `julianday()` on\nSQLite, date subtraction on Postgres — is named `daysBetween` on the `Db`\ninterface rather than inlined. That is the one place a port can silently change\na number, so it is isolated and the suite asserts the same day counts on both.\n\n## Status and limits\n\nv0, and honest about scope.\n\n- **You cannot add provenance to someone else's AI.** If the answer comes from SAP Joule or Dynamics Copilot, you have no access to their retrieval pipeline or rendering. This approach applies to AI layers you build yourself over business data.\n- **Vendor citations exist but stop short.** As of August 2026, SAP, Microsoft, NetSuite and Salesforce all ship citations that resolve to *knowledge content* — help articles, PDFs, documentation. None ships a general mechanism binding a figure to the transaction behind it. Numeric answers are the weakest link everywhere.\n- The demo's intent routing is deliberately naive keyword matching, so the project runs with no API key. In a real deployment the model emits the tool call and this code still fills the slots. The architecture is the point, not the routing.\n- Writes are out of scope. In an ERP a fabricated read is embarrassing; a fabricated write corrupts a ledger. Writes belong behind a proposal → validation → confirmation flow.\n- Retention, access control, and a real deep-link resolver for a specific ERP are the last mile — and the last mile is where the actual product lives.\n\n## Prior art worth knowing\n\n- **[OpenTelemetry GenAI semantic conventions](https://github.com/open-telemetry/semantic-conventions-genai)** — spans for GenAI clients and MCP. Early; stops well above record-level provenance.\n- **[OpenLineage](https://github.com/OpenLineage/OpenLineage)** — dataset and job lineage. Same idea one layer down, for tables rather than claims.\n- **LLM observability** — Langfuse, LangSmith, Arize, Datadog. Tracing for engineers debugging apps, not provenance for the person reading the answer.\n\n## License\n\nMIT.\n",
+  "status": "curated"
+}

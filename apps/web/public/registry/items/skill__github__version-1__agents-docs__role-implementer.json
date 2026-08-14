@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/version-1/agents-docs/role-implementer",
+  "type": "skill",
+  "name": "role-implementer",
+  "description": "コードや設定の実装を Implementer agent に委譲するときに使う。合意済みの仕様、計画、スコープ、Definition of Done に沿った機能追加、バグ修正、テスト追加など、ファイル変更と検証が必要なときに使う。実装前の調査や計画、技術判断だけの相談、実装済み差分のレビュー、挙動維持の構造改善を統括する依頼には使わない。",
+  "author": "version-1",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/version-1/agents-docs/blob/HEAD/codex/skills/internal/role-implementer/SKILL.md",
+    "repo": "version-1/agents-docs",
+    "path": "codex/skills/internal/role-implementer/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-08-12T05:03:02Z",
+    "score": 49
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/cyberskill-official/cyberos/memory-sync",
+  "type": "skill",
+  "name": "memory-sync",
+  "description": "Trigger or preview CyberOS memory synchronization between local and cloud stores. Use when user asks to \"sync memory\", \"push shareable memories\", or \"preview memory sync\". Outputs a dry-run or apply request for the Stage 4 sync orchestrator.",
+  "author": "cyberskill-official",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/cyberskill-official/cyberos/blob/HEAD/modules/skill/memory-sync/SKILL.md",
+    "repo": "cyberskill-official/cyberos",
+    "path": "modules/skill/memory-sync/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 60,
+    "pushed_at": "2026-08-11T05:57:45Z",
+    "score": 61
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

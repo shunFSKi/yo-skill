@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/pikel72/Rethlas-Claude/check-referenced-statements",
+  "type": "skill",
+  "name": "check-referenced-statements",
+  "description": "Verify cited theorems via arXiv then WebSearch.",
+  "author": "pikel72",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/pikel72/Rethlas-Claude/blob/HEAD/verifier/skills/check-referenced-statements/SKILL.md",
+    "repo": "pikel72/Rethlas-Claude",
+    "path": "verifier/skills/check-referenced-statements/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

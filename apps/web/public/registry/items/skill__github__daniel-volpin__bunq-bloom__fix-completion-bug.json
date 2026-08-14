@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/daniel-volpin/bunq-bloom/fix-completion-bug",
+  "type": "skill",
+  "name": "fix-completion-bug",
+  "description": "Debug and fix issues in the gig completion flow",
+  "author": "daniel-volpin",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/daniel-volpin/bunq-bloom/blob/HEAD/.claude/skills/fix-completion-bug/SKILL.md",
+    "repo": "daniel-volpin/bunq-bloom",
+    "path": ".claude/skills/fix-completion-bug/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-06T19:36:54Z",
+    "score": 42
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

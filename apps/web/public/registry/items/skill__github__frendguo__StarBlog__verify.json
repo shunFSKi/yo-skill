@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/frendguo/StarBlog/verify",
+  "type": "skill",
+  "name": "verify",
+  "description": "运行 pnpm lint 和 pnpm build 验证代码改动。作为提交前 / 部署前的快速检查。",
+  "author": "frendguo",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/frendguo/StarBlog/blob/HEAD/.claude/skills/verify/SKILL.md",
+    "repo": "frendguo/StarBlog",
+    "path": ".claude/skills/verify/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

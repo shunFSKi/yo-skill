@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/CAN-Aidoo/church-cms/pint",
+  "type": "skill",
+  "name": "pint",
+  "description": "Format PHP code using Laravel Pint (PSR-12). Run after writing or editing PHP files to ensure code style compliance.",
+  "author": "CAN-Aidoo",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/CAN-Aidoo/church-cms/blob/HEAD/.claude/skills/pint/SKILL.md",
+    "repo": "CAN-Aidoo/church-cms",
+    "path": ".claude/skills/pint/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-09T10:52:49Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

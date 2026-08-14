@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/modbender/skill-library-mcp/xiao-fan-ka",
+  "type": "skill",
+  "name": "xiao-fan-ka",
+  "description": "小饭卡 — 唯爱与美食不可辜负。AI私人找店助手，建立口味画像，搜索大众点评+小红书双源数据，交叉验证后个性化推荐餐厅。",
+  "author": "modbender",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/modbender/skill-library-mcp/blob/HEAD/data/xiao-fan-ka/SKILL.md",
+    "repo": "modbender/skill-library-mcp",
+    "path": "data/xiao-fan-ka/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 12,
+    "pushed_at": "2026-06-16T12:58:45Z",
+    "score": 47
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

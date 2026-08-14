@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Lay3rLabs/wavs-aave-guardian/build",
+  "type": "skill",
+  "name": "build",
+  "description": "Build all project components (Solidity contracts and Rust WASM)",
+  "author": "Lay3rLabs",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Lay3rLabs/wavs-aave-guardian/blob/HEAD/.claude/skills/build/SKILL.md",
+    "repo": "Lay3rLabs/wavs-aave-guardian",
+    "path": ".claude/skills/build/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-05-20T17:16:56Z",
+    "score": 37
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

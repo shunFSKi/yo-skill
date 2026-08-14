@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/majiayu000/agent-harness/plugins-agent-harness-skills-handoff-skill-md",
+  "type": "skill",
+  "name": "plugins-agent-harness-skills-handoff-skill-md",
+  "description": "Prepare final Agent Harness handoff after implementation and validation.",
+  "author": "majiayu000",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/majiayu000/agent-harness/blob/HEAD/plugins/agent-harness/skills/handoff/SKILL.md",
+    "repo": "majiayu000/agent-harness",
+    "path": "plugins/agent-harness/skills/handoff/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

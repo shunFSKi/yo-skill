@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/pko89403/MeetingMoodTracker/create-pr",
+  "type": "skill",
+  "name": "create-pr",
+  "description": "Creates a Pull Request from the current branch after pushing it to the remote repository.",
+  "author": "pko89403",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/pko89403/MeetingMoodTracker/blob/HEAD/.github/skills/create-pr/SKILL.md",
+    "repo": "pko89403/MeetingMoodTracker",
+    "path": ".github/skills/create-pr/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

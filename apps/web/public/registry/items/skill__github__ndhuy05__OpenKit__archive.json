@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/ndhuy05/OpenKit/archive",
+  "type": "skill",
+  "name": "archive",
+  "description": "Archive a completed change in the experimental workflow. Use when the user wants to finalize and archive a change after implementation is complete.",
+  "author": "ndhuy05",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ndhuy05/OpenKit/blob/HEAD/.opencode/skills/archive/SKILL.md",
+    "repo": "ndhuy05/OpenKit",
+    "path": ".opencode/skills/archive/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

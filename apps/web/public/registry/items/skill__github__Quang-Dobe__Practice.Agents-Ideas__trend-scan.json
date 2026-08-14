@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Quang-Dobe/Practice.Agents-Ideas/trend-scan",
+  "type": "skill",
+  "name": "trend-scan",
+  "description": "Score each source's signal strength (sum of scores) and pick top 1-2 sources for deep research.",
+  "author": "Quang-Dobe",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Quang-Dobe/Practice.Agents-Ideas/blob/HEAD/.claude/skills/trend-scan/SKILL.md",
+    "repo": "Quang-Dobe/Practice.Agents-Ideas",
+    "path": ".claude/skills/trend-scan/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-04T02:10:16Z",
+    "score": 42
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

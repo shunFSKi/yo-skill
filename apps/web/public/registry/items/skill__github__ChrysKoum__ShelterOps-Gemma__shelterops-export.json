@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/ChrysKoum/ShelterOps-Gemma/shelterops-export",
+  "type": "skill",
+  "name": "shelterops-export",
+  "description": "Generate ShelterOps Gemma exports including NGO request email, WhatsApp volunteer callout, CSV gap report, shift handoff, and public needs snapshot while enforcing privacy-safe public content.",
+  "author": "ChrysKoum",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ChrysKoum/ShelterOps-Gemma/blob/HEAD/.codex/skills/shelterops-export/SKILL.md",
+    "repo": "ChrysKoum/ShelterOps-Gemma",
+    "path": ".codex/skills/shelterops-export/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-05-11T20:30:29Z",
+    "score": 35
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

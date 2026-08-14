@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/toderian/project_template/handoff",
+  "type": "skill",
+  "name": "handoff",
+  "description": "Compact the current conversation into a handoff document so a fresh agent can pick up the work. Use when the user wants a session summary written to disk for later continuation, mentions \"handing off\", or is wrapping up a long session.",
+  "author": "toderian",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/toderian/project_template/blob/HEAD/.agents/skills/productivity/handoff/SKILL.md",
+    "repo": "toderian/project_template",
+    "path": ".agents/skills/productivity/handoff/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-13T07:43:17Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

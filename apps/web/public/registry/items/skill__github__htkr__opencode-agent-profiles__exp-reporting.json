@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/htkr/opencode-agent-profiles/exp-reporting",
+  "type": "skill",
+  "name": "exp-reporting",
+  "description": "実験結果のレポート化とマスター記録を標準化する",
+  "author": "htkr",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/htkr/opencode-agent-profiles/blob/HEAD/.opencode/skills/exp-reporting/SKILL.md",
+    "repo": "htkr/opencode-agent-profiles",
+    "path": ".opencode/skills/exp-reporting/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-02-27T14:26:36Z",
+    "score": 29
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

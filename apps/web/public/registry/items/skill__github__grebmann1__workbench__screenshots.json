@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/grebmann1/workbench/screenshots",
+  "type": "skill",
+  "name": "screenshots",
+  "description": "Capture and use screenshots for visual verification via page.screenshot + logImage with pragmatic limits.",
+  "author": "grebmann1",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/grebmann1/workbench/blob/HEAD/assets/shared/skills/browser/screenshots.SKILL.md",
+    "repo": "grebmann1/workbench",
+    "path": "assets/shared/skills/browser/screenshots.SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

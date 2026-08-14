@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/TWalkingSE/osint-sentinel/osint-kb",
+  "type": "skill",
+  "name": "osint-kb",
+  "description": "Base de conhecimento OSINT v3.0/2026 com 28 secoes tematicas (ferramentas, tecnicas, URLs oficiais, legislacao BR). Consulte ANTES de recomendar qualquer ferramenta.",
+  "author": "TWalkingSE",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/TWalkingSE/osint-sentinel/blob/HEAD/.claude/skills/osint-kb/SKILL.md",
+    "repo": "TWalkingSE/osint-sentinel",
+    "path": ".claude/skills/osint-kb/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-04-19T16:36:50Z",
+    "score": 35
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

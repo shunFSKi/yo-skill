@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/TWalkingSE/cybershield/resposta-incidente",
+  "type": "skill",
+  "name": "resposta-incidente",
+  "description": "Protocolo de resposta a incidentes de segurança pessoal. Use quando o usuário suspeitar que foi hackeado, tiver conta invadida, dispositivo comprometido, e-mail acessado por terceiros, senhas vazadas, stalkerware instalado, ou qualquer situação de comprometimento ativo. Situação de emergência — priorize velocidade.",
+  "author": "TWalkingSE",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/TWalkingSE/cybershield/blob/HEAD/.claude/skills/resposta-incidente/SKILL.md",
+    "repo": "TWalkingSE/cybershield",
+    "path": ".claude/skills/resposta-incidente/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-04-23T01:25:32Z",
+    "score": 35
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

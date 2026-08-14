@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Kesua/agentic-vault/regular-web-daily-brief",
+  "type": "skill",
+  "name": "regular-web-daily-brief",
+  "description": "Wrapper skill: refresh the Daily News block in today’s Daily Brief.",
+  "author": "Kesua",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Kesua/agentic-vault/blob/HEAD/.claude/skills/regular-web-daily-brief/SKILL.md",
+    "repo": "Kesua/agentic-vault",
+    "path": ".claude/skills/regular-web-daily-brief/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-04-07T15:51:42Z",
+    "score": 36
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

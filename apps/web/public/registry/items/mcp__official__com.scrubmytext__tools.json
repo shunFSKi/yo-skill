@@ -1,0 +1,61 @@
+{
+  "id": "mcp:official/com.scrubmytext/tools",
+  "type": "mcp",
+  "name": "ScrubMyText + Agent Infrastructure",
+  "description": "Text integrity, idempotency, event capture, and human approval tools for AI agents.",
+  "author": "com.scrubmytext",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://api.scrubmytext.com/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.scrubmytext.com/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T13:52:46.509356Z",
+    "score": 42
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/strmt7/project_air_defense/level-asset-curation",
+  "type": "skill",
+  "name": "level-asset-curation",
+  "description": "Source, validate, attribute, and integrate city/structure assets for Project Air Defense.",
+  "author": "strmt7",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/strmt7/project_air_defense/blob/HEAD/.agents/skills/level-asset-curation/SKILL.md",
+    "repo": "strmt7/project_air_defense",
+    "path": ".agents/skills/level-asset-curation/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-21T16:18:27Z",
+    "score": 42
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

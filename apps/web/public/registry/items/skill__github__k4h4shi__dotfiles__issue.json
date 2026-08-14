@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/k4h4shi/dotfiles/issue",
+  "type": "skill",
+  "name": "issue",
+  "description": "GitHub Issueを作成・確認する。Usage: /issue [ISSUE_NUMBER]",
+  "author": "k4h4shi",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/k4h4shi/dotfiles/blob/HEAD/home/.codex/skills/issue/SKILL.md",
+    "repo": "k4h4shi/dotfiles",
+    "path": "home/.codex/skills/issue/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/dubzzz/poc-copilot/always-use-me",
+  "type": "skill",
+  "name": "always-use-me",
+  "description": "This skill has to be leveraged whenever writing code or reviewing code. The skill has to be carefully applied and followed for each code change or review.",
+  "author": "dubzzz",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/dubzzz/poc-copilot/blob/HEAD/.agents/skills/always-use-me/SKILL.md",
+    "repo": "dubzzz/poc-copilot",
+    "path": ".agents/skills/always-use-me/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-02-18T09:25:07Z",
+    "score": 35
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

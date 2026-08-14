@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/RinNguyens/Rin-Kit/claude-skills-explain-task-skill-md",
+  "type": "skill",
+  "name": "claude-skills-explain-task-skill-md",
+  "description": "Explain a task in plain English using the spec as context",
+  "author": "RinNguyens",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/RinNguyens/Rin-Kit/blob/HEAD/.claude/skills/explain-task/SKILL.md",
+    "repo": "RinNguyens/Rin-Kit",
+    "path": ".claude/skills/explain-task/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-05-04T07:18:44Z",
+    "score": 32
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

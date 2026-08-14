@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/redhat-developer-demos/jhipster-online/mcp-server-get-started",
+  "type": "skill",
+  "name": "mcp-server-get-started",
+  "description": "Bootstrap installer for __PROJECT_NAME__ MCP skills and local run checklist. Use once after generating this repo from JHipster Online.",
+  "author": "redhat-developer-demos",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/redhat-developer-demos/jhipster-online/blob/HEAD/src/main/resources/mcp-server-template/common/.cursor/skills/mcp-server-get-started/SKILL.md.tpl",
+    "repo": "redhat-developer-demos/jhipster-online",
+    "path": "src/main/resources/mcp-server-template/common/.cursor/skills/mcp-server-get-started/SKILL.md.tpl"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/epcim/git-cross/git-cross-maintainer",
+  "type": "skill",
+  "name": "git-cross-maintainer",
+  "description": "Use when changing `git-cross` behavior in `Justfile.cross`, `src-go/main.go`, `src-rust/src/main.rs`, or related tests. Focus on parity, path safety, and minimal correct changes.",
+  "author": "epcim",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/epcim/git-cross/blob/HEAD/.opencode/skills/git-cross-maintainer/SKILL.md",
+    "repo": "epcim/git-cross",
+    "path": ".opencode/skills/git-cross-maintainer/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

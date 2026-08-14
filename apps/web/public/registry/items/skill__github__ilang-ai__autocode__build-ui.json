@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/ilang-ai/autocode/build-ui",
+  "type": "skill",
+  "name": "build-ui",
+  "description": "Build user-facing interface. Clean, functional, mobile-friendly by default.",
+  "author": "ilang-ai",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ilang-ai/autocode/blob/HEAD/skills/build-ui/SKILL.md",
+    "repo": "ilang-ai/autocode",
+    "path": "skills/build-ui/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 85,
+    "pushed_at": "2026-07-03T23:46:30Z",
+    "score": 54
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

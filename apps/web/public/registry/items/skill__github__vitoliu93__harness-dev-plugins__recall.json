@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/vitoliu93/harness-dev-plugins/recall",
+  "type": "skill",
+  "name": "recall",
+  "description": "Search ccobs for up to five past-session clues on a topic without quoting transcripts. Use before research or implementation when checking whether this was investigated before.",
+  "author": "vitoliu93",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/vitoliu93/harness-dev-plugins/blob/HEAD/skills/recall/SKILL.md",
+    "repo": "vitoliu93/harness-dev-plugins",
+    "path": "skills/recall/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

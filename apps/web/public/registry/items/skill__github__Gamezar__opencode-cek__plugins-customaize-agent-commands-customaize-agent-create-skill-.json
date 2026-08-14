@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Gamezar/opencode-cek/plugins-customaize-agent-commands-customaize-agent-create-skill-",
+  "type": "skill",
+  "name": "plugins-customaize-agent-commands-customaize-agent-create-skill-",
+  "description": "Guide for creating effective skills. This command should be used when users want to create a new skill (or update an existing skill) that extends the agent's capabilities with specialized knowledge, workflows, or tool integrations. Use when creating new skills, editing existing skills, or verifying skills work before deployment - applies TDD to process documentation by testing with subagents before writing, iterating until bulletproof against rationalization",
+  "author": "Gamezar",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Gamezar/opencode-cek/blob/HEAD/plugins/customaize-agent/commands/customaize-agent-create-skill.md",
+    "repo": "Gamezar/opencode-cek",
+    "path": "plugins/customaize-agent/commands/customaize-agent-create-skill.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-03-11T01:16:36Z",
+    "score": 35
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

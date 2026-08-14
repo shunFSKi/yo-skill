@@ -1,0 +1,54 @@
+{
+  "id": "mcp:official/io.github.kindrat86/sanctionsai",
+  "type": "mcp",
+  "name": "SanctionsAI",
+  "description": "OFAC sanctions screening for AI agents: screen names, wallets, entities against the SDN list.",
+  "author": "io.github.kindrat86",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/kindrat86/agentmail",
+    "repo": "kindrat86/agentmail"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://sanctionsai.dev/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T10:27:49.843707Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# agentmail — compliance & verification toolkit for AI agents\n\n[![PyPI](https://img.shields.io/pypi/v/sanctions-mcp.svg)](https://pypi.org/project/sanctions-mcp/)\n[![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://pypi.org/project/sanctions-mcp/)\n[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)\n\n> Your agent is about to send USDC to a stranger. **Is that stranger sanctioned?**\n> 782 OFAC crypto wallets · 19,086 sanctioned names · 16 embargoed jurisdictions.\n> No API key. No signup. 30-second setup. Free & open source.\n\nagentmail gives any AI agent three capabilities it can't provide itself:\n\n| Layer | What | Status |\n|---|---|---|\n| 🛡️ **Compliance** | OFAC sanctions screen, KYA, transaction risk score, disputes | ✅ **Live — real OFAC data** |\n| 📧 **Email** | Disposable verification inbox (receive OTP/magic links) | ✅ Live |\n| 📱 **SMS** | Rentable phone numbers (receive SMS/OTP) | ✅ Live (mock free, 5sim/Twilio paid) |\n\nIt exposes all of these through **three surfaces** — MCP tools (for Claude Code / Cursor / Hermes), an HTTP API (for any agent), and a CLI (for you). Same core, same data.\n\n---\n\n## Why this exists\n\nAgents are starting to pay for things (x402, AP2, ACP, Coinbase AgentKit). But **every payment rail assumes a human is watching**. If your agent autonomously pays a wallet that's on the OFAC Specially Designated Nationals list, **that's your legal problem** — and the big payment infra players (OpenAI, Stripe, Coinbase) explicitly do not handle per-jurisdiction sanctions screening, Know-Your-Agent, or agent-transaction fraud signals. That's the gap this fills.\n\n```\nagent ──about to pay──▶  sanctions_check(wallet)  ──▶ clean? proceed. sanctioned? ABORT.\n```\n\n---\n\n## Quick start (30 seconds)\n\n```bash\npip install sanctions-mcp\n```\n\n### Option A — use it from an MCP client (Claude Code / Cursor)\n\n```jsonc\n// .mcp.json or your client's MCP config\n{\n  \"mcpServers\": {\n    \"agentmail\": {\n      \"command\": \"python\",\n      \"args\": [\"-m\", \"agentmail.mcp_server\"]\n    }\n  }\n}\n```\n\nNow your agent can call `sanctions_check`, `risk_score`, `kya_verify`, `dispute_open`, `create_inbox`, `fetch_code`, `create_number`, `fetch_sms`, `release_number`, `list_inboxes`.\n\n> **Note:** the PyPI package is `sanctions-mcp` (the name `agentmail` was taken). The Python import name is still `agentmail`.\n\n### Option B — use it as an HTTP API\n\n```bash\npython -m agentmail.api   # serves on :8000\n```\n```bash\n# Screen a wallet against real OFAC data — no key, no auth needed for self-host\ncurl \"http://localhost:8000/sanctions?wallet=0x098B716B8Aaf21512996dC57EB0615e2383E2f96\"\n# → {\"matches\":[{\"list\":\"OFAC_SDN\",\"match_type\":\"wallet_exact\",\"confidence\":1.0}],\n#    \"clean\":false,\"provider\":\"osint\"}\n\ncurl \"http://localhost:8000/risk\" -d '{\"counterparty_id\":\"0xabc...\",\"amount\":\"5000\",\"rail\":\"x402\"}'\n# → {\"score\":0,\"recommendation\":\"decline\",\"reasons\":[\"sanctions_match:OFAC_SDN/...\"]}\n```\n\n### Option C — use it from the CLI\n\n```bash\n# Sanctions screen — real OFAC data, no key\npython -m agentmail.cli sanctions --wallet 0x098B716B8Aaf21512996dC57EB0615e2383E2f96\n# → flagged: OFAC_SDN wallet_exact\n\npython -m agentmail.cli risk 0xabc123def456 5000 --rail x402\npython -m agentmail.cli kya my-agent --wallet 0xabc... --wallet-age 400 --domain bot.dev\npython -m agentmail.cli compliance-status\n# → OFAC SDN: 782 wallets, 19086 names; source=vile/ofac-sdn-list@...\n```\n\n---\n\n## The compliance layer (the part that matters)\n\nFour tools, called **before** an agent trusts or pays a counterparty:\n\n| Tool | When to call | Returns |\n|---|---|---|\n| `sanctions_check(name, wallet, country)` | Cheapest check. Call first. | `{matches, clean}` |\n| `risk_score(counterparty, amount, ...)` | Right before authorizing payment | `{score 0-100, recommendation: allow/review/decline}` |\n| `kya_verify(agent_id, evidence)` | Before trusting another agent | `{trust_score, verified, flags}` |\n| `dispute_open(transaction_id, reason)` | When a paid transaction went bad | `{dispute_id, escalation_at}` |\n\n### Where the data comes from (all public, free, no key)\n\n| Source | What | Refresh |\n|---|---|---|\n| **vile/ofac-sdn-list** (GitHub releases) | 782 multi-chain crypto addresses (ETH/USDT/TRX/XBT/...) | daily |\n| **US Treasury OFAC `sdn.csv`** | 19,086 sanctioned individuals & entities | as published |\n| Embargoed jurisdictions set | 16 ISO-2 codes under comprehensive OFAC/UN/EU sanctions | tracked manually |\n\nLists are cached locally (`~/.agentmail/cache/`, 24h TTL) and refresh from source. If the network is down, a stale cache is used and `status()` reports `degraded: true` so you **know** screening is against older data rather than failing silently.\n\n### Providers (swappable backend)\n\n```\nAGENTMAIL_COMPLIANCE_PROVIDER=osint   ← default, real OFAC data, free\nAGENTMAIL_COMPLIANCE_PROVIDER=mock    ← rule-based, for offline tests\nAGENTMAIL_COMPLIANCE_PROVIDER=paid    ← ComplyAdvantage passthrough (roadmap)\n```\n\nThe osint provider does exact + token-subset name matching, exact case-insensitive wallet matching, and ISO-2 country matching. Every match carries a `confidence` so you can decide how hard to block.\n\n---\n\n## The other two layers (verification toolkit)\n\n**Email** — a disposable inbox an agent can use to sign up and receive OTP/magic-link verifications (backed by Mail.tm). `create_inbox()` → address → `fetch_code()` → OTP.\n\n**SMS** — a rentable phone number an agent can use for phone/SMS verification. Mock provider works with no key (for dev); `AGENTMAIL_SMS_PROVIDER=fivesim AGENTMAIL_FIVESIM_KEY=...` goes live with real numbers.\n\nBoth share an `otp.py` extraction brain (regex for codes + magic links) so email and SMS produce the same `{code, link}` shape.\n\n---\n\n## Self-host vs. hosted\n\n**Self-host is fully functional and free** — that's what this repo is. Run the MCP server locally or the HTTP API on your own box, screen against real OFAC data, never pay a cent.\n\n**Hosted API** is live at **https://agentmail-api.fly.dev** — a managed endpoint with API-key auth, rate limits, and an audit log of every screen (the thing regulators/investors ask for). Free tier: 50 checks/day, no signup (by IP). For higher volume, **[get an API key →](https://agentmail-api.fly.dev/pricing)** (Dev $19/mo, Team $99/mo — self-serve checkout).\n\n```bash\n# Try the hosted API right now — no key needed:\ncurl \"https://agentmail-api.fly.dev/sanctions?wallet=0x098B716B8Aaf21512996dC57EB0615e2383E2f96\"\n# → {\"matches\":[{\"list\":\"OFAC_SDN\",...}],\"clean\":false}\n\n# With an API key:\ncurl -H \"X-API-Key: sk_live_...\" \"https://agentmail-api.fly.dev/risk\" \\\n  -d '{\"counterparty_id\":\"0xabc...\",\"amount\":\"5000\",\"rail\":\"x402\"}'\n```\n\n---\n\n## Roadmap\n\n- [x] Email inbox (Mail.tm) + SMS/OTP (mock/5sim/twilio) + OTP extraction\n- [x] **Compliance layer — real OFAC data** (osint provider): 782 wallets + 19,086 names\n- [x] MCP server (10 tools) + HTTP API + CLI\n- [x] **agentmail Sanctions Exposure Index (SEI)** — proprietary 5-factor framework for scoring AI agent OFAC exposure (2026 report: [sanctionsai.dev/research](https://sanctionsai.dev/research/agent-payment-sanctions-exposure-2026))\n- [x] Hosted API with API-key auth + rate limiting (Fly.io)\n- [ ] Audit log (tamper-evident screen history — the enterprise wedge)\n- [ ] EU + UN consolidated lists (osint provider, phase 2)\n- [ ] Paid provider: ComplyAdvantage passthrough (enterprise)\n- [ ] x402 per-call billing (when agents pay themselves)\n\n## SEI: the agentmail Sanctions Exposure Index\n\nThe [agentmail Sanctions Exposure Index (SEI)](https://sanctionsai.dev/research/agent-payment-sanctions-exposure-2026) is a 5-factor proprietary framework for quantifying an AI agent's OFAC sanctions exposure:\n\n| Factor | Weight | What it measures |\n|---|---|---|\n| **V — Velocity** | 30% | Transactions/day the agent can execute unattended |\n| **J — Jurisdiction overlap** | 25% | Fraction of counterparties in/near embargoed regions |\n| **A — Asset class** | 20% | Crypto (highest SDN coverage), fiat, mixed |\n| **S — Screening posture** | 15% | No screen → batch → pre-payment inline → inline + audit |\n| **D — Disclosure readiness** | 10% | Can operator produce a VSD within 5 days? |\n\nScore 10 (min exposure) → 1000 (max). **S and D are the two factors you can change today** — collapse both from 1→10 with a single inline screening call and a timestamped audit trail. Full report + interactive calculator at [sanctionsai.dev](https://sanctionsai.dev).\n\n> **Cite as:** \"agentmail Sanctions Exposure Index (SEI), 2026 Agent-Payment Sanctions Exposure Report, sanctionsai.dev\" — licensed CC BY 4.0.\n\n## Design notes (honest)\n\n- **The compliance layer has the real moat.** Email/SMS are plumbing a platform could swallow. Sanctions screening tied to agent-transaction history builds a dataset nobody else has, and per-jurisdiction rules are something the big infra players explicitly avoid.\n- **Self-host is the free tier, not a trap.** The value you pay for (eventually) is not the data — it's uptime, freshness, and the audit trail. The data is and will stay public.\n- **5sim numbers are shared-after-release.** Fine for receiving an OTP, never for 2FA on accounts you intend to keep.\n\n## License\n\nMIT — see [LICENSE](LICENSE).\n\n## Contributing\n\nIssues and PRs welcome. If you're using agentmail in production, I'd love to hear what for.\n",
+  "status": "curated"
+}

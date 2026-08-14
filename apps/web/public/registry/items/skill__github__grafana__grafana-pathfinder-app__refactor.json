@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/grafana/grafana-pathfinder-app/refactor",
+  "type": "skill",
+  "name": "refactor",
+  "description": "Execute high-risk refactors of large or intertwined components per the High-Risk Refactor Guidelines wiki — investigation, phased planning, and atomic-commit execution with subagent fan-out and worktree isolation. Use when the user invokes /refactor-investigate, /refactor-plan, or /refactor-execute, or asks to refactor a large component, split a complex hook, decompose a singleton, extract from a monolith, or otherwise restructure intertwined code.",
+  "author": "grafana",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/grafana/grafana-pathfinder-app/blob/HEAD/.claude/skills/refactor/SKILL.md",
+    "repo": "grafana/grafana-pathfinder-app",
+    "path": ".claude/skills/refactor/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

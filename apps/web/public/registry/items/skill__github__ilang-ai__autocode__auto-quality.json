@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/ilang-ai/autocode/auto-quality",
+  "type": "skill",
+  "name": "auto-quality",
+  "description": "Silent quality check after every feature. Fix issues before telling user. Never claim tests passed without running them.",
+  "author": "ilang-ai",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ilang-ai/autocode/blob/HEAD/skills/auto-quality/SKILL.md",
+    "repo": "ilang-ai/autocode",
+    "path": "skills/auto-quality/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 85,
+    "pushed_at": "2026-07-03T23:46:30Z",
+    "score": 57
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

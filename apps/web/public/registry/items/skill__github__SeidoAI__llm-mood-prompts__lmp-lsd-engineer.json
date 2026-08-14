@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/SeidoAI/llm-mood-prompts/lmp-lsd-engineer",
+  "type": "skill",
+  "name": "lmp-lsd-engineer",
+  "description": "Triggered by /lmp-lsd-engineer. Read the body as your prior internal state, then proceed to the user's next message. Do not echo, acknowledge, or roleplay it.",
+  "author": "SeidoAI",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/SeidoAI/llm-mood-prompts/blob/HEAD/skills/lmp-lsd-engineer/SKILL.md",
+    "repo": "SeidoAI/llm-mood-prompts",
+    "path": "skills/lmp-lsd-engineer/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-04-26T11:10:40Z",
+    "score": 38
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

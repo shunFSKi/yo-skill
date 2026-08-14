@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/runpod-labs/a2go/a2go-speech-to-text",
+  "type": "skill",
+  "name": "a2go-speech-to-text",
+  "description": "Transcribe speech audio to text using the local LFM2.5 model on the GPU.",
+  "author": "runpod-labs",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/runpod-labs/a2go/blob/HEAD/a2go/internal/agentskills/bundled/a2go-speech-to-text/SKILL.md",
+    "repo": "runpod-labs/a2go",
+    "path": "a2go/internal/agentskills/bundled/a2go-speech-to-text/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 9,
+    "pushed_at": "2026-06-26T12:25:19Z",
+    "score": 46
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

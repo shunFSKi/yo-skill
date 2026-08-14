@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/zakirkun/ice-tea/path-traversal-extended",
+  "type": "skill",
+  "name": "Path Traversal (Extended)",
+  "description": "Detects unsafe file writing or dynamic inclusions leading to LFI/path traversal.",
+  "author": "zakirkun",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/zakirkun/ice-tea/blob/HEAD/skills/fs/path-traversal-extended/SKILL.md",
+    "repo": "zakirkun/ice-tea",
+    "path": "skills/fs/path-traversal-extended/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 38,
+    "pushed_at": "2026-03-19T05:43:58Z",
+    "score": 46
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/forge-town/skills/one-component-per-file-best-practice",
+  "type": "skill",
+  "name": "one-component-per-file-best-practice",
+  "description": "Must follow when 检查或重构 React/Vue 组件文件，强制每个文件只包含一个组件，不允许多组件共存于同一文件；支持 TSX/JSX/Vue。",
+  "author": "forge-town",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/forge-town/skills/blob/HEAD/skills/one-component-per-file-best-practice/SKILL.md",
+    "repo": "forge-town/skills",
+    "path": "skills/one-component-per-file-best-practice/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 7,
+    "pushed_at": "2026-05-30T07:16:44Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

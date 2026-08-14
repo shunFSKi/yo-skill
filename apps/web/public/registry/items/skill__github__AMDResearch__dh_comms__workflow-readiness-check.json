@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/AMDResearch/dh_comms/workflow-readiness-check",
+  "type": "skill",
+  "name": "workflow-readiness-check",
+  "description": "Gate check before promoting a draft workflow to active. Use after\nworkflow-create to verify the packet is complete enough for autonomous\nexecution. Validates dossier sections, checks for write-scope conflicts,\nand produces a pass/fail readiness checklist.",
+  "author": "AMDResearch",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/AMDResearch/dh_comms/blob/HEAD/.claude/skills/workflow-readiness-check/SKILL.md",
+    "repo": "AMDResearch/dh_comms",
+    "path": ".claude/skills/workflow-readiness-check/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 3,
+    "pushed_at": "2026-06-01T13:47:34Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

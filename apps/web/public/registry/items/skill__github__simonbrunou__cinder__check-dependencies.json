@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/simonbrunou/cinder/check-dependencies",
+  "type": "skill",
+  "name": "check-dependencies",
+  "description": "Inspect Cinder's Elixir dependencies for lock mismatches and available updates. Use when asked to check dependency health, outdated Hex packages, or whether mix.exs and mix.lock are synchronized.",
+  "author": "simonbrunou",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/simonbrunou/cinder/blob/HEAD/.agents/skills/check-dependencies/SKILL.md",
+    "repo": "simonbrunou/cinder",
+    "path": ".agents/skills/check-dependencies/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

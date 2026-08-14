@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/seinzwong/Lark-Travel-Agent/event-collection",
+  "type": "skill",
+  "name": "event-collection",
+  "description": "Use this skill when the user provides business travel details like destination, client/venue, departure and return time, budget, approval status, or companions. It extracts structured travel task information for planning.",
+  "author": "seinzwong",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/seinzwong/Lark-Travel-Agent/blob/HEAD/.claude/skills/event-collection/SKILL.md",
+    "repo": "seinzwong/Lark-Travel-Agent",
+    "path": ".claude/skills/event-collection/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

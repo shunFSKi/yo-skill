@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/lovstudio/skills/lov-subtitle-freedom",
+  "type": "skill",
+  "name": "lov-subtitle-freedom",
+  "description": "Create learner-friendly English subtitles with level-aware glosses and optional spoiler-safe subtitle sidecars.",
+  "author": "lovstudio",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/lovstudio/skills/blob/HEAD/skills/subtitle-freedom/SKILL.md",
+    "repo": "lovstudio/skills",
+    "path": "skills/subtitle-freedom/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 65,
+    "pushed_at": "2026-08-14T04:31:06Z",
+    "score": 61
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

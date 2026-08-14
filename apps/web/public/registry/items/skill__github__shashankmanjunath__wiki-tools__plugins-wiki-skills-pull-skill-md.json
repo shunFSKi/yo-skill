@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/shashankmanjunath/wiki-tools/plugins-wiki-skills-pull-skill-md",
+  "type": "skill",
+  "name": "plugins-wiki-skills-pull-skill-md",
+  "description": "Fast-forward the local wiki content repo from its git remote",
+  "author": "shashankmanjunath",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/shashankmanjunath/wiki-tools/blob/HEAD/plugins/wiki/skills/pull/SKILL.md",
+    "repo": "shashankmanjunath/wiki-tools",
+    "path": "plugins/wiki/skills/pull/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

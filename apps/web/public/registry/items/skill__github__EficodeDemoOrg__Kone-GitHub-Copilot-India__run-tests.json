@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/EficodeDemoOrg/Kone-GitHub-Copilot-India/run-tests",
+  "type": "skill",
+  "name": "run-tests",
+  "description": "Runs the test suite with the correct command and flags. Returns structured pass/fail output. Invoke before declaring any task complete.",
+  "author": "EficodeDemoOrg",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/EficodeDemoOrg/Kone-GitHub-Copilot-India/blob/HEAD/.github/skills/run-tests/SKILL.md",
+    "repo": "EficodeDemoOrg/Kone-GitHub-Copilot-India",
+    "path": ".github/skills/run-tests/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-05-07T06:42:48Z",
+    "score": 35
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

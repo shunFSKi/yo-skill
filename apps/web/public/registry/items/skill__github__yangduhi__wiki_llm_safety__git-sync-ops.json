@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/yangduhi/wiki_llm_safety/git-sync-ops",
+  "type": "skill",
+  "name": "git-sync-ops",
+  "description": "Safely inspect and fast-forward the current branch to its upstream without discarding local work.",
+  "author": "yangduhi",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/yangduhi/wiki_llm_safety/blob/HEAD/.agents/skills/git-sync-ops/SKILL.md",
+    "repo": "yangduhi/wiki_llm_safety",
+    "path": ".agents/skills/git-sync-ops/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

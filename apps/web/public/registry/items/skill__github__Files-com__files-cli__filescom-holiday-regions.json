@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Files-com/files-cli/filescom-holiday-regions",
+  "type": "skill",
+  "name": "filescom-holiday-regions",
+  "description": "Files.com Holiday Regions via files-cli.",
+  "author": "Files-com",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Files-com/files-cli/blob/HEAD/skills/filescom-holiday-regions/SKILL.md",
+    "repo": "Files-com/files-cli",
+    "path": "skills/filescom-holiday-regions/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 46,
+    "pushed_at": "2026-08-14T11:59:41Z",
+    "score": 57
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

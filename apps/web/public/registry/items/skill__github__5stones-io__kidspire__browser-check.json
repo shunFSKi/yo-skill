@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/5stones-io/kidspire/browser-check",
+  "type": "skill",
+  "name": "browser-check",
+  "description": "Uses a headless browser to visit the local app and check for console errors or UI issues.",
+  "author": "5stones-io",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/5stones-io/kidspire/blob/HEAD/.claude/skills/browser-check/SKILL.md",
+    "repo": "5stones-io/kidspire",
+    "path": ".claude/skills/browser-check/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-21T17:09:43Z",
+    "score": 42
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

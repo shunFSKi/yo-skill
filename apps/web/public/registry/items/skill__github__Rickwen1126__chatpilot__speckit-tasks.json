@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Rickwen1126/chatpilot/speckit-tasks",
+  "type": "skill",
+  "name": "speckit.tasks",
+  "description": "Generate an actionable, dependency-ordered tasks.md for the feature based on available design artifacts.",
+  "author": "Rickwen1126",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Rickwen1126/chatpilot/blob/HEAD/.agents/skills/speckit.tasks/SKILL.md",
+    "repo": "Rickwen1126/chatpilot",
+    "path": ".agents/skills/speckit.tasks/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-04-08T15:45:21Z",
+    "score": 35
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/flpbalada/fb-skills/answer-open-questions",
+  "type": "skill",
+  "name": "answer-open-questions",
+  "description": "Analyze a list of open questions and suggest up to three answers for each. Use when the user wants options, recommendations, or help resolving multiple unanswered questions.",
+  "author": "flpbalada",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/flpbalada/fb-skills/blob/HEAD/skills/answer-open-questions/SKILL.md",
+    "repo": "flpbalada/fb-skills",
+    "path": "skills/answer-open-questions/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

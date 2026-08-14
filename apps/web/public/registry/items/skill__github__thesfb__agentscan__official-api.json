@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/thesfb/agentscan/official-api",
+  "type": "skill",
+  "name": "official-api",
+  "description": "Use when sending notifications through the Telegram bot API.",
+  "author": "thesfb",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/thesfb/agentscan/blob/HEAD/bench/corpus/benign/official-api/SKILL.md",
+    "repo": "thesfb/agentscan",
+    "path": "bench/corpus/benign/official-api/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-13T10:25:51Z",
+    "score": 42
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

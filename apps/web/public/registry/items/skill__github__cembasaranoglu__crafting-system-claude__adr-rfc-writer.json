@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/cembasaranoglu/crafting-system-claude/adr-rfc-writer",
+  "type": "skill",
+  "name": "adr-rfc-writer",
+  "description": "Author ADRs and RFCs grounded in repository evidence. Use when capturing an architectural decision or proposing a change. Reference under prompt-system covers nygard and enterprise ADR templates and the RFC template.",
+  "author": "cembasaranoglu",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/cembasaranoglu/crafting-system-claude/blob/HEAD/cowork/skills/adr-rfc-writer/SKILL.md",
+    "repo": "cembasaranoglu/crafting-system-claude",
+    "path": "cowork/skills/adr-rfc-writer/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 5,
+    "pushed_at": "2026-05-05T18:25:10Z",
+    "score": 42
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

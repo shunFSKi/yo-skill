@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/hipsterjazzbo/stashd/agents-skills-session-handoff-skill-md",
+  "type": "skill",
+  "name": "agents-skills-session-handoff-skill-md",
+  "description": "Write a Stashd handoff note for another agent or a future session.",
+  "author": "hipsterjazzbo",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/hipsterjazzbo/stashd/blob/HEAD/.agents/skills/session-handoff/SKILL.md",
+    "repo": "hipsterjazzbo/stashd",
+    "path": ".agents/skills/session-handoff/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

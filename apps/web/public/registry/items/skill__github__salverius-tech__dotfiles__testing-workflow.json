@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/salverius-tech/dotfiles/testing-workflow",
+  "type": "skill",
+  "name": "testing-workflow",
+  "description": "Testing workflow patterns and quality standards. Activate when working with tests, test files, test directories, code quality tools, coverage reports, or testing tasks. Includes zero-warnings policy, targeted testing during development, mocking patterns, and best practices across languages.",
+  "author": "salverius-tech",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/salverius-tech/dotfiles/blob/HEAD/home/dot_agents/adapters/claude/skills/testing-workflow/SKILL.md",
+    "repo": "salverius-tech/dotfiles",
+    "path": "home/dot_agents/adapters/claude/skills/testing-workflow/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-25T19:01:21Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

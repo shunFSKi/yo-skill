@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/beyondeye/aitasks/aitask-work-report",
+  "type": "skill",
+  "name": "aitask-work-report",
+  "description": "Draft a manager-facing work report from selected board columns.",
+  "author": "beyondeye",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/beyondeye/aitasks/blob/HEAD/.opencode/skills/aitask-work-report/SKILL.md",
+    "repo": "beyondeye/aitasks",
+    "path": ".opencode/skills/aitask-work-report/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 7,
+    "pushed_at": "2026-08-14T13:25:51Z",
+    "score": 50
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

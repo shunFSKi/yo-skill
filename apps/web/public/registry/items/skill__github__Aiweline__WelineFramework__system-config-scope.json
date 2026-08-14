@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Aiweline/WelineFramework/system-config-scope",
+  "type": "skill",
+  "name": "system-config-scope",
+  "description": "Implement or diagnose Weline SystemConfig scope inheritance, backend configuration UI/templates, versioned saves/rollback, w_query('system_config', ...), or website/store/global behavior. Use when configuration ownership or scope semantics matter; routine reading of one known setting does not require this skill.",
+  "author": "Aiweline",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Aiweline/WelineFramework/blob/HEAD/.codex/skills/system-config-scope/SKILL.md",
+    "repo": "Aiweline/WelineFramework",
+    "path": ".codex/skills/system-config-scope/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-11T16:20:18Z",
+    "score": 48
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

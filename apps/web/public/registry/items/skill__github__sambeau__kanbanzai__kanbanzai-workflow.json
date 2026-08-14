@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/sambeau/kanbanzai/kanbanzai-workflow",
+  "type": "skill",
+  "name": "kanbanzai-workflow",
+  "description": "Use when deciding workflow stage transitions, stage gates, entity lifecycle rules, or whether to stop and ask the human",
+  "author": "sambeau",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/sambeau/kanbanzai/blob/HEAD/.claude/skills/kanbanzai-workflow/SKILL.md",
+    "repo": "sambeau/kanbanzai",
+    "path": ".claude/skills/kanbanzai-workflow/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 5,
+    "pushed_at": "2026-05-13T11:44:17Z",
+    "score": 42
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

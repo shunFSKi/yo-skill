@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/forge-town/skills/implement-feature",
+  "type": "skill",
+  "name": "implement-feature",
+  "description": "Use when 需要实现一个新 Feature，从 Schema 定义到数据层、服务层、状态层、UI 层再到最终质量检查，串联多个原子动词 Skill 完成宽线性工作流。触发词：实现功能、开发功能、新增 feature。",
+  "author": "forge-town",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/forge-town/skills/blob/HEAD/skills/implement-feature/SKILL.md",
+    "repo": "forge-town/skills",
+    "path": "skills/implement-feature/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 7,
+    "pushed_at": "2026-05-30T07:16:44Z",
+    "score": 48
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

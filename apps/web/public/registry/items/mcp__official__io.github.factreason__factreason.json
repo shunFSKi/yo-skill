@@ -1,0 +1,54 @@
+{
+  "id": "mcp:official/io.github.factreason/factreason",
+  "type": "mcp",
+  "name": "FactReason",
+  "description": "Reference data agents need before writing code: dependency advisories, API schemas, component specs.",
+  "author": "io.github.factreason",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/factreason/factreason",
+    "repo": "factreason/factreason"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://www.factreason.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T13:10:09.742107Z",
+    "score": 55
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "<div align=\"center\">\n  <img src=\"./logo.svg\" width=\"96\" height=\"96\" alt=\"FactReason Logo\" />\n  <h1>FactReason</h1>\n  <p><strong>Reference data agents need before they write code.</strong></p>\n  <p>Dependency upgrade advisories for npm and PyPI, developer API schemas across 1,097 services, and electronic component specifications — over MCP, Ed25519-signed, with evidence attached.</p>\n  <p><code>https://factreason.com/mcp</code> · <a href=\"https://factreason.com/llms.txt\">Agent Docs</a> · <a href=\"https://factreason.com\">factreason.com</a></p>\n</div>\n\n---\n\n## Stop an agent shipping a broken dependency upgrade\n\nYour agent wants to bump `chalk` from 4.1.2 to 5.0.0. Before it edits `package.json`, it asks what breaks:\n\n```\nGET /api/v1/packages/npm/chalk/advisory?from=4.1.2&to=5.0.0\nAuthorization: Bearer <key>\n```\n\n```json\n{\n  \"found\": true,\n  \"packageName\": \"chalk\",\n  \"fromVersion\": \"4.1.2\",\n  \"toVersion\": \"5.0.0\",\n  \"breakingCount\": 2,\n  \"advisories\": [\n    {\n      \"severity\": \"breaking\",\n      \"changeType\": \"MODULE_FORMAT_CHANGED\",\n      \"description\": \"chalk 5.0.0 changed module format from \\\"commonjs (undeclared)\\\" to \\\"module\\\". CommonJS require() of this package will now fail.\",\n      \"evidenceField\": \"type\",\n      \"evidenceBefore\": null,\n      \"evidenceAfter\": \"module\",\n      \"migrationHint\": \"Convert the call site to import(), or pin to the last CommonJS release.\"\n    },\n    {\n      \"severity\": \"breaking\",\n      \"changeType\": \"RUNTIME_REQUIREMENT_RAISED\",\n      \"description\": \"chalk 5.0.0 raised its runtime requirement from \\\">=10\\\" to \\\"^12.17.0 || ^14.13 || >=16.0.0\\\". Older runtimes are no longer supported.\",\n      \"evidenceField\": \"engines.node\",\n      \"evidenceBefore\": \">=10\",\n      \"evidenceAfter\": \"^12.17.0 || ^14.13 || >=16.0.0\",\n      \"migrationHint\": \"Confirm the deployment runtime satisfies the new floor before upgrading.\"\n    }\n  ]\n}\n```\n\nVia MCP, the same question is one tool call:\n\n```json\n{\n  \"name\": \"factreason_package_upgrade_advisory\",\n  \"arguments\": { \"registry\": \"npm\", \"name\": \"chalk\", \"from\": \"4.1.2\", \"to\": \"5.0.0\" }\n}\n```\n\n**Every finding carries `evidenceField`, `evidenceBefore` and `evidenceAfter`** — the exact registry metadata field and its values either side of the change. An agent can verify the claim against npm or PyPI directly rather than taking our word for it.\n\n---\n\n## Connect\n\nStreamable HTTP. No install, no package to pull.\n\n```json\n{\n  \"mcpServers\": {\n    \"factreason\": {\n      \"type\": \"http\",\n      \"url\": \"https://factreason.com/mcp\"\n    }\n  }\n}\n```\n\nManifest: [`/.well-known/mcp.json`](https://factreason.com/.well-known/mcp.json)\n\nThe container/stdio bridge accepts an optional `FACTREASON_API_KEY` environment variable and forwards it as a Bearer\ncredential to the same live endpoint. Tool discovery works without a key; metered lookups return HTTP 402 when neither\na key nor a valid x402 payment is supplied.\n\nGet a key — no signup, no card:\n\n```bash\ncurl -X POST https://factreason.com/api/v1/keys/create \\\n  -H 'Content-Type: application/json' \\\n  -d '{\"email\":\"you@example.com\"}'\n```\n\n---\n\n## Tools\n\n| Tool | What it answers |\n|---|---|\n| `factreason_package_upgrade_advisory` | What breaks between two published npm/PyPI versions |\n| `factreason_api_schema` | Exact request/response shape of an API endpoint at a version |\n| `factreason_integration_brief` | Everything needed to write one working call to an API |\n| `factreason_discover_api` | Which of 1,097 services can do X |\n| `factreason_deprecation_scan` | Which endpoints are deprecated, sunset dates, replacements |\n| `factreason_auth_playbook` | Auth schemes, scopes, rate-limit headers, error-code table |\n| `factreason_component_spec` | Electronics component pinouts, voltages, packages |\n| `factreason_subscribe_spec_changes` | Webhook or polling callback when a spec changes |\n| `factreason_create_topup_link` | Stripe checkout link when credit runs out |\n\n---\n\n## Proof-of-Fact Signatures\n\nEvery response is signed by our Ed25519 private key:\n\n- `X-FactReason-Signature`: Ed25519 signature of the raw response payload\n- `X-FactReason-Key-Id`: Stable signing key identifier\n- `X-FactReason-Signature-Alg`: `ed25519`\n\nPublic keys are published and rotated via JWKS at `https://factreason.com/.well-known/jwks.json`.\n\n---\n\n## Licence & Contact\n\nMIT. Attribution requirement for APIs.guru source data: CC-BY 4.0.\nQuestions, support, or data reports: `hello@factreason.com`.\n",
+  "status": "curated"
+}

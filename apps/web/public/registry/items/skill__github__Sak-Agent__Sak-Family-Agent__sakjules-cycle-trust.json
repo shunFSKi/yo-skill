@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Sak-Agent/Sak-Family-Agent/sakjules-cycle-trust",
+  "type": "skill",
+  "name": "SakJules-cycle-trust",
+  "description": "Verify the shipped work is safe to rely on.",
+  "author": "Sak-Agent",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Sak-Agent/Sak-Family-Agent/blob/HEAD/personas/sakjules/skills/SakJules-cycle-trust/SKILL.md",
+    "repo": "Sak-Agent/Sak-Family-Agent",
+    "path": "personas/sakjules/skills/SakJules-cycle-trust/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-14T16:29:47Z",
+    "score": 42
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

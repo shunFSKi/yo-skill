@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Ktasl/uukanshu-scraper/antigravity-github",
+  "type": "skill",
+  "name": "antigravity-github",
+  "description": "在 AntiGravity 連接 GitHub CLI。說「連接 GitHub」「設定 GitHub」時載入。",
+  "author": "Ktasl",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Ktasl/uukanshu-scraper/blob/HEAD/.agent/skills/02-github/SKILL.md",
+    "repo": "Ktasl/uukanshu-scraper",
+    "path": ".agent/skills/02-github/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-05-27T06:22:44Z",
+    "score": 37
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

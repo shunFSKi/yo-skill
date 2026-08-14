@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/LMR218/maharat/entity-select",
+  "type": "skill",
+  "name": "entity-select",
+  "description": "Use when a form selects a related record, owner, organization, project, file, or other foreign key.",
+  "author": "LMR218",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/LMR218/maharat/blob/HEAD/skills/entity-select/SKILL.md",
+    "repo": "LMR218/maharat",
+    "path": "skills/entity-select/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-07-16T15:07:38Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

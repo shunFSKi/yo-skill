@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/progerjkd/prediction-market-trading-bot/pm-compound",
+  "type": "skill",
+  "name": "pm-compound",
+  "description": "Classify completed trade failures and append lessons for future scans and research.",
+  "author": "progerjkd",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/progerjkd/prediction-market-trading-bot/blob/HEAD/.claude/skills/pm-compound/SKILL.md",
+    "repo": "progerjkd/prediction-market-trading-bot",
+    "path": ".claude/skills/pm-compound/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

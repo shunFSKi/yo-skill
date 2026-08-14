@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/wenchiehlee/skills/skill-company-download-logo",
+  "type": "skill",
+  "name": "skill-company-download-logo",
+  "description": "指定台灣股票代碼或美股概念股 Ticker，自動下載高解析度公司官方 Logo PNG，並限制在固定大小。",
+  "author": "wenchiehlee",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/wenchiehlee/skills/blob/HEAD/common/skill-company-download-logo/SKILL.md",
+    "repo": "wenchiehlee/skills",
+    "path": "common/skill-company-download-logo/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

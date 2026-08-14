@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/shenxingy/Clade/status",
+  "type": "skill",
+  "name": "status",
+  "description": "Show a provider-neutral, freshness-aware snapshot of active Agent work, Git delivery, execution identity, and usage limits. Use for “what's going on right now”, what is running, progress updates, active runtime/provider/model, or stuck-work checks.",
+  "author": "shenxingy",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/shenxingy/Clade/blob/HEAD/configs/skills/status/SKILL.md",
+    "repo": "shenxingy/Clade",
+    "path": "configs/skills/status/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 8,
+    "pushed_at": "2026-08-14T15:55:38Z",
+    "score": 54
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

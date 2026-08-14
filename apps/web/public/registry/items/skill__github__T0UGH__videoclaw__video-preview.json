@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/T0UGH/videoclaw/video-preview",
+  "type": "skill",
+  "name": "video-preview",
+  "description": "Use when user wants to preview images or videos",
+  "author": "T0UGH",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/T0UGH/videoclaw/blob/HEAD/skills/video-preview/SKILL.md",
+    "repo": "T0UGH/videoclaw",
+    "path": "skills/video-preview/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 111,
+    "pushed_at": "2026-05-18T16:21:14Z",
+    "score": 65
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": "# videoclaw\n\n[English](README_en.md) | **AI 视频创作 CLI 工具 | Codex 订阅出图 + Seedance 官方视频 API**\n\n## ⭐ 主推荐链路 ⭐\n\n| 视频生成 | 图片素材 |\n|----------|----------|\n| **Seedance 2.0** (字节跳动官方 Ark API) | **Codex OAuth-native** (无需 OpenAI API key) |\n\n> 如果你已经有 Codex / ChatGPT 订阅与登录态，现在可以直接走 Codex 原生链路出图；视频则走火山官方 Seedance API。\n\n## 概述\n\nvideoclaw 是 AI 视频创作 CLI 工具，目标是把 AI 视频创作真正做成一条能跑通的工作流：\n\n- **图片**：默认走 `codex-host-image`，通过 Codex / ChatGPT OAuth 原生链路出图\n- **视频**：默认走火山引擎 Ark / Seedance 官方 API\n- **结构**：一个 `project` 管多个 `video`，支持单段 `render/` 和多段 `clips/`\n- **分发**：`videoclaw` CLI + 可安装的 skill pack（`skills.sh`）\n\n也就是说，这个项目现在不只是 prompt 模板集合，而是：\n\n> **一个能真实出图、真实出视频、真实合并产物的 AI 视频创作 CLI + Skill Pack。**\n\n## 推荐客户端\n\n| 客户端 | 状态 |\n|--------|------|\n| 支持 `skills.sh` 的客户端 | ✅ 主推荐 |\n| Codex / ChatGPT 登录环境 | ✅ 默认图片链路 |\n| Claude Code | ✅ 可用，但不再是主分发方式 |\n| 其他 skills-compatible hosts | ✅ 原则上可接入 |\n\n## 安装 CLI\n\n### 方式一：uvx（推荐，无需安装）\n\n```bash\nuvx videoclaw --help\n```\n\n### 方式二：pip（全局安装）\n\n```bash\npip install videoclaw\n```\n\n### 方式三：开发模式\n\n```bash\ngit clone https://github.com/T0UGH/videoclaw.git\ncd videoclaw\npip install -e .\n```\n\n## 安装 Skill Pack（主推荐方式）\n\n推荐直接通过 `skills.sh` 安装整个 skill pack：\n\n```bash\nnpx skills add T0UGH/videoclaw --all\n```\n\n常见变体：\n\n```bash\n# 本地开发时从仓库根目录安装\nnpx skills add . --all\n\n# 只安装一个 skill\nnpx skills add T0UGH/videoclaw --skill video-quick-create\n\n# 查看可安装的 skills\nnpx skills add T0UGH/videoclaw --list\n```\n\n这条路径现在是 videoclaw 的主分发方式。`skills/` 目录是 workflow 的唯一事实源。\n\n## 快速开始（30 秒）\n\n```bash\n# 1. 初始化一个 project\nvideoclaw init my-project\n\n# 2. 在 project 下创建一个视频单元\nvideoclaw video create my-project demo-video\n\n# 3. 查看视频列表\nvideoclaw video list my-project\n```\n\n如果你已经有 Codex / ChatGPT 登录环境，建议把图片默认链路显式设成：\n\n```bash\nvideoclaw config --project my-project --set models.image.backend=codex-host-image\nvideoclaw config --project my-project --set models.image.model=gpt-image-2-medium\nvideoclaw config --project my-project --set models.image.auth=chatgpt_login\nvideoclaw config --project my-project --set models.image.transport=codex_oauth\n```\n\n## 新的 Project / Video 模型\n\nvideoclaw 现在采用：\n\n- 一个 `project` 承载共享资产与多个视频\n- 一个 `video` 是独立产出单元\n- 单段视频默认使用 `render/` 管理生成过程\n- 多段视频可扩展到 `clips/`\n\n推荐目录结构：\n\n```text\nmy-project/\n├── .videoclaw/\n│   ├── config.yaml\n│   ├── index.json\n│   └── logs/\n├── assets/\n│   ├── characters/\n│   ├── scenes/\n│   ├── props/\n│   └── covers/\n├── videos/\n│   └── demo-video/\n│       ├── meta.json\n│       ├── brief.md\n│       ├── storyboard/\n│       ├── images/\n│       ├── clips/\n│       └── audio/\n└── exports/\n```\n\n## 图片 Backend\n\n图片能力现在有两条正式可用路径：\n\n### 1. `codex-host-image`（默认推荐）\n\n这是当前最推荐的图片链路：\n\n- Hermes-style / OAuth-native Codex image provider\n- 不需要 `OPENAI_API_KEY`\n- 读取本机 Codex / ChatGPT 登录态\n- 支持：\n  - `gpt-image-2-low`\n  - `gpt-image-2-medium`\n  - `gpt-image-2-high`\n\n推荐默认值：`gpt-image-2-medium`\n\n### 2. `openai-image`\n\n这是正式的 OpenAI API provider：\n\n- 需要 `OPENAI_API_KEY`\n- 直接调用 OpenAI 官方图片 API\n\n如果你不走 Codex 订阅链路，可以改成：\n\n```bash\nvideoclaw config --project my-project --set models.image.backend=openai-image\nvideoclaw config --project my-project --set models.image.auth=api_key\n```\n\n## 视频工作流\n\n### 单段视频\n\n单段视频会在 `videos/<slug>/render/` 下落盘：\n\n- `input/reference.json`\n- `input/prompt.md`\n- `candidates/`\n- `selected.mp4`\n- `task.json`\n\n### 多段视频\n\n多段视频可以使用 `clips/`：\n\n- `clips/<clip-id>/input/reference.json`\n- `clips/<clip-id>/input/prompt.md`\n- `clips/<clip-id>/candidates/`\n- `clips/<clip-id>/selected.mp4`\n- `clips/<clip-id>/task.json`\n\n### 当前可用命令\n\n```bash\nvideoclaw video create my-project demo-video\nvideoclaw video list my-project\nvideoclaw video status my-project demo-video\nvideoclaw video generate my-project demo-video --prompt \"walk forward\" --provider mock\nvideoclaw video select my-project demo-video v001.mp4\n\nvideoclaw video clip create my-project demo-video clip-01\nvideoclaw video clip generate my-project demo-video clip-01 --prompt \"turn head\" --provider mock\nvideoclaw video clip select my-project demo-video clip-01 v001.mp4\n\nvideoclaw merge --project my-project --output final.mp4\n```\n\n## 支持的模型提供商\n\n| 提供商 / Backend | 图像 | 视频 | 音频 |\n|------------------|------|------|------|\n| volcengine | Seedream | Seedance 2.0 | TTS |\n| dashscope | wan2.6-t2i | wan2.6-i2v | cosyvoice-v2 |\n| gemini | Nano Banana Pro | - | - |\n| openai-image | OpenAI 官方图片 API | - | - |\n| codex-host-image | Codex OAuth 原生链路 | - | - |\n| mock | 测试用 | 测试用 | 测试用 |\n\n## Skills\n\n所有视频创作流程通过 `skills/` 目录中的 skill pack 定义。当前主要 skill 包括：\n\n| Skill | 说明 |\n|-------|------|\n| video-quick-create | 快速创建视频（故事类） |\n| video-text-storyboard | 文本分镜生成（故事/产品/动作/风景） |\n| video-t2i | 文生图 |\n| video-i2i | 图生图 |\n| video-i2v | 图生视频 |\n| video-audio | 音频生成 |\n| video-merge | 视频合并 |\n| video-config | 配置管理 |\n| video-upload | 云盘上传 |\n| video-publish-douyin | 发布到抖音 |\n| video-publish-kuaishou | 发布到快手 |\n\n## CLI 命令\n\n| 命令 | 说明 |\n|------|------|\n| `videoclaw init` | 初始化 project |\n| `videoclaw video create` | 创建 video |\n| `videoclaw video list` | 列出 video |\n| `videoclaw video status` | 查看 video 状态 |\n| `videoclaw video generate` | 生成单段视频候选 |\n| `videoclaw video select` | 选择单段视频候选 |\n| `videoclaw video clip create` | 创建 clip |\n| `videoclaw video clip generate` | 生成 clip 候选 |\n| `videoclaw video clip select` | 选择 clip 候选 |\n| `videoclaw t2i` | 文生图 |\n| `videoclaw i2i` | 图生图 |\n| `videoclaw image smoke` | 图片 backend 冒烟 |\n| `videoclaw i2v` | 图生视频 |\n| `videoclaw video-smoke` | 视频 backend 冒烟 |\n| `videoclaw audio` | 生成音频 |\n| `videoclaw merge` | 合并视频 |\n| `videoclaw config` | 配置管理 |\n| `videoclaw upload` | 云盘上传 |\n| `videoclaw preview` | 预览文件 |\n| `videoclaw publish` | 发布到社交平台（可选依赖） |\n\n## 配置\n\n详细配置项清单见 [docs/configuration.md](docs/configuration.md)\n\n配置优先级：\n\n1. 环境变量（最高）\n2. 全局配置 `~/.videoclaw/config.yaml`\n3. 项目配置 `<project>/.videoclaw/config.yaml`\n\n## 当前真实跑通的主链路\n\n目前已经真实冒烟通过的主链路：\n\n- 图片：`codex-host-image`\n- 视频：`volcengine` / Ark / Seedance\n\n也就是说，这个项目现在不是只停在设计上，而是主推荐图片链路和主推荐视频链路都已经真实跑通。\n\n## 开发\n\n```bash\npytest\nruff check .\nblack .\n```\n",
+  "status": "curated"
+}

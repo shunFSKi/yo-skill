@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/popoffvg/claude-plugin-work-manager/work-status",
+  "type": "skill",
+  "name": "work-status",
+  "description": "This skill should be used when the user says \"work status\", \"show my work\", \"what work am I on\". Show raw work note for the current branch.",
+  "author": "popoffvg",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/popoffvg/claude-plugin-work-manager/blob/HEAD/skills/work-status/SKILL.md",
+    "repo": "popoffvg/claude-plugin-work-manager",
+    "path": "skills/work-status/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

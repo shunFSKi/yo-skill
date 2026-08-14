@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/ameno-/media-gen/compress-image",
+  "type": "skill",
+  "name": "compress-image",
+  "description": "Compress and optimize exported images for delivery. Use when: pack outputs are approved and need\nlighter delivery artifacts for publishing, social, or embedding.",
+  "author": "ameno-",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ameno-/media-gen/blob/HEAD/skills/compress-image/SKILL.md",
+    "repo": "ameno-/media-gen",
+    "path": "skills/compress-image/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-04-24T05:57:39Z",
+    "score": 35
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Lord1Egypt/gemini-agent-toolkit/system-prompt-doing-tasks-security",
+  "type": "skill",
+  "name": "System Prompt: Doing tasks (security)",
+  "description": "Avoid introducing security vulnerabilities like injection, XSS, etc.",
+  "author": "Lord1Egypt",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Lord1Egypt/gemini-agent-toolkit/blob/HEAD/gemini-skills/system-prompt-doing-tasks-security/SKILL.md",
+    "repo": "Lord1Egypt/gemini-agent-toolkit",
+    "path": "gemini-skills/system-prompt-doing-tasks-security/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-06-04T21:47:34Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

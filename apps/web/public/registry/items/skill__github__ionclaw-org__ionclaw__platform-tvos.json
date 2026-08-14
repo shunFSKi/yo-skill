@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/ionclaw-org/ionclaw/platform-tvos",
+  "type": "skill",
+  "name": "platform-tvos",
+  "description": "Platform context for tvOS. No invoke_platform functions are available on Apple TV.",
+  "author": "ionclaw-org",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ionclaw-org/ionclaw/blob/HEAD/main/resources/skills/platform-tvos/SKILL.md",
+    "repo": "ionclaw-org/ionclaw",
+    "path": "main/resources/skills/platform-tvos/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

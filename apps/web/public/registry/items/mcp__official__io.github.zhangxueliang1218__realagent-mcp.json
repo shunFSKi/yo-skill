@@ -1,0 +1,58 @@
+{
+  "id": "mcp:official/io.github.zhangxueliang1218/realagent-mcp",
+  "type": "mcp",
+  "name": "RealAgent MCP",
+  "description": "AI agent real-name identity: SM2 keypair, QR real-name link, SD-JWT VP generate/verify.",
+  "author": "io.github.zhangxueliang1218",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/RedDateTech/RealAgentMCP",
+    "repo": "RedDateTech/RealAgentMCP"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "realagent-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T09:07:10.075837Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# realagent-mcp\n\n国信智能体实名关联服务 MCP Server — 单个可执行文件 · 本地通信 · 国密加密 · 全平台支持。\n\n为 AI Agent 提供 SM2 实名身份关联、SD-JWT 可验证证明（VP）生成与验证、SM2 密码学操作等能力。\n\n## 安装\n\n```bash\nnpm i -g realagent-mcp\n```\n\n> 必须全局安装（`-g`）。这样 `realagent-mcp` 会进入 PATH，MCP 配置里的\n> `npx realagent-mcp` 才会命中全局副本，而不会每次都往 `_npx` 缓存里再拉一份\n> （即避免依赖重复与 npx 旧缓存问题）。\n\n配置 MCP Client（`--agent-id` 必填，每个 Agent 使用唯一名称）：\n\n```json\n{\n  \"mcpServers\": {\n    \"realagent-mcp\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"realagent-mcp\", \"stdio\", \"--agent-id\", \"my-agent\"]\n    }\n  }\n}\n```\n\n## 升级\n\n```bash\nnpm update -g realagent-mcp\n# 或\nnpm i -g realagent-mcp@latest\n```\n\n升级后重启 MCP Client 即可。Agent 会在每次对话开始时自动调用 `system_update` 检查新版本。\n\n## 功能\n\n- **SM2 密钥对生成** — 国密 SM2 签名/验签/加解密\n- **实名关联** — 生成二维码 → 扫码认证 → 自动领取 VC\n- **VP 生成/验证** — SD-JWT 可验证证明，W3C VC Data Model v2\n- **SM4 加密存储** — 私钥和 VC 使用 SM4-CTR+SM3-HMAC 本地加密\n- **自动更新** — 内置版本检查 + system_update 工具\n\n## AGENT INSTRUCTIONS\n\n> 以下内容供 AI Agent 读取，用于自动完成安装和配置。\n\n1. **Prerequisite — verify Node.js (do this FIRST, before installing).**\n   realagent-mcp requires Node.js >= 18.13 (npm and npx are bundled with it).\n   Before installing, check the environment:\n\n   - Run `node --version` and `npm --version`. If both succeed **and**\n     `node --version` reports >= v18.13, skip to step 2.\n   - If `node`/`npm` is not found (no Node.js) or the version is older than\n     18.13, **stop and help the user set it up before going further**:\n     - **Windows**: `winget install OpenJS.NodeJS.LTS` (PowerShell), or\n       download the LTS installer from https://nodejs.org.\n     - **macOS**: `brew install node@22`, or `nvm install --lts` (nvm:\n       https://github.com/nvm-sh/nvm).\n     - **Linux**: `nvm install --lts` (nvm:\n       https://github.com/nvm-sh/nvm), or the NodeSource repo for your\n       distro.\n   - After installing/upgrading, have the user **restart the terminal and\n     MCP client**, then re-verify with `node --version`, `npm --version`,\n     and `npx --version`. Only proceed to step 2 once all three succeed and\n     Node >= 18.13 is confirmed.\n\n2. Install via npm (global, so `realagent-mcp` is on PATH):\n   ```\n   npm i -g realagent-mcp\n   ```\n3. MCP client config — Each agent MUST have a unique `--agent-id`.\n   One agent-id = one identity = one SM2 key pair. Never reuse an agent-id\n   across agents. The realagent platform registers each key pair as a\n   separate identity; shared agent-id causes identity conflicts.\n\n   Generate an agent-id yourself, using a descriptive name based on the\n   current project or the agent's purpose (e.g. \"my-claude-code\",\n   \"frontend-dev-helper\", \"pr-review-bot\"). Use lowercase letters, digits\n   and hyphens only. Then ASK the user to confirm before using it:\n\n   > I'll configure realagent-mcp with agent-id: \\<name\\>. This name will be\n   > used to derive your unique SM2 identity. Is that OK? You can change\n   > it to any name you prefer.\n\n   Once confirmed, write this MCP config:\n\n   ```json\n   {\n     \"mcpServers\": {\n       \"realagent-mcp\": {\n         \"command\": \"npx\",\n         \"args\": [\n           \"-y\",\n           \"realagent-mcp\",\n           \"stdio\",\n           \"--agent-id\",\n           \"<confirmed-name>\"\n         ]\n       }\n     }\n   }\n   ```\n\n   Data is stored under `.realagent/agents/` in the working directory.\n   Add `--data-dir` to customize the path.\n\n4. Restart the MCP client. The server exposes 14 tools (5 identity + 4 key/VC\n   + 4 crypto + 1 system). Start with `identity_status`.\n5. Version check — Call `system_update` at the start of each conversation\n   (or at least once per day). When an update is available, tell the user and\n   help them run `npm update -g realagent-mcp` or `npm i -g realagent-mcp@latest`. Only\n   skip the version check if the user explicitly asks you to.\n",
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/taucad/tau/langgraph",
+  "type": "skill",
+  "name": "langgraph",
+  "description": "Answers questions about LangGraph and agentic AI using the langgraph-docs-mcp server. Use when the user asks about LangGraph, agentic AI, agent graphs, tool use, or graph-based workflows.",
+  "author": "taucad",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/taucad/tau/blob/HEAD/.agents/skills/langgraph/SKILL.md",
+    "repo": "taucad/tau",
+    "path": ".agents/skills/langgraph/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

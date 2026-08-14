@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/toderian/project_template/triage-inbox",
+  "type": "skill",
+  "name": "triage-inbox",
+  "description": "Review captured inbox ideas (docs/tasks_manager/_inbox/) and promote worthwhile ones into full area-prefixed tasks, or drop them. Use when the user says \"triage inbox\", \"review the inbox\", \"process my ideas\", \"clear the inbox\", or wants to turn captured ideas into actionable tasks.",
+  "author": "toderian",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/toderian/project_template/blob/HEAD/.agents/skills/productivity/triage-inbox/SKILL.md",
+    "repo": "toderian/project_template",
+    "path": ".agents/skills/productivity/triage-inbox/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-13T07:43:17Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

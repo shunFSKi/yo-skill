@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/goodwind-cz/aai/aai-scout",
+  "type": "skill",
+  "name": "aai-scout",
+  "description": "Use optionally before starting implementation to score readiness 0-100 over five dimensions (scope clarity, pattern familiarity, dependency awareness, edge cases, test strategy) with a GO/HOLD advisory at 70. Advisory only — never blocks.",
+  "author": "goodwind-cz",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/goodwind-cz/aai/blob/HEAD/.agents/skills/aai-scout/SKILL.md",
+    "repo": "goodwind-cz/aai",
+    "path": ".agents/skills/aai-scout/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-14T09:20:53Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

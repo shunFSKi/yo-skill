@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/nordstjernen-web/northstar-browser/audit-browser-security-boundaries",
+  "type": "skill",
+  "name": "audit-browser-security-boundaries",
+  "description": "Audit browser-engine changes that process untrusted content or cross native-memory, origin, network, storage, extension, decoder, sandbox, or operating-system boundaries. Use for security reviews, threat analysis, and security fixes where parsing, lifetime, isolation, or containment guarantees could regress.",
+  "author": "nordstjernen-web",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/nordstjernen-web/northstar-browser/blob/HEAD/.claude/skills/audit-browser-security-boundaries/SKILL.md",
+    "repo": "nordstjernen-web/northstar-browser",
+    "path": ".claude/skills/audit-browser-security-boundaries/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

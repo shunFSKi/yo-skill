@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/gkwa/volcanicviper/logging-to-stderr",
+  "type": "skill",
+  "name": "logging-to-stderr",
+  "description": "Set up logging with verbosity levels via --verbose flags, sending log output to stderr. Use when adding logging to a CLI tool or script.",
+  "author": "gkwa",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/gkwa/volcanicviper/blob/HEAD/skills/logging-to-stderr/SKILL.md",
+    "repo": "gkwa/volcanicviper",
+    "path": "skills/logging-to-stderr/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-30T18:07:10Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

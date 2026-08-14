@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/nicholas-camarda/codex-personal-plugins/inspect-analysis-artifacts",
+  "type": "skill",
+  "name": "inspect-analysis-artifacts",
+  "description": "Use when analysis inputs, outputs, code paths, runtime artifacts, and published outputs must be reconstructed before review.",
+  "author": "nicholas-camarda",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/nicholas-camarda/codex-personal-plugins/blob/HEAD/plugins/research-partner/skills/inspect-analysis-artifacts/SKILL.md",
+    "repo": "nicholas-camarda/codex-personal-plugins",
+    "path": "plugins/research-partner/skills/inspect-analysis-artifacts/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-06T18:16:11Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

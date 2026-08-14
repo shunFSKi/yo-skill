@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/siegeon/.prism/file-first",
+  "type": "skill",
+  "name": "file-first",
+  "description": "Read source files directly with Glob/Grep/Read. No RAG, no vector databases, no pre-loaded summaries.",
+  "author": "siegeon",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/siegeon/.prism/blob/HEAD/plugins/prism-devtools/skills/file-first/SKILL.md",
+    "repo": "siegeon/.prism",
+    "path": "plugins/prism-devtools/skills/file-first/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

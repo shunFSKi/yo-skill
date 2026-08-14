@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/zuqini/dotfiles/enable-git-signing",
+  "type": "skill",
+  "name": "enable-git-signing",
+  "description": "Turn git commit signing back on globally. Use after /disable-git-signing once Memento/ac-sign is available again.",
+  "author": "zuqini",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/zuqini/dotfiles/blob/HEAD/claude/.claude/skills/enable-git-signing/SKILL.md",
+    "repo": "zuqini/dotfiles",
+    "path": "claude/.claude/skills/enable-git-signing/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

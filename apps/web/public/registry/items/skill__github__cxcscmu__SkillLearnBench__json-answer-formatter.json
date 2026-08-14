@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/cxcscmu/SkillLearnBench/json-answer-formatter",
+  "type": "skill",
+  "name": "json-answer-formatter",
+  "description": "Format retrieval answers as a dictionary in /root/answer.json.",
+  "author": "cxcscmu",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/cxcscmu/SkillLearnBench/blob/HEAD/skills/b4-skill-creator-gemini-3.1-flash-lite-preview/enterprise-information-search/json-answer-formatter/SKILL.md",
+    "repo": "cxcscmu/SkillLearnBench",
+    "path": "skills/b4-skill-creator-gemini-3.1-flash-lite-preview/enterprise-information-search/json-answer-formatter/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 77,
+    "pushed_at": "2026-07-09T20:57:02Z",
+    "score": 54
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

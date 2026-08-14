@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/timurgaleev/memex/install",
+  "type": "skill",
+  "name": "install",
+  "description": "Deprecated pointer. Installation is handled by the setup skill; this entry\nexists only to route legacy \"install\" phrasing to it.",
+  "author": "timurgaleev",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/timurgaleev/memex/blob/HEAD/deploy/skills/install/SKILL.md",
+    "repo": "timurgaleev/memex",
+    "path": "deploy/skills/install/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

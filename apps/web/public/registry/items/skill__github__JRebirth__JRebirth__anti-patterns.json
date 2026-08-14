@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/JRebirth/JRebirth/anti-patterns",
+  "type": "skill",
+  "name": "anti-patterns",
+  "description": "Spot and fix JRebirth anti-patterns (runLater glue, raw threads, logic in controllers, state in views, global facade abuse). Use when reviewing or cleaning up JRebirth code that smells like plain JavaFX.",
+  "author": "JRebirth",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/JRebirth/JRebirth/blob/HEAD/org.jrebirth.af/.cursor/skills/anti-patterns/SKILL.md",
+    "repo": "JRebirth/JRebirth",
+    "path": "org.jrebirth.af/.cursor/skills/anti-patterns/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 92,
+    "pushed_at": "2026-06-25T13:05:45Z",
+    "score": 58
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

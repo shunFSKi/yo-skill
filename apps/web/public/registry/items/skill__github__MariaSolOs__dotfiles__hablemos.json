@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/MariaSolOs/dotfiles/hablemos",
+  "type": "skill",
+  "name": "hablemos",
+  "description": "Free-form ideation that investigates context, debugs code or agent behavior, explores implementation approaches or answers questions about a codebase. Use when the user explicitly mentions \"hablemos\".",
+  "author": "MariaSolOs",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/MariaSolOs/dotfiles/blob/HEAD/.pi/agent/skills/hablemos/SKILL.md",
+    "repo": "MariaSolOs/dotfiles",
+    "path": ".pi/agent/skills/hablemos/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 581,
+    "pushed_at": "2026-08-14T00:31:47Z",
+    "score": 70
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

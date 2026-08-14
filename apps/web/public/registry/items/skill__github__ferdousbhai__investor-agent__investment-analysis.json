@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/ferdousbhai/investor-agent/investment-analysis",
+  "type": "skill",
+  "name": "investment-analysis",
+  "description": "Triggers on stock/market analysis, investment research, earnings, valuations, sentiment queries.",
+  "author": "ferdousbhai",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ferdousbhai/investor-agent/blob/HEAD/skills/investment-analysis/SKILL.md",
+    "repo": "ferdousbhai/investor-agent",
+    "path": "skills/investment-analysis/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

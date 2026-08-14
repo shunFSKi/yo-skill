@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/jiamingkong/agent_demos/office-reader",
+  "type": "skill",
+  "name": "office_reader",
+  "description": "Office document reading capabilities using the markitdown library.",
+  "author": "jiamingkong",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/jiamingkong/agent_demos/blob/HEAD/servers/office_reader/SKILL.md",
+    "repo": "jiamingkong/agent_demos",
+    "path": "servers/office_reader/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 5,
+    "pushed_at": "2026-01-15T05:50:45Z",
+    "score": 34
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

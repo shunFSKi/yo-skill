@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/mazrean/apm-package/apm-dependency-goreleaser",
+  "type": "skill",
+  "name": "apm-dependency-goreleaser",
+  "description": "Lists the CLI tools that must appear in mise.toml for any repo depending on apm-plackage/goreleaser. Use when bootstrapping a release pipeline.",
+  "author": "mazrean",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/mazrean/apm-package/blob/HEAD/goreleaser/.apm/skills/apm-dependency-goreleaser/SKILL.md",
+    "repo": "mazrean/apm-package",
+    "path": "goreleaser/.apm/skills/apm-dependency-goreleaser/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

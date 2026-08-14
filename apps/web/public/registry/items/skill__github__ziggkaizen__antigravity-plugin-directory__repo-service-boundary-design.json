@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/ziggkaizen/antigravity-plugin-directory/repo-service-boundary-design",
+  "type": "skill",
+  "name": "repo-service-boundary-design",
+  "description": "Designs and reviews backend service, module, and integration boundaries. Use when adding services, splitting modules, changing layering, moving logic, introducing shared code, or deciding where backend responsibilities should live.",
+  "author": "ziggkaizen",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ziggkaizen/antigravity-plugin-directory/blob/HEAD/plugins/repo-backend-service-design/skills/repo-service-boundary-design/SKILL.md",
+    "repo": "ziggkaizen/antigravity-plugin-directory",
+    "path": "plugins/repo-backend-service-design/skills/repo-service-boundary-design/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

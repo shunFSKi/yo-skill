@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/oaknational/oak-open-curriculum-ecosystem/oak-cricket",
+  "type": "skill",
+  "name": "oak-cricket",
+  "description": "Invoke the platform Cricket panel for a fast second opinion on whether the current work is the right work. Use at cycle or decision boundaries; for materially uncertain or high-impact choices; when the path feels suspiciously obvious; or for rubber-ducking and design partnership. Run normal and adversarial stances, and treat every verdict as evidence rather than authority. Do not use Cricket instead of an artefact reviewer.",
+  "author": "oaknational",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/oaknational/oak-open-curriculum-ecosystem/blob/HEAD/.claude/skills/oak-cricket/SKILL.md",
+    "repo": "oaknational/oak-open-curriculum-ecosystem",
+    "path": ".claude/skills/oak-cricket/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 7,
+    "pushed_at": "2026-08-14T16:11:12Z",
+    "score": 53
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

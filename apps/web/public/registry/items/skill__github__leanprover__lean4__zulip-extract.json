@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/leanprover/lean4/zulip-extract",
+  "type": "skill",
+  "name": "zulip-extract",
+  "description": "Extract Zulip thread HTML dumps into readable plain text. Use when the user provides a Zulip HTML file or asks to parse/read/convert/summarize a Zulip thread.",
+  "author": "leanprover",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/leanprover/lean4/blob/HEAD/.claude/skills/zulip-extract/SKILL.md",
+    "repo": "leanprover/lean4",
+    "path": ".claude/skills/zulip-extract/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

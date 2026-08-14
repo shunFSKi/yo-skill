@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/bonnbear/codeCollection/analyze-mode",
+  "type": "skill",
+  "name": "analyze-mode",
+  "description": "Gather context in parallel, synthesize findings, consult oracle when complex",
+  "author": "bonnbear",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/bonnbear/codeCollection/blob/HEAD/agent-configs/opencode/skills/analyze-mode/SKILL.md",
+    "repo": "bonnbear/codeCollection",
+    "path": "agent-configs/opencode/skills/analyze-mode/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-11T07:13:00Z",
+    "score": 42
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

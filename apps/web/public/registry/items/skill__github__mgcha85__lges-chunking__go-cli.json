@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/mgcha85/lges-chunking/go-cli",
+  "type": "skill",
+  "name": "go-cli",
+  "description": "Go 백엔드의 테스트/빌드/모듈 정리를 표준 명령으로 검증하는 스킬",
+  "author": "mgcha85",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/mgcha85/lges-chunking/blob/HEAD/.github/skills/go-cli/SKILL.md",
+    "repo": "mgcha85/lges-chunking",
+    "path": ".github/skills/go-cli/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 19
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

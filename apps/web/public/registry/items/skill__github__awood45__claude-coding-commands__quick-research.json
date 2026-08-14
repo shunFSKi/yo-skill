@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/awood45/claude-coding-commands/quick-research",
+  "type": "skill",
+  "name": "quick-research",
+  "description": "Quick research — get a sourced answer in under a minute. Use instead of /research when you need a fast answer, not a deep dive.",
+  "author": "awood45",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/awood45/claude-coding-commands/blob/HEAD/.claude/skills/quick-research/SKILL.md",
+    "repo": "awood45/claude-coding-commands",
+    "path": ".claude/skills/quick-research/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 11,
+    "pushed_at": "2026-04-08T00:25:17Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

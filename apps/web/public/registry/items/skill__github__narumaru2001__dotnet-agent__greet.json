@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/narumaru2001/dotnet-agent/greet",
+  "type": "skill",
+  "name": "greet",
+  "description": "名前と言語を受け取って多言語で挨拶を返す",
+  "author": "narumaru2001",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/narumaru2001/dotnet-agent/blob/HEAD/plugin/skills/greet/SKILL.md",
+    "repo": "narumaru2001/dotnet-agent",
+    "path": "plugin/skills/greet/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 19
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

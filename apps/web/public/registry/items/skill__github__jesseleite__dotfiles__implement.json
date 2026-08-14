@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/jesseleite/dotfiles/implement",
+  "type": "skill",
+  "name": "implement",
+  "description": "Implement a well-spec'd ticket. Use when the user passes an issue reference or ticket and wants it implemented, mentions \"implement this\", \"just build it\", etc. Questions should mostly be answerable from the ticket spec and codebase; only stop to ask when genuinely blocked.",
+  "author": "jesseleite",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/jesseleite/dotfiles/blob/HEAD/agents/skills/implement/SKILL.md",
+    "repo": "jesseleite/dotfiles",
+    "path": "agents/skills/implement/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

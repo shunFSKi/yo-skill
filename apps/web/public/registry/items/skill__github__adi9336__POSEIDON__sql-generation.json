@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/adi9336/POSEIDON/sql-generation",
+  "type": "skill",
+  "name": "sql-generation",
+  "description": "Generate safe parameterized SQL plans for oceanographic retrieval tasks. Use when natural language requests must be translated into query filters, joins, and time/depth constraints.",
+  "author": "adi9336",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/adi9336/POSEIDON/blob/HEAD/src/skills/sql_generation/SKILL.md",
+    "repo": "adi9336/POSEIDON",
+    "path": "src/skills/sql_generation/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-03-25T09:22:27Z",
+    "score": 38
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

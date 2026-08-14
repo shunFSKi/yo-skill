@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/kasiopeiya/cdk-project-template/code-review",
+  "type": "skill",
+  "name": "code-review",
+  "description": "TypeScript アプリケーションコードをレビュー。/code-review コマンドが呼ばれたとき、またはユーザーが TypeScript/React コードのレビューを依頼したときに使用する。型安全性・設計原則・セキュリティ・プロジェクトルール準拠を自動チェックする。",
+  "author": "kasiopeiya",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/kasiopeiya/cdk-project-template/blob/HEAD/.claude/skills/code-review/SKILL.md",
+    "repo": "kasiopeiya/cdk-project-template",
+    "path": ".claude/skills/code-review/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

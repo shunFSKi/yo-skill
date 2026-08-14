@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/WanxiaJaneYang/mvp-agent/repo-standards",
+  "type": "skill",
+  "name": "repo-standards",
+  "description": "Use when making repository changes, preparing PRs, or running build/test/lint workflows. Skip for pure Q&A.",
+  "author": "WanxiaJaneYang",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/WanxiaJaneYang/mvp-agent/blob/HEAD/.codex/skills/repo-standards/SKILL.md",
+    "repo": "WanxiaJaneYang/mvp-agent",
+    "path": ".codex/skills/repo-standards/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-04-07T11:53:09Z",
+    "score": 35
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

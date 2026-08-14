@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Omico/dotfiles/orchard-add-package",
+  "type": "skill",
+  "name": "orchard-add-package",
+  "description": "Use when adding a new Orchard app package so orchard list and orchard install can manage a macOS app.",
+  "author": "Omico",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Omico/dotfiles/blob/HEAD/.agents/skills/orchard-add-package/SKILL.md",
+    "repo": "Omico/dotfiles",
+    "path": ".agents/skills/orchard-add-package/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-13T13:43:47Z",
+    "score": 48
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

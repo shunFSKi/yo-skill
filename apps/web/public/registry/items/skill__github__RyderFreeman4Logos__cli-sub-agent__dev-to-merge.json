@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/RyderFreeman4Logos/cli-sub-agent/dev-to-merge",
+  "type": "skill",
+  "name": "dev-to-merge",
+  "description": "Use when: legacy alias, redirects to dev2merge pipeline",
+  "author": "RyderFreeman4Logos",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/RyderFreeman4Logos/cli-sub-agent/blob/HEAD/patterns/dev-to-merge/skills/dev-to-merge/SKILL.md",
+    "repo": "RyderFreeman4Logos/cli-sub-agent",
+    "path": "patterns/dev-to-merge/skills/dev-to-merge/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 12,
+    "pushed_at": "2026-08-12T08:44:12Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

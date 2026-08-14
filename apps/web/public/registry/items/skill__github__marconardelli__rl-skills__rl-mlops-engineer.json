@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/marconardelli/rl-skills/rl-mlops-engineer",
+  "type": "skill",
+  "name": "rl-mlops-engineer",
+  "description": "This skill should be used when the user wants to \"activate the rl mlops engineer\", \"invoke the mlops agent\", \"set up experiment tracking\", \"configure hyperparameter tuning\", \"scale distributed training\", \"configure checkpointing\", \"set up W&B or MLflow\", \"run Optuna/Ray Tune\", or says \"I need the mlops engineer to review the project\". Orchestrates all infrastructure, tracking, and operational pipeline tasks for a reinforcement learning system.",
+  "author": "marconardelli",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/marconardelli/rl-skills/blob/HEAD/skills/rl-mlops-engineer/SKILL.md",
+    "repo": "marconardelli/rl-skills",
+    "path": "skills/rl-mlops-engineer/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-04-07T12:37:05Z",
+    "score": 39
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

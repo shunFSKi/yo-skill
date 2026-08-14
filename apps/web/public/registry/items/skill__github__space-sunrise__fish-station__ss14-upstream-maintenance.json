@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/space-sunrise/fish-station/ss14-upstream-maintenance",
+  "type": "skill",
+  "name": "ss14-upstream-maintenance",
+  "description": "Guide to working with Space Station 14 forks with project-folder pattern (`_Sunrise`, `_Scp`, `_Fish`, `_Lust`) to minimize merge conflicts with the upstream. Use when modifying vanilla code or prototypes.",
+  "author": "space-sunrise",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/space-sunrise/fish-station/blob/HEAD/.github/skills/ss14-upstream-maintenance/SKILL.md",
+    "repo": "space-sunrise/fish-station",
+    "path": ".github/skills/ss14-upstream-maintenance/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

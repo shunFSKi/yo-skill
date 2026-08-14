@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/stagewise-io/stagewise/watch",
+  "type": "skill",
+  "name": "Watch",
+  "description": "Watch a local or remote condition in the background and resume when it is met",
+  "author": "stagewise-io",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/stagewise-io/stagewise/blob/HEAD/apps/browser/bundled/skills/watch/SKILL.md",
+    "repo": "stagewise-io/stagewise",
+    "path": "apps/browser/bundled/skills/watch/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

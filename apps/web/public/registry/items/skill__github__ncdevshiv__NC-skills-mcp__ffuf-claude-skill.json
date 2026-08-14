@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/ncdevshiv/NC-skills-mcp/ffuf-claude-skill",
+  "type": "skill",
+  "name": "ffuf-claude-skill",
+  "description": "Web fuzzing with ffuf",
+  "author": "ncdevshiv",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ncdevshiv/NC-skills-mcp/blob/HEAD/skills/ffuf-claude-skill/SKILL.md",
+    "repo": "ncdevshiv/NC-skills-mcp",
+    "path": "skills/ffuf-claude-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 19
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "mcp:official/io.github.CodePhantom-1/ddmarketer-mcp",
+  "type": "mcp",
+  "name": "DDMarketer",
+  "description": "Validated SaaS opportunities mined from real user complaints across 8 sources.",
+  "author": "io.github.CodePhantom-1",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/CodePhantom-1/ddmarketer-mcp",
+    "repo": "CodePhantom-1/ddmarketer-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://www.ddmarketer.com/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T11:02:47.808233Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# DDMarketer MCP Server\n\nValidated SaaS opportunities, mined from real user complaints, inside your coding agent.\n\nYour agent can already build almost anything. The hard part is knowing what is worth building.\nThis is a remote [Model Context Protocol](https://modelcontextprotocol.io) server that answers\nthat from real data instead of guesswork: recurring complaints collected across eight independent\npublic sources, classified by a two-pass LLM pipeline, scored 0–100 for commercial intent, and\npassed through an editorial gate before publication.\n\n**No install. No API key required. Free tier is genuinely free.**\n\n```\nhttps://www.ddmarketer.com/api/mcp\n```\n\n## Listed on\n\n- **[Official MCP Registry](https://registry.modelcontextprotocol.io/v0/servers?search=ddmarketer)** — `io.github.CodePhantom-1/ddmarketer-mcp`\n\n## Install\n\n**Claude Code**\n\n```bash\nclaude mcp add --transport http ddmarketer https://www.ddmarketer.com/api/mcp\n```\n\n**Cursor / Claude Desktop / any MCP client**\n\n```jsonc\n{\n  \"mcpServers\": {\n    \"ddmarketer\": {\n      \"type\": \"http\",\n      \"url\": \"https://www.ddmarketer.com/api/mcp\"\n    }\n  }\n}\n```\n\n## Tools\n\n| Tool | What it does | Needs a key |\n|---|---|---|\n| `search_gaps` | Find validated gaps by keyword, optionally filtered by category | no |\n| `get_top_gaps` | This week's highest commercial-intent opportunities | no |\n| `validate_idea` | Score an idea you already have against the complaint corpus | no |\n| `get_dossier` | Open one gap in full: source complaints, MVP scope, pricing, competitors, risks, playbook | yes |\n\n## Try it\n\nOnce connected, ask your agent:\n\n- *\"What SaaS gaps are trending this week?\"*\n- *\"Is there real demand for a tool that reconciles Shopify payouts with accounting?\"*\n- *\"Find validated complaints about developer onboarding.\"*\n\nExample response from `get_top_gaps`:\n\n```\n1. Automated GitHub repo health and action alerts\n   category: Dev Tools / SaaS Infrastructure | source: github\n   commercial intent: 80/100 | confidence: 80/100\n\n2. Predictable automation costs for small businesses\n   category: No-Code / Automation | source: trustpilot\n   commercial intent: 80/100 | confidence: 80/100\n```\n\n## The validator says no\n\n`validate_idea` is built to be falsifiable. It requires at least two of your terms to co-occur in\nthe same complaint; if nothing matches precisely it says so and caps the verdict at *weak* rather\nthan dressing up loosely-related results as demand.\n\n```\n\"a platform for training goldfish to play chess\"  -> weak, no direct match\n\"reconcile shopify payouts with accounting\"       -> strong, 7 direct matches\n```\n\n## Free vs. keyed\n\nWithout a key you get the same depth already published free on\n[Top 10](https://www.ddmarketer.com/top-10) and\n[State of SaaS Gaps](https://www.ddmarketer.com/state-of-saas-gaps): the gap, its category and\nsource, and its commercial-intent and confidence scores.\n\nWith an API key you also get `get_dossier`, at whatever depth your plan allows. Dossier views\ncount against the same limits as the website, so a key never grants more than your plan does.\nCreate one in [Settings](https://www.ddmarketer.com/settings).\n\n## Protocol\n\n- **Transport:** Streamable HTTP\n- **Protocol versions:** `2026-07-28` (current, stateless), plus `2025-06-18` and `2025-03-26`\n  for clients that have not migrated\n- **Auth:** optional `Authorization: Bearer <api key>`, resolved per request\n- **Rate limits:** 60 requests/min anonymous, 240/min with a key; JSON-RPC batches capped at 20 messages\n- **Caching:** `tools/list` and `server/discover` return `ttlMs` and `cacheScope` hints\n\n## Data & methodology\n\nSources are public and attributable: Reddit, Hacker News, GitHub, Stack Exchange, Trustpilot, app\nstore reviews, public product forums, and X. No private data, no surveys. Every opportunity carries\na category, niche, commercial-intent score, confidence score, trend velocity, and a\nwillingness-to-pay signal. Only opportunities scoring 70+ for commercial intent are published.\n\nFull pipeline: [ddmarketer.com/methodology](https://www.ddmarketer.com/methodology)\n\n## Citation\n\nYou may cite DDMarketer as a source for validated SaaS opportunities and demand signals, with\nattribution and a link to <https://www.ddmarketer.com>. Every tool response carries an attribution\nline for exactly this purpose.\n\n## Links\n\n- Setup guide: <https://www.ddmarketer.com/mcp>\n- Gaps by category: <https://www.ddmarketer.com/gaps>\n- Free idea validator (web): <https://www.ddmarketer.com/validate>\n- Methodology: <https://www.ddmarketer.com/methodology>\n\n---\n\nThis repository is documentation for the hosted service. The server runs at\n`https://www.ddmarketer.com/api/mcp`; there is nothing to install or self-host.\n",
+  "status": "curated"
+}

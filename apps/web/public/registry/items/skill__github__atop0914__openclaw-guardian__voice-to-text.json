@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/atop0914/openclaw-guardian/voice-to-text",
+  "type": "skill",
+  "name": "voice-to-text",
+  "description": "使用本地 faster-whisper 将语音(.ogg/.m4a/.mp3/.wav)转成文字。触发条件：用户发送语音文件、要求转录、语音转文字、voice to text、speech to text。",
+  "author": "atop0914",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/atop0914/openclaw-guardian/blob/HEAD/voice-to-text/SKILL.md",
+    "repo": "atop0914/openclaw-guardian",
+    "path": "voice-to-text/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-03-23T11:08:25Z",
+    "score": 35
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

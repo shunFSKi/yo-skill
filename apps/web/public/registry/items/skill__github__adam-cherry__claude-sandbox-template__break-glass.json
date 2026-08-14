@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/adam-cherry/claude-sandbox-template/break-glass",
+  "type": "skill",
+  "name": "break-glass",
+  "description": "Emergency direct commit on main. Bypasses pre-commit hook. Admin only.",
+  "author": "adam-cherry",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/adam-cherry/claude-sandbox-template/blob/HEAD/.claude/skills/break-glass/SKILL.md",
+    "repo": "adam-cherry/claude-sandbox-template",
+    "path": ".claude/skills/break-glass/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-07-02T18:41:32Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

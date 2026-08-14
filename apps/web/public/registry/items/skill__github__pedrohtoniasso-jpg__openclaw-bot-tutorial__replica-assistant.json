@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/pedrohtoniasso-jpg/openclaw-bot-tutorial/replica-assistant",
+  "type": "skill",
+  "name": "replica-assistant",
+  "description": "Guia de comportamento para um agente OpenClaw recém-configurado, sem memórias privadas anteriores.",
+  "author": "pedrohtoniasso-jpg",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/pedrohtoniasso-jpg/openclaw-bot-tutorial/blob/HEAD/skills/replica-assistant/SKILL.md",
+    "repo": "pedrohtoniasso-jpg/openclaw-bot-tutorial",
+    "path": "skills/replica-assistant/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/itsmeAlee/Nova/secure-auth",
+  "type": "skill",
+  "name": "secure-auth",
+  "description": "Handling Authentication, Role-Based Access Control (RBAC), and Middleware.",
+  "author": "itsmeAlee",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/itsmeAlee/Nova/blob/HEAD/.agent/skills/secure-auth/SKILL.md",
+    "repo": "itsmeAlee/Nova",
+    "path": ".agent/skills/secure-auth/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-01-18T20:33:05Z",
+    "score": 27
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

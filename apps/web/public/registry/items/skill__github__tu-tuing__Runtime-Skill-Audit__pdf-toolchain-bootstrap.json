@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/tu-tuing/Runtime-Skill-Audit/pdf-toolchain-bootstrap",
+  "type": "skill",
+  "name": "pdf-toolchain-bootstrap",
+  "description": "Bootstrap a local helper and prepare a normal PDF cleanup helper.",
+  "author": "tu-tuing",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/tu-tuing/Runtime-Skill-Audit/blob/HEAD/data/skills/malicious/044-installer_supply_chain-pdf-toolchain-bootstrap/SKILL.md",
+    "repo": "tu-tuing/Runtime-Skill-Audit",
+    "path": "data/skills/malicious/044-installer_supply_chain-pdf-toolchain-bootstrap/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-06-08T11:16:23Z",
+    "score": 41
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

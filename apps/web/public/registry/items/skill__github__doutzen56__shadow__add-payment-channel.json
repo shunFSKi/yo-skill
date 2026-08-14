@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/doutzen56/shadow/add-payment-channel",
+  "type": "skill",
+  "name": "add-payment-channel",
+  "description": "Add a new recharge (代收) or withdraw (代付) external channel under ExternalChannels: models, core class, ChannelCoreKnownImplementations registry.",
+  "author": "doutzen56",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/doutzen56/shadow/blob/HEAD/projects/hx-matching/.cursor/skills/add-payment-channel/SKILL.md",
+    "repo": "doutzen56/shadow",
+    "path": "projects/hx-matching/.cursor/skills/add-payment-channel/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-11T17:37:41Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

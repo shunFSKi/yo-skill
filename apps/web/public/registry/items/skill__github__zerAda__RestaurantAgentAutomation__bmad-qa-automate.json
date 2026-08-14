@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/zerAda/RestaurantAgentAutomation/bmad-qa-automate",
+  "type": "skill",
+  "name": "bmad-qa-automate",
+  "description": "Generate automated API and E2E tests for implemented code using the project's existing test framework (detects existing well known in use test frameworks). Use after implementation to add test coverage. NOT for code review or story validation - use CR for that.. Use when the user asks about qa automate.",
+  "author": "zerAda",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/zerAda/RestaurantAgentAutomation/blob/HEAD/.opencode/skills/bmad-qa-automate/SKILL.md",
+    "repo": "zerAda/RestaurantAgentAutomation",
+    "path": ".opencode/skills/bmad-qa-automate/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-20T21:10:28Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

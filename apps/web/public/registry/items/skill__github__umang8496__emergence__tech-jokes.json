@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/umang8496/emergence/tech-jokes",
+  "type": "skill",
+  "name": "tech-jokes",
+  "description": "Generate a random tech joke from a built-in collection.",
+  "author": "umang8496",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/umang8496/emergence/blob/HEAD/photons/skills/tech-jokes/SKILL.md",
+    "repo": "umang8496/emergence",
+    "path": "photons/skills/tech-jokes/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/bestlux/mail-agent/contacts-lookup",
+  "type": "skill",
+  "name": "contacts-lookup",
+  "description": "Look up contacts through Mail Agent and summarize who they are, how to reach them, and where they appear.",
+  "author": "bestlux",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/bestlux/mail-agent/blob/HEAD/plugins/mail-agent/skills/contacts-lookup/SKILL.md",
+    "repo": "bestlux/mail-agent",
+    "path": "plugins/mail-agent/skills/contacts-lookup/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-06-30T06:24:07Z",
+    "score": 43
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

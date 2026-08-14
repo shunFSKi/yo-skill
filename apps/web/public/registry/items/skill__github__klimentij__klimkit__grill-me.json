@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/klimentij/klimkit/grill-me",
+  "type": "skill",
+  "name": "grill-me",
+  "description": "Interview the user relentlessly about a plan or design until shared understanding is reached. Use when they want a plan stress-tested or mention \"grill me\".",
+  "author": "klimentij",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/klimentij/klimkit/blob/HEAD/deprecated/runtime/packs/codex/skills/grill-me/SKILL.md",
+    "repo": "klimentij/klimkit",
+    "path": "deprecated/runtime/packs/codex/skills/grill-me/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

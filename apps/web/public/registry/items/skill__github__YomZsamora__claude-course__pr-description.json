@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/YomZsamora/claude-course/pr-description",
+  "type": "skill",
+  "name": "pr-description",
+  "description": "Writes pull request descriptions. Use when creating a PR, writing a PR, or when the user asks to summarize changes for a pull request.",
+  "author": "YomZsamora",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/YomZsamora/claude-course/blob/HEAD/skills/pr-description/SKILL.md",
+    "repo": "YomZsamora/claude-course",
+    "path": "skills/pr-description/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-04-23T08:57:46Z",
+    "score": 35
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

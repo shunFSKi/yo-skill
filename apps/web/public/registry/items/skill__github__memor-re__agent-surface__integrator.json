@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/memor-re/agent-surface/integrator",
+  "type": "skill",
+  "name": "integrator",
+  "description": "Use when users or agents add API docs, source links, MCP servers, connector pages, export formats, webhooks, or platform sources that need protocol discovery, bounded ingestion design, credential gates, or integration specs.",
+  "author": "memor-re",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/memor-re/agent-surface/blob/HEAD/skills/integrator/SKILL.md",
+    "repo": "memor-re/agent-surface",
+    "path": "skills/integrator/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-01T05:39:00Z",
+    "score": 45
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

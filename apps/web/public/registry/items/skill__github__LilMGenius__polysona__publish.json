@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/LilMGenius/polysona/publish",
+  "type": "skill",
+  "name": "publish",
+  "description": "Save final content and get platform-specific publishing guidance",
+  "author": "LilMGenius",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/LilMGenius/polysona/blob/HEAD/skills/publish/SKILL.md",
+    "repo": "LilMGenius/polysona",
+    "path": "skills/publish/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 110,
+    "pushed_at": "2026-03-29T12:04:35Z",
+    "score": 60
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "<p align=\"center\">\n  <img src=\"assets/banner.svg\" width=\"100%\">\n</p>\n\n<h3 align=\"center\">Build and run multiple personas across any AI agent.</h3>\n\n<p align=\"center\">\n  <img alt=\"version\" src=\"https://img.shields.io/badge/version-1.3.0-blue\">\n  <img alt=\"license\" src=\"https://img.shields.io/badge/license-MIT-green\">\n  <img alt=\"stars\" src=\"https://img.shields.io/github/stars/LilMGenius/polysona?style=social\">\n</p>\n\n## STOP THINKING LIKE A TEMPLATE\n\nEvery AI agent tool has the same problem: **it gives you someone else's answer, or it doesn't know you.**\n\ngstack gives you Garry Tan's brain. **polysona gives you yours.**\n\n## Why Polysona\n\n- **The 10-framework interview**: We use 10 psychology frameworks across Western depth, Western supplement, and Eastern reflection to extract conscious goals, unconscious patterns, and the gaps between them.\n- **Multi-Persona Engine**: You aren't just one person. Polysona builds and manages multiple personas (the executive, the creator, the gamer) across different domains.\n- **Portability**: Your extracted persona isn't locked into one tool. It runs across any AI agent (Codex, Claude Code, OpenCode).\n\n## Architecture\n\n```text\n┌─────────────────────────────────────────────────────────────┐\n│                                                             │\n│                    POLYSONA (Orchestrator)                  │\n│     Build and run multiple personas across any AI agent.    │\n│          Manage all persona data and agents                 │\n│                                                             │\n│  ┌─────────────────────────────────────────────────────┐    │\n│  │                 SETUP (One-time)                     │    │\n│  │                                                     │    │\n│  │  ① Profiler                                          │    │\n│  │     Interview → Extract logs                         │    │\n│  │         │                                           │    │\n│  │         ▼                                           │    │\n│  │  [Polysona structures logs]                          │    │\n│  │     → persona.md + nuance.md + accounts.md           │    │\n│  │                                                     │    │\n│  └─────────────────────────────────────────────────────┘    │\n│                        │ persona data                       │\n│                        ▼                                    │\n│  ┌─────────────────────────────────────────────────────┐    │\n│  │              LOOP (Per Content)                      │    │\n│  │                                                     │    │\n│  │  ② Trendsetter                                       │    │\n│  │     Trend topics collection                          │    │\n│  │         │                                           │    │\n│  │         ▼                                           │    │\n│  │  ③ Content-Writer                                    │    │\n│  │     persona + trend → Platform-specific drafts       │    │\n│  │         │                                           │    │\n│  │         ▼                                           │    │\n│  │  ④ Virtual-Follower (QA)                             │    │\n│  │     Evaluate by rolemodel → TOP 5 → User picks       │    │\n│  │         │                                           │    │\n│  │         ▼                                           │    │\n│  │  ⑤ Admin                                             │    │\n│  │     Publish → Track engagement → Feedback            │    │\n│  │                                                     │    │\n│  └─────────────────────────────────────────────────────┘    │\n│                                                             │\n└─────────────────────────────────────────────────────────────┘\n```\n\n## Quick Start\n\n```bash\n# Codex (primary)\n# AGENTS.md is auto-recognized by Codex\n# Codex auto-discovers repo skills from .agents/skills\n# This repo already mirrors ./skills into ./.agents/skills\n# If you edit ./skills later, resync with:\nnode ./scripts/sync-codex-skills.mjs\n# or:\nbun run codex:skills:sync\n# Then restart Codex if the updated skill does not appear immediately\n# Use $interview, $introduce, $trend, $content x, $qa, $publish, $status, $export in your Codex session\n\n# Claude Code\n# 1. Add local marketplace\nclaude plugin marketplace add ./.claude-plugin/marketplace.json\n# 2. Install plugin\nclaude plugin install polysona\n# 3. Start session\n# Then: /interview → /introduce → /trend → /content x → /qa → /publish\n# Hooks may apply via hooks/hooks.json depending on host support\n```\n\n## 5 Agents\n\n| Name | Role | Command |\n|---|---|---|\n| **profiler** | Deep psychology interviewer | `$interview` / `/interview` |\n| **trendsetter** | Trend detector | `$trend` / `/trend` |\n| **content-writer** | Platform content generator | `$content` / `/content` |\n| **virtual-follower** | QA simulator | `$qa` / `/qa` |\n| **admin** | Publisher and tracker | `$publish` / `/publish` |\n\n## Utility Commands\n\n| Command | Purpose |\n|---|---|\n| `$introduce` / `/introduce` | Inject the current persona into the active session |\n| `$status` / `/status` | Show grounded persona and pipeline status |\n| `$export` / `/export` | Export persona-derived instructions into generated files for another workspace |\n\n## Dashboard\n\nRun the local-first dashboard to visualize your personas and content pipeline:\n\n```bash\nbun run dev\n# Open http://localhost:3000\n```\n\nFeatures:\n- Persona list from `personas/` directory\n- System status and version\n- Quick start commands reference\n\n<!-- demo screenshots will be added -->\n\n## Roadmap\n\n**— v1: Korean Core + Product Quality —**\n- **v1.0** Text content generation\n- **v1.1** Persona extraction to CLAUDE.md/AGENTS.md + Multi-CLI marketplace support\n- **v1.2** Local-first fullstack dashboard foundation\n- **v1.3** Dashboard expansion + pipeline visibility + product polish\n- **v1.4** Trend knowledge loop + stronger quality verification\n- **v1.5** Full-version dashboard + demo polish\n- **v1.6** External SaaS integration via MCP\n\n**— v2: Korean Media Expansion —**\n- **v2.0** Korean card news generation\n- **v2.1** Korean short-form video scripts\n- **v2.2** Korean long-form video scripts\n\n**— v3: English Expansion —**\n- **v3.0** English text content\n- **v3.1** English card news\n- **v3.2** English short-form scripts\n- **v3.3** English long-form scripts\n\n## Contributing & License\n\nPolysona is open-source. Contributions are welcome. See `LICENSE` for more information (MIT License).\n",
+  "status": "curated"
+}

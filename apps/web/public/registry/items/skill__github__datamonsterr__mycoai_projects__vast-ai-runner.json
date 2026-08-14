@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/datamonsterr/mycoai_projects/vast-ai-runner",
+  "type": "skill",
+  "name": "vast-ai-runner",
+  "description": "Run canonical Vast.ai tasks from the local control plane, capture remote status, sync artifacts, and report cleanup state.",
+  "author": "datamonsterr",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/datamonsterr/mycoai_projects/blob/HEAD/.opencode/skills/vast-ai-runner/SKILL.md",
+    "repo": "datamonsterr/mycoai_projects",
+    "path": ".opencode/skills/vast-ai-runner/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-15T11:20:39Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/ne1tha/my_ccb/pend",
+  "type": "skill",
+  "name": "pend",
+  "description": "Inspect the latest CCB mailbox/job reply for a named agent or `job_id`.",
+  "author": "ne1tha",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ne1tha/my_ccb/blob/HEAD/claude_skills/pend/SKILL.md.powershell",
+    "repo": "ne1tha/my_ccb",
+    "path": "claude_skills/pend/SKILL.md.powershell"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-05-25T10:35:31Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

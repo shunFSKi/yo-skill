@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/akhilsinghcodes/jidra/jidra-navigate",
+  "type": "skill",
+  "name": "jidra-navigate",
+  "description": "Use for ANY code navigation question: who calls X, what does X call, how does X flow, what implements X, does X exist. Trigger: \"who calls\", \"what calls\", \"find callers\", \"trace flow\", \"what implements\", \"does X exist\".",
+  "author": "akhilsinghcodes",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/akhilsinghcodes/jidra/blob/HEAD/.claude/skills/jidra-navigate/SKILL.md",
+    "repo": "akhilsinghcodes/jidra",
+    "path": ".claude/skills/jidra-navigate/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-07-30T10:23:41Z",
+    "score": 48
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

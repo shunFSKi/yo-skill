@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/maresmar/wmbus-decoder/build-fap",
+  "type": "skill",
+  "name": "build-fap",
+  "description": "Build the production WM-Bus application into a selftest-free Flipper FAP. Use for normal builds, release artifacts, or restoring production after on-device selftests.",
+  "author": "maresmar",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/maresmar/wmbus-decoder/blob/HEAD/.agents/skills/build-fap/SKILL.md",
+    "repo": "maresmar/wmbus-decoder",
+    "path": ".agents/skills/build-fap/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/EMIYAttk/Intelligent_work_order_Agent/software-os",
+  "type": "skill",
+  "name": "software_os",
+  "description": "处理Windows/macOS系统卡顿、蓝屏、软件崩溃、驱动异常、系统更新失败等问题",
+  "author": "EMIYAttk",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/EMIYAttk/Intelligent_work_order_Agent/blob/HEAD/skills/software_os/skill.md",
+    "repo": "EMIYAttk/Intelligent_work_order_Agent",
+    "path": "skills/software_os/skill.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-04-07T07:12:24Z",
+    "score": 32
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

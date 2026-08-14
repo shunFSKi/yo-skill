@@ -32,7 +32,8 @@
   },
   "quality": {
     "stars": null,
-    "pushed_at": "2026-08-13T19:06:14.52184Z"
+    "pushed_at": "2026-08-13T19:06:14.52184Z",
+    "score": 42
   },
   "security": {
     "score": 100,
@@ -64,6 +65,6 @@
     "category": null,
     "featured": false
   },
-  "readme": "# nanocart-mcp\n\nOfficial [NanoCart](https://nanocart.io) MCP server — run your store from any\nMCP-capable AI agent (Claude Code, Claude Desktop, Cursor, Codex, and friends).\nList and update products (with variants and images), manage orders, coupons,\ncategories, subscribers and settings, and pull sales reports — by asking.\n\n**39 tools.** Reads are marked read-only; destructive tools (archive product,\ndelete coupon) are annotated so your agent asks before acting. Refunds, billing\nchanges, and API-key management are deliberately NOT exposed — do those in your\n[dashboard](https://portal.nanocart.io).\n\n## Credentials\n\nFrom your dashboard: **Settings → API Keys** (`sc_live_...`, keep secret) and\n**Settings → Store Information** (your store ID). The key grants full admin\naccess to your store — treat it like a password.\n\n## Option A — Local (recommended)\n\nClaude Code:\n```bash\nclaude mcp add nanocart --env NANOCART_API_KEY=sc_live_... --env NANOCART_STORE_ID=your-store-id -- npx -y nanocart-mcp\n```\n\nAny client that speaks stdio MCP (JSON config style):\n```json\n{\n  \"mcpServers\": {\n    \"nanocart\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"nanocart-mcp\"],\n      \"env\": {\n        \"NANOCART_API_KEY\": \"sc_live_...\",\n        \"NANOCART_STORE_ID\": \"your-store-id\"\n      }\n    }\n  }\n}\n```\n\n## Option B — Hosted (no install)\n\nEndpoint: `https://mcp.nanocart.io/mcp?store=your-store-id` with header\n`Authorization: Bearer sc_live_...` (Streamable HTTP).\n\nClaude Code:\n```bash\nclaude mcp add nanocart --transport http \"https://mcp.nanocart.io/mcp?store=your-store-id\" --header \"Authorization: Bearer sc_live_...\"\n```\n\nNote: web clients that only support OAuth-based custom connectors (e.g.\nclaude.ai's connector UI) can't send API-key headers yet — use Option A there.\n\n## Example prompts\n\n- \"List my draft products and publish the ones with images\"\n- \"Create a SUMMER20 coupon — 20% off, min order $50, expires end of August\"\n- \"What did I sell last week? Any orders I still need to ship?\"\n- \"Mark order NCT-1042 shipped with tracking 9400 1000 0000 0000 0000 00\"\n- \"Upload the photos in ./shots and create products from them at $24 each\"\n\n## Safety\n\n- Secrets are redacted from every response; your key is never echoed or logged.\n- Destructive tools carry MCP `destructiveHint` annotations — well-behaved\n  clients prompt before running them.\n- Prices are explicit `price_cents` integers (no dollars/cents ambiguity).\n\nPairs with the [NanoCart skill](https://github.com/ByteBunny-io/nanocart-skill)\n(integration knowledge for building the cart into websites). Docs:\nhttps://docs.nanocart.io/#ai-build · AI-readable: https://docs.nanocart.io/llms-full.txt\n\nMIT · © 2026 NanoCart · a ByteBunny, LLC company\n",
+  "readme": null,
   "status": "curated"
 }

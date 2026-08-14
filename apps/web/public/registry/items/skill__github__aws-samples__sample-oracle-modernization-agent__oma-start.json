@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/aws-samples/sample-oracle-modernization-agent/oma-start",
+  "type": "skill",
+  "name": "oma-start",
+  "description": "Use when the user says \"start\", \"시작\", \"/oma:start\", \"변환 시작\", or asks to begin/continue the Oracle SQL transformation project.",
+  "author": "aws-samples",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/aws-samples/sample-oracle-modernization-agent/blob/HEAD/application-sql-transform-agent/.claude/skills/oma-start/SKILL.md",
+    "repo": "aws-samples/sample-oracle-modernization-agent",
+    "path": "application-sql-transform-agent/.claude/skills/oma-start/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 3,
+    "pushed_at": "2026-07-08T11:25:26Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

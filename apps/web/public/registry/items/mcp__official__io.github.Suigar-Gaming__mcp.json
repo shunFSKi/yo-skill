@@ -42,7 +42,8 @@
   },
   "quality": {
     "stars": null,
-    "pushed_at": "2026-08-13T18:07:42.544711Z"
+    "pushed_at": "2026-08-13T18:07:42.544711Z",
+    "score": 42
   },
   "security": {
     "score": 100,
@@ -74,6 +75,6 @@
     "category": null,
     "featured": false
   },
-  "readme": "# Suigar TypeScript SDKs\n\nA collection of TypeScript SDKs and MCP tooling for interacting with the Suigar contracts.\n\n## Documentation\n\nFor SDK documentation, visit [suigar.com/docs/sdk](https://suigar.com/docs/sdk).\n\nFor MCP documentation, visit [suigar.com/docs/mcp](https://suigar.com/docs/mcp).\n\nFor Sui TypeScript SDK documentation, visit [sdk.mystenlabs.com](https://sdk.mystenlabs.com/).\n\n## Install the MCP server\n\nInstall Suigar MCP for all detected coding agents with [add-mcp](https://www.npmjs.com/package/add-mcp):\n\n```bash\nnpx add-mcp @suigar/mcp@latest --name suigar\n```\n\nAdd `-y` to skip the installer prompts. Restart or reload your MCP client after installation.\n\nTo configure an MCP client manually, use:\n\n```json\n{\n\t\"mcpServers\": {\n\t\t\"suigar\": {\n\t\t\t\"command\": \"npx\",\n\t\t\t\"args\": [\"-y\", \"@suigar/mcp@latest\"]\n\t\t}\n\t}\n}\n```\n\n## Agent Skills\n\nSuigar agent skills live in the separate `Suigar-Gaming/agent-skills` repository. The MCP-focused skill teaches agents how to install, configure, and operate `@suigar/mcp` for Suigar config reads, game metadata, NFT lookups, referral claim reads, unsigned transaction builders, and dry-runs.\n\nInstall all Suigar skills with:\n\n```bash\nnpx skills add Suigar-Gaming/agent-skills --global --yes\n```\n\nInstall only the MCP skill with:\n\n```bash\nnpx skills add Suigar-Gaming/agent-skills --skill suigar-mcp --global --yes\n```\n\n## Packages\n\n- `@suigar/sdk` in `packages/sdk`: ESM-only TypeScript SDK for Suigar provably fair on-chain Sui casino game, NFT, referral transactions.\n- `@suigar/mcp` in `packages/mcp`: MCP stdio server and MCP App for reading Suigar config, game metadata, NFTs, and referral claim amounts, plus building unsigned Suigar transactions through the SDK.\n\nThe SDK's public `@suigar/sdk/utils` entrypoint includes `DEFAULT_QUERY_LIMIT` (`50`), the reusable default page size for SDK queries. Import it instead of duplicating that value whenever an application or a new paginated SDK call needs the standard limit.\n\n## Development\n\nAny of the following commands can be run at the root of the project.\n\nWhen running a task that depends on generated or built artifacts, use `turbo` to ensure task dependencies are run first.\n\n### Setup\n\n```bash\npnpm install\npnpm run build\n```\n\nDependency install scripts are disabled by default in `pnpm-workspace.yaml`. If a new dependency needs an install or build script, explicitly review it before approving it with `pnpm approve-builds`. Transitive dependencies are also blocked from resolving untrusted git or tarball URLs.\n\n### Building\n\n```bash\npnpm run build\n# or\npnpm turbo run build\n```\n\n### Unit Tests\n\nFor unit tests:\n\n```bash\npnpm run test\n# or\npnpm turbo run test\n```\n\n### Type Checking\n\n```bash\npnpm run typecheck\n# or\npnpm turbo run typecheck\n```\n\n### Linting\n\nThis repo uses Oxlint and Oxfmt for linting and formatting.\n\n```bash\npnpm run lint\n```\n\nYou can automatically fix many lint issues by running:\n\n```bash\npnpm run lint:fix\n```\n\nTo run Oxlint and Oxfmt individually, use:\n\n```bash\npnpm run oxlint\npnpm run oxfmt\npnpm run oxlint:fix\npnpm run oxfmt:fix\n```\n",
+  "readme": null,
   "status": "curated"
 }

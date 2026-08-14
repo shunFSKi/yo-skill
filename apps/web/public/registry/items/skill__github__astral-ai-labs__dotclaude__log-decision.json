@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/astral-ai-labs/dotclaude/log-decision",
+  "type": "skill",
+  "name": "log-decision",
+  "description": "Appends an entry to docs/decisions.md when an architectural or cross-cutting decision is made. Use when committing to a tech choice that other agents might re-litigate (e.g. SSE vs WebSockets, RLS vs service-role, a library choice). Don't use for single-file implementation choices.",
+  "author": "astral-ai-labs",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/astral-ai-labs/dotclaude/blob/HEAD/skills/log-decision/SKILL.md",
+    "repo": "astral-ai-labs/dotclaude",
+    "path": "skills/log-decision/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 4,
+    "pushed_at": "2026-06-01T20:11:08Z",
+    "score": 46
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

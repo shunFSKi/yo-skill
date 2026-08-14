@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/U-Keun/Tickly/tickly-state-5lines",
+  "type": "skill",
+  "name": "tickly-state-5lines",
+  "description": "Tickly 작업 시작/재개할 때 현재 상태를 5줄로 고정 요약한다. \"Tickly 상태 요약\", \"오늘 뭐부터?\", \"진행상황 정리\" 같은 요청에 사용한다.",
+  "author": "U-Keun",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/U-Keun/Tickly/blob/HEAD/.claude/skills/tickly-state-5lines/SKILL.md",
+    "repo": "U-Keun/Tickly",
+    "path": ".claude/skills/tickly-state-5lines/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-07-08T08:31:44Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

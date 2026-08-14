@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/edouardb/agent-sdk/claude-skills-markdown-fetch-skill-md",
+  "type": "skill",
+  "name": "claude-skills-markdown-fetch-skill-md",
+  "description": "Fetch a URL, convert to Markdown, and save to fetched.md.",
+  "author": "edouardb",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/edouardb/agent-sdk/blob/HEAD/.claude/skills/markdown-fetch/SKILL.md",
+    "repo": "edouardb/agent-sdk",
+    "path": ".claude/skills/markdown-fetch/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2025-11-24T21:52:20Z",
+    "score": 27
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

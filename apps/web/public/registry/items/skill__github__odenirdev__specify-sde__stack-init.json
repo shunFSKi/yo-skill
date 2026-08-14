@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/odenirdev/specify-sde/stack-init",
+  "type": "skill",
+  "name": "stack-init",
+  "description": "Initialize `.specify/stack.yml` for a project. Creates a minimal declarative YAML as the stack source of truth consumed by stack-enable, stack-disable, and stack-list.",
+  "author": "odenirdev",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/odenirdev/specify-sde/blob/HEAD/.github/skills/stack-init/SKILL.md",
+    "repo": "odenirdev/specify-sde",
+    "path": ".github/skills/stack-init/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

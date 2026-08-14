@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/bkelly-lab/jkp-data/check-docs",
+  "type": "skill",
+  "name": "check-docs",
+  "description": "Check whether code changes need documentation updates.",
+  "author": "bkelly-lab",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/bkelly-lab/jkp-data/blob/HEAD/.claude/skills/check-docs/SKILL.md",
+    "repo": "bkelly-lab/jkp-data",
+    "path": ".claude/skills/check-docs/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 52,
+    "pushed_at": "2026-08-05T19:45:43Z",
+    "score": 58
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/h0w4r/ibmi-agents-vscode/ibmi-qa",
+  "type": "skill",
+  "name": "ibmi-qa",
+  "description": "Crea pruebas unitarias, integrales y de regresion para IBM i. Usar para planes QA, matrices de casos, datos, pasos ejecutables, resultados esperados, evidencia y rollback.",
+  "author": "h0w4r",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/h0w4r/ibmi-agents-vscode/blob/HEAD/.github/skills/ibmi-qa/SKILL.md",
+    "repo": "h0w4r/ibmi-agents-vscode",
+    "path": ".github/skills/ibmi-qa/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

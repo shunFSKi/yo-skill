@@ -1,0 +1,54 @@
+{
+  "id": "mcp:official/io.github.ndrysdal-byte/prediction-friction-tracker",
+  "type": "mcp",
+  "name": "Prediction Market Friction Tracker",
+  "description": "Prediction-market fee/KYC/withdrawal data, venue recommendations, and a paid x402 change feed.",
+  "author": "io.github.ndrysdal-byte",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ndrysdal-byte/prediction-friction-tracker",
+    "repo": "ndrysdal-byte/prediction-friction-tracker"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://prediction-friction-tracker-production.up.railway.app/mcp/"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T12:44:01.125178Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# Prediction market friction tracker\n\nStructured KYC, fee, and withdrawal data across 12 prediction-market venues,\nplus a change feed for when those terms move and a natural-language \"which\nvenue is best for X\" recommendation tool. Built for AI agents that need to\ncheck execution friction before routing a trade — not for humans clicking\naround a dashboard.\n\n**Live now:** https://prediction-friction-tracker-production.up.railway.app\n\n## For agents: three ways in\n\n1. **Plain HTTP** — `GET /friction/venues`, `GET /friction/venue/{slug}`,\n   `GET /friction/changes?since=<ISO8601>`. Full OpenAPI spec at\n   `/openapi.json`, interactive docs at `/docs`, agent-readable summary at\n   [`/llms.txt`](https://prediction-friction-tracker-production.up.railway.app/llms.txt).\n2. **MCP** — a streamable-HTTP MCP server mounted at `/mcp/`, exposing\n   `list_venues`, `get_venue`, `recommend_venue`, and `get_changes_info` as\n   tools. Point any MCP-compatible client at the `/mcp/` URL directly.\n3. **x402** — `/friction/changes` (the time-sensitive change feed) is gated\n   by the [x402 protocol](https://x402.org): unpaid requests get a real\n   `402` with a payment challenge; pay $0.05 USDC on **Base mainnet** and\n   retry to get the data. This is live, verified end-to-end with real money,\n   not a demo — see `api.py` for the CDP-facilitator wiring.\n\n## Endpoints\n\n| Endpoint | Cost | What it returns |\n|---|---|---|\n| `GET /friction/venues` | Free | Current snapshot of every tracked venue. Optional `?confidence=verified\\|stale\\|unconfirmed` filter. |\n| `GET /friction/venue/{slug}` | Free | One venue's current fee/KYC/withdrawal/API-access data, e.g. `/friction/venue/kalshi`. |\n| `GET /friction/changes?since=<ISO8601>` | $0.05 USDC (x402) | Append-only log of every detected change since a timestamp — the time-sensitive product. |\n\nEvery record carries a `confidence` field: `verified` (spot-checked or\nhigh-confidence extraction), `stale` (source was unreachable, showing a\ncached value), or `unconfirmed` (LLM extraction was ambiguous). Treat\n`unconfirmed` as a lead to verify against the venue directly, not a fact to\ntrade on.\n\n## MCP tools\n\n- `list_venues(confidence)` — browse/filter the current snapshot.\n- `get_venue(slug)` — one venue's full data.\n- `recommend_venue(query)` — free-text \"which venue is best for lowest fees\n  on high-frequency trading\" / \"I don't want to do KYC\" / \"API access\n  without a wallet\" style questions, reasoned over the current dataset. Says\n  so explicitly rather than guessing when a query depends on data this\n  tracker doesn't have (liquidity, volume, spread, uptime).\n- `get_changes_info()` — describes the paid change feed (URL, price) without\n  reimplementing it for free.\n\n## What's here\n\n| File | What it does |\n|---|---|\n| `schema.py` | The data model — one `VenueFriction` record per venue, plus the `VenueRecommendation` response shape |\n| `venues.py` | The 12 tracked venues and their policy-page source URLs |\n| `scrapers/base.py` | Fetches and cleans raw policy-page text (requests + Playwright fallback for JS-rendered pages) |\n| `extract.py` | Sends raw page text to Claude, gets back a structured `VenueFriction` matching the schema |\n| `recommend.py` | Natural-language venue recommendation — reasons over the current dataset via Claude, structured-output constrained to real venue slugs |\n| `reference_check.py` | Cross-checks scraped fees against a third-party source (TradeBlock), flags divergences for human review |\n| `storage.py` | SQLite: `current_state` table (latest snapshot) + `change_log` table (append-only, the paid product) |\n| `diff.py` | Compares a fresh extraction to the stored one, writes a `ChangeEvent` for anything that moved |\n| `run_pipeline.py` | Orchestrates fetch → extract → diff → store, for all 12 venues |\n| `api.py` | FastAPI server — the HTTP endpoints above, x402 payment gating, MCP mount |\n| `mcp_server.py` | The MCP tool definitions, mounted into `api.py` at `/mcp/` |\n| `test_pipeline_logic.py`, `test_recommend_logic.py` | Pure-logic tests, no API key needed |\n\n## Running it locally\n\n```bash\npip install -r requirements.txt\npython test_pipeline_logic.py      # no API key needed, proves storage/diff logic\npython test_recommend_logic.py     # no API key needed, proves recommendation logic\nexport ANTHROPIC_API_KEY=sk-ant-...\npython run_pipeline.py             # real scrape -> extract -> store, all 12 venues\nuvicorn api:app --reload           # boots the API on localhost:8000\n```\n\nThen in another terminal:\n```bash\ncurl http://localhost:8000/friction/venues\ncurl http://localhost:8000/friction/venue/kalshi\ncurl \"http://localhost:8000/friction/changes?since=2020-01-01T00:00:00Z\"\n```\n\nSee `CLAUDE.md` for environment quirks, Claude API usage notes, and the\ndata-quality/confidence model in more depth.\n\nInformational only — not financial or legal advice. Verify directly with\nthe venue before acting on any figure returned here.\n",
+  "status": "curated"
+}

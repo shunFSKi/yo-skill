@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/jasondoc3/dotfiles/linear-stitch",
+  "type": "skill",
+  "name": "linear-stitch",
+  "description": "Take the current ask, get linear context, create a issue retroactively, and and work it",
+  "author": "jasondoc3",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/jasondoc3/dotfiles/blob/HEAD/claude/.claude/skills/linear-stitch/SKILL.md",
+    "repo": "jasondoc3/dotfiles",
+    "path": "claude/.claude/skills/linear-stitch/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

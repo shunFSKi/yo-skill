@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/TreeX-X/WorkFlowX/diag-example-skill",
+  "type": "skill",
+  "name": "diag-example-skill",
+  "description": "Reversible diagnostic skill for TEST-MEMORY-001. Used only as a minimal 'feature under test' to verify file creation and memory round-trips. Safe to delete.",
+  "author": "TreeX-X",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/TreeX-X/WorkFlowX/blob/HEAD/.claude/skills/diag-example-skill/SKILL.md",
+    "repo": "TreeX-X/WorkFlowX",
+    "path": ".claude/skills/diag-example-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 55,
+    "pushed_at": "2026-07-24T16:03:16Z",
+    "score": 61
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

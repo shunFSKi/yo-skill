@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/zroslaw/lore-framework/skills-being-skill-md",
+  "type": "skill",
+  "name": "skills-being-skill-md",
+  "description": "Manage Lore Beings from one entry point. Usage: /lr:being [help|status|init|create|validate|logs|keeper|engine|workspace|pause|resume]",
+  "author": "zroslaw",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/zroslaw/lore-framework/blob/HEAD/skills/being/SKILL.md",
+    "repo": "zroslaw/lore-framework",
+    "path": "skills/being/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-12T05:37:40Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

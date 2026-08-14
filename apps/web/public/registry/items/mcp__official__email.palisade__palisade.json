@@ -6,8 +6,8 @@
   "author": "email.palisade",
   "source": {
     "registry": "mcp-official",
-    "url": "https://github.com/palisadeemail/dns-auditor",
-    "repo": "palisadeemail/dns-auditor"
+    "url": "https://github.com/palisadeemail/palisade-mcp",
+    "repo": "palisadeemail/palisade-mcp"
   },
   "license": null,
   "install": {
@@ -16,7 +16,8 @@
   },
   "quality": {
     "stars": null,
-    "pushed_at": "2026-07-29T17:42:49.56428Z"
+    "pushed_at": "2026-08-14T15:02:58.882467Z",
+    "score": 52
   },
   "security": {
     "score": 100,
@@ -48,6 +49,6 @@
     "category": "办公",
     "featured": false
   },
-  "readme": null,
+  "readme": "# @palisadeemail/mcp\n\nConnect an MCP client to the [Palisade](https://palisade.email) MCP server, which monitors and manages email authentication (SPF, DKIM, DMARC, MTA-STS, BIMI) for your domains.\n\nPalisade's MCP server is remote (Streamable HTTP at `https://api.palisade.email/mcp`). This package is a thin local bridge for stdio-based clients, using [`mcp-remote`](https://www.npmjs.com/package/mcp-remote) under the hood. Clients that support remote HTTP MCP servers with a bearer token can point at the URL directly and skip this package.\n\n## Get an API key\n\nCreate one at [app.palisade.email](https://app.palisade.email) → Settings → API keys, or programmatically via headless signup. See the [developer guide](https://developer.palisade.email/docs/guide).\n\n## Use it\n\nSet `PALISADE_API_KEY` and run:\n\n```bash\nPALISADE_API_KEY=secret_... npx -y @palisadeemail/mcp\n```\n\n### Client config (stdio)\n\n```json\n{\n  \"mcpServers\": {\n    \"palisade\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@palisadeemail/mcp\"],\n      \"env\": { \"PALISADE_API_KEY\": \"secret_...\" }\n    }\n  }\n}\n```\n\n### Direct (clients that support remote HTTP MCP)\n\n```json\n{\n  \"mcpServers\": {\n    \"palisade\": {\n      \"type\": \"http\",\n      \"url\": \"https://api.palisade.email/mcp\",\n      \"headers\": { \"Authorization\": \"Bearer secret_...\" }\n    }\n  }\n}\n```\n\nWhen `headers.Authorization` is set, the client authenticates with that API key and does not fall back to OAuth. The server replies `401` with a `WWW-Authenticate` challenge whenever credentials are missing or rejected, so a bad key surfaces as a connection error rather than silently starting an OAuth flow.\n\n### If the server connects but the Palisade tools are missing\n\nA session that offers only `authenticate` / `complete_authentication` is using an OAuth-based entry, not your API-key entry. The Palisade server has no reduced tool set: any authenticated caller gets the full list under [Tools](#tools). Those two tools come from the client's own pending-OAuth state.\n\nThis usually means a same-named server is configured somewhere else and is the one in effect. In Claude Code, `--scope local` applies only to the directory it was run in, and a `palisade` entry in user scope (from a previous OAuth connection) applies everywhere else. Check which entry actually wins:\n\n```bash\nclaude mcp get palisade\n```\n\nThe reported scope is the one in effect. If it is not the entry holding your API key, remove the other one, for example `claude mcp remove palisade -s user`, or give the API-key entry a distinct name.\n\n## Tools\n\nAccounts (`get_account`), domains (`list_domains`, `get_domain`, `add_domain`, `remove_domain`, `verify_domain`), DNS setup (`get_dns_records` — the exact records to publish at your own DNS provider), MTA-STS (`get_mta_sts`, `enable_mta_sts`), remediation tasks (`list_tasks`, `get_task`), groups (`list_groups`), and billing (`get_subscription`, `start_checkout`, `get_billing_portal_url`).\n\nPalisade tells you which DNS records to publish; you apply them at whatever DNS provider hosts the domain. Payment happens on Stripe-hosted pages.\n\n## Environment\n\n- `PALISADE_API_KEY` (required) — your Palisade API key.\n- `PALISADE_MCP_URL` (optional) — override the server URL (defaults to `https://api.palisade.email/mcp`).\n",
   "status": "curated"
 }

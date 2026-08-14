@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/com.travelanimator/mcp",
+  "type": "mcp",
+  "name": "mcp",
+  "description": "Make animated travel-route videos: plan a route, style the animation, render an MP4.",
+  "author": "com.travelanimator",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Lascade-Co/travelanimator-mcp",
+    "repo": "Lascade-Co/travelanimator-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "travel-animator"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T13:06:34.553919Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": "# Travel Animator MCP\n\n**Describe a trip. Get a video of it.**\n\nTravel Animator MCP lets an AI assistant plan a route, style the animation and render it to\nan MP4 on your machine — the route drawing itself as it is travelled, a 3D vehicle following\nit, map labels, country flags, and the distance badge the mobile app draws on top.\n\n[![PyPI](https://img.shields.io/pypi/v/travel-animator)](https://pypi.org/project/travel-animator/)\n[![Python](https://img.shields.io/pypi/pyversions/travel-animator)](https://pypi.org/project/travel-animator/)\n![Platforms](https://img.shields.io/badge/platforms-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey)\n![Licence](https://img.shields.io/badge/licence-limited%20use-orange)\n\n<!-- TODO(asset): 12s looping demo — a route drawing itself, vehicle following, on the globe.\n     Add it as assets/demo.gif, then embed it here as a markdown image.\n     Deliberately absent rather than committed broken: a 404 image is worse than none. -->\n\n> **You say:** *\"Make me a 20-second video of a road trip from Lisbon to Porto to Braga, on\n> the Terrain map, with a red line and a car.\"*\n>\n> **Your assistant:** creates the project, adds the three stops, follows real roads between\n> them, sets the map and line style, renders, and hands back the path to the MP4.\n\nMore prompts that work — and what it won't do — in [examples/prompts.md](examples/prompts.md).\n\n---\n\n## Install\n\nTwo commands. The second one is not optional — a stdio MCP server cannot prompt you for\ncredentials, so you log in once in your own terminal.\n\n**Claude Code**\n\n```bash\nclaude mcp add travel-animator -- uvx --from \"travel-animator[mcp]\" travel-animator mcp\nuvx travel-animator login\n```\n\n**Claude Desktop, Cursor, VS Code, Codex, or any client that takes JSON**\n\n```json\n{\n  \"mcpServers\": {\n    \"travel-animator\": {\n      \"command\": \"uvx\",\n      \"args\": [\"--from\", \"travel-animator[mcp]\", \"travel-animator\", \"mcp\"]\n    }\n  }\n}\n```\n\n…then `uvx travel-animator login` in a terminal.\n\n**Already have Python?** `pip install \"travel-animator[mcp]\"` and use `travel-animator` as\nthe `command`. Python 3.12+.\n\nPer-client instructions, including the \"works in the terminal but not in the desktop app\"\n`PATH` fix, are in [docs/clients.md](docs/clients.md).\n\n## What you need\n\n| | |\n|---|---|\n| **Python** | 3.12 or newer |\n| **Account** | The same Travel Animator account as the mobile app. **A free account can log in, browse the catalogues and author a project — only a premium account can render one.** |\n| **Platform** | macOS (Apple silicon), Linux (x86-64, arm64), Windows (x64). These are the four wheels published; other platforms — including Intel macOS — are not supported. |\n| **Disk** | The wheel is ~85 MB. It carries its own Java runtime and, on macOS and Windows, its own graphics driver — there is nothing else to install. Linux uses the system GLES driver, or Mesa for software rendering. |\n| **Network** | Rendering is **not** offline: map tiles, glyphs and sprites are fetched as frames are drawn, then cached under `~/.cache/tada/render`. |\n\nIf your machine can't render at all, the server says so up front — before you build a project\nit can't finish — and can fall back to a server-side render.\n\n## What it can make\n\n- **34 map styles** — Terrain, Satellite, Sketch, Glow, Comic, Winter, Pixel, Watercolor and\n  more (`list_maps`). One is free; the rest need premium.\n- **355 3D models** — land, air and water, from realistic cars and planes to an elephant\n  (`list_models`). 11 are free.\n- **7 route line styles** — solid, dashed, dotted, striped, glow, transparent, auto\n  (`list_line_styles`).\n- **Two projections** — flat `MERCATOR` or a 3D `GLOBE` with stars, a sun and a moon.\n- **9–60 second** videos, at your choice of aspect ratio and resolution.\n- **Real roads or straight lines**, per segment.\n- Place labels, country flags, a distance badge, avatars and per-point effects.\n\n## How it works\n\n```\ncreate_project → create_route → update_animation_state → render_video → await_render → MP4\n```\n\nTwo things worth knowing, because they change how your assistant behaves:\n\n- **Nothing is edited implicitly.** Every tool takes an explicit `project_id`. There is no\n  \"current project\", so an assistant can hold several trips open without confusing them.\n- **Projects are durable local state**, under `$XDG_STATE_HOME/tada-render/projects/<id>/`\n  (`~/.local/state/…` if unset). Videos land in that project's `renders/`; the newest five\n  per project are kept and older ones pruned. Close your assistant and the project is still\n  there tomorrow.\n\n## Tools\n\n30 tools. Full reference with parameters in **[docs/tools.md](docs/tools.md)**.\n\n| Group | Tools |\n|---|---|\n| **Check first** | `get_capabilities` · `auth_status` |\n| **Projects** | `create_project` · `list_projects` · `get_project` · `delete_project` · `import_project` · `export_project` |\n| **Route** | `create_route` · `get_route` · `add_point` · `update_point` · `remove_point` · `clear_route` · `set_real_route` |\n| **Look & feel** | `get_animation_state` · `update_animation_state` · `list_maps` · `list_models` · `list_line_styles` |\n| **Render** | `estimate_render` · `render_video` · `await_render` · `get_render_progress` · `get_render_result` · `cancel_render` |\n| **Account sync** | `list_account_routes` · `save_project_to_account` · `load_account_route` · `delete_account_route` |\n\n**Renders report progress as they go.** `render_video` returns immediately with a session id;\n`await_render` waits on it and, if the render is still going, returns a line your assistant\nreads out — frames done, percent, time left — and waits again. A ten-minute render is not a\nten-minute silence.\n\n**Routes sync to the phone.** `save_project_to_account` puts a route in the mobile app's Saved\nRoutes. It carries **waypoints only** — the reply's `dropped` list names what didn't survive\n(avatars, effects, extra model slots, local media, the animation settings), and your assistant\nshould tell you rather than report a clean save.\n\n## Privacy\n\nUsage analytics are **opt-in and off until you turn them on**. Nothing is collected before\nthat, and nothing at all is collected outside the MCP server.\n\n```bash\ntravel-animator analytics status   # what is set, and what it covers\ntravel-animator analytics on       # grant consent\ntravel-animator analytics off      # revoke, effective immediately\n```\n\n**Never collected — unconditionally, whatever your consent says:** route coordinates, place\nlabels, route annotations, file paths, your media, the contents of any route you save or load,\nthe names you give projects, and what a tool returned. *A route records where somebody has\nactually been.*\n\n**Collected with consent:** which tools were called, in what order, how long they took and\nwhether they failed; render settings (resolution, duration, animation style, map, vehicle);\nthe *number* of points in a route and the set of countries it crosses.\n\n**One free-text exception:** when an assistant asks for a tool this server doesn't have, the\nsentence it writes describing what it was trying to do is collected with that request (up to\n2048 characters) — that is the only way a server learns which capability it is missing. It is\nnever attached to an ordinary tool call. Analytics are processed in the United States by a\nthird-party provider.\n\n## Command line\n\nThe MCP server is one of two front ends. The CLI is the other:\n\n```text\ntravel-animator login           # log in: magic link, or a bearer token for CI\ntravel-animator logout          # remove credentials stored on this machine\ntravel-animator analytics       # show, grant or revoke analytics consent\ntravel-animator render-bundle   # render a prepared render bundle to MP4\ntravel-animator mcp             # run the MCP server (needs the mcp extra)\n```\n\n`render-bundle` renders bundles produced by the Travel Animator service; it does not create\nthem. The MCP server is the only path that goes from nothing to a finished video.\n\n## Troubleshooting\n\n| Symptom | Cause | Fix |\n|---|---|---|\n| Tools fail with a \"log in\" message | No credential on this machine, or it expired | `travel-animator login` in a terminal, then retry |\n| Login works, rendering is refused | Free account | Rendering needs premium |\n| Server doesn't start from a desktop app | GUI apps don't inherit your shell `PATH` | Use the absolute path from `which uvx` |\n| `pip install` fails on your Mac | Intel macOS has no wheel | Apple silicon, Linux or Windows only |\n| Render fails on a machine with no GPU | No usable GL | Call `get_capabilities` first; use the server-side fallback |\n| Second render refused | One render at a time, per project and per process | Wait, or `cancel_render` |\n\nMore, including error codes, in [docs/troubleshooting.md](docs/troubleshooting.md).\n\n## Support\n\nOpen an [issue](../../issues) — please include your OS, `travel-animator --version`, your MCP\nclient, the tool that failed and its `error_code`. Or email\n[connect@travelanimator.com](mailto:connect@travelanimator.com).\n\n## Licence\n\n**This is not open-source software.** The `travel-animator` package ships under a limited use\nlicence: you may install and run it unmodified to prepare and render Travel Animator content\nand to talk to Lascade's services. You may not redistribute it, modify it, or build a\ncompeting service with it. The full terms ship inside the package at `tada_render/LICENSE`.\n\nBundled fonts, flag artwork and the libraries inside the renderer are third-party works under\ntheir own licences, listed in `tada_render/THIRD-PARTY-NOTICES.md`. For redistribution or\nmodification rights, contact Lascade.\n\nThe documentation and examples *in this repository* are MIT — see [LICENSE](LICENSE).\n\n---\n\n[PyPI](https://pypi.org/project/travel-animator/) ·\n[travelanimator.com](https://travelanimator.com) ·\n[iOS](https://apps.apple.com/app/id6462844561) ·\n[Android](https://play.google.com/store/apps/details?id=com.travelanimator.routemap)\n",
+  "status": "curated"
+}

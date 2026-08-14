@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/inventing-animals/dash/project-interop",
+  "type": "skill",
+  "name": "project-interop",
+  "description": "Use when choosing project structure, tooling, conventions, or implementation patterns that may be shared with sibling Inventing Animals projects.",
+  "author": "inventing-animals",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/inventing-animals/dash/blob/HEAD/.agents/skills/project-interop/SKILL.md",
+    "repo": "inventing-animals/dash",
+    "path": ".agents/skills/project-interop/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

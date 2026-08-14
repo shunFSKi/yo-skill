@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/donghyuck/studio-api/review",
+  "type": "skill",
+  "name": "review",
+  "description": "Review changes for correctness, risk, maintainability, and policy compliance.",
+  "author": "donghyuck",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/donghyuck/studio-api/blob/HEAD/skills/review/SKILL.md",
+    "repo": "donghyuck/studio-api",
+    "path": "skills/review/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-03T01:38:24Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

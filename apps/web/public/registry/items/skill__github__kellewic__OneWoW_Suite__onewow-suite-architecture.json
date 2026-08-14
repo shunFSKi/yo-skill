@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/kellewic/OneWoW_Suite/onewow-suite-architecture",
+  "type": "skill",
+  "name": "onewow-suite-architecture",
+  "description": "Use when authoring or reviewing OneWoW suite load units — lifecycle hooks, BootStore, BringUp/EnsureLoaded, enable/opt-out, ModuleManifest, hub tab order, OptionalDeps, or cross-unit integration.",
+  "author": "kellewic",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/kellewic/OneWoW_Suite/blob/HEAD/.claude/skills/onewow-suite-architecture/SKILL.md",
+    "repo": "kellewic/OneWoW_Suite",
+    "path": ".claude/skills/onewow-suite-architecture/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-08-13T07:47:13Z",
+    "score": 49
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

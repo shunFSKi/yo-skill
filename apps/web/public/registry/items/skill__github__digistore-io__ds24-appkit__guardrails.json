@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/digistore-io/ds24-appkit/guardrails",
+  "type": "skill",
+  "name": "guardrails",
+  "description": "Security and due-diligence rules for this Digistore SAAS. Read this before you change anything around money/billing, secrets/API keys, personal customer data (GDPR) or external systems. Names the stop criteria at which you should involve a human.",
+  "author": "digistore-io",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/digistore-io/ds24-appkit/blob/HEAD/.agents/skills/guardrails/SKILL.md",
+    "repo": "digistore-io/ds24-appkit",
+    "path": ".agents/skills/guardrails/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-12T08:09:15Z",
+    "score": 48
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

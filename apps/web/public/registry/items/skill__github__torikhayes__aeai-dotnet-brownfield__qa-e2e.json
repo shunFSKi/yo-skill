@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/torikhayes/aeai-dotnet-brownfield/qa-e2e",
+  "type": "skill",
+  "name": "qa-e2e",
+  "description": "Specialist QA subagent for running and analyzing Playwright E2E tests. Use when: executing end-to-end browser tests, checking E2E test pass/fail status, diagnosing E2E failures, or validating UI flows for the eShop WebApp.",
+  "author": "torikhayes",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/torikhayes/aeai-dotnet-brownfield/blob/HEAD/.claude/skills/qa-e2e/SKILL.md",
+    "repo": "torikhayes/aeai-dotnet-brownfield",
+    "path": ".claude/skills/qa-e2e/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

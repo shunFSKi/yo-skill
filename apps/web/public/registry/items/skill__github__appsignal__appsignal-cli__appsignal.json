@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/appsignal/appsignal-cli/appsignal",
+  "type": "skill",
+  "name": "appsignal",
+  "description": "Use `appsignal-cli` as an LLM-friendly interface to inspect AppSignal applications, incidents, and logs.\nIncludes command guidance, shared flags, and when to prefer `--output json` for machine consumption.",
+  "author": "appsignal",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/appsignal/appsignal-cli/blob/HEAD/skills/opencode/SKILL.md",
+    "repo": "appsignal/appsignal-cli",
+    "path": "skills/opencode/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 3,
+    "pushed_at": "2026-08-03T11:03:46Z",
+    "score": 50
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

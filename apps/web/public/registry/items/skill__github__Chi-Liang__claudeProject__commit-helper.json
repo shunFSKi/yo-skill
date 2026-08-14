@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Chi-Liang/claudeProject/commit-helper",
+  "type": "skill",
+  "name": "commit-helper",
+  "description": "根據目前未提交的變更(git diff)產生一則 commit message。當使用者要求寫 commit message、或問「這次改了什麼」時使用。",
+  "author": "Chi-Liang",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Chi-Liang/claudeProject/blob/HEAD/.claude/skills/commit-helper/SKILL.md",
+    "repo": "Chi-Liang/claudeProject",
+    "path": ".claude/skills/commit-helper/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-05T11:39:47Z",
+    "score": 37
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

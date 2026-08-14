@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/mihai-chiorean/inc/commit-pr-etiquette",
+  "type": "skill",
+  "name": "commit-pr-etiquette",
+  "description": "Commit and PR etiquette guidelines. Use when: (1) creating git commits, (2) writing commit messages, (3) creating or updating pull requests, (4) writing PR descriptions, (5) reviewing code or PRs.",
+  "author": "mihai-chiorean",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/mihai-chiorean/inc/blob/HEAD/skills/commit-pr-etiquette/SKILL.md",
+    "repo": "mihai-chiorean/inc",
+    "path": "skills/commit-pr-etiquette/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

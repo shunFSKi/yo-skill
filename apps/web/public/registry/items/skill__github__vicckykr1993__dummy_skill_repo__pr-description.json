@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/vicckykr1993/dummy_skill_repo/pr-description",
+  "type": "skill",
+  "name": "pr - description",
+  "description": "Writes pull request descriptions. Use when creating a PR, or when user asks to summarize changes for pull request.",
+  "author": "vicckykr1993",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/vicckykr1993/dummy_skill_repo/blob/HEAD/.github/skills/pr-description/SKILL.md",
+    "repo": "vicckykr1993/dummy_skill_repo",
+    "path": ".github/skills/pr-description/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

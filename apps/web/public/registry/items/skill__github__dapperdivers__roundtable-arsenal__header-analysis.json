@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/dapperdivers/roundtable-arsenal/header-analysis",
+  "type": "skill",
+  "name": "header-analysis",
+  "description": "HTTP security header audit — CSP, HSTS, X-Frame-Options, cookie flags, CORS, information disclosure.",
+  "author": "dapperdivers",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/dapperdivers/roundtable-arsenal/blob/HEAD/pentest/header-analysis/SKILL.md",
+    "repo": "dapperdivers/roundtable-arsenal",
+    "path": "pentest/header-analysis/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-07-19T07:17:18Z",
+    "score": 48
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

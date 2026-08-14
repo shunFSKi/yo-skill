@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/is-ivanov/rpm-ddd/test-usecase",
+  "type": "skill",
+  "name": "test-usecase",
+  "description": "Run use-case module tests quickly. Use when user wants to run use-case tests or mentions /test-usecase command.",
+  "author": "is-ivanov",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/is-ivanov/rpm-ddd/blob/HEAD/.opencode/skills/test-usecase/SKILL.md",
+    "repo": "is-ivanov/rpm-ddd",
+    "path": ".opencode/skills/test-usecase/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

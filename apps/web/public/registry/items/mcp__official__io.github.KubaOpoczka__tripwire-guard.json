@@ -20,7 +20,8 @@
   },
   "quality": {
     "stars": null,
-    "pushed_at": "2026-08-13T20:58:43.660597Z"
+    "pushed_at": "2026-08-13T20:58:43.660597Z",
+    "score": 42
   },
   "security": {
     "score": 100,
@@ -52,6 +53,6 @@
     "category": null,
     "featured": false
   },
-  "readme": "# Tripwire Guard\n\n> Public package: [`tripwire-guard`](https://www.npmjs.com/package/tripwire-guard). A clean install and MCP handshake were verified on 13 August 2026.\n\nA local, read-only **MCP server** that inspects untrusted text for prompt-injection **before it enters an AI agent's context**.\n\nGive it text (a web page, document, email, ticket, RAG chunk) and it returns an `allow` / `review` / `recommend_block` decision with the exact matched evidence. It runs entirely on your machine, makes **no network requests**, and redacts emails, URLs and credential-like strings by default.\n\nThe engine is deterministic and ships with a public 100-case maintainer-authored evaluation — 85% accuracy, with **every** false positive and false negative published. It is a fast, explainable signal layer; it is not a guarantee of safety, and the host remains responsible for enforcing the decision.\n\nUnlike an MCP proxy, Tripwire Guard does not intercept or authorize other tool calls. Unlike a model-based detector, it needs no model runtime or API. Pair it with least-privilege tools, approval gates, isolation and action-sink enforcement.\n\n## Install / run\n\nRequires Node.js 22.12+.\n\n```bash\nnpx tripwire-guard\n```\n\n## Use it in an MCP host\n\n```json\n{\n  \"mcpServers\": {\n    \"tripwire\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"tripwire-guard\"]\n    }\n  }\n}\n```\n\n## The tool\n\n`tripwire_scan` (read-only) — inputs:\n\n- `content` (string, required) — untrusted text to inspect.\n- `source` (string, optional) — provenance, e.g. a page URL, email, tool result, or document name.\n- `includeEvidence` (boolean, optional) — return raw matched evidence instead of redacted. Defaults to redacted.\n\nReturns structured evidence: the decision, a finding count, per-finding rule id / severity / category / matched span, and the engine + ruleset versions.\n\nThe npm package is versioned independently from the detector engine reported inside each result. Package `0.4.2` currently ships engine `0.3.0` and ruleset `2026.08.2`.\n\n## Honest limits\n\nDeterministic heuristics can miss novel, contextual, multilingual, visual, or heavily obfuscated attacks. A clean result means \"no known signal matched,\" not \"safe.\" Pair it with least-privilege tools, approval gates, and sandboxing.\n\n## Map the surrounding system\n\nUse the free [agent action-path worksheet](https://github.com/KubaOpoczka/tripwire-guard/blob/main/docs/agent-action-path-worksheet.md) to map an untrusted input, its reachable tools, the consequential action sink, existing controls, and the minimum safe test evidence. It is ungated and contains a clearly labelled synthetic example.\n\n## More\n\nLive demo, full benchmark, threat model, and fixed-scope team review: **https://tripwire-live.netlify.app**\n\n## Source and security boundary\n\nThis repository contains the distributable MIT-licensed, read-only Guard MCP server and its release metadata. The broader Tripwire browser product and paid review materials are maintained separately. Report package defects through this repository's issue tracker; do not post secrets, customer data, private prompts, or live credentials.\n\n© 2026 Kuba Opoczka.\n",
+  "readme": null,
   "status": "curated"
 }

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/comment-hq/skills/next",
+  "type": "skill",
+  "name": "next",
+  "description": "Write a detailed handoff note for a future version of yourself covering progress and next steps. Only invoke when explicitly requested as `$next` or `/next`.",
+  "author": "comment-hq",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/comment-hq/skills/blob/HEAD/skills/next/SKILL.md",
+    "repo": "comment-hq/skills",
+    "path": "skills/next/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-25T00:36:53Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

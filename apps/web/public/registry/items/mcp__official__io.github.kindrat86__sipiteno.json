@@ -1,0 +1,54 @@
+{
+  "id": "mcp:official/io.github.kindrat86/sipiteno",
+  "type": "mcp",
+  "name": "sipiteno",
+  "description": "Global expansion intelligence: country info, expansion cost estimates, competitor analysis.",
+  "author": "io.github.kindrat86",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/kindrat86/sipiteno-mcp",
+    "repo": "kindrat86/sipiteno-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://sipiteno.com/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T10:27:49.156153Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# sipiteno MCP server\n\nGlobal expansion intelligence for AI agents. Search consulting services, get country info, estimate expansion costs, analyze competitors, and request strategy calls — all through MCP.\n\n**Live endpoint:** `https://sipiteno.com/api/mcp` (HTTP, MCP 2024-11-05)\n\n## Tools\n\n| Tool | What it does |\n|---|---|\n| `search_services` | Search consulting services matching a query (cost ranges + timelines) |\n| `get_country_info` | Get expansion-relevant info for a country |\n| `estimate_expansion_costs` | Estimate costs for expanding into a market |\n| `get_competitors` | Get competitor landscape for a sector/country |\n| `request_strategy_call` | Generate a strategy-call request |\n\n## Usage\n\n```json\n{\n  \"mcpServers\": {\n    \"sipiteno\": { \"url\": \"https://sipiteno.com/api/mcp\" }\n  }\n}\n```\n\nMIT License. Free.\n",
+  "status": "curated"
+}

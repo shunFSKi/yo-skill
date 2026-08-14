@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/com.opensolr/opensolr-mcp",
+  "type": "mcp",
+  "name": "opensolr-mcp",
+  "description": "Managed Apache Solr for agents: hybrid BM25+kNN search, server-side embeddings, RAG answers",
+  "author": "com.opensolr",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/phpcip/opensolr-mcp",
+    "repo": "phpcip/opensolr-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "opensolr-mcp"
+    ],
+    "env": [
+      {
+        "name": "OPENSOLR_EMAIL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "OPENSOLR_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T15:30:15.844007Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# opensolr-mcp\n\nmcp-name: com.opensolr/opensolr-mcp\n\nMCP (Model Context Protocol) server for [Opensolr](https://opensolr.com) —\ngives any AI agent **managed Apache Solr search** as tools: hybrid\n(BM25 + kNN) retrieval, server-side GPU embeddings, document indexing, and\ngrounded RAG answers.\n\nNo embedding model to configure. No vector database to run. One API key.\n\n## Tools\n\n| Tool | What it does |\n|---|---|\n| `opensolr_search` | Hybrid (keyword + semantic) or pure semantic search, with Solr filters |\n| `opensolr_ai_answer` | Grounded RAG answer generated only from your indexed content |\n| `opensolr_add_documents` | Index plain text + metadata (embedded server-side) |\n| `opensolr_delete_documents` | Remove documents by id |\n| `opensolr_list_indexes` / `opensolr_index_info` | Inspect the account's indexes |\n| `opensolr_create_index` | Provision a vector-enabled index (`us`, `de`, `fi`) |\n| `opensolr_vector_regions` | Live list of vector-enabled regions |\n\n## Setup\n\nGet a free Opensolr account (15-day trial, no card) at\n[opensolr.com/register](https://opensolr.com/register) and copy your API key\nfrom **Account**.\n\n### Claude Desktop / Claude Code\n\n```json\n{\n  \"mcpServers\": {\n    \"opensolr\": {\n      \"command\": \"uvx\",\n      \"args\": [\"opensolr-mcp\"],\n      \"env\": {\n        \"OPENSOLR_EMAIL\": \"you@example.com\",\n        \"OPENSOLR_API_KEY\": \"YOUR_OPENSOLR_API_KEY\"\n      }\n    }\n  }\n}\n```\n\n### Cursor / Windsurf / any MCP client\n\nSame shape — stdio transport, command `uvx opensolr-mcp` (or\n`pipx run opensolr-mcp`), with `OPENSOLR_EMAIL` and `OPENSOLR_API_KEY` in env.\n\n## Example agent session\n\n> **You:** Index our FAQ answers, then find everything about refunds.\n>\n> The agent calls `opensolr_add_documents(index=\"faq__dense\", texts=[...])`,\n> then `opensolr_search(index=\"faq__dense\", query=\"refund policy\", hybrid=True)`\n> — BM25 catches the exact word \"refund\", kNN catches \"giving customers their\n> money back\", and the scores fuse per document.\n\n## Notes\n\n- Vector-enabled indexes run on Opensolr's Solr 9.x environments — currently\n  `us` (Chicago), `de` (Germany), `fi` (Finland), fetched live via\n  `opensolr_vector_regions`. Additional dedicated regions can be deployed on\n  request (paid add-on): [support@opensolr.com](mailto:support@opensolr.com).\n- Every index is also plain Apache Solr with the native `/select` API —\n  nothing is locked behind the tools.\n- Python sibling for LangChain: [`langchain-opensolr`](https://pypi.org/project/langchain-opensolr/) ·\n  Product page: [opensolr.com/langchain](https://opensolr.com/langchain)\n\n## How writing works (Data Ingestion API)\n\nWrites go through Opensolr's [Data Ingestion API](https://opensolr.com/learn/api-data-ingestion/204/data-ingestion-api-push-documents-to-your-opensolr-index-programmatically)\n— the same pipeline the Drupal and WordPress connectors use. It is\n**asynchronous**: documents are queued, then embeddings, sentiment, language\nand all crawler-identical derived fields are computed **server-side**, and\ndocuments become searchable within about a minute. Progress is visible in the\nOpensolr Control Panel and via the `ingest_status` API. Each document's\nidentity is its `uri` (the Solr id is `md5(uri)`): pass a real URL in\nmetadata (`{\"uri\": \"https://...\"}`), or a deterministic one is synthesized\nfrom your id. Re-submitting the same `uri` updates the document. Pass\n`{\"rtf\": True, \"uri\": \"https://.../file.pdf\"}` and the server extracts the\ntext from PDF/DOCX/XLSX for you.\n\n## Lexical-only mode\n\nDon't need vectors? Pure keyword search skips the embedding call entirely —\nzero AI quota, and it works on **any** Opensolr index, including non-vector\nones and older Solr versions.\n\n## Your index schema\n\nDocuments follow the Opensolr document model (`title`, `description`, `text`,\n`meta_*` custom fields). To see the full schema: **Control Panel → click your\nindex → Configuration → Edit File → schema.xml**. Prefer zero-effort data\nentry? Configure the **Web Crawler** in the Control Panel (Index Tools →\nWebCrawler): add your site URL, validate it, and Opensolr indexes the whole\nsite for you.\n\n## How it's tested\n\nEvery release is validated against **live Opensolr infrastructure** — no mocks:\n\n- **Unit tests** (offline): location aliases, filter→fq mapping, query building, escaping.\n- **End-to-end suite**: the full write path through the async Data Ingestion\n  queue (queued → server-side enrichment → searchable), semantic / hybrid /\n  lexical retrieval, metadata round-trip, filters, id round-trip (your ids\n  and the Solr `md5(uri)` ids), deletes by id and by query.\n- **Real-corpus validation**: searches run against a 340-document replica of\n  opensolr.com's own production search index. Verified: pure-semantic hits\n  with zero keyword overlap (\"how do I get my data back after a disaster\" →\n  backup &amp; restore docs), cross-lingual queries (Romanian query → English\n  content), exact-term surfacing in hybrid mode, all four hybrid modes, and\n  the full alpha range 0 → 1.\n- **PDF ingestion**: a real PDF ingested via `rtf:true` — server-side text\n  extraction (13k+ chars), automatic content-type detection, then retrieved\n  with a purely semantic query against its contents.\n\nThe tools are exercised live (search modes, ingestion with wait, status,\ndeletes, RAG answers) before every release.\n\nMIT license.\n",
+  "status": "curated"
+}

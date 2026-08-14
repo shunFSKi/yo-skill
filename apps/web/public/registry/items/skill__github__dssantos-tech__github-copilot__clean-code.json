@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/dssantos-tech/github-copilot/clean-code",
+  "type": "skill",
+  "name": "clean-code",
+  "description": "Describe what this skill does and when to use it. Include keywords that help agents identify relevant tasks.",
+  "author": "dssantos-tech",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/dssantos-tech/github-copilot/blob/HEAD/github/skills/clean-code/SKILL.md",
+    "repo": "dssantos-tech/github-copilot",
+    "path": "github/skills/clean-code/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-07-13T12:49:16Z",
+    "score": 43
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/pvieito/Blog/agents-skills-blog-preview-skill-md",
+  "type": "skill",
+  "name": "agents-skills-blog-preview-skill-md",
+  "description": "Launch and maintain a local preview of the Blog, including drafts and future posts.",
+  "author": "pvieito",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/pvieito/Blog/blob/HEAD/agents/skills/blog-preview/SKILL.md",
+    "repo": "pvieito/Blog",
+    "path": "agents/skills/blog-preview/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

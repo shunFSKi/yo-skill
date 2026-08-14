@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/woocommerce/woocommerce-android/store-viewmodel",
+  "type": "skill",
+  "name": "store-viewmodel",
+  "description": "Main app ViewModel patterns (ScopedViewModel, Hilt, StateFlow, triggerEvent, navArgs, savedState flows, events). Use when writing, editing, exploring, debugging, or reviewing ViewModels in the store management app. Covers navArgs, combine+asLiveData, sealed state hierarchies, custom events, init blocks, and companion object placement. NOT for POS (WooPos*) code — use the `pos` skill instead.",
+  "author": "woocommerce",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/woocommerce/woocommerce-android/blob/HEAD/.agents/skills/store-viewmodel/SKILL.md",
+    "repo": "woocommerce/woocommerce-android",
+    "path": ".agents/skills/store-viewmodel/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

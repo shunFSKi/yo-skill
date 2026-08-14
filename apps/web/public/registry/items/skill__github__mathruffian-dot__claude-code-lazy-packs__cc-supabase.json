@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/mathruffian-dot/claude-code-lazy-packs/cc-supabase",
+  "type": "skill",
+  "name": "cc-supabase",
+  "description": "Claude Code 連接 Supabase MCP。說「連接 Supabase」時載入。",
+  "author": "mathruffian-dot",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/mathruffian-dot/claude-code-lazy-packs/blob/HEAD/skills/04-supabase/SKILL.md",
+    "repo": "mathruffian-dot/claude-code-lazy-packs",
+    "path": "skills/04-supabase/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

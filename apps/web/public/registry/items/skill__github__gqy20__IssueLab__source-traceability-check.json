@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/gqy20/IssueLab/source-traceability-check",
+  "type": "skill",
+  "name": "source-traceability-check",
+  "description": "Validate whether each key claim is backed by an accessible and relevant source URL.",
+  "author": "gqy20",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/gqy20/IssueLab/blob/HEAD/agents/rojasraleena-svg/.claude/skills/source-traceability-check/SKILL.md",
+    "repo": "gqy20/IssueLab",
+    "path": "agents/rojasraleena-svg/.claude/skills/source-traceability-check/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 11,
+    "pushed_at": "2026-04-27T07:12:59Z",
+    "score": 42
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

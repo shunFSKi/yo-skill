@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/ivankuznetsov/llm-wiki/wiki-upgrade",
+  "type": "skill",
+  "name": "wiki-upgrade",
+  "description": "Upgrade an existing project's managed llm-wiki structure from Pi without rerunning broad bootstrap.",
+  "author": "ivankuznetsov",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ivankuznetsov/llm-wiki/blob/HEAD/pi/skills/wiki-upgrade/SKILL.md",
+    "repo": "ivankuznetsov/llm-wiki",
+    "path": "pi/skills/wiki-upgrade/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 8,
+    "pushed_at": "2026-08-10T21:20:02Z",
+    "score": 51
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

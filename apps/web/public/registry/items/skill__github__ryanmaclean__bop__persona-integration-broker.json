@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/ryanmaclean/bop/persona-integration-broker",
+  "type": "skill",
+  "name": "persona-integration-broker",
+  "description": "Use when the work is tagged with 🔗 and needs the integration-broker persona frame.",
+  "author": "ryanmaclean",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ryanmaclean/bop/blob/HEAD/skills/persona-integration-broker/SKILL.md",
+    "repo": "ryanmaclean/bop",
+    "path": "skills/persona-integration-broker/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-05-06T00:03:18Z",
+    "score": 32
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/SteelMorgan/1c-agent-based-dev-framework/bug-reporting",
+  "type": "skill",
+  "name": "bug-reporting",
+  "description": "When self-fix is exhausted, file a bug report",
+  "author": "SteelMorgan",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/SteelMorgan/1c-agent-based-dev-framework/blob/HEAD/framework_eng/rules/bug-reporting/SKILL.md",
+    "repo": "SteelMorgan/1c-agent-based-dev-framework",
+    "path": "framework_eng/rules/bug-reporting/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 87,
+    "pushed_at": "2026-07-03T22:21:52Z",
+    "score": 55
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

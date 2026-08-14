@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Aiweline/WelineFramework/planning",
+  "type": "skill",
+  "name": "planning",
+  "description": "Create implementation-ready Weline plans with source evidence, a chosen design, bounded task cards, dependencies, acceptance evidence, risks, and rollback. Use in Plan mode or when the user requests an implementation/acceptance plan or execution handoff; not for test authoring, live multi-agent dispatch, simple answers, or an already bounded implementation.",
+  "author": "Aiweline",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Aiweline/WelineFramework/blob/HEAD/.codex/skills/planning/SKILL.md",
+    "repo": "Aiweline/WelineFramework",
+    "path": ".codex/skills/planning/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-11T16:20:18Z",
+    "score": 48
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

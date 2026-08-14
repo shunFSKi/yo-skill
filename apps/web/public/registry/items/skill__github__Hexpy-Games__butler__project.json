@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Hexpy-Games/butler/project",
+  "type": "skill",
+  "name": "project",
+  "description": "List all registered projects with their recent task history and status",
+  "author": "Hexpy-Games",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Hexpy-Games/butler/blob/HEAD/packages/butler-agent/resources/skills/project/SKILL.md",
+    "repo": "Hexpy-Games/butler",
+    "path": "packages/butler-agent/resources/skills/project/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 7,
+    "pushed_at": "2026-08-14T12:14:34Z",
+    "score": 50
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

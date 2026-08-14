@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/mattmireles/gemma-tuner-multimodal/debug",
+  "type": "skill",
+  "name": "debug",
+  "description": "Debug Gemma Multimodal Fine-Tuner failures across Python environments, Hugging Face models, PEFT/LoRA, datasets, audio/image processors, MPS, wizard subprocesses, visualizer state, evaluation, or export.",
+  "author": "mattmireles",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/mattmireles/gemma-tuner-multimodal/blob/HEAD/.claude/skills/debug/SKILL.md",
+    "repo": "mattmireles/gemma-tuner-multimodal",
+    "path": ".claude/skills/debug/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

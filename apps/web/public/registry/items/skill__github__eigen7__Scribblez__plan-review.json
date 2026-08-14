@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/eigen7/Scribblez/plan-review",
+  "type": "skill",
+  "name": "plan-review",
+  "description": "Multi-perspective review of an implementation plan before any code is written — independent panelist critiques (hidden complexity, rival design, scope, integration; optionally a cross-vendor codex seat), author synthesis, and a dissent log for the human. Invoke when the user asks for a plan or design review, optionally with a profile (critique | tournament).",
+  "author": "eigen7",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/eigen7/Scribblez/blob/HEAD/.claude/skills/plan-review/SKILL.md",
+    "repo": "eigen7/Scribblez",
+    "path": ".claude/skills/plan-review/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-14T13:11:06Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

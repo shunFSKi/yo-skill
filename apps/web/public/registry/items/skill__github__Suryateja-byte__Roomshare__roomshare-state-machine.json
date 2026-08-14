@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Suryateja-byte/Roomshare/roomshare-state-machine",
+  "type": "skill",
+  "name": "roomshare-state-machine",
+  "description": "Use for holds, bookings, waitlists, availability, cancellations, and any inventory state transitions. Enforce invariants + edge cases.",
+  "author": "Suryateja-byte",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Suryateja-byte/Roomshare/blob/HEAD/.claude/skills/roomshare-state-machine/SKILL.md",
+    "repo": "Suryateja-byte/Roomshare",
+    "path": ".claude/skills/roomshare-state-machine/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-10T09:34:09Z",
+    "score": 48
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

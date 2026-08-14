@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/danielstegeman/agentic-library/kiss",
+  "type": "skill",
+  "name": "kiss",
+  "description": "Prevent over-engineering and unnecessary complexity. Use when the agent is about to introduce abstractions, helpers, layers, design patterns, or multi-step workflows for something that could be solved simply. Triggers on: over-engineering, unnecessarily complex solution, unnecessary abstraction, add a helper, create a utility, refactor into a class, generalize this, make it reusable, create a wrapper, introduce a pattern, complex implementation, elaborate solution.",
+  "author": "danielstegeman",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/danielstegeman/agentic-library/blob/HEAD/agent-engineering/skills/kiss/SKILL.md",
+    "repo": "danielstegeman/agentic-library",
+    "path": "agent-engineering/skills/kiss/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-21T09:29:09Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

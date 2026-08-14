@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Yabuku-xD/contextforge/forge-scan",
+  "type": "skill",
+  "name": "forge-scan",
+  "description": "Get a fast first-pass map of the current repository.\nTrigger: /contextforge:forge-scan [optional request]",
+  "author": "Yabuku-xD",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Yabuku-xD/contextforge/blob/HEAD/skills/forge-scan/SKILL.md",
+    "repo": "Yabuku-xD/contextforge",
+    "path": "skills/forge-scan/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-04-21T04:26:46Z",
+    "score": 35
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

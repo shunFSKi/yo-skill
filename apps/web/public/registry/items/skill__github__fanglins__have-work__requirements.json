@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/fanglins/have-work/requirements",
+  "type": "skill",
+  "name": "requirements",
+  "description": "提供需求分析和需求管理。当用户需要需求收集、分析、文档编写或需求变更管理帮助时调用。",
+  "author": "fanglins",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/fanglins/have-work/blob/HEAD/.trae/skills/requirements/SKILL.md",
+    "repo": "fanglins/have-work",
+    "path": ".trae/skills/requirements/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-04-21T02:16:31Z",
+    "score": 32
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

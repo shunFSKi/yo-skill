@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/galibhabibullah786/CinemaSeat/correctness-and-concurrency",
+  "type": "skill",
+  "name": "correctness-and-concurrency",
+  "description": "Load when designing or reviewing code with state machines, transactions, idempotency, locks, or any concurrency-sensitive logic. Forces the author to enumerate the boundary cases and write the test that would catch each one.",
+  "author": "galibhabibullah786",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/galibhabibullah786/CinemaSeat/blob/HEAD/.claude/skills/correctness-and-concurrency/SKILL.md",
+    "repo": "galibhabibullah786/CinemaSeat",
+    "path": ".claude/skills/correctness-and-concurrency/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-08T12:08:48Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

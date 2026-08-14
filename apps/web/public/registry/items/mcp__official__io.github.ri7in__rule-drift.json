@@ -1,0 +1,58 @@
+{
+  "id": "mcp:official/io.github.ri7in/rule-drift",
+  "type": "mcp",
+  "name": "RuleDrift",
+  "description": "Test whether AI agents retain critical instructions as conversations grow.",
+  "author": "io.github.ri7in",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ri7in/rule-drift",
+    "repo": "ri7in/rule-drift"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "rule-drift"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T14:42:09.112416Z",
+    "score": 42
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

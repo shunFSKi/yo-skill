@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/haorui-harry/agent-harness/benchmark-lab",
+  "type": "skill",
+  "name": "benchmark-lab",
+  "description": "Design benchmark runs, ablations, dataset specs, and failure-analysis artifacts.",
+  "author": "haorui-harry",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/haorui-harry/agent-harness/blob/HEAD/skills/public/benchmark-lab/SKILL.md",
+    "repo": "haorui-harry/agent-harness",
+    "path": "skills/public/benchmark-lab/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 32,
+    "pushed_at": "2026-04-13T08:00:37Z",
+    "score": 46
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

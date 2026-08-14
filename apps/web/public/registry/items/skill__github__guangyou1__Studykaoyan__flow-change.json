@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/guangyou1/Studykaoyan/flow-change",
+  "type": "skill",
+  "name": "flow-change",
+  "description": "flow-kit 0-change 阶段快捷入口。把模糊想法反问澄清成变更提案，自动生成 change-id。\n触发方式：直接输入「flow-change <一句话需求>」，不要只输入斜杠命令。",
+  "author": "guangyou1",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/guangyou1/Studykaoyan/blob/HEAD/.agents/skills/flow-change/SKILL.md",
+    "repo": "guangyou1/Studykaoyan",
+    "path": ".agents/skills/flow-change/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-08T03:50:54Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

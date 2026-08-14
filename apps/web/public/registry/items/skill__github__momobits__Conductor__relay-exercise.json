@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/momobits/Conductor/relay-exercise",
+  "type": "skill",
+  "name": "relay-exercise",
+  "description": "Map project capabilities for stress-testing. Default mode (no argument) scans bottom-up; goal mode (/relay-exercise \"<goal>\") builds a top-down journey with gap discovery. Creates a session subfolder under .relay/exercise/<session>/ with _control.md (Journey for goal mode, Context Chains for default) and updates the master registry at .relay/relay-exercise.md. Use at project onboarding, when the project has evolved, or to stress-test whether a specific goal is achievable.",
+  "author": "momobits",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/momobits/Conductor/blob/HEAD/.agents/skills/relay-exercise/SKILL.md",
+    "repo": "momobits/Conductor",
+    "path": ".agents/skills/relay-exercise/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-02T14:17:49Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

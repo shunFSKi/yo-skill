@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/dgknght/clj-money/github-cli",
+  "type": "skill",
+  "name": "Github CLI",
+  "description": "Be sure the we're using the right context before we run any `gh` commands.",
+  "author": "dgknght",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/dgknght/clj-money/blob/HEAD/.claude/skills/gh/SKILL.md",
+    "repo": "dgknght/clj-money",
+    "path": ".claude/skills/gh/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-08-14T16:58:03Z",
+    "score": 46
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

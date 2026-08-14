@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/KroxiDev/engineering-skills/setup-pre-commit",
+  "type": "skill",
+  "name": "setup-pre-commit",
+  "description": "Configura hooks pre-commit de Husky con lint-staged (Prettier), typecheck y tests en el repo actual. Usar cuando el usuario quiera añadir hooks pre-commit, configurar Husky, configurar lint-staged, o añadir formato/typecheck/tests en el momento del commit.",
+  "author": "KroxiDev",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/KroxiDev/engineering-skills/blob/HEAD/skills/setup-pre-commit/SKILL.md",
+    "repo": "KroxiDev/engineering-skills",
+    "path": "skills/setup-pre-commit/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 3,
+    "pushed_at": "2026-08-09T14:32:58Z",
+    "score": 50
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

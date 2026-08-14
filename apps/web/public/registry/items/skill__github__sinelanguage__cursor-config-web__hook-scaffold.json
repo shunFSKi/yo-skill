@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/sinelanguage/cursor-config-web/hook-scaffold",
+  "type": "skill",
+  "name": "hook-scaffold",
+  "description": "Scaffold a custom hook with types, docs, and tests.",
+  "author": "sinelanguage",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/sinelanguage/cursor-config-web/blob/HEAD/.cursor/skills/hook-scaffold/SKILL.md",
+    "repo": "sinelanguage/cursor-config-web",
+    "path": ".cursor/skills/hook-scaffold/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

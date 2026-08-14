@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Lucasdoreac/ludoc/last30days",
+  "type": "skill",
+  "name": "last30days",
+  "description": "Researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web over the last 30 days, synthesizing a grounded summary of trends and insights.",
+  "author": "Lucasdoreac",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Lucasdoreac/ludoc/blob/HEAD/src/agent/skills/last30days/skill.md",
+    "repo": "Lucasdoreac/ludoc",
+    "path": "src/agent/skills/last30days/skill.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-19T22:16:33Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

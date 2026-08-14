@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/theonize/Currier/theologian",
+  "type": "skill",
+  "name": "theologian",
+  "description": "Analyze theological themes, doctrines, and spiritual principles in Bible passages. Use when exploring what the original audience understood spiritually, identifying spiritual disciplines, or extracting timeless biblical principles and teachings.",
+  "author": "theonize",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/theonize/Currier/blob/HEAD/.claude/skills/theologian/SKILL.md",
+    "repo": "theonize/Currier",
+    "path": ".claude/skills/theologian/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

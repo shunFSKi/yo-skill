@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/sunnysxg/claude_skills/lq",
+  "type": "skill",
+  "name": "lq",
+  "description": "把当前这轮问答以 Q/A 形式追加记录到项目的 _sxg/qa_log.md。用户说 /lq 时使用。",
+  "author": "sunnysxg",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/sunnysxg/claude_skills/blob/HEAD/lq/SKILL.md",
+    "repo": "sunnysxg/claude_skills",
+    "path": "lq/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

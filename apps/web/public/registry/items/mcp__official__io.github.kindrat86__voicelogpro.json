@@ -2,12 +2,12 @@
   "id": "mcp:official/io.github.kindrat86/voicelogpro",
   "type": "mcp",
   "name": "VoiceLogPro",
-  "description": "Voice-to-PDF daily construction reports. Court-ready documentation for subcontractors",
+  "description": "Construction daily-log generation, jurisdiction compliance requirements, construction FAQs.",
   "author": "io.github.kindrat86",
   "source": {
     "registry": "mcp-official",
-    "url": "https://voicelogpro.com/api/mcp",
-    "repo": null
+    "url": "https://github.com/kindrat86/voicelogpro-mcp",
+    "repo": "kindrat86/voicelogpro-mcp"
   },
   "license": null,
   "install": {
@@ -16,7 +16,8 @@
   },
   "quality": {
     "stars": null,
-    "pushed_at": "2026-07-19T10:49:25.666137Z"
+    "pushed_at": "2026-08-14T10:27:45.657795Z",
+    "score": 52
   },
   "security": {
     "score": 100,
@@ -45,9 +46,9 @@
     ]
   },
   "tags": {
-    "category": "写作",
+    "category": null,
     "featured": false
   },
-  "readme": null,
+  "readme": "# voicelogpro MCP server\n\nConstruction daily-log and compliance tools for AI agents. Generate daily log templates, look up logging compliance requirements by jurisdiction, and query construction FAQs — all through MCP.\n\n**Live endpoint:** `https://voicelogpro.com/api/mcp` (HTTP, MCP 2024-11-05)\n\n## Tools\n\n| Tool | What it does |\n|---|---|\n| `create_daily_log_template` | Generate a construction daily log template by project type |\n| `get_logging_requirements` | Get daily-log compliance requirements for a jurisdiction |\n| `list_construction_faq` | Query construction/logging FAQs |\n\n## Usage\n\n```json\n{\n  \"mcpServers\": {\n    \"voicelogpro\": { \"url\": \"https://voicelogpro.com/api/mcp\" }\n  }\n}\n```\n\nMIT License. Free.\n",
   "status": "curated"
 }

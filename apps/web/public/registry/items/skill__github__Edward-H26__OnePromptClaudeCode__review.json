@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Edward-H26/OnePromptClaudeCode/review",
+  "type": "skill",
+  "name": "review",
+  "description": "Repo-local wrapper for code review. Findings first, grounded in the current repo, with no commit or push steps.",
+  "author": "Edward-H26",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Edward-H26/OnePromptClaudeCode/blob/HEAD/.claude/skills/review/SKILL.md",
+    "repo": "Edward-H26/OnePromptClaudeCode",
+    "path": ".claude/skills/review/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 6,
+    "pushed_at": "2026-08-10T00:56:11Z",
+    "score": 53
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

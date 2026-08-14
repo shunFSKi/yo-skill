@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/ehsankamalia-gif/fbr-invoice-uploader_New_18-7-26/mysql-connector",
+  "type": "skill",
+  "name": "mysql-connector",
+  "description": "Connect to and query the local MySQL database for the FBR Invoice Uploader project. Invoke when user needs to interact with the database (list tables, run queries, inspect data).",
+  "author": "ehsankamalia-gif",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ehsankamalia-gif/fbr-invoice-uploader_New_18-7-26/blob/HEAD/.trae/skills/mysql-connector/SKILL.md",
+    "repo": "ehsankamalia-gif/fbr-invoice-uploader_New_18-7-26",
+    "path": ".trae/skills/mysql-connector/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-19T18:01:18Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

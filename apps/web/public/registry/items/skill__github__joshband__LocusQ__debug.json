@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/joshband/LocusQ/debug",
+  "type": "skill",
+  "name": "debug",
+  "description": "Autonomous debugging workflow for LocusQ — inspects codebase, identifies failure points, configures debugger, and captures runtime diagnostics. Use when user says /debug or reports a crash or unexpected behavior.",
+  "author": "joshband",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/joshband/LocusQ/blob/HEAD/.claude/skills/debug/SKILL.md",
+    "repo": "joshband/LocusQ",
+    "path": ".claude/skills/debug/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 3,
+    "pushed_at": "2026-04-26T05:01:31Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

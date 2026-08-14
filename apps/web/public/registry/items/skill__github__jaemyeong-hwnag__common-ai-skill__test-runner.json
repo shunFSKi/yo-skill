@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/jaemyeong-hwnag/common-ai-skill/test-runner",
+  "type": "skill",
+  "name": "test-runner",
+  "description": "Detect the project's test runner and execute the full test suite with coverage reporting. Fail fast and fix on failure.",
+  "author": "jaemyeong-hwnag",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/jaemyeong-hwnag/common-ai-skill/blob/HEAD/skills/test-runner/SKILL.md",
+    "repo": "jaemyeong-hwnag/common-ai-skill",
+    "path": "skills/test-runner/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/weisen0304/Luban-Ai-Agent/key-reminders",
+  "type": "skill",
+  "name": "key-reminders",
+  "description": "重点提醒职能技能。用于提醒关键节点、标记风险任务、提示主控关注优先事项，并输出当前状态、风险等级和建议动作，适用于截止期临近与关键任务未闭环场景。",
+  "author": "weisen0304",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/weisen0304/Luban-Ai-Agent/blob/HEAD/skills/key-reminders/SKILL.md",
+    "repo": "weisen0304/Luban-Ai-Agent",
+    "path": "skills/key-reminders/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-05-09T02:43:21Z",
+    "score": 32
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

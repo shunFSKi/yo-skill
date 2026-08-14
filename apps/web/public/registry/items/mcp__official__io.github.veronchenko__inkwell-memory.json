@@ -1,0 +1,70 @@
+{
+  "id": "mcp:official/io.github.veronchenko/inkwell-memory",
+  "type": "mcp",
+  "name": "Inkwell",
+  "description": "Persistent memory for AI agents: Markdown entries, hybrid search, typed graph links",
+  "author": "io.github.veronchenko",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/veronchenko/inkwell-memory",
+    "repo": "veronchenko/inkwell-memory"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "docker.io/foreigndmitryi/inkwell-memory:0.14.0"
+    ],
+    "env": [
+      {
+        "name": "INKWELL_DATA_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "INKWELL_ENABLE_DASHBOARD",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T15:33:49.902392Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": "# Inkwell — Persistent Knowledge Base MCP Server\n\n[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)\n[![Docker Pulls](https://img.shields.io/docker/pulls/foreigndmitryi/inkwell-memory)](https://hub.docker.com/r/foreigndmitryi/inkwell-memory)\n[![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-blue)](src/pyproject.toml)\n\nInkwell is a self-hosted [Model Context Protocol](https://modelcontextprotocol.io/) server that gives AI agents persistent memory across sessions and projects. Three things set it apart from the other memory servers: **plain Markdown files are the source of truth** (the index is a throwaway cache you can delete and rebuild), entries are connected by a **typed `kb://` graph** rather than dumped into a flat pile, and updates are **bi-temporal** — superseding a fact keeps the old version readable instead of overwriting it.\n\n**Docker Hub:** [foreigndmitryi/inkwell-memory](https://hub.docker.com/r/foreigndmitryi/inkwell-memory) · **Website:** [veronchenko.github.io/inkwell-memory](https://veronchenko.github.io/inkwell-memory/)\n\n> **Formerly Engram.** Renamed in 0.14.0 — there are a dozen unrelated projects called \"Engram\" and the name had stopped being findable. Not affiliated with any of them, nor with the Engram keyboard layout. See the [changelog](CHANGELOG.md) for what the rename breaks.\n\n## Table of Contents\n\n- [Concept](#concept)\n- [Features](#features)\n- [Comparison](#comparison)\n- [Measured Against a Plain Markdown Wiki](#measured-against-a-plain-markdown-wiki)\n- [Design Patterns](#design-patterns)\n- [Architecture](#architecture)\n- [Quick Start](#quick-start)\n- [Search](#search)\n- [Tools](#tools)\n- [Dashboard](#dashboard)\n- [Graph Relations](#graph-relations)\n- [Usage Examples](#usage-examples)\n- [Prompt Your Agent](#prompt-your-agent)\n- [Configuration](#configuration)\n- [Storage Format](#storage-format)\n- [Development](#development)\n- [License](#license)\n\n## Concept\n\nAgent conversations end and take their context with them. Inkwell is the piece that survives: a knowledge base an agent searches *before* acting and writes to *after* resolving something non-obvious, so the next session — same project or a different one — starts with what was already learned instead of re-deriving it.\n\nIt deliberately stores **zero discoverable information**. If a fact can be pulled from code, git history, config files, or existing docs, it does not belong in Inkwell — that's what greps and re-reads are for. What belongs is the kind of knowledge a conversation would otherwise lose: a decision and the alternatives it ruled out, a bug's root cause and fix, a procedure learned the hard way, a preference stated once that should hold from then on.\n\nTwo things keep the base usable as it grows:\n- **Atomicity** — one entry, one fact. `remember` warns (non-blocking) on Markdown headers, more than 3 paragraphs, or content past 512 B/1 KB, pushing multi-fact dumps back into separate linked entries instead of a wall of text no search will rank well.\n- **The graph, not a pile** — entries link to each other via `kb://uuid#type` references, so related facts (a hub project, its features, a diagnostic tied to one of them) stay navigable both ways instead of living as isolated rows.\n\n## Features\n\n- **Hybrid search** — SQLite FTS5 (BM25, Porter stemming) fused with cosine similarity over local Model2Vec embeddings *and* an IDF-weighted exact-match channel over title/tags via Reciprocal Rank Fusion; finds entries by meaning or by a literal proper noun BM25/embeddings alone would dilute among lexically-similar distractors, with zero cloud dependency\n- **Typed graph relations** — `kb://uuid#type` links between entries, resolved both directions (outgoing + backlinks) on every `recall`, with an optional second hop (`hops=2`) to see how two entries connect through an intermediate one\n- **Schema-enforced entry types** — `hub`, `decision`, `diagnostic`, `feature`, `procedure`, `integration`, `pattern`, `snippet`, `preference`, `idea` — declared in `schema.json` and exposed to the client as an enum, so an invalid type can't be written; filterable on search/list\n- **`doctor` integrity pass** — one schema-driven check over the Markdown files for dangling and superseded links, undeclared types, missing template fields, supernodes, and tag/type collisions\n- **`part_of` structural membership** — links a detail entry (`decision`, `diagnostic`, `feature`, `procedure`, `integration`, ...) to its hub, enforced per type by the schema; filterable on `search`/`list`, grouped alongside `kb://` back-links in a hub's `recall` digest\n- **Bi-temporal versioning** — `remember(..., supersede=True)` creates a new version instead of overwriting; old versions stay in history (`include_superseded=True`) instead of being lost\n- **Duplicate detection & link suggestions** — `remember` matches near-identical titles to avoid duplicate entries, and returns `suggested_links` (embedding-similarity matches) so related facts get cross-referenced instead of orphaned\n- **Atomicity guardrails** — non-blocking warnings on structural anti-patterns (headers, >3 paragraphs, oversized content) so the base stays one-fact-per-entry as it scales\n- **Web dashboard** — force-directed graph view, hybrid search, and a CRUD panel over the same knowledge base the MCP tools use (see [Dashboard](#dashboard))\n- **Three transports** — stdio (agent-managed), SSE, streamable-http — so the same server works for a single local agent or a shared multi-agent deployment\n- **Markdown as source of truth** — the SQLite index is a rebuildable cache; delete it and `rebuild`, no data is ever lost\n\n## Comparison\n\n| | Inkwell | Mem0 | Zep / Graphiti | LangMem |\n|---|---|---|---|---|\n| Source of truth | Markdown files on disk | Vector DB / managed API | Temporal knowledge graph | Vector store (LangChain-backed) |\n| Search | BM25 + local Model2Vec embeddings (RRF fusion) | Vector similarity | Graph traversal + embeddings | Vector similarity |\n| Relations | Explicit `kb://uuid#type` links, agent-authored | Implicit (LLM-extracted facts) | Auto-extracted temporal graph edges | None built-in |\n| Temporal model | Bi-temporal `valid_at`/`supersede` on write | Fact overwrite | Native temporal graph (bi-temporal edges) | None built-in |\n| Deployment | Self-hosted, single Docker image, no cloud dependency | Hosted API or self-hosted + vector DB | Self-hosted, needs Neo4j | Library, no server |\n| Design center | Deliberately minimal — zero discoverable info, agent decides what's worth keeping | Automatic fact extraction from conversations | Automatic entity/relationship extraction | Composable memory primitives for LangGraph agents |\n\nInkwell trades automatic extraction (Mem0, Zep) for an agent-curated, atomic, explicitly-linked knowledge base — no LLM-driven ingestion pipeline, no graph database dependency, and the on-disk Markdown stays human-readable and diffable.\n\n## Measured Against a Plain Markdown Wiki\n\nInkwell was benchmarked against the same knowledge base packaged as an ordinary Markdown wiki — one file per topic, organized in folders by project and category (decision, diagnostic, feature, procedure, ...), each project with an index page and cross-links between related pages, browsed with `Read`/`Grep`/`Glob`/`Bash`. Same content, two ways of finding it — for equivalent fact coverage, Inkwell's `search`/`recall` used:\n\n| | Inkwell | Wiki | Improvement |\n|---|---|---|---|\n| Tool calls | 104 | 186 | **-44%** |\n| Total tokens | 3.87M | 5.91M | **-35%** |\n| Cost | $1.31 | $1.62 | **-19%** |\n| Wall time (sum) | 577s | 760s | **-24%** |\n| Fact rate | 1.000 | 0.964 | **+3.7%** |\n\n32 questions (single-hop, multi-hop, negative, cross-lingual, supersede) over **5,070 entries** — 70 curated facts across 4 fictional projects plus 5,000 real-text distractor entries, so retrieval has to work at a scale that doesn't fit in an agent's context:\n\n```\nwiki/\n├── Ledgerbird/                       )\n├── Pipewren/                         )  4 curated projects — 70 real\n├── Snipfox/                          )  decisions/diagnostics/features/\n├── Featherstore/                     )  procedures/integrations/snippets\n│   ├── README.md                        <- project index page, links to every entry below\n│   ├── decision/\n│   │   ├── offline-engine-duckdb-over-spark.md\n│   │   ├── online-value-serialization-msgpack.md\n│   │   └── ... (2 more)\n│   ├── diagnostic/\n│   │   ├── redis-memory-doubling-from-ttl-less-deprecated-feature-groups.md\n│   │   └── training-serving-skew-from-tz-naive-event-timestamps.md\n│   ├── feature/       (4 entries)\n│   ├── integration/   (2 entries)\n│   ├── procedure/     (1 entry)\n│   └── snippet/       (1 entry)\n├── _shared/                             cross-project patterns & preferences\n└── haystack-project-00000.../00199/     200 distractor projects x 25 pages\n    │                                     = 5,000 real-text (Wikipedia) pages\n    ├── README.md                        <- same index-page shape as a real project\n    ├── decision/   (2 entries)\n    ├── feature/    (3 entries)\n    ├── idea/       (7 entries)\n    ├── pattern/    (4 entries)\n    ├── procedure/  (1 entry)\n    └── snippet/    (2 entries)\n```\n\nEvery category folder is a flat list of one-file-per-entry, and every project folder (real or distractor) has its own `README.md` index page linking to all of them — structurally identical, so the wiki arm can't tell curated fact from distractor by shape alone.\n\nAn agent that already knows *where* to look doesn't need to `grep`, re-read, and re-`grep` its way there — the efficiency edge holds for equivalent fact coverage. Retrieval ranking has also been improving: adding an IDF-weighted exact-match channel (below) moved MRR from 0.851 to 0.857 and recall@5 from 0.851 to 0.869, with no regression across any language.\n\n## Design Patterns\n\n- **Reciprocal Rank Fusion** — BM25 and embedding rankings are computed independently and merged by rank position rather than raw score, avoiding the need to normalize incomparable similarity metrics.\n- **Rebuildable cache over source of truth** — the SQLite index is fully derived from the Markdown files (`rebuild` regenerates it from scratch); the database is never the only copy of a fact.\n- **Bi-temporal versioning** — `supersede` writes a new entry and points the old one at it via `superseded_by`, instead of overwriting in place, so history stays queryable (`include_superseded`).\n- **HATEOAS-style graph traversal** — every `recall` response carries its own outgoing/incoming `kb://` links, so navigating the knowledge graph doesn't require a separate query per hop.\n- **Shared domain layer, two transports** — the dashboard's REST API and the MCP tools both call the same `KnowledgeBase`/`SQLiteBackend` methods, so there is exactly one code path for writes regardless of which surface triggered them.\n\n## Architecture\n\n```\nMarkdown files  --->  Search index  --->  MCP  --->  Agent\n(source of truth)     (SQLite FTS5 +      (server.py)  (Claude Code,\n                        Model2Vec,                       ChatGPT, ...)\n                        rebuildable cache)\n```\n\nMarkdown files in `<data-path>/entries/` are the only source of truth. The SQLite index (`search_backend.py`) is a disposable cache built from them — BM25 + Model2Vec embeddings fused via Reciprocal Rank Fusion, plus the `kb://` relation graph — and can always be regenerated with `rebuild`. `server.py` exposes that index to an agent as MCP tools (`remember`/`recall`/`search`/...); the dashboard is an alternate entry point at the same layer, hitting the same `KnowledgeBase`/index directly over REST instead of MCP, so `remember`/`delete` behave identically whether called by an agent or edited by hand in the browser.\n\n- **`src/server.py`** — MCP tool definitions (`remember`, `recall`, `search`, `list`, `tags`, `forget`, `rebuild`, `doctor`), one process, stdio/SSE/streamable-http transport\n- **`src/database.py`** — `KnowledgeBase`: M\n\n…",
+  "status": "curated"
+}

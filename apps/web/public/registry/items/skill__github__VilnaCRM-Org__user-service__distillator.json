@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/VilnaCRM-Org/user-service/distillator",
+  "type": "skill",
+  "name": "distillator",
+  "description": "distillator. Use when the user asks about distillator.",
+  "author": "VilnaCRM-Org",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/VilnaCRM-Org/user-service/blob/HEAD/.agents/skills/bmad-distillator/SKILL.md",
+    "repo": "VilnaCRM-Org/user-service",
+    "path": ".agents/skills/bmad-distillator/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 16,
+    "pushed_at": "2026-08-10T10:06:56Z",
+    "score": 53
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

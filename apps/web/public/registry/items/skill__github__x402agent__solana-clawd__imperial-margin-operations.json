@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/x402agent/solana-clawd/imperial-margin-operations",
+  "type": "skill",
+  "name": "imperial-margin-operations",
+  "description": "Imperial profile funding, deposit/withdraw transaction building, profile isolation, and margin-state reporting.",
+  "author": "x402agent",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/x402agent/solana-clawd/blob/HEAD/sdk/skills/imperial-margin-operations/SKILL.md",
+    "repo": "x402agent/solana-clawd",
+    "path": "sdk/skills/imperial-margin-operations/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 22,
+    "pushed_at": "2026-06-03T20:44:38Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

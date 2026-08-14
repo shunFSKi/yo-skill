@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/pkulak/nix/transcribe",
+  "type": "skill",
+  "name": "transcribe",
+  "description": "Transcribe audio and video file attachments (voice messages, audio files, video files) to text. Use this skill automatically whenever a user sends a voice message or media file.",
+  "author": "pkulak",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/pkulak/nix/blob/HEAD/modules/features/opencrow/skills/transcribe/SKILL.md",
+    "repo": "pkulak/nix",
+    "path": "modules/features/opencrow/skills/transcribe/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

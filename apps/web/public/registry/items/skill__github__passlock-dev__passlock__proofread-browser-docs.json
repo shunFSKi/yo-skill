@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/passlock-dev/passlock/proofread-browser-docs",
+  "type": "skill",
+  "name": "proofread-browser-docs",
+  "description": "Proofread the @passlock/browser TypeDoc/JSDoc. Use whenever you are asked to proofread the @passlock/browser documentation.",
+  "author": "passlock-dev",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/passlock-dev/passlock/blob/HEAD/.agents/skills/proofread-browser-docs/SKILL.md",
+    "repo": "passlock-dev/passlock",
+    "path": ".agents/skills/proofread-browser-docs/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

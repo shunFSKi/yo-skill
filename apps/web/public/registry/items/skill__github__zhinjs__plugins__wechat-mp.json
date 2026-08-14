@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/zhinjs/plugins/wechat-mp",
+  "type": "skill",
+  "name": "wechat-mp",
+  "description": "微信公众号适配器：通过 Webhook 接收消息、自动管理 Access Token、支持 XML 消息解析和 AES 加密。",
+  "author": "zhinjs",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/zhinjs/plugins/blob/HEAD/adapters/wechat-mp/skills/wechat-mp/SKILL.md",
+    "repo": "zhinjs/plugins",
+    "path": "adapters/wechat-mp/skills/wechat-mp/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 4,
+    "pushed_at": "2026-04-15T04:23:55Z",
+    "score": 38
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

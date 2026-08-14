@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/MurphLaws/dotfiles/gsd-help",
+  "type": "skill",
+  "name": "gsd-help",
+  "description": "Show available GSD commands and usage guide",
+  "author": "MurphLaws",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/MurphLaws/dotfiles/blob/HEAD/claude/.claude/skills/gsd-help/SKILL.md",
+    "repo": "MurphLaws/dotfiles",
+    "path": "claude/.claude/skills/gsd-help/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-14T15:45:59Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

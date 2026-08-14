@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/pixelastic/oroshi/quick-implementation",
+  "type": "skill",
+  "name": "quick-implementation",
+  "description": "Implement a solution agreed upon in a grill-me session. Use when the user picks \"quick implementation\" after a grill-me.",
+  "author": "pixelastic",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/pixelastic/oroshi/blob/HEAD/tools/ai/claude/config/skills/quick-implementation/SKILL.md",
+    "repo": "pixelastic/oroshi",
+    "path": "tools/ai/claude/config/skills/quick-implementation/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/TWalkingSE/cybershield/diagnostico-privacidade",
+  "type": "skill",
+  "name": "diagnostico-privacidade",
+  "description": "Diagnóstico de privacidade e avaliação de exposição digital do usuário. Use quando o usuário quiser avaliar seu nível de proteção atual, perguntar \"estou seguro?\", \"o que preciso mudar?\", \"avalie minha segurança\", listar suas ferramentas atuais para avaliação, ou pedir uma auditoria de privacidade.",
+  "author": "TWalkingSE",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/TWalkingSE/cybershield/blob/HEAD/.claude/skills/diagnostico-privacidade/SKILL.md",
+    "repo": "TWalkingSE/cybershield",
+    "path": ".claude/skills/diagnostico-privacidade/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-04-23T01:25:32Z",
+    "score": 35
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

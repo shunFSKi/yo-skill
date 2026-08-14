@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Comfy-Org/Comfy-PR/github-issue-search",
+  "type": "skill",
+  "name": "GitHub Issue Search",
+  "description": "Search for issues and pull requests across Comfy-Org repositories.",
+  "author": "Comfy-Org",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Comfy-Org/Comfy-PR/blob/HEAD/.bot/skills/github-issue-search/SKILL.md",
+    "repo": "Comfy-Org/Comfy-PR",
+    "path": ".bot/skills/github-issue-search/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 11,
+    "pushed_at": "2026-07-31T00:20:48Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

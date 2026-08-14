@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/fyvzhu/sumo_agent/signal-control-fixedtime-skill",
+  "type": "skill",
+  "name": "signal-control-fixedtime-skill",
+  "description": "运行 fixedtime 信号控制算法并输出指标。用于已有 SUMO 路网和车流文件时，单独执行 fixedtime 算法，便于 Graph 并行编排。",
+  "author": "fyvzhu",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/fyvzhu/sumo_agent/blob/HEAD/backend/sumo_skills/signal-control-fixedtime-skill/SKILL.md",
+    "repo": "fyvzhu/sumo_agent",
+    "path": "backend/sumo_skills/signal-control-fixedtime-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

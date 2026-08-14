@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Aiweline/WelineFramework/wls-wls",
+  "type": "skill",
+  "name": "WLS运行时工程师-WLS进程稳定",
+  "description": "Diagnose and control WLS worker, dispatcher, master, reload/restart, cleanup, and long-running process stability. Use for server lifecycle or orchestration failures; use the Session/SSE skill for request-state/streaming internals and ordinary module skills for application logic.",
+  "author": "Aiweline",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Aiweline/WelineFramework/blob/HEAD/dev/ai/codex/plugins/weline-codex-plugin/skills/WLS运行时工程师-WLS进程稳定/SKILL.md",
+    "repo": "Aiweline/WelineFramework",
+    "path": "dev/ai/codex/plugins/weline-codex-plugin/skills/WLS运行时工程师-WLS进程稳定/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-11T16:20:18Z",
+    "score": 48
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

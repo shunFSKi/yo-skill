@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/yofine/Mexus/mission-activate",
+  "type": "skill",
+  "name": "mission-activate",
+  "description": "Activate an existing Agent Team Mission through the Mexus CLI.",
+  "author": "yofine",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/yofine/Mexus/blob/HEAD/packages/plugin-agent-team/skills/mission-activate/SKILL.md",
+    "repo": "yofine/Mexus",
+    "path": "packages/plugin-agent-team/skills/mission-activate/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/f1100k/dm-forge/spec-implementer",
+  "type": "skill",
+  "name": "spec-implementer",
+  "description": "Use when the user asks to implement a specific Kanban task (one task per invocation). Triggers include \"implement task X\", \"do card Y\", \"implement feature Z\", \"start implementation\". Requires a Kanban card with links to Spec and Tech Design (both with Status Done). Reads Constitution + engineering + relevant docs, implements the card scope, updates the Kanban, and opens a PR. If the user asks for multiple tasks, executes only the first.",
+  "author": "f1100k",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/f1100k/dm-forge/blob/HEAD/.claude/skills/spec-implementer/SKILL.md",
+    "repo": "f1100k/dm-forge",
+    "path": ".claude/skills/spec-implementer/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

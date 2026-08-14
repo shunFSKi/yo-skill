@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/pcollinsonline/claude-asana/clear-logs",
+  "type": "skill",
+  "name": "clear-logs",
+  "description": "Clear hook log files from .ai/plugins-utility/logs/. Pass \"archive\" to zip logs before deleting.",
+  "author": "pcollinsonline",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/pcollinsonline/claude-asana/blob/HEAD/marketplaces/monorepo-marketplace/plugins-utility/skills/clear-logs/SKILL.md",
+    "repo": "pcollinsonline/claude-asana",
+    "path": "marketplaces/monorepo-marketplace/plugins-utility/skills/clear-logs/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-05-10T01:29:55Z",
+    "score": 32
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

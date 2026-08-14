@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/wooden1234/fin-harness/announcement-search",
+  "type": "skill",
+  "name": "announcement-search",
+  "description": "支持A股、港股、基金、ETF等金融标的公告的查询，同时公告类型包括不限于定期财务报告、分红派息、回购增持、资产重组等等。",
+  "author": "wooden1234",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/wooden1234/fin-harness/blob/HEAD/skills/announcement-search/SKILL.md",
+    "repo": "wooden1234/fin-harness",
+    "path": "skills/announcement-search/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

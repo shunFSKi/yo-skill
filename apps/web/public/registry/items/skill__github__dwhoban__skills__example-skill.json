@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/dwhoban/skills/example-skill",
+  "type": "skill",
+  "name": "example-skill",
+  "description": "An example skill template. Replace this with your skill's purpose and when the agent should use it.",
+  "author": "dwhoban",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/dwhoban/skills/blob/HEAD/skills/example-skill/SKILL.md",
+    "repo": "dwhoban/skills",
+    "path": "skills/example-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-03-15T00:51:07Z",
+    "score": 32
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Azure/azure-sdk-for-python/fix-black",
+  "type": "skill",
+  "name": "fix-black",
+  "description": "Automatically fix black code formatting issues in any Azure SDK for Python package",
+  "author": "Azure",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Azure/azure-sdk-for-python/blob/HEAD/.github/skills/fix-black/SKILL.md",
+    "repo": "Azure/azure-sdk-for-python",
+    "path": ".github/skills/fix-black/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 5588,
+    "pushed_at": "2026-08-14T16:10:43Z",
+    "score": 86
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "# Azure SDK for Python\n\n[![Packages](https://img.shields.io/badge/packages-latest-blue.svg)](https://azure.github.io/azure-sdk/releases/latest/python.html) [![Dependencies](https://img.shields.io/badge/dependency-report-blue.svg)](https://azuresdkartifacts.blob.core.windows.net/azure-sdk-for-python/dependencies/dependencies.html) [![DepGraph](https://img.shields.io/badge/dependency-graph-blue.svg)](https://azuresdkartifacts.blob.core.windows.net/azure-sdk-for-python/dependencies/dependencyGraph/index.html) [![Python](https://img.shields.io/pypi/pyversions/azure-core.svg?maxAge=2592000)](https://pypi.python.org/pypi/azure/) [![Build Status](https://dev.azure.com/azure-sdk/public/_apis/build/status/python/python%20-%20core%20-%20ci?branchName=main)](https://dev.azure.com/azure-sdk/public/_build/latest?definitionId=458&branchName=main)\n\nThis repository is for the active development of the Azure SDK for Python. For consumers of the SDK we recommend visiting our [public developer docs](https://docs.microsoft.com/python/azure/) or our versioned [developer docs](https://azure.github.io/azure-sdk-for-python).\n\n## Getting started\n\nFor your convenience, each service has a separate set of libraries that you can choose to use instead of one, large Azure package. To get started with a specific library, see the `README.md` (or `README.rst`) file located in the library's project folder.\n\nYou can find service libraries in the `/sdk` directory.\n\n### Prerequisites\n\nThe client libraries support multiple versions of Python. For more details, please see the [Azure SDK for Python version support policy](https://github.com/Azure/azure-sdk-for-python/blob/main/doc/python_version_support_policy.md).\n\n## Packages available\n\nEach service might have a number of libraries available from each of the following categories:\n* [Client - New Releases](#client-new-releases)\n* [Client - Previous Versions](#client-previous-versions)\n* [Management - New Releases](#management-new-releases)\n* [Management - Previous Versions](#management-previous-versions)\n\n### Client: New Releases\n\nNew wave of packages that we are announcing as **GA** and several that are currently releasing in **preview**. These libraries allow you to use and consume existing resources and interact with them, for example: upload a blob. These libraries share  several core functionalities such as: retries, logging, transport protocols, authentication protocols, etc. that can be found in the [azure-core](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/core/azure-core) library. You can learn more about these libraries by reading guidelines that they follow [here](https://azure.github.io/azure-sdk/python/guidelines/index.html).\n\nYou can find the [most up to date list of all of the new packages on our page](https://azure.github.io/azure-sdk/releases/latest/index.html#python)\n\n> NOTE: If you need to ensure your code is ready for production use one of the stable, non-preview libraries.\n\n### Client: Previous Versions\n\nLast stable versions of packages that have been provided for usage with Azure and are production-ready. These libraries provide you with similar functionalities to the Preview ones as they allow you to use and consume existing resources and interact with them, for example: upload a blob. They might not implement the [guidelines](https://azure.github.io/azure-sdk/python/guidelines/index.html) or have the same feature set as the November releases. They do however offer wider coverage of services.\n\n### Management: New Releases\nA new set of management libraries that follow the [Azure SDK Design Guidelines for Python](https://azure.github.io/azure-sdk/python/guidelines/) are now available. These new libraries provide a number of core capabilities that are shared amongst all Azure SDKs, including the intuitive Azure Identity library, an HTTP Pipeline with custom policies, error-handling, distributed tracing, and much more.\nDocumentation and code samples for these new libraries can be found [here](https://aka.ms/azsdk/python/mgmt). In addition, a migration guide that shows how to transition from older versions of libraries is located [here](https://github.com/Azure/azure-sdk-for-python/blob/main/doc/sphinx/mgmt_quickstart.rst#migration-guide).\n\nYou can find the [most up to date list of all of the new packages on our page](https://azure.github.io/azure-sdk/releases/latest/mgmt/python.html)\n\n> NOTE: If you need to ensure your code is ready for production use one of the stable, non-preview libraries. Also, if you are experiencing authentication issues with the management libraries after upgrading certain packages, it's possible that you upgraded to the new versions of SDK without changing the authentication code, please refer to the migration guide mentioned above for proper instructions.\n\n### Management: Previous Versions\nFor a complete list of management libraries that enable you to provision and manage Azure resources, please [check here](https://azure.github.io/azure-sdk/releases/latest/all/python.html). They might not have the same feature set as the new releases but they do offer wider coverage of services.\nManagement libraries can be identified by namespaces that start with `azure-mgmt-`, e.g. `azure-mgmt-compute`\n\n## Need help?\n\n* For detailed documentation visit our [Azure SDK for Python documentation](https://aka.ms/python-docs)\n* File an issue via [GitHub Issues](https://github.com/Azure/azure-sdk-for-python/issues)\n* Check [previous questions](https://stackoverflow.com/questions/tagged/azure+python) or ask new ones on StackOverflow using `azure` and `python` tags.\n\n\n## Data Collection\nThe software may collect information about you and your use of the software and send it to Microsoft. Microsoft may use this information to provide services and improve our products and services. You may turn off the telemetry as described below. You can learn more about data collection and use in the help documentation and Microsoft’s [privacy statement](https://go.microsoft.com/fwlink/?LinkID=824704). For more information on the data collected by the Azure SDK, please visit the [Telemetry Guidelines](https://azure.github.io/azure-sdk/general_azurecore.html#telemetry-policy) page.\n\n### Telemetry Configuration\nTelemetry collection is on by default.\n\nTo opt out, you can disable telemetry at client construction. Define a `NoUserAgentPolicy` class that is a subclass of `UserAgentPolicy` with an `on_request` method that does nothing. Then pass instance of this class as kwargs `user_agent_policy=NoUserAgentPolicy()` during client creation. This will disable telemetry for all methods in the client. Do this for every new client.\n\nThe example below uses the `azure-storage-blob` package. In your code, you can replace `azure-storage-blob` with the package you are using.\n\n```python\nimport os\nfrom azure.identity import ManagedIdentityCredential\nfrom azure.storage.blob import BlobServiceClient\nfrom azure.core.pipeline.policies import UserAgentPolicy\n\n\n# Create your credential you want to use\nmi_credential = ManagedIdentityCredential()\n\naccount_url = \"https://<storageaccountname>.blob.core.windows.net\"\n\n# Set up user-agent override\nclass NoUserAgentPolicy(UserAgentPolicy):\n    def on_request(self, request):\n        pass\n\n# Create the BlobServiceClient object\nblob_service_client = BlobServiceClient(account_url, credential=mi_credential, user_agent_policy=NoUserAgentPolicy())\n\ncontainer_client = blob_service_client.get_container_client(container=<container_name>)\n# TODO: do something with the container client like download blob to a file\n```\n\n### Reporting security issues and security bugs\n\nSecurity issues and bugs should be reported privately, via email, to the Microsoft Security Response Center (MSRC) <secure@microsoft.com>. You should receive a response within 24 hours. If for some reason you do not, please follow up via email to ensure we received your original message. Further information, including the MSRC PGP key, can be found in the [Security TechCenter](https://www.microsoft.com/msrc/faqs-report-an-issue).\n\n## Contributing\n\nFor details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-python/blob/main/CONTRIBUTING.md).\n\nThis project welcomes contributions and suggestions. Most contributions require you to agree to a Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us the rights to use your contribution. For details, visit\nhttps://cla.microsoft.com.\n\nWhen you submit a pull request, a CLA-bot will automatically determine whether you need to provide a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions provided by the bot. You will only need to do this once across all repositories using our CLA.\n\nThis project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).\nFor more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/)\nor contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.\n\n\n\n",
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/memclutter/memos/sys-task-plan",
+  "type": "skill",
+  "name": "sys.task.plan",
+  "description": "Write a task's plan.md from its spec — the SDD Plan phase. Turn the owner's stack, architecture, and constraints into a technical plan for an existing task. Use after sys.task.specify, before sys.task.breakdown.",
+  "author": "memclutter",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/memclutter/memos/blob/HEAD/.claude/skills/sys.task.plan/SKILL.md",
+    "repo": "memclutter/memos",
+    "path": ".claude/skills/sys.task.plan/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-12T14:20:48Z",
+    "score": 48
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

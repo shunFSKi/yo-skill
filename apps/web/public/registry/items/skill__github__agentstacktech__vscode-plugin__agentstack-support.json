@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/agentstacktech/vscode-plugin/agentstack-support",
+  "type": "skill",
+  "name": "agentstack-support",
+  "description": "Use when the user mentions support ticket, help desk, project support channel, psup, or end-user support thread on AgentStack.",
+  "author": "agentstacktech",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/agentstacktech/vscode-plugin/blob/HEAD/skills/agentstack-support/SKILL.md",
+    "repo": "agentstacktech/vscode-plugin",
+    "path": "skills/agentstack-support/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-07-14T13:11:47Z",
+    "score": 43
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/NeoLi00/memX/memx",
+  "type": "skill",
+  "name": "memx",
+  "description": "Use when an agent needs to recall, save, inspect, or audit memX memories through the bundled MCP tools.",
+  "author": "NeoLi00",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/NeoLi00/memX/blob/HEAD/skills/memx/SKILL.md",
+    "repo": "NeoLi00/memX",
+    "path": "skills/memx/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 432,
+    "pushed_at": "2026-05-26T14:23:14Z",
+    "score": 74
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "<p align=\"center\">\n  <img src=\"./assets/memx-cover-en.svg\" alt=\"memX - self-learning, self-maintaining memory for AI agents\" width=\"920\">\n</p>\n\n<p align=\"center\">\n  <a href=\"./README.md\">English</a> · <a href=\"./README-ch.md\">中文</a> ·\n  <a href=\"./ARCHITECTURE.md\">Architecture</a>\n</p>\n\n---\n\nmemX turns completed work into structured, searchable, self-maintained memory, then injects only the evidence an agent needs for the current query.\nIt connects natively to Codex, Claude Code, and OpenClaw, and reaches any MCP-compatible client through the same local memory layer.\n\n## Benchmarks\n\n<table align=\"center\">\n  <thead>\n    <tr>\n      <th>Suite</th>\n      <th>Scope</th>\n      <th>R@3 success rate</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td><strong>LongMemEval-S</strong></td>\n      <td>Long-context memory retrieval</td>\n      <td><strong>94.2%</strong></td>\n    </tr>\n    <tr>\n      <td><strong>Real engineering cases</strong></td>\n      <td>30 cases, each with 20+ turns</td>\n      <td><strong>100%</strong></td>\n    </tr>\n  </tbody>\n</table>\n\n## Architecture\n\n<p align=\"center\">\n  <img src=\"./assets/memx-overview.svg\" alt=\"memX coarse architecture\" width=\"920\">\n</p>\n\n## Agent support\n\n<table align=\"center\">\n  <tr>\n    <td align=\"center\" width=\"56\"><img src=\"./assets/agent-logos/codex.png\" alt=\"Codex logo\" width=\"34\"></td>\n    <td><strong>Codex</strong></td>\n    <td><sub>native hooks, MCP hidden by default</sub></td>\n  </tr>\n  <tr>\n    <td align=\"center\" width=\"56\"><img src=\"./assets/agent-logos/claude-code.png\" alt=\"Claude Code logo\" width=\"34\"></td>\n    <td><strong>Claude Code</strong></td>\n    <td><sub>native hooks, MCP hidden by default</sub></td>\n  </tr>\n  <tr>\n    <td align=\"center\" width=\"56\"><img src=\"./assets/agent-logos/openclaw.png\" alt=\"OpenClaw logo\" width=\"34\"></td>\n    <td><strong>OpenClaw</strong></td>\n    <td><sub>native + hooks</sub></td>\n  </tr>\n  <tr>\n    <td align=\"center\" width=\"56\"><strong>MCP</strong></td>\n    <td><strong>MCP clients</strong></td>\n    <td><sub>any MCP-compatible client</sub></td>\n  </tr>\n</table>\n\n## Quick start\n\nRequirements: Node.js 22.14+ or Node 24. OpenClaw installs require OpenClaw 2026.3.25+. Python 3 is\nneeded only for the default local embedding runtime.\n\nThe README commands use the GitHub package spec. A fresh run pulls current GitHub code, so installs\ndo not wait for an npm publish. To use the npm release channel later, replace\n`github:NeoLi00/memX` with `@neoli00/memx`.\n\nFill in these values before running a command:\n\n- `--llm-provider`: the provider adapter memX should call. Choose one of `openai-compatible`,\n  `anthropic`, `google`, or `ollama`.\n- `--llm-base-url`: the base URL for that provider. Examples: `https://api.openai.com/v1`,\n  `https://api.anthropic.com/v1`, `https://generativelanguage.googleapis.com/v1beta`, or\n  `http://127.0.0.1:11434` for Ollama.\n- `--llm-model`: the model memX uses for memory compilation, recall planning, and maintenance.\n  Pick a fast, low-cost model with reliable JSON output.\n- `--llm-api-key`: the API key for the provider. Use `--llm-api-key-env PROVIDER_API_KEY` if you\n  want the config to reference an environment variable instead of storing plaintext. For local\n  Ollama, omit the key.\n\nThe default embedding setup is local `sentence-transformers-local` with\n`intfloat/multilingual-e5-small`. Add `--embedding-provider` and `--embedding-model` only when you\nwant to override that default. Use `--dry-run` to preview the files and exec-form commands before\nwriting anything.\n\nFor Codex and Claude Code, native hooks are the default lifecycle path for automatic recall and\nturn capture. Quickstart installs the native plugin, writes the shared memX config, starts or\nrefreshes the managed local memX service, and keeps MCP memory tools hidden with `--mcp-tools none`\nby default. This prevents duplicate recall/write and prevents the agent from reading audit data as a\nside channel. Use `--mcp-tools full` only when you intentionally want the agent to see the complete\nMCP tool set. Generic MCP quickstart stays `full` by default because it has no native lifecycle\nhooks. Default native memories are also host-scoped, so Codex and Claude Code do not share the same\nlocal database unless you deliberately override the database path and actor settings.\n\nIf `http://127.0.0.1:3878` is already used by an unmanaged memX-compatible service, quickstart stops\ninstead of silently reusing it. Stop the old service or pass a free local URL, for example\n`--memx-url http://127.0.0.1:3888`.\n\n### Claude Code\n\nThis installs the shared memX config, a local Claude Code plugin marketplace, native lifecycle\nhooks, and the managed local memX service in one run.\n\n```bash\nnpx -y -p github:NeoLi00/memX memx quickstart claude-code \\\n  --llm-provider openai-compatible \\\n  --llm-base-url https://llm.example.com/v1 \\\n  --llm-model fast-memory-model \\\n  --llm-api-key sk-your-provider-key\n```\n\n### Codex\n\nThis installs the shared memX config, a local Codex plugin marketplace, native lifecycle hooks, and\nthe managed local memX service in one run.\n\n```bash\nnpx -y -p github:NeoLi00/memX memx quickstart codex \\\n  --llm-provider openai-compatible \\\n  --llm-base-url https://llm.example.com/v1 \\\n  --llm-model fast-memory-model \\\n  --llm-api-key sk-your-provider-key\n```\n\n### OpenClaw\n\n```bash\nnpx -y -p github:NeoLi00/memX memx quickstart openclaw \\\n  --llm-provider openai-compatible \\\n  --llm-base-url https://llm.example.com/v1 \\\n  --llm-model fast-memory-model \\\n  --llm-api-key sk-your-provider-key\n```\n\n### Generic MCP\n\nUse this path for MCP clients that do not have a native memX lifecycle adapter. Quickstart writes the\nshared memX config, starts the managed local memX service, and prints a ready-to-copy MCP server\nconfig.\n\n```bash\nnpx -y -p github:NeoLi00/memX memx quickstart mcp \\\n  --llm-provider openai-compatible \\\n  --llm-base-url https://llm.example.com/v1 \\\n  --llm-model fast-memory-model \\\n  --llm-api-key sk-your-provider-key\n```\n\n### Service management\n\n```bash\nnpx -y -p github:NeoLi00/memX memx service status\nnpx -y -p github:NeoLi00/memX memx service restart\nnpx -y -p github:NeoLi00/memX memx service stop\n```\n\nUse the same `--home`, `--memx-url`, and `--memx-secret` values that you used during quickstart when\nyou manage a non-default install.\n\n## Clean uninstall\n\nEach uninstall command backs up the target config first, then removes only memX-owned entries.\nClaude Code and Codex cleanup also stop the managed local service, uninstall the native plugin,\nremove the local marketplace, and delete the generated marketplace snapshot.\nOpenClaw cleanup also removes stale `memx` / `memory-memx` slot, allow, and entry references, then\nbest-effort uninstalls both current and legacy plugin files if OpenClaw can still see them.\n\n```bash\nnpx -y -p github:NeoLi00/memX memx uninstall openclaw\nnpx -y -p github:NeoLi00/memX memx uninstall codex\nnpx -y -p github:NeoLi00/memX memx uninstall claude-code\n```\n\nAdd `--dry-run` to preview, or `--config /path/to/config` when using a non-default config path.\n\n## What memX can do\n\n- **Remember work over time**: project decisions, user preferences, task status, long source\n  segments, and raw evidence stay linked to the original turn.\n- **Connect related things**: projects, repos, tools, files, resources, blockers, and outcomes can\n  be represented as entities and graph edges.\n- **Learn collaboration patterns**: repeated evidence can become reusable guidance without losing\n  its supporting sources.\n- **Maintain itself**: corrections can supersede older facts, stable evidence can be promoted, and\n  stale task state stops competing with current state.\n- **Recall compact evidence**: facts, events, state, chunks, relationships, resources, and learned\n  patterns are searched together, then injected as small evidence lines.\n",
+  "status": "curated"
+}

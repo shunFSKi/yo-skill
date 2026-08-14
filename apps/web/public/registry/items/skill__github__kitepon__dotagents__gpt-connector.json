@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/kitepon/dotagents/gpt-connector",
+  "type": "skill",
+  "name": "gpt-connector",
+  "description": "ChatGPTのsecond opinion、gpt-connector MCPの診断・利用・timeout後のsession回収を頼まれた時に使う。",
+  "author": "kitepon",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/kitepon/dotagents/blob/HEAD/claude/skills/gpt-connector/SKILL.md",
+    "repo": "kitepon/dotagents",
+    "path": "claude/skills/gpt-connector/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

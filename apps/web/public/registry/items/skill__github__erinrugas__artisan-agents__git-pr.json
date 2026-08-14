@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/erinrugas/artisan-agents/git-pr",
+  "type": "skill",
+  "name": "git-pr",
+  "description": "Prepares and creates pull requests with clear scope, risk notes, and test plan. Use when opening PRs or getting code ready for review.",
+  "author": "erinrugas",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/erinrugas/artisan-agents/blob/HEAD/skills/git-pr/SKILL.md",
+    "repo": "erinrugas/artisan-agents",
+    "path": "skills/git-pr/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

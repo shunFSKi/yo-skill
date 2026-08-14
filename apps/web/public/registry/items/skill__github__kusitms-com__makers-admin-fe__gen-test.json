@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/kusitms-com/makers-admin-fe/gen-test",
+  "type": "skill",
+  "name": "gen-test",
+  "description": "Vitest와 Testing Library 기준으로 테스트를 생성합니다. 실제 규칙은 `.claude/skills/gen-test/SKILL.md`에서 읽고 그대로 따릅니다.",
+  "author": "kusitms-com",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/kusitms-com/makers-admin-fe/blob/HEAD/.codex/skills/gen-test/SKILL.md",
+    "repo": "kusitms-com/makers-admin-fe",
+    "path": ".codex/skills/gen-test/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-12T00:53:55Z",
+    "score": 42
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

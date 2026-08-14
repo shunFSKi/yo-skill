@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Kewton/photon-action-memory/codex-uat",
+  "type": "skill",
+  "name": "codex-uat",
+  "description": "Generate and record UAT checks, including manual GUI or real-device steps.",
+  "author": "Kewton",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Kewton/photon-action-memory/blob/HEAD/.codex/skills/codex-uat/SKILL.md",
+    "repo": "Kewton/photon-action-memory",
+    "path": ".codex/skills/codex-uat/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-05-17T10:55:36Z",
+    "score": 37
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

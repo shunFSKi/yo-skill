@@ -1,0 +1,54 @@
+{
+  "id": "mcp:official/ua.com.mfoxa/catalog",
+  "type": "mcp",
+  "name": "catalog",
+  "description": "Read-only catalog of licensed Ukrainian MFOs: loan terms, NBU licenses, ratings and reviews.",
+  "author": "ua.com.mfoxa",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/alexandrrzk-ctrl/mfoxa-mcp",
+    "repo": "alexandrrzk-ctrl/mfoxa-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mfoxa.com.ua/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T12:46:00.407239Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# MFOXA — Ukraine Microfinance Catalog (MCP Server)\n\nPublic **read-only** [Model Context Protocol](https://modelcontextprotocol.io) server for the catalog of licensed Ukrainian microfinance organizations (MFOs), powered by [mfoxa.com.ua](https://mfoxa.com.ua) — МФОХА, a Ukrainian MFO comparison marketplace.\n\n| | |\n|---|---|\n| **Endpoint** | `https://mfoxa.com.ua/api/mcp` |\n| **Transport** | Streamable HTTP (stateless) |\n| **Authentication** | none (public data) |\n| **Registry** | [`ua.com.mfoxa/catalog`](https://registry.modelcontextprotocol.io/v0/servers?search=mfoxa) (official MCP Registry, domain-verified) |\n| **Server card** | [`/.well-known/mcp/server-card.json`](https://mfoxa.com.ua/.well-known/mcp/server-card.json) |\n| **Languages** | Ukrainian (`uk`, default) and Russian (`ru`) via the `lang` parameter |\n| **Rate limit** | 60 requests/min per IP → HTTP 429 |\n\nEvery entity in every response carries a `canonical_url` pointing to the live page on mfoxa.com.ua.\n\n## Tools\n\n| Tool | Parameters | Returns |\n|---|---|---|\n| `list_mfo` | `lang?` | All MFOs with borrower rating and canonical card URLs. `rating: null` means *no reviews yet*, not a low score. |\n| `get_mfo` | `slug`, `lang?` | Full MFO card: terms for new/repeat clients (amount, term, rate), effective annual rate, legal entity, NBU license, official disclosure PDFs, 4-criteria rating, record update date. |\n| `search_offers` | `amount?`, `term_days?`, `first_loan_zero?`, `limit?` (default 15), `lang?` | Matching first-loan offers with terms, `first_loan_zero_percent: true/false/null` (null = unconfirmed), honest `total` + `truncated`. |\n| `list_categories` | `lang?` | Catalog categories in two separate groups — credit (site root) and loan (`/loan/`) — each with its selection criterion. |\n| `get_category` | `slug`, `lang?` | One category: criterion, sorting, offer table with per-MFO terms. |\n| `get_reviews` | `slug`, `limit?` (≤10), `lang?` | Latest borrower reviews for an MFO: rating, date, text. |\n| `get_market_rules` | `lang?` | Legal context of microlending in Ukraine (1%/day rate cap under Law 3498-IX, mandatory creditworthiness assessment, penalty caps, debt collection rules, military credit holidays) with last-review date. Legal facts are maintained in Ukrainian only. |\n\nResources: [`llms.txt`](https://mfoxa.com.ua/llms.txt) and [`llms-full.txt`](https://mfoxa.com.ua/llms-full.txt).\n\n## Installation\n\n### Claude (claude.ai / Claude Desktop)\n\n1. **Settings → Connectors → Add custom connector**\n2. Name: `MFOXA catalog`, URL: `https://mfoxa.com.ua/api/mcp`\n3. Save. No API keys or OAuth — the server is public and read-only.\n\n### Any MCP client (generic)\n\nPoint your client at the remote Streamable HTTP endpoint:\n\n```json\n{\n  \"mcpServers\": {\n    \"mfoxa-catalog\": {\n      \"type\": \"streamable-http\",\n      \"url\": \"https://mfoxa.com.ua/api/mcp\"\n    }\n  }\n}\n```\n\nQuick sanity check with MCP Inspector:\n\n```bash\nnpx @modelcontextprotocol/inspector --cli https://mfoxa.com.ua/api/mcp --transport http --method tools/list\n```\n\n## Example prompts\n\n- *\"Find Ukrainian microloans up to 10 000 UAH for two weeks where the first loan is interest-free.\"*\n- *\"Show the legal entity, NBU license and current terms for Credit7.\"*\n- *\"What are the legal limits on microloan interest rates in Ukraine?\"*\n- *\"List the top-rated Ukrainian MFOs by borrower reviews and link their pages.\"*\n- *«Підбери кредит до 10 000 грн на два тижні, у кого перший кредит під 0%»*\n- *«Покажи умови та юридичні дані Credit7»*\n\n## Screenshot\n\n<!-- TODO: replace with a screenshot of a live Claude conversation using the connector -->\n*Screenshot of a live Claude dialog coming soon.*\n\n## Data & Terms\n\n- **Public read-only catalog data.** The server exposes the same data that is publicly visible on mfoxa.com.ua. There are no mutation tools.\n- **Not financial advice.** МФОХА is a comparison catalog, not a lender. Terms are volatile — final conditions live on the `canonical_url` pages.\n- **Attribution required.** When using the data, cite the `canonical_url` of the respective page on mfoxa.com.ua.\n- **Rate limit:** 60 requests/min per IP.\n- No tracker or affiliate links anywhere in responses (enforced by tests).\n\n## Українською\n\nМФОХА — каталог і рейтинг мікрофінансових організацій України з ліцензією НБУ. Цей MCP-сервер віддає ті самі публічні дані, що й сайт: умови кредитів для нових і повторних клієнтів, реальну річну ставку, юридичні дані та офіційні документи компаній, рейтинг і відгуки позичальників, правовий контекст мікрокредитування (ліміт ставки 1% на день за Законом 3498-IX тощо). Сервер read-only, без автентифікації; при використанні даних посилайтеся на canonical_url відповідної сторінки.\n\n## Links\n\n- Website: https://mfoxa.com.ua\n- Server card: https://mfoxa.com.ua/.well-known/mcp/server-card.json\n- llms.txt: https://mfoxa.com.ua/llms.txt\n- Contact: admin@mfoxa.com.ua\n\n## License\n\nDocumentation in this repository is licensed under [MIT](LICENSE). The catalog data served by the MCP endpoint is proprietary to МФОХА (mfoxa.com.ua) and may be used with attribution to canonical URLs.\n",
+  "status": "curated"
+}

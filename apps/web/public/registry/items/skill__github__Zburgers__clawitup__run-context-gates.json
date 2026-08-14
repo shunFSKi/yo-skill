@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Zburgers/clawitup/run-context-gates",
+  "type": "skill",
+  "name": "run-context-gates",
+  "description": "Bound Graphify, diff, rg, test, and memory gates for ClawItUp audits.",
+  "author": "Zburgers",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Zburgers/clawitup/blob/HEAD/skills/run-context-gates/SKILL.md",
+    "repo": "Zburgers/clawitup",
+    "path": "skills/run-context-gates/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-05-24T16:34:44Z",
+    "score": 37
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

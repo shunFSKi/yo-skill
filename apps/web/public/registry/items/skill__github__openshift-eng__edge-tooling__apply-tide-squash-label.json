@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/openshift-eng/edge-tooling/apply-tide-squash-label",
+  "type": "skill",
+  "name": "apply-tide-squash-label",
+  "description": "Label a GitHub PR for squash merging by posting a /label tide/merge-method-squash comment",
+  "author": "openshift-eng",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/openshift-eng/edge-tooling/blob/HEAD/plugins/github/skills/apply-tide-squash-label/SKILL.md",
+    "repo": "openshift-eng/edge-tooling",
+    "path": "plugins/github/skills/apply-tide-squash-label/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

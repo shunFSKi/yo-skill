@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/version-1/agents-docs/role-reviewer",
+  "type": "skill",
+  "name": "role-reviewer",
+  "description": "実装済みの差分、PR、コミット、指定ファイルのレビューを Reviewer agent に委譲するときに使う。仕様適合、公開契約、回帰、境界条件、セキュリティ、データ整合性、責務、検証不足を確認し、マージ前や実装後のリスクを指摘してほしいときに使う。実装前の計画、コード変更の実装、事実調査だけが目的なら使わない。",
+  "author": "version-1",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/version-1/agents-docs/blob/HEAD/codex/skills/internal/role-reviewer/SKILL.md",
+    "repo": "version-1/agents-docs",
+    "path": "codex/skills/internal/role-reviewer/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-08-12T05:03:02Z",
+    "score": 49
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

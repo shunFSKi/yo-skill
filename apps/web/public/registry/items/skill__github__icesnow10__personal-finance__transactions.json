@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/icesnow10/personal-finance/transactions",
+  "type": "skill",
+  "name": "transactions",
+  "description": "List all rows from the flat monthly budget result.",
+  "author": "icesnow10",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/icesnow10/personal-finance/blob/HEAD/plugins/open-personal-finance/skills/transactions/SKILL.md",
+    "repo": "icesnow10/personal-finance",
+    "path": "plugins/open-personal-finance/skills/transactions/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

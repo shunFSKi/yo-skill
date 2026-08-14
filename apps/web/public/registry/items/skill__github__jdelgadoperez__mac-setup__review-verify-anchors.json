@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/jdelgadoperez/mac-setup/review-verify-anchors",
+  "type": "skill",
+  "name": "review-verify-anchors",
+  "description": "Verify inline PR comment line anchors before posting",
+  "author": "jdelgadoperez",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/jdelgadoperez/mac-setup/blob/HEAD/dotfiles/.claude/skills/review-verify-anchors/SKILL.md",
+    "repo": "jdelgadoperez/mac-setup",
+    "path": "dotfiles/.claude/skills/review-verify-anchors/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

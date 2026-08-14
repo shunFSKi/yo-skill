@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/MikeBrew123/carnivore-weekly/source-command-standup",
+  "type": "skill",
+  "name": "source-command-standup",
+  "description": "Daily standup - shows project status, recent progress, and priorities",
+  "author": "MikeBrew123",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/MikeBrew123/carnivore-weekly/blob/HEAD/.agents/skills/source-command-standup/SKILL.md",
+    "repo": "MikeBrew123/carnivore-weekly",
+    "path": ".agents/skills/source-command-standup/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-14T14:59:58Z",
+    "score": 42
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

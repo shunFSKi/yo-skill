@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/VonC/llm-shared/install-sensitive-git-hooks",
+  "type": "skill",
+  "name": "install-sensitive-git-hooks",
+  "description": "Install, repair, or verify composable sensitive-content pre-commit and commit-msg hooks in the current Git repository. Use llm-shared’s Python environment rather than the consuming project’s Python, merge configured shared and project-local replacement rules, preserve existing hooks, and report when protection is already in place. Use when the user asks to set up or check sensitive Git commit protection.",
+  "author": "VonC",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/VonC/llm-shared/blob/HEAD/.agents/llm-shared/skills/install-sensitive-git-hooks/SKILL.md",
+    "repo": "VonC/llm-shared",
+    "path": ".agents/llm-shared/skills/install-sensitive-git-hooks/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-11T14:30:56Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

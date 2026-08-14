@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/knirski/subsloth/multi-pr-coordinator",
+  "type": "skill",
+  "name": "multi-pr-coordinator",
+  "description": "Use for the coordinator role when managing multiple concurrent PRs with one PR owner, one branch, and one worktree per PR.",
+  "author": "knirski",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/knirski/subsloth/blob/HEAD/.agents/skills/multi-pr-coordinator/SKILL.md",
+    "repo": "knirski/subsloth",
+    "path": ".agents/skills/multi-pr-coordinator/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-05T09:18:19Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

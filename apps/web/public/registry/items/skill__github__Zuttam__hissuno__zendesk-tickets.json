@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Zuttam/hissuno/zendesk-tickets",
+  "type": "skill",
+  "name": "zendesk-tickets",
+  "description": "Sync Zendesk tickets (solved + closed) into Hissuno as sessions. Cursor advances by `updated_at` from the Zendesk Search API.",
+  "author": "Zuttam",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Zuttam/hissuno/blob/HEAD/app/src/lib/automations/skills/zendesk-tickets/SKILL.md",
+    "repo": "Zuttam/hissuno",
+    "path": "app/src/lib/automations/skills/zendesk-tickets/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 6,
+    "pushed_at": "2026-05-26T05:52:36Z",
+    "score": 48
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

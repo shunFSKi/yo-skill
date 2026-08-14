@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/PyAutoLabs/PyAutoBrain/eyes",
+  "type": "skill",
+  "name": "eyes",
+  "description": "Run the visualization review loop through the PyAutoBrain Eyes Agent — survey a visualization workspace's figure surface, render via its gallery harness, review figures with the human, and route accepted critiques to intake/start_dev. Use when the user wants to look at, judge, or update the organism's plots and figures.",
+  "author": "PyAutoLabs",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/PyAutoLabs/PyAutoBrain/blob/HEAD/skills/eyes/SKILL.md",
+    "repo": "PyAutoLabs/PyAutoBrain",
+    "path": "skills/eyes/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-11T16:46:35Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

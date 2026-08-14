@@ -20,7 +20,8 @@
   },
   "quality": {
     "stars": null,
-    "pushed_at": "2026-08-08T15:48:26.448403Z"
+    "pushed_at": "2026-08-14T10:45:14.659696Z",
+    "score": 52
   },
   "security": {
     "score": 100,
@@ -52,6 +53,6 @@
     "category": "编程",
     "featured": false
   },
-  "readme": null,
+  "readme": "# BridgeNode Skill & Examples\n\n[![PyPI version](https://img.shields.io/pypi/v/bridgenode-llm.svg)](https://pypi.org/project/bridgenode-llm/)\n[![Downloads](https://img.shields.io/pypi/dm/bridgenode-llm.svg)](https://pypi.org/project/bridgenode-llm/)\n[![npm version](https://img.shields.io/npm/v/@bridgenode/llm.svg)](https://www.npmjs.com/package/@bridgenode/llm)\n[![npm version](https://img.shields.io/npm/v/@bridgenode/mcp.svg)](https://www.npmjs.com/package/@bridgenode/mcp)\n[![License: MIT-0](https://img.shields.io/badge/License-MIT--0-yellow.svg)](https://opensource.org/license/mit-0/)\n[![BridgeNode on x402-list](https://x402-list.com/badge/bridgenode.svg)](https://x402-list.com/services/bridgenode?utm_source=badge&utm_medium=referral&utm_campaign=embed)\n[![BridgeNode uptime on x402-list](https://x402-list.com/badge/bridgenode.svg?data=uptime)](https://x402-list.com/services/bridgenode?utm_source=badge&utm_medium=referral&utm_campaign=embed)\n[![BridgeNode on ClawHub](https://img.shields.io/badge/ClawHub-Skill-blue)](https://clawhub.ai/bridgenode/skills/bridgenode)\n\nAgent skill and buyer-side examples for [BridgeNode](https://bridgenode.cc) — AI inference bridge for AI agents. Pay per request with Solana USDC via [x402](https://docs.x402.org). No API keys, no registration.\n\n> This repository contains only the **public agent skill and usage examples**. No server code.\n\n## Install the skill\n\n```bash\nnpx skills add applefanaimail-blip/bridgenode-skill\n```\n\nThe skill teaches AI agents how to use BridgeNode: endpoints, models, pricing, and the x402 payment flow.\n\n## Install the SDKs\n\n- **Python SDK:** `pip install bridgenode-llm` ([PyPI](https://pypi.org/project/bridgenode-llm)) — or the full toolkit: `pip install bridgenode`\n- **CLI:** `pip install bridgenode-cli` ([PyPI](https://pypi.org/project/bridgenode-cli))\n- **TypeScript SDK:** `npm i @bridgenode/llm` ([npm](https://www.npmjs.com/package/@bridgenode/llm))\n- **MCP wrapper:** `npm i @bridgenode/mcp` ([npm](https://www.npmjs.com/package/@bridgenode/mcp)) — stdio MCP server with automatic x402 payments\n\n## What's inside\n\n- `SKILL.md` — the agent skill\n- `examples/` — buyer-side examples (curl, Python, TypeScript, MCP)\n\n## Learn more\n\n- Website: https://bridgenode.cc\n- Agent map: https://bridgenode.cc/llms.txt\n- Models & pricing: https://bridgenode.cc/v1/models\n\n## Community\n\n- Smithery: [smithery.ai/servers/applefanaimail/bridgenode](https://smithery.ai/servers/applefanaimail/bridgenode)\n- Moltbook agent profile: https://moltbook.com/u/bridgenode_eli\n- Discord: https://discord.gg/HUpVKxJxhG\n- X (Twitter): https://x.com/eliBNx\n\n## License\n\nMIT-0",
   "status": "curated"
 }

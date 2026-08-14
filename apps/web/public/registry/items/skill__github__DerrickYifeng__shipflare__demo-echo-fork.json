@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/DerrickYifeng/shipflare/demo-echo-fork",
+  "type": "skill",
+  "name": "_demo-echo-fork",
+  "description": "Echoes back received args via a forked sub-agent that runs the echo body\nin isolation. Phase 1 smoke-test skill for verifying fork mode\nend-to-end. Internal — not for production use.",
+  "author": "DerrickYifeng",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/DerrickYifeng/shipflare/blob/HEAD/src/skills/_demo-echo-fork/SKILL.md",
+    "repo": "DerrickYifeng/shipflare",
+    "path": "src/skills/_demo-echo-fork/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-05-25T06:06:46Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -42,7 +42,8 @@
   },
   "quality": {
     "stars": null,
-    "pushed_at": "2026-08-12T10:13:01.432947Z"
+    "pushed_at": "2026-08-14T15:24:40.03139Z",
+    "score": 52
   },
   "security": {
     "score": 100,
@@ -74,6 +75,6 @@
     "category": "编程",
     "featured": false
   },
-  "readme": null,
+  "readme": "# Homespun\n\nApps your AI builds and hosts, for you and the people you invite.\n\nAn agent creates a real web app from a single HTML file plus a manifest, and\nHomespun hosts it at a URL. People open the link and use it. No install, no\nbuild step, no deploy pipeline.\n\n**Docs: [docs.homespun.dev](https://docs.homespun.dev)**\n\n## What is in this repository\n\nThe client side, all MIT licensed:\n\n| Package | What it is |\n|---|---|\n| [`@homespunapps/cli`](https://www.npmjs.com/package/@homespunapps/cli) | The `homespun` command line client |\n| [`@homespunapps/mcp`](https://www.npmjs.com/package/@homespunapps/mcp) | The MCP server, so an agent can drive Homespun as a tool |\n| [`@homespunapps/core`](https://www.npmjs.com/package/@homespunapps/core) | Shared client library and types |\n\nPlus the agent skill (`skills/homespun`) and the Claude plugin\n(`plugins/homespun`).\n\nThe relay, which is the hosted server these clients talk to, is not open source\nand is not in this repository.\n\n## Getting started\n\n```bash\nnpm install -g @homespunapps/cli\nhomespun agent register\nhomespun deploy ./my-app\n```\n\n`./my-app` needs an `index.html` and a `manifest.json`. The\n[quickstart](https://docs.homespun.dev/agents/quickstart/) walks through both.\n\nTo use Homespun from a chat client such as Claude or ChatGPT instead of a\nterminal, see\n[Connect to your AI chat](https://docs.homespun.dev/people/connect-ai-chat/),\nwhich needs no install at all.\n\n## Reference\n\nEvery reference page below is generated from the source it documents, and a\ntest fails the build when the two disagree.\n\n- [HTTP API](https://docs.homespun.dev/reference/api/), every `/v1` endpoint\n- [CLI](https://docs.homespun.dev/agents/cli-reference/), every command and flag\n- [SDK](https://docs.homespun.dev/agents/sdk-reference/), the `window.homespun`\n  browser API\n- [Manifest](https://docs.homespun.dev/agents/manifest-reference/), the app\n  manifest format\n- [Errors](https://docs.homespun.dev/reference/errors/), every error code\n- [Agent guide](https://docs.homespun.dev/agent-guide/) and\n  [MCP guide](https://docs.homespun.dev/mcp/)\n\n## Contributing\n\nThis repository is a read-only mirror. See [CONTRIBUTING.md](CONTRIBUTING.md).\n\n## License\n\nMIT. See [LICENSE](LICENSE).\n",
   "status": "curated"
 }

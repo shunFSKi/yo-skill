@@ -1,0 +1,80 @@
+{
+  "id": "mcp:official/io.github.sarim-aliii/github-issue-mcp",
+  "type": "mcp",
+  "name": "GitHub Issue MCP",
+  "description": "AI-powered MCP server for generating GitHub issues and detecting semantic duplicates.",
+  "author": "io.github.sarim-aliii",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/sarim-aliii/github-issue-mcp",
+    "repo": "sarim-aliii/github-issue-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "github-issue-mcp"
+    ],
+    "env": [
+      {
+        "name": "GITHUB_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "GITHUB_OWNER",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "GITHUB_REPO",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "GEMINI_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T12:48:10.640338Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "# GitHub Issue MCP Assistant\n\n[![CI](https://github.com/sarim-aliii/github-issue-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/sarim-aliii/github-issue-mcp/actions/workflows/ci.yml)\n[![npm](https://img.shields.io/npm/v/github-issue-mcp)](https://www.npmjs.com/package/github-issue-mcp)\n[![MCP Registry](https://img.shields.io/badge/MCP%20Registry-published-blue)](https://registry.modelcontextprotocol.io/)\n\nAn AI-powered GitHub issue management system built with **Model Context Protocol (MCP)**, **Google Gemini**, **TypeScript**, and the **GitHub REST API**.\n\nGitHub Issue MCP turns a short natural-language bug report into a structured GitHub issue while intelligently checking for existing duplicates before anything is created.\n\nThe project demonstrates a controlled **agentic workflow** where Gemini can reason and use MCP tools, while persistent GitHub write operations remain explicitly controlled by the application and the user.\n\nThe MCP server is also packaged as a reusable npm package so it can be embedded into other Node.js applications or launched directly as an MCP stdio server.\n\n---\n\n## ✨ Features\n\n- 🤖 **AI-powered issue generation** using Google Gemini\n- 🔍 **Duplicate issue detection**\n- 🧠 **Semantic duplicate analysis** instead of relying only on keyword matching\n- 📝 Interactive collection of additional issue details\n- 🏷️ Repository label retrieval and validation\n- 👤 **Human approval before issue creation**\n- 🔐 Prevents the autonomous AI agent from directly creating GitHub issues\n- 🔄 Automatic retry handling for temporary Gemini API failures\n- 🚦 Daily Gemini quota detection without unnecessary retries\n- ⚙️ Configurable Gemini model and retry behavior\n- 🧪 Comprehensive unit, workflow, and integration tests\n- 📦 Reusable MCP server architecture\n- 🔌 Published npm package\n- 🚀 Executable `github-issue-mcp` MCP CLI\n- 🌐 Published to the official MCP Registry\n- 🛡️ Phase-restricted AI tool access\n- 🔗 Separation between AI reasoning and external GitHub operations\n\n---\n\n# 📦 Installation\n\n## Install from npm\n\n```bash\nnpm install github-issue-mcp\n\nThe package is available on npm as:\n\ngithub-issue-mcp\n\nCurrent release:\n\nv1.1.2\n🚀 Quick Start\nRun as an MCP server\n\nThe package exposes an executable MCP server CLI.\n\nnpx -y github-issue-mcp\n\nThe server communicates using MCP over stdio.\n\nThis is the recommended approach when configuring the server in an MCP-compatible client.\n\n🔌 MCP Client Configuration\n\nGitHub Issue MCP can be used with any MCP-compatible client that supports stdio servers.\n\nUsing npx\n\nThe simplest configuration uses the published npm package:\n\n{\n  \"mcpServers\": {\n    \"github-issue-mcp\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"github-issue-mcp\"\n      ],\n      \"env\": {\n        \"GITHUB_TOKEN\": \"YOUR_GITHUB_TOKEN\",\n        \"GITHUB_OWNER\": \"YOUR_GITHUB_OWNER\",\n        \"GITHUB_REPO\": \"YOUR_GITHUB_REPO\",\n        \"GEMINI_API_KEY\": \"YOUR_GEMINI_API_KEY\"\n      }\n    }\n  }\n}\n\nThe MCP client starts:\n\nnpx -y github-issue-mcp\n\nand communicates with the server over stdio.\n\n⚙️ Configuration\n\nCreate a .env file when running the project locally.\n\nGITHUB_TOKEN=your_github_token\nGITHUB_OWNER=your_github_username\nGITHUB_REPO=your_repository\n\n\nGEMINI_API_KEY=your_gemini_api_key\n\n\nGEMINI_MODEL=gemini-3.6-flash\nGEMINI_MAX_RETRIES=3\nGEMINI_RETRY_BASE_DELAY=1000\n\n\nDEBUG=false\nEnvironment variables\nVariable\tRequired\tDescription\tDefault\nGITHUB_TOKEN\tYes\tGitHub API authentication token\tRequired\nGITHUB_OWNER\tYes\tGitHub repository owner or organization\tRequired\nGITHUB_REPO\tYes\tGitHub repository name\tRequired\nGEMINI_API_KEY\tYes\tGoogle Gemini API key\tRequired\nGEMINI_MODEL\tNo\tGemini model used by the AI client\tgemini-3.6-flash\nGEMINI_MAX_RETRIES\tNo\tMaximum number of Gemini retries\t3\nGEMINI_RETRY_BASE_DELAY\tNo\tBase retry delay in milliseconds\t1000\nDEBUG\tNo\tEnables debug behavior/logging\tfalse\n\nNever commit .env, GitHub tokens, or Gemini API keys to Git.\n\n🧩 MCP Tools\n\nThe MCP server exposes the following tools:\n\nTool\tPurpose\ngenerate_issue\tGenerate a structured GitHub issue\ncreate_github_issue\tCreate an issue on GitHub\nlist_github_issues\tRetrieve open repository issues\nlist_github_labels\tRetrieve repository labels\ncheck_duplicate_issue\tFind likely duplicate issue candidates\ngenerate_issue\n\nGenerates a structured issue from supplied information.\n\nInputs\ndescription\nreproductionSteps\nexpectedBehavior\nactualBehavior\nenvironment\nadditionalContext\nExample output\n{\n  \"title\": \"Bug: Login button does not work\",\n  \"body\": \"## Description\\n\\nLogin button does not work...\",\n  \"labels\": [\"bug\"]\n}\ncheck_duplicate_issue\n\nRetrieves likely duplicate candidates from the repository.\n\nThe tool performs inexpensive lexical candidate ranking against existing open issues.\n\nThe similarity score is not treated as proof of duplication.\n\nGemini performs the final semantic analysis.\n\nThis keeps the expensive AI reasoning focused on a small candidate set rather than every issue in the repository.\n\nlist_github_issues\n\nRetrieves open GitHub issues while filtering out pull requests.\n\nlist_github_labels\n\nRetrieves labels available in the repository.\n\ncreate_github_issue\n\nCreates the final GitHub issue.\n\nThis tool is intentionally not exposed to the autonomous Gemini agent.\n\nIt is invoked directly by the client only after explicit human approval.\n\n🏗️ Architecture\n                         ┌──────────────────┐\n                         │      User        │\n                         └────────┬─────────┘\n                                  │\n                                  ▼\n                         ┌──────────────────┐\n                         │    CLI Client    │\n                         └────────┬─────────┘\n                                  │\n                                  ▼\n                    ┌──────────────────────────┐\n                    │       MCP Client         │\n                    └────────────┬─────────────┘\n                                 │\n                                 ▼\n                    ┌──────────────────────────┐\n                    │       MCP Server         │\n                    └────────────┬─────────────┘\n                                 │\n              ┌──────────────────┼──────────────────┐\n              │                  │                  │\n              ▼                  ▼                  ▼\n       Duplicate Check     Issue Generation    GitHub Tools\n              │                  │                  │\n              ▼                  ▼                  ▼\n       Candidate Issues    Proposed Issue      GitHub REST API\n              │                  │\n              ▼                  ▼\n       Gemini Semantic      Human Approval\n          Analysis              │\n              │                  │\n         ┌────┴────┐        ┌────┴────┐\n         │         │        │         │\n        Yes        No       No       Yes\n         │         │        │         │\n         ▼         ▼        ▼         ▼\n        Stop    Continue   Stop   Create Issue\n🔑 Core Design Principle\n\nThe most important architectural decision is:\n\nGemini does not have autonomous access to the GitHub write operation.\n\nThe workflow is intentionally divided into controlled phases.\n\nPhase 1\nDuplicate Detection\n        │\n        ▼\nSemantic Analysis\n        │\n        ▼\nPhase 2\nCollect Details\n        │\n        ▼\nPhase 3\nIssue Generation\n        │\n        ▼\nPhase 4\nHuman Approval\n        │\n        ▼\nPhase 5\nGitHub Creation\n\nThis provides a clear human-in-the-loop safety boundary around persistent external side effects.\n\n🔄 Workflow\n\nThe complete workflow is:\n\n1. User describes an issue\n              │\n              ▼\n2. Retrieve duplicate candidates\n              │\n              ▼\n3. Gemini performs semantic analysis\n              │\n       ┌──────┴──────┐\n       │             │\n    Duplicate      No duplicate\n       │             │\n       ▼             ▼\n      Stop    4. Collect additional details\n                     │\n                     ▼\n             5. Gemini generates\n                structured issue\n                     │\n                     ▼\n             6. Display proposed issue\n                     │\n                     ▼\n             7. Ask user for approval\n                     │\n              ┌──────┴──────┐\n              │             │\n             No            Yes\n              │             │\n              ▼             ▼\n             Stop    8. Client creates\n                       GitHub issue\n🔍 Duplicate Detection\n\nDuplicate detection is deliberately split into two stages.\n\nStage 1 — Candidate Retrieval\n\nThe MCP tool performs inexpensive lexical similarity/ranking against existing open issues.\n\nFor example:\n\nUser:\n\n\n\"The search results page crashes when I apply multiple filters.\"\n\n\n                    │\n                    ▼\n\n\n          check_duplicate_issue\n\n\n                    │\n                    ▼\n\n\nCandidate #8\n\n\n\"The search results page crashes\nwhen I apply multiple filters.\"\n\n\nSimilarity: 0.21\n\nThe similarity score is only used to identify potentially relevant candidates.\n\nIt is not considered proof of duplication.\n\nStage 2 — Semantic Analysis\n\nGemini receives the candidate issues and determines whether any candidate describes the same underlying problem.\n\nExample:\n\n{\n  \"isDuplicate\": true,\n  \"duplicateIssue\": {\n    \"number\": 8,\n    \"title\": \"Bug: The search results page crashes when I apply multiple filters.\",\n    \"url\": \"https://github.com/example/repository/issues/8\"\n  },\n  \"reason\": \"The candidate describes the exact same underlying problem.\"\n}\n\nThis prevents unrelated issues from being incorrectly classified as duplicates merely because they share common words such as:\n\nlogin\npage\nbutton\ncrash\nissue\n🤖 Agent Workflow\n\nThe Gemini agent supports controlled multi-step tool execution.\n\nAvailable MCP tools are restricted according to the current workflow phase.\n\nPhase 1 — Duplicate Detection\n\nGemini receives:\n\ncheck_duplicate_issue\n\nThe agent can use this tool to retrieve candidate issues.\n\nIt cannot use:\n\ngenerate_issue\ncreate_github_issue\n\nduring this phase.\n\nPhase 3 — Issue Generation\n\nGemini receives:\n\nlist_github_labels\ngenerate_issue\n\nThis allows the agent to inspect repository labels and generate the proposed issue.\n\nIt still cannot create the GitHub issue.\n\nPhase 5 — Issue Creation\n\nThe autonomous Gemini agent does not receive:\n\ncreate_github_issue\n\nInstead, the application directly invokes the tool after explicit human approval.\n\n🔐 Security Model\n\nThe project uses multiple layers to prevent unintended GitHub writes.\n\n1. Phase-Based Tool Exposure\n\nAvailable tools are restricted depending on the current workflow phase.\n\nDuplicate Phase\n      │\n      └── check_duplicate_issue\nGenerate Phase\n      │\n      ├── list_github_labels\n      └── generate_issue\nCreation Phase\n      │\n      └── create_github_issue\n             (client-controlled)\n2. Autonomous Write Protection\n\nThe Gemini agent cannot directly invoke:\n\ncreate_github_issue\n\nEven if the model attempts to request the tool, the agent workflow rejects the operation.\n\n3. Human Approval\n\nThe proposed issue is displayed to the user before creation.\n\nExample:\n\n================================\nPROPOSED GITHUB ISSUE\n================================\n\n\nTitle:\nBug: Login button does not work with valid credentials.\n\n\nLabels:\nbug\n\n\nBody:\n\n\n## Description\n\n\nLogin button does not work with valid credentials.\n\n\n## Steps to Reproduce\n\n\nOpen login page → enter valid credentials → click Login.\n\n\n## Expected Behavior\n\n\nUser should be redirected to the dashboard.\n\n\n## Actual Behavior\n\n\nNothing happens after clicking Login.\n\n\nCreate this issue on GitHub? [y/N]:\n\nOnly explicit approval proceeds to the GitHub write operation.\n\n👤 Human-in-the-Loop Creation\n\nIssue creation is intentionally controlled by the application.\n\nGemini\n   │\n   ▼\nGenerate Proposed Issue\n   │\n   ▼\nCLI Displays Issue\n   │\n   ▼\nUser Approval\n   │\n   ├── No ──► Stop\n   │\n   └── Yes\n         │\n         ▼\nClient invokes create_github_issue\n    \n\n…",
+  "status": "curated"
+}

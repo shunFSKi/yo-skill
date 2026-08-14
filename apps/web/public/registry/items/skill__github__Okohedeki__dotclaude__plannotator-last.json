@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Okohedeki/dotclaude/plannotator-last",
+  "type": "skill",
+  "name": "plannotator-last",
+  "description": "Annotate the latest assistant message in Plannotator and use the feedback to revise it.",
+  "author": "Okohedeki",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Okohedeki/dotclaude/blob/HEAD/skills/plannotator-last/SKILL.md",
+    "repo": "Okohedeki/dotclaude",
+    "path": "skills/plannotator-last/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-24T02:20:11Z",
+    "score": 42
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/FranciscoMoretti/chat-js/dev-auth-bypass",
+  "type": "skill",
+  "name": "dev-auth-bypass",
+  "description": "Authenticate a browser against a local ChatJS app without OAuth. Use for development login, local auth bypass, authenticated browser or Playwright testing, and the /api/dev-login route.",
+  "author": "FranciscoMoretti",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/FranciscoMoretti/chat-js/blob/HEAD/.agents/skills/dev-auth-bypass/SKILL.md",
+    "repo": "FranciscoMoretti/chat-js",
+    "path": ".agents/skills/dev-auth-bypass/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1185,
+    "pushed_at": "2026-08-11T07:02:15Z",
+    "score": 83
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "<div align=\"center\">\n\n<img src=\"apps/chat/app/icon.svg\" alt=\"ChatJS\" width=\"64\" height=\"64\">\n\n# ChatJS\n\nStop rebuilding the same AI chat infrastructure. ChatJS gives you a production-ready foundation with authentication, 120+ models, streaming, and tools so you can focus on what makes your app unique.\n\n[**Website**](https://chatjs.dev) · [**Live Demo**](https://demo.chatjs.dev) · [**Documentation**](https://chatjs.dev/docs)\n\n![DemosOnly](https://github.com/user-attachments/assets/f12e89dd-c10c-4e06-9b1a-a9fbd809d234)\n\n</div>\n\n<br />\n\n## CLI\n\nCreate a new ChatJS app:\n\n```bash\nnpx @chat-js/cli@latest create my-app\n```\n\nThe CLI walks you through gateway, features, and auth choices, generates `chat.config.ts`, and lists the env vars required by your selections.\n\n## Features\n\n- **120+ Models**: Claude, GPT, Gemini, Grok via one API\n- **Auth**: GitHub, Google, anonymous. Ready to go.\n- **Attachments**: Images, PDFs, docs. Drag and drop.\n- **Resumable Streams**: Continue generation after page refresh\n- **Branching**: Fork conversations, explore alternatives\n- **Sharing**: Share conversations with public links\n- **Web Search**: Real-time web search integration\n- **Image Generation**: AI-powered image creation\n- **Code Execution**: Run code snippets in sandbox\n- **MCP**: Model Context Protocol support\n- **Desktop App**: Package as a native macOS, Windows, or Linux app with Electron\n\n## Stack\n\n- [Next.js](https://nextjs.org) - App Router, React Server Components\n- [TypeScript](https://www.typescriptlang.org) - Full type safety\n- [AI SDK](https://ai-sdk.dev/) - The AI Toolkit for TypeScript\n- [AI Gateway](https://vercel.com/ai-gateway) - Unified access to 120+ AI models\n- [Better Auth](https://www.better-auth.com) - Authentication & authorization\n- [Drizzle ORM](https://orm.drizzle.team) - Type-safe database queries\n- [PostgreSQL](https://www.postgresql.org) - Primary database\n- [Redis](https://redis.io) - Caching & resumable streams\n- [Vercel Blob](https://vercel.com/storage/blob) - Blob storage\n- [Shadcn/UI](https://ui.shadcn.com) - Beautiful, accessible components\n- [Tailwind CSS](https://tailwindcss.com) - Styling\n- [tRPC](https://trpc.io) - End-to-end type-safe APIs\n- [Zod](https://zod.dev) - Schema validation\n- [Zustand](https://zustand.docs.pmnd.rs/) - State management\n- [Motion](https://motion.dev) - Animations\n- [t3-env](https://env.t3.gg) - Environment variables\n- [Pino](https://getpino.io) - Structured Logging\n- [Langfuse](https://langfuse.com) - LLM observability & analytics\n- [Vercel Analytics](https://vercel.com/analytics) - Web analytics\n- [Biome](https://biomejs.dev) - Code linting and formatting\n- [Ultracite](https://ultracite.ai) - Biome preset for humans and AI\n- [Streamdown](https://streamdown.ai/) - Markdown for AI streaming\n- [AI Elements](https://elements.ai-sdk.dev/overview) - AI-native Components\n- [AI SDK Tools](https://ai-sdk-tools.dev/) - Developer tools for AI SDK\n\n## Monorepo Layout\n\n- `apps/site`: Landing page ([chatjs.dev](https://chatjs.dev))\n- `apps/chat`: Next.js chat app ([demo.chatjs.dev](https://demo.chatjs.dev))\n- `apps/docs`: Blume docs ([chatjs.dev/docs](https://chatjs.dev/docs))\n- `packages/cli`: interactive scaffold CLI\n\n## Development\n\n- `bun dev`: run chat app\n- `bun dev:info`: print this worktree's assigned app URLs\n- `bun dev:docs`: run docs\n- `bun lint`: run workspace lint\n- `bun test:types`: run chat app typecheck\n\nSet `CHATJS_DEV_SLOT` in `.env.worktree.local` to reserve a stable range of ten\nports per worktree. Within each range, chat uses offset `0`, Electron uses `1`,\nand the site uses `2`, as configured in `.worktree-env.json`. The local file is\nignored by Git and kept separate from Vercel-managed `.env.local`. Run\n`bun dev:info` instead of assuming a port.\n\n## Releases\n\nReleases are driven by Changesets for the whole repository.\n\n- Add a changeset for each releasable package you change.\n- Merge the generated version PR from the Changesets workflow.\n- Public packages such as `@chat-js/cli` publish to npm.\n- Desktop installers for `@chat-js/electron` publish to GitHub Releases.\n\n## License\n\nApache-2.0\n\n<br />\n<a href=\"https://vercel.com/oss\">\n  <img alt=\"Vercel OSS Program\" src=\"https://vercel.com/oss/program-badge.svg\" />\n</a>\n<br />\n",
+  "status": "curated"
+}

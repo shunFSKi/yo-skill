@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/nicobit/spec-poc/validation-reporting",
+  "type": "skill",
+  "name": "validation-reporting",
+  "description": "Summarize delivered validation evidence, remaining gaps, and residual risk so feature completion is documented clearly and traceably.",
+  "author": "nicobit",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/nicobit/spec-poc/blob/HEAD/.codex/skills/validation-reporting/SKILL.md",
+    "repo": "nicobit/spec-poc",
+    "path": ".codex/skills/validation-reporting/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-01T06:59:32Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

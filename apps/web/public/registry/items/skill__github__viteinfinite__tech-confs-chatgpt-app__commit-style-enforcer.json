@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/viteinfinite/tech-confs-chatgpt-app/commit-style-enforcer",
+  "type": "skill",
+  "name": "commit-style-enforcer",
+  "description": "Generates properly formatted commit messages following project conventions. Use when creating commits or when users need help writing commit messages. Inspects staged changes and creates messages with component tags, concise summaries, and detailed descriptions.",
+  "author": "viteinfinite",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/viteinfinite/tech-confs-chatgpt-app/blob/HEAD/.claude/skills/commit-style-enforcer/SKILL.md",
+    "repo": "viteinfinite/tech-confs-chatgpt-app",
+    "path": ".claude/skills/commit-style-enforcer/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-01-23T18:53:43Z",
+    "score": 30
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

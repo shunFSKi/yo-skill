@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/fboucher/video2blog/edit-video-blog",
+  "type": "skill",
+  "name": "edit-video-blog",
+  "description": "Refine a video-to-blog draft for clarity, flow, and SEO",
+  "author": "fboucher",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/fboucher/video2blog/blob/HEAD/skills/edit-video-blog/SKILL.md",
+    "repo": "fboucher/video2blog",
+    "path": "skills/edit-video-blog/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

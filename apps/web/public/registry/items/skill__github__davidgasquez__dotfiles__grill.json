@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/davidgasquez/dotfiles/grill",
+  "type": "skill",
+  "name": "grill",
+  "description": "Interview the user relentlessly about a plan or design.",
+  "author": "davidgasquez",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/davidgasquez/dotfiles/blob/HEAD/agents/skills/grill/SKILL.md",
+    "repo": "davidgasquez/dotfiles",
+    "path": "agents/skills/grill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 60,
+    "pushed_at": "2026-08-08T10:14:03Z",
+    "score": 58
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

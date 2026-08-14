@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/guangyou1/Studykaoyan/flow-req",
+  "type": "skill",
+  "name": "flow-req",
+  "description": "flow-kit 1-requirement 阶段快捷入口。把变更提案写成可执行需求 + 验收准则 + 域语言。\n触发方式：直接输入「flow-req <change-id 或需求描述>」，不要只输入斜杠命令。",
+  "author": "guangyou1",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/guangyou1/Studykaoyan/blob/HEAD/.agents/skills/flow-req/SKILL.md",
+    "repo": "guangyou1/Studykaoyan",
+    "path": ".agents/skills/flow-req/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-08T03:50:54Z",
+    "score": 48
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

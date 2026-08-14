@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/1122414/AutoWeb/housing-listings",
+  "type": "skill",
+  "name": "housing-listings",
+  "description": "在贝壳 ke.com 或自如 ziroom.com 搜索和筛选租房房源。任务涉及整租、户型、价格、地铁、月租、服务费或房源去重时使用。",
+  "author": "1122414",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/1122414/AutoWeb/blob/HEAD/agent_skills/housing-listings/SKILL.md",
+    "repo": "1122414/AutoWeb",
+    "path": "agent_skills/housing-listings/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 4,
+    "pushed_at": "2026-08-02T16:00:29Z",
+    "score": 48
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

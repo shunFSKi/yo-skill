@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/nabalma/langchain-deep-agent-project/save-report",
+  "type": "skill",
+  "name": "save-report",
+  "description": "Use this skill when the user asks to save a report, note, summary, or generated content into a file.",
+  "author": "nabalma",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/nabalma/langchain-deep-agent-project/blob/HEAD/skills/save-report/SKILL.md",
+    "repo": "nabalma/langchain-deep-agent-project",
+    "path": "skills/save-report/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-28T21:18:18Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

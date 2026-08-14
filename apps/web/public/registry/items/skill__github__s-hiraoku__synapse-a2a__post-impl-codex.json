@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/s-hiraoku/synapse-a2a/post-impl-codex",
+  "type": "skill",
+  "name": "post-impl-codex",
+  "description": "Workflow: Post-implementation workflow for Codex agents: docs/simplify/sync in parallel, then release, commit all changes, create PR, and monitor with pr-guardian. Uses /code-simplifier instead of /simplify (Claude Code built-in).\n. Triggered by /post-impl-codex command.",
+  "author": "s-hiraoku",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/s-hiraoku/synapse-a2a/blob/HEAD/.agents/skills/post-impl-codex/SKILL.md",
+    "repo": "s-hiraoku/synapse-a2a",
+    "path": ".agents/skills/post-impl-codex/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 10,
+    "pushed_at": "2026-08-14T07:58:07Z",
+    "score": 54
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

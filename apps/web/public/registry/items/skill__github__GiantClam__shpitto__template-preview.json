@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/GiantClam/shpitto/template-preview",
+  "type": "skill",
+  "name": "template-preview",
+  "description": "Build and serve an isolated preview of a Shpitto template without changing production state.",
+  "author": "GiantClam",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/GiantClam/shpitto/blob/HEAD/apps/web/skills/template-operations/template-preview/SKILL.md",
+    "repo": "GiantClam/shpitto",
+    "path": "apps/web/skills/template-operations/template-preview/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-23T10:11:11Z",
+    "score": 42
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

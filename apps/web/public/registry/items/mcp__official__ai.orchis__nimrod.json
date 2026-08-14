@@ -1,0 +1,65 @@
+{
+  "id": "mcp:official/ai.orchis/nimrod",
+  "type": "mcp",
+  "name": "Nimrod Research",
+  "description": "Web research for agents: quality-scored Google search, webpage extraction, and deep research.",
+  "author": "ai.orchis",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mixelpixx/Nimrod",
+    "repo": "mixelpixx/Nimrod"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/mixelpixx/Nimrod/releases/download/v1.1.1/nimrod.mcpb"
+    ],
+    "env": [
+      {
+        "name": "NIMROD_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T12:10:15.072695Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "<p align=\"center\">\n  <img src=\"https://nimrod.orchis.ai/assets/icon.svg\" width=\"96\" alt=\"Nimrod\">\n</p>\n\n<h1 align=\"center\">Nimrod</h1>\n\n<p align=\"center\"><b>Web research your agent can actually use.</b><br>\nQuality-scored Google search, clean webpage extraction, and deep multi-source\nresearch for Claude — over the Model Context Protocol.</p>\n\n<p align=\"center\">\n  <a href=\"https://nimrod.orchis.ai\">Website</a> ·\n  <a href=\"https://nimrod.orchis.ai/docs.html\">Docs</a> ·\n  <a href=\"https://nimrod.orchis.ai/#pricing\">Pricing</a> ·\n  <a href=\"https://nimrod.orchis.ai/portal\">Portal</a>\n</p>\n\n---\n\n## What it is\n\nNimrod gives Claude four research tools:\n\n| Tool | What it does | Cost |\n|---|---|---|\n| `google_search` | Organic Google results with quality scores, authority ratings, and source-type classification | 1 credit |\n| `extract_webpage_content` | Any URL → clean markdown, boilerplate stripped | free |\n| `extract_multiple_webpages` | Up to 5 URLs, fetched concurrently | free |\n| `research_topic` | Search → rank → dedupe → extract → synthesis, in one call | 1 credit + 1 per focus area |\n\nWhy not just let the model search? Because raw search is where agent runs go to\ndie: Nimrod returns **ranked evidence instead of SEO sludge**, as\n**token-efficient markdown instead of raw HTML**, with deterministic costs\n(1 credit = 1 search) and date/site/language control.\n\nNew accounts start with a **free 50-credit trial** — no card required.\n\n## Get connected\n\n**Claude.ai & Claude Desktop (zero install):** Settings → Connectors → Add\ncustom connector → paste `https://nimrod.orchis.ai/mcp` → sign in with your\nemail. Done.\n\n**Claude Code (hosted):**\n\n```bash\nclaude mcp add nimrod --transport http https://nimrod.orchis.ai/mcp \\\n  --header \"Authorization: Bearer nmk_your_key\"\n```\n\n**Nimrod Desktop (full toolkit — recommended for power users):** a locally\ninstalled MCP server with six research skills, a deep-research agent, and\nsearch-coach hooks (Claude Code features). Extraction is free on every plan;\non Desktop it also runs on your own machine, so the pages you read stay\nprivate. Grab it from\n[**Releases**](../../releases):\n\n- **Windows** — `nimrod.mcpb` for Claude Desktop (double-click, paste key),\n  or `nimrod-desktop.exe` for Claude Code: `nimrod-desktop setup`, then\n  `claude mcp add nimrod -- path\\to\\nimrod-desktop.exe`\n- **macOS** — `nimrod-desktop-macos` (universal: Apple Silicon + Intel):\n  `chmod +x` it, then a one-time\n  `xattr -d com.apple.quarantine nimrod-desktop-macos` (not yet\n  Apple-signed), then `setup` and `claude mcp add` as above\n- **Linux** — `nimrod-desktop-linux`: `chmod +x`, `setup`, `claude mcp add`\n\n## In the MCP Registry\n\nNimrod is listed in the [official MCP Registry](https://registry.modelcontextprotocol.io)\nas **`ai.orchis/nimrod`** — MCP clients that browse the registry (including\nVS Code's MCP gallery) can discover and install it from there.\n\n## Built to pair\n\nRun Nimrod beside your other MCP tools — like\n[Konnect](https://github.com/mixelpixx/Konnect) for KiCAD: live parts data from your EDA\nworkflow, live web research from Nimrod, one agent, no stale training cutoff.\n\n## Support\n\nDocs: [nimrod.orchis.ai/docs.html](https://nimrod.orchis.ai/docs.html) ·\nEmail: [admin@orchis.ai](mailto:admin@orchis.ai) ·\n[Terms](https://nimrod.orchis.ai/terms.html) ·\n[Privacy](https://nimrod.orchis.ai/privacy.html)\n\n---\n\n<sub>The original open-source BYOK server this project grew from is preserved\non the <code>historical-oss</code> branch (unmaintained).</sub>\n",
+  "status": "curated"
+}

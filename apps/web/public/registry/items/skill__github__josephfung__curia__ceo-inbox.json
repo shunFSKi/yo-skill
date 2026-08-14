@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/josephfung/curia/ceo-inbox",
+  "type": "skill",
+  "name": "ceo-inbox",
+  "description": "CEO personal inbox tools — list/read/search/draft/archive/label/mark plus sent-observe and shadow-draft. Per-tool action_risk preserved.",
+  "author": "josephfung",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/josephfung/curia/blob/HEAD/skills/ceo-inbox/SKILL.md",
+    "repo": "josephfung/curia",
+    "path": "skills/ceo-inbox/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

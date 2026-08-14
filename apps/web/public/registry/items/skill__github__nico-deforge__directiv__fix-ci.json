@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/nico-deforge/directiv/fix-ci",
+  "type": "skill",
+  "name": "fix-ci",
+  "description": "Find failing CI jobs, inspect logs, and apply focused fixes",
+  "author": "nico-deforge",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/nico-deforge/directiv/blob/HEAD/src-tauri/resources/directiv-plugin/skills/fix-ci/SKILL.md",
+    "repo": "nico-deforge/directiv",
+    "path": "src-tauri/resources/directiv-plugin/skills/fix-ci/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

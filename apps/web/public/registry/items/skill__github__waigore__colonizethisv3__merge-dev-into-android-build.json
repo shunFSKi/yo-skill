@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/waigore/colonizethisv3/merge-dev-into-android-build",
+  "type": "skill",
+  "name": "merge-dev-into-android-build",
+  "description": "Creates and merges a pull request from dev into build/app/android to trigger Android APK build workflows. Use when the user asks to produce an Android APK build via branch merge, especially when conflicts may occur and should be resolved in favor of dev.",
+  "author": "waigore",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/waigore/colonizethisv3/blob/HEAD/.grok/skills/merge-dev-into-android-build/SKILL.md",
+    "repo": "waigore/colonizethisv3",
+    "path": ".grok/skills/merge-dev-into-android-build/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-14T14:22:24Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}
