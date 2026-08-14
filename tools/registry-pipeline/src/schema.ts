@@ -48,6 +48,8 @@ export interface RegistryItem {
     /** null = 来源没给，界面不显示（不造假） */
     stars: number | null;
     pushed_at: string | null;
+    /** 综合质量分 0-100（score.ts），推荐排序依据；null = 未评分 */
+    score: number | null;
   };
   security: {
     /** 100 制；≥70 且无高危命中才给「已扫描」徽章 */
@@ -71,6 +73,8 @@ export interface IndexItem {
   name: string;
   description: string;
   stars: number | null;
+  /** 综合质量分 0-100，「推荐优先」排序用 */
+  score: number | null;
   scanned: boolean;
   category: Category | null;
   featured: boolean;
@@ -90,6 +94,7 @@ export function toIndexItem(item: RegistryItem): IndexItem {
     name: item.name,
     description: item.description,
     stars: item.quality.stars,
+    score: item.quality.score,
     scanned: item.security.scanned,
     category: item.tags.category,
     featured: item.tags.featured,

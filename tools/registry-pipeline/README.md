@@ -1,6 +1,6 @@
 # @yo-skill/registry-pipeline
 
-市场数据管线：从公开目录拉真实条目元数据 → 静态扫描 + 场景分类 → 抓源仓库 README → 落盘静态 JSON。
+市场数据管线：从公开目录拉真实条目元数据 → 静态扫描 + 场景分类 + 综合质量分 → 抓源仓库 README → 落盘静态 JSON。
 
 **只存信息，不存代码**：每条目存"叫什么 / 谁写的 / 怎么装 / 要什么 Key / 扫描结果 / README"，安装永远回源仓库（供应链纪律）。
 
@@ -10,8 +10,15 @@
 | ---- | ---- | ---- |
 | claudeskills.info | Skill 全量（按源仓库去重的 repo 级条目） | 免 key JSON API |
 | MCP 官方 Registry | MCP server 全量（active + 最新版去重，全分页） | 免 key JSON API |
-| GitHub 代码搜索 | 全量 SKILL.md 采集（size 分片绕 1000 上限，解析 frontmatter；需 `GITHUB_TOKEN`/`REGISTRY_TOKEN`，上限 `GITHUB_HARVEST_MAX` 默认 25000） | search/code API |
+| GitHub 代码搜索 | **每日定额增量**采集 SKILL.md（size 分片绕 1000 上限；`GITHUB_HARVEST_DAILY` 默认 8000/次，状态存 `harvest-cache.json`：分片队列 + 全量记录含墓碑，队列扫完自动重置专扫新文件；需 `GITHUB_TOKEN`/`REGISTRY_TOKEN`） | search/code API |
+| GitHub GraphQL | repo stars/pushedAt 富化（100 repo/批，缓存 `stars-cache.json`，每日增量，`STARS_MAX_REPOS` 默认 4500） | graphql API |
 | GitHub 源仓库 | 根 README（按 repo 去重，截断 12KB；分层：featured + stars 前 500 + MCP 新近 300） | raw.githubusercontent.com |
+
+**增量采集（2026-08-14 拍板）**：不搞一次性全量（会顶到 CI 6 小时上限且配额风险大），每天固定采一批，官网随每日提交实时增长，十几天爬完全量（参照 agentskillshub 标称 13 万+）。已采文件的内容变化不回溯——换 CI 时长与配额的确定性。
+
+**收录口径（2026-08-14 拍板，对齐 skills.sh 质量门槛思路）**：GitHub 源只收文件 ≥500B（frontmatter 之外要有正文）、description ≥20 字符、路径不在 test/fixture/example/template/node_modules/docs 黑名单里的 SKILL.md；同名同描述的 fork/复制洪水去重，只留 stars 最高的一份。曾踩坑：25k 上限在 101-224B 分片就打满，>300B 的正经 skill（superpowers 等）整批漏采，且 ≤300B 文件全是占位垃圾——所以下限和上限一起改。
+
+**综合质量分（score.ts，0-100）**：参考 agentskillshub 的多维评分思路取可用子集——stars 对数分（45）+ 维护新鲜度（20）+ 静态扫描通过（15）+ README（10）+ 描述丰富度（10），落进每条 item 的 `quality.score`，官网「推荐优先」排序依据；「Stars 高到低」保留为可选排序。
 
 ## 用法
 
@@ -28,16 +35,18 @@ pnpm typecheck             # 本包 TS 检查
 ## 数据结构（数据仓库布局即此）
 
 ```
-meta.json     # schema_version + generated_at + counts：同步锚点，客户端先拉它比对
-index.json    # 全量卡片索引（每条最小集），列表页一次拉完
-items/*.json  # 每条完整档案（安装配方 / env / 扫描明细 / README），详情页按需懒拉
+meta.json           # schema_version + generated_at + counts：同步锚点，客户端先拉它比对
+index.json          # 全量卡片索引（每条最小集），列表页一次拉完
+items/*.json        # 每条完整档案（安装配方 / env / 扫描明细 / README），详情页按需懒拉
+stars-cache.json    # GitHub repo stars/pushedAt 富化缓存：每日增量补新 + 7 天过期刷新
+harvest-cache.json  # SKILL.md 增量采集状态：待采分片队列 + 全量采集记录（含墓碑）
 ```
 
 ## 定时同步（GitHub Actions）
 
 工作流在仓库根 `.github/workflows/registry-sync.yml`，每天 UTC 03:17 / 15:17 跑，也可手动触发。
 
-开箱即用：刷新本仓库 `apps/web/public/registry/` 并有变化才提交（官网托管平台检测到 push 自动重建，数据即"动态更新"）。
+开箱即用：刷新本仓库 `apps/web/public/registry/` 并有变化才提交（官网托管平台检测到 push 自动重建，数据即"动态更新"）。提交步 push 前先 `git pull --rebase` 且重试 3 次——管线跑批约 2 小时，期间人工推送抢占 main 会导致数据 commit 被 fetch first 拒绝（2026-08-14 实测撞车）。
 
 接入独立数据仓库（桌面端分发源）：
 

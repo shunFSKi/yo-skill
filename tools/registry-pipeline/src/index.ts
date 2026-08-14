@@ -10,9 +10,16 @@
  * - 落盘前按 id 排序：源站返回顺序会漂，不排序幂等比对永远失效
  *
  * 全量口径（2026-08-14 用户拍板）：MCP 官方 Registry 全分页；Skill 双源——
- * claudeskills 全量（repo 级去重）+ GitHub 代码搜索全量采集 SKILL.md（需 GITHUB_TOKEN，
- * 本地从本包 .env 读，CI 由 workflow 注入；上限 GITHUB_HARVEST_MAX，默认 25000）。
- * README 分层：只给 featured + stars 前 500 抓，其余 readme=null（体积与 CI 时长纪律）。
+ * claudeskills 全量（repo 级去重）+ GitHub 代码搜索增量采集 SKILL.md（需 GITHUB_TOKEN，
+ * 本地从本包 .env 读，CI 由 workflow 注入）。增量设计（同日拍板）：每天定额新采一批
+ * （GITHUB_HARVEST_DAILY 默认 8000），状态持久化在 harvest-cache.json（分片队列 +
+ * 全部记录含墓碑），官网随每日提交实时增长，十几天爬完全量（参照 agentskillshub 13 万+）。
+ * 收录口径（同日拍板，对齐 skills.sh 质量门槛思路）：文件 ≥500B 才采、
+ * description ≥20 字符、test/example/template 等路径黑名单、同名同描述 fork 洪水去重
+ * （留 stars 最高的）；github-search 源的 stars/pushedAt 由 github-stars.ts 富化
+ * （GraphQL 批量 + stars-cache.json 缓存，每日增量，STARS_MAX_REPOS 默认 4500）。
+ * 综合质量分（score.ts，0-100）：stars 对数 45 + 维护新鲜度 20 + 扫描 15 + README 10 + 描述 10。
+ * README 分层：只给 featured + stars 前 500 + MCP 新近 300 抓，其余 readme=null（体积与 CI 时长纪律）。
  *
  * 用法：pnpm fetch:registry（根目录）或 pnpm --filter @yo-skill/registry-pipeline fetch
  */
@@ -23,10 +30,12 @@ import { fileURLToPath } from "node:url";
 
 import { fetchClaudeSkills } from "./fetchers/claudeskills.ts";
 import { fetchGitHubSkills } from "./fetchers/github-skills.ts";
+import { enrichGitHubStars } from "./fetchers/github-stars.ts";
 import { fetchMcpRegistry } from "./fetchers/mcp-registry.ts";
 import { fetchReadmes } from "./fetchers/readme.ts";
 import { setupProxy } from "./http.ts";
 import { scanItem } from "./scan.ts";
+import { scoreItem } from "./score.ts";
 import { tagCategory } from "./tag.ts";
 import { safeId, toIndexItem, type RegistryItem } from "./schema.ts";
 
@@ -81,6 +90,8 @@ async function isUnchanged(
 async function main(): Promise<void> {
   loadLocalEnv();
   setupProxy();
+  // 输出目录先建好：stars/harvest 缓存在管线中段就会写，等不到落盘阶段
+  await mkdir(OUT_DIR, { recursive: true });
   console.log("== 拉取源数据 ==");
   const [skills, mcps] = await Promise.all([
     fetchClaudeSkills(),
@@ -97,10 +108,35 @@ async function main(): Promise<void> {
     set.add(slug.toLowerCase());
     known.set(s.source.repo, set);
   }
-  const harvested = await fetchGitHubSkills(known);
+  const harvested = await fetchGitHubSkills(known, OUT_DIR);
   console.log(`github 采集完成：${harvested.length} 条`);
 
-  const all = [...skills, ...mcps, ...harvested];
+  // stars 富化要在 fork 去重之前：留哪份由 stars 决定
+  console.log("== GitHub repo stars 富化 ==");
+  await enrichGitHubStars(harvested, OUT_DIR);
+
+  // 复制/fork 洪水去重（仅 github-search 源）：同名同描述只留一份。
+  // 留 stars 最高的（null 视为 -1）；平手留 id 字典序靠前的（确定性，保幂等）
+  const bySig = new Map<string, RegistryItem>();
+  let dupDropped = 0;
+  for (const item of harvested) {
+    const sig = `${item.name.toLowerCase().trim()}::${item.description
+      .toLowerCase()
+      .replace(/\s+/g, " ")
+      .trim()}`;
+    const prev = bySig.get(sig);
+    const s = item.quality.stars ?? -1;
+    const ps = prev?.quality.stars ?? -1;
+    if (!prev || s > ps || (s === ps && item.id < prev.id)) {
+      bySig.set(sig, item);
+      if (prev) dupDropped++;
+    } else {
+      dupDropped++;
+    }
+  }
+  if (dupDropped > 0) console.log(`复制/fork 去重：丢弃 ${dupDropped} 条`);
+
+  const all = [...skills, ...mcps, ...bySig.values()];
 
   console.log("== 扫描与打标 ==");
   let blocked = 0;
@@ -149,6 +185,9 @@ async function main(): Promise<void> {
     readmeTargets.add(item);
   }
   await fetchReadmes([...readmeTargets]);
+
+  // 综合质量分：依赖扫描结果与 README，必须在两者之后算
+  for (const item of curated) item.quality.score = scoreItem(item);
 
   const indexJson = serialize(curated.map(toIndexItem));
 

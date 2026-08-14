@@ -119,6 +119,7 @@ function normalize(entry: McpEntry): RegistryItem | null {
       pushed_at:
         entry._meta?.["io.modelcontextprotocol.registry/official"]
           ?.updatedAt ?? null,
+      score: null,
     },
     security: { score: 0, scanned: false, checks: [] },
     tags: { category: null, featured: false },

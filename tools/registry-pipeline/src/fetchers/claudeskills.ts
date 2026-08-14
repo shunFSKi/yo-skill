@@ -43,7 +43,7 @@ function normalize(raw: CsItem): RegistryItem {
     },
     license: null,
     install: { kind: "skill-dir" },
-    quality: { stars: raw.stars ?? null, pushed_at: null },
+    quality: { stars: raw.stars ?? null, pushed_at: null, score: null },
     security: { score: 0, scanned: false, checks: [] },
     tags: { category: null, featured: raw.featured === 1 },
     readme: null,
