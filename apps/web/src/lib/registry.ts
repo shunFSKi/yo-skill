@@ -18,6 +18,8 @@ export interface IndexItem {
   name: string;
   description: string;
   stars: number | null;
+  /** 综合质量分 0-100（管线 score.ts），「推荐优先」排序依据 */
+  score: number | null;
   scanned: boolean;
   category: Category | null;
   featured: boolean;
@@ -51,7 +53,7 @@ export interface RegistryItem {
     remote_url?: string;
     env?: EnvVar[];
   } | null;
-  quality: { stars: number | null; pushed_at: string | null };
+  quality: { stars: number | null; pushed_at: string | null; score: number | null };
   security: {
     score: number;
     scanned: boolean;
@@ -163,8 +165,13 @@ export async function queryRegistry(q: MarketQuery): Promise<MarketResult> {
 
   const byStars = (a: IndexItem, b: IndexItem) => (b.stars ?? -1) - (a.stars ?? -1);
   const byName = (a: IndexItem, b: IndexItem) => a.name.localeCompare(b.name);
+  const byScore = (a: IndexItem, b: IndexItem) => (b.score ?? -1) - (a.score ?? -1);
   matched.sort((a, b) => {
-    if (q.sort === "reco" && a.featured !== b.featured) return a.featured ? -1 : 1;
+    if (q.sort === "reco") {
+      // 推荐优先 = 综合质量分（featured 是人工加权，优先于分数）
+      if (a.featured !== b.featured) return a.featured ? -1 : 1;
+      return byScore(a, b) || byStars(a, b) || byName(a, b);
+    }
     return byStars(a, b) || byName(a, b);
   });
 

@@ -10,20 +10,15 @@
 import { useEffect, useRef, useState, useTransition } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { KeyRound, Search, ShieldCheck, Star } from "lucide-react";
-import type { IndexItem, MarketResult } from "@/lib/registry";
+import { Search } from "lucide-react";
+import type { MarketResult } from "@/lib/registry";
 import {
   buildMarketHref,
   CATEGORIES,
   type MarketState,
 } from "@/lib/market-query";
-import { safeId } from "@/lib/safe-id";
-import { dotColor } from "@/lib/colors";
+import { ItemCard } from "./item-card";
 import { cn } from "@/lib/utils";
-
-function formatStars(n: number): string {
-  return n >= 1000 ? `${(n / 1000).toFixed(1)}k` : String(n);
-}
 
 export function MarketExplorer({
   state,
@@ -257,58 +252,5 @@ function FilterChip({
     >
       {children}
     </button>
-  );
-}
-
-function ItemCard({ item }: { item: IndexItem }) {
-  return (
-    <Link
-      href={`/market/item/${safeId(item.id)}`}
-      className="yo-card flex h-full flex-col p-5"
-    >
-      <div className="flex items-start gap-3">
-        <span
-          aria-hidden
-          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] text-sm font-bold text-white"
-          style={{ backgroundColor: dotColor(item.name) }}
-        >
-          {item.name.charAt(0).toUpperCase()}
-        </span>
-        <div className="min-w-0">
-          <h3 className="truncate text-base font-semibold leading-snug">
-            {item.name}
-          </h3>
-          <div className="mt-1.5 flex flex-wrap gap-1.5">
-            {item.scanned && (
-              <span className="yo-chip">
-                <ShieldCheck className="h-3 w-3" />
-                已扫描
-              </span>
-            )}
-            {item.needsKey && (
-              <span className="yo-chip yo-chip--warn">
-                <KeyRound className="h-3 w-3" />
-                需要 API Key
-              </span>
-            )}
-            {item.featured && (
-              <span className="yo-chip yo-chip--neutral">精选</span>
-            )}
-          </div>
-        </div>
-      </div>
-      <p className="mt-3 line-clamp-2 flex-1 text-sm leading-relaxed text-ink-soft">
-        {item.description}
-      </p>
-      <div className="mt-4 flex items-center gap-3 text-xs text-ink-muted">
-        {item.stars !== null && (
-          <span className="inline-flex items-center gap-1">
-            <Star className="h-3.5 w-3.5 fill-current" />
-            {formatStars(item.stars)}
-          </span>
-        )}
-        {item.category && <span>{item.category}</span>}
-      </div>
-    </Link>
   );
 }

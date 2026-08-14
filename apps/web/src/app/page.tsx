@@ -6,15 +6,19 @@ import {
   Faq,
   Features,
   FinalCTA,
+  MarketPreview,
   PainPoints,
   SyncFlow,
 } from "@/components/site/sections";
 import { Footer } from "@/components/site/footer";
 import { ScrollReveal } from "@/components/site/scroll-reveal";
-import { getRegistryMeta } from "@/lib/registry";
+import { getRegistryMeta, queryRegistry } from "@/lib/registry";
 
 export default async function HomePage() {
-  const meta = await getRegistryMeta();
+  const [meta, topSkills] = await Promise.all([
+    getRegistryMeta(),
+    queryRegistry({ type: "skill", cat: null, q: "", sort: "reco", page: 1, pageSize: 6 }),
+  ]);
   const marketTotal = meta.counts.skill + meta.counts.mcp;
 
   return (
@@ -27,6 +31,7 @@ export default async function HomePage() {
         <Features />
         <SyncFlow />
         <AssistantWall />
+        <MarketPreview items={topSkills.items} total={marketTotal} />
         <Faq />
         <FinalCTA />
       </main>

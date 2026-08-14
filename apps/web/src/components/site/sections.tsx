@@ -19,6 +19,8 @@ import {
   restorePoints,
   type Pain,
 } from "@/lib/site-data";
+import type { IndexItem } from "@/lib/registry";
+import { ItemCard } from "./item-card";
 import { WaitlistButton } from "./waitlist-button";
 import { MergeDemo } from "./live-demos";
 import { Stroke } from "./stroke";
@@ -348,6 +350,50 @@ export function AssistantWall() {
             </div>
           ))}
         </div>
+      </div>
+    </section>
+  );
+}
+
+/* ── 市场速览：真实高分条目 + 去市场 CTA（参考 agentskillshub 首页 trending） ── */
+export function MarketPreview({
+  items,
+  total,
+}: {
+  items: IndexItem[];
+  total: number;
+}) {
+  return (
+    <section className="border-y border-line bg-paper-deep py-20 md:py-28">
+      <div className="yo-container">
+        <div className="reveal flex flex-wrap items-end justify-between gap-6">
+          <div className="max-w-2xl">
+            <h2 className="text-balance text-4xl sm:text-5xl">
+              市场里的货，先验再装
+            </h2>
+            <p className="mt-4 text-lg text-ink-soft">
+              {total.toLocaleString("zh-CN")} 条 Skill 与 MCP，每条都过了静态扫描、
+              打了综合质量分。这几条是目前分最高的。
+            </p>
+          </div>
+          <Link
+            href="/market"
+            className="yo-btn yo-btn--ghost"
+          >
+            去市场逛逛 →
+          </Link>
+        </div>
+        <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {items.map((item, i) => (
+            <li
+              key={item.id}
+              className="reveal"
+              style={{ transitionDelay: `${(i % 3) * 60}ms` }}
+            >
+              <ItemCard item={item} />
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

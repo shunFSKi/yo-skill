@@ -35,7 +35,7 @@ export async function generateStaticParams() {
   return [...items]
     .sort((a, b) => {
       if (a.featured !== b.featured) return a.featured ? -1 : 1;
-      return (b.stars ?? -1) - (a.stars ?? -1);
+      return (b.score ?? -1) - (a.score ?? -1) || (b.stars ?? -1) - (a.stars ?? -1);
     })
     .slice(0, 200)
     .map((i) => ({ id: safeId(i.id) }));
@@ -130,7 +130,7 @@ export default async function MarketItemPage({ params }: Props) {
         </p>
 
         {/* 信息格 */}
-        <dl className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-card border border-line bg-line sm:grid-cols-4">
+        <dl className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-card border border-line bg-line sm:grid-cols-5">
           <InfoCell label="作者" value={item.author} />
           <InfoCell
             label="来源"
@@ -147,6 +147,12 @@ export default async function MarketItemPage({ params }: Props) {
               ) : (
                 "暂无"
               )
+            }
+          />
+          <InfoCell
+            label="质量分"
+            value={
+              item.quality.score !== null ? `${item.quality.score} / 100` : "暂无"
             }
           />
           <InfoCell label="更新" value={updated ?? "暂无"} />
