@@ -1,0 +1,74 @@
+# 市场数据定时同步：跑管线 → 有变化才提交本仓库（官网自动重建）
+# → 配了数据仓库则同步推送（桌面端海外分发源）。
+#
+# 开箱状态：只跑前两步（本仓库数据刷新）即生效。
+# 接入数据仓库：GitHub 仓库 Settings → Secrets and variables → Actions 里配：
+#   Variables: REGISTRY_REPO（本项目为 shunFSKi/yo-skill-registry）
+#   Secrets:   REGISTRY_TOKEN（对数据仓有写权限的 PAT）
+# Gitee 国内镜像不在此推送：数据仓已通过 Gitee 官方镜像功能单向 Pull
+# （webhook 自动配置失败，GitHub 有新提交后在镜像管理页点「更新」手动同步）。
+# 详见 tools/registry-pipeline/README.md
+
+name: registry-sync
+
+on:
+  schedule:
+    # 每天 UTC 03:17 / 15:17（北京时间 11:17 / 23:17），避开整点拥堵
+    - cron: "17 3,15 * * *"
+  workflow_dispatch: # 手动触发
+
+permissions:
+  contents: write # 回推本仓库用
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4 # 版本读根 package.json 的 packageManager 字段
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: 跑管线刷新 apps/web/public/registry
+        run: pnpm fetch:registry
+
+      - name: 有变化才提交本仓库
+        run: |
+          if [ -z "$(git status --porcelain apps/web/public/registry)" ]; then
+            echo "数据无变化，不提交"
+            exit 0
+          fi
+          git config user.name "yo-skill-bot"
+          git config user.email "yo-skill-bot@users.noreply.github.com"
+          git add apps/web/public/registry
+          git commit -s -m "chore(registry): 定时刷新市场数据"
+          git push
+
+      - name: 检出数据仓库（未配置则跳过）
+        if: vars.REGISTRY_REPO != ''
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ vars.REGISTRY_REPO }}
+          token: ${{ secrets.REGISTRY_TOKEN }}
+          path: registry-data
+
+      - name: 同步并推送数据仓库
+        if: vars.REGISTRY_REPO != ''
+        run: |
+          rsync -a --delete apps/web/public/registry/ registry-data/
+          cd registry-data
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "数据仓库无变化，不提交"
+            exit 0
+          fi
+          git config user.name "yo-skill-bot"
+          git config user.email "yo-skill-bot@users.noreply.github.com"
+          git add -A
+          git commit -s -m "chore: registry 数据刷新 $(date -u +%F)"
+          git push

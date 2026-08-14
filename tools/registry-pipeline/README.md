@@ -1,0 +1,67 @@
+# @yo-skill/registry-pipeline
+
+市场数据管线：从公开目录拉真实条目元数据 → 静态扫描 + 场景分类 → 抓源仓库 README → 落盘静态 JSON。
+
+**只存信息，不存代码**：每条目存"叫什么 / 谁写的 / 怎么装 / 要什么 Key / 扫描结果 / README"，安装永远回源仓库（供应链纪律）。
+
+## 数据源
+
+| 来源 | 内容 | 接口 |
+| ---- | ---- | ---- |
+| claudeskills.info | 人工精选 Skill（featured） | 免 key JSON API |
+| MCP 官方 Registry | MCP server（active + 最新版去重） | 免 key JSON API |
+| GitHub 源仓库 | 根 README（按 repo 去重，截断 12KB） | raw.githubusercontent.com |
+
+## 用法
+
+```bash
+pnpm fetch:registry        # 仓库根目录；等价于 pnpm --filter @yo-skill/registry-pipeline fetch
+pnpm typecheck             # 本包 TS 检查
+```
+
+- 产物：`apps/web/public/registry/`（`meta.json` + `index.json` + `items/*.json`），官网构建期直接读，全站 SSG
+- **幂等**：数据无变化时不落盘（`generated_at` 不动）；有变化才整体重写（清掉过期条目）并打新时间戳。`generated_at` 是下游判断要不要同步的锚点
+- **代理**：fetch 自动走 `HTTP_PROXY` / `HTTPS_PROXY`（undici `EnvHttpProxyAgent`），没配代理则直连；注意 raw.githubusercontent.com 在大陆直连不通（DNS 污染），跑管线需要代理或 CI
+- 输出目录可用环境变量覆盖：`REGISTRY_OUT_DIR=/path/to/repo node src/index.ts`
+
+## 数据结构（数据仓库布局即此）
+
+```
+meta.json     # schema_version + generated_at + counts：同步锚点，客户端先拉它比对
+index.json    # 全量卡片索引（每条最小集），列表页一次拉完
+items/*.json  # 每条完整档案（安装配方 / env / 扫描明细 / README），详情页按需懒拉
+```
+
+## 定时同步（GitHub Actions）
+
+工作流在仓库根 `.github/workflows/registry-sync.yml`，每天 UTC 03:17 / 15:17 跑，也可手动触发。
+
+开箱即用：刷新本仓库 `apps/web/public/registry/` 并有变化才提交（官网托管平台检测到 push 自动重建，数据即"动态更新"）。
+
+接入独立数据仓库（桌面端分发源）：
+
+> 数据仓已建：**GitHub `shunFSKi/yo-skill-registry`**（公开，海外主仓）。以下为重建/换仓时的操作步骤。
+
+1. 建一个公开仓库，首次先推一个 main 分支（空 README 即可）
+2. 本仓库 Settings → Secrets and variables → Actions：
+   - Variables 加 `REGISTRY_REPO` = `shunFSKi/yo-skill-registry`
+   - Secrets 加 `REGISTRY_TOKEN` = 对数据仓有写权限的 PAT（Fine-grained，只授该仓 Contents: Read and write）
+3. 下次定时/手动触发即自动同步推送
+
+接入 Gitee 国内镜像：
+
+> 镜像仓已建：**Gitee `shunFSKi/yo-skill-registry`**（开源）。走 Gitee 官方「仓库镜像」功能单向 Pull GitHub 数据仓，**不由工作流推送**。
+
+1. Gitee 建同名公开仓库（不初始化 README/.gitignore）
+2. 仓库 → 管理 → 仓库镜像管理 → 添加镜像：方向 **Pull**，镜像仓库选 GitHub 数据仓，私人令牌填 GitHub PAT（classic，勾 `repo` + `admin:repo_hook`）
+3. 已知坑：webhook 自动配置会报「webhook生成失败」（Gitee 侧问题，2026-08-14 实测），取消勾选「自动从 GitHub 同步仓库」即可建成；后果是 GitHub 有新提交后 Gitee 不会立即自动跟，在镜像管理页点「更新」手动同步即可（数据每天最多更新两次，可接受；也可按页面提示手动配 webhook 换即时同步）
+4. 前提：Gitee 账号需已绑定手机号 + GitHub 第三方账号（账号设置里可查）
+
+下游读取地址（**GitHub 系对应海外，Gitee 对应国内**）：
+
+- GitHub raw（海外）：`https://raw.githubusercontent.com/shunFSKi/yo-skill-registry/main/meta.json`
+- jsDelivr CDN（海外加速）：`https://cdn.jsdelivr.net/gh/shunFSKi/yo-skill-registry@main/meta.json`
+- Gitee raw（国内）：`https://gitee.com/shunFSki/yo-skill-registry/raw/main/meta.json`
+
+桌面端按网络环境选源：国内优先 Gitee，海外优先 GitHub/jsDelivr；拿不准就顺序 fallback，
+双通道覆盖海内外。

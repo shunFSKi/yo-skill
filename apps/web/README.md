@@ -49,6 +49,8 @@ src/
 `meta.json`）。页面构建期直接读 JSON，全站 SSG，不需要运行时数据库；重跑管线即更新，
 真部署时用 GitHub Actions 定时跑即可。徽章只说「已扫描」不说「安全」，被拦条目不出库。
 README 用 react-markdown + `skipHtml` 渲染（丢弃原始 HTML，无注入面）。
+定时同步工作流与数据仓库（GitHub 主 + Gitee 镜像）接入步骤见
+`tools/registry-pipeline/README.md` 与 `.github/workflows/registry-sync.yml`。
 
 monorepo：`apps/web` + `packages/ui-kit`（共享 UI，与未来的 `apps/desktop` 复用）
 + `tools/registry-pipeline`（市场数据管线）。
