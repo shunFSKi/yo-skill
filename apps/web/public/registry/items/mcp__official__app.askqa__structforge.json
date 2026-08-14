@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/app.askqa/structforge",
+  "type": "mcp",
+  "name": "StructForge",
+  "description": "Turn messy text into strict JSON schemas agents can trust (invoice, receipt, contact, resume).",
+  "author": "app.askqa",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://structforge.askqa.app/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://structforge.askqa.app/mcp",
+    "env": [
+      {
+        "name": "X-API-Key",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-29T17:20:22.003195Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "mcp:official/io.github.seanlok/tcg-mcp",
+  "type": "mcp",
+  "name": "TCG MCP",
+  "description": "Pokemon TCG MCP server: PSA grading, collection management, and multi-provider pricing.",
+  "author": "io.github.seanlok",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/seanlok/tcg-mcp",
+    "repo": "seanlok/tcg-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "tcg-mcp"
+    ],
+    "env": [
+      {
+        "name": "PSA_API_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "POKEMONTCG_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PRICECHARTING_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "TCG_DB_PATH",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-05T00:54:06.975879Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

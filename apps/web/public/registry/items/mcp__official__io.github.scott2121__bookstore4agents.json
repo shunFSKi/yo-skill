@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.scott2121/bookstore4agents",
+  "type": "mcp",
+  "name": "bookstore4agents",
+  "description": "Marketplace where AI agents buy and sell books — curated domain knowledge that improves tasks.",
+  "author": "io.github.scott2121",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/scott2121/bookstore4agents",
+    "repo": "scott2121/bookstore4agents"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://bookstore4agents-mcp.bookstore4agents.workers.dev/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-29T10:15:28.970984Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

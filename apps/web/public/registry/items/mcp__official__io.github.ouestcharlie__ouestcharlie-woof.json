@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.ouestcharlie/ouestcharlie-woof",
+  "type": "mcp",
+  "name": "ouestcharlie-woof",
+  "description": "An MCP server and app to search and browse your photos while preserving your privacy",
+  "author": "io.github.ouestcharlie",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ouestcharlie/ouestcharlie-woof",
+    "repo": "ouestcharlie/ouestcharlie-woof"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "ouestcharlie-woof"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-27T20:29:20.998554Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

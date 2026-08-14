@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.Fluke-Studio/uk-business-intelligence",
+  "type": "mcp",
+  "name": "uk-business-intelligence",
+  "description": "Enrich any UK business with Companies House, Google Places, DNS, and social data.",
+  "author": "io.github.Fluke-Studio",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Fluke-Studio/uk-business-intelligence-mcp",
+    "repo": "Fluke-Studio/uk-business-intelligence-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "uk-business-intelligence-mcp"
+    ],
+    "env": [
+      {
+        "name": "SUPABASE_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "SUPABASE_SERVICE_ROLE_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "COMPANIES_HOUSE_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "GOOGLE_PLACES_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-21T22:20:20.68995Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

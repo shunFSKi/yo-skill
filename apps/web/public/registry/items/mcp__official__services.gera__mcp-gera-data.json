@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/services.gera/mcp-gera-data",
+  "type": "mcp",
+  "name": "mcp-gera-data",
+  "description": "Discover & query Gera's 30 attested open UK/US government datasets, each with signed provenance.",
+  "author": "services.gera",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/geraservicesuk/globetura",
+    "repo": "geraservicesuk/globetura"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@gera-services/mcp-gera-data"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-06T21:37:13.53119Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

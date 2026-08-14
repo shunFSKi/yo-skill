@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.Sndevore77/glp1search",
+  "type": "mcp",
+  "name": "glp1search",
+  "description": "GLP-1 provider directory, peptide database, and medication comparison tools.",
+  "author": "io.github.Sndevore77",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Sndevore77/glp1search-mcp",
+    "repo": "Sndevore77/glp1search-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@seraviahealth/glp1search-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-05T06:41:51.384698Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

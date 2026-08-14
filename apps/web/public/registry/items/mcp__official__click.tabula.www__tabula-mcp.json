@@ -1,0 +1,70 @@
+{
+  "id": "mcp:official/click.tabula.www/tabula-mcp",
+  "type": "mcp",
+  "name": "Tabula MCP",
+  "description": "Bar-first MCP server for Tabula chart authoring, PNG rendering, and editor handoff.",
+  "author": "click.tabula.www",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://www.tabula.click/api/mcp/stream",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://www.tabula.click/api/mcp/stream",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "X-Tabula-Guest-Session",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "X-Tabula-Approval",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-18T23:54:51.599594Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

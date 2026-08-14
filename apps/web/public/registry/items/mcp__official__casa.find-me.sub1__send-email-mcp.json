@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/casa.find-me.sub1/send-email-mcp",
+  "type": "mcp",
+  "name": "Cool property search server!",
+  "description": "Non functional server (yet)",
+  "author": "casa.find-me.sub1",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://sub1.find-me.casa",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://sub1.find-me.casa",
+    "env": [
+      {
+        "name": "x-api-key",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-11-28T14:02:14.089267Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

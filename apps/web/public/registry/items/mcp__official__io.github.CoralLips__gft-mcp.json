@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.CoralLips/gft-mcp",
+  "type": "mcp",
+  "name": "gft-mcp",
+  "description": "Bring your GFT (Git for Thought) white-box thinking map to any AI agent. 把你的思维脉络接给任何 agent。",
+  "author": "io.github.CoralLips",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/CoralLips/gft-mcp",
+    "repo": "CoralLips/gft-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "gft-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-07T10:45:58.150227Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/site.skew/skew",
+  "type": "mcp",
+  "name": "Skew",
+  "description": "Authored design service: one-of-one landing pages, pitch decks, and research-grounded briefs.",
+  "author": "site.skew",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/RayyanZahid/skew",
+    "repo": "RayyanZahid/skew"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://skew.site/api/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-24T19:39:47.305217Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

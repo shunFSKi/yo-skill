@@ -1,0 +1,73 @@
+{
+  "id": "mcp:official/io.github.klein-business/legal-text-mcp-de",
+  "type": "mcp",
+  "name": "legal-text-mcp-de",
+  "description": "German federal & state legal texts (BGB, DSGVO, …) with canonical IDs and cite-grade provenance.",
+  "author": "io.github.klein-business",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/klein-business/legal-text-mcp-de",
+    "repo": "klein-business/legal-text-mcp-de"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "legal-text-mcp-de"
+    ],
+    "env": [
+      {
+        "name": "DATASET_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "STRICT_DATASET",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ANTHROPIC_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-18T13:46:23.468732Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

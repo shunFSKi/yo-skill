@@ -1,0 +1,99 @@
+{
+  "id": "mcp:official/io.github.LarsCowe/queue-pilot",
+  "type": "mcp",
+  "name": "Queue Pilot",
+  "description": "MCP server for RabbitMQ and Kafka message inspection with JSON Schema validation",
+  "author": "io.github.LarsCowe",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/LarsCowe/queue-pilot",
+    "repo": "LarsCowe/queue-pilot"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "queue-pilot"
+    ],
+    "env": [
+      {
+        "name": "RABBITMQ_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RABBITMQ_USER",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "RABBITMQ_PASS",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "KAFKA_BROKERS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "KAFKA_CLIENT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "KAFKA_SASL_MECHANISM",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "KAFKA_SASL_USERNAME",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "KAFKA_SASL_PASSWORD",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-14T12:22:43.352667Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

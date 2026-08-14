@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.ryanbihai/oceanbus-mcp-server",
+  "type": "mcp",
+  "name": "oceanbus-mcp-server",
+  "description": "Register, discover, message, and transact with other AI agents on the OceanBus network.",
+  "author": "io.github.ryanbihai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ryanbihai/oceanbus",
+    "repo": "ryanbihai/oceanbus"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "oceanbus-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "OCEANBUS_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "OCEANBUS_AGENT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OCEANBUS_BASE_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-07T05:42:14.022969Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

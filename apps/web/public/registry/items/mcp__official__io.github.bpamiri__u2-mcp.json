@@ -1,0 +1,108 @@
+{
+  "id": "mcp:official/io.github.bpamiri/u2-mcp",
+  "type": "mcp",
+  "name": "U2 MCP Server",
+  "description": "Connect AI assistants to Rocket Universe/UniData MultiValue databases via MCP.",
+  "author": "io.github.bpamiri",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/bpamiri/u2-mcp",
+    "repo": "bpamiri/u2-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "u2-mcp"
+    ],
+    "env": [
+      {
+        "name": "U2_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "U2_USER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "U2_PASSWORD",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "U2_ACCOUNT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "U2_SERVICE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "U2_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "U2_SSL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "U2_READ_ONLY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "U2_MAX_RECORDS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "U2_BLOCKED_COMMANDS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-12-17T20:22:31.353273Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

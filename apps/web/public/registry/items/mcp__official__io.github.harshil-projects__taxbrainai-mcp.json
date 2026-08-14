@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.harshil-projects/taxbrainai-mcp",
+  "type": "mcp",
+  "name": "TaxBrainAI MCP",
+  "description": "8 offline Indian income-tax MCP tools: deterministic compute, regimes, citations, notices.",
+  "author": "io.github.harshil-projects",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/harshil-projects/taxbrainai-mcp",
+    "repo": "harshil-projects/taxbrainai-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "taxbrainai-mcp"
+    ],
+    "env": [
+      {
+        "name": "TAXBRAIN_MCP_CASELAW_INDEX",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-06T00:59:09.258313Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

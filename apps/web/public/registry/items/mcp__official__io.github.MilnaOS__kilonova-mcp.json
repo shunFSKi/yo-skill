@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.MilnaOS/kilonova-mcp",
+  "type": "mcp",
+  "name": "Kilonova MCP",
+  "description": "Persistent local knowledge for AI coding agents with structured records, search, and DOT context.",
+  "author": "io.github.MilnaOS",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/MilnaOS/kilonova-mcp",
+    "repo": "MilnaOS/kilonova-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "kilonova-mcp"
+    ],
+    "env": [
+      {
+        "name": "KILONOVA_KB_ROOT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-25T14:26:22.176371Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

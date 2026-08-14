@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.krystiangw/meet-live-assist",
+  "type": "mcp",
+  "name": "meet-live-assist",
+  "description": "Your own agent inside a live Google Meet or Zoom call. Local-first, no hosted service.",
+  "author": "io.github.krystiangw",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/krystiangw/meet-live-assist-extension",
+    "repo": "krystiangw/meet-live-assist-extension"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "meet-live-assist-server"
+    ],
+    "env": [
+      {
+        "name": "MLA_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TRANSCRIPTS_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MLA_TOKEN",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T09:22:27.522148Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

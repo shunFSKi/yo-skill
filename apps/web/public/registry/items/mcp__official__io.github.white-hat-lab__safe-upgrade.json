@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.white-hat-lab/safe-upgrade",
+  "type": "mcp",
+  "name": "safe-upgrade",
+  "description": "Evidence-backed npm upgrade preflight and dependency audits for coding agents, paid via x402.",
+  "author": "io.github.white-hat-lab",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/white-hat-lab/x402-safe-upgrade-api",
+    "repo": "white-hat-lab/x402-safe-upgrade-api"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "safe-upgrade-mcp"
+    ],
+    "env": [
+      {
+        "name": "PAYER_PRIVATE_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T00:42:42.873593Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

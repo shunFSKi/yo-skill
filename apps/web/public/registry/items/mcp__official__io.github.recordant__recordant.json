@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.recordant/recordant",
+  "type": "mcp",
+  "name": "recordant",
+  "description": "Patent-pending diagnostic + decisions-ledger engine with operator briefs and an MCP console.",
+  "author": "io.github.recordant",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/recordant/recordant",
+    "repo": "recordant/recordant"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "recordant"
+    ],
+    "env": [
+      {
+        "name": "RECORDANT_LICENSE_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-05T17:50:31.943225Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

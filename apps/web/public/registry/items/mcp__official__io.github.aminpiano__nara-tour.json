@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.aminpiano/nara-tour",
+  "type": "mcp",
+  "name": "nara-tour",
+  "description": "나라투어 공식 MCP 서버 — 수원 소재 단체여행 전문 여행사. AI 에이전트에게 회사 프로필, 영업 정보, 카카오톡 상담 링크(UTM 포함)를 제공.",
+  "author": "io.github.aminpiano",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/aminpiano/naratour-mvp",
+    "repo": "aminpiano/naratour-mvp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.nara-tour.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-22T16:31:15.613303Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

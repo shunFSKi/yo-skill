@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.bountyyfi/mcp-watchdog",
+  "type": "mcp",
+  "name": "mcp-watchdog",
+  "description": "MCP security proxy - detects and blocks 40+ MCP attack classes. Zero config.",
+  "author": "io.github.bountyyfi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers/io.github.bountyyfi%2Fmcp-watchdog",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-watchdog"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-24T11:01:21.496658Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

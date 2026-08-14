@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.sophotechlabs/kube-lint-mcp",
+  "type": "mcp",
+  "name": "kube-lint-mcp",
+  "description": "Validate Kubernetes manifests, Helm charts, Kustomize overlays, and FluxCD resources",
+  "author": "io.github.sophotechlabs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers/io.github.sophotechlabs%2Fkube-lint-mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "kube-lint-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-26T10:27:02.83043Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.friendlygeorge/coingecko-mcp-server",
+  "type": "mcp",
+  "name": "coingecko-mcp-server",
+  "description": "MCP server for CoinGecko cryptocurrency data API",
+  "author": "io.github.friendlygeorge",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/friendlygeorge/coingecko-mcp-server",
+    "repo": "friendlygeorge/coingecko-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@supernova123/coingecko-mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-06T18:08:48.34291Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

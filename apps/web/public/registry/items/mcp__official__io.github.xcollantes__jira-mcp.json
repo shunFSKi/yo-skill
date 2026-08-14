@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.xcollantes/jira-mcp",
+  "type": "mcp",
+  "name": "jira-mcp",
+  "description": "Feature-rich MCP for controlling Jira through LLM clients. Safe for corporate environments.",
+  "author": "io.github.xcollantes",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/xcollantes/jira-mcp",
+    "repo": "xcollantes/jira-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "jira-tools-mcp"
+    ],
+    "env": [
+      {
+        "name": "JIRA_API_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "JIRA_AUTH_TYPE",
+        "required": true,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-01-26T06:12:13.666292Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

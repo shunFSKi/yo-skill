@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.rafa2403nunez-droid/pynet-mcp-bridge",
+  "type": "mcp",
+  "name": "pynet-mcp-bridge",
+  "description": "MCP implementation to connect AI agents with the PyNet Platform for BIM/Engineering automation.",
+  "author": "io.github.rafa2403nunez-droid",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/rafa2403nunez-droid/PyNetBridge",
+    "repo": "rafa2403nunez-droid/PyNetBridge"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "pynet-mcp-bridge"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-20T21:51:12.511277Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

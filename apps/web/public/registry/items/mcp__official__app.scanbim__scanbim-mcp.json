@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/app.scanbim/scanbim-mcp",
+  "type": "mcp",
+  "name": "scanbim-mcp",
+  "description": "AI Hub for AEC — 46 tools for Revit, Navisworks, ACC, XR via Autodesk Platform Services",
+  "author": "app.scanbim",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ScanBIM-Labs/scanbim-mcp",
+    "repo": "ScanBIM-Labs/scanbim-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@scanbim-labs/scanbim-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-12T22:42:00.420458Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

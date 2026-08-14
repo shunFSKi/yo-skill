@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.neuronik/drop",
+  "type": "mcp",
+  "name": "drop",
+  "description": "Publish web pages straight from your AI assistant and share them with a link.",
+  "author": "io.neuronik",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/neuronik-io/drop",
+    "repo": "neuronik-io/drop"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://drop.neuronik.io/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-07T11:18:28.852518Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

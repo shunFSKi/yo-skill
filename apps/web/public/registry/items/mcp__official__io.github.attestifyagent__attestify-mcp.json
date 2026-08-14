@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.attestifyagent/attestify-mcp",
+  "type": "mcp",
+  "name": "Attestify OS",
+  "description": "MCP stdio server for Attestify OS — governed agent execution with on-chain receipts.",
+  "author": "io.github.attestifyagent",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/attestifyagent/attestify-mcp",
+    "repo": "attestifyagent/attestify-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "attestify-mcp"
+    ],
+    "env": [
+      {
+        "name": "ATTESTIFY_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ATTESTIFY_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T16:11:16.547999Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# attestify-mcp\n\n> MCP server exposing Attestify OS agents as callable tools for Claude Desktop, Cursor, Windsurf, and any MCP-compatible host.\n\nAttestify OS is infrastructure for AI agents operating in financial, compliance, and regulated workflows. Every governed run delivers: routing → governance enforcement → budget check → SLA check → execution → output verification → immutable receipt → on-chain settlement evidence.\n\n**Live base URL:** `https://attestifyos.com`\n\nThis package is a real [Model Context Protocol](https://modelcontextprotocol.io) stdio server — your MCP host spawns it as a subprocess and talks JSON-RPC to it directly. It is not a plain HTTP client library.\n\n## Quick start\n\nAdd to your MCP host's config (e.g. Claude Desktop's `claude_desktop_config.json`):\n\n```json\n{\n  \"mcpServers\": {\n    \"attestify\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"attestify-mcp\"],\n      \"env\": {\n        \"ATTESTIFY_BASE_URL\": \"https://attestifyos.com\",\n        \"ATTESTIFY_API_KEY\":  \"<your-tenant-api-key>\"\n      }\n    }\n  }\n}\n```\n\n`ATTESTIFY_API_KEY` is a tenant API key issued via `POST /api/keys` — it's sent as the `X-API-Key` header on every run. Without one, runs are unauthenticated and subject to the plan/x402 limits that apply to anonymous callers.\n\n## Tools\n\n### `attestify_research`\n\nRuns a deep research query through the Attestify Research Agent (`researcher-v2`) via `POST /api/run`. Returns a structured briefing with executive summary, key findings, and caveats. Each call is metered at $0.023 USDC and logged to the Attestify evidence ledger.\n\n**Arguments:**\n\n| Field | Required | Description |\n|---|---|---|\n| `query` | Yes | The research question, topic, or subject to investigate. |\n| `url` | No | Optional source URL to include as context for the research run. |\n| `session_id` | No | Optional session ID for conversation continuity. |\n\n**Returns:** a JSON blob with `summary`, `loop_id`, `run_id`, `input_hash`, `output_hash`, `price_usdc`, `agent_id`, `receipt_url`, and `created_at`.\n\n## Enterprise self-serve\n\nIssue a tenant key, set a budget, attach policies — every subsequent run through this server is auto-governed:\n\n```\n1. POST /api/keys      → issue tenant API key\n2. POST /api/budgets   → set USDC spend ceiling\n3. POST /api/policies  → attach governance rules\n4. (this MCP server)   → every run auto-enforced\n```\n\n## Links\n\n- **Homepage:** https://attestifyos.com\n- **Quickstart:** https://attestifyos.com/quickstart\n- **OpenAPI spec:** https://attestifyos.com/openapi.json\n- **x402 discovery:** https://attestifyos.com/.well-known/x402.json\n- **GitHub:** https://github.com/attestifyagent/attestify-mcp\n",
+  "status": "curated"
+}

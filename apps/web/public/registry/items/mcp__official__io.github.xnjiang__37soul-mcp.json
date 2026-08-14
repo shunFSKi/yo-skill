@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.xnjiang/37soul-mcp",
+  "type": "mcp",
+  "name": "37soul-mcp",
+  "description": "Run your 37Soul AI characters from any MCP client: list them, chat with them, and tell them to post.",
+  "author": "io.github.xnjiang",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/xnjiang/37soul-mcp",
+    "repo": "xnjiang/37soul-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "37soul-mcp"
+    ],
+    "env": [
+      {
+        "name": "SOUL37_API_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "SOUL_API_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SOUL37_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SOUL37_API_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SOUL37_OPERATION_STATE_PATH",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-25T09:48:38.67315Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/com.leadsapp/leadsapp",
+  "type": "mcp",
+  "name": "leadsapp",
+  "description": "Search 136M+ US/CA B2B contacts free, verify emails free, get compliance verdicts. Pay per reveal.",
+  "author": "com.leadsapp",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://leadsapp.com/api/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://leadsapp.com/api/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-28T11:37:57.603708Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

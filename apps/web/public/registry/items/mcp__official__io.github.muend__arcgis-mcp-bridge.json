@@ -1,0 +1,78 @@
+{
+  "id": "mcp:official/io.github.muend/arcgis-mcp-bridge",
+  "type": "mcp",
+  "name": "ArcGIS MCP Bridge",
+  "description": "Secure local-first MCP server for licensed ArcGIS Pro and ArcPy on Windows.",
+  "author": "io.github.muend",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/muend/arcgis-mcp-bridge",
+    "repo": "muend/arcgis-mcp-bridge"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "arcgis-mcp-bridge"
+    ],
+    "env": [
+      {
+        "name": "ARCPY_PYTHON_PATH",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "ARCGIS_MCP_ALLOWED_ROOTS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ARCGIS_MCP_SCRATCH_GDB",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ARCGIS_MCP_MAX_WORKERS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-30T22:00:03.555325Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

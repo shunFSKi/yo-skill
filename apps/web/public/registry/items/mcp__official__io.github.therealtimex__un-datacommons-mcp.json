@@ -1,0 +1,83 @@
+{
+  "id": "mcp:official/io.github.therealtimex/un-datacommons-mcp",
+  "type": "mcp",
+  "name": "un-datacommons-mcp",
+  "description": "MCP server to query Data Commons indicators and observations (base or custom).",
+  "author": "io.github.therealtimex",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/therealtimex/un-datacommons-mcp",
+    "repo": "therealtimex/un-datacommons-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "un-datacommons-mcp"
+    ],
+    "env": [
+      {
+        "name": "DC_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "DC_TYPE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CUSTOM_DC_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DC_ROOT_TOPIC_DCIDS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DC_SEARCH_SCOPE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-09-29T21:53:16.395496Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

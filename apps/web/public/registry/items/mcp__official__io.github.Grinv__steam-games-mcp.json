@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.Grinv/steam-games-mcp",
+  "type": "mcp",
+  "name": "Steam MCP Server",
+  "description": "Steam store/game data (no key) plus player profiles, libraries and achievements (Steam Web API).",
+  "author": "io.github.Grinv",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Grinv/steam-games-mcp",
+    "repo": "Grinv/steam-games-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "steam-games-mcp"
+    ],
+    "env": [
+      {
+        "name": "STEAM_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "STEAM_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "STEAM_COUNTRY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "STEAM_LANGUAGE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T14:45:28.845734Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

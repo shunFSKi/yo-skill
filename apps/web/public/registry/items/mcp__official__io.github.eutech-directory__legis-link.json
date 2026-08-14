@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.eutech-directory/legis-link",
+  "type": "mcp",
+  "name": "legis-link",
+  "description": "Construction compliance AI. Wire sizing, load calc, battery clearance. AU, USA, CA, UK, EU.",
+  "author": "io.github.eutech-directory",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/eutech-directory/legis-link-mcp",
+    "repo": "eutech-directory/legis-link-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "legis-link-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-07T16:52:36.969766Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

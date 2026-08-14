@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/ai.airshelf/catalog",
+  "type": "mcp",
+  "name": "AirShelf Catalog",
+  "description": "Cross-vendor B2B catalog for AI agents: search, compare, find equivalents, request a quote.",
+  "author": "ai.airshelf",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.airshelf.ai/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.airshelf.ai/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-16T09:32:12.311101Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

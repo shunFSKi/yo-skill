@@ -1,0 +1,89 @@
+{
+  "id": "mcp:official/io.github.RobThePCGuy/rag-vault",
+  "type": "mcp",
+  "name": "rag-vault",
+  "description": "Local RAG MCP server with hybrid search, PDF/DOCX support, and zero-config setup",
+  "author": "io.github.RobThePCGuy",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/RobThePCGuy/rag-vault",
+    "repo": "RobThePCGuy/rag-vault"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@robthepcguy/rag-vault"
+    ],
+    "env": [
+      {
+        "name": "BASE_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DB_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CACHE_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MODEL_NAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RAG_HYBRID_WEIGHT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RAG_GROUPING",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-14T01:58:17.329823Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.udah1/cursor-chat-bridge",
+  "type": "mcp",
+  "name": "cursor-chat-bridge",
+  "description": "Drive the Cursor agent from Telegram, Discord, or GitHub — with images and voice notes.",
+  "author": "io.github.udah1",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/udah1/cursor-chat-bridge",
+    "repo": "udah1/cursor-chat-bridge"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "cursor-telegram-chat"
+    ],
+    "env": [
+      {
+        "name": "BRIDGE_PLATFORM",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-07T06:17:47.826607Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

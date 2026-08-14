@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.malamutemayhem/openaq",
+  "type": "mcp",
+  "name": "OpenAQ Air Quality MCP by UnClick",
+  "description": "Global air quality measurements by location and country from OpenAQ. No API key. By UnClick.",
+  "author": "io.github.malamutemayhem",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/malamutemayhem/unclick.git",
+    "repo": "malamutemayhem/unclick"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@unclick/openaq-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-01T14:09:53.426972Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/com.dmzagent/skill-builder-mcp",
+  "type": "mcp",
+  "name": "skill-builder-mcp",
+  "description": "Search the skill-builder registry and auto-install skills for Claude Code, Cursor, and Codex.",
+  "author": "com.dmzagent",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/praeceptor-thesis/skill-builder-landing",
+    "repo": "praeceptor-thesis/skill-builder-landing"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@dmzagent/skill-builder-mcp"
+    ],
+    "env": [
+      {
+        "name": "SKILL_API_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SKILL_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SKILL_PROJECT_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SKILL_TARGET",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-18T17:19:24.205288Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

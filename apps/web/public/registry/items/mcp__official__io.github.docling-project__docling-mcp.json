@@ -1,0 +1,108 @@
+{
+  "id": "mcp:official/io.github.docling-project/docling-mcp",
+  "type": "mcp",
+  "name": "Docling MCP",
+  "description": "Convert PDFs and other documents to structured formats via Docling, for AI applications.",
+  "author": "io.github.docling-project",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/docling-project/docling-mcp",
+    "repo": "docling-project/docling-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "docling-mcp"
+    ],
+    "env": [
+      {
+        "name": "DOCLING_MCP_CONVERSION_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DOCLING_MCP_SERVICE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DOCLING_MCP_SERVICE_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "DOCLING_MCP_SERVICE_TIMEOUT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DOCLING_MCP_SERVICE_MAX_RETRIES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DOCLING_MCP_FALLBACK_TO_LOCAL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DOCLING_MCP_KEEP_IMAGES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DOCLING_MCP_IMAGES_SCALE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DOCLING_MCP_DO_OCR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DOCLING_MCP_DO_TABLE_STRUCTURE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-31T10:24:55.129986Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

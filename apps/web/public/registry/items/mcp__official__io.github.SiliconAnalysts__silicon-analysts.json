@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.SiliconAnalysts/silicon-analysts",
+  "type": "mcp",
+  "name": "Silicon Analysts",
+  "description": "Dated, sourced semiconductor data: chip costs, HBM/wafer pricing, fab capacity, policy, forecasts.",
+  "author": "io.github.SiliconAnalysts",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/SiliconAnalysts/silicon-analysts-nextjs",
+    "repo": "SiliconAnalysts/silicon-analysts-nextjs"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://siliconanalysts.com/api/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-21T06:00:34.996157Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

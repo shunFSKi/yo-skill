@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.soulmaten7/potal",
+  "type": "mcp",
+  "name": "potal",
+  "description": "Total landed cost API for cross-border commerce. 240 countries, 113M+ tariff records.",
+  "author": "io.github.soulmaten7",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/soulmaten7/potal",
+    "repo": "soulmaten7/potal"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "potal-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "POTAL_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-14T15:14:18.102536Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

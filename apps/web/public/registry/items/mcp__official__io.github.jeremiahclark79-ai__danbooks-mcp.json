@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.jeremiahclark79-ai/danbooks-mcp",
+  "type": "mcp",
+  "name": "DanBooks — AI Bookkeeping",
+  "description": "AI bookkeeping for small business. Create invoices, log expenses, and check P&L by voice or text.",
+  "author": "io.github.jeremiahclark79-ai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/jeremiahclark79-ai/clark-seed",
+    "repo": "jeremiahclark79-ai/clark-seed"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "danbooks-mcp"
+    ],
+    "env": [
+      {
+        "name": "DANBOOKS_API_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "DANBOOKS_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-06T22:35:51.888974Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

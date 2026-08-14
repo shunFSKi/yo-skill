@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/co.promptguard/security",
+  "type": "mcp",
+  "name": "PromptGuard",
+  "description": "Scan prompts for injection attacks, redact PII, and audit LLM SDK usage from any MCP client",
+  "author": "co.promptguard",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/acebot712/promptguard",
+    "repo": "acebot712/promptguard"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "promptguard-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "PROMPTGUARD_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PROMPTGUARD_API_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-05T11:45:11.66947Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

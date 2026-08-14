@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.igmarin/rails-agent-skills-mcp",
+  "type": "mcp",
+  "name": "Rails Agent Skills",
+  "description": "Rails development skills, docs, and workflows exposed through MCP stdio.",
+  "author": "io.github.igmarin",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/igmarin/rails-agent-skills",
+    "repo": "igmarin/rails-agent-skills"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "docker.io/igmarin/rails-agent-skills-mcp:5.1.7"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-12T22:51:43.358484Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

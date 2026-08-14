@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.mindstone/mcp-server-office",
+  "type": "mcp",
+  "name": "Microsoft Office",
+  "description": "Microsoft Office MCP server: read and edit Word documents, Excel workbooks, and PowerPoint files",
+  "author": "io.github.mindstone",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mindstone/mcp-servers",
+    "repo": "mindstone/mcp-servers"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@mindstone/mcp-server-office"
+    ],
+    "env": [
+      {
+        "name": "MCP_OFFICE_SIDECAR_STATE",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "MCP_OFFICE_SIDECAR_DISABLE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "REBEL_DISABLE_OFFICE_SIDECAR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_OFFICE_SIDECAR_STATE_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_OFFICE_ADDIN_DIR",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-08T02:02:33.618059Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,94 @@
+{
+  "id": "mcp:official/io.github.apitier/mcp-server",
+  "type": "mcp",
+  "name": "mcp-server",
+  "description": "APITier utility APIs as MCP tools: validation, UK/India address lookup, barcode/QR, data conversion.",
+  "author": "io.github.apitier",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/apitier/apitier-mcp-server",
+    "repo": "apitier/apitier-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@apitier/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "APITIER_EMAIL_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "APITIER_PHONE_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "APITIER_VAT_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "APITIER_POSTCODE_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "APITIER_PINCODE_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "APITIER_BARCODE_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "APITIER_CONVERT_DATA_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-20T16:24:35.197625Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.FedgeNo/conventions-mcp",
+  "type": "mcp",
+  "name": "Conventions MCP",
+  "description": "Memory for coding conventions and standing instructions that persists across sessions.",
+  "author": "io.github.FedgeNo",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/FedgeNo/conventions-mcp",
+    "repo": "FedgeNo/conventions-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "conventions-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-24T09:50:17.920145Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

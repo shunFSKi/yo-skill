@@ -1,0 +1,98 @@
+{
+  "id": "mcp:official/io.github.ryanmat/logicmonitor",
+  "type": "mcp",
+  "name": "logicmonitor",
+  "description": "LogicMonitor API integration with 167 tools for alerts, devices, dashboards, and more.",
+  "author": "io.github.ryanmat",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ryanmat/mcp-server-logicmonitor",
+    "repo": "ryanmat/mcp-server-logicmonitor"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "lm-mcp"
+    ],
+    "env": [
+      {
+        "name": "LM_PORTAL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "LM_BEARER_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "LM_ENABLE_WRITE_OPERATIONS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LM_ACCESS_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LM_ACCESS_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "LM_ENABLED_TOOLS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LM_DISABLED_TOOLS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LM_LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-14T20:31:02.975405Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

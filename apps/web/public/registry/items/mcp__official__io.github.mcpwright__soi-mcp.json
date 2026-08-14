@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.mcpwright/soi-mcp",
+  "type": "mcp",
+  "name": "IRS SOI (income by ZIP)",
+  "description": "IRS income & tax stats by ZIP in your agent: AGI distribution, tax, credits, deductions.",
+  "author": "io.github.mcpwright",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mcpwright/soi-mcp",
+    "repo": "mcpwright/soi-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcpwright-soi"
+    ],
+    "env": [
+      {
+        "name": "SOI_MCP_STORE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-04T05:58:42.254652Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

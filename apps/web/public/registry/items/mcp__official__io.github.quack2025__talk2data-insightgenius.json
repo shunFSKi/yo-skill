@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.quack2025/talk2data-insightgenius",
+  "type": "mcp",
+  "name": "Talk2Data InsightGenius",
+  "description": "Survey data analysis: crosstabs with significance, ANOVA, correlation, Excel exports.",
+  "author": "io.github.quack2025",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/quack2025/spss-insightgenius-api",
+    "repo": "quack2025/spss-insightgenius-api"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://spss.insightgenius.io/mcp/sse?api_key={api_key}"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-25T16:40:54.572116Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

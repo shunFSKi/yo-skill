@@ -1,0 +1,89 @@
+{
+  "id": "mcp:official/io.github.ZLeventer/google-ads-mcp",
+  "type": "mcp",
+  "name": "Google Ads",
+  "description": "MCP server for Google Ads — 22 tools for spend diagnosis, impression share, and asset performance.",
+  "author": "io.github.ZLeventer",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ZLeventer/google-ads-mcp",
+    "repo": "ZLeventer/google-ads-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@zleventer/google-ads-mcp"
+    ],
+    "env": [
+      {
+        "name": "GOOGLE_ADS_DEVELOPER_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "GOOGLE_ADS_CLIENT_ID",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "GOOGLE_ADS_CLIENT_SECRET",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "GOOGLE_ADS_REFRESH_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "GOOGLE_ADS_CUSTOMER_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "GOOGLE_ADS_LOGIN_CUSTOMER_ID",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-26T18:09:52.096286Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

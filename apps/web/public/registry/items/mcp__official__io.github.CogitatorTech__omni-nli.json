@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.CogitatorTech/omni-nli",
+  "type": "mcp",
+  "name": "omni-nli",
+  "description": "An MCP server for natural language inference",
+  "author": "io.github.CogitatorTech",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/CogitatorTech/omni-nli",
+    "repo": "CogitatorTech/omni-nli"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "omni-nli"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-23T12:25:34.223732Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

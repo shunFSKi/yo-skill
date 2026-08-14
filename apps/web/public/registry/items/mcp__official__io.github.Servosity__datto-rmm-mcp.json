@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.Servosity/datto-rmm-mcp",
+  "type": "mcp",
+  "name": "Datto RMM MCP",
+  "description": "Every Datto RMM API operation, plus a local SQLite fleet store and fleet-wide analytics no other",
+  "author": "io.github.Servosity",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/servosity/msp-skills",
+    "repo": "servosity/msp-skills"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/Servosity/msp-skills/releases/download/datto-rmm-v0.1.0/datto-rmm-mcp.mcpb"
+    ],
+    "env": [
+      {
+        "name": "DATTO_RMM_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "DATTO_RMM_API_SECRET_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "DATTO_RMM_TOKEN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-06T15:21:15.678796Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

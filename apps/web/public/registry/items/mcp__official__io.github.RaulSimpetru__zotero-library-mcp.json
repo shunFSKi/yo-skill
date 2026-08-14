@@ -1,0 +1,83 @@
+{
+  "id": "mcp:official/io.github.RaulSimpetru/zotero-library-mcp",
+  "type": "mcp",
+  "name": "zotero-library-mcp",
+  "description": "Add papers and books to Zotero by DOI, arXiv ID, or ISBN and manage your library",
+  "author": "io.github.RaulSimpetru",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/RaulSimpetru/zotero-library-mcp",
+    "repo": "RaulSimpetru/zotero-library-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "zotero-library-mcp"
+    ],
+    "env": [
+      {
+        "name": "ZOTERO_LIBRARY_ID",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "ZOTERO_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "ZOTERO_WEBDAV_URL",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ZOTERO_WEBDAV_USER",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ZOTERO_WEBDAV_PASSWORD",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-06T10:26:47.471668Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

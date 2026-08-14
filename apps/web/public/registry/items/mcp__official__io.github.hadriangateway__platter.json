@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.hadriangateway/platter",
+  "type": "mcp",
+  "name": "Platter",
+  "description": "MCP server exposing Read, Write, Edit, Bash, Glob, Grep, and JS tools over stdio.",
+  "author": "io.github.hadriangateway",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/hadriangateway/platter",
+    "repo": "hadriangateway/platter"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/hadriangateway/platter/releases/download/v2.0.3/platter-linux-x64.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-09T13:20:32.14636Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

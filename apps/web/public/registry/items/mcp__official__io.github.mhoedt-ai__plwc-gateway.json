@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.mhoedt-ai/plwc-gateway",
+  "type": "mcp",
+  "name": "PLwC - Personality Layer with Conscience",
+  "description": "Governed local MCP gateway for workspace, sandbox, document and profile operations.",
+  "author": "io.github.mhoedt-ai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mhoedt-ai/PLwC",
+    "repo": "mhoedt-ai/PLwC"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/mhoedt-ai/PLwC/releases/download/v0.2.0-rc18.dev9/plwc-gateway-0.2.0-rc18.dev9.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-13T11:03:56.536484Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

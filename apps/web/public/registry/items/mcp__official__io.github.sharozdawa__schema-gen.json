@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.sharozdawa/schema-gen",
+  "type": "mcp",
+  "name": "schema-gen",
+  "description": "Generate Schema.org JSON-LD markup for 12 types including Person, Product, and FAQ.",
+  "author": "io.github.sharozdawa",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/sharozdawa/schema-gen",
+    "repo": "sharozdawa/schema-gen"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "schema-gen-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-21T12:05:32.709098Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

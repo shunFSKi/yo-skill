@@ -1,0 +1,73 @@
+{
+  "id": "mcp:official/io.github.gentaArnezzi/mcpsentinel",
+  "type": "mcp",
+  "name": "MCPSentinel",
+  "description": "Precision-first security scanning for Model Context Protocol servers.",
+  "author": "io.github.gentaArnezzi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/gentaArnezzi/MCPSentinel",
+    "repo": "gentaArnezzi/MCPSentinel"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-guardian-scan"
+    ],
+    "env": [
+      {
+        "name": "MCPSENTINEL_ALLOWED_HOSTS",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "MCPSENTINEL_ALLOW_PRIVATE_HTTP_TARGETS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCPSENTINEL_MCP_APPROVE_BASELINE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T04:41:16.297004Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "<!-- mcp-name: io.github.gentaArnezzi/mcpsentinel -->\n\n# MCPSentinel\n\n<div align=\"center\">\n\n<pre>\n+----------------------------------------------------------------+\n|                          MCPSENTINEL                           |\n|       Security review for Model Context Protocol servers        |\n|                     Read-only by default                       |\n+----------------------------------------------------------------+\n</pre>\n\n<p><strong>Discover MCP metadata. Triage suspicious intent. Review changes before you trust them.</strong></p>\n\n[![CI](https://github.com/gentaArnezzi/MCPSentinel/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/gentaArnezzi/MCPSentinel/actions/workflows/ci.yml)\n[![PyPI](https://img.shields.io/pypi/v/mcp-guardian-scan?label=PyPI)](https://pypi.org/project/mcp-guardian-scan/)\n[![Python](https://img.shields.io/pypi/pyversions/mcp-guardian-scan)](https://pypi.org/project/mcp-guardian-scan/)\n[![License](https://img.shields.io/github/license/gentaArnezzi/MCPSentinel)](LICENSE)\n[![MCP Registry](https://img.shields.io/badge/MCP%20Registry-listed-6A5ACD)](https://registry.modelcontextprotocol.io/)\n[![GitHub Action](https://img.shields.io/badge/GitHub%20Action-ready-2088FF?logo=githubactions)](https://github.com/gentaArnezzi/MCPSentinel)\n\n</div>\n\nMCPSentinel is a precision-first security scanner for [Model Context Protocol](https://modelcontextprotocol.io/) servers. It treats a static rule hit as a candidate, then applies semantic intent analysis before reporting it. This keeps the fast coverage of pattern matching without making every normal-looking `fetch` or `delete` tool a noisy vulnerability.\n\n## Start in 60 seconds\n\n```bash\npython -m pip install mcp-guardian-scan\nmcpsentinel                    # safe, no-write onboarding\nmcpsentinel scan http://localhost:8000/mcp\n```\n\nThe first command you see is deliberately friendly and branded, while scan output stays free of decorative text when you select `json` or `sarif` for automation:\n\n```text\n$ mcpsentinel\n+----------------------------------------------------------------+\n|                          MCPSENTINEL                           |\n|       Security review for Model Context Protocol servers        |\n|                     Read-only by default                       |\n+----------------------------------------------------------------+\n\nWelcome to MCPSentinel 0.2.2\n\n1. Run your first offline scan:\n   mcpsentinel scan http://localhost:8000/mcp\n\n2. Save CI-friendly output and fail on high-severity findings:\n   mcpsentinel scan http://localhost:8000/mcp --format sarif --output results.sarif --fail-on high\n```\n\n| I want to… | Start here |\n| --- | --- |\n| inspect one local or remote server | [Scan a server](#scan-a-server) |\n| add a review gate to CI | [GitHub Action](#github-action) |\n| expose scanning to an AI client | [MCP-native scanner](#mcp-native-scanner) |\n| run it in a container | [Container image](#container-image) |\n| understand scope and limits | [What MCPSentinel can—and cannot—tell you](#what-mcpsentinel-canand-cannot-tell-you) |\n\n### The review loop\n\n```text\ndiscover metadata  ->  static candidates  ->  semantic triage  ->  human review\n                                                                        |\n                                                                        v\n                                                        explicitly approve baseline\n```\n\n## What you get\n\n- MCP discovery over stdio and Streamable HTTP\n- configurable static pattern rules for tool, prompt, and resource descriptors, including tool poisoning, shadowing, cross-server, and OAuth confused-deputy signals\n- semantic triage: offline heuristic by default, optional OpenAI structured-output judge with bounded fallback\n- explicit baseline approval and rug-pull definition diffs\n- terminal, JSON, SARIF, and self-contained HTML risk reports\n- allow/deny policy configuration\n- explicit, Docker-sandboxed owned-tool validation with no network egress\n- GitHub Action and MCP-native scanner interfaces\n\nStatic scans are metadata-only. Dynamic invocation is a separate opt-in path described below and never runs from the GitHub Action or MCP-native server.\n\n## Install and onboard\n\nInstall the published package, then use the MCPSentinel CLI:\n\n```bash\npython -m pip install mcp-guardian-scan\nmcpsentinel\n```\n\nRunning `mcpsentinel` with no command starts a short, no-write terminal\nonboarding guide. It explains the read-only scan model, gives a copy-pasteable\nfirst scan, and keeps OpenAI optional. Use `mcpsentinel onboard` (or the alias\n`mcpsentinel init`) to show it again, or tailor the suggested command without\ncontacting a server:\n\n```bash\nmcpsentinel onboard --target https://mcp.example.com/mcp\nmcpsentinel onboard --target \"python -m example_mcp_server\" --transport stdio\n```\n\nThe onboarding flow never asks for, stores, or transmits an API key. Use\n`mcpsentinel --help` or `mcpsentinel scan --help` for the complete reference.\n\nFor development from source:\n\n```bash\npython -m venv .venv\n. .venv/bin/activate\npython -m pip install -e '.[dev]'\n```\n\n## Scan a server\n\nFor a Streamable HTTP server:\n\n```bash\nmcpsentinel scan http://localhost:8000/mcp\n```\n\nFor a stdio server, quote its command as the target:\n\n```bash\nmcpsentinel scan \"python -m example_mcp_server\" --transport stdio\n```\n\nOr keep the executable and arguments separate. Arguments beginning with a dash need the `--arg=value` form:\n\n```bash\nmcpsentinel scan python --transport stdio --arg=-m --arg=example_mcp_server\n```\n\nUseful options:\n\n```bash\n# Machine-readable report and CI failure gate\nmcpsentinel scan http://localhost:8000/mcp --format sarif --output results.sarif --fail-on high\n\n# Visual portfolio-ready report\nmcpsentinel scan http://localhost:8000/mcp --format html --output risk-report.html\n\n# Use OpenAI's structured-output semantic judge (OPENAI_API_KEY is required)\nmcpsentinel scan http://localhost:8000/mcp --judge openai --judge-model gpt-4o-mini\n\n# Use a repository-local directory for reviewed baseline snapshots\nmcpsentinel scan http://localhost:8000/mcp --baseline-dir .mcpsentinel/baselines\n\n# Create or replace a baseline only after reviewing the report\nmcpsentinel scan http://localhost:8000/mcp --baseline-dir .mcpsentinel/baselines --approve-baseline\n```\n\nBaseline snapshots are kept in `~/.mcpsentinel/baselines` by default, but are **never updated by an ordinary scan**. A changed, added, or removed descriptor is surfaced as an `MCP-B001` rug-pull review finding while the prior approved snapshot is preserved. Review the report, then use `--approve-baseline` deliberately to create or replace the snapshot. This prevents an unattended scan from silently accepting a rug-pull change.\n\nThe first scan reports that no approved baseline exists. That is an onboarding state, not a vulnerability finding. Establish a baseline only from a server version and environment you trust.\n\nThe risk score is a capped 0–100 weighted sum of severity and semantic confidence. It is a prioritization signal, not a claim that the server is safe or unsafe in isolation.\n\n## Semantic judges\n\n`--judge heuristic` is the default and is fully offline. `--judge openai` requires `OPENAI_API_KEY`; `--judge auto` opts into using OpenAI when that key is present, otherwise it uses the heuristic. The OpenAI judge uses the Python SDK's Responses structured-output API, so an API response cannot bypass the scanner's expected verdict schema. Results are cached by descriptor hash and judge identity in the baseline directory to avoid repeat API charges.\n\nEach OpenAI judgement uses a 30-second client deadline and at most two SDK retries. Before an OpenAI request, MCPSentinel redacts common API keys, bearer credentials, private keys, and secret-valued JSON fields; prompts are capped at 12,000 characters. Redaction is defense-in-depth, not a guarantee that arbitrary sensitive metadata is safe to send. Choose `heuristic` when metadata must remain local.\n\nIf `--judge auto` encounters an OpenAI outage or malformed response, the scan completes with the offline heuristic and emits a visible report note; a fallback verdict is not cached as an OpenAI verdict. `--judge openai` remains strict and fails rather than silently changing the configured provider.\n\nThe semantic threshold defaults to `0.70`. Candidate findings below it are withheld from the report; lower it only when you prefer recall over precision.\n\n## Custom static rules\n\nPass `--rules path/to/rules.json` to add rule objects to the built-in rules. Each rule has this shape:\n\n```json\n{\n  \"id\": \"ORG001\",\n  \"title\": \"Example organization policy\",\n  \"category\": \"tool_poisoning\",\n  \"severity\": \"high\",\n  \"description\": \"Why this candidate deserves semantic review.\",\n  \"patterns\": [\"(?i)example pattern\"],\n  \"fields\": [\"description\", \"schema\"]\n}\n```\n\nSupported categories are `prompt_injection`, `tool_poisoning`, `tool_shadowing`, `ssrf`, `secret_exfiltration`, `command_execution`, `destructive_operation`, `cross_server_attack`, `oauth_confused_deputy`, and `rug_pull`.\n\n## Policy configuration\n\n`--policy path/to/policy.json` supplies organization-specific allow/deny controls. An allow selector suppresses matching static candidates; a deny selector emits a policy-enforced finding without relying on the semantic judge. Selectors can be rule IDs or objects scoped to a tool-name regex.\n\n```json\n{\n  \"allow\": [{\"rule_id\": \"MCP003\", \"subject_pattern\": \"^controlled_fetch$\"}],\n  \"deny\": [\"MCP002\"],\n  \"semantic_threshold\": 0.75\n}\n```\n\nSee [examples/policy.json](examples/policy.json) for a complete file. Keep policy files under source control and review changes as security-sensitive configuration.\n\n## Dynamic Docker validation\n\nDynamic testing is intentionally opt-in and limited to a server you own or a local test fixture. It requires an explicit acknowledgement, a pre-built local image, an explicit high-confidence tool name, and JSON arguments. The runner creates a fresh Docker container with no network, no host mounts, a read-only root filesystem, dropped capabilities, an unprivileged user, resource limits, and a call timeout. It never forwards the scan process environment into the container.\n\n```bash\nmcpsentinel scan \"python -m my_server\" --transport stdio \\\n  --dynamic --i-own-this-target \\\n  --dynamic-image my-mcp-server:test \\\n  --dynamic-entrypoint \"python -m my_server\" \\\n  --dynamic-invoke 'unsafe_tool={\"fixture\": true}'\n```\n\nThe dynamic server image must already exist locally; MCPSentinel uses `--pull=never`. Docker is not needed for normal metadata scans. A dynamic response is retained only as a SHA-256 digest and content-type summary. If it resembles credential material, MCPSentinel reports `MCP-D001` without writing the response text to disk.\n\nThe repository includes a deliberately local-only Docker fixture to verify this boundary end to end. It is excluded from the normal test suite because it needs a running Docker daemon and builds an image:\n\n```bash\nMCPSENTINEL_RUN_DOCKER_TESTS=1 pytest tests/test_dynamic_docker_e2e.py\n```\n\n## GitHub Action\n\nThe repository root is a composite GitHub Action. It installs MCPSentinel, restores a scoped baseline cache, emits SARIF, and fails at the selected severity. It does not enable dynamic testing. Reference a release tag from another repository; pinning a full commit SHA is recommended for stricter supply-chain controls.\n\n```yaml\n- uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5\n- uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5\n  with:\n    python-version: \"3.12\"\n- uses: gentaArnezzi/MCPSentinel@v0.2.2\n  id: mcpsentinel\n  with:\n    target: https://mcp.example.com/mcp\n    transport: http\n    fail-on: high\n    policy: .mcpsentinel/policy.json\n- uses: github/codeql-action/upload-sarif@d6317709a54fd87078d323eeb0e48ec331c8e621 # v3\n  with:\n    sarif_file: ${{ steps.mcpsentinel.outputs.sarif }}\n```\n\nAction scans preserve an approved baseline by default. Use `approve-basel\n\n…",
+  "status": "curated"
+}

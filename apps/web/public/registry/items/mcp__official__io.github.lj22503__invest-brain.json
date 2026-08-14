@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.lj22503/invest-brain",
+  "type": "mcp",
+  "name": "invest-brain",
+  "description": "A-share investment research: quotes, financials, behavior patterns, and trading journals.",
+  "author": "io.github.lj22503",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/lj22503/invest-brain",
+    "repo": "lj22503/invest-brain"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/lj22503/invest-brain/releases/download/v0.1.1/invest-brain.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-29T07:13:01.215253Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

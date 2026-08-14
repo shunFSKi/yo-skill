@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.TheRoboMaster123/mcp-fea",
+  "type": "mcp",
+  "name": "FEA (finite element analysis)",
+  "description": "Real FEA on CAD parts: validated setups, stress, safety factor, natural frequencies",
+  "author": "io.github.TheRoboMaster123",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/TheRoboMaster123/mcp-fea",
+    "repo": "TheRoboMaster123/mcp-fea"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://therobomaster123--mcp-fea-mcp-endpoint.modal.run/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-31T17:44:35.646675Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

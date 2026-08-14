@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.finn.www/auto",
+  "type": "mcp",
+  "name": "FINN Auto - Car Subscription",
+  "description": "Search and browse cars for all-inclusive subscription on FINN. Prices, specs, and checkout links.",
+  "author": "com.finn.www",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/finn-auto/finn-auto-ui-frontend",
+    "repo": "finn-auto/finn-auto-ui-frontend"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://www.finn.com/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-13T15:30:15.555263Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

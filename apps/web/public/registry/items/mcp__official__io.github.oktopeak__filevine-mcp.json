@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.oktopeak/filevine-mcp",
+  "type": "mcp",
+  "name": "filevine-mcp",
+  "description": "Open-source MCP server connecting Claude to Filevine practice management. Built by Oktopeak.",
+  "author": "io.github.oktopeak",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/oktopeak/filevine-mcp",
+    "repo": "oktopeak/filevine-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@oktopeak/filevine-mcp"
+    ],
+    "env": [
+      {
+        "name": "FILEVINE_CLIENT_ID",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "FILEVINE_CLIENT_SECRET",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "FILEVINE_PAT",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "FILEVINE_REGION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ENCRYPTION_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-05T20:44:49.58273Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

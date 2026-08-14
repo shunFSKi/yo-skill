@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.theagoralabs/theagora",
+  "type": "mcp",
+  "name": "theagora",
+  "description": "AI agent marketplace. 27 tools for buying and selling services with atomic escrow.",
+  "author": "io.github.theagoralabs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/theagoralabs/theagora",
+    "repo": "theagoralabs/theagora"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@theagora/mcp"
+    ],
+    "env": [
+      {
+        "name": "THEAGORA_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-21T02:10:23.114281Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

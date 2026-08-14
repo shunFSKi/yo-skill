@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.shingou/sentiment",
+  "type": "mcp",
+  "name": "Shingou",
+  "description": "Hourly crypto news sentiment and typed market events, with sources on every signal.",
+  "author": "io.shingou",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://api.shingou.io/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@shingou-io/mcp-stdio"
+    ],
+    "env": [
+      {
+        "name": "SHINGOU_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-02T12:30:02.149705Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

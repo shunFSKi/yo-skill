@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.subsquid-labs/portal-mcp-server",
+  "type": "mcp",
+  "name": "SQD Portal",
+  "description": "Query onchain data across EVM, Solana, Bitcoin, Substrate, and Hyperliquid via the SQD Portal API.",
+  "author": "io.github.subsquid-labs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/subsquid-labs/portal-mcp-server",
+    "repo": "subsquid-labs/portal-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://portal.sqd.dev/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-24T07:40:51.191252Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

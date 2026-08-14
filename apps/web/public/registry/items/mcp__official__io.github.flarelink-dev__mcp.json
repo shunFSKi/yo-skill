@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.flarelink-dev/mcp",
+  "type": "mcp",
+  "name": "Flarelink",
+  "description": "Build on the Flarelink stack — Cloudflare auth, D1, and R2 — from your AI coding tools.",
+  "author": "io.github.flarelink-dev",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/flarelink-dev/mcp",
+    "repo": "flarelink-dev/mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@flarelink/mcp"
+    ],
+    "env": [
+      {
+        "name": "FLARELINK_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-17T21:44:29.275855Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

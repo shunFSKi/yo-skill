@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.donotact/donotact",
+  "type": "mcp",
+  "name": "Do Not Act",
+  "description": "Fail-closed guard clause for prediction-market agents before trade().",
+  "author": "com.donotact",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/aionathenea-eng/athenea-apex",
+    "repo": "aionathenea-eng/athenea-apex"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://donotact.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-28T12:39:14.438954Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

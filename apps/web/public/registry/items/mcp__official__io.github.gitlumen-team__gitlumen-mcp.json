@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.gitlumen-team/gitlumen-mcp",
+  "type": "mcp",
+  "name": "GitLumen MCP",
+  "description": "Screens public GitHub repos and PRs to generate risk maps, findings, and merge-readiness signals.",
+  "author": "io.github.gitlumen-team",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/gitlumen-team/gitlumen-mcp",
+    "repo": "gitlumen-team/gitlumen-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp-github-screen.gitlumen.com/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-07T16:50:11.144573Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

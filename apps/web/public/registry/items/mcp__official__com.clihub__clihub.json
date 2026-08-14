@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/com.clihub/clihub",
+  "type": "mcp",
+  "name": "clihub",
+  "description": "Convert any CLI binary to an MCP server via `ch mcp wrap`; discover CLI tools & recipes.",
+  "author": "com.clihub",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers/com.clihub%2Fclihub",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@clihub/cli"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-03T12:26:47.528225Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

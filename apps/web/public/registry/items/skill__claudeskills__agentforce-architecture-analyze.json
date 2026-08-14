@@ -1,0 +1,52 @@
+{
+  "id": "skill:claudeskills/agentforce-architecture-analyze",
+  "type": "skill",
+  "name": "agentforce-architecture-analyze",
+  "description": "Declared architecture snapshot for one Agentforce agent: planner, topics, actions, flows, Apex, prompt templates, and NGA plugins. Renders a human-readable architecture document and Mermaid invocation graph from design-time metadata (not runtime audit rows). TRIGGER when user asks to describe, diagram, inventory, audit, document, or diff (e.g. v3 vs v5) the architecture / action tree / topic structure / tool inventory of a specific agent by agent API name in a specific org. DO NOT TRIGGER for ru",
+  "author": "forcedotcom",
+  "source": {
+    "registry": "claudeskills",
+    "url": "https://github.com/forcedotcom/sf-skills",
+    "repo": "forcedotcom/sf-skills"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 302,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": "# Salesforce Skills Library\n\nThis repository provides a curated collection of Salesforce agent skills for building applications. It includes skills for Agentforce agents, Lightning apps, Flow, Apex, SOQL, Lightning Web Components (LWC), UI bundles, objects and fields, permission sets, and related areas.\n\nThe skills are contributed by Salesforce and the broader community. It’s optimized for Agentforce Vibes and can be used with any AI tool that supports skills.\n\n> ⚠️ **Expect frequent changes.** The Salesforce skills library is evolving rapidly as we refine patterns and incorporate feedback. Skills may be renamed, restructured, or removed between releases — they do not follow the same stability guarantees as GA platform APIs. If you’ve forked or synced the repository, be prepared for upstream changes that may conflict with local modifications. This repository is always the source of truth.\n\n## 🗂️ Structure\n\n```\nsf-skills/\n├── skills/               # Directory-based executable workflows\n│   ├── platform-apex-generate/\n│   ├── platform-custom-object-generate/\n│   ├── automation-flow-generate/\n│   └── ...\n├── samples/              # Synced sample apps (e.g. from npm)\n│   └── ui-bundle-template-app-react-sample-b2e/\n│   └── ...\n├── scripts/\n│   └── ...\n└── README.md\n```\n\n## 🚀 Usage\n\n| **Tool** | **Usage** |\n|----------|-------------|\n| **Agentforce Vibes** | Skills are auto-installed and auto-updated |\n| **OpenCode, Claude Code, Codex, Cursor, [more](https://agentskills.io/)** | `npx skills add forcedotcom/sf-skills` |\n\n## 📦 Samples\n\nThe `samples/` folder contains synced sample apps. For example, `samples/ui-bundle-template-app-react-sample-b2e/` tracks the npm package `@salesforce/ui-bundle-template-app-react-sample-b2e` (nightly and on manual trigger via GitHub Actions). \n\nTo run the same sync locally from the repository root: \n\n```bash\nnpm install\nnpm run sync-react-b2e-sample\n```\n\nThe GitHub Action runs the same commands and opens a pull request when the npm package version changes. For more information, see [samples/README.md](samples/README.md).\n\n## 🛠️ Agent Skills\n\nAgent Skills package executable workflows, scripts, and reference material into self-contained directories. This repository follows the open [Agent Skills specification](https://agentskills.io/) and can be used with OpenCode, Claude Code, Codex, Cursor, and other tools that support skills.\n\n### Directory Structure\n\nEach skill is a folder that can include:\n- `SKILL.md` (required): Instructions and YAML front matter.\n- `scripts/` (optional): Executable scripts (For example, Python, Bash, or JavaScript).\n- `references/` (optional): Extra reference documentation.\n- `assets/` (optional): Templates, schemas, and lookup data\n\n## 🤝 Contributing\n\nSee [Contributing](./CONTRIBUTING.md).\n\n## 💬 Feedback\n\n- Open an issue in this repository\n- Open a pull request with suggested changes\n- Use GitHub Discussions or the pull request thread for broader conversation\n\n## Project Governance & Support\n\n- [License](./LICENSE.txt)\n- [Code of Conduct](./CODE_OF_CONDUCT.md)\n- [Contributing](./CONTRIBUTING.md)\n- [Security](./SECURITY.md)\n",
+  "status": "curated"
+}

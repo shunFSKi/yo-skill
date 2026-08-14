@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.Samarth-23-eng/india-mcp",
+  "type": "mcp",
+  "name": "india-mcp",
+  "description": "MCP servers for Indian APIs including stocks, GST, railways, banking, and RTO.",
+  "author": "io.github.Samarth-23-eng",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Samarth-23-eng/India-MCP",
+    "repo": "Samarth-23-eng/India-MCP"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@samarth-23-eng/india-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-06T06:34:44.667072Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

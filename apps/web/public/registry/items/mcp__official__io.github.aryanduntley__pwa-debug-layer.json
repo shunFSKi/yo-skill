@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.aryanduntley/pwa-debug-layer",
+  "type": "mcp",
+  "name": "PWA Debug Layer",
+  "description": "Debug PWAs in your real browser via MCP: service-worker, cache, installability & framework state.",
+  "author": "io.github.aryanduntley",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/aryanduntley/pwa-debug-layer",
+    "repo": "aryanduntley/pwa-debug-layer"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@aryanduntley/pwa-debug"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-26T01:03:48.466387Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

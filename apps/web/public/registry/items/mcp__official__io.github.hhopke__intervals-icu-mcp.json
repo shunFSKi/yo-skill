@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.hhopke/intervals-icu-mcp",
+  "type": "mcp",
+  "name": "intervals-icu-mcp",
+  "description": "Read/write Intervals.icu MCP server: activities, wellness, calendar, gear, and workouts.",
+  "author": "io.github.hhopke",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/hhopke/intervals-icu-mcp",
+    "repo": "hhopke/intervals-icu-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "intervals-icu-mcp"
+    ],
+    "env": [
+      {
+        "name": "INTERVALS_ICU_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "INTERVALS_ICU_ATHLETE_ID",
+        "required": true,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-31T06:47:24.790123Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

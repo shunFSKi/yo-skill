@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/dev.workers.cronping-oren.cronping/heartbeat-monitor",
+  "type": "mcp",
+  "name": "heartbeat-monitor",
+  "description": "Uptime watchdog and dead man switch for AI agents and cron jobs. Alerts you when a job goes silent.",
+  "author": "dev.workers.cronping-oren.cronping",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://cronping.cronping-oren.workers.dev/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://cronping.cronping-oren.workers.dev/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-05T13:18:21.762255Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

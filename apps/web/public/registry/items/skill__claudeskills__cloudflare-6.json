@@ -1,0 +1,52 @@
+{
+  "id": "skill:claudeskills/cloudflare-6",
+  "type": "skill",
+  "name": "cloudflare",
+  "description": "Self-contained deploy automation — invoke directly, do not decompose. Deploys a Vibes app to Cloudflare Workers via the Deploy API. Use when deploying, publishing, going live, pushing to production, or hosting on the edge.",
+  "author": "popmechanic",
+  "source": {
+    "registry": "claudeskills",
+    "url": "https://github.com/popmechanic/VibesOS",
+    "repo": "popmechanic/VibesOS"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 120,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "# VibesOS - a GUI for Claude Code that makes unhackable mini-apps\n\n![Vibes](assets/vibes.png)\n\nInstantly make your own small multi-user apps, without a backend. For apps made with Vibes, the front-end _is_ the app.\n\n## What is Vibes?\n\nVibes is a vibe coding framework made for coding agents. It collapses application code and application state into a single HTML file that runs anywhere.\n\n**Why does this matter?** AI doesn't make apps - it makes *text*. By embedding the database in JavaScript (via [TinyBase](https://tinybase.org)), your coding agent can describe an entire app - including its persistence layer - in one shot. No server setup, no schema imports. Just a working app.\n\nYour data lives locally in the browser, encrypted and portable. It syncs across users automatically. Share your creations with a simple link and friends can jump in immediately.\n\n## Installation\n\n[MacOS users can download the desktop app](https://install.vibesos.com/).\n\nIf you want to run it as a plugin, register the marketplace first:\n\n```\n/plugin marketplace add popmechanic/VibesOS\n```\n\nThen install the plugin:\n\n```\n/plugin install vibes@VibesOS\n```\n\nRestart Claude Code after installation.\n\n## Plugin Quick Start\n\nAfter installation, open Claude Code and enter /launch, then choose the Editor option. Claude will then open a web GUI designed to help you produce secure, vibe coded apps. \n\n![Vibes Editor](assets/GUI.png)\n\nIt's still Claude Code under the hood, we just help you with a nice user interface. Use the GUI to turn your ideas into simple deployable multiplayer apps that don't require a server. (So you don't have to be a Linux genius to run a great app.)\n\n\n## Skills\n\nSkills are **model-invoked** - Claude automatically uses them when your task matches the skill's purpose. Just describe what you want to build.\n\n### `vibes`\n\nGenerate a complete, working app from a prompt. Perfect when you have a clear idea and want to see it working quickly.\n\nCreates a single HTML file with inline JavaScript, TinyBase for local-first reactive data, and Tailwind CSS styling. No build step - just open and run.\n\n**Example prompts:**\n- \"Make a chore chart for my roommates\"\n- \"Build a potluck sign-up for Friendsgiving\"\n- \"Create a trivia game about reality TV\"\n\n\n## Commands\n\nCommands are **user-invoked** — run them explicitly when you want a specific skill.\n\n| Command | What it does |\n|---------|-------------|\n| `/vibes` | Generate a React web app with TinyBase |\n| `/launch` | Build and deploy a SaaS app end-to-end using Agent Teams |\n\n## Why Vibes?\n\nEvery vibe-coded project starts in the vibe zone - the AI understands you, progress is fast, each change moves the app forward.\n\nThen something small goes wrong. A fix that mostly works. An edge case layered on top. You correct it, then correct the correction, and suddenly progress slows to a crawl.\n\nYou've drifted out of the vibe zone.\n\n![Vibe Zone](assets/vibezone.png)\n\n**Vibes OS keeps things simple enough that you stay in the vibe zone.** Single-file apps. Local-first data. No server complexity. The AI can see and understand everything it needs to help you.\n\n## How Data Works\n\nVibes apps use [TinyBase](https://tinybase.org), a reactive data store for local-first apps:\n\n- **Offline-first**: Apps work without internet, sync when connected\n- **Reactive**: Automatic re-rendering when data changes via React hooks\n- **Shareable**: Real-time sync across users via WebSocket relay\n- **Portable**: Simple table/row data model, easy to export\n\nThe hidden settings menu (gear icon) lets you configure sync for collaboration.\n\n### The Constraint Is the Feature\n\nYou cannot run global queries across all tenants. Some ideas won't fit. This is groupware—tools for communities, not platforms that own them. No one can be Zuckerberg over a Vibes app. That's the point.\n\n## We live on Github Stars, please donate yours \n\n<a href=\"https://www.star-history.com/?repos=popmechanic%2FVibesOS&type=date&legend=top-left\">\n <picture>\n   <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://api.star-history.com/chart?repos=popmechanic/VibesOS&type=date&theme=dark&legend=top-left\" />\n   <source media=\"(prefers-color-scheme: light)\" srcset=\"https://api.star-history.com/chart?repos=popmechanic/VibesOS&type=date&legend=top-left\" />\n   <img alt=\"Star History Chart\" src=\"https://api.star-history.com/chart?repos=popmechanic/VibesOS&type=date&legend=top-left\" />\n </picture>\n</a>\n\n## License\n\nMIT\n",
+  "status": "curated"
+}

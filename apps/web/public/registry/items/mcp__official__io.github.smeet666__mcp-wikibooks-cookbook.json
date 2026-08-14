@@ -1,0 +1,94 @@
+{
+  "id": "mcp:official/io.github.smeet666/mcp-wikibooks-cookbook",
+  "type": "mcp",
+  "name": "mcp-wikibooks-cookbook",
+  "description": "Search the Wikibooks Cookbook, read a recipe and rescale it to any number of servings.",
+  "author": "io.github.smeet666",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/smeet666/mcp-wikibooks-cookbook",
+    "repo": "smeet666/mcp-wikibooks-cookbook"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-wikibooks-cookbook"
+    ],
+    "env": [
+      {
+        "name": "WB_USER_AGENT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WB_MIN_INTERVAL_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WB_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WB_MAX_RETRIES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WB_CACHE_TTL_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WB_CACHE_MAX_ENTRIES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WB_LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-09T17:46:25.388271Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

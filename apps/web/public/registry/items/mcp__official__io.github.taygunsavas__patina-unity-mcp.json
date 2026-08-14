@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.taygunsavas/patina-unity-mcp",
+  "type": "mcp",
+  "name": "Patina Unity MCP",
+  "description": "Control the Unity Editor from MCP hosts through a local Rust server and C# Unity bridge.",
+  "author": "io.github.taygunsavas",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/taygunsavas/patina-unity-mcp",
+    "repo": "taygunsavas/patina-unity-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "com.taygunsavas.patina-unity-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T14:04:30.411532Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

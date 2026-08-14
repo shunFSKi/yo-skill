@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.HurleySk/can-see",
+  "type": "mcp",
+  "name": "can-see",
+  "description": "Let AI agents see and interact with terminal/CLI apps via PNG screenshots",
+  "author": "io.github.HurleySk",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/HurleySk/can-see",
+    "repo": "HurleySk/can-see"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "can-see"
+    ],
+    "env": [
+      {
+        "name": "DEFAULT_COLS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DEFAULT_ROWS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "IDLE_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-15T13:23:19.637238Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.neonia/cloud-backend",
+  "type": "mcp",
+  "name": "Neonia: The Cloud Backend for AI Agents",
+  "description": "Multiple MCP tools, persistent graph memory, token-saving data pointers, and more.",
+  "author": "io.neonia",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Neonia-io/agent-mcp-examples",
+    "repo": "Neonia-io/agent-mcp-examples"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.neonia.io/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-15T01:05:51.393743Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

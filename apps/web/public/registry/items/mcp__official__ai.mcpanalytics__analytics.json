@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/ai.mcpanalytics/analytics",
+  "type": "mcp",
+  "name": "analytics",
+  "description": "The statistical analyst in your AI chat — validated, citable, re-runnable analysis of your data.",
+  "author": "ai.mcpanalytics",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/embeddedlayers/mcp-analytics",
+    "repo": "embeddedlayers/mcp-analytics"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.mcpanalytics.ai/auth0"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-02T00:11:13.986183Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

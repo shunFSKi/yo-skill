@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.Jbelieve/maasy",
+  "type": "mcp",
+  "name": "Maasy — AI Marketing Copilot",
+  "description": "AI marketing copilot: brand intelligence, campaigns, content, CRM, SEO, and skills for Claude.",
+  "author": "io.github.Jbelieve",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Jbelieve/mcp-server",
+    "repo": "Jbelieve/mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@maasy-ai/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "MAASY_SUPABASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MAASY_API_KEY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MAASY_PROJECT_ID",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-16T08:11:47.681215Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

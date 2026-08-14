@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.dbsectrainer/mcp-cost-tracker-router",
+  "type": "mcp",
+  "name": "mcp-cost-tracker-router",
+  "description": "Real-time cost awareness for MCP agent workflows",
+  "author": "io.github.dbsectrainer",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dbsectrainer/mcp-cost-tracker-router",
+    "repo": "dbsectrainer/mcp-cost-tracker-router"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-cost-tracker-router"
+    ],
+    "env": [
+      {
+        "name": "YOUR_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-23T20:09:42.364997Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

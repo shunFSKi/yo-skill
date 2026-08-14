@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.CSOAI-ORG/tax-calculator-ai-mcp",
+  "type": "mcp",
+  "name": "tax-calculator-ai-mcp",
+  "description": "AI-powered tax calculator ai MCP server for agents. Supports calculate income tax, calculate vat",
+  "author": "io.github.CSOAI-ORG",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/CSOAI-ORG/tax-calculator-ai-mcp",
+    "repo": "CSOAI-ORG/tax-calculator-ai-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "tax-calculator-ai-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-10T04:56:59.751757Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.Steveser1989/opc-mcp-server",
+  "type": "mcp",
+  "name": "opc-mcp-server",
+  "description": "OPC Suite — CRM, sales, inventory, accounting, HRM, payroll, claims, projects from any AI agent.",
+  "author": "io.github.Steveser1989",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Steveser1989/Main-MY-OPC-System",
+    "repo": "Steveser1989/Main-MY-OPC-System"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@tsa-ai/opc-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "OPC_API_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "OPC_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OPC_AGENT_KIND",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-29T16:41:55.733343Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.ashfordeOU/kshana-mcp",
+  "type": "mcp",
+  "name": "Kshana PNT-resilience simulator",
+  "description": "Run the validated Kshana PNT-resilience simulator (orbits, frames, GNSS, fusion) from an AI agent.",
+  "author": "io.github.ashfordeOU",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/AshfordeOU/kshana",
+    "repo": "AshfordeOU/kshana"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/ashfordeou/kshana-mcp:0.25.0"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-16T22:10:22.076683Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

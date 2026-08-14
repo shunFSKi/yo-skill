@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.blueticked/blueticked",
+  "type": "mcp",
+  "name": "blueticked",
+  "description": "Send WhatsApp, SMS and email for South African businesses: contacts, campaigns, templates, webhooks",
+  "author": "com.blueticked",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://app.blueticked.com/api/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://app.blueticked.com/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-09T21:54:26.765428Z"
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

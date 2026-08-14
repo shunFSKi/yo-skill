@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.gejyn14/kiwoom-mcp",
+  "type": "mcp",
+  "name": "kiwoom-mcp",
+  "description": "Kiwoom Securities REST API for Korean markets — 236 endpoints, streaming, gated order execution",
+  "author": "io.github.gejyn14",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/gejyn14/kiwoom-plugin",
+    "repo": "gejyn14/kiwoom-plugin"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "kiwoom-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-22T04:33:17.842047Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

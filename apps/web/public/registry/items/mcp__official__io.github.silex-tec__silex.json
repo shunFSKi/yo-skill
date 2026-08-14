@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.silex-tec/silex",
+  "type": "mcp",
+  "name": "silex",
+  "description": "Local-first MCP server that reconstructs architecture, workflows and business rules from your code.",
+  "author": "io.github.silex-tec",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/silex-tec/silex",
+    "repo": "silex-tec/silex"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "silex-archaeology"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-16T05:18:47.377804Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.gateio-dev/gate-dex",
+  "type": "mcp",
+  "name": "Gate DEX MCP",
+  "description": "Gate DEX MCP for wallet auth, transfers, swaps, token info, market data, and RPC access.",
+  "author": "io.github.gateio-dev",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/gate/gate-mcp",
+    "repo": "gate/gate-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.gatemcp.ai/mcp/dex"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-16T08:27:42.499216Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

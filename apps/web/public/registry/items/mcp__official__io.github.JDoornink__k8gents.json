@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.JDoornink/k8gents",
+  "type": "mcp",
+  "name": "K8gentS — Kubernetes RCA MCP Server",
+  "description": "Kubernetes RCA agent that sandboxes its own AI with OPA Gatekeeper. MCP-ready for any client.",
+  "author": "io.github.JDoornink",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/JDoornink/K8gentS",
+    "repo": "JDoornink/K8gentS"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "docker.io/jdoornink/k8gents:0.1.1"
+    ],
+    "env": [
+      {
+        "name": "AI_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "AI_MODEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "KUBECONFIG",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-26T02:26:31.773174Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

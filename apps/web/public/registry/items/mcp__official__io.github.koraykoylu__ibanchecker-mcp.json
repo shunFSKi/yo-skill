@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.koraykoylu/ibanchecker-mcp",
+  "type": "mcp",
+  "name": "ibanchecker-mcp",
+  "description": "IBAN validation, extraction, format specs and BIC/SWIFT lookup tools for AI assistants.",
+  "author": "io.github.koraykoylu",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/koraykoylu/ibanchecker-mcp",
+    "repo": "koraykoylu/ibanchecker-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@ibanchecker/mcp"
+    ],
+    "env": [
+      {
+        "name": "IBANCHECKER_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-17T13:41:44.470497Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

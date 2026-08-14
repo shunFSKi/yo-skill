@@ -1,0 +1,723 @@
+{
+  "id": "mcp:official/io.github.alex-feel/mcp-context-server",
+  "type": "mcp",
+  "name": "mcp-context-server",
+  "description": "An MCP server that provides persistent multimodal context storage for LLM agents.",
+  "author": "io.github.alex-feel",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/alex-feel/mcp-context-server",
+    "repo": "alex-feel/mcp-context-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-context-server"
+    ],
+    "env": [
+      {
+        "name": "LOG_LEVEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "STORAGE_BACKEND",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MAX_IMAGE_SIZE_MB",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MAX_TOTAL_SIZE_MB",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DB_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "POOL_MAX_READERS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "POOL_MAX_WRITERS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "POOL_CONNECTION_TIMEOUT_S",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "POOL_IDLE_TIMEOUT_S",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "POOL_HEALTH_CHECK_INTERVAL_S",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RETRY_MAX_RETRIES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RETRY_BASE_DELAY_S",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RETRY_MAX_DELAY_S",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RETRY_JITTER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RETRY_BACKOFF_FACTOR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SQLITE_FOREIGN_KEYS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SQLITE_JOURNAL_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SQLITE_SYNCHRONOUS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SQLITE_TEMP_STORE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SQLITE_MMAP_SIZE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SQLITE_CACHE_SIZE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SQLITE_PAGE_SIZE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SQLITE_WAL_AUTOCHECKPOINT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SQLITE_BUSY_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SQLITE_WAL_CHECKPOINT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SHUTDOWN_TIMEOUT_S",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SHUTDOWN_TIMEOUT_TEST_S",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "QUEUE_TIMEOUT_S",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "QUEUE_TIMEOUT_TEST_S",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CIRCUIT_BREAKER_FAILURE_THRESHOLD",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CIRCUIT_BREAKER_RECOVERY_TIMEOUT_S",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CIRCUIT_BREAKER_HALF_OPEN_MAX_CALLS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "POSTGRESQL_CONNECTION_STRING",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "POSTGRESQL_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "POSTGRESQL_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "POSTGRESQL_USER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "POSTGRESQL_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "POSTGRESQL_DATABASE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "POSTGRESQL_POOL_MIN",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "POSTGRESQL_POOL_MAX",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "POSTGRESQL_POOL_TIMEOUT_S",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "POSTGRESQL_COMMAND_TIMEOUT_S",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "POSTGRESQL_MIGRATION_TIMEOUT_S",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "POSTGRESQL_MAX_INACTIVE_LIFETIME_S",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "POSTGRESQL_MAX_QUERIES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "POSTGRESQL_TCP_KEEPALIVES_IDLE_S",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "POSTGRESQL_TCP_KEEPALIVES_INTERVAL_S",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "POSTGRESQL_TCP_KEEPALIVES_COUNT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "POSTGRESQL_STATEMENT_CACHE_SIZE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "POSTGRESQL_MAX_CACHED_STATEMENT_LIFETIME_S",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "POSTGRESQL_MAX_CACHEABLE_STATEMENT_SIZE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "POSTGRESQL_SSL_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "POSTGRESQL_SCHEMA",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ENABLE_SEMANTIC_SEARCH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ENABLE_EMBEDDING_GENERATION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OLLAMA_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OLLAMA_AUTO_PULL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OLLAMA_PULL_TIMEOUT_S",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "EMBEDDING_OLLAMA_TRUNCATE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "EMBEDDING_OLLAMA_NUM_CTX",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "EMBEDDING_MODEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "EMBEDDING_DIM",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "EMBEDDING_TIMEOUT_S",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "EMBEDDING_RETRY_MAX_ATTEMPTS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "EMBEDDING_RETRY_BASE_DELAY_S",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "EMBEDDING_MAX_CONCURRENT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ENABLE_SUMMARY_GENERATION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SUMMARY_PROVIDER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SUMMARY_MODEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SUMMARY_MAX_TOKENS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SUMMARY_TIMEOUT_S",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SUMMARY_RETRY_MAX_ATTEMPTS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SUMMARY_RETRY_BASE_DELAY_S",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SUMMARY_MAX_CONCURRENT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SUMMARY_PROMPT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SUMMARY_MIN_CONTENT_LENGTH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SUMMARY_OLLAMA_NUM_CTX",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SUMMARY_OLLAMA_TRUNCATE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SUMMARY_OPENAI_REASONING_EFFORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SUMMARY_ANTHROPIC_EFFORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ANTHROPIC_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ENABLE_FTS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "FTS_LANGUAGE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "FTS_RERANK_WINDOW_SIZE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "FTS_RERANK_GAP_MERGE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ENABLE_HYBRID_SEARCH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "HYBRID_RRF_K",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "HYBRID_RRF_OVERFETCH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "HYBRID_FTS_OR_THRESHOLD",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SEARCH_DEFAULT_SORT_BY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SEARCH_TRUNCATION_LENGTH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ENABLE_CHUNKING",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CHUNK_SIZE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CHUNK_OVERLAP",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CHUNK_AGGREGATION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CHUNK_DEDUP_OVERFETCH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ENABLE_RERANKING",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RERANKING_PROVIDER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RERANKING_MODEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RERANKING_MAX_LENGTH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RERANKING_OVERFETCH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RERANKING_CACHE_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RERANKING_CHARS_PER_TOKEN",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RERANKING_INTRA_OP_THREADS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RERANKING_CPU_MEM_ARENA",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RERANKING_BATCH_SIZE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "EMBEDDING_PROVIDER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OPENAI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "OPENAI_API_BASE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OPENAI_ORGANIZATION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AZURE_OPENAI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "AZURE_OPENAI_ENDPOINT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AZURE_OPENAI_API_VERSION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "HUGGINGFACEHUB_API_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "VOYAGE_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "VOYAGE_TRUNCATION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "VOYAGE_BATCH_SIZE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LANGSMITH_TRACING",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LANGSMITH_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "LANGSMITH_PROJECT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LANGSMITH_ENDPOINT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "METADATA_INDEXED_FIELDS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "METADATA_INDEX_SYNC_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_TRANSPORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "FASTMCP_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "FASTMCP_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "FASTMCP_STATELESS_HTTP",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DISABLED_TOOLS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_AUTH_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MCP_AUTH_CLIENT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_AUTH_PROVIDER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_SERVER_INSTRUCTIONS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-28T20:10:19.188244Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

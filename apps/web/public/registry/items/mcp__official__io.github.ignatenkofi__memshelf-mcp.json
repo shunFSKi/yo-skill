@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.ignatenkofi/memshelf-mcp",
+  "type": "mcp",
+  "name": "memshelf-mcp",
+  "description": "Working memory for AI agents: digest-indexed episodes on a git shelf, recalled a section at a time.",
+  "author": "io.github.ignatenkofi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ignatenkofi/memshelf-mcp",
+    "repo": "ignatenkofi/memshelf-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "memshelf-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-04T16:50:30.005004Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.webull-inc/webull-openapi-mcp",
+  "type": "mcp",
+  "name": "Webull OpenAPI",
+  "description": "MCP server for Webull OpenAPI: trading and market data access for AI assistants",
+  "author": "io.github.webull-inc",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/webull-inc/webull-openapi-mcp",
+    "repo": "webull-inc/webull-openapi-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "webull-openapi-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-03T07:05:33.004686Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

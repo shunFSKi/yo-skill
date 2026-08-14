@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/me.foodnear/foodnear-me",
+  "type": "mcp",
+  "name": "Food Near Me",
+  "description": "AI-native restaurant discovery: verified/menu-indexed/discovered tiers + signed allergy-safety data.",
+  "author": "me.foodnear",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/food-near-me/platform",
+    "repo": "food-near-me/platform"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://foodnear.me/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-18T14:46:00.220335Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

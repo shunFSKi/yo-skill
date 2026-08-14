@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.chainflip-broker/crypto-swap",
+  "type": "mcp",
+  "name": "Chainflip Broker as a Service",
+  "description": "Native cross-chain swaps: Bitcoin, Ethereum, Solana, Polkadot, Tron, Arbitrum. Quote, swap, track.",
+  "author": "io.chainflip-broker",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/CumpsD/broker-as-a-service",
+    "repo": "CumpsD/broker-as-a-service"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://chainflip-broker.io/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-28T15:53:42.567703Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

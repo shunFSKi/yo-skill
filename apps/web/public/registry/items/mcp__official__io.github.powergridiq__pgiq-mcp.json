@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.powergridiq/pgiq-mcp",
+  "type": "mcp",
+  "name": "pgiq-mcp",
+  "description": "PGIQ Rating as agent tools for siting large electricity loads across 67 power markets.",
+  "author": "io.github.powergridiq",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/powergridiq/pgiq-mcp",
+    "repo": "powergridiq/pgiq-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "pgiq-mcp"
+    ],
+    "env": [
+      {
+        "name": "PGIQ_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-01T17:07:04.127042Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.weiseer/api-changelog",
+  "type": "mcp",
+  "name": "api-changelog",
+  "description": "SDK breaking-change tracker for AI agents — Anthropic/OpenAI/LangChain/MCP/Mistral.",
+  "author": "io.github.weiseer",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/weiseer/api-changelog-mcp",
+    "repo": "weiseer/api-changelog-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@weiseer/api-changelog-mcp"
+    ],
+    "env": [
+      {
+        "name": "API_CHANGELOG_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "API_CHANGELOG_LOCAL_ONLY",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-30T04:55:26.732825Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

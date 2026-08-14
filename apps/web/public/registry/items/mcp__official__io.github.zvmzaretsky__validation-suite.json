@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.zvmzaretsky/validation-suite",
+  "type": "mcp",
+  "name": "FabTally Valid",
+  "description": "Validation suite: EU VAT (VIES), IBAN mod-97, email (MX+disposable), geo place lookup, VIN decode.",
+  "author": "io.github.zvmzaretsky",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/zvmzaretsky/validation-suite-mcp",
+    "repo": "zvmzaretsky/validation-suite-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://valid.fabtally.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-01T05:32:59.083423Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

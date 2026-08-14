@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.carloshpdoc/memorydetective",
+  "type": "mcp",
+  "name": "memorydetective",
+  "description": "iOS leak/perf debugging via MCP: memgraph cycles, .trace analysis, SourceKit-LSP bridging.",
+  "author": "io.github.carloshpdoc",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/carloshpdoc/memorydetective",
+    "repo": "carloshpdoc/memorydetective"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "memorydetective"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-18T02:00:25.316002Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

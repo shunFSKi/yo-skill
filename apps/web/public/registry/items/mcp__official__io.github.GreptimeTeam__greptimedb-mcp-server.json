@@ -1,0 +1,118 @@
+{
+  "id": "mcp:official/io.github.GreptimeTeam/greptimedb-mcp-server",
+  "type": "mcp",
+  "name": "greptimedb-mcp-server",
+  "description": "Query and analyze GreptimeDB metrics, logs and traces via SQL, TQL and RANGE queries.",
+  "author": "io.github.GreptimeTeam",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/GreptimeTeam/greptimedb-mcp-server",
+    "repo": "GreptimeTeam/greptimedb-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "greptimedb-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "GREPTIMEDB_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GREPTIMEDB_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GREPTIMEDB_USER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GREPTIMEDB_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GREPTIMEDB_DATABASE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GREPTIMEDB_TIMEZONE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GREPTIMEDB_POOL_SIZE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GREPTIMEDB_HTTP_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GREPTIMEDB_HTTP_PROTOCOL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GREPTIMEDB_MASK_ENABLED",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GREPTIMEDB_MASK_PATTERNS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GREPTIMEDB_AUDIT_ENABLED",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-02T08:29:24.705282Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.takident/patient-services",
+  "type": "mcp",
+  "name": "patient-services",
+  "description": "MCP server exposing structured data and tools for Taki Dent Patient Services (takident.com).",
+  "author": "com.takident",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.takident.com/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.takident.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T00:24:40.993738Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

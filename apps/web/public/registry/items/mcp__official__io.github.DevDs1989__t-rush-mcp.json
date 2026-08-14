@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.DevDs1989/t-rush-mcp",
+  "type": "mcp",
+  "name": "t-rush-mcp",
+  "description": "MCP server for t-rush. Exposes TODO/FIXME scanning and streak tracking to AI agents.",
+  "author": "io.github.DevDs1989",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/DevDs1989/trush-mcp",
+    "repo": "DevDs1989/trush-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@devds1989/t-rush-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-13T20:44:36.294248Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/ai.tenderhunt/agent",
+  "type": "mcp",
+  "name": "TenderHunt",
+  "description": "Belarus public tenders: search, analytics, docs, and alerts via TenderHunt agent.",
+  "author": "ai.tenderhunt",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://tenderhunt.ai/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://tenderhunt.ai/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-03T19:42:40.360556Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

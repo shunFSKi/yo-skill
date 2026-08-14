@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.onetrueclaude-creator/mcp-knowledge-gaps",
+  "type": "mcp",
+  "name": "mcp-knowledge-gaps",
+  "description": "Find what your knowledge base mentions but doesn't actually explain.",
+  "author": "io.github.onetrueclaude-creator",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/onetrueclaude-creator/mcp-knowledge-gaps",
+    "repo": "onetrueclaude-creator/mcp-knowledge-gaps"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-knowledge-gaps"
+    ],
+    "env": [
+      {
+        "name": "KNOWLEDGE_GAPS_LICENSE",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-18T13:39:01.558741Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

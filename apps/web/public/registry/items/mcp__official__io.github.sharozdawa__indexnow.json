@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.sharozdawa/indexnow",
+  "type": "mcp",
+  "name": "indexnow",
+  "description": "Submit URLs for instant indexing via IndexNow and Google Indexing API.",
+  "author": "io.github.sharozdawa",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/sharozdawa/indexnow-mcp",
+    "repo": "sharozdawa/indexnow-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "indexnow-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-21T11:17:03.852656Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

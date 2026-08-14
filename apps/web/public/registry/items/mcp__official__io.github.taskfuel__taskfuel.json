@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.taskfuel/taskfuel",
+  "type": "mcp",
+  "name": "TaskFuel.ai",
+  "description": "Specialist tools for any job — a lead, an image, a song, live data, and more.",
+  "author": "io.github.taskfuel",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://app.taskfuel.ai/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://app.taskfuel.ai/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-30T15:00:28.490753Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

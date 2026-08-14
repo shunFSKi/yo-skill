@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.FlywheelStudio/ulink",
+  "type": "mcp",
+  "name": "ulink",
+  "description": "Deep linking for iOS, Android & Flutter. Firebase Dynamic Links alternative.",
+  "author": "io.github.FlywheelStudio",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/FlywheelStudio/ulink-mcp-server",
+    "repo": "FlywheelStudio/ulink-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@ulinkly/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "ULINK_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-25T10:12:09.752948Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

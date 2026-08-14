@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.faridmth/screenshotrender-mcp",
+  "type": "mcp",
+  "name": "screenshotrender-mcp",
+  "description": "Capture website screenshots from any MCP client via the ScreenshotRender API.",
+  "author": "io.github.faridmth",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/faridmth/screenshotrender-mcp",
+    "repo": "faridmth/screenshotrender-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "screenshotrender-mcp"
+    ],
+    "env": [
+      {
+        "name": "SCREENSHOTRENDER_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-02T12:51:36.101352Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

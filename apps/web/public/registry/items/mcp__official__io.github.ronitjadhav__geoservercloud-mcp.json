@@ -1,0 +1,73 @@
+{
+  "id": "mcp:official/io.github.ronitjadhav/geoservercloud-mcp",
+  "type": "mcp",
+  "name": "geoservercloud-mcp",
+  "description": "MCP server for managing GeoServer workspaces, datastores, layers, and styles",
+  "author": "io.github.ronitjadhav",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ronitjadhav/geoservercloud-mcp",
+    "repo": "ronitjadhav/geoservercloud-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "geoservercloud-mcp"
+    ],
+    "env": [
+      {
+        "name": "GEOSERVER_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GEOSERVER_USER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GEOSERVER_PASSWORD",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-02T12:55:15.109527Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

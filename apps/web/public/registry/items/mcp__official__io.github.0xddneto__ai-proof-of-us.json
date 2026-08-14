@@ -1,0 +1,89 @@
+{
+  "id": "mcp:official/io.github.0xddneto/ai-proof-of-us",
+  "type": "mcp",
+  "name": "AI Proof of Us",
+  "description": "Private signed AI task receipts with replay checks and optional validated AIPOU claims.",
+  "author": "io.github.0xddneto",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/0xddneto/AI-Proof-of-Us",
+    "repo": "0xddneto/AI-Proof-of-Us"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "aipou-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "AIPOU_AGENT_PRIVATE_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "AIPOU_AGENT_KEY_FILE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AIPOU_CONTRACT_ADDRESS",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "AIPOU_CLAIMS_ADDRESS",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "AIPOU_RPC_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AIPOU_DATA_DIR",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-22T13:08:25.358697Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

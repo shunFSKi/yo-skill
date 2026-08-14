@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.teres/booking",
+  "type": "mcp",
+  "name": "Teres — Booking for AI Agents",
+  "description": "Search and book appointments at local businesses. Barbershops, salons, spas, and more.",
+  "author": "io.teres",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/teres-io/teres",
+    "repo": "teres-io/teres"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.teres.io/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-05T02:35:03.578678Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

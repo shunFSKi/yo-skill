@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.TheSnakeFang/buyapi-mcp",
+  "type": "mcp",
+  "name": "BuyAPI",
+  "description": "Vendor intelligence for AI coding agents choosing developer tools and stacks.",
+  "author": "io.github.TheSnakeFang",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/TheSnakeFang/buyapi-mcp",
+    "repo": "TheSnakeFang/buyapi-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "buyapi"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-04T18:43:06.554603Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

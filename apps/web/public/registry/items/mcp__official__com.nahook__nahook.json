@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.nahook/nahook",
+  "type": "mcp",
+  "name": "Nahook",
+  "description": "Manage Nahook webhooks from your AI client: endpoints, deliveries, retries, environments.",
+  "author": "com.nahook",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.nahook.com/",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.nahook.com/"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-16T12:51:38.202442Z"
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

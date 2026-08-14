@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.mrjakob07/mytown-mcp",
+  "type": "mcp",
+  "name": "mytown-mcp",
+  "description": "US & Canadian local-government meetings, decisions & place context from official sources.",
+  "author": "io.github.mrjakob07",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mrjakob07/mytown",
+    "repo": "mrjakob07/mytown"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mytown-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-13T17:09:54.075452Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

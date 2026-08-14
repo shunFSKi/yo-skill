@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/ai.quotefirst/quotefirst",
+  "type": "mcp",
+  "name": "QuoteFirst",
+  "description": "Get dollar quotes from 200+ LLMs before any work runs; accept, execute, and verify quality.",
+  "author": "ai.quotefirst",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://quotefirst.ai/api/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://quotefirst.ai/api/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-19T22:22:23.55229Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

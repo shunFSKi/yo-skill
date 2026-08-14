@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.dsers/dsers-mcp-server",
+  "type": "mcp",
+  "name": "DSers Official MCP Server",
+  "description": "Official DSers MCP for dropshipping: import, edit, price, and publish products to Shopify and Wix.",
+  "author": "io.github.dsers",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dsers/dsers-mcp-server",
+    "repo": "dsers/dsers-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.dsers.com/dropshipping/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-08T10:17:11.557601Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.dgtalquantumleap-ai/ebenova-legal-docs",
+  "type": "mcp",
+  "name": "ebenova-legal-docs",
+  "description": "Generate 27 legal document types across 18 jurisdictions via Ebenova API.",
+  "author": "io.github.dgtalquantumleap-ai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dgtalquantumleap-ai/legal-docs-mcp",
+    "repo": "dgtalquantumleap-ai/legal-docs-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ebenova-legal-docs-mcp"
+    ],
+    "env": [
+      {
+        "name": "EBENOVA_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-14T03:46:41.884125Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

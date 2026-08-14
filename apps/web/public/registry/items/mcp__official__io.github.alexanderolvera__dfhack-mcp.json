@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.alexanderolvera/dfhack-mcp",
+  "type": "mcp",
+  "name": "Dwarf Fortress (DFHack)",
+  "description": "MCP server exposing a live Dwarf Fortress fort to an AI agent as curated, semantic tools",
+  "author": "io.github.alexanderolvera",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/alexanderolvera/dfhack-mcp",
+    "repo": "alexanderolvera/dfhack-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "dfhack-mcp"
+    ],
+    "env": [
+      {
+        "name": "DFHACK_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DFHACK_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DFHACK_MCP_ACTUATORS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-26T06:50:46.591638Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

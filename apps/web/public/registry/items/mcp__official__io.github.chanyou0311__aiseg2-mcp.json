@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.chanyou0311/aiseg2-mcp",
+  "type": "mcp",
+  "name": "aiseg2-mcp",
+  "description": "Unofficial read-only MCP server for the Panasonic AiSEG2 HEMS controller.",
+  "author": "io.github.chanyou0311",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/chanyou0311/aiseg2-mcp",
+    "repo": "chanyou0311/aiseg2-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "aiseg2-mcp"
+    ],
+    "env": [
+      {
+        "name": "AISEG_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "AISEG_PASSWORD",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-15T12:07:33.040021Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

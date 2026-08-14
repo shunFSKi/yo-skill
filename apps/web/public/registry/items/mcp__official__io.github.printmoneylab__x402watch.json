@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.printmoneylab/x402watch",
+  "type": "mcp",
+  "name": "x402watch",
+  "description": "Wash-filtered intelligence for x402: categories, services, wash analysis, trends.",
+  "author": "io.github.printmoneylab",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/printmoneylab/x402watch",
+    "repo": "printmoneylab/x402watch"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.x402.printmoneylab.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-02T14:32:13.465348Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

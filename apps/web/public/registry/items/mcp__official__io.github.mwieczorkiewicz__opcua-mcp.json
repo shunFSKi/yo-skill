@@ -1,0 +1,94 @@
+{
+  "id": "mcp:official/io.github.mwieczorkiewicz/opcua-mcp",
+  "type": "mcp",
+  "name": "OPC-UA MCP Server",
+  "description": "Read, write, browse, search, and subscribe to live data on an OPC-UA industrial automation server.",
+  "author": "io.github.mwieczorkiewicz",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mwieczorkiewicz/opcua-mcp",
+    "repo": "mwieczorkiewicz/opcua-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/mwieczorkiewicz/opcua-mcp:main-29734c4"
+    ],
+    "env": [
+      {
+        "name": "OPCUA_ENDPOINT",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "OPCUA_AUTH_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OPCUA_USERNAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OPCUA_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "OPCUA_SECURITY_POLICY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OPCUA_SECURITY_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SERVER_TRANSPORT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-05T11:20:21.125128Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

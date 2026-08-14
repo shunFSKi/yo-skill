@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.RedHatInsights/insights-mcp",
+  "type": "mcp",
+  "name": "Red Hat Lightspeed MCP",
+  "description": "Model Context Protocol server for Red Hat Lightspeed - advisor, image builder, inventory, and more",
+  "author": "io.github.RedHatInsights",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/RedHatInsights/insights-mcp",
+    "repo": "RedHatInsights/insights-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/redhatinsights/red-hat-lightspeed-mcp"
+    ],
+    "env": [
+      {
+        "name": "LIGHTSPEED_CLIENT_ID",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "LIGHTSPEED_CLIENT_SECRET",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T21:08:39.117857Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": "# Red Hat Lightspeed MCP\n_(formerly known as Insights MCP)_\n\nRed Hat Lightspeed Model Context Protocol ([MCP](https://modelcontextprotocol.io)) server is a lightweight, self-hosted solution that connects LLM-based agents - such as Claude Desktop and other MCP-compatible tools - to Red Hat Lightspeed services.\n\n## Features\n * Supports read-only operations: The server runs in read-only mode by default. Use `--all-tools` to enable write tools (e.g. create blueprints, run composes). RBAC permissions can also restrict access.\n * Provides natural language prompts: provides an ability to use natural language for querying Red Hat Lightspeed services\n\n## Supported Lightspeed Services\n * [advisor](https://docs.redhat.com/en/documentation/red_hat_insights/1-latest/html/assessing_rhel_configuration_issues_using_the_red_hat_insights_advisor_service/index)\n * [hosted image builder](https://osbuild.org/docs/hosted/architecture/)\n * [inventory](https://docs.redhat.com/en/documentation/red_hat_insights/1-latest/html/viewing_and_managing_system_inventory/index)\n * [planning](https://docs.redhat.com/en/documentation/red_hat_lightspeed/1-latest/html/dynamically_creating_a_digital_roadmap_to_manage_rhel_systems/index)\n * [remediations](https://docs.redhat.com/en/documentation/red_hat_insights/1-latest/html/red_hat_insights_remediations_guide/index)\n * [vulnerability](https://docs.redhat.com/en/documentation/red_hat_insights/1-latest/html/assessing_and_monitoring_security_vulnerabilities_on_rhel_systems/index)\n\n## Setup and usage\n\n### Authentication\n\n**Note**: Authentication is only required for accessing Red Hat Lightspeed APIs. The MCP server itself does not require authentication.\n\nThere are two ways to authenticate:\n\n1. **Service Account** (client_id + client_secret) — create a service account and provide the credentials via environment variables or HTTP headers.\n2. **JWT Bearer Token** — provide a pre-existing JWT token via the `Authorization: Bearer <token>` HTTP header (SSE/HTTP transports only).\n\n#### Service Account Setup\n\n1. Go to https://console.redhat.com → Click Settings (⚙️ Gear Icon) →  \"Service Accounts\"\n2. Create a service account and remember `Client ID` and `Client secret` for later.<br>\n   See below in the integration instructions, there they are respectively referred to as\n   `LIGHTSPEED_CLIENT_ID` and `LIGHTSPEED_CLIENT_SECRET`.\n\n#### Required Permissions by Toolset\n\nDifferent toolsets require specific roles for your service account:\n\n- **Advisor tools**: `RHEL Advisor viewer`\n- **Inventory tools**: `Inventory Hosts viewer`\n- **Vulnerability tools**: `Vulnerability viewer`, `Inventory Hosts viewer`\n- **Remediation tools**: `Remediations user`\n\n#### Granting Permissions to Service Accounts\n\nBy default, service accounts have no access. An organization administrator must assign permissions. The MCP server will only be able to perform tasks that it has permission to perform. For example, if the user wants to allow read-only operations and deny write operations, this can be accomplished via the permissions system.\n\nFor detailed step-by-step instructions, see this video tutorial: [Service Account Permissions Setup](https://www.youtube.com/watch?v=UvNcmJsbg1w)\n\n1. **Log in as Organization Administrator** with User Access administrator role\n2. **Navigate to User Access Settings**: Click Settings (⚙️ Gear Icon) → \"User Access\" → \"Groups\"\n3. **Assign permissions** (choose one option):\n\n   **Option A - Create New Group:**\n   - Create new group (e.g., `mcp-service-accounts`)\n   - Add required roles (e.g., RHEL Advisor viewer, Inventory Hosts viewer, etc.)\n   - Add your service account to this group\n\n   **Option B - Use Existing Group:**\n   - Open existing group with necessary roles\n   - Go to \"Service accounts\" tab\n   - Add your service account to the group\n\nYour service account will inherit all roles from the assigned group.\n\n#### ⚠️ Security Remarks ⚠️\n\nIf you start this MCP server locally (with `podman` or `docker`) make sure the container is not exposed to the internet. In this scenario it's probably fine to use `LIGHTSPEED_CLIENT_ID` and `LIGHTSPEED_CLIENT_SECRET` although your MCP Client (e.g. VSCode, Cursor, etc.) can get your `LIGHTSPEED_CLIENT_ID` and `LIGHTSPEED_CLIENT_SECRET`.\n\nFor a deployment where you connect to this MCP server from a different machine, you should consider that `LIGHTSPEED_CLIENT_ID` and `LIGHTSPEED_CLIENT_SECRET` (or your JWT Bearer token) are transferred to the MCP server and you are trusting the remote MCP server not to leak them.\n\nIn both cases if you are in doubt, please disable/remove the `LIGHTSPEED_CLIENT_ID` and `LIGHTSPEED_CLIENT_SECRET` from your account after you are done using the MCP server.\n\n#### Security & Incident Response (Emergency Revocation)\n\nTo ensure safe AI operations and compliance with security standards, operators must be able to rapidly sever the connected LLM's access to Red Hat Lightspeed in the event of abnormal AI behavior, unexpected data exposure, or suspected token compromise.\n\n**Emergency \"Kill Switch\" Procedure:**\n\nIf you need to immediately revoke AI access to the toolsets, execute the following steps:\n1. **Terminate the Server:** Stop the MCP container or local process immediately (e.g., run `podman ps` to find the container, then `podman stop <container_id>`).\n2. **Revoke Credentials:** Invalidate the Red Hat Client ID used by the MCP server to authenticate with Red Hat services. Go to the \"[Service Accounts](https://console.redhat.com/iam/service-accounts)\" page and `Delete` or `Reset` the credentials.\n\nAdditionally you can remove the MCP server entry (e.g., `lightspeed-mcp` in your client's `mcp.json`) from your local LLM client's configuration to prevent the client from attempting to restart or reconnect to the server.\n\nIf credential compromise or data exposure is suspected, assess breach notification obligations under applicable law (e.g., GDPR). For logging, debug mode, and compliance details, see [HACKING.md - Logging and Compliance](HACKING.md#logging-and-compliance).\n\n## Technical Info\n### Toolsets\n\nSee [toolsets.md](toolsets.md) for the toolsets available in the MCP server.\n\n## Integrations\n\n### Prerequisites\n\nMake sure you have `podman` installed.<br>\n(Docker is fine too but the commands below have to be adapted accordingly)\n\nYou can install it with `sudo dnf install podman` on Fedora/RHEL/CentOS,\nor on macOS follow the instructions of [Podman Desktop](https://podman-desktop.io/) or [Podman](https://podman.io/getting-started/installation).\n\n⚠️ **Note** if you use Podman on macOS, you sometimes need to set the path to `podman` explicitly.\nE.g. replace `podman` with the full path. Should be something like\n\n * `/usr/local/bin/podman`\n * `/opt/homebrew/bin/podman`\n * …\n\nYou can find the path by running `which podman` in your terminal.\n\n### Goose Desktop\n\nFirst check the [prerequisites](#prerequisites) section.\n\n#### Option 1: One-click installation (easiest)\n\n[![Install in Goose](https://goose-docs.ai/img/extension-install-dark.svg)](https://goose-docs.ai/extension?cmd=docker&arg=run&arg=--env&arg=LIGHTSPEED_CLIENT_ID&arg=--env&arg=LIGHTSPEED_CLIENT_SECRET&arg=--interactive&arg=--rm&arg=quay.io%2Fredhat-services-prod%2Finsights-management-tenant%2Finsights-mcp%2Fred-hat-lightspeed-mcp%3Alatest&id=red-hat-lightspeed-mcp&name=Red%20Hat%20Lightspeed%20MCP&description=Red%20Hat%20Lightspeed%20MCP%20server%20integration&env=LIGHTSPEED_CLIENT_ID%3DRed%20Hat%20Lightspeed%20Client%20ID&env=LIGHTSPEED_CLIENT_SECRET%3DRed%20Hat%20Lightspeed%20Client%20Secret)\n\nThe badge uses an HTTPS redirect (`goose-docs.ai/extension?...`) that opens Goose Desktop's extension install flow.\n\n(Note: this uses the `quay.io` container image and `docker` as the command — Goose deeplinks only support `docker`, not `podman`. Use the manual install below if you rely on Podman.)\n\nAfter clicking, Goose prompts for `LIGHTSPEED_CLIENT_ID` and `LIGHTSPEED_CLIENT_SECRET`, then installs the extension. Start a new chat session to use it.\n\n#### Option 2: Manual STDIO installation\n\n1. Click the button in the **top-left** to open the sidebar.\n2. Click the **`Extensions`** button on the sidebar.\n3. Under **`Extensions`**, click **`Add custom extension`**.\n4. On the **`Add custom extension`** modal, enter:\n   - **Type**: `Standard IO`\n   - **ID**: `red-hat-lightspeed-mcp`\n   - **Name**: `Red Hat Lightspeed MCP`\n   - **Description**: `Red Hat Lightspeed MCP server integration`\n   - **Command**: `podman run --env LIGHTSPEED_CLIENT_ID --env LIGHTSPEED_CLIENT_SECRET --interactive --rm ghcr.io/redhatinsights/red-hat-lightspeed-mcp:latest`\n   - **Environment variables**: click **`Add`** for each:\n     - `LIGHTSPEED_CLIENT_ID` — Red Hat Lightspeed Client ID\n     - `LIGHTSPEED_CLIENT_SECRET` — Red Hat Lightspeed Client Secret\n   - **Timeout**: leave default (300s) unless needed\n5. Click **`Add`**.\n\nDocker users can replace `podman` with `docker` in the command. On macOS, if Goose cannot find `podman`, use the full path from `which podman` (see [prerequisites](#prerequisites)).\n\n### Cursor\n\nFirst check the [prerequisites](#prerequisites) section.\n\n#### Option 1: One-click installation (easiest)\n\n⚠️ Use **`Ctrl`/`Cmd`-click** to open in a **new tab**.<br>\nOtherwise the tab will close after installation and you won't see the documentation anymore.<br>\n[![Install with Podman in Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en/install-mcp?name=red-hat-lightspeed-mcp&config=eyJ0eXBlIjoic3RkaW8iLCJjb21tYW5kIjoicG9kbWFuIHJ1biAtLWVudiBMSUdIVFNQRUVEX0NMSUVOVF9JRCAtLWVudiBMSUdIVFNQRUVEX0NMSUVOVF9TRUNSRVQgLS1pbnRlcmFjdGl2ZSAtLXJtIHF1YXkuaW8vcmVkaGF0LXNlcnZpY2VzLXByb2QvaW5zaWdodHMtbWFuYWdlbWVudC10ZW5hbnQvaW5zaWdodHMtbWNwL3JlZC1oYXQtbGlnaHRzcGVlZC1tY3A6bGF0ZXN0IiwiZW52Ijp7IkxJR0hUU1BFRURfQ0xJRU5UX0lEIjoiIiwiTElHSFRTUEVFRF9DTElFTlRfU0VDUkVUIjoiIn19)<br>\n(Note: this uses the `quay.io` container image)\n\n#### Option 2: Manual STDIO installation\n\nCursor doesn't seem to support `inputs` you need to add your credentials in the config file.\nTo start the integration create a file `~/.cursor/mcp.json` with\n```\n{\n  \"mcpServers\": {\n    \"lightspeed-mcp\": {\n        \"type\": \"stdio\",\n        \"command\": \"podman\",\n        \"args\": [\n            \"run\",\n            \"--env\",\n            \"LIGHTSPEED_CLIENT_ID\",\n            \"--env\",\n            \"LIGHTSPEED_CLIENT_SECRET\",\n            \"--interactive\",\n            \"--rm\",\n            \"ghcr.io/redhatinsights/red-hat-lightspeed-mcp:latest\"\n        ],\n        \"env\": {\n            \"LIGHTSPEED_CLIENT_ID\": \"\",\n            \"LIGHTSPEED_CLIENT_SECRET\": \"\"\n        }\n    }\n  }\n}\n```\n\nIf you see the error `Some tools have naming issues and may be filtered out.`, see [Known Issues](#known-issues).\n\n#### Option 3: Manual Streamable HTTP installation (advanced)\n\nstart the server:\n\n```\npodman run --net host --rm ghcr.io/redhatinsights/red-hat-lightspeed-mcp:latest http\n```\n\nthen integrate using **service account credentials**:\n\n```\n{\n    \"mcpServers\": {\n        \"lightspeed-mcp\": {\n            \"type\": \"http\",\n            \"url\": \"http://localhost:8000/mcp\",\n            \"headers\": {\n                \"lightspeed-client-id\": \"\",\n                \"lightspeed-client-secret\": \"\"\n            }\n        }\n    }\n}\n```\n\nor alternatively using a **JWT Bearer token**:\n\n```\n{\n    \"mcpServers\": {\n        \"lightspeed-mcp\": {\n            \"type\": \"http\",\n            \"url\": \"http://localhost:8000/mcp\",\n            \"headers\": {\n                \"Authorization\": \"Bearer <YOUR_JWT_TOKEN>\"\n            }\n        }\n    }\n}\n```\n\n### VSCode\n\nFirst check the [prerequisites](#prerequisites) section.\n\n#### Option 1: One-click installation (easiest)\n\n[![Install with Podman in VS Code](https://img.shields.io/badge/VS_Code-Install_Red_Hat_Lightspeed_MCP-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=red-hat-lightspeed-mcp&config=%7B%22type%22%3A%20%22stdio%22%2C%20%22command%22%3A%20%22podman%22%2C%2\n\n…",
+  "status": "curated"
+}

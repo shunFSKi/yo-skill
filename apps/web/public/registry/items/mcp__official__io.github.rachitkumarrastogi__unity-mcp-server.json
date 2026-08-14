@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.rachitkumarrastogi/unity-mcp-server",
+  "type": "mcp",
+  "name": "Unity MCP Server",
+  "description": "MCP server for Unity: 130+ tools, Unity 6 skills, AI/ML discovery. No Editor.",
+  "author": "io.github.rachitkumarrastogi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/rachitkumarrastogi/unity-mcp-server",
+    "repo": "rachitkumarrastogi/unity-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "unity-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "UNITY_PROJECT_PATH",
+        "required": true,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-04T21:59:11.133863Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

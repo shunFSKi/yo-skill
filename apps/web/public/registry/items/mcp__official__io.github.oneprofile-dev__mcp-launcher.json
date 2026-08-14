@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.oneprofile-dev/mcp-launcher",
+  "type": "mcp",
+  "name": "mcp-launcher",
+  "description": "Single MCP hub: discover, add, audit, and govern MCP servers across every AI client.",
+  "author": "io.github.oneprofile-dev",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/oneprofile-dev/mcp-launcher",
+    "repo": "oneprofile-dev/mcp-launcher"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "curatedmcp"
+    ],
+    "env": [
+      {
+        "name": "CURATOR_API_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-05T04:47:46.980417Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

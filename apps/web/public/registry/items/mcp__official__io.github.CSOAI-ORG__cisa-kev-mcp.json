@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.CSOAI-ORG/cisa-kev-mcp",
+  "type": "mcp",
+  "name": "cisa-kev-mcp",
+  "description": "CISA Known Exploited Vulnerabilities feed + remediation deadlines for US federal + critical infr...",
+  "author": "io.github.CSOAI-ORG",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/CSOAI-ORG/cisa-kev-mcp",
+    "repo": "CSOAI-ORG/cisa-kev-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "cisa-kev-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-30T03:52:38.5431Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

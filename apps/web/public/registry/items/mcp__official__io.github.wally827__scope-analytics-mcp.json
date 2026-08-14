@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.wally827/scope-analytics-mcp",
+  "type": "mcp",
+  "name": "Scope Analytics",
+  "description": "Install + query Scope analytics from an AI coding agent (Claude Code, Cursor, etc.).",
+  "author": "io.github.wally827",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers/io.github.wally827%2Fscope-analytics-mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "scope-analytics-mcp"
+    ],
+    "env": [
+      {
+        "name": "SCOPE_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "SCOPE_API_BASE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-13T04:51:52.407565Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

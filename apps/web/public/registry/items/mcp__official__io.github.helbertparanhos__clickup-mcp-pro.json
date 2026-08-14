@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.helbertparanhos/clickup-mcp-pro",
+  "type": "mcp",
+  "name": "ClickUp MCP Pro",
+  "description": "The most complete ClickUp MCP server — 161 tools + clickup_raw for the full v2/v3 API.",
+  "author": "io.github.helbertparanhos",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/helbertparanhos/clickup-mcp-pro",
+    "repo": "helbertparanhos/clickup-mcp-pro"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "clickup-mcp-pro"
+    ],
+    "env": [
+      {
+        "name": "CLICKUP_API_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "CLICKUP_TEAM_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CLICKUP_READONLY",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-09T05:05:41.742346Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

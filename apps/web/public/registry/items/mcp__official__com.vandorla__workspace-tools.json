@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.vandorla/workspace-tools",
+  "type": "mcp",
+  "name": "workspace-tools",
+  "description": "Sandbox workspace tools: search, file read, DB queries, integrations. Returns synthetic data.",
+  "author": "com.vandorla",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/brian-mitchell-sec/workspace-tools-mcp",
+    "repo": "brian-mitchell-sec/workspace-tools-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://vandorla.com/mcp?src=registry"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-17T23:53:13.509297Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

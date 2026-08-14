@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/de.qrcodly/mcp-server",
+  "type": "mcp",
+  "name": "QRcodly",
+  "description": "Create, manage, and share QR codes and short URLs",
+  "author": "de.qrcodly",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/FloB95/qrcodly",
+    "repo": "FloB95/qrcodly"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.qrcodly.de/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-31T13:04:48.201797Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

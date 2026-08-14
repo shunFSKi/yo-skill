@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.norrietaylor/distillery-mcp",
+  "type": "mcp",
+  "name": "Distillery",
+  "description": "Knowledge base for Claude Code with semantic search, feed intelligence, and teams",
+  "author": "io.github.norrietaylor",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/norrietaylor/distillery",
+    "repo": "norrietaylor/distillery"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "distillery-mcp"
+    ],
+    "env": [
+      {
+        "name": "JINA_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "OPENAI_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-25T18:05:17.400629Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

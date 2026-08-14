@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.bailinghub/bailinghub-governance",
+  "type": "mcp",
+  "name": "BailingHub Governance",
+  "description": "Submit and inspect governed AI business actions through a self-hosted BailingHub control plane.",
+  "author": "io.github.bailinghub",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/bailinghub/bailinghub-mcp-server",
+    "repo": "bailinghub/bailinghub-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "bailinghub-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "BAILINGHUB_BASE_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "BAILINGHUB_CLIENT_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "BAILINGHUB_ROUTE",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "BAILINGHUB_ALLOW_INSECURE_HTTP",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-28T04:37:56.190267Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,94 @@
+{
+  "id": "mcp:official/io.github.frndchagas/expo-android",
+  "type": "mcp",
+  "name": "Expo Android MCP",
+  "description": "MCP server for Android emulator automation via ADB.",
+  "author": "io.github.frndchagas",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/frndchagas/expo-android",
+    "repo": "frndchagas/expo-android"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@fndchagas/expo-android"
+    ],
+    "env": [
+      {
+        "name": "ADB_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ADB_SERIAL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ADB_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ADB_MAX_BUFFER_MB",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ADB_DEBUG",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_TRANSPORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PORT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-08T01:38:47.2517Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

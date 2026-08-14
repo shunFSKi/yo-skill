@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.jgravelle/jdatamunch-mcp",
+  "type": "mcp",
+  "name": "jDataMunch MCP",
+  "description": "Tabular data retrieval. Index CSV/Excel, query rows, aggregate. 99%+ savings vs raw file reads.",
+  "author": "io.github.jgravelle",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/jgravelle/jdatamunch-mcp",
+    "repo": "jgravelle/jdatamunch-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "jdatamunch-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-09T16:47:53.463424Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

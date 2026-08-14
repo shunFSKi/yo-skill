@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.ShaftHQ/shaft-mcp",
+  "type": "mcp",
+  "name": "shaft-mcp",
+  "description": "SHAFT browser automation, capture, and offline deterministic failure diagnosis",
+  "author": "io.github.ShaftHQ",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ShaftHQ/SHAFT_ENGINE",
+    "repo": "ShaftHQ/SHAFT_ENGINE"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/shafthq/shaft-engine-mcp:10.3.20260809"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-09T18:56:11.418998Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

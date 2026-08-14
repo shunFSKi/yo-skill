@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.AncientiCe/palace-rs",
+  "type": "mcp",
+  "name": "Palace",
+  "description": "Local-first memory for coding agents — MCP server, single SQLite file, local embeddings",
+  "author": "io.github.AncientiCe",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/AncientiCe/palace-rs",
+    "repo": "AncientiCe/palace-rs"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/AncientiCe/palace-rs/releases/download/v0.12.0/palace-0.12.0.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-03T11:08:10.220021Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

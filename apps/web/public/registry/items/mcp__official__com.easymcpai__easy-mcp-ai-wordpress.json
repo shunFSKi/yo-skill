@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.easymcpai/easy-mcp-ai-wordpress",
+  "type": "mcp",
+  "name": "Easy MCP AI — Connector for Claude, ChatGPT & SEO Data",
+  "description": "Connect any AI to WordPress — content, media, SEO, WooCommerce, GA4, Search Console. 242 tools.",
+  "author": "com.easymcpai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://{site_domain}/wp-json/easy-mcp-ai/v1/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://{site_domain}/wp-json/easy-mcp-ai/v1/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T08:09:41.60493Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

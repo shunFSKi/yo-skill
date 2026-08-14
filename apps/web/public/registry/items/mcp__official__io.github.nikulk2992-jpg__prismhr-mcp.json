@@ -1,0 +1,93 @@
+{
+  "id": "mcp:official/io.github.nikulk2992-jpg/prismhr-mcp",
+  "type": "mcp",
+  "name": "PrismHR MCP",
+  "description": "Open-source MCP server for PrismHR. PEO workflow tools + Microsoft 365 connectors.",
+  "author": "io.github.nikulk2992-jpg",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/nikulk2992-jpg/prismhr-mcp",
+    "repo": "nikulk2992-jpg/prismhr-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "prismhr-mcp"
+    ],
+    "env": [
+      {
+        "name": "PRISMHR_MCP_ENVIRONMENT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PRISMHR_MCP_PEO_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "PRISMHR_MCP_USERNAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PRISMHR_MCP_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PRISMHR_MCP_ONEPASSWORD_VAULT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PRISMHR_MCP_ONEPASSWORD_ITEM_PRISMHR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PRISMHR_MCP_ALLOW_PROD",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-21T04:36:27.494317Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

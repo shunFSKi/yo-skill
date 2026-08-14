@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.aybeeare/water-conditions",
+  "type": "mcp",
+  "name": "water-conditions",
+  "description": "Real-time water temperature and tides for 8,000+ locations, by name or lat/long coordinates.",
+  "author": "io.github.aybeeare",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/aybeeare/water-temp-fishing-guide",
+    "repo": "aybeeare/water-temp-fishing-guide"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "water-conditions-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-18T18:13:23.057588Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

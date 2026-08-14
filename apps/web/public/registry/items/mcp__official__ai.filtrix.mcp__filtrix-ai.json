@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/ai.filtrix.mcp/filtrix-ai",
+  "type": "mcp",
+  "name": "Filtrix AI MCP",
+  "description": "Filtrix MCP for image/video generation. Portal: https://agent.filtrix.ai/",
+  "author": "ai.filtrix.mcp",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.filtrix.ai/",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.filtrix.ai/",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-15T17:09:25.330187Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

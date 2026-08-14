@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.trippyogi/gitworthy",
+  "type": "mcp",
+  "name": "gitworthy",
+  "description": "is it worth your commit? Pre-flight triage for OSS contribution targets.",
+  "author": "io.github.trippyogi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/trippyogi/gitworthy",
+    "repo": "trippyogi/gitworthy"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "gitworthy"
+    ],
+    "env": [
+      {
+        "name": "GITHUB_TOKEN",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-29T18:14:25.434373Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

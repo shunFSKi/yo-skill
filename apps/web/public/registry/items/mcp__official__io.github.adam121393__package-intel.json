@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.adam121393/package-intel",
+  "type": "mcp",
+  "name": "Package Intel",
+  "description": "npm, PyPI & crates.io health, vulns and dependency graphs. Runs locally, no API key.",
+  "author": "io.github.adam121393",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/adam121393/package-intel",
+    "repo": "adam121393/package-intel"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "package-intel-mcp"
+    ],
+    "env": [
+      {
+        "name": "API_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "NETWORK",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "X402_PRIVATE_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "X402_TX_HASH",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-09T20:54:38.105931Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

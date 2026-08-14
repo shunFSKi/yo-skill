@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.helloo1568/sheetspec",
+  "type": "mcp",
+  "name": "sheetspec",
+  "description": "Contract testing and quality gates for spreadsheets created by AI agents.",
+  "author": "io.github.helloo1568",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/helloo1568/SheetSpec",
+    "repo": "helloo1568/SheetSpec"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "sheetspec"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-18T14:25:57.905931Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

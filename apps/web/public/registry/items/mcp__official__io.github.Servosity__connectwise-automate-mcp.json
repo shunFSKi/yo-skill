@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.Servosity/connectwise-automate-mcp",
+  "type": "mcp",
+  "name": "ConnectWise Automate MCP",
+  "description": "Sync your ConnectWise Automate fleet to local SQLite and answer cross-client RMM questions offline.",
+  "author": "io.github.Servosity",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/servosity/msp-skills",
+    "repo": "servosity/msp-skills"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/Servosity/msp-skills/releases/download/connectwise-automate-v0.1.0/connectwise-automate-mcp.mcpb"
+    ],
+    "env": [
+      {
+        "name": "CONNECTWISE_AUTOMATE_SERVER",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "CONNECTWISE_AUTOMATE_CLIENT_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "CONNECTWISE_AUTOMATE_TOKEN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-16T22:11:40.408974Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

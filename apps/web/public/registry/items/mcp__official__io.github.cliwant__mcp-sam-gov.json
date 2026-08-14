@@ -1,0 +1,124 @@
+{
+  "id": "mcp:official/io.github.cliwant/mcp-sam-gov",
+  "type": "mcp",
+  "name": "mcp-sam-gov",
+  "description": "Keyless MCP: 150 tools for US federal + state/local (SLED) contracting, spending & regulation",
+  "author": "io.github.cliwant",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/cliwant/mcp-sam-gov",
+    "repo": "cliwant/mcp-sam-gov"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@cliwant/mcp-sam-gov"
+    ],
+    "env": [
+      {
+        "name": "SAM_GOV_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "CENSUS_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "FRED_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "BEA_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "BLS_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "DOL_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "DATA_GOV_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "NVD_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "OPENFDA_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SOCRATA_APP_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "COURTLISTENER_API_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "LDA_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "EDGAR_USER_AGENT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-24T06:46:17.388252Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.mattyb12345nyc/futureproof-aeo",
+  "type": "mcp",
+  "name": "FutureProof AEO",
+  "description": "Track brand visibility across ChatGPT, Claude, Gemini & Perplexity. Scores, competitors, trends.",
+  "author": "io.github.mattyb12345nyc",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mattyb12345nyc/ai-tracker",
+    "repo": "mattyb12345nyc/ai-tracker"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://ai.futureproof.work/.netlify/functions/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-28T01:09:20.846032Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

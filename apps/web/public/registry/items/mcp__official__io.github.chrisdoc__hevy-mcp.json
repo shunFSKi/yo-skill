@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.chrisdoc/hevy-mcp",
+  "type": "mcp",
+  "name": "Hevy MCP Server",
+  "description": "MCP server for managing workouts, routines, and exercise data through the Hevy API",
+  "author": "io.github.chrisdoc",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/chrisdoc/hevy-mcp",
+    "repo": "chrisdoc/hevy-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "hevy-mcp"
+    ],
+    "env": [
+      {
+        "name": "HEVY_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-17T14:52:52.134992Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

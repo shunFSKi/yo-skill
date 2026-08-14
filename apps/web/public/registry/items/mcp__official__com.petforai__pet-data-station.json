@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.petforai/pet-data-station",
+  "type": "mcp",
+  "name": "Pet Data Station",
+  "description": "Source-verified pet food regulations, recalls, nutrient standards and species care data.",
+  "author": "com.petforai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/LongJourneyCai/Pet-data-station",
+    "repo": "LongJourneyCai/Pet-data-station"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://petforai.com/mcp/"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-04T07:17:13.852054Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

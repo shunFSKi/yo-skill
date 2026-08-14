@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.CSOAI-ORG/webhook-ai-mcp",
+  "type": "mcp",
+  "name": "webhook-ai-mcp",
+  "description": "Webhook Ai tools for AI agents. Capabilities: validate webhook signature, log webhook event, replay",
+  "author": "io.github.CSOAI-ORG",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/CSOAI-ORG/webhook-ai-mcp",
+    "repo": "CSOAI-ORG/webhook-ai-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "webhook-ai-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-10T04:57:11.131257Z"
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

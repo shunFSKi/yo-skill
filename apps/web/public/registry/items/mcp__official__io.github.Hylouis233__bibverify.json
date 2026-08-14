@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.Hylouis233/bibverify",
+  "type": "mcp",
+  "name": "Bibverify",
+  "description": "Verify and repair BibTeX references with DOI-first MCP tools.",
+  "author": "io.github.Hylouis233",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Hylouis233/bibverify",
+    "repo": "Hylouis233/bibverify"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "bibverify"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T07:46:30.359355Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

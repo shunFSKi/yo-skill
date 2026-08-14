@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.ylytdeng/mcp-imgou",
+  "type": "mcp",
+  "name": "mcp-imgou",
+  "description": "imgou.com social network: send/receive messages, friends, groups, moments for AI agents.",
+  "author": "io.github.ylytdeng",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ylytdeng/imgou-agentim",
+    "repo": "ylytdeng/imgou-agentim"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-imgou"
+    ],
+    "env": [
+      {
+        "name": "AGENTIM_SERVER",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-10T04:54:39.071107Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

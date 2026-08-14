@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.sluyasu/openinsurance-wiki",
+  "type": "mcp",
+  "name": "openinsurance-wiki",
+  "description": "Open, source-cited knowledge base of Belgian insurance products: search, compare, verify, overlaps.",
+  "author": "io.github.sluyasu",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/sluyasu/OpenInsurance",
+    "repo": "sluyasu/OpenInsurance"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "openinsurance-wiki-mcp"
+    ],
+    "env": [
+      {
+        "name": "INSURANCE_WIKI_REPO",
+        "required": true,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-07T20:46:59.055113Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

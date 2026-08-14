@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.Yarmoluk/ckg-nemotron-perplexity",
+  "type": "mcp",
+  "name": "ckg-nemotron-perplexity",
+  "description": "NVIDIA Nemotron + Perplexity Sonar as knowledge graphs — 2 domains, 83 nodes. MCP-native.",
+  "author": "io.github.Yarmoluk",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Yarmoluk/ckg-nemotron-perplexity",
+    "repo": "Yarmoluk/ckg-nemotron-perplexity"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "ckg-nemotron-perplexity"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-22T07:37:05.487821Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

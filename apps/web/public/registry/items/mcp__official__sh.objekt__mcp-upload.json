@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/sh.objekt/mcp-upload",
+  "type": "mcp",
+  "name": "mcp-upload",
+  "description": "Public file storage for AI agents. Upload files and get a permalink back.",
+  "author": "sh.objekt",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/0xLighthouse/objekt-mcp-upload",
+    "repo": "0xLighthouse/objekt-mcp-upload"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@objekt.sh/mcp-upload"
+    ],
+    "env": [
+      {
+        "name": "OBJEKT_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-03T21:11:32.426309Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

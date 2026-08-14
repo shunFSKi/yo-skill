@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.mediawork/mediawork",
+  "type": "mcp",
+  "name": "Mediawork",
+  "description": "Search Mediawork's directory of post-production and distribution vendors, plus FAQ and plans.",
+  "author": "io.mediawork",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/screen-arts/mediawork-mcp",
+    "repo": "screen-arts/mediawork-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.mediawork.io/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-07T08:11:32.146654Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.haiiibin/data-profiler-mcp",
+  "type": "mcp",
+  "name": "data-profiler-mcp",
+  "description": "Profiles CSV/Parquet/Excel/JSON files: schema, stats, quality flags and dtype tips for LLM agents.",
+  "author": "io.github.haiiibin",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/haiiibin/data-profiler-mcp",
+    "repo": "haiiibin/data-profiler-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "data-profiler-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-29T03:32:18.72928Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

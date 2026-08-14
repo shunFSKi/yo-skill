@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.mockzilla/mockzilla-mcp",
+  "type": "mcp",
+  "name": "mockzilla-mcp",
+  "description": "Mockzilla MCP server. Mock any OpenAPI spec locally with Claude, Cursor, or Gemini CLI.",
+  "author": "io.github.mockzilla",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mockzilla/mockzilla-mcp",
+    "repo": "mockzilla/mockzilla-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@mockzilla/mcp"
+    ],
+    "env": [
+      {
+        "name": "MOCKZILLA_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MOCKZILLA_MCP_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MOCKZILLA_MANAGED_PORT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-23T17:46:12.136373Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

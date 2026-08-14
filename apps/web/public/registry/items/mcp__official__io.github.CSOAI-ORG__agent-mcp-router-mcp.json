@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.CSOAI-ORG/agent-mcp-router-mcp",
+  "type": "mcp",
+  "name": "agent-mcp-router-mcp",
+  "description": "Agent MCP Router MCP — one router for the whole MEOK fleet. Holds 62 MEOK MCPs behind one",
+  "author": "io.github.CSOAI-ORG",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/CSOAI-ORG/agent-mcp-router-mcp",
+    "repo": "CSOAI-ORG/agent-mcp-router-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "agent-mcp-router-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-30T03:52:15.48054Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

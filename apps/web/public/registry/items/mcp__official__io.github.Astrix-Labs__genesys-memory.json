@@ -1,0 +1,73 @@
+{
+  "id": "mcp:official/io.github.Astrix-Labs/genesys-memory",
+  "type": "mcp",
+  "name": "genesys-memory",
+  "description": "Open-source causal memory for AI agents: persistent, explainable, MCP-native memory (13 tools).",
+  "author": "io.github.Astrix-Labs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Astrix-Labs/genesys",
+    "repo": "Astrix-Labs/genesys"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "genesys-memory"
+    ],
+    "env": [
+      {
+        "name": "OPENAI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ANTHROPIC_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GENESYS_EMBEDDER",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-19T10:18:15.120916Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

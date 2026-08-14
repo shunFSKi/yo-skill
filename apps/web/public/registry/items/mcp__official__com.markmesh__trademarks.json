@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/com.markmesh/trademarks",
+  "type": "mcp",
+  "name": "MarkMesh",
+  "description": "Trademark search, monitoring and conflict research across 30+ registers, with provenance.",
+  "author": "com.markmesh",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/team-markmesh/mark_mesh_skill",
+    "repo": "team-markmesh/mark_mesh_skill"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://markmesh.com/api/v1/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-03T16:32:26.247289Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

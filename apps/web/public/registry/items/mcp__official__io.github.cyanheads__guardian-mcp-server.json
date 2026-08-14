@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.cyanheads/guardian-mcp-server",
+  "type": "mcp",
+  "name": "guardian-mcp-server",
+  "description": "Guardian Open Platform — search and retrieve full article text from The Guardian archive.",
+  "author": "io.github.cyanheads",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/cyanheads/guardian-mcp-server",
+    "repo": "cyanheads/guardian-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@cyanheads/guardian-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "GUARDIAN_API_KEY",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "MCP_LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-12T07:57:48.021426Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

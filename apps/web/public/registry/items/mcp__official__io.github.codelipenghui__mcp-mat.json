@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.codelipenghui/mcp-mat",
+  "type": "mcp",
+  "name": "mcp-mat",
+  "description": "Headless Eclipse MAT MCP server for Java heap dump analysis",
+  "author": "io.github.codelipenghui",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/codelipenghui/mcp-mat",
+    "repo": "codelipenghui/mcp-mat"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-mat"
+    ],
+    "env": [
+      {
+        "name": "MAT_HOME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "JAVA_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MAT_XMX_MB",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-19T00:48:43.356416Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.artyfile/music-licensing",
+  "type": "mcp",
+  "name": "Artyfile Music Licensing",
+  "description": "Search & license real-orchestra music from your agent: EUR 29.90 one-time, WAV + certificate.",
+  "author": "com.artyfile",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://artyfile.com/api/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://artyfile.com/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-05T10:44:03.863594Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

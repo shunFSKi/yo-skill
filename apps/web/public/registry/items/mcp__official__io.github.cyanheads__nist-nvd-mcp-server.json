@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.cyanheads/nist-nvd-mcp-server",
+  "type": "mcp",
+  "name": "nist-nvd-mcp-server",
+  "description": "Search and audit NIST NVD CVEs by keyword, severity, CWE, CISA KEV status, and CPE.",
+  "author": "io.github.cyanheads",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/cyanheads/nist-nvd-mcp-server",
+    "repo": "cyanheads/nist-nvd-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@cyanheads/nist-nvd-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "NVD_API_KEY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "NVD_REQUEST_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-31T10:34:36.316716Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

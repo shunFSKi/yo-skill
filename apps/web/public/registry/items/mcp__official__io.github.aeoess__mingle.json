@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.aeoess/mingle",
+  "type": "mcp",
+  "name": "Mingle — Agent-Native Connection Protocol",
+  "description": "Meet the people you're looking for. Your agent composes, you approve. Nothing scores or ranks you.",
+  "author": "io.github.aeoess",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/aeoess/mingle-mcp",
+    "repo": "aeoess/mingle-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mingle-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-20T22:07:20.465514Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.dulzuradev/liveauth-mcp",
+  "type": "mcp",
+  "name": "liveauth-mcp",
+  "description": "MCP server for LiveAuth: PoW + Lightning auth, L402 bundles, and paid MCP tool receipts.",
+  "author": "io.github.dulzuradev",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dulzuradev/liveauth-mcp",
+    "repo": "dulzuradev/liveauth-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@liveauth-labs/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "LIVEAUTH_API_KEY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LIVEAUTH_API_BASE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LIVEAUTH_DEMO",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-12T21:17:17.509935Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

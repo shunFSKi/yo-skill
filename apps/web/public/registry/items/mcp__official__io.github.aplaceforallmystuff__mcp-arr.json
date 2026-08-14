@@ -1,0 +1,109 @@
+{
+  "id": "mcp:official/io.github.aplaceforallmystuff/mcp-arr",
+  "type": "mcp",
+  "name": "mcp-arr",
+  "description": "MCP server for *arr media suite - Sonarr, Radarr, Lidarr, Readarr, Prowlarr",
+  "author": "io.github.aplaceforallmystuff",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/aplaceforallmystuff/mcp-arr",
+    "repo": "aplaceforallmystuff/mcp-arr"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-arr-server"
+    ],
+    "env": [
+      {
+        "name": "SONARR_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SONARR_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "RADARR_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RADARR_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "LIDARR_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LIDARR_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "READARR_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "READARR_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PROWLARR_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PROWLARR_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-11-28T10:41:13.807494Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

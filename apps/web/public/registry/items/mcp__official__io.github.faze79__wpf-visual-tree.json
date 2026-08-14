@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.faze79/wpf-visual-tree",
+  "type": "mcp",
+  "name": "wpf-visual-tree",
+  "description": "Let AI agents inspect and drive running WPF apps: tree, bindings, screenshots, clicks, text input.",
+  "author": "io.github.faze79",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/faze79/WPFVisualTreeMcp",
+    "repo": "faze79/WPFVisualTreeMcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "WpfVisualTreeMcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-23T22:51:35.445588Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/org.ventureatlas/venture-atlas",
+  "type": "mcp",
+  "name": "Venture Atlas",
+  "description": "Sourced data on 95+ frontier-industry companies: profiles, dated milestones, funding, daily news.",
+  "author": "org.ventureatlas",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://www.ventureatlas.org/api/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://www.ventureatlas.org/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-29T10:40:28.277965Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

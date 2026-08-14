@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.failed33/paraview-mcp-server",
+  "type": "mcp",
+  "name": "ParaView MCP Server",
+  "description": "Control ParaView through arbitrary Python code",
+  "author": "io.github.failed33",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/failed33/paraview-mcp",
+    "repo": "failed33/paraview-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "paraview-mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T06:30:28.857939Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "<p align=\"center\">\n  <img src=\"Documentation/Images/paraview-mcp-logo.png\" width=\"200\" alt=\"ParaView MCP\">\n</p>\n\n# ParaView MCP\n\n[![CI](https://github.com/failed33/paraview-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/failed33/paraview-mcp/actions/workflows/ci.yml)\n[![PyPI](https://img.shields.io/pypi/v/paraview-mcp-server)](https://pypi.org/project/paraview-mcp-server/)\n[![CodeQL](https://github.com/failed33/paraview-mcp/actions/workflows/codeql.yml/badge.svg)](https://github.com/failed33/paraview-mcp/actions/workflows/codeql.yml)\n[![codecov](https://codecov.io/gh/failed33/paraview-mcp/graph/badge.svg?token=imlWhPGAgh)](https://codecov.io/gh/failed33/paraview-mcp)\n[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)\n\nConnect [ParaView](https://www.paraview.org/) to LLM assistants through the [Model Context Protocol](https://modelcontextprotocol.io/).\n\nThe Python server is built with [FastMCP](https://gofastmcp.com/) 3.x. Support for the\n`2026-07-28` MCP specification is planned once FastMCP 4 reaches a stable release.\n\n`paraview-mcp-server` has two runtime parts:\n\n- a **ParaView plugin** (C++/Qt) that exposes a TCP bridge inside the ParaView GUI\n- a **Python MCP server** that connects to the plugin and serves tools to any MCP client\n\n## Prerequisites\n\n- [ParaView ≥ 5.13](https://www.paraview.org/download/). Pre-built plugins are\n  available for the exact versions and platforms listed below; other ParaView releases\n  require a source build against the matching SDK.\n- [uv](https://docs.astral.sh/uv/)\n\n## Quick Start\n\nFirst [set up the ParaView plugin](#set-up-the-paraview-plugin). Then add the Python\nMCP server to Claude Code in one command:\n\n```bash\nclaude mcp add paraview -- uvx paraview-mcp-server\n```\n\nOpen **Tools > ParaView MCP** in ParaView, start the bridge, and connect from Claude Code.\n\n## Set Up the ParaView Plugin\n\nDownload a pre-built plugin binary from the [latest GitHub Release](https://github.com/failed33/paraview-mcp/releases/latest). Releases provide this matrix:\n\n| Platform | Architecture          | ParaView versions    | Archive   |\n| -------- | --------------------- | -------------------- | --------- |\n| Linux    | x86_64                | 5.13.3, 6.0.1, 6.1.1 | `.tar.gz` |\n| macOS    | arm64 (Apple Silicon) | 5.13.3, 6.0.1, 6.1.1 | `.tar.gz` |\n| Windows  | x64                   | 5.13.3, 6.0.1, 6.1.1 | `.zip`    |\n\nChoose the archive that names your exact ParaView version and platform. Download its\nadjacent `.sha256` file, verify the archive, then extract it and follow the included\n`INSTALL.md`. Pull requests also produce the same binaries as short-lived GitHub Actions\nartifacts; GitHub Releases are the permanent distribution channel.\n\nAlternatively, build the plugin from source against a ParaView 5.13 or newer SDK. See\n[CONTRIBUTING.md](CONTRIBUTING.md) for full build instructions. Binary compatibility is\nrelease-series specific, so use a plugin built for your ParaView major.minor version.\n\nOnce installed:\n\n1. Open **Tools > Manage Plugins** in ParaView.\n2. Click **Load New...** and select `ParaViewMCP.so` (Linux/macOS) or `ParaViewMCP.dll` (Windows) from the plugin directory.\n3. Enable **Auto Load**.\n4. Open **Tools > ParaView MCP**.\n5. Click **Start Server**.\n\nThe ParaView MCP panel shows the connection status and execution history. Non-loopback\nbinds require an auth token.\n\n## Configure Your MCP Client\n\n### Claude Code (CLI)\n\n```bash\nclaude mcp add paraview -- uvx paraview-mcp-server\n```\n\n### Claude Desktop\n\nAdd to your `claude_desktop_config.json`:\n\n```json\n{\n  \"mcpServers\": {\n    \"paraview\": {\n      \"command\": \"uvx\",\n      \"args\": [\"paraview-mcp-server\"]\n    }\n  }\n}\n```\n\n### Other MCP Clients\n\nConfigure a local stdio MCP server with `uvx` as the command and\n`paraview-mcp-server` as its only argument:\n\n```json\n{\n  \"mcpServers\": {\n    \"paraview\": {\n      \"command\": \"uvx\",\n      \"args\": [\"paraview-mcp-server\"]\n    }\n  }\n}\n```\n\nConsult your client's documentation for the location and exact format of its MCP server\nconfiguration.\n\n## Configuration\n\nThe server connects to the ParaView plugin using these environment variables:\n\n| Variable              | Default     | Required          | Description                                          |\n| --------------------- | ----------- | ----------------- | ---------------------------------------------------- |\n| `PARAVIEW_HOST`       | `127.0.0.1` | No                | Host where the ParaView plugin is listening          |\n| `PARAVIEW_PORT`       | `9877`      | No                | TCP port for the plugin bridge                       |\n| `PARAVIEW_AUTH_TOKEN` | —           | Non-loopback only | Authentication token (must match the plugin setting) |\n\nDefaults work for a standard local setup. Override these when connecting to ParaView on a remote machine or non-standard port:\n\n```json\n{\n  \"mcpServers\": {\n    \"paraview\": {\n      \"command\": \"uvx\",\n      \"args\": [\"paraview-mcp-server\"],\n      \"env\": {\n        \"PARAVIEW_HOST\": \"192.168.1.10\",\n        \"PARAVIEW_PORT\": \"9877\",\n        \"PARAVIEW_AUTH_TOKEN\": \"your-token\"\n      }\n    }\n  }\n}\n```\n\n## Available Tools\n\n| Tool                            | Description                                            |\n| ------------------------------- | ------------------------------------------------------ |\n| `execute_paraview_code(code)`   | Execute Python code inside the active ParaView session |\n| `get_pipeline_info()`           | Return a JSON snapshot of the current pipeline         |\n| `get_screenshot(width, height)` | Capture the active render view as a PNG image          |\n\n## Design and Differences from ParaView_MCP\n\nThis project follows the approach of [Blender-MCP](https://github.com/ahujasid/blender-mcp) and [Slicer-MCP](https://github.com/pieper/SlicerMCP), both of which give LLMs direct code execution inside their respective application runtimes.\n\nThe existing [ParaView_MCP](https://github.com/llnl/paraview_mcp) implementation[^1] takes a different approach, exposing a fixed set of high-level tools without access to the underlying Python runtime, which limits flexibility for custom workflows. The major differences are:\n\n1. We provide an `execute_paraview_code` tool that runs arbitrary Python inside the\n   ParaView session. The plugin records each execution and, when ParaView can capture a\n   pipeline snapshot, lets the user restore the state from immediately before that\n   execution. This makes generated scripts easier to inspect, reuse, and adapt for tasks\n   such as batch processing.\n2. Architecturally, [ParaView_MCP's own disclaimer](https://github.com/LLNL/paraview_mcp/blob/30242a0a6768eaf4192529bb78096cfee3292c73/README.md#disclaimer)\n   states that it relies on synchronization between `pvserver` and the ParaView client.\n   That synchronization mechanism is deprecated in recent ParaView versions and can\n   cause incorrect application views and general stability issues. This project instead\n   runs a plugin inside the interactive ParaView process and exposes a TCP bridge,\n   avoiding the `pvserver`/client synchronization path entirely.\n\n[^1]: S. Liu, H. Miao, and P.-T. Bremer, \"Paraview-MCP: Autonomous Visualization Agents with Direct Tool Use,\" in _Proc. IEEE VIS 2025 Short Papers_, IEEE, 2025.\n\n## Contributing\n\nSee [CONTRIBUTING.md](CONTRIBUTING.md) for build instructions, development setup, and pull request guidelines.\n\n## License\n\n[MIT](LICENSE) — see [THIRD-PARTY-NOTICES.txt](THIRD-PARTY-NOTICES.txt) for dependency licenses.\n",
+  "status": "curated"
+}

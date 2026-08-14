@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.CSOAI-ORG/meok-eu-ai-act-art-26-fria-mcp",
+  "type": "mcp",
+  "name": "meok-eu-ai-act-art-26-fria-mcp",
+  "description": "MEOK EU AI Act Article 26(9) Fundamental Rights Impact Assessment generator. Auto-generates FRIA",
+  "author": "io.github.CSOAI-ORG",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/CSOAI-ORG/meok-eu-ai-act-art-26-fria-mcp",
+    "repo": "CSOAI-ORG/meok-eu-ai-act-art-26-fria-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "meok-eu-ai-act-art-26-fria-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-10T04:30:54.164714Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

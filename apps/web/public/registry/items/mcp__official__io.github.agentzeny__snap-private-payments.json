@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.agentzeny/snap-private-payments",
+  "type": "mcp",
+  "name": "SNAP Protocol",
+  "description": "Private agent payments on Solana via ZK proofs: deposit, withdraw, list pools, estimate fees.",
+  "author": "io.github.agentzeny",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/agentzeny/snap-public",
+    "repo": "agentzeny/snap-public"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "snap-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "SNAP_RPC_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "SNAP_POOL_ADDRESS",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "SNAP_RELAYER_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-06T02:45:13.169513Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

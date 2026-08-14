@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.malkreide/swiss-culture-mcp",
+  "type": "mcp",
+  "name": "swiss-culture-mcp",
+  "description": "BAK cultural heritage, ISOS, living traditions, RSS",
+  "author": "io.github.malkreide",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/malkreide/swiss-culture-mcp",
+    "repo": "malkreide/swiss-culture-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "swiss-culture-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-31T15:26:22.565137Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

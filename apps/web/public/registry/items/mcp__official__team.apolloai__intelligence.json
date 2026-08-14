@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/team.apolloai/intelligence",
+  "type": "mcp",
+  "name": "Apollo Intelligence",
+  "description": "36 tools: intel feeds, DeFi, crypto, OSINT, NLP, scraping, proxy. x402 micropayments.",
+  "author": "team.apolloai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/bnmbnmai/mcp-proxy",
+    "repo": "bnmbnmai/mcp-proxy"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@apollo_ai/mcp-proxy"
+    ],
+    "env": [
+      {
+        "name": "APOLLO_API_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-23T07:16:55.169579Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

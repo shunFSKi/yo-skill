@@ -1,0 +1,78 @@
+{
+  "id": "mcp:official/io.github.dontsovcmc/yandex-market-seller",
+  "type": "mcp",
+  "name": "yandex-market-seller",
+  "description": "MCP server for Yandex Market Partner API — orders, offers, prices, stocks, analytics",
+  "author": "io.github.dontsovcmc",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dontsovcmc/mcp-server-yandex-market-seller",
+    "repo": "dontsovcmc/mcp-server-yandex-market-seller"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-server-yandex-market-seller"
+    ],
+    "env": [
+      {
+        "name": "YM_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "YM_CAMPAIGN_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "YM_BUSINESS_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "YM_AUTH_TYPE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-29T21:00:20.484609Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

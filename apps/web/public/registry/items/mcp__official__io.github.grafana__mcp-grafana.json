@@ -1,0 +1,94 @@
+{
+  "id": "mcp:official/io.github.grafana/mcp-grafana",
+  "type": "mcp",
+  "name": "mcp-grafana",
+  "description": "An MCP server giving access to Grafana dashboards, data and more.",
+  "author": "io.github.grafana",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/grafana/mcp-grafana",
+    "repo": "grafana/mcp-grafana"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "docker.io/grafana/mcp-grafana:1.1.0"
+    ],
+    "env": [
+      {
+        "name": "GRAFANA_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "GRAFANA_SERVICE_ACCOUNT_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GRAFANA_USERNAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GRAFANA_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GRAFANA_ORG_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GRAFANA_EXTRA_HEADERS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GRAFANA_FORWARD_HEADERS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T09:41:17.891892Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

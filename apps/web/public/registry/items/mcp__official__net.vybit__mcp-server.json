@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/net.vybit/mcp-server",
+  "type": "mcp",
+  "name": "mcp-server",
+  "description": "Push notifications with personalized sounds - manage and trigger your vybits via MCP",
+  "author": "net.vybit",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/flatirontek/vybit-sdk",
+    "repo": "flatirontek/vybit-sdk"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.vybit.net/v1/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-07T16:16:27.05477Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

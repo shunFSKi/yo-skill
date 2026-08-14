@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/ai.shipeasy/mcp",
+  "type": "mcp",
+  "name": "mcp",
+  "description": "Feature flags, A/B experiments, kill switches, dynamic config & i18n — Shipeasy MCP server.",
+  "author": "ai.shipeasy",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/shipeasy-ai/shipeasy",
+    "repo": "shipeasy-ai/shipeasy"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@shipeasy/mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-27T20:24:33.94008Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

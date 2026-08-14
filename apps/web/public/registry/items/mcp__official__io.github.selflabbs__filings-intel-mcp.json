@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.selflabbs/filings-intel-mcp",
+  "type": "mcp",
+  "name": "Filings Intel MCP",
+  "description": "SEC EDGAR filings for AI agents: company lookup, filings, financials, insider trades. No keys.",
+  "author": "io.github.selflabbs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/selflabbs/filings-intel-mcp",
+    "repo": "selflabbs/filings-intel-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://filings.selflabbs.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-19T07:18:26.247937Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

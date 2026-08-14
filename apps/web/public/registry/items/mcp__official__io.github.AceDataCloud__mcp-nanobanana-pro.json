@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.AceDataCloud/mcp-nanobanana-pro",
+  "type": "mcp",
+  "name": "mcp-nanobanana-pro",
+  "description": "MCP server for NanoBanana AI image generation and editing",
+  "author": "io.github.AceDataCloud",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/AceDataCloud/NanoBananaMCP",
+    "repo": "AceDataCloud/NanoBananaMCP"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-nanobanana-pro"
+    ],
+    "env": [
+      {
+        "name": "ACEDATACLOUD_API_TOKEN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T02:50:17.325752Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

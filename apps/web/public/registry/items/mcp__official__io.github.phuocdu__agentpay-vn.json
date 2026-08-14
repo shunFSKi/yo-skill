@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.phuocdu/agentpay-vn",
+  "type": "mcp",
+  "name": "AgentPay VN",
+  "description": "Let AI agents collect VietQR payments — generate a QR and auto-confirm settlement.",
+  "author": "io.github.phuocdu",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/phuocdu/agentpay-vn",
+    "repo": "phuocdu/agentpay-vn"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "agentpay-vn"
+    ],
+    "env": [
+      {
+        "name": "AGENTPAY_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "AGENTPAY_BASE_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-14T03:01:48.182884Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

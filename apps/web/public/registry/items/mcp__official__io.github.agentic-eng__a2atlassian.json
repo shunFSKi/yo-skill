@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.agentic-eng/a2atlassian",
+  "type": "mcp",
+  "name": "a2atlassian",
+  "description": "Jira & Confluence for AI agents. Pre-configured connections, compact output.",
+  "author": "io.github.agentic-eng",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/agentic-eng/a2atlassian",
+    "repo": "agentic-eng/a2atlassian"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "a2atlassian"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-05T00:16:33.299255Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

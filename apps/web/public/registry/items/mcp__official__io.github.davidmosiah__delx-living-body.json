@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.davidmosiah/delx-living-body",
+  "type": "mcp",
+  "name": "delx-living-body",
+  "description": "Meta-MCP that auto-detects installed wellness connectors and composes them into one body data layer.",
+  "author": "io.github.davidmosiah",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/davidmosiah/delx-living-body",
+    "repo": "davidmosiah/delx-living-body"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "delx-living-body"
+    ],
+    "env": [
+      {
+        "name": "DELX_LIVING_BODY_DETECT_TTL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DELX_LIVING_BODY_NO_CACHE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DELX_LIVING_BODY_CACHE_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DELX_LIVING_BODY_NPM_RUNNER",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-03T12:02:47.483067Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

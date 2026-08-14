@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.zernio/zernio",
+  "type": "mcp",
+  "name": "Zernio",
+  "description": "Schedule, publish, and analyze social media across 15+ platforms, plus inbox, ads, and analytics.",
+  "author": "com.zernio",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/zernio-dev/zernio-python",
+    "repo": "zernio-dev/zernio-python"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.zernio.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-25T09:19:02.105874Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

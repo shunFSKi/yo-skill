@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.tlsradar/tlsradar",
+  "type": "mcp",
+  "name": "TLS Radar",
+  "description": "SSL/TLS scanning, free Let's Encrypt issuance, and certificate-expiry monitoring.",
+  "author": "com.tlsradar",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/TLS-Radar/tlsradar-claude-plugin",
+    "repo": "TLS-Radar/tlsradar-claude-plugin"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://tlsradar.com/api/v1/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-15T12:43:28.972853Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

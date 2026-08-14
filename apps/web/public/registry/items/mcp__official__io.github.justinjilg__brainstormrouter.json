@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.justinjilg/brainstormrouter",
+  "type": "mcp",
+  "name": "BrainstormRouter MCP Server",
+  "description": "AI routing, memory, guardrails, and governance. Routes across Claude, GPT, Gemini.",
+  "author": "io.github.justinjilg",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/justinjilg/brainstormrouter",
+    "repo": "justinjilg/brainstormrouter"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@brainstormrouter/mcp"
+    ],
+    "env": [
+      {
+        "name": "BRAINSTORMROUTER_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-04T18:32:12.190881Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

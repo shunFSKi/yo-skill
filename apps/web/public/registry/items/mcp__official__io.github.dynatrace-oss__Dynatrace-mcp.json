@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.dynatrace-oss/Dynatrace-mcp",
+  "type": "mcp",
+  "name": "Dynatrace-mcp",
+  "description": "[DEPRECATED] Dynatrace MCP Server. Migrate to dynatrace-for-ai or Dynatrace Remote MCP Server.",
+  "author": "io.github.dynatrace-oss",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dynatrace-oss/Dynatrace-mcp",
+    "repo": "dynatrace-oss/Dynatrace-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@dynatrace-oss/dynatrace-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "DT_ENVIRONMENT",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "DT_PLATFORM_TOKEN",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OAUTH_CLIENT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OAUTH_CLIENT_SECRET",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DT_GRAIL_QUERY_BUDGET_GB",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-22T09:23:14.960857Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

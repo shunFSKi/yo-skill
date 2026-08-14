@@ -1,0 +1,83 @@
+{
+  "id": "mcp:official/io.github.freminder/esg-mcp-servers",
+  "type": "mcp",
+  "name": "ESG MCP Servers",
+  "description": "31 MCP tools for ESG data extraction, PDF processing, vector search, and EU regulation analysis.",
+  "author": "io.github.freminder",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/freminder/esg-mcp-servers",
+    "repo": "freminder/esg-mcp-servers"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "esg-mcp-servers"
+    ],
+    "env": [
+      {
+        "name": "ANTHROPIC_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "POSTGRES_DSN",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "MONGODB_URI",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "EMBEDDING_MODEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "EMBEDDING_DIMENSIONS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-28T09:59:45.171386Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

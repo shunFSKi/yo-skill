@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.x402-video/seedance-video-generation",
+  "type": "mcp",
+  "name": "x402 Video — AI Video Generation (pay-per-call, no account)",
+  "description": "Pay-per-call AI video generation (Seedance text-to-video) via x402. USDC on Base, no API key.",
+  "author": "io.github.x402-video",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/x402-video/mcp",
+    "repo": "x402-video/mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "x402-video-mcp"
+    ],
+    "env": [
+      {
+        "name": "BUYER_PRIVATE_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MAX_USD_PER_CALL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GATEWAY_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-12T08:21:53.247802Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

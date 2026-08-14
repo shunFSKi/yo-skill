@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/com.scrapeer/mcp-server",
+  "type": "mcp",
+  "name": "Scrapeer",
+  "description": "Run Scrapeer visual web-scraping flows from AI agents.",
+  "author": "com.scrapeer",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Scrapeer/scrapeer-mcp-server",
+    "repo": "Scrapeer/scrapeer-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@scrapeer/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "SCRAPEER_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-02T23:47:34.22109Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

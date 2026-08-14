@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.pipeworx-io/neso",
+  "type": "mcp",
+  "name": "Neso",
+  "description": "NESO MCP — Great Britain electricity grid open data (api.neso.energy)",
+  "author": "io.github.pipeworx-io",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/pipeworx-io/mcp-neso",
+    "repo": "pipeworx-io/mcp-neso"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://gateway.pipeworx.io/neso/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-15T22:30:18.369314Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

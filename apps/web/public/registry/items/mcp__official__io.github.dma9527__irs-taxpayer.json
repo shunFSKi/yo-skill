@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.dma9527/irs-taxpayer",
+  "type": "mcp",
+  "name": "irs-taxpayer",
+  "description": "39 tax tools for US taxpayers: federal/state tax, credits, deductions, retirement. All local.",
+  "author": "io.github.dma9527",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dma9527/irs-taxpayer-mcp",
+    "repo": "dma9527/irs-taxpayer-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "irs-taxpayer-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-24T19:24:17.047524Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

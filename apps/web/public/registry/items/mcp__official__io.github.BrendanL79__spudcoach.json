@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.BrendanL79/spudcoach",
+  "type": "mcp",
+  "name": "Brotato Coach",
+  "description": "Deterministic Brotato theorycrafter MCP server: facts and math, not guesses.",
+  "author": "io.github.BrendanL79",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/BrendanL79/spud-coach",
+    "repo": "BrendanL79/spud-coach"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "spudcoach"
+    ],
+    "env": [
+      {
+        "name": "SPUDCOACH_DATA",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-07T12:06:51.191253Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

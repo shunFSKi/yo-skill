@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.codespar/mcp-quickbooks",
+  "type": "mcp",
+  "name": "mcp-quickbooks",
+  "description": "MCP server for QuickBooks Online (Intuit) — customers, invoices, payments, items, accounts, P&L",
+  "author": "io.github.codespar",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/codespar/mcp-dev-latam",
+    "repo": "codespar/mcp-dev-latam"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@codespar/mcp-quickbooks"
+    ],
+    "env": [
+      {
+        "name": "QB_ACCESS_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "QB_REALM_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "QB_ENV",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "QB_MINOR_VERSION",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-22T18:50:17.483469Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

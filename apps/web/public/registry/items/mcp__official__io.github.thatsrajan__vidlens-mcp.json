@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.thatsrajan/vidlens-mcp",
+  "type": "mcp",
+  "name": "vidlens-mcp",
+  "description": "Video as a queryable local asset for AI agents — 47 tools for YouTube, social, and local media.",
+  "author": "io.github.thatsrajan",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/thatsrajan/vidlens-mcp",
+    "repo": "thatsrajan/vidlens-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "vidlens-mcp"
+    ],
+    "env": [
+      {
+        "name": "YOUTUBE_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GEMINI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "OPENAI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SCRAPECREATORS_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "BRAVE_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-09T12:27:59.267896Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

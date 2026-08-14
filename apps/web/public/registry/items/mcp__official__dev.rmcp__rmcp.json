@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/dev.rmcp/rmcp",
+  "type": "mcp",
+  "name": "RMCP",
+  "description": "Search remote Model Context Protocol servers and tools discovered by BuiltWith, without an API key.",
+  "author": "dev.rmcp",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://rmcp.dev/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://rmcp.dev/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-25T02:16:51.297658Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

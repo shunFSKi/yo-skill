@@ -1,0 +1,179 @@
+{
+  "id": "mcp:official/io.github.sns45/dear-claude",
+  "type": "mcp",
+  "name": "dear-claude",
+  "description": "Spawn Claude Code instances from 6 platforms when 'Dear Claude' is mentioned.",
+  "author": "io.github.sns45",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/sns45/dear-claude",
+    "repo": "sns45/dear-claude"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "dear-claude"
+    ],
+    "env": [
+      {
+        "name": "DEAR_CLAUDE_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TAILSCALE_HOSTNAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GITHUB_CLIENT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GITHUB_CLIENT_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GITHUB_WEBHOOK_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GITHUB_ACCESS_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GITHUB_APP_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GITHUB_APP_PRIVATE_KEY_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LINEAR_CLIENT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LINEAR_CLIENT_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "LINEAR_WEBHOOK_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "LINEAR_ACCESS_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "JIRA_DOMAIN",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "JIRA_USER_EMAIL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "JIRA_API_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "JIRA_WEBHOOK_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GITLAB_ACCESS_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GITLAB_WEBHOOK_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "NOTION_CLIENT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "NOTION_CLIENT_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "NOTION_ACCESS_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "NOTION_WEBHOOK_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "OBSIDIAN_VAULT_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GIPHY_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-23T14:11:19.334522Z"
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

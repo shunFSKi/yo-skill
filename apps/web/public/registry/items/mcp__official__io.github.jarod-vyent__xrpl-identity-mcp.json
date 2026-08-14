@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.jarod-vyent/xrpl-identity-mcp",
+  "type": "mcp",
+  "name": "xrpl-identity-mcp",
+  "description": "MCP server for XRPL identity: DIDs, credentials, signer lists, and safe transaction workflows.",
+  "author": "io.github.jarod-vyent",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/jarod-vyent/xrpl-identity-mcp",
+    "repo": "jarod-vyent/xrpl-identity-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "xrpl-identity-mcp"
+    ],
+    "env": [
+      {
+        "name": "XRPL_NETWORK",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "XRPL_ENDPOINT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ALLOW_MAINNET_SUBMIT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-08T00:39:10.999429Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

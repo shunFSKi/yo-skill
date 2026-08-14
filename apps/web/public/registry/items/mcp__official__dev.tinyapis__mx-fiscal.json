@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/dev.tinyapis/mx-fiscal",
+  "type": "mcp",
+  "name": "Mexican Payroll & Tax Calculator",
+  "description": "Deterministic Mexican payroll & tax math: finiquito, ISR, aguinaldo, IMSS (2026 tables).",
+  "author": "dev.tinyapis",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://fiscal.tinyapis.dev/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://fiscal.tinyapis.dev/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-22T02:01:22.606284Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

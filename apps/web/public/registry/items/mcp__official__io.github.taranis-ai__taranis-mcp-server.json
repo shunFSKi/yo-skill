@@ -1,0 +1,83 @@
+{
+  "id": "mcp:official/io.github.taranis-ai/taranis-mcp-server",
+  "type": "mcp",
+  "name": "Taranis AI",
+  "description": "Search stories and discover OSINT sources in Taranis AI.",
+  "author": "io.github.taranis-ai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/taranis-ai/taranis-mcp-server",
+    "repo": "taranis-ai/taranis-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "taranis-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "MCP_TRANSPORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TARANIS_API_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "TARANIS_ACCESS_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "TARANIS_USERNAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TARANIS_PASSWORD",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-06T13:51:19.95193Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,65 @@
+{
+  "id": "mcp:official/io.github.lvpiggyqq/xcatcher",
+  "type": "mcp",
+  "name": "Xcatcher — Recent X Posts",
+  "description": "Fetch recent public X/Twitter posts by named handle for monitoring, comparison, OSINT, and research.",
+  "author": "io.github.lvpiggyqq",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/lvpiggyqq/xcatcher-mcp-manifest",
+    "repo": "lvpiggyqq/xcatcher-mcp-manifest"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://xcatcher.top/mcp/",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "Accept",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T23:23:37.245663Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

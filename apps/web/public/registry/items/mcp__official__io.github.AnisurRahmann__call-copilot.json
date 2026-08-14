@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.AnisurRahmann/call-copilot",
+  "type": "mcp",
+  "name": "Call Copilot",
+  "description": "Search and read locally-recorded meeting transcripts over stdio. Read-only, no network.",
+  "author": "io.github.AnisurRahmann",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/AnisurRahmann/call-copilot",
+    "repo": "AnisurRahmann/call-copilot"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "call-copilot"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T12:38:54.200564Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

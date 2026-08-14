@@ -1,0 +1,89 @@
+{
+  "id": "mcp:official/io.github.Sam-AEC/aec-model-bridge",
+  "type": "mcp",
+  "name": "AEC Model Bridge",
+  "description": "Independent MCP integration for Autodesk Revit software through a local bridge.",
+  "author": "io.github.Sam-AEC",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Sam-AEC/aec-model-bridge",
+    "repo": "Sam-AEC/aec-model-bridge"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/Sam-AEC/aec-model-bridge/releases/download/v1.1.0/aec-model-bridge-1.1.0.mcpb"
+    ],
+    "env": [
+      {
+        "name": "MCP_REVIT_WORKSPACE_DIR",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "MCP_REVIT_ALLOWED_DIRECTORIES",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "MCP_REVIT_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_REVIT_BRIDGE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_REVIT_AUDIT_LOG",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_REVIT_LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-11T08:17:37.124108Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

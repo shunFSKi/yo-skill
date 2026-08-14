@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.totalcms/total-cms",
+  "type": "mcp",
+  "name": "Total CMS",
+  "description": "Connect Claude to a self-hosted Total CMS site: search content, read docs, manage with an API key.",
+  "author": "io.github.totalcms",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/totalcms/mcpb",
+    "repo": "totalcms/mcpb"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/totalcms/mcpb/releases/download/v0.1.0/totalcms.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T22:45:03.035215Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": "# Total CMS Desktop Extension (MCPB)\n\nA [Claude Desktop extension](https://www.anthropic.com/engineering/desktop-extensions)\nthat connects Claude to any [Total CMS](https://totalcms.co) site's built-in\nMCP server. Install once, and Claude can search docs, browse content, and\n(with an API key) manage your Total CMS site directly.\n\nThis is a **local bridge**, not a hosted connector: it runs as a small Node\nprocess on your machine and proxies MCP traffic to your site's `/mcp`\nendpoint over HTTPS. That's what lets it attach a custom `X-API-Key` header\nfor authenticated access - something Claude Desktop's built-in remote\nconnectors can't do for servers that advertise optional auth.\n\n## Privacy Policy\n\nThis extension does not collect, transmit, or store any data of its own. It\nopens an HTTPS connection directly from your machine to the Total CMS MCP\nendpoint you configure (default: `https://totalcms.co/mcp`, the official\nTotal CMS docs site) and relays MCP protocol messages between Claude Desktop\nand that endpoint. Your optional API key is stored in your OS's secure\ncredential store (via Claude Desktop's `sensitive: true` config handling) and\nis sent only as an `X-API-Key` request header to the site you configured -\nnever logged, never sent anywhere else.\n\nFor the privacy policy of the Total CMS product and totalcms.co itself, see\n**https://totalcms.co/privacy**.\n\n## Setup\n\n### Zero-config: ask about Total CMS itself\n\nJust install the extension. It defaults to `https://totalcms.co/mcp`, the\nofficial Total CMS documentation server, so Claude can immediately answer\nquestions like \"how do I set up webhooks in Total CMS?\" or \"what schema\nfields does Total CMS support?\" with no configuration.\n\n### Connect to your own site\n\n1. In your Total CMS admin, go to **Settings -> MCP** and copy your site's\n   MCP endpoint URL (it will look like `https://yoursite.com/mcp`, or include\n   a subpath if you installed Total CMS in one).\n2. In Claude Desktop's extension settings for Total CMS, paste that URL into\n   **Total CMS MCP endpoint**.\n3. Reinstall/reconnect. Claude can now browse and search your site's public\n   collections.\n\n### Authenticated (admin) access\n\n1. Generate a Total CMS API key for your site (Settings -> API Keys, or your\n   preferred key-issuing flow).\n2. Paste it into the **API key (optional)** field in the extension settings.\n   It's stored in your OS keychain, not in plain text.\n3. Claude now has admin-level access to your site's MCP tools (schema\n   management, templates, site info, cache clearing, etc.) in addition to\n   public content. Leave this field empty to keep Claude limited to public,\n   anonymous access.\n\n## How it works\n\n`server/index.js` is a small stdio MCP server that Claude Desktop spawns\ndirectly (no Node install required - MCPB bundles include their own\nruntime handling). It opens a\n[streamable HTTP](https://modelcontextprotocol.io/specification/2025-06-18/basic/transports)\nconnection to the `MCP_URL` you configured and forwards every JSON-RPC\nmessage in both directions verbatim: `initialize`, `tools/list`,\n`tools/call`, `resources/*`, `prompts/*`, and all notifications. When\n`API_KEY` is set, every outbound HTTP request carries an `X-API-Key` header.\n\nIt refuses to start unless `MCP_URL` is `https://` - plaintext credentials on\nthe wire are not acceptable, even for local testing.\n\n### Why not `mcp-remote`?\n\nWe spiked it first (see `BUILD-REPORT.md` for the full writeup). Short\nversion: `mcp-remote` unconditionally runs OAuth discovery on startup and,\non any HTTP 401 response, launches a browser-based OAuth authorization flow\nwith no flag to disable it. Total CMS uses a plain API-key header, not OAuth\n- a bad key needs to surface as a clean 401 error to the MCP client, not\nhang behind a browser popup trying to OAuth against a server that doesn't\nimplement it. So this bundle ships a small hand-rolled proxy built directly\non `@modelcontextprotocol/sdk`'s `StreamableHTTPClientTransport` and\n`StdioServerTransport` instead.\n\n## Development\n\n```bash\nnpm install\nnpm run build     # typecheck -> esbuild bundle -> mcpb validate -> mcpb pack\n```\n\nProduces `dist/totalcms.mcpb`. Install by dragging that file onto Claude\nDesktop.\n\n`npm run typecheck` and `npm run validate` are available standalone.\n\n## Security notes\n\n- Zero filesystem access, zero subprocess spawns, outbound HTTPS to exactly\n  one host (whatever `MCP_URL` points at).\n- The API key is read from the `API_KEY` environment variable (set by Claude\n  Desktop from your keychain-stored config) and is never written to stdout,\n  stderr, or any log.\n- `MCP_URL` must be `https://` or the process refuses to start.\n\n## License\n\nSource code is [MIT licensed](LICENSE). The Total CMS name, flame logo, and\nthe bundled `icon.png` are trademarks and are not covered by that grant — you\nmay fork the code, but a redistributed version must not present itself as\npublished or endorsed by Total CMS.\n",
+  "status": "curated"
+}

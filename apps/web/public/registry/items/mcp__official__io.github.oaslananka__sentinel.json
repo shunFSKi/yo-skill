@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.oaslananka/sentinel",
+  "type": "mcp",
+  "name": "MCP Sentinel",
+  "description": "Zero-trust MCP security proxy with policy enforcement, PII scrubbing, approvals, and audit trails.",
+  "author": "io.github.oaslananka",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/oaslananka/mcp-suite",
+    "repo": "oaslananka/mcp-suite"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@oaslananka/sentinel"
+    ],
+    "env": [
+      {
+        "name": "SENTINEL_DB_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SENTINEL_UPSTREAM_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SENTINEL_UPSTREAM_COMMAND",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-08T14:56:06.093007Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

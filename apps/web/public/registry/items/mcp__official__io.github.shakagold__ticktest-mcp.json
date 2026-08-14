@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.shakagold/ticktest-mcp",
+  "type": "mcp",
+  "name": "TickTest — A股量化回测",
+  "description": "A股量化回测 MCP Server——让 AI Agent 用自然语言回测 A 股，说一句秒出结果。单/双均线×任意周期×跨频组合，海龟交易永久免费。",
+  "author": "io.github.shakagold",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers/io.github.shakagold%2Fticktest-mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "ticktest-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-15T07:25:36.004319Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

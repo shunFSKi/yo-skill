@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.gzlo/rise-mcp",
+  "type": "mcp",
+  "name": "rise-mcp",
+  "description": "RISE CRM MCP server — 36 tools across CRM, projects, tickets, finance, sales, HR, and reports.",
+  "author": "io.github.gzlo",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/gzlo/rise-mcp",
+    "repo": "gzlo/rise-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "rise-mcp"
+    ],
+    "env": [
+      {
+        "name": "RISE_API_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "RISE_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-04T13:38:29.998724Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

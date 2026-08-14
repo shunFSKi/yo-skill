@@ -1,0 +1,73 @@
+{
+  "id": "mcp:official/io.github.byteplant-dev/byteplant-mcp",
+  "type": "mcp",
+  "name": "byteplant-mcp",
+  "description": "An MCP server that provides Email, Phone and Address Validation Services from Byteplant",
+  "author": "io.github.byteplant-dev",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/byteplant-dev/byteplant-mcp",
+    "repo": "byteplant-dev/byteplant-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "byteplant-mcp"
+    ],
+    "env": [
+      {
+        "name": "EV_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "AV_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PV_TOKEN",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-12-08T15:00:09.282325Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

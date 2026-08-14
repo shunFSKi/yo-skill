@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.Sra1Phani/domain-finder",
+  "type": "mcp",
+  "name": "Domain Finder",
+  "description": "Check if a brand name is free across domains, GitHub, npm and PyPI, and suggest available names.",
+  "author": "io.github.Sra1Phani",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Sra1Phani/domain-finder",
+    "repo": "Sra1Phani/domain-finder"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://domain-finder-theta.vercel.app/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-19T01:28:09.16568Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

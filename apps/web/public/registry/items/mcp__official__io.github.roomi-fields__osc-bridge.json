@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.roomi-fields/osc-bridge",
+  "type": "mcp",
+  "name": "osc-bridge",
+  "description": "OSC ↔ MIDI bridge — 849 synthesizers and DAWs. A MIDI MCP and OSC MCP for controlling them.",
+  "author": "io.github.roomi-fields",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/roomi-fields/osc-bridge",
+    "repo": "roomi-fields/osc-bridge"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@roomi-fields/osc-bridge"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-14T11:48:16.560542Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

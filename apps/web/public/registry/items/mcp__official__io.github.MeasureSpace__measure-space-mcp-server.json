@@ -1,0 +1,94 @@
+{
+  "id": "mcp:official/io.github.MeasureSpace/measure-space-mcp-server",
+  "type": "mcp",
+  "name": "measure-space-mcp-server",
+  "description": "MCP server for weather, climate, air quality, agriculture, pollen and geocoding from measurespace.io",
+  "author": "io.github.MeasureSpace",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/MeasureSpace/measure-space-mcp-server",
+    "repo": "MeasureSpace/measure-space-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@measurespace/measure-space-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "GEOCODING_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "HOURLY_WEATHER_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "DAILY_WEATHER_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "DAILY_CLIMATE_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "AIR_QUALITY_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "AGRICULTURE_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "POLLEN_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-28T00:26:38.734978Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

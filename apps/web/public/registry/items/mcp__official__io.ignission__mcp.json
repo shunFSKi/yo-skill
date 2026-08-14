@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.ignission/mcp",
+  "type": "mcp",
+  "name": "mcp",
+  "description": "TikTok video data analytics and content strategy tools",
+  "author": "io.ignission",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ignission-io/mcp",
+    "repo": "ignission-io/mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.ignission.io/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-10-29T15:33:36.208188Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

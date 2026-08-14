@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/technology.royalty/royaltea-public",
+  "type": "mcp",
+  "name": "royaltea-public",
+  "description": "Free no-auth game-dev tools: revenue splits with real store cuts, agreement drafts, studio setup.",
+  "author": "technology.royalty",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://api.royalty.technology/api/public-mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.royalty.technology/api/public-mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-22T18:19:33.106532Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/com.finerxfinder/finerx",
+  "type": "mcp",
+  "name": "FineRx",
+  "description": "US Rx price comparison + foreign-brand US-equivalent lookup. Observed prices, read-only.",
+  "author": "com.finerxfinder",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://www.finerxfinder.com/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "finerx-mcp"
+    ],
+    "env": [
+      {
+        "name": "FINERX_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "FINERX_API_BASE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-19T13:25:37.836987Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

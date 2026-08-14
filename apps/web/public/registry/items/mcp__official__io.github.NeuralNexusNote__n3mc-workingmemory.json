@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.NeuralNexusNote/n3mc-workingmemory",
+  "type": "mcp",
+  "name": "N3MemoryCore Lite (Working Memory)",
+  "description": "Ephemeral 7-day hybrid vector+BM25 working memory, multilingual, backed by Redis Stack.",
+  "author": "io.github.NeuralNexusNote",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/NeuralNexusNote/n3mcmcp-lite",
+    "repo": "NeuralNexusNote/n3mcmcp-lite"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "n3memorycore-mcp-lite"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-06T01:11:16.035921Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

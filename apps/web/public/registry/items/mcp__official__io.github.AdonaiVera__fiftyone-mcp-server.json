@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.AdonaiVera/fiftyone-mcp-server",
+  "type": "mcp",
+  "name": "fiftyone-mcp-server",
+  "description": "Control FiftyOne computer vision datasets through AI assistants using 80+ operators.",
+  "author": "io.github.AdonaiVera",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/AdonaiVera/fiftyone-mcp-server",
+    "repo": "AdonaiVera/fiftyone-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "fiftyone-mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-12-20T23:21:32.535887Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

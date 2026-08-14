@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.vmware-skills/vmware-privateai",
+  "type": "mcp",
+  "name": "VMware Private AI (GPU & Model Serving)",
+  "description": "VMware Private AI (NVIDIA): GPU inventory, vGPU profiles, utilization, model serving — 10 tools",
+  "author": "io.github.vmware-skills",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/vmware-skills/VMware-PrivateAI",
+    "repo": "vmware-skills/VMware-PrivateAI"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "vmware-privateai"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T04:21:04.062424Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.form/formio-mcp",
+  "type": "mcp",
+  "name": "formio-mcp",
+  "description": "Create and manage Form.io forms, resources, actions, roles, and projects from your AI agent.",
+  "author": "io.form",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/formio/ai",
+    "repo": "formio/ai"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@formio/mcp"
+    ],
+    "env": [
+      {
+        "name": "FORMIO_PROJECT_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "FORMIO_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "FORMIO_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "FORMIO_LOGIN_FORM",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "FORMIO_INSECURE_TLS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-05T14:03:44.648087Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

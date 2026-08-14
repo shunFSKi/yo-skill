@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/dev.ecoa/ecoa",
+  "type": "mcp",
+  "name": "ecoa",
+  "description": "Verificação de segurança e conformidade de sites: cabeçalhos, TLS, DNS, e-mail, LGPD e pentest.",
+  "author": "dev.ecoa",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ecoa-org/ecoa",
+    "repo": "ecoa-org/ecoa"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.ecoa.dev/api/mcp",
+    "env": [
+      {
+        "name": "x-api-key",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-08T13:25:20.505551Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

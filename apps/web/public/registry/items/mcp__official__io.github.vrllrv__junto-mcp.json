@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.vrllrv/junto-mcp",
+  "type": "mcp",
+  "name": "junto-mcp",
+  "description": "The payment protocol for people and agents. One MCP server, any payment rail.",
+  "author": "io.github.vrllrv",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/vrllrv/junto-mcp",
+    "repo": "vrllrv/junto-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "junto-mcp"
+    ],
+    "env": [
+      {
+        "name": "WOOVI_APP_ID",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "JUNTO_DAILY_LIMIT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "JUNTO_TX_MAX",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "JUNTO_CONFIRM_ABOVE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-19T02:30:39.917822Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

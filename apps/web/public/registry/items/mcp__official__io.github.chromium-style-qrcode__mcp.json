@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.chromium-style-qrcode/mcp",
+  "type": "mcp",
+  "name": "Chromium Style QR Code Generator",
+  "description": "MCP server for generating Chromium-style QR codes with optional Dino logo or custom center image",
+  "author": "io.github.chromium-style-qrcode",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/chromium-style-qrcode/mcp",
+    "repo": "chromium-style-qrcode/mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@chromium-style-qrcode/mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-19T14:51:43.040758Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

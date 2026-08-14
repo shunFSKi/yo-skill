@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.ykastelnik/realevents",
+  "type": "mcp",
+  "name": "realevents",
+  "description": "Create and manage events in seconds from your AI assistant. No account needed.",
+  "author": "io.github.ykastelnik",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ykastelnik/realevents-mcp",
+    "repo": "ykastelnik/realevents-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "realevents-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-07T18:30:18.717487Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

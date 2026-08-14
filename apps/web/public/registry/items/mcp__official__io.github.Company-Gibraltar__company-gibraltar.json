@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.Company-Gibraltar/company-gibraltar",
+  "type": "mcp",
+  "name": "company-gibraltar",
+  "description": "Gibraltar company tools: corporate tax, compliance deadlines, and PDF form generation.",
+  "author": "io.github.Company-Gibraltar",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Company-Gibraltar/company-gibraltar-mcp",
+    "repo": "Company-Gibraltar/company-gibraltar-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "company-gibraltar-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-24T20:13:50.221834Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

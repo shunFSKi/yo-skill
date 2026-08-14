@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/ai.smithery/LinkupPlatform-linkup-mcp-server",
+  "type": "mcp",
+  "name": "LinkupPlatform-linkup-mcp-server",
+  "description": "Search the web in real time to get trustworthy, source-backed answers. Find the latest news and co…",
+  "author": "ai.smithery",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/LinkupPlatform/linkup-mcp-server",
+    "repo": "LinkupPlatform/linkup-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://server.smithery.ai/@LinkupPlatform/linkup-mcp-server/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-10-27T11:25:12.402429Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

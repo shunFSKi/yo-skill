@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.matematicsolutions/my-eli-mcp",
+  "type": "mcp",
+  "name": "my-eli-mcp",
+  "description": "MCP server for Laws of Malaysia Online: fetch and cite Malaysian principal Acts.",
+  "author": "io.github.matematicsolutions",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/matematicsolutions/my-eli-mcp",
+    "repo": "matematicsolutions/my-eli-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "my-eli-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-07T08:30:41.824907Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

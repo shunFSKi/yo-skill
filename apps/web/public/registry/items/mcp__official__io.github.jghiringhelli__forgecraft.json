@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.jghiringhelli/forgecraft",
+  "type": "mcp",
+  "name": "ForgeCraft",
+  "description": "Production engineering standards for AI coding assistants. Setup once, remove when done.",
+  "author": "io.github.jghiringhelli",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/jghiringhelli/forgecraft-mcp",
+    "repo": "jghiringhelli/forgecraft-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "forgecraft-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-24T23:16:38.007435Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

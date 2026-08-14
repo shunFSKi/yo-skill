@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.Shweta-Mishra-ai/tokenmizer",
+  "type": "mcp",
+  "name": "tokenmizer",
+  "description": "Graph-backed session memory for LLMs: checkpoint, resume, file analysis, token-savings stats.",
+  "author": "io.github.Shweta-Mishra-ai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Shweta-Mishra-ai/tokenmizer",
+    "repo": "Shweta-Mishra-ai/tokenmizer"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "tokenmizer"
+    ],
+    "env": [
+      {
+        "name": "TOKENMIZER_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TOKENMIZER_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-04T19:09:14.385242Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

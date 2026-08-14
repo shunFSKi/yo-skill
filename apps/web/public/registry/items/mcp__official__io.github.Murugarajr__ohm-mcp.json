@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.Murugarajr/ohm-mcp",
+  "type": "mcp",
+  "name": "ohm-mcp",
+  "description": "AST-based Python refactoring MCP server with safe automated refactorings and rollback",
+  "author": "io.github.Murugarajr",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Murugarajr/ohm-mcp",
+    "repo": "Murugarajr/ohm-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ohm-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-01-24T17:47:52.825492Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

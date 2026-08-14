@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.sgateway/s-gw",
+  "type": "mcp",
+  "name": "s-gw",
+  "description": "Keep credentials out of AI coding agents with local approvals, scoped injection, and audit trails.",
+  "author": "io.github.sgateway",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/sgateway/s-gw",
+    "repo": "sgateway/s-gw"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@s-gw/s-gw"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T07:14:34.415935Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

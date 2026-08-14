@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.voice-school/singing-vocal-lesson-booking",
+  "type": "mcp",
+  "name": "Voice School Lesson Booking",
+  "description": "Request online singing lessons with Voice School and Daria Klishina.",
+  "author": "com.voice-school",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/klishinoleg/voice",
+    "repo": "klishinoleg/voice"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.voice-school.com/singing-vocal-lesson-booking/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-07T23:57:45.896576Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

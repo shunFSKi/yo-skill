@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.salehrifai42/qtm4j-mcp-server",
+  "type": "mcp",
+  "name": "qtm4j-mcp-server",
+  "description": "MCP server for QMetry Test Management for Jira (QTM4J): test cases, cycles, executions, plans.",
+  "author": "io.github.salehrifai42",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/salehrifai42/qmetrymcp",
+    "repo": "salehrifai42/qmetrymcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "qtm4j-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "QTM4J_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "QTM4J_REGION",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-29T16:49:33.140899Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

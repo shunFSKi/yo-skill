@@ -1,0 +1,83 @@
+{
+  "id": "mcp:official/io.github.NabheetCloud/wa-chat-reader",
+  "type": "mcp",
+  "name": "WhatsApp Chat Reader (Unofficial)",
+  "description": "Unofficial read-only MCP server for your local WhatsApp chat history (stays on your machine).",
+  "author": "io.github.NabheetCloud",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/NabheetCloud/wa-chat-reader",
+    "repo": "NabheetCloud/wa-chat-reader"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "wa-chat-reader"
+    ],
+    "env": [
+      {
+        "name": "WHATSAPP_DB_PATHS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WHATSAPP_BACKUP_PATHS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WHATSAPP_MAX_DAYS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WHATSAPP_DEBUG",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WHATSAPP_LOG_FILE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-05T14:37:08.423267Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

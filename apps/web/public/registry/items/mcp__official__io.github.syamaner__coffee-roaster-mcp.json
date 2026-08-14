@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.syamaner/coffee-roaster-mcp",
+  "type": "mcp",
+  "name": "RoastPilot",
+  "description": "RoastPilot controls coffee roasting sessions through local stdio MCP tools and exports logs.",
+  "author": "io.github.syamaner",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/syamaner/coffee-roaster-mcp",
+    "repo": "syamaner/coffee-roaster-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "coffee-roaster-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-13T01:11:28.784929Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

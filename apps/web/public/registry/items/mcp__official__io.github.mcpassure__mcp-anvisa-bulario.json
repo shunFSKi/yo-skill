@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.mcpassure/mcp-anvisa-bulario",
+  "type": "mcp",
+  "name": "MCP Bulário ANVISA",
+  "description": "Consulta o Bulário Eletrônico da ANVISA: bulas, registros, tarjas e apresentações.",
+  "author": "io.github.mcpassure",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mcpassure/mcp-anvisa-bulario",
+    "repo": "mcpassure/mcp-anvisa-bulario"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@mcpassure/mcp-anvisa-bulario"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-15T20:11:23.507247Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

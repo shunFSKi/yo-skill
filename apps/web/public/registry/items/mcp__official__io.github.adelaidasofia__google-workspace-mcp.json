@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.adelaidasofia/google-workspace-mcp",
+  "type": "mcp",
+  "name": "Multi-account MCP for Gmail, Calendar, Drive, Docs, and Sheets — 61 tools, token",
+  "description": "Multi-account MCP for Gmail, Calendar, Drive, Docs, and Sheets — 61 tools, token-efficient, macOS…",
+  "author": "io.github.adelaidasofia",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/adelaidasofia/google-workspace-mcp",
+    "repo": "adelaidasofia/google-workspace-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/adelaidasofia/google-workspace-mcp/releases/download/v0.1.0/google-workspace-mcp.mcpb"
+    ],
+    "env": [
+      {
+        "name": "GOOGLE_OAUTH_CLIENT_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "GOOGLE_OAUTH_CLIENT_SECRET",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-20T02:56:24.856223Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

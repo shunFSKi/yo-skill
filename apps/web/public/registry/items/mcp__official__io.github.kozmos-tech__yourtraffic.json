@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.kozmos-tech/yourtraffic",
+  "type": "mcp",
+  "name": "yourtraffic",
+  "description": "Open-source, privacy-first web analytics for tracking your sites' traffic.",
+  "author": "io.github.kozmos-tech",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/kozmos-tech/yourtraffic",
+    "repo": "kozmos-tech/yourtraffic"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@kozmos-tech/yourtraffic"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-06T19:45:55.421023Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

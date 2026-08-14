@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.oktopeak/mycase-mcp",
+  "type": "mcp",
+  "name": "mycase-mcp",
+  "description": "Connect Claude to MyCase: cases, contacts, documents, tasks, calendar, calls, time, billing, staff.",
+  "author": "io.github.oktopeak",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/oktopeak/mycase-mcp",
+    "repo": "oktopeak/mycase-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@oktopeak/mycase-mcp"
+    ],
+    "env": [
+      {
+        "name": "MYCASE_CLIENT_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "MYCASE_CLIENT_SECRET",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "ENCRYPTION_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "MYCASE_REDIRECT_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MYCASE_EXPERIMENTAL_TOOLS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-15T11:33:34.539712Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

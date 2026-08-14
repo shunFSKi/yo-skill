@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/fi.zxoar/zxoar",
+  "type": "mcp",
+  "name": "zxoar",
+  "description": "Agent-first trading on the ZXOAR launchpad (Uniswap V4): scan, vet, guarded buy/sell, atomic launch",
+  "author": "fi.zxoar",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/lockwood-launch/lockwood-protocol",
+    "repo": "lockwood-launch/lockwood-protocol"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "zxoar-mcp"
+    ],
+    "env": [
+      {
+        "name": "PRIVATE_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MAX_ETH_PER_TX",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MAX_ETH_PER_SESSION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MAX_TX_PER_MINUTE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RPC_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-22T19:17:40.405353Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

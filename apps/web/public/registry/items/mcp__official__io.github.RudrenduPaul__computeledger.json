@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.RudrenduPaul/computeledger",
+  "type": "mcp",
+  "name": "computeledger",
+  "description": "Signs, hash-chains, and verifies compute usage receipts via an MCP server, no issuer trust required.",
+  "author": "io.github.RudrenduPaul",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/RudrenduPaul/ComputeLedger",
+    "repo": "RudrenduPaul/ComputeLedger"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "computeledger-cli"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-11T01:07:11.425861Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

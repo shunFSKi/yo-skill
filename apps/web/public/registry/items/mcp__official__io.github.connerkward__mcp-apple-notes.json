@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.connerkward/mcp-apple-notes",
+  "type": "mcp",
+  "name": "Apple Notes",
+  "description": "Semantic search + connection-discovery across your own Apple Notes (bridges, synthesis).",
+  "author": "io.github.connerkward",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/connerkward/mcp-apple-notes",
+    "repo": "connerkward/mcp-apple-notes"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/connerkward/mcp-apple-notes/releases/download/v1.0.2/mcp-apple-notes.mcpb"
+    ],
+    "env": [
+      {
+        "name": "OPENAI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SYNTH_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SYNTH_MODEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-17T01:57:17.356858Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/ai.smithery/mayla-debug-mcp-google-calendar2",
+  "type": "mcp",
+  "name": "mayla-debug-mcp-google-calendar2",
+  "description": "Schedule and manage Google Calendar events directly from your workspace. Check availability, view…",
+  "author": "ai.smithery",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mayla-debug/mcp-google-calendar2",
+    "repo": "mayla-debug/mcp-google-calendar2"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://server.smithery.ai/@mayla-debug/mcp-google-calendar2/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-10-07T11:08:53.670394Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

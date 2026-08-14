@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.wisesheets/wisesheets",
+  "type": "mcp",
+  "name": "Wisesheets Financial Data",
+  "description": "Financial statements, metrics, dividends, and price data for public companies.",
+  "author": "io.wisesheets",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.wisesheets.io/v1/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.wisesheets.io/v1/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-30T00:31:18.770907Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

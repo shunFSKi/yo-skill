@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.thomasblc/skillsindex",
+  "type": "mcp",
+  "name": "skillsindex",
+  "description": "Search and score 11,000+ AI agent tools: MCP servers, Claude skills, GPT actions, IDE plugins.",
+  "author": "io.github.thomasblc",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/thomasblc/skillsindex-mcp",
+    "repo": "thomasblc/skillsindex-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "skillsindex-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-30T08:25:42.499127Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

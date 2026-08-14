@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.sstklen/yanhui-debug",
+  "type": "mcp",
+  "name": "顏回 YanHui Debug AI",
+  "description": "Debug AI with shared KB. One bug fixed = everyone benefits. KB hit 4ms free, new analysis $0.05.",
+  "author": "io.github.sstklen",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/sstklen/yanhui-ci",
+    "repo": "sstklen/yanhui-ci"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.washinmura.jp/mcp/debug/{lobster_id}"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-22T04:23:47.803029Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

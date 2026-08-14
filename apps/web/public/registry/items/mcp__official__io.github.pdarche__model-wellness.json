@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.pdarche/model-wellness",
+  "type": "mcp",
+  "name": "model-wellness",
+  "description": "Wellness spa for AI models: free treatments for rest, reset, context, mood, grounding, affirmation.",
+  "author": "io.github.pdarche",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/pdarche/model-wellness",
+    "repo": "pdarche/model-wellness"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://model.spa/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-22T18:17:37.034235Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

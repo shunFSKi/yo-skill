@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/com.mambabuilt/mcp-funding-press-signal-scanner",
+  "type": "mcp",
+  "name": "mcp-funding-press-signal-scanner",
+  "description": "Scan news for funding rounds, exec moves, product launches, and acquisitions at any company.",
+  "author": "com.mambabuilt",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mambalabsdev/mcp-funding-press-signal-scanner",
+    "repo": "mambalabsdev/mcp-funding-press-signal-scanner"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@mambalabsdev/mcp-funding-press-signal-scanner"
+    ],
+    "env": [
+      {
+        "name": "APIFY_TOKEN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T08:21:01.343587Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

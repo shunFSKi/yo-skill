@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.imbenrabi/financial-modeling-prep-mcp-server",
+  "type": "mcp",
+  "name": "Financial Modeling Prep MCP Server",
+  "description": "MCP server for Financial Modeling Prep API with 250+ financial data tools",
+  "author": "io.github.imbenrabi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/imbenrabi/Financial-Modeling-Prep-MCP-Server",
+    "repo": "imbenrabi/Financial-Modeling-Prep-MCP-Server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "financial-modeling-prep-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "FMP_ACCESS_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DYNAMIC_TOOL_DISCOVERY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "FMP_TOOL_SETS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-02T17:26:29.184557Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/com.meetdewey/dewey",
+  "type": "mcp",
+  "name": "Dewey",
+  "description": "Agentic search over your Dewey document collections from any MCP-compatible client.",
+  "author": "com.meetdewey",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/meetdewey/mcp",
+    "repo": "meetdewey/mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@meetdewey/mcp"
+    ],
+    "env": [
+      {
+        "name": "DEWEY_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "DEWEY_COLLECTION_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DEWEY_API_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-26T19:14:19.771465Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

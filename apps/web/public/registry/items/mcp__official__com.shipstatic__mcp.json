@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/com.shipstatic/mcp",
+  "type": "mcp",
+  "name": "ShipStatic",
+  "description": "Deploy static websites from AI agents. Free at mcp.shipstatic.com, or run it locally.",
+  "author": "com.shipstatic",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/shipstatic/mcp",
+    "repo": "shipstatic/mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@shipstatic/mcp"
+    ],
+    "env": [
+      {
+        "name": "SHIP_TOKEN",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T00:32:56.988783Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "# ShipStatic MCP\n\n**One URL. Your agent ships.**\n\nGive your AI a publish button for the internet: ask it to put your site online, and get back a real, shareable link in seconds. Landing pages, prototypes, portfolios — any static site.\n\n[![smithery badge](https://smithery.ai/badge/shipstatic/ship)](https://smithery.ai/servers/shipstatic/ship)\n[![glama badge](https://img.shields.io/badge/glama-MCP%20server-1f7ade)](https://glama.ai/mcp/servers/shipstatic/mcp)\n\nOne product, two doors in. Drop `https://mcp.shipstatic.com` into any MCP client — no install, no signup, no API key — and connect your account when your client asks: the full toolset, custom domains, sites that never expire. Install `@shipstatic/mcp` when your agent needs to deploy a folder on your own machine, when you'd rather configure a token once than sign in, or when your client doesn't speak OAuth yet — the same fifteen tools, reached the other way.\n\n## Hosted — nothing to install\n\nDrop `https://mcp.shipstatic.com` into any MCP client. No install, no signup, no API key — your agent can publish a website in its next message.\n\n```\nhttps://mcp.shipstatic.com\n```\n\n### Claude Code\n\n```bash\nclaude mcp add --transport http shipstatic https://mcp.shipstatic.com\n```\n\n### Claude Desktop and claude.ai\n\n**Settings → Connectors → Add custom connector**, paste `https://mcp.shipstatic.com`, save.\n\n### Cursor, Antigravity, Windsurf, Zed — anywhere with `mcp.json`\n\n```json\n{\n  \"mcpServers\": {\n    \"shipstatic\": {\n      \"url\": \"https://mcp.shipstatic.com\"\n    }\n  }\n}\n```\n\n### Then just ask\n\n> \"Put my site online.\"\n\nYour agent publishes the files and answers with two links:\n\n- **The live site** — a real URL you can share right away.\n- **A claim link** — the site stays live for 3 days; open the claim link to keep it forever. A free account is all it takes.\n\nWant the site private? Ask for a password — visitors must enter it before they can see anything.\n\n### Then connect, if you want more\n\nEverything above works with no account at all. Connect one when your client offers to sign you in, and the same URL answers with the rest: everything you've shipped, your own domains, and sites that stay up permanently. Nothing to install, no key to paste — your client starts the sign-in itself.\n\n## Local — the same tools, from your own machine\n\nInstall this package when your agent needs to deploy **a folder on your own machine** — the hosted endpoint takes files inline, so it has no path to read from — when you'd rather configure a token once than sign in, or when your MCP client doesn't speak OAuth yet.\n\nThe config asks for one thing: `SHIP_TOKEN`. **Its value is your API key** — one credential, two names. The console mints it as an *API key* (it looks like `ship-...`), and the setting that carries it is called the *token*. Get yours free at [my.shipstatic.com/api-key](https://my.shipstatic.com/api-key), paste it where the snippets below show `ship-...`, and every site you publish lands in your account, never expires, and gets bigger limits.\n\nThe key is optional: leave it out and the local server behaves like the hosted endpoint with no account connected (public sites, claim links, live for 3 days).\n\nThe server runs with `npx`, which ships with [Node.js](https://nodejs.org) (20.19 or newer).\n\n### Claude Code\n\n```bash\nclaude mcp add shipstatic -e SHIP_TOKEN=ship-... -- npx -y @shipstatic/mcp\n```\n\n### Cursor\n\nAdd to `~/.cursor/mcp.json`:\n\n```json\n{\n  \"mcpServers\": {\n    \"shipstatic\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@shipstatic/mcp\"],\n      \"env\": { \"SHIP_TOKEN\": \"ship-...\" }\n    }\n  }\n}\n```\n\n### Antigravity\n\nAdd to `~/.gemini/antigravity/mcp_config.json`:\n\n```json\n{\n  \"mcpServers\": {\n    \"shipstatic\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@shipstatic/mcp\"],\n      \"env\": { \"SHIP_TOKEN\": \"ship-...\" }\n    }\n  }\n}\n```\n\n### Windsurf, Zed, and other MCP clients\n\nSame config shape — `npx -y @shipstatic/mcp`, with `SHIP_TOKEN` in `env`. Works with any MCP-compatible client.\n\n### VS Code\n\nPrefer an editor extension? [ShipStatic for VS Code](https://marketplace.visualstudio.com/items?itemName=shipstatic.shipstatic) has this server built in — no config at all.\n\n## Tools\n\nAll fifteen tools are on both doors. `deployments_upload` is the one that needs no account; connect on the hosted endpoint or set `SHIP_TOKEN` locally and the other fourteen answer too.\n\n### Deployments\n\n| Tool | Description |\n|------|-------------|\n| `deployments_upload` | Publish files and get a live URL instantly, optionally protected by a password |\n| `deployments_list` | List all deployments with their URLs, status, labels, and password protection state. Pages with `limit` and `cursor` |\n| `deployments_get` | Get deployment details including URL, status, file count, size, labels, and password protection state |\n| `deployments_set` | Update the labels on a deployment for organization and filtering |\n| `deployments_delete` | Permanently delete a deployment and all its files |\n\n### Domains\n\n| Tool | Description |\n|------|-------------|\n| `domains_set` | Connect a custom domain to your site, switch deployments, or update labels |\n| `domains_list` | List all domains with their linked deployment and verification status. Pages with `limit` and `cursor` |\n| `domains_get` | Get domain details including linked deployment, verification status, and labels |\n| `domains_records` | Get the DNS records you need to configure at your DNS provider |\n| `domains_dns` | Look up which DNS provider hosts a domain (e.g. Cloudflare, Namecheap) |\n| `domains_share` | Get a shareable link so someone else can see the required DNS records |\n| `domains_validate` | Check if a domain name is valid and available before connecting it |\n| `domains_verify` | Check if DNS is configured correctly after you set up the records |\n| `domains_delete` | Permanently disconnect and delete a custom domain |\n\n### Account\n\n| Tool | Description |\n|------|-------------|\n| `whoami` | Get your account details including email, plan, and usage |\n\n### Paging long lists\n\n`deployments_list` and `domains_list` accept `limit` and `cursor`. Each response carries a `cursor` — pass it back to fetch the next page; `null` means you are on the last one.\n\n### Retrying a deploy safely\n\n`deployments_upload` accepts an `idempotencyKey`. If a deploy times out you cannot tell \"it never landed\" from \"it landed and the response was lost\", and retrying without a key creates a second site. Send the same key on the retry and the original deployment is returned instead.\n\nKey the *attempt*, not the try — a run id, a commit sha, or a uuid generated before the first call. A key that changes on every retry does nothing.\n\n### Deployments that clean themselves up\n\n`deployments_upload` accepts a `ttl` in seconds. The deployment expires when the time is up and the platform reclaims it — handy for previews and throwaway iterations you would otherwise have to remember to delete.\n\n```json\n{ \"path\": \"/path/to/dist\", \"ttl\": 3600 }\n```\n\nIt needs `SHIP_TOKEN` (your API key): a keyless deploy already expires on the platform's schedule, so a `ttl` on one is refused rather than ignored. A deployment carrying a `ttl` cannot be linked to a custom domain — deploy without one when the site needs a domain.\n\n## Registry\n\nPublished to the [MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers?search=com.shipstatic/mcp) as `com.shipstatic/mcp`. Registry-aware clients see both the hosted endpoint and the local install and pick whichever fits their environment.\n\n## License\n\nMIT\n",
+  "status": "curated"
+}

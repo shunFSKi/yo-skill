@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.alice51849/lumi-app-finder",
+  "type": "mcp",
+  "name": "Lumi App Finder",
+  "description": "Find iOS apps by task across 29 live apps and 50 Apple locales, with direct App Store links.",
+  "author": "io.github.alice51849",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/alice51849/lumi-mcp",
+    "repo": "alice51849/lumi-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/alice51849/lumi-mcp/releases/download/v1.1.3/lumi-app-finder.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-22T02:08:38.306039Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

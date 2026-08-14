@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.ecfaria/todoist-mcp",
+  "type": "mcp",
+  "name": "todoist-mcp",
+  "description": "MCP server for Todoist task management integration",
+  "author": "io.github.ecfaria",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ecfaria/todoist-mcp",
+    "repo": "ecfaria/todoist-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@ecfaria/todoist-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "YOUR_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-01-04T14:06:51.089029Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

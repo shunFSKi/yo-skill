@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.t-khush/menlo-labs-shopping-mcp",
+  "type": "mcp",
+  "name": "Menlo Labs Shopping MCP",
+  "description": "Search Amazon products by price and rating, or build curated shopping kits for any goal.",
+  "author": "io.github.t-khush",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/t-khush/shopping-mcp",
+    "repo": "t-khush/shopping-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://menlolabs.dev/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-12T03:18:20.802027Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

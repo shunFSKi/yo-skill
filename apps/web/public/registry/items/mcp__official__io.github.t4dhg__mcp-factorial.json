@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.t4dhg/mcp-factorial",
+  "type": "mcp",
+  "name": "MCP FactorialHR",
+  "description": "Full CRUD MCP server for FactorialHR: employees, teams, time off, projects, ATS, payroll.",
+  "author": "io.github.t4dhg",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/t4dhg/mcp-factorial",
+    "repo": "t4dhg/mcp-factorial"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@t4dhg/mcp-factorial"
+    ],
+    "env": [
+      {
+        "name": "FACTORIAL_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "FACTORIAL_API_VERSION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "FACTORIAL_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "FACTORIAL_MAX_RETRIES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DEBUG",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-12-30T19:00:46.730883Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

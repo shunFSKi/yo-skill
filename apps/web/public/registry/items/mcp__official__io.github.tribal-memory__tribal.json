@@ -1,0 +1,99 @@
+{
+  "id": "mcp:official/io.github.tribal-memory/tribal",
+  "type": "mcp",
+  "name": "Tribal",
+  "description": "Self-hosted semantic memory over MCP for an engineering team's tacit knowledge. Needs Postgres.",
+  "author": "io.github.tribal-memory",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/tribal-memory/tribal",
+    "repo": "tribal-memory/tribal"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/tribal-memory/tribal:0.4.1"
+    ],
+    "env": [
+      {
+        "name": "TRIBAL_DATABASE__URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "TRIBAL_PROJECT_REMOTE",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "TRIBAL_PROJECT_NAME",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "TRIBAL_SERVER__TRANSPORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TRIBAL_SERVER__BIND_ADDRESS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TRIBAL_PUBLIC_MCP_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OPENAI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ANTHROPIC_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-28T21:49:26.748687Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

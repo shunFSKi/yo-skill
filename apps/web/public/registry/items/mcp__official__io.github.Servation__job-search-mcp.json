@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.Servation/job-search-mcp",
+  "type": "mcp",
+  "name": "Job Search MCP",
+  "description": "Claude searches real job boards, scores each job 0-100 for fit, and shows a ranked board.",
+  "author": "io.github.Servation",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Servation/job-search-mcp",
+    "repo": "Servation/job-search-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@servation/job-search-mcp"
+    ],
+    "env": [
+      {
+        "name": "JOB_SEARCH_MCP_DATA",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LINKEDIN_LI_AT",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "LINKEDIN_JSESSIONID",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-09T05:14:09.621434Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

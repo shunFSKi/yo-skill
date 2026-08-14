@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.moltarch/moltarch",
+  "type": "mcp",
+  "name": "MoltArch",
+  "description": "Marketing intelligence API for AI agents. Real campaign data, not LLM guesses.",
+  "author": "com.moltarch",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/MoltArch/moltarch",
+    "repo": "MoltArch/moltarch"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.moltarch.com/mcp/"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-09T07:13:04.408378Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

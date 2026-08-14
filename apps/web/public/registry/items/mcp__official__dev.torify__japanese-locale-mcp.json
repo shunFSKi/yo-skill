@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/dev.torify/japanese-locale-mcp",
+  "type": "mcp",
+  "name": "Torify — Japan Locale APIs for AI Agents",
+  "description": "39 Japanese locale APIs — wareki, NTA invoice, 法人番号, postal, romanization, kanji-kana (Workers AI).",
+  "author": "dev.torify",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/endennn/torify-examples",
+    "repo": "endennn/torify-examples"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://torify-mcp.torify.workers.dev"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-18T13:49:32.927718Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

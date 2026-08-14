@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.3121n/nve-mcp",
+  "type": "mcp",
+  "name": "nve-mcp",
+  "description": "Norwegian flood & landslide hazard data from NVE, by WGS84 coordinate.",
+  "author": "io.github.3121n",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/3121n/nor-data-nve-mcp",
+    "repo": "3121n/nor-data-nve-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@nor-data/nve-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-07T21:06:09.065171Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

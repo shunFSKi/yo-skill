@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.AccelByte/ags-api-mcp-server",
+  "type": "mcp",
+  "name": "AGS API",
+  "description": "Stateless MCP server for AccelByte Gaming Services APIs with OpenAPI integration",
+  "author": "io.github.AccelByte",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/AccelByte/ags-api-mcp-server",
+    "repo": "AccelByte/ags-api-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://{studio}-{game}.prod.gamingservices.accelbyte.io/mcp/{studio}-{game}"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-13T08:31:21.089315Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.ruscrape/russia-access",
+  "type": "mcp",
+  "name": "Russian Web Data Access for AI Agents",
+  "description": "Fetch any Russian website or API via a Russian IP — flagship tool fetch_ru. Pay x402/RUB.",
+  "author": "com.ruscrape",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://ruscrape.com/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://ruscrape.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-15T15:23:06.01576Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

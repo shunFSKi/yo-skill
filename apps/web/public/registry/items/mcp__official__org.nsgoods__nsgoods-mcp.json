@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/org.nsgoods/nsgoods-mcp",
+  "type": "mcp",
+  "name": "nsgoods-mcp",
+  "description": "Signed x402 pay-per-call MCP: crypto signals, agent trust, regime, GEO & solar — free preview each.",
+  "author": "org.nsgoods",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers/org.nsgoods%2Fnsgoods-mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "nsgoods-mcp"
+    ],
+    "env": [
+      {
+        "name": "EVM_PRIVATE_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-12T14:05:03.808799Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

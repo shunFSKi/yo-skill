@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.Capmus-Team/capmus-mcp",
+  "type": "mcp",
+  "name": "capmus-mcp",
+  "description": "Search listings, message posters, and create draft posts on Capmus, the university marketplace",
+  "author": "io.github.Capmus-Team",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Capmus-Team/supost-mcp",
+    "repo": "Capmus-Team/supost-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.capmus.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-11T03:26:53.659014Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

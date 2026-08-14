@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.JayOfemi/byakugan",
+  "type": "mcp",
+  "name": "byakugan",
+  "description": "Private, on-device AI-text analysis including detection, AI-tell spans, and reuse overlap.",
+  "author": "io.github.JayOfemi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/JayOfemi/byakugan",
+    "repo": "JayOfemi/byakugan"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@jayofemi/ai-checker"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-29T00:24:30.137086Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

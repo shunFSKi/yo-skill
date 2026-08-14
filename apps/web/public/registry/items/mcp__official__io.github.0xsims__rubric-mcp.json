@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.0xsims/rubric-mcp",
+  "type": "mcp",
+  "name": "rubric-mcp",
+  "description": "Attested evidence tools for AI agents: sanctions screening, agent/wallet records, paid via x402.",
+  "author": "io.github.0xsims",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/0xsims/rubric-mcp",
+    "repo": "0xsims/rubric-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@rubric-protocol/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "RUBRIC_WALLET_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "RUBRIC_X402_DAILY_LIMIT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RUBRIC_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "RUBRIC_MCP_MODULES",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-28T01:47:55.786346Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

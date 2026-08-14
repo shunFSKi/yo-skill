@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.patwalls/feedhook-mcp",
+  "type": "mcp",
+  "name": "feedhook-mcp",
+  "description": "Turn a YouTube channel into a webhook: a signed HTTP POST seconds after every new video.",
+  "author": "io.github.patwalls",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/patwalls/feedhook-mcp",
+    "repo": "patwalls/feedhook-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "feedhook-mcp"
+    ],
+    "env": [
+      {
+        "name": "FEEDHOOK_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-11T23:27:42.406459Z"
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

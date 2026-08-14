@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/app.peil/peil-mcp",
+  "type": "mcp",
+  "name": "Peil",
+  "description": "Log hours, draft invoices and check where you stand — finance for Dutch freelancers.",
+  "author": "app.peil",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Luminc/peil-mcp",
+    "repo": "Luminc/peil-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "peil-mcp"
+    ],
+    "env": [
+      {
+        "name": "PEIL_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "PEIL_API_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-24T15:01:06.019167Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

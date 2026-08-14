@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.shonanfarm/zama-bike-kaitori",
+  "type": "mcp",
+  "name": "UsedBikeCenter ZAMA バイク・原付の買取査定 (Japan motorcycle buyback)",
+  "description": "中古バイク・原付・スクーターの買取相場照会と無料出張査定の申込。対応=神奈川・東京・埼玉・千葉・茨城・群馬・山梨。Japan used motorcycle buyback.",
+  "author": "com.shonanfarm",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://shonanfarm.com/wp-json/zama/v1/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://shonanfarm.com/wp-json/zama/v1/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-31T16:08:41.006262Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

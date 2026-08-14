@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.charleslucas/poe-data-mcp",
+  "type": "mcp",
+  "name": "poe-data-mcp - Path of Exile game data",
+  "description": "MCP server for Path of Exile game data: wiki, economy, and Craft of Exile lookups",
+  "author": "io.github.charleslucas",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/charleslucas/poe-data-mcp",
+    "repo": "charleslucas/poe-data-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "poe-data-mcp"
+    ],
+    "env": [
+      {
+        "name": "POE_DATA_MCP_CACHE_DIR",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-25T10:01:49.412278Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.mlawsonking/email-guard-mcp",
+  "type": "mcp",
+  "name": "email-guard-mcp",
+  "description": "Email safety for AI agents: scan inbound for prompt-injection/phishing + outbound for secret leaks.",
+  "author": "io.github.mlawsonking",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mlawsonking/MCP",
+    "repo": "mlawsonking/MCP"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "email-guard-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T20:53:12.311427Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

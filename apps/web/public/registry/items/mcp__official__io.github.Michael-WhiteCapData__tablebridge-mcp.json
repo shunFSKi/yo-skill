@@ -1,0 +1,73 @@
+{
+  "id": "mcp:official/io.github.Michael-WhiteCapData/tablebridge-mcp",
+  "type": "mcp",
+  "name": "tablebridge-mcp",
+  "description": "Query a folder of CSV / Parquet / JSON files with SQL — one queryable source, read-only.",
+  "author": "io.github.Michael-WhiteCapData",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Michael-WhiteCapData/tablebridge-mcp",
+    "repo": "Michael-WhiteCapData/tablebridge-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "tablebridge"
+    ],
+    "env": [
+      {
+        "name": "TABLEBRIDGE_DATA_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TABLEBRIDGE_MAX_ROWS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TABLEBRIDGE_RECURSIVE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-23T02:18:25.302103Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

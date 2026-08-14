@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/app.wishpool/korea-invoice-mcp",
+  "type": "mcp",
+  "name": "Korea Invoices (POPBiLL 전자세금계산서 issue, query & NTS transmit)",
+  "description": "Korea POPBiLL e-tax-invoice: AI agents issue, query & transmit e-invoices, stateless BYO.",
+  "author": "app.wishpool",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/junter1989k-ai/korea-invoice-mcp",
+    "repo": "junter1989k-ai/korea-invoice-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://inv-kr.wishpool.app/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-10T08:05:48.609796Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

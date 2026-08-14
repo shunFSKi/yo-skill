@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.standoutmcp/standout",
+  "type": "mcp",
+  "name": "Standout",
+  "description": "Anti-slop design taste for AI coding agents: art directions, section code, 0-100 page critic.",
+  "author": "io.standoutmcp",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://standoutmcp.io/api/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://standoutmcp.io/api/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-03T09:14:09.394622Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

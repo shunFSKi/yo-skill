@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/ai.atlasverified/atlas-mcp",
+  "type": "mcp",
+  "name": "atlas-mcp",
+  "description": "AI-powered organic supply chain verification: certification, OFAC, FDA import checks.",
+  "author": "ai.atlasverified",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://api.atlasverified.ai/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.atlasverified.ai/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-21T23:43:13.692003Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

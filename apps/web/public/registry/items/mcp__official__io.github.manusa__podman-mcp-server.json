@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.manusa/podman-mcp-server",
+  "type": "mcp",
+  "name": "podman-mcp-server",
+  "description": "A Model Context Protocol (MCP) server for container runtimes (Podman and Docker)",
+  "author": "io.github.manusa",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/manusa/podman-mcp-server",
+    "repo": "manusa/podman-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "podman-mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-27T12:05:42.427103Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

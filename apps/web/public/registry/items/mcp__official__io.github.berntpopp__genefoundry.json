@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.berntpopp/genefoundry",
+  "type": "mcp",
+  "name": "genefoundry",
+  "description": "MCP gateway federating 21 biomedical MCP servers behind one endpoint: gnomAD, ClinVar, HPO, VEP.",
+  "author": "io.github.berntpopp",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/berntpopp/genefoundry-router",
+    "repo": "berntpopp/genefoundry-router"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://genefoundry.org/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T14:58:36.422943Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.ebrunet001/mcp-server-lol",
+  "type": "mcp",
+  "name": "mcp-server-lol",
+  "description": "League of Legends AI coaching: player profiles, match history, ranked stats & performance analysis",
+  "author": "io.github.ebrunet001",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ebrunet001/mcp-server-lol",
+    "repo": "ebrunet001/mcp-server-lol"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mrbridge--lol-mcp-server.apify.actor/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-19T12:47:31.317254Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

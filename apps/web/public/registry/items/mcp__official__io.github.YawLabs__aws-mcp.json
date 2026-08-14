@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.YawLabs/aws-mcp",
+  "type": "mcp",
+  "name": "aws-mcp",
+  "description": "AWS MCP server — call any AWS API from AI assistants, with first-class SSO re-login",
+  "author": "io.github.YawLabs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers/io.github.YawLabs%2Faws-mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@yawlabs/aws-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-08T23:08:23.91486Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

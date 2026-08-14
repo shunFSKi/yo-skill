@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.wrbtc/wallet-intelligence",
+  "type": "mcp",
+  "name": "Satoshidata Wallet Intel",
+  "description": "Bitcoin wallet intelligence for AI agents: trust, labels, tx verify, fees, and timestamps.",
+  "author": "io.github.wrbtc",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://satoshidata.ai/mcp/",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://satoshidata.ai/mcp/",
+    "env": [
+      {
+        "name": "X-WR-API-Key",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-28T22:27:35.754377Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.aggreigator/pro",
+  "type": "mcp",
+  "name": "AggREIgator Pro",
+  "description": "Manage AggREIgator buy-boxes and compliant real-estate deal workflows",
+  "author": "com.aggreigator",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://aggreigator.com/api/mcp/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://aggreigator.com/api/mcp/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T03:27:43.877078Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

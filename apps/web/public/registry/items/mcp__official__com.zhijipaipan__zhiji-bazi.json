@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/com.zhijipaipan/zhiji-bazi",
+  "type": "mcp",
+  "name": "知己排盘 BaZi",
+  "description": "BaZi (Chinese Four Pillars) chart calculator. Structured chart data only, no predictions.",
+  "author": "com.zhijipaipan",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/AmsonntagChow/zhiji-bazi",
+    "repo": "AmsonntagChow/zhiji-bazi"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "zhiji-bazi"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T06:06:50.890495Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

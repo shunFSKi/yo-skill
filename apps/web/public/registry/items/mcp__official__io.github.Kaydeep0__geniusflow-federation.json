@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.Kaydeep0/geniusflow-federation",
+  "type": "mcp",
+  "name": "GeniusFlow Federation",
+  "description": "Settlement verify-wire: re-check published claims, admit or refuse by named limb.",
+  "author": "io.github.Kaydeep0",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Kaydeep0/eigenstate-research",
+    "repo": "Kaydeep0/eigenstate-research"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://geniusflow-federation.vercel.app/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-02T04:14:14.959978Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

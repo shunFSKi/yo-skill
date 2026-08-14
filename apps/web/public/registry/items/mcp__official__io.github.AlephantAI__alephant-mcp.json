@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.AlephantAI/alephant-mcp",
+  "type": "mcp",
+  "name": "alephant-mcp",
+  "description": "Alephant MCP server for AI cost control, BYO-key routing, 50+ providers, and 320+ models.",
+  "author": "io.github.AlephantAI",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/AlephantAI/alephant-mcp",
+    "repo": "AlephantAI/alephant-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@alephantai/mcp"
+    ],
+    "env": [
+      {
+        "name": "ALEPHANT_API_BASE_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "ALEPHANT_VIRTUAL_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ALEPHANT_PAT",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ALEPHANT_WORKSPACE_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ALEPHANT_RATE_LIMIT_RPM",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-16T09:06:17.64573Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

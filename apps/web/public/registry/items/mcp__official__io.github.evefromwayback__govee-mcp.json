@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.evefromwayback/govee-mcp",
+  "type": "mcp",
+  "name": "Govee",
+  "description": "LAN-first, cloud-fallback MCP server for Govee smart lights and devices.",
+  "author": "io.github.evefromwayback",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/evefromwayback/govee-mcp",
+    "repo": "evefromwayback/govee-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "govee-mcp"
+    ],
+    "env": [
+      {
+        "name": "GOVEE_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-16T05:41:45.917728Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

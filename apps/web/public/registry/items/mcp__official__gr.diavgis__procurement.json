@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/gr.diavgis/procurement",
+  "type": "mcp",
+  "name": "Diavgis — Greek Public Procurement",
+  "description": "Search Greek public procurement: tenders, awards, contracts, payments, buyers and suppliers.",
+  "author": "gr.diavgis",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/omegaaistudio/diavgis-mcp",
+    "repo": "omegaaistudio/diavgis-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.diavgis.gr/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T04:22:00.516514Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "<p align=\"center\">\n  <img src=\"https://diavgis.gr/icon-192.png\" width=\"96\" height=\"96\" alt=\"Diavgis\">\n</p>\n\n<h1 align=\"center\">Diavgis MCP Server</h1>\n\n<p align=\"center\">\n  <strong>Greek public procurement, queryable by AI agents.</strong><br>\n  858k acts · 60k entities · tenders, awards, contracts and payments linked into one process.\n</p>\n\n<p align=\"center\">\n  <a href=\"https://diavgis.gr\">diavgis.gr</a> ·\n  <a href=\"https://api.diavgis.gr/ocds\">OCDS 1.1 API</a> ·\n  <a href=\"https://diavgis.gr/llms.txt\">llms.txt</a>\n</p>\n\n---\n\n## What this is\n\nA remote [Model Context Protocol](https://modelcontextprotocol.io) server that lets an AI agent query Greek\npublic-procurement records directly — no scraping, no PDF parsing, no local setup.\n\nThe data comes from three official sources, **cross-linked**:\n\n| Source | What it is |\n|---|---|\n| **Διαύγεια** (Diavgeia) | the Greek state transparency portal — every public decision must be published there |\n| **ΚΗΜΔΗΣ** (KIMDIS) | the central electronic registry of public contracts |\n| **TED** | Tenders Electronic Daily, the EU-wide procurement journal |\n\nRecords that belong to the same procurement are joined into a **chain**, so a tender, the award that\nfollowed it, the signed contract and the payments made against it can be read as one story rather than\nfour unrelated documents. That linkage is the reason this server exists.\n\n## Endpoint\n\n```\nhttps://mcp.diavgis.gr/mcp\n```\n\nStreamable HTTP. Supported protocol revisions: `2026-07-28`, `2025-11-25`, `2025-06-18`, `2025-03-26`,\n`2024-11-05`.\n\nHealth check: <https://mcp.diavgis.gr/health>\n\n## Quick start\n\nAdd to your MCP client configuration:\n\n```json\n{\n  \"mcpServers\": {\n    \"diavgis\": {\n      \"type\": \"http\",\n      \"url\": \"https://mcp.diavgis.gr/mcp\"\n    }\n  }\n}\n```\n\nTo raise rate limits, send an API key as a bearer token. Keys and their limits are at\n<https://diavgis.gr/pricing>.\n\n```json\n{\n  \"mcpServers\": {\n    \"diavgis\": {\n      \"type\": \"http\",\n      \"url\": \"https://mcp.diavgis.gr/mcp\",\n      \"headers\": { \"Authorization\": \"Bearer YOUR_KEY\" }\n    }\n  }\n}\n```\n\n## Tools\n\n| Tool | What it answers |\n|---|---|\n| `search_tenders` | Search acts across all three sources — by text, buyer, supplier, CPV, region, amount, date |\n| `expiring_contracts` | Contracts running **now** that expire within 0, 7, 30 or 180 days |\n| `get_act` | Full detail of one act by Διαύγεια ΑΔΑ or ΚΗΜΔΗΣ ΑΔΑΜ |\n| `get_entity` | Profile of a company or public body by 9-digit ΑΦΜ — name, role, spend/receipts |\n| `get_chain` | A reconstructed procurement lifecycle: the linked sequence tender → award → contract → payment |\n| `rank_entities` | Top buyers or suppliers, by spend or by count |\n| `spend_by_cpv` | Committed value by CPV division, optionally for one year |\n| `entity_counterparties` | Who an entity actually transacts with — a buyer's top suppliers, or the reverse |\n\nThe authoritative list is always the server itself:\n\n```bash\ncurl -s https://mcp.diavgis.gr/mcp \\\n  -H 'content-type: application/json' \\\n  -H 'MCP-Protocol-Version: 2026-07-28' \\\n  -d '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"tools/list\"}'\n```\n\n## Other ways in\n\nThe same data is available without MCP:\n\n- **OCDS 1.1** — <https://api.diavgis.gr/ocds> · release packages, keyless, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)\n- **REST** — documented at <https://diavgis.gr/docs>\n- **Markdown / llms.txt** — every public page is available as clean Markdown for LLM consumption\n- **Web** — <https://diavgis.gr>\n\n## Notes on the data\n\n- Counterparties that are **natural persons are redacted at source** under EU and Greek data-protection\n  law, and carry no supplier identity.\n- Greek sources publish **well after** the issue date. The OCDS endpoint states its own settled-through\n  date; treat anything more recent as still filling.\n- Amounts use a gross basis where the source publishes only one VAT-inclusive figure. The OCDS endpoint\n  documents this per field.\n- Methodology: <https://diavgis.gr/methodology>\n\n## Licence\n\nDocumentation in this repository: [MIT](LICENSE).\nThe **data** served by the API is licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) —\nattribute to *Diavgis* with a link to <https://diavgis.gr>.\n",
+  "status": "curated"
+}

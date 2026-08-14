@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.getsavitools/savi-tools",
+  "type": "mcp",
+  "name": "savi-tools",
+  "description": "Ask your AI assistant about your Savi Tools business: invoices, expenses, mileage, and more.",
+  "author": "com.getsavitools",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://getsavitools.com/api/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://getsavitools.com/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-15T16:50:51.176468Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

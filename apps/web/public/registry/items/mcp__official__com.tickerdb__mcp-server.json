@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/com.tickerdb/mcp-server",
+  "type": "mcp",
+  "name": "TickerDB",
+  "description": "Pre-computed market data that improves agent reasoning, reduces token usage, and replaces pipelines.",
+  "author": "com.tickerdb",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/tickerdb/tickerdb-mcp",
+    "repo": "tickerdb/tickerdb-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "tickerdb-mcp"
+    ],
+    "env": [
+      {
+        "name": "TICKERDB_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-09T03:44:58.779432Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

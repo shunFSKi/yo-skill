@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.shanyang-me/xiaohongshu-mcp",
+  "type": "mcp",
+  "name": "Xiaohongshu (Little Red Book) MCP Server",
+  "description": "Publish, search, and manage Xiaohongshu (Little Red Book) content via MCP tools.",
+  "author": "io.github.shanyang-me",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/shanyang-me/xhs-mcp",
+    "repo": "shanyang-me/xhs-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "xiaohongshu-mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-06T00:53:35.115304Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

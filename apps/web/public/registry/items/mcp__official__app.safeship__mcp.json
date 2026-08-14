@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/app.safeship/mcp",
+  "type": "mcp",
+  "name": "Safeship",
+  "description": "API monitoring from your editor. Checks the JSON your endpoints return, not just the status code.",
+  "author": "app.safeship",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.safeship.app/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.safeship.app/mcp",
+    "env": [
+      {
+        "name": "X-API-Key",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-03T20:40:12.036543Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

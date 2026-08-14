@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/ai.openarx/openarx",
+  "type": "mcp",
+  "name": "OpenArx",
+  "description": "Open scientific and engineering knowledge for AI agents: search, evidence, document publishing.",
+  "author": "ai.openarx",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/OpenArx-AI/openarx-core",
+    "repo": "OpenArx-AI/openarx-core"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.openarx.ai/researcher/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-29T22:12:59.815908Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

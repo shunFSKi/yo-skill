@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.Clawdio777/verity",
+  "type": "mcp",
+  "name": "verity",
+  "description": "Real-time fact-checking MCP. Verifies claims against live sources with structured verdicts.",
+  "author": "io.github.Clawdio777",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Clawdio777/verity",
+    "repo": "Clawdio777/verity"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "verity-mcp"
+    ],
+    "env": [
+      {
+        "name": "VERITY_PRIVATE_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-12T07:58:20.232496Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

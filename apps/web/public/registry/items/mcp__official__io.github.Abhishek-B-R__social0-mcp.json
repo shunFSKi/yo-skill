@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.Abhishek-B-R/social0-mcp",
+  "type": "mcp",
+  "name": "social0-mcp",
+  "description": "Post and schedule across 9 social platforms from Claude, Cursor, or ChatGPT.",
+  "author": "io.github.Abhishek-B-R",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Abhishek-B-R/social0-mcp",
+    "repo": "Abhishek-B-R/social0-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "social0-mcp"
+    ],
+    "env": [
+      {
+        "name": "SOCIAL0_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-12T22:43:36.019235Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

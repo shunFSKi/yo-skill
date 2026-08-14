@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.lorenzo-cambiaghi/lynx",
+  "type": "mcp",
+  "name": "lynx",
+  "description": "100% local MCP server for semantic code search: AST chunking, hybrid retrieval, code knowledge graph",
+  "author": "io.github.lorenzo-cambiaghi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/lorenzo-cambiaghi/LynxMCP",
+    "repo": "lorenzo-cambiaghi/LynxMCP"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "lynx-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-27T08:07:16.064975Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

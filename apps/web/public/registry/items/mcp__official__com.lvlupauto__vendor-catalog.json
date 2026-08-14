@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.lvlupauto/vendor-catalog",
+  "type": "mcp",
+  "name": "LVL Up Auto — Dealership Vendor Catalog",
+  "description": "Independent auto dealership vendor catalog: scores, comparisons, benchmarks, AI-capability filters.",
+  "author": "com.lvlupauto",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://lvlupauto.com/api/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://lvlupauto.com/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-22T03:34:51.929987Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

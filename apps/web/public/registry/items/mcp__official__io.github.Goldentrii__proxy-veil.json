@@ -1,0 +1,109 @@
+{
+  "id": "mcp:official/io.github.Goldentrii/proxy-veil",
+  "type": "mcp",
+  "name": "proxy-veil",
+  "description": "Residential proxy MCP server for AI agents — geo-targeting, sticky sessions, anti-bot bypass.",
+  "author": "io.github.Goldentrii",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Goldentrii/proxy-veil",
+    "repo": "Goldentrii/proxy-veil"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "proxy-veil"
+    ],
+    "env": [
+      {
+        "name": "NOVADA_PROXY_USER",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "NOVADA_PROXY_PASS",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "NOVADA_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "BRIGHTDATA_USER",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "BRIGHTDATA_PASS",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SMARTPROXY_USER",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SMARTPROXY_PASS",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "OXYLABS_USER",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "OXYLABS_PASS",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PROXY_URL",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-09T14:16:03.823025Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.cyanheads/mcp-ts-template",
+  "type": "mcp",
+  "name": "mcp-ts-template",
+  "description": "TypeScript template for building MCP servers with declarative tooling, observability, and auth.",
+  "author": "io.github.cyanheads",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/cyanheads/mcp-ts-template",
+    "repo": "cyanheads/mcp-ts-template"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-ts-template"
+    ],
+    "env": [
+      {
+        "name": "MCP_LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-09T15:49:08.965785Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

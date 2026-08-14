@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.Perufitlife/deep-research-mcp-server",
+  "type": "mcp",
+  "name": "deep-research-mcp-server",
+  "description": "Web search, clean page reading & one-call research dossiers for AI agents. No API key.",
+  "author": "io.github.Perufitlife",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Perufitlife/deep-research-mcp-server",
+    "repo": "Perufitlife/deep-research-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "deep-research-mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-21T09:15:39.937431Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

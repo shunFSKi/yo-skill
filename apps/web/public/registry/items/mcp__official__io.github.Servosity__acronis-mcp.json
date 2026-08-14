@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.Servosity/acronis-mcp",
+  "type": "mcp",
+  "name": "Acronis MCP",
+  "description": "The first real CLI for the Acronis Cyber Protect Cloud platform  -  every tenant, agent, and usage",
+  "author": "io.github.Servosity",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/servosity/msp-skills",
+    "repo": "servosity/msp-skills"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/Servosity/msp-skills/releases/download/acronis-v0.1.0/acronis-mcp.mcpb"
+    ],
+    "env": [
+      {
+        "name": "ACRONIS_CYBER_PROTECT_BEARER_AUTH",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "ACRONIS_DATACENTER",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-06T15:21:10.35019Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

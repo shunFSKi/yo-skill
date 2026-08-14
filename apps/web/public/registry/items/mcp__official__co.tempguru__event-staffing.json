@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/co.tempguru/event-staffing",
+  "type": "mcp",
+  "name": "TempGuru Event Staffing",
+  "description": "Plan W-2 event staffing from 345 catalog entries; a coordinator confirms each order.",
+  "author": "co.tempguru",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/tempguru-co/tempguru-mcp",
+    "repo": "tempguru-co/tempguru-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "tempguru-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T19:04:34.227059Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.kioie/memex",
+  "type": "mcp",
+  "name": "memex",
+  "description": "Local MCP memory for coding agents. SQLite on your machine — preferences persist across chats.",
+  "author": "io.github.kioie",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/kioie/memex",
+    "repo": "kioie/memex"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/kioie/memex:0.6.0"
+    ],
+    "env": [
+      {
+        "name": "MEMEX_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MEMEX_USER_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MEMEX_HYBRID",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-25T19:00:30.722945Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

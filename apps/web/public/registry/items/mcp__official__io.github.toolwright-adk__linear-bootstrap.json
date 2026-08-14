@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.toolwright-adk/linear-bootstrap",
+  "type": "mcp",
+  "name": "linear-bootstrap",
+  "description": "Bootstrap Linear projects from natural language — milestones, epics, issues, and dependencies.",
+  "author": "io.github.toolwright-adk",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/toolwright-adk/toolwright-monorepo",
+    "repo": "toolwright-adk/toolwright-monorepo"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@toolwright-adk/linear-bootstrap"
+    ],
+    "env": [
+      {
+        "name": "LINEAR_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "LLM_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "LLM_BASE_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "LLM_MODEL",
+        "required": true,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-06T17:11:54.509611Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

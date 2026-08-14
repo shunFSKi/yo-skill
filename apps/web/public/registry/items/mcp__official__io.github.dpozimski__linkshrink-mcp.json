@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.dpozimski/linkshrink-mcp",
+  "type": "mcp",
+  "name": "LinkShrink MCP",
+  "description": "Privacy-first URL shortener with analytics",
+  "author": "io.github.dpozimski",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/softvoyagers/linkshrink-api",
+    "repo": "softvoyagers/linkshrink-api"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "linkshrink-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-17T20:30:28.695971Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

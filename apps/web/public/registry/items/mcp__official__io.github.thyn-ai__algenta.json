@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.thyn-ai/algenta",
+  "type": "mcp",
+  "name": "Algenta MCP Server",
+  "description": "Governed data discovery, exact queries, decisions, simulations, and runtime utilities over MCP.",
+  "author": "io.github.thyn-ai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/thyn-ai/algenta",
+    "repo": "thyn-ai/algenta"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "algenta-mcp"
+    ],
+    "env": [
+      {
+        "name": "ALGENTA_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "ALGENTA_BASE_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-12T22:22:47.443585Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

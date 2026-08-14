@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.matematicsolutions/mcp-eureka",
+  "type": "mcp",
+  "name": "mcp-eureka",
+  "description": "MCP server for Polish tax interpretations (KIS/MF) via EUREKA with citations.",
+  "author": "io.github.matematicsolutions",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/matematicsolutions/mcp-eureka",
+    "repo": "matematicsolutions/mcp-eureka"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@matematicsolutions/mcp-eureka"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-28T14:33:16.798421Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,88 @@
+{
+  "id": "mcp:official/io.github.brunosrz/vectora",
+  "type": "mcp",
+  "name": "vectora",
+  "description": "AI assistant with RAG, web search, filesystem and memory. MCP sub-agent for Claude Code.",
+  "author": "io.github.brunosrz",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/brunosrz/vectora",
+    "repo": "brunosrz/vectora"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "vectora-agent"
+    ],
+    "env": [
+      {
+        "name": "GOOGLE_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "COHERE_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "TAVILY_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "OPENAI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ANTHROPIC_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "LANGSMITH_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-22T02:06:01.970697Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

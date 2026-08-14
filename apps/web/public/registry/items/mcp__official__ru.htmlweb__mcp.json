@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/ru.htmlweb/mcp",
+  "type": "mcp",
+  "name": "htmlweb.ru — справочники и проверки для AI",
+  "description": "RU INN/OGRN, banks, geo, WHOIS. Agent self-registers via register_agent. 20 free/day.",
+  "author": "ru.htmlweb",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/kdg22/mcp-htmlweb",
+    "repo": "kdg22/mcp-htmlweb"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.htmlweb.ru/",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-01T16:47:49.333668Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.dwarmerdam/voice-bridge",
+  "type": "mcp",
+  "name": "Voice Bridge",
+  "description": "Multi-engine TTS for AI coding assistants. 5 engines, free engine included.",
+  "author": "io.github.dwarmerdam",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Tomorrow-You/voice-bridge",
+    "repo": "Tomorrow-You/voice-bridge"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ai-voice-bridge"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-29T17:16:40.787891Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

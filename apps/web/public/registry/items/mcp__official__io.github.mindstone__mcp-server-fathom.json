@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.mindstone/mcp-server-fathom",
+  "type": "mcp",
+  "name": "Fathom",
+  "description": "Fathom AI meeting transcription MCP server for Model Context Protocol hosts",
+  "author": "io.github.mindstone",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mindstone/mcp-servers",
+    "repo": "mindstone/mcp-servers"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@mindstone/mcp-server-fathom"
+    ],
+    "env": [
+      {
+        "name": "FATHOM_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "MCP_HOST_BRIDGE_STATE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MINDSTONE_REBEL_BRIDGE_STATE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-07T21:55:47.651372Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

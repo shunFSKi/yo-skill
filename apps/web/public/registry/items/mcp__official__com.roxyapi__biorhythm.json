@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/com.roxyapi/biorhythm",
+  "type": "mcp",
+  "name": "Biorhythm MCP Server by RoxyAPI",
+  "description": "Biorhythm cycles, forecasts, critical days and compatibility for AI agents, one API key.",
+  "author": "com.roxyapi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://roxyapi.com/mcp/biorhythm",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://roxyapi.com/mcp/biorhythm",
+    "env": [
+      {
+        "name": "X-API-Key",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-08T19:56:47.713358Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

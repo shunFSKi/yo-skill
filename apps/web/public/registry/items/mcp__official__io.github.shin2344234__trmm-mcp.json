@@ -1,0 +1,78 @@
+{
+  "id": "mcp:official/io.github.shin2344234/trmm-mcp",
+  "type": "mcp",
+  "name": "TacticalRMM",
+  "description": "Read your TacticalRMM fleet; run commands only after per-command human approval.",
+  "author": "io.github.shin2344234",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/shin2344234/trmm-mcp",
+    "repo": "shin2344234/trmm-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "trmm-mcp"
+    ],
+    "env": [
+      {
+        "name": "TRMM_API_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "TRMM_READONLY_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "TRMM_COMMAND_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "TRMM_MCP_MODE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T23:01:11.699141Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "<!-- mcp-name: io.github.shin2344234/trmm-mcp -->\n\n# TacticalRMM MCP server\n\nLets an AI assistant read everything in your TacticalRMM install, and — when\nyou explicitly switch it on — run commands on your managed machines.\n\nAsk \"which machines are offline and why\", \"what's eating memory on the front\ndesk PC\", \"show me every failed check this week\", and get answers from live\nfleet data. Turn on `elevate` mode and the assistant can also fix things, but\nonly after you approve each action yourself.\n\n## Why I built it\n\nI manage machines for a number of clients, and TacticalRMM already collects far\nmore about each one than anyone has time to sit and read. I wanted to actually\nuse that data: run deeper diagnostics than the dashboard puts in front of you,\nproduce per-client reports covering every device, and find the things worth\nfixing before someone rings up to report them.\n\nIt does grow billable work, and I think that is fine as long as the work is\nreal. A disk throwing early SMART errors, a server quietly filling up, patches\nthat stopped applying three months ago and nobody noticed — catching those is\nworth paying for. Billing for busywork is not. The test I hold this to is\nwhether every item on a report is something the client can see the sense in\nfixing once it has been explained to them.\n\n## What you get\n\n**28 tools.** 20 read-only ones covering agents, checks, alerts, services,\nprocesses, event logs, software inventory, patches, scripts and audit history;\n8 execution tools for running commands and scripts, rebooting, controlling\nservices, killing processes, and waking machines.\n\n**A full audit trail of everything.** Every inbound request, every tool call\nwith its arguments, every result, every TRMM API call, every approval decision\nand every refusal is written to a structured JSONL log with credential\nredaction and rotation. For a bridge that can run commands as SYSTEM across a\nfleet, knowing exactly who asked for what and when is not optional — so it is\non by default and cannot be silently skipped. Details in\n[Audit logging](#audit-logging).\n\n**An approval gate the model cannot reach.** In `elevate` mode an execution is\nrefused until you approve that exact call in a browser (password + TOTP) or\nfrom a shell on the server. Approvals are bound to a fingerprint of the\narguments, are single-use, and expire. No tool exists that grants elevation.\n\n**Read-only that actually holds.** Three independent layers: the execution\ntools are never registered, the HTTP client refuses non-read requests, and the\nAPI key itself is bound to a TRMM role with no execution permissions.\n\n**Built for real fleets.** TRMM has no pagination and returns whole tables —\none agent detail call measured 192 KB here. Responses are projected, capped and\ntruncated with an explicit notice, so a single call cannot swallow the model's\ncontext.\n\n**HTTPS with bearer auth**, a self-signed certificate carrying an IP SAN, and a\nhardened systemd unit. Clients trust that one certificate rather than skipping\nverification.\n\nWorks with Claude Code, Claude Desktop and LM Studio on macOS, Windows and\nLinux. Built and verified against **TRMM 1.5.1**. The TRMM API itself is\ndocumented independently in [TRMM-API.md](TRMM-API.md).\n\n---\n\n## Three modes\n\n| | `readonly` (default) | `elevate` | `command` |\n|---|---|---|---|\n| Tools exposed | 20 read tools | 28 | 28 |\n| Reads | yes | yes | yes |\n| Executions | **never** | **only what you approve, one call at a time** | always |\n| TRMM key for reads | `mcp-readonly` | `mcp-readonly` | `mcp-command` |\n| TRMM key for executions | — | `mcp-command`, only after approval | `mcp-command` |\n| Good for | pure Q&A | day-to-day chat | unattended automation |\n\n`elevate` is the one to use for interactive work: Claude can look at anything,\nbut the moment it wants to *do* something it stops and waits for you.\n\n### How elevate works\n\n1. Claude calls an execution tool. It does **not** run. The call is refused with\n   an explanation and a link.\n2. You open `http://192.0.2.10:8770/approve/`, see the exact command and\n   target, and click **Approve once** (or run `approve.py ok` on the server).\n3. Claude retries the identical call. It runs, and the approval is **consumed**.\n4. Anything further needs approving again — it is back to read-only by itself.\n\nThe approval is bound to a fingerprint of the exact arguments, so an approval\nfor `hostname` cannot be spent on a different command. Verified in the tests.\n\nFor a burst of work, open a **window** (e.g. 10 minutes / 5 uses) from the same\npage. Windows expire on their own; \"Revoke every grant now\" kills everything\nimmediately.\n\n### Protecting the approval page\n\nThe approval page is the only thing between a model asking to run something and\nit running, so give it credentials of its own:\n\n```bash\ncd /opt/trmm-mcp && ./venv/bin/python setup_approval_auth.py\n```\n\nIt asks for a password, generates a TOTP secret, prints a QR code to scan with\nany authenticator app, and writes the result to `.env`. Then restart the\nserver. Sign-in afterwards needs **both** the password and a 6-digit code.\n\nWhy bother, when the page already asked for a token: that token is the *bearer\ntoken*, and every MCP client config holds a copy. Anything with the token could\napprove its own requests, which defeats the point of out-of-band approval.\nPassword + TOTP is a credential that exists only in your head and your phone.\n\nWhat the implementation does:\n\n- The password is hashed with PBKDF2-HMAC-SHA256, 600k rounds, and a per-install\n  salt. Only the hash is stored.\n- TOTP codes can't be replayed. A code is spent on use, and only once both\n  factors pass, so a mistyped password doesn't burn a good code.\n- One 30-second step of drift either side is tolerated.\n- After five failed attempts it locks out with exponential backoff, per client\n  address, and refuses correct credentials while the lockout lasts.\n- The session cookie holds no secret, just a signed expiry and an epoch\n  (`HttpOnly`, `SameSite=Strict`, 12 hours). Re-running setup bumps the epoch and\n  signs everyone out.\n- Failed logins are recorded as `approval_login` events noting which factor\n  failed. The page never tells the visitor which one was wrong.\n\n### TLS\n\nThe listener serves **HTTPS** using a self-signed certificate at\n`certs/cert.pem` (key `certs/key.pem`, 10 years). It carries an **IP SAN** for\n`192.0.2.10` as well as `127.0.0.1`, `rmm-server`, `localhost` and\n`mcp.example.com` — without an IP SAN, a client dialling the address by\nIP cannot verify the certificate at all and you are pushed into disabling\nverification, which defeats the point.\n\nBecause traffic is encrypted, the session cookie is issued with `Secure` set.\n\nClients are told to **trust this one certificate** rather than to skip checking:\n\n- **mcp-remote / Node** — `NODE_EXTRA_CA_CERTS` pointing at a copy of\n  `cert.pem`, not `NODE_TLS_REJECT_UNAUTHORIZED=0`.\n- **Browser** — you will get a warning the first time. Either accept it, or\n  import `cert.pem` into *Trusted Root Certification Authorities* on the\n  workstation to make it go away properly.\n\nTo regenerate (after an IP change, say), recreate the pair with the same SAN\nlist and restart. Set `TRMM_MCP_TLS=false` to fall back to plain HTTP.\n\n### Why not MCP elicitation\n\nThe protocol has an `elicitation/create` feature that would put the prompt right\nin the chat, and it is the wrong tool here:\n\n- **Claude Desktop does not implement it.** It returns a synthetic `cancel` in\n  ~47 ms with no UI ever shown, so the server cannot tell refusal from silence.\n- **It is not a security boundary even where it works.** The spec says clients\n  *SHOULD* get user approval, not MUST, and explicitly declines to mandate any\n  interaction model. Claude Code ships an `Elicitation` hook whose documented\n  purpose is auto-answering these prompts without showing a dialog, and an\n  `ElicitationResult` hook that can rewrite the user's answer.\n\nSo approval here happens on a channel the model has no access to. There is no\ntool that grants elevation — the only ways in are the browser page and a shell\non this box. That is the property worth having, and the tests assert it.\n\n### Why read-only is actually read-only\n\nThree independent layers, each sufficient on its own:\n\n1. The execution tools are never registered in read-only mode, and Claude can't\n   call a tool it can't see. Verified over the wire, not just in theory.\n2. The HTTP client refuses non-read requests. GET is allowed; PATCH only for\n   `/alerts/` and `/logs/audit/`, which is how TRMM queries those. Everything\n   else raises before a packet leaves the process.\n3. The API key itself can't execute. `mcp-readonly` is bound to a TRMM role with\n   no execution permissions, so TRMM returns 403 even if the first two layers\n   were bypassed. That key gets 403 on `POST /agents/<id>/cmd/`, `/runscript/`,\n   `/reboot/` and `/wol/`.\n\nThe MCP client does not retain or use the command key in read-only mode.\n\n### One honest caveat about layer 3\n\nTRMM has **no view-only permission** for Windows services, processes, or\nWindows updates — viewing and acting are gated by the same `can_manage_procs` /\n`can_manage_winsvcs` / `can_manage_winupdates` flag (verified in\n`services/permissions.py`, `agents/permissions.py`, `winupdate/permissions.py`).\n\nWithout them the read-only role cannot list running services or processes at\nall, which removes most of the value for diagnosing a sick machine. So the\nread-only role **does** hold those three flags. The consequence, stated plainly:\n\n- The read-only **key**, used outside this server, could stop a service, kill a\n  process, or trigger a Windows update install.\n- It still **cannot** run commands, run scripts, reboot, or send WoL — those are\n  403 at the key level.\n- Through this MCP server none of it is reachable, because layer 2 refuses every\n  non-GET request before it leaves the process, and layer 1 never exposes a tool\n  that would try.\n\nIf you would rather have a strictly minimal key and lose service/process\nvisibility, drop `VIEW_REQUIRES_MANAGE_PERMS` in\n`provision_trmm_accounts.py` and re-run it.\n\n## Setup\n\nAlready done on this box:\n\n- venv at `venv/` with `mcp` 2.0 and `httpx`\n- TRMM roles `MCP Read Only` and `MCP Command`, users `mcp-readonly` and\n  `mcp-command` (both blocked from UI login, unusable passwords)\n- API keys written to `.env` (mode 600)\n\nTo re-provision or rotate keys:\n\n```bash\n/rmm/api/env/bin/python /opt/trmm-mcp/provision_trmm_accounts.py --rotate\n```\n\n## Running the server\n\nTo reach it from other machines, first tell it which address to serve on. These\ngo in `.env`, not in the unit file — the unit is in git, and an address baked in\nthere would follow every copy of it onto the wrong machine:\n\n```bash\ncat >> /opt/trmm-mcp/.env <<'EOF'\nTRMM_MCP_HTTP_HOST=10.0.0.5\nTRMM_MCP_PUBLIC_URL=https://10.0.0.5:8770\nEOF\n```\n\nSubstitute your own address. `TRMM_MCP_PUBLIC_URL` is what the assistant tells\nyou to open when something needs approving, so it has to be a URL your browser\ncan actually reach. Skip this step and the server binds `127.0.0.1`, which is\nfine if the client runs on the same box.\n\nThen install the unit and start it:\n\n```bash\nsudo cp /opt/trmm-mcp/trmm-mcp.service /etc/systemd/system/ && sudo systemctl daemon-reload && sudo systemctl enable --now trmm-mcp\n```\n\nCheck what it came up on — the startup line names the address, the mode and\nwhether TLS is on:\n\n```bash\njournalctl -u trmm-mcp -n 5 --no-pager | grep listening\n```\n\nIt serves HTTPS on port 8770 by default and requires the bearer token from\n`.env`. To run it in the foreground instead, for a quick test:\n\n```bash\n/opt/trmm-mcp/run.sh readonly http\n```\n\nThe listener runs stateless (`TRMM_MCP_STATELESS_HTTP=true`, the default). This\nmatters: with stateful streamable HTTP the server hands out a session id that\ndies with the process, so restarting the service leaves any connected client\nreplaying a session the server has forgotten. Through `mcp-remote` that shows up\nas tool calls \n\n…",
+  "status": "curated"
+}

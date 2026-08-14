@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.zoninga/finance",
+  "type": "mcp",
+  "name": "finance",
+  "description": "Personal finance for AI agents: accounts, budgets, goals, 9-strategy debt payoff, reports. OAuth 2.1",
+  "author": "com.zoninga",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://zoninga.com/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://zoninga.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-18T02:59:54.03804Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

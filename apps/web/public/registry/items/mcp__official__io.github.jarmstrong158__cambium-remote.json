@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.jarmstrong158/cambium-remote",
+  "type": "mcp",
+  "name": "cambium (remote)",
+  "description": "Cloudflare Worker for read-only recall of cambium knowledge. MCP 2026-07-28, dual-era.",
+  "author": "io.github.jarmstrong158",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/jarmstrong158/cambium-remote",
+    "repo": "jarmstrong158/cambium-remote"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://cambium-remote.{account}.workers.dev/mcp/{token}"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-02T13:41:08.648314Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

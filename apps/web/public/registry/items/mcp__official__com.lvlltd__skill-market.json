@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.lvlltd/skill-market",
+  "type": "mcp",
+  "name": "skill-market",
+  "description": "x402 skill catalog on lvlltd.com — search, quote, pay with Base USDC, unlock sealed packs.",
+  "author": "com.lvlltd",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/lvlltd/lvlltd-agent-marketplace",
+    "repo": "lvlltd/lvlltd-agent-marketplace"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://lvlltd.com/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-09T01:41:45.333495Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.slettmayer/calc-mcp-server",
+  "type": "mcp",
+  "name": "Calculator",
+  "description": "Exact arithmetic: one calculator tool over an AST allowlist, with integers exact at any size.",
+  "author": "io.github.slettmayer",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/slettmayer/calc-mcp-server",
+    "repo": "slettmayer/calc-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "calc-mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T06:25:25.465653Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# Calculator MCP Server\n\n<!-- mcp-name: io.github.slettmayer/calc-mcp-server -->\n\n[![PyPI](https://img.shields.io/pypi/v/calc-mcp-server.svg)](https://pypi.org/project/calc-mcp-server/)\n[![Python](https://img.shields.io/pypi/pyversions/calc-mcp-server.svg)](https://pypi.org/project/calc-mcp-server/)\n[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)\n\nAn MCP server that does arithmetic, exactly — so an LLM does not have to do it mentally.\n\nOne tool, `calculate`, evaluating expressions against a hand-rolled AST allowlist. No `eval()`, no\n`sympy`, no unbounded dependencies.\n\n```\n2 + 3 * (4 - 1) / 2 ** 2   ->  4.25\nsqrt(16) + sin(pi/2)       ->  5.0\n123456789 * 987654321      ->  121932631112635269\n```\n\n## Why this exists\n\nThe widely-used `mcp-server-calculator` package is abandoned (last commit May 2025) and declares\n`mcp>=1.4.1` with no upper bound. When the MCP Python SDK released v2 and removed\n`mcp.server.fastmcp`, every `uvx …@latest` install of it started crashing on import — which took down\nthe entire MCP proxy hosting it, and every other server alongside it.\n\nNo maintained Python replacement exists. The one actively-maintained npm calculator computes in\nfloat64, so `123456789 * 987654321` comes back as `121932631112635260` — off by 9. That is a poor\ntrait in a tool whose whole purpose is that the model should not be doing the arithmetic itself.\n\nSo this server:\n\n- **bounds its one dependency** (`mcp[cli]>=2,<3`) — the failure above cannot recur here;\n- **keeps integers exact** at any size, never coercing to float;\n- **bounds resource use**, not just code execution — see below.\n\n## Safety\n\nTwo problems, and most calculator servers only solve the first.\n\n**Code execution.** Expressions are parsed with `ast.parse` and walked against an explicit allowlist of\nnode types. `Attribute` is not on it, so `(1).__class__.__bases__` is rejected. A `Call` is only\nevaluated when its target is a bare name in the function allowlist, so `__import__('os').system(…)` is\nrejected before any argument is even evaluated.\n\n**Resource exhaustion.** An allowlist alone still lets `9**9**9` occupy the process for minutes on\nunbounded bignum exponentiation — the incumbent hangs for over five seconds on it. Four caps close\nthat: expression length (500 chars), nesting depth (32), result size (4300 digits, checked on the\noperands *before* exponentiating), and factorial argument (1000).\n\nFull detail in [docs/tech/SAFE-EVALUATION.md](docs/tech/SAFE-EVALUATION.md).\n\n## Install\n\n```bash\nuvx calc-mcp-server\n```\n\nPin it. Do not add `@latest` — that is how the package this replaces broke.\n\n## Configure\n\nAs a stdio MCP server:\n\n```json\n{\n  \"mcpServers\": {\n    \"calculator\": {\n      \"command\": \"uvx\",\n      \"args\": [\"calc-mcp-server\"]\n    }\n  }\n}\n```\n\n## The `calculate` tool\n\n| Argument | Type | Description |\n|---|---|---|\n| `expression` | `str` | The expression to evaluate |\n\nReturns the result as a string, or a line starting with `Error: ` explaining why the expression was\nrejected. The tool never raises, so a bad expression is an answer the agent can read back rather than a\ntool-call failure.\n\n**Operators** — `+` `-` `*` `/` `//` `%` `**`, parentheses, unary `+`/`-`. `^` is accepted as a power\noperator, and `×` `·` `÷` `−` are accepted as their ASCII equivalents (speech-to-text produces them).\n\n**Constants** — `pi`, `e`, `tau`.\n\n**Functions** — `abs` `round` `min` `max` `sqrt` `exp` `log` `log2` `log10` `sin` `cos` `tan` `asin`\n`acos` `atan` `atan2` `degrees` `radians` `hypot` `floor` `ceil` `factorial` `gcd` `lcm`.\n\n**Results** — integer arithmetic returns an exact integer of any size. Floats are rendered at 12\nsignificant digits, which removes IEEE-754 representation noise (`0.1 + 0.2` reads `0.3`, not\n`0.30000000000000004`) while keeping far more precision than a calculator result is used at. A whole\nfloat keeps its `.0`, so `8 / 2` reads `4.0` and stays distinct from the exact integer `4`.\n\n## Development\n\n```bash\nuv sync\nuv run pytest tests/ -v\nuv run ruff check .\nuv run ruff format .\n```\n\nSee [AGENTS.md](AGENTS.md) for the project guide and [docs/](docs/README.md) for the full\ndocumentation set.\n\n## License\n\nMIT — see [LICENSE](LICENSE).\n",
+  "status": "curated"
+}

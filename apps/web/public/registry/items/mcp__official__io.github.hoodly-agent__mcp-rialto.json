@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.hoodly-agent/mcp-rialto",
+  "type": "mcp",
+  "name": "Rialto Swap (read-only)",
+  "description": "Read-only MCP for Rialto quotes and swap preflight on Robinhood Chain. No signing or broadcast.",
+  "author": "io.github.hoodly-agent",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/hoodly-agent/mcp-rialto",
+    "repo": "hoodly-agent/mcp-rialto"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp-rialto.hoodly.io/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-28T17:21:39.373915Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

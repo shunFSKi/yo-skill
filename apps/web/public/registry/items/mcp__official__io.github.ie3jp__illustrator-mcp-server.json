@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.ie3jp/illustrator-mcp-server",
+  "type": "mcp",
+  "name": "illustrator-mcp-server",
+  "description": "Adobe Illustrator MCP with 63 tools — more than the official Illustrator MCP. macOS | Windows.",
+  "author": "io.github.ie3jp",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ie3jp/illustrator-mcp-server",
+    "repo": "ie3jp/illustrator-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "illustrator-mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-05T15:04:06.568141Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

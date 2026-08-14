@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.jbeshir/bunpro-mcp",
+  "type": "mcp",
+  "name": "Bunpro",
+  "description": "Read Bunpro SRS data: profile, study queue, reviews, JLPT progress, and grammar lookups.",
+  "author": "io.github.jbeshir",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/jbeshir/mcp-servers",
+    "repo": "jbeshir/mcp-servers"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/jbeshir/mcp-servers/releases/download/bunpro-v1.0.0/bunpro-mcp.mcpb"
+    ],
+    "env": [
+      {
+        "name": "BUNPRO_EMAIL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "BUNPRO_PASSWORD",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-15T21:56:03.222422Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

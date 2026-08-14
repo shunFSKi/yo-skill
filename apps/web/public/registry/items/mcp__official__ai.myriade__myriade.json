@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/ai.myriade/myriade",
+  "type": "mcp",
+  "name": "myriade",
+  "description": "Explore and query your data warehouse through Myriade's AI data analyst agent.",
+  "author": "ai.myriade",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://app.myriade.ai/mcp/",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://app.myriade.ai/mcp/"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-07T12:34:17.775318Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.pcmedsinge/mcp-clinical-reasoner",
+  "type": "mcp",
+  "name": "mcp-clinical-reasoner",
+  "description": "Drug interactions (FDA), dose range check, allergy cross-reactivity. No PHI processed.",
+  "author": "io.github.pcmedsinge",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/pcmedsinge/fhir-mcp-suite",
+    "repo": "pcmedsinge/fhir-mcp-suite"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-clinical-reasoner"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-20T10:26:32.456128Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

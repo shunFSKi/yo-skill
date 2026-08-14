@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.razz-games/razz",
+  "type": "mcp",
+  "name": "Razz Games",
+  "description": "Play provably fair games with real SOL wagering from any AI agent",
+  "author": "io.github.razz-games",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/razz-games/razz-mcp",
+    "repo": "razz-games/razz-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@razzgames/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "RAZZ_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "PLATFORM_WS_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PLATFORM_API_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-07T14:21:20.005658Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.Treevu-ai/cli-market-world",
+  "type": "mcp",
+  "name": "cli-market-world",
+  "description": "Commerce for AI agents. 44 MCP tools. 380 retailers (336 verified), 21 countries, 4 platforms.",
+  "author": "io.github.Treevu-ai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Treevu-ai/cli-market-world",
+    "repo": "Treevu-ai/cli-market-world"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "cli-market-world"
+    ],
+    "env": [
+      {
+        "name": "MARKET_API_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_TOOL_PROFILE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T17:43:45.152652Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

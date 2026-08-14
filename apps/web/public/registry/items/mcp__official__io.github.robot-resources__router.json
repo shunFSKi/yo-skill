@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.robot-resources/router",
+  "type": "mcp",
+  "name": "Robot Resources Router",
+  "description": "Intelligent LLM routing proxy — 60-90% cost savings by auto-selecting the cheapest model",
+  "author": "io.github.robot-resources",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/robot-resources/robot-resources",
+    "repo": "robot-resources/robot-resources"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@robot-resources/router-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-20T13:52:01.842374Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

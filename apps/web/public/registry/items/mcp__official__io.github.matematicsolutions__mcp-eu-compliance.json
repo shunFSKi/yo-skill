@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.matematicsolutions/mcp-eu-compliance",
+  "type": "mcp",
+  "name": "mcp-eu-compliance",
+  "description": "Offline MCP server: EU digital/data/cyber compliance full text (14 regs), verbatim + citations.",
+  "author": "io.github.matematicsolutions",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/matematicsolutions/mcp-eu-compliance",
+    "repo": "matematicsolutions/mcp-eu-compliance"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@matematicsolutions/mcp-eu-compliance"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-28T14:33:14.746131Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

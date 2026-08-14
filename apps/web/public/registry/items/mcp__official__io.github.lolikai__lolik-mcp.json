@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.lolikai/lolik-mcp",
+  "type": "mcp",
+  "name": "Lolik Trend Radar",
+  "description": "Live trends → money-ready intelligence: forecasts, virality scores, opportunities, daily briefs.",
+  "author": "io.github.lolikai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/lolikai/lolik-mcp",
+    "repo": "lolikai/lolik-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@lolikai/mcp"
+    ],
+    "env": [
+      {
+        "name": "LOLIK_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "LOLIK_API_BASE_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-15T07:32:15.629944Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

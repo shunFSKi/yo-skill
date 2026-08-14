@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.cyanheads/osv-advisory-mcp-server",
+  "type": "mcp",
+  "name": "osv-advisory-mcp-server",
+  "description": "Query OSV.dev for package vulnerabilities and batch-audit dependency lists via MCP.",
+  "author": "io.github.cyanheads",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/cyanheads/osv-advisory-mcp-server",
+    "repo": "cyanheads/osv-advisory-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@cyanheads/osv-advisory-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "OSV_REQUEST_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OSV_BATCH_CONCURRENCY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OSV_QUERY_MAX_PAGES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-11T20:24:11.062494Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

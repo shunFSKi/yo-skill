@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.agourakis82/sounio-mcp-server",
+  "type": "mcp",
+  "name": "Sounio Compiler",
+  "description": "Check, compile, run, and test Sounio programs locally.",
+  "author": "io.github.agourakis82",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/sounio-lang/sounio",
+    "repo": "sounio-lang/sounio"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "sounio-mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-17T20:52:51.179341Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

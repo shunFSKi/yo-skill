@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.woyaxnini/chestnyi-znak",
+  "type": "mcp",
+  "name": "Chestnyi Znak MCP Server",
+  "description": "MCP server for Chestnyi Znak — Russian product marking system. 10 tools: codes, documents, stocks.",
+  "author": "io.github.woyaxnini",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/woyaxnini/mcp-chestnyi-znak",
+    "repo": "woyaxnini/mcp-chestnyi-znak"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@woyax/mcp-chestnyi-znak"
+    ],
+    "env": [
+      {
+        "name": "CHZ_TOKEN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-17T15:28:29.633129Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

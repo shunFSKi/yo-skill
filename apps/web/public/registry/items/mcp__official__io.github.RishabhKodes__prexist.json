@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.RishabhKodes/prexist",
+  "type": "mcp",
+  "name": "prexist",
+  "description": "Search across 9 platforms to find existing products similar to your idea.",
+  "author": "io.github.RishabhKodes",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/RishabhKodes/prexist",
+    "repo": "RishabhKodes/prexist"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "prexist"
+    ],
+    "env": [
+      {
+        "name": "PREXIST_API_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SKILLS_DIRECTORY_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-21T13:24:17.405806Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

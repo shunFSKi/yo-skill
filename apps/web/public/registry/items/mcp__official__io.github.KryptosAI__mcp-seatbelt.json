@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.KryptosAI/mcp-seatbelt",
+  "type": "mcp",
+  "name": "mcp-seatbelt",
+  "description": "MCP runtime security proxy. Blocks dangerous AI agent tool calls with a policy engine.",
+  "author": "io.github.KryptosAI",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/KryptosAI/mcp-seatbelt",
+    "repo": "KryptosAI/mcp-seatbelt"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@kryptosai/mcp-seatbelt"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-04T01:07:23.041209Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

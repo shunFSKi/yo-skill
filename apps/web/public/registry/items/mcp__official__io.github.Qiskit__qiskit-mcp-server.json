@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.Qiskit/qiskit-mcp-server",
+  "type": "mcp",
+  "name": "Qiskit MCP Server",
+  "description": "MCP server for Qiskit quantum computing with circuit serialization utilities",
+  "author": "io.github.Qiskit",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Qiskit/mcp-servers",
+    "repo": "Qiskit/mcp-servers"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "qiskit-mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-13T23:03:53.272564Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

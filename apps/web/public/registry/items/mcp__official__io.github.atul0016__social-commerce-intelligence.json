@@ -1,0 +1,73 @@
+{
+  "id": "mcp:official/io.github.atul0016/social-commerce-intelligence",
+  "type": "mcp",
+  "name": "Social Commerce Intelligence",
+  "description": "Creator ROI, video conversion, trends, affiliate, and social commerce intelligence.",
+  "author": "io.github.atul0016",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers/io.github.atul0016%2Fsocial-commerce-intelligence",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "social-commerce-intelligence-mcp"
+    ],
+    "env": [
+      {
+        "name": "EARNALL_MCP_LICENSE_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "EARNALL_MCP_ACTIVATION_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "EARNALL_MCP_LICENSE_API",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-14T02:43:26.76471Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

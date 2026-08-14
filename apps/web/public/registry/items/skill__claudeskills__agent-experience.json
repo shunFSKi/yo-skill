@@ -1,0 +1,52 @@
+{
+  "id": "skill:claudeskills/agent-experience",
+  "type": "skill",
+  "name": "agent-experience",
+  "description": "Audit the developer experience of a product, SDK, docs site, or SKILL.md by dropping multiple Claude subagents at it with only a tiny task prompt and real tools (WebFetch, Bash, Write). Agents must discover the docs themselves, install deps, ask for credentials if needed, and attempt real execution. The skill captures each agent's trace — tool calls, retries, wall time, errors — and scores on Setup Friction, Speed, Efficiency, Error Recovery, and Doc Quality, then emits an HTML report with an A–",
+  "author": "browserbase",
+  "source": {
+    "registry": "claudeskills",
+    "url": "https://github.com/browserbase/skills",
+    "repo": "browserbase/skills"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 532,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": "# Browserbase Skills\n\nA set of skills for enabling **[Claude Code](https://docs.claude.com/en/docs/claude-code/overview)** to work with Browserbase through browser automation and the official `browse` CLI.\n\n## Skills\n\nThis plugin includes the following skills (see `skills/` for details):\n\n| Skill | Description |\n|-------|-------------|\n| [browser](skills/browser/SKILL.md) | Automate web browser interactions via CLI commands — supports remote Browserbase sessions with Browserbase Identity, Verified browsers, CAPTCHA solving, and residential proxies |\n| [functions](skills/functions/SKILL.md) | Deploy serverless browser automation to Browserbase cloud using the `browse` CLI |\n| [browser-trace](skills/browser-trace/SKILL.md) | Capture a full DevTools-protocol trace (CDP firehose, screenshots, DOM dumps) alongside any browser automation, then bisect the stream into per-page searchable buckets |\n| [browser-to-api](skills/browser-to-api/SKILL.md) | Turn a website's observable HTTP traffic into a best-effort OpenAPI 3.1 spec by analyzing a `browser-trace` capture |\n| [autobrowse](skills/autobrowse/SKILL.md) | Self-improving browser automation — iteratively runs a browsing task, reads the trace, and improves the navigation skill until it reliably passes |\n| [safe-browser](skills/safe-browser/SKILL.md) | Build local Claude Agent SDK browser agents whose only browser capability is a CDP-gated `safe_browser` tool with domain allowlist enforcement |\n| [webmcp-gen](skills/webmcp-gen/SKILL.md) | Author, compile, and validate site-specific WebMCP init scripts with the Stagehand WebMCP runtime |\n| [cookie-sync](skills/cookie-sync/SKILL.md) | Sync cookies from local Chrome to a Browserbase persistent context so the browse CLI can access authenticated sites |\n| [fetch](skills/fetch/SKILL.md) | Fetch HTML or JSON from static pages without a browser session — inspect status codes, headers, follow redirects |\n| [search](skills/search/SKILL.md) | Search the web and return structured results (titles, URLs, metadata) without a browser session |\n| [ui-test](skills/ui-test/SKILL.md) | AI-powered adversarial UI testing — analyzes git diffs to test changes, or explores the full app to find bugs |\n| [browser-use-to-stagehand](skills/browser-use-to-stagehand/SKILL.md) | Migrate browser-use (Python) automation to Stagehand v3 (TypeScript) on Browserbase — maps features and picks the right determinism level per step |\n| [agent-experience](skills/agent-experience/SKILL.md) | Audit how agent-friendly a product, SDK, or docs site is — drops Claude subagents at it with tiny prompts, captures their traces, and scores setup friction, speed, error recovery, and doc quality |\n| [company-research](skills/company-research/SKILL.md) | Discover target companies matching your ICP using the Browserbase Search API, deep-research each one, and score fit into a research report and CSV |\n| [event-prospecting](skills/event-prospecting/SKILL.md) | Extract speakers from a conference page, filter their companies against your ICP, and deep-research the best-fit people into a person-first prospecting report |\n| [competitor-analysis](skills/competitor-analysis/SKILL.md) | Auto-discover a company's competitors via the Browserbase Search API, deep-research each across marketing, signal, benchmark, and strategic-diff lanes, and compile a browsable HTML report with an overview, per-competitor deep dives, a feature/pricing matrix, and a mentions feed |\n\n## Installation\n\nTo install the skill to popular coding agents:\n\n```bash\n$ npx skills add browserbase/skills\n```\n\n### Claude Code\n\nOn Claude Code, to add the marketplace, simply run:\n\n```bash\n/plugin marketplace add browserbase/skills\n```\n\nThen install the plugin:\n\n```bash\n/plugin install browse@browserbase\n```\n\nIf you prefer the manual interface:\n1. On Claude Code, type `/plugin`\n2. Select option `3. Add marketplace`\n3. Enter the marketplace source: `browserbase/skills`\n4. Press enter to select the `browse` plugin\n5. Hit enter again to `Install now`\n6. **Restart Claude Code** for changes to take effect\n\n## Usage\n\nOnce installed, you can ask Claude to browse or use the Browserbase CLI:\n- *\"Go to Hacker News, get the top post comments, and summarize them \"*\n- *\"QA test http://localhost:3000 and fix any bugs you encounter\"*\n- *\"Order me a pizza, you're already signed in on Doordash\"*\n- *\"Use `browse` to list my Browserbase projects and show the output as JSON\"*\n- *\"Initialize a new Browserbase Function with `browse functions init` and explain the next commands\"*\n- *\"Use safe-browser to build a Hacker News scraper that only stays on the main site\"*\n\nClaude will handle the rest.\n\nFor local and localhost work, pass `--local` on the first browser command (for example, `browse open http://localhost:3000 --local`) to start a clean isolated browser. Use `--auto-connect` when the agent should reuse your existing local Chrome session, cookies, or login state.\n\n## Troubleshooting\n\n### Chrome not found\n\nInstall Chrome for your platform:\n- **macOS** or **Windows**: https://www.google.com/chrome/\n- **Linux**: `sudo apt install google-chrome-stable`\n\n### Profile refresh\n\nTo refresh cookies from your main Chrome profile:\n```bash\nrm -rf .chrome-profile\n```\n\n## Resources\n\n- [Stagehand Documentation](https://github.com/browserbase/stagehand)\n- [Claude Code Skills](https://support.claude.com/en/articles/12512176-what-are-skills)\n",
+  "status": "curated"
+}

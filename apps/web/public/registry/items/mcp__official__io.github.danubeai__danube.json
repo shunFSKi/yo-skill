@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.danubeai/danube",
+  "type": "mcp",
+  "name": "Danube AI",
+  "description": "Unified platform for AI tool discovery, execution, and integration across APIs and MCP servers.",
+  "author": "io.github.danubeai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/danubeai/danube-mcp",
+    "repo": "danubeai/danube-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.danubeai.com/mcp",
+    "env": [
+      {
+        "name": "danube-api-key",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-28T23:58:32.823579Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

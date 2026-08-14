@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.redbark/mcp",
+  "type": "mcp",
+  "name": "Redbark",
+  "description": "Read-only live access to Australian bank (CDR/open banking) and global brokerage data for AI agents.",
+  "author": "com.redbark",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/redbark-co/redbark-mcp",
+    "repo": "redbark-co/redbark-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.redbark.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T02:13:23.531659Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

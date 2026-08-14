@@ -1,0 +1,73 @@
+{
+  "id": "mcp:official/io.github.MatthewTracy/yagami",
+  "type": "mcp",
+  "name": "Yagami AI Context Firewall",
+  "description": "Govern model, retrieval, memory, and tool access for AI applications and agents.",
+  "author": "io.github.MatthewTracy",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/MatthewTracy/yagami",
+    "repo": "MatthewTracy/yagami"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "yagami"
+    ],
+    "env": [
+      {
+        "name": "YAGAMI_HEADLESS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "YAGAMI_MCP_SERVER_ENABLED",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "YAGAMI_REQUIRE_AUTH",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-28T22:45:05.254914Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

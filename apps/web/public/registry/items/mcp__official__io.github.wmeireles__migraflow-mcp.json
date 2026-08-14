@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.wmeireles/migraflow-mcp",
+  "type": "mcp",
+  "name": "MigraFlow - Database Migration AI",
+  "description": "AI-powered database migration. Analyze schemas, generate SQL, calculate risks.",
+  "author": "io.github.wmeireles",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/wmeireles/API_MIGRAFLOW",
+    "repo": "wmeireles/API_MIGRAFLOW"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "migraflow-mcp"
+    ],
+    "env": [
+      {
+        "name": "MIGRAFLOW_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "MIGRAFLOW_API_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-08T18:45:53.412181Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

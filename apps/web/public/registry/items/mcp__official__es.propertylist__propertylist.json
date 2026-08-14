@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/es.propertylist/propertylist",
+  "type": "mcp",
+  "name": "PropertyList — Spanish Property MLS",
+  "description": "First-party Spanish, Portuguese and Italian property listings with notarial-verified prices.",
+  "author": "es.propertylist",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.propertylist.es/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.propertylist.es/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-27T09:42:50.476742Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

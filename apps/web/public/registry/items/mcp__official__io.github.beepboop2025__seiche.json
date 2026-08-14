@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.beepboop2025/seiche",
+  "type": "mcp",
+  "name": "Seiche — funding-stress terminal",
+  "description": "US funding-stress warning with construction-PIT evidence limits and explicit eligibility flags.",
+  "author": "io.github.beepboop2025",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/beepboop2025/seiche",
+    "repo": "beepboop2025/seiche"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "seiche"
+    ],
+    "env": [
+      {
+        "name": "SEICHE_MCP_PUBLIC",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-08T17:44:12.026774Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

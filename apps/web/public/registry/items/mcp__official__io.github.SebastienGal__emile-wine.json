@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.SebastienGal/emile-wine",
+  "type": "mcp",
+  "name": "Émile",
+  "description": "MCP server for the Émile wine cellar — list, add, recommend, scan and search 100k+ wines.",
+  "author": "io.github.SebastienGal",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.emile.wine/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@emile-wine/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "EMILE_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "EMILE_API_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "EMILE_LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-20T09:21:08.05522Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/me.untype/aboard",
+  "type": "mcp",
+  "name": "aboard",
+  "description": "Falsifiable claims about systemic problems: causal graph, forecasts, dossiers.",
+  "author": "me.untype",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ostin-pil/aboard",
+    "repo": "ostin-pil/aboard"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://aboard.untype.me/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-29T15:27:22.297121Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

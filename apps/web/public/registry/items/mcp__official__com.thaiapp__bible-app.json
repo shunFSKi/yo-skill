@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.thaiapp/bible-app",
+  "type": "mcp",
+  "name": "bible-app",
+  "description": "Read-only Bible for AI: search & read scripture in Thai & English, plus a daily verse.",
+  "author": "com.thaiapp",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://thaiapp.com/bible-app/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://thaiapp.com/bible-app/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-13T03:05:34.977016Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

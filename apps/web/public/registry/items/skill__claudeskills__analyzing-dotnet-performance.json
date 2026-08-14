@@ -1,0 +1,52 @@
+{
+  "id": "skill:claudeskills/analyzing-dotnet-performance",
+  "type": "skill",
+  "name": "analyzing-dotnet-performance",
+  "description": "Scans .NET code for ~50 performance anti-patterns across async, memory, strings, collections, LINQ, regex, serialization, and I/O with tiered severity classification. Use when analyzing .NET code for optimization opportunities, reviewing hot paths, or auditing allocation-heavy patterns.",
+  "author": "dotnet",
+  "source": {
+    "registry": "claudeskills",
+    "url": "https://github.com/dotnet/skills",
+    "repo": "dotnet/skills"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 3857,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "# .NET Agent Skills\n\n[![Dashboard](https://github.com/dotnet/skills/actions/workflows/pages/pages-build-deployment/badge.svg)](https://dotnet.github.io/skills/)\n\nThis repository contains the .NET team's curated set of core skills and custom agents for coding agents. For information about the Agent Skills standard, see [agentskills.io](https://agentskills.io).\n\n[**📊 Dashboard**](https://dotnet.github.io/skills/) - Accuracy and efficiency scoring trends for contained plugins (https://dotnet.github.io/skills/)\n\n## What's Included\n\n| Plugin | Description |\n|--------|-------------|\n| [dotnet](plugins/dotnet/) | C# language server (LSP) integration for coding agents and high-level .NET development skills. |\n| [dotnet-advanced](plugins/dotnet-advanced/) | Collection of .NET skills for handling specific .NET tasks for special scenarios. |\n| [dotnet-data](plugins/dotnet-data/) | Skills for .NET data access and Entity Framework related tasks. |\n| [dotnet-diag](plugins/dotnet-diag/) | Skills for .NET performance investigations, debugging, and incident analysis. |\n| [dotnet-msbuild](plugins/dotnet-msbuild/) | Comprehensive MSBuild and .NET build skills: failure diagnosis, performance optimization, code quality, and modernization. |\n| [dotnet-nuget](plugins/dotnet-nuget/) | NuGet and .NET package management: dependency management and modernization. |\n| [dotnet-upgrade](plugins/dotnet-upgrade/) | Skills for migrating and upgrading .NET projects across framework versions, language features, and compatibility targets. |\n| [dotnet-maui](plugins/dotnet-maui/) | Skills for .NET MAUI development: environment setup, diagnostics, and troubleshooting. |\n| [dotnet-ai](plugins/dotnet-ai/) | AI and ML skills for .NET: technology selection, LLM integration, agentic workflows, RAG pipelines, MCP, and classic ML with ML.NET. |\n| [dotnet-template-engine](plugins/dotnet-template-engine/) | .NET Template Engine skills: template discovery, project scaffolding, and template authoring. |\n| [dotnet-test](plugins/dotnet-test/) | Skills for running, generating, analyzing, and improving .NET tests: test execution, filtering, platform detection, coverage, testability, and MSTest workflows. |\n| [dotnet-test-migration](plugins/dotnet-test-migration/) | Skills and an orchestrator agent for migrating .NET test frameworks and platforms: MSTest and xUnit version upgrades, xUnit-to-MSTest conversion, and VSTest to Microsoft.Testing.Platform. |\n| [dotnet-aspnetcore](plugins/dotnet-aspnetcore/) | ASP.NET Core web development skills including middleware, endpoints, real-time communication, and API patterns. |\n| [dotnet-blazor](plugins/dotnet-blazor/) | Skills for Blazor development: component authoring, interactivity, and web application patterns. |\n| [dotnet11](plugins/dotnet11/) | Skills for new .NET 11 APIs and language features. |\n\n## Installation\n\n### 🚀 Plugins - Copilot CLI / Claude Code\n\n1. Launch Copilot CLI or Claude Code\n2. Add the marketplace:\n   ```\n   /plugin marketplace add dotnet/skills\n   ```\n3. Install a plugin:\n   ```\n   /plugin install <plugin>@dotnet-agent-skills\n   ```\n4. Restart to load the new plugins\n5. View available skills:\n   ```\n   /skills\n   ```\n6. View available agents:\n   ```\n   /agents\n   ```\n7. Update plugin (on demand):\n   ```\n   /plugin update <plugin>@dotnet-agent-skills\n   ```\n\n### VS Code / VS Code Insiders (Preview)\n\n> [!IMPORTANT]  \n> VS Code plugin support is a preview feature and subject to change. You may need to enable it first.\n\n```jsonc\n// settings.json\n{\n  \"chat.plugins.enabled\": true,\n  \"chat.plugins.marketplaces\": [\"dotnet/skills\"]\n}\n```\n\nOnce configured, type `/plugins` in Copilot Chat or use the `@agentPlugins` filter in Extensions to browse and install plugins from the marketplace.\n\n### Cursor\n\nThis repository is a [Cursor plugin marketplace](https://cursor.com/docs/plugins). You can discover and install published plugins directly in Cursor:\n\n1. Open the marketplace panel in Cursor\n2. Search for `.NET` or browse [cursor.com/marketplace](https://cursor.com/marketplace)\n3. Install the desired plugins\n\nFor local development or unpublished changes, import plugins from a local checkout:\n\n1. Copy or symlink your local checkout to `~/.cursor/plugins/local/dotnet-agent-skills`\n2. Restart Cursor or run **Developer: Reload Window**\n\n### Codex CLI\n\nSkills in this repository follow the [agentskills.io](https://agentskills.io) open standard\nand are compatible with [OpenAI Codex](https://developers.openai.com/codex/skills).\n\n#### Plugin marketplace (recommended)\n\nCodex CLI v0.121.0 and later supports a [plugin marketplace](https://developers.openai.com/codex/plugins).\nThis repository ships a Codex-native marketplace manifest at `.agents/plugins/marketplace.json`,\nso you can register `dotnet/skills` as a marketplace and install plugins from it directly.\n\n1. Add the marketplace:\n   ```bash\n   codex plugin marketplace add dotnet/skills\n   ```\n2. Launch Codex and open the plugin browser:\n   ```\n   /plugins\n   ```\n3. Browse the `dotnet-agent-skills` tab and install the desired plugins.\n4. Update plugins on demand:\n   ```bash\n   codex plugin marketplace upgrade dotnet-agent-skills\n   ```\n\n#### Individual skills\n\nYou can also install individual skills using the `skill-installer` CLI with the GitHub URL:\n\n```bash\n$ skill-installer install https://github.com/dotnet/skills/tree/main/plugins/<plugin>/skills/<skill-name>\n```\n\n## Contributing\n\nSee [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines and how to add a new plugin.\n\n## License\n\nSee [LICENSE](LICENSE) for details.\n",
+  "status": "curated"
+}

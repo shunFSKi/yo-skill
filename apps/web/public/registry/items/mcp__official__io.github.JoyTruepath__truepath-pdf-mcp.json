@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.JoyTruepath/truepath-pdf-mcp",
+  "type": "mcp",
+  "name": "TruePath PDF",
+  "description": "Local-only PDF tools for AI — extract text, search, split/merge, render pages. Files never leave.",
+  "author": "io.github.JoyTruepath",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/JoyTruepath/truepath-pdf-mcp",
+    "repo": "JoyTruepath/truepath-pdf-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@truepathpdf/mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-03T14:31:29.243608Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

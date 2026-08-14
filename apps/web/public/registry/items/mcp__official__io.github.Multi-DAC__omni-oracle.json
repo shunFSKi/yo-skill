@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.Multi-DAC/omni-oracle",
+  "type": "mcp",
+  "name": "omni-oracle",
+  "description": "Agent-First Data Bazaar. 136 Tools for DeFi, Derivatives, Governance, Alpha & Utilities.",
+  "author": "io.github.Multi-DAC",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Multi-DAC/x402",
+    "repo": "Multi-DAC/x402"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://omni-oracle.omnioracle.workers.dev/sse"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-01-19T04:10:14.286456Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

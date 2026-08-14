@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.LembaGang/headless-oracle-mcp",
+  "type": "mcp",
+  "name": "headless-oracle-mcp",
+  "description": "Ed25519-signed market-state receipts for 28 exchanges. Fail-closed pre-trade gate.",
+  "author": "io.github.LembaGang",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/LembaGang/headless-oracle-v5",
+    "repo": "LembaGang/headless-oracle-v5"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "headless-oracle-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-05T14:41:14.207149Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

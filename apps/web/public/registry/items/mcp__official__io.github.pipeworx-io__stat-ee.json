@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.pipeworx-io/stat-ee",
+  "type": "mcp",
+  "name": "Stat Ee",
+  "description": "Statistics Estonia (andmed.stat.ee) PxWeb MCP. Keyless.",
+  "author": "io.github.pipeworx-io",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/pipeworx-io/mcp-stat-ee",
+    "repo": "pipeworx-io/mcp-stat-ee"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://gateway.pipeworx.io/stat-ee/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-26T00:35:02.523541Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

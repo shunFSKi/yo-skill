@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/dev.gvnr/gvnr",
+  "type": "mcp",
+  "name": "Gvnr",
+  "description": "Budget & cost control for AI agents — per-agent spend caps + rate limits before each call.",
+  "author": "dev.gvnr",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mightbesaad/gvnr",
+    "repo": "mightbesaad/gvnr"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://gvnr.dev/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-02T11:52:14.498477Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

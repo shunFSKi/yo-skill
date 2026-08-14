@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.wordofclout/acn-mcp-server",
+  "type": "mcp",
+  "name": "Word Of Clout ACN MCP Server",
+  "description": "Guarded MCP server for agent-readable business truth, provenance, readiness, and discovery.",
+  "author": "io.github.wordofclout",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/wordofclout/acn-mcp-server",
+    "repo": "wordofclout/acn-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.wordofclout.ai/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-25T15:26:11.483064Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

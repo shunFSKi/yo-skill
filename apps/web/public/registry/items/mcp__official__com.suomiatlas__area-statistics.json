@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.suomiatlas/area-statistics",
+  "type": "mcp",
+  "name": "Suomiatlas — Finnish area statistics",
+  "description": "Statistics for every Finnish postal code area and municipality: income, housing, crime, air quality",
+  "author": "com.suomiatlas",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://suomiatlas.com/api/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://suomiatlas.com/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-06T11:59:41.540196Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

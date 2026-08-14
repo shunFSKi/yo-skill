@@ -1,0 +1,94 @@
+{
+  "id": "mcp:official/com.topness/callwright",
+  "type": "mcp",
+  "name": "callwright",
+  "description": "Self-hosted MCP voice agent that places phone calls on your behalf via Retell.",
+  "author": "com.topness",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/topness/callwright",
+    "repo": "topness/callwright"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "callwright"
+    ],
+    "env": [
+      {
+        "name": "RETELL_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "MCP_AUTH_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CALLWRIGHT_DATA_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CALLWRIGHT_PUBLIC_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CLAUDE_ROUTINE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CLAUDE_ROUTINE_TOKEN",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-12T19:10:42.115117Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

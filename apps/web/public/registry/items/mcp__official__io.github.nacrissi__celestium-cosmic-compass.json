@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.nacrissi/celestium-cosmic-compass",
+  "type": "mcp",
+  "name": "Celestium: Cosmic Compass",
+  "description": "Real astrology for AI agents: cosmic weather, synastry, timing, astrocartography, and divination.",
+  "author": "io.github.nacrissi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://celestium-cosmic-compass.fly.dev/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://celestium-cosmic-compass.fly.dev/mcp",
+    "env": [
+      {
+        "name": "X-Celestium-Identity",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-13T18:26:27.351466Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

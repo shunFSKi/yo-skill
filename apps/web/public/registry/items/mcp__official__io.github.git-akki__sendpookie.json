@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.git-akki/sendpookie",
+  "type": "mcp",
+  "name": "sendpookie",
+  "description": "Create and send cinematic digital gifts for birthdays and anniversaries via Claude.",
+  "author": "io.github.git-akki",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/git-akki/sendpookie",
+    "repo": "git-akki/sendpookie"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@sendpookie/mcp"
+    ],
+    "env": [
+      {
+        "name": "POOKIE_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-14T09:48:08.702369Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,93 @@
+{
+  "id": "mcp:official/me.openbrowser/openbrowser-ai",
+  "type": "mcp",
+  "name": "openbrowser-ai",
+  "description": "AI browser automation. Write async Python to navigate, click, type, and extract data.",
+  "author": "me.openbrowser",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/billy-enrizky/openbrowser-ai.git",
+    "repo": "billy-enrizky/openbrowser-ai"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "openbrowser-ai"
+    ],
+    "env": [
+      {
+        "name": "OPENBROWSER_HEADLESS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OPENBROWSER_ALLOWED_DOMAINS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OPENBROWSER_USER_DATA_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OPENBROWSER_STORAGE_STATE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OPENBROWSER_COMPACT_DESCRIPTION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OPENBROWSER_MAX_OUTPUT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ANONYMIZED_TELEMETRY",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-07T02:55:55.794319Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

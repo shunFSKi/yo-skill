@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.TradeSystemsNique/aidatataskrunner-mcp",
+  "type": "mcp",
+  "name": "aidatataskrunner-mcp",
+  "description": "MCP server for AiDataTaskRunner Panel (MT5) - Control data generation and ML model training via MCP",
+  "author": "io.github.TradeSystemsNique",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/TradeSystemsNique/AiDataTaskRunerMcp",
+    "repo": "TradeSystemsNique/AiDataTaskRunerMcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "aidatataskrunner-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-24T12:04:18.310502Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

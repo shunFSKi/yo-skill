@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.blackwell-systems/agent-lsp",
+  "type": "mcp",
+  "name": "agent-lsp",
+  "description": "Orchestrates language servers into 65 code-intelligence tools across 30 languages, token-optimized.",
+  "author": "io.github.blackwell-systems",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/blackwell-systems/agent-lsp",
+    "repo": "blackwell-systems/agent-lsp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@blackwell-systems/agent-lsp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-30T22:10:57.900122Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

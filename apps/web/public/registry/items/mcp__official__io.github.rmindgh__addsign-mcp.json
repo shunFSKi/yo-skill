@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.rmindgh/addsign-mcp",
+  "type": "mcp",
+  "name": "addsign-mcp",
+  "description": "Send documents for e-signature, track status, remind signers, and download signed PDFs via AddSign",
+  "author": "io.github.rmindgh",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/rmindgh/simple-esign",
+    "repo": "rmindgh/simple-esign"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "addsign-mcp"
+    ],
+    "env": [
+      {
+        "name": "ADDSIGN_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-11T14:28:28.441926Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

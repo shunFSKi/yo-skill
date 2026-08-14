@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/app.deviceshelf/deviceshelf-server",
+  "type": "mcp",
+  "name": "deviceshelf-server",
+  "description": "Query your local network in plain language: devices, open ports, security findings and alerts.",
+  "author": "app.deviceshelf",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers/app.deviceshelf%2Fdeviceshelf-server",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/wealthwallet/deviceshelf-server:1.9.10"
+    ],
+    "env": [
+      {
+        "name": "DEVICESHELF_API_PORT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T13:49:09.859026Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

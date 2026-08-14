@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.luckyjackluo/cairn",
+  "type": "mcp",
+  "name": "Cairn",
+  "description": "Local-first file-organization tools for your AI agent: tag, query, and digest a folder. No cloud.",
+  "author": "io.github.luckyjackluo",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/luckyjackluo/cairn",
+    "repo": "luckyjackluo/cairn"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "cairn-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "CAIRN_WORKSPACE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-17T21:31:19.997626Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

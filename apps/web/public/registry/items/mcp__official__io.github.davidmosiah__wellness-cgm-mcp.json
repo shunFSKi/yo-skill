@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.davidmosiah/wellness-cgm-mcp",
+  "type": "mcp",
+  "name": "wellness-cgm-mcp",
+  "description": "Local-first CGM MCP for AI agents: Dexcom Developer API + FreeStyle Libre via LibreLink Up.",
+  "author": "io.github.davidmosiah",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/davidmosiah/wellness-cgm-mcp",
+    "repo": "davidmosiah/wellness-cgm-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "wellness-cgm-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-29T18:28:44.47988Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

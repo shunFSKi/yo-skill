@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.notion/mcp",
+  "type": "mcp",
+  "name": "mcp",
+  "description": "Official Notion MCP server",
+  "author": "com.notion",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.notion.com/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.notion.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-09-11T22:25:50.737872Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

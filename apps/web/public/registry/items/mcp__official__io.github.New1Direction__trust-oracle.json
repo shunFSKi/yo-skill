@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.New1Direction/trust-oracle",
+  "type": "mcp",
+  "name": "trust-oracle",
+  "description": "Independent A-F trust grade for any MCP server, watched for drift. Free, never for sale.",
+  "author": "io.github.New1Direction",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/New1Direction/webmcp-anything",
+    "repo": "New1Direction/webmcp-anything"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://wmcp.sh/mcp/trust"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-30T18:23:35.256353Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

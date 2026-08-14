@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.Ophir-ai-creator/ophir",
+  "type": "mcp",
+  "name": "ophir",
+  "description": "Ophir protocol tools for AI agent discovery, negotiation, and settlement",
+  "author": "io.github.Ophir-ai-creator",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Ophir-Protocol/ophir",
+    "repo": "Ophir-Protocol/ophir"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@ophirai/mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-06T08:12:32.363762Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

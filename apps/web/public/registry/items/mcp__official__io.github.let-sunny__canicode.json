@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.let-sunny/canicode",
+  "type": "mcp",
+  "name": "canicode",
+  "description": "Analyze Figma designs for dev & AI readiness. 39 rules, scoring, HTML reports.",
+  "author": "io.github.let-sunny",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/let-sunny/canicode",
+    "repo": "let-sunny/canicode"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "canicode"
+    ],
+    "env": [
+      {
+        "name": "FIGMA_TOKEN",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-21T11:29:10.678212Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

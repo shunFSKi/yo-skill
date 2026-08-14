@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.LGDiMaggio/mcp-server-mcsa",
+  "type": "mcp",
+  "name": "Motor Current Signature Analysis",
+  "description": "MCP server for Motor Current Signature Analysis — fault detection in electric motors",
+  "author": "io.github.LGDiMaggio",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/LGDiMaggio/mcp-motor-current-signature-analysis",
+    "repo": "LGDiMaggio/mcp-motor-current-signature-analysis"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-server-mcsa"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-09T08:37:18.158687Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

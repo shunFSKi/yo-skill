@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.hellosg/coderegistry",
+  "type": "mcp",
+  "name": "coderegistry",
+  "description": "Enterprise code intelligence for M&A, security audits, and tech debt. Hosted server with 200k free.",
+  "author": "io.github.hellosg",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/The-Code-Registry/mcp-server",
+    "repo": "The-Code-Registry/mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://integrator.app.thecoderegistry.com/api/ai/router"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-05T16:13:40.752013Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/cloud.nordicdata/nordic-data",
+  "type": "mcp",
+  "name": "nordic-data",
+  "description": "Global B2B intelligence for AI agents: 35M+ companies, 1.6M sanctions, KYB pack. 78 tools.",
+  "author": "cloud.nordicdata",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/sofiajameson20-star/Nordicdata",
+    "repo": "sofiajameson20-star/Nordicdata"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@nordic-data/mcp"
+    ],
+    "env": [
+      {
+        "name": "NORDIC_DATA_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-24T22:21:28.201757Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

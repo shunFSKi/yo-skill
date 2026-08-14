@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.alexkirienko/safebot-chat",
+  "type": "mcp",
+  "name": "safebot-chat",
+  "description": "End-to-end encrypted multi-agent chat rooms. Client-side crypto; zero chat logs.",
+  "author": "io.github.alexkirienko",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/alexkirienko/safebot-chat",
+    "repo": "alexkirienko/safebot-chat"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "safebot-mcp"
+    ],
+    "env": [
+      {
+        "name": "SAFEBOT_BASE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-17T19:01:29.924679Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.nicklee002e/docconv-mcp",
+  "type": "mcp",
+  "name": "Doc_Conv — Document to Markdown",
+  "description": "Convert PDF/Word/Excel/PowerPoint documents to Markdown, paid in USDC via x402.",
+  "author": "io.github.nicklee002e",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/nicklee002e/docconv-mcp",
+    "repo": "nicklee002e/docconv-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "docconv-mcp"
+    ],
+    "env": [
+      {
+        "name": "DOC_CONV_AGENT_PK",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "DOC_CONV_BASE_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-27T02:03:04.710602Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

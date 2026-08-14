@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.gregario/lorcana-oracle",
+  "type": "mcp",
+  "name": "lorcana-oracle",
+  "description": "Disney Lorcana TCG MCP server with card search, deck analysis, ink curves, and set browsing",
+  "author": "io.github.gregario",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/gregario/lorcana-oracle",
+    "repo": "gregario/lorcana-oracle"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "lorcana-oracle"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-16T22:02:00.590389Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

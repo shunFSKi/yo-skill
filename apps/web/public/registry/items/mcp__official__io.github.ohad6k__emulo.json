@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.ohad6k/emulo",
+  "type": "mcp",
+  "name": "emulo",
+  "description": "Mine your local AI coding session logs into a profile your agent loads before every task.",
+  "author": "io.github.ohad6k",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ohad6k/emulo",
+    "repo": "ohad6k/emulo"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "emulo"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-16T11:32:42.843433Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

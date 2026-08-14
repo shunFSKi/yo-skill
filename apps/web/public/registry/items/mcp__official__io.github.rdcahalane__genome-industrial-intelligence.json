@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.rdcahalane/genome-industrial-intelligence",
+  "type": "mcp",
+  "name": "Genome Industrial Intelligence",
+  "description": "Industrial intelligence for AI agents. Conviction scores and diligence for 10,000+ industrials.",
+  "author": "io.github.rdcahalane",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://genome-api-production.up.railway.app/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "genome-industrial-intelligence"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-09T21:15:27.019482Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

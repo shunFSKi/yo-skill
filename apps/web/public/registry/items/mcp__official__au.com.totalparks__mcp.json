@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/au.com.totalparks/mcp",
+  "type": "mcp",
+  "name": "Total Parks",
+  "description": "Read-only MCP tools for Total Parks-listed Australian holiday parks, caravan parks, and campgrounds.",
+  "author": "au.com.totalparks",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.totalparks.com.au/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.totalparks.com.au/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-20T03:10:07.644507Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

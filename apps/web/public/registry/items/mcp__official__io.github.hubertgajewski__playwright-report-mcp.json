@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.hubertgajewski/playwright-report-mcp",
+  "type": "mcp",
+  "name": "playwright-report-mcp",
+  "description": "Run Playwright tests and surface structured results for AI agents doing test failure analysis.",
+  "author": "io.github.hubertgajewski",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/hubertgajewski/playwright-report-mcp",
+    "repo": "hubertgajewski/playwright-report-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "playwright-report-mcp"
+    ],
+    "env": [
+      {
+        "name": "PW_ALLOWED_DIRS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PW_RESULTS_FILE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T08:13:18.51776Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

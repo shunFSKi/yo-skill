@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.fedlin/fedlin-mcp-server",
+  "type": "mcp",
+  "name": "FEDLIN Scanners",
+  "description": "Exposes FEDLIN's public security scanners as agent-callable tools over Streamable HTTP.",
+  "author": "com.fedlin",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/fedlinllc/fedlin-mcp-server",
+    "repo": "fedlinllc/fedlin-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.fedlin.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T12:32:07.470741Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

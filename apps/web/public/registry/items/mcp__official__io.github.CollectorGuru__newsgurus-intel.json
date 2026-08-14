@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.CollectorGuru/newsgurus-intel",
+  "type": "mcp",
+  "name": "newsgurus-intel",
+  "description": "Pay-per-call trading intelligence for AI agents: live market regime, trading signals, composite conv",
+  "author": "io.github.CollectorGuru",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://api.newsgurus.ai/mcp/",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.newsgurus.ai/mcp/"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-14T21:44:34.116451Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

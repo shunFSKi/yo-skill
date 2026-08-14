@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.thomenz/soldefi-mcp",
+  "type": "mcp",
+  "name": "soldefi-mcp",
+  "description": "Solana DeFi risk intel over x402: rug/honeypot scans, pool analysis, wash-filtered pools.",
+  "author": "io.github.thomenz",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/thomenz/soldefi-mcp",
+    "repo": "thomenz/soldefi-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "soldefi-mcp"
+    ],
+    "env": [
+      {
+        "name": "SOLANA_PRIVATE_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "EVM_PRIVATE_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SOLANA_RPC_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SOLDEFI_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "X402_NETWORK",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-04T17:25:28.483359Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

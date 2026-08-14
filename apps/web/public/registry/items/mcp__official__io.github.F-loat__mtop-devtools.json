@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.F-loat/mtop-devtools",
+  "type": "mcp",
+  "name": "mtop-devtools",
+  "description": "让 AI 与 Chrome 浏览器实时交互：获取历史请求、控制台日志、RUM/埋点事件，并动态设置 Mock 数据。",
+  "author": "io.github.F-loat",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers/io.github.F-loat%2Fmtop-devtools",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@mtop-devtools/mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-17T10:09:16.241848Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.chaoz23/dmcheck",
+  "type": "mcp",
+  "name": "dmcheck",
+  "description": "Deterministic conduct verdicts for live tabletop sessions - CI for running a game.",
+  "author": "io.github.chaoz23",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/chaoz23/dmcheck",
+    "repo": "chaoz23/dmcheck"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "dmcheck"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-27T19:29:36.613148Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.techleadevelopers/chainfx-mcp",
+  "type": "mcp",
+  "name": "chainfx-mcp",
+  "description": "Agent Pay and planning graph for stablecoin commerce.",
+  "author": "io.github.techleadevelopers",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/chainfx/payment-gateway",
+    "repo": "chainfx/payment-gateway"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api-production-bc748.up.railway.app/mcp/initialize",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-17T20:49:06.924218Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/com.sema-lang/sema",
+  "type": "mcp",
+  "name": "Sema",
+  "description": "MCP tools for Sema — eval, compile, build, format, and docs for a Lisp with LLM primitives.",
+  "author": "com.sema-lang",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/sema-lisp/sema",
+    "repo": "sema-lisp/sema"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/sema-lisp/sema/releases/download/v1.34.2/sema.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-04T16:36:17.123021Z"
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": false
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

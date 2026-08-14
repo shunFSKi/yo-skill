@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.chhavimishra/originselect-mcp-server",
+  "type": "mcp",
+  "name": "originselect-mcp-server",
+  "description": "Search ethical, origin-verified products and brands by country of origin",
+  "author": "io.github.chhavimishra",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/chhavimishra/originselect-mcp-server",
+    "repo": "chhavimishra/originselect-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "originselect-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "API_BASE_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-22T18:36:58.349058Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

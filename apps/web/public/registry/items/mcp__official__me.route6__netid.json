@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/me.route6/netid",
+  "type": "mcp",
+  "name": "Route6 — Agent Network Identity",
+  "description": "Gives AI agents a public IPv6 identity, hostname, port forwarding, web fetch, team mesh. Free tier.",
+  "author": "me.route6",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/route6me/mcp",
+    "repo": "route6me/mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "docker.io/route6me/netid:1.2.4"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T15:54:19.579018Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

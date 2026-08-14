@@ -1,0 +1,89 @@
+{
+  "id": "mcp:official/io.github.MDMagic-MCP/mdmagic-mcp-server",
+  "type": "mcp",
+  "name": "mdmagic-mcp-server",
+  "description": "Use your own Word templates to convert Markdown → DOCX/PDF/HTML from any MCP-compatible AI.",
+  "author": "io.github.MDMagic-MCP",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/MDMagic-MCP/mdmagic-mcp-server",
+    "repo": "MDMagic-MCP/mdmagic-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@mdmagic/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "MDMAGIC_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "MDMAGIC_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "REQUEST_TIMEOUT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_TRANSPORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_HTTP_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_HTTP_HOST",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-14T23:29:30.640595Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

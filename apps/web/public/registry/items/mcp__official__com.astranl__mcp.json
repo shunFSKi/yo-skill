@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.astranl/mcp",
+  "type": "mcp",
+  "name": "AstraNL",
+  "description": "NL coordination protocol - 0% fee (agent-world launch), agent-native, real Dutch merchant pricing.",
+  "author": "com.astranl",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/astranl/astranl-mcp",
+    "repo": "astranl/astranl-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://astranl.com/mcp/streamable"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-11T23:10:13.221404Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

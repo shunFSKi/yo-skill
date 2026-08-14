@@ -1,0 +1,109 @@
+{
+  "id": "mcp:official/io.github.fr0ster/mcp-abap-adt",
+  "type": "mcp",
+  "name": "mcp-abap-adt",
+  "description": "MCP server for SAP ABAP ADT: repository analysis and CRUD for RAP and classic ABAP",
+  "author": "io.github.fr0ster",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/fr0ster/mcp-abap-adt",
+    "repo": "fr0ster/mcp-abap-adt"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@mcp-abap-adt/core"
+    ],
+    "env": [
+      {
+        "name": "SAP_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "SAP_AUTH_TYPE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SAP_SYSTEM_TYPE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SAP_CLIENT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SAP_JWT_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SAP_USERNAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SAP_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SAP_LANGUAGE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SAP_MASTER_SYSTEM",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SAP_RESPONSIBLE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-16T17:26:24.387281Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

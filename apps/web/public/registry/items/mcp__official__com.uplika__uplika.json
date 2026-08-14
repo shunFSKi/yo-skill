@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.uplika/uplika",
+  "type": "mcp",
+  "name": "uplika",
+  "description": "Publish to social channels from your AI agent. Threads is live; nine more await review.",
+  "author": "com.uplika",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://api.uplika.com/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.uplika.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-09T16:48:34.767712Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.chetparker/uk-data-api",
+  "type": "mcp",
+  "name": "UK Data API",
+  "description": "24 UK data endpoints — property, weather, companies, vehicles, finance. Paid via x402.",
+  "author": "io.github.chetparker",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/chetparker/uk-property-api",
+    "repo": "chetparker/uk-property-api"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://web-production-18a32.up.railway.app/mcp/sse"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-05T15:05:15.563658Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

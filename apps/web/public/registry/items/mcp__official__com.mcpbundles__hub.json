@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/com.mcpbundles/hub",
+  "type": "mcp",
+  "name": "MCPBundles Hub",
+  "description": "Access all your MCPBundles tools in one place. Unified hub for all enabled bundles.",
+  "author": "com.mcpbundles",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/thinkchainai/mcpbundles",
+    "repo": "thinkchainai/mcpbundles"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/thinkchainai/mcpbundles/releases/download/hub-v1.0.0+build.8da55d55/hub.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-11-19T19:54:50.655856Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

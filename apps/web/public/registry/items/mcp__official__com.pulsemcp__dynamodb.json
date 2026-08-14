@@ -1,0 +1,104 @@
+{
+  "id": "mcp:official/com.pulsemcp/dynamodb",
+  "type": "mcp",
+  "name": "dynamodb",
+  "description": "MCP server for AWS DynamoDB with fine-grained tool control and configurable access levels.",
+  "author": "com.pulsemcp",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/pulsemcp/mcp-servers",
+    "repo": "pulsemcp/mcp-servers"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "aws-dynamodb-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "AWS_REGION",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "AWS_ACCESS_KEY_ID",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "AWS_SECRET_ACCESS_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "DYNAMODB_ENDPOINT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DYNAMODB_ENABLED_TOOL_GROUPS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DYNAMODB_ENABLED_TOOLS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DYNAMODB_DISABLED_TOOLS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DYNAMODB_ALLOWED_TABLES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SKIP_HEALTH_CHECKS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-17T03:55:49.744407Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

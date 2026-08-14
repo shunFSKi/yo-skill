@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.theYahia/pochta-russia-mcp",
+  "type": "mcp",
+  "name": "pochta-russia-mcp",
+  "description": "MCP server for Russian Post (Почта России) API — tracking, tariff calculation, post office search. ",
+  "author": "io.github.theYahia",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/theYahia/pochta-russia-mcp",
+    "repo": "theYahia/pochta-russia-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@theyahia/pochta-russia-mcp"
+    ],
+    "env": [
+      {
+        "name": "POCHTA_LOGIN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-31T08:25:15.260739Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

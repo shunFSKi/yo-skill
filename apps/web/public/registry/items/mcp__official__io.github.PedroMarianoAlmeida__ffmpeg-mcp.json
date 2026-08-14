@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.PedroMarianoAlmeida/ffmpeg-mcp",
+  "type": "mcp",
+  "name": "ffmpeg-mcp",
+  "description": "FFmpeg video/audio tools: cut, convert, concat, remove silence, and raw commands.",
+  "author": "io.github.PedroMarianoAlmeida",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/PedroMarianoAlmeida/ffmpeg-mcp",
+    "repo": "PedroMarianoAlmeida/ffmpeg-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ffmpeg-mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-12-19T05:45:52.500461Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

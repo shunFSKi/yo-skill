@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.pkotecha-eng/aria-mcp-server",
+  "type": "mcp",
+  "name": "aria-mcp-server",
+  "description": "Search 35M+ PubMed, 400K+ ClinicalTrials.gov & ISRCTN trials. Prompts included. No API key.",
+  "author": "io.github.pkotecha-eng",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/pkotecha-eng/aria-mcp-server",
+    "repo": "pkotecha-eng/aria-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "aria-mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-13T04:28:18.013197Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

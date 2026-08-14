@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.degibug-del/laserbrain",
+  "type": "mcp",
+  "name": "laserbrain",
+  "description": "The drift harness as an MCP server. Offline, no key — a fixed reference an agent checks against.",
+  "author": "io.github.degibug-del",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers/io.github.degibug-del%2Flaserbrain",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "laserbrain"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-30T04:22:09.754905Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

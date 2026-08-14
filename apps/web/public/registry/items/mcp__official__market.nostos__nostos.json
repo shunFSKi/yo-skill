@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/market.nostos/nostos",
+  "type": "mcp",
+  "name": "NOSTOS",
+  "description": "Retro games and vintage apparel in Duluth, GA. Live catalog, prices, trade-in offers, policies.",
+  "author": "market.nostos",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.nostos.market/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.nostos.market/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-12T18:41:13.448056Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

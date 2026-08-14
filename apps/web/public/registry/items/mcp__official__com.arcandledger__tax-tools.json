@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.arcandledger/tax-tools",
+  "type": "mcp",
+  "name": "Arc & Ledger Tax Reference",
+  "description": "Read-only US tax reference for notices, deadlines, filing screens, and clearly labeled estimates.",
+  "author": "com.arcandledger",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Bgenc48/arc-ledger-mcp",
+    "repo": "Bgenc48/arc-ledger-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.arcandledger.com/directory/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-28T18:48:56.64232Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

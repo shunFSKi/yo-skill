@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.kindrat86/carshake",
+  "type": "mcp",
+  "name": "CarShake",
+  "description": "AI car condition scan before valet handover. Prevent damage disputes with timestamped proof",
+  "author": "io.github.kindrat86",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://carshake.online/api/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://carshake.online/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-19T10:49:27.684536Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.powerpointengine/powerpoint-engine",
+  "type": "mcp",
+  "name": "powerpoint-engine",
+  "description": "Generate, edit, merge, translate and PDF-convert PowerPoint (.pptx) over MCP. 8 tools.",
+  "author": "io.powerpointengine",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/skippdot/powerpoint-engine-mcp",
+    "repo": "skippdot/powerpoint-engine-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://powerpointengine.io/api/mcp/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-15T10:02:54.465298Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

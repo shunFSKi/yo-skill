@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.ExpertVagabond/sui-mcp-server",
+  "type": "mcp",
+  "name": "sui-mcp-server",
+  "description": "53-tool MCP server for Sui blockchain — wallets, DeFi, Move contracts, staking, SuiNS, analytics",
+  "author": "io.github.ExpertVagabond",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ExpertVagabond/sui-mcp-server",
+    "repo": "ExpertVagabond/sui-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "sui-mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-26T18:06:21.785451Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

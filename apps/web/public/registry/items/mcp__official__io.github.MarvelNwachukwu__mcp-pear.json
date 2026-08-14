@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.MarvelNwachukwu/mcp-pear",
+  "type": "mcp",
+  "name": "mcp-pear",
+  "description": "MCP server for Pear Protocol: markets, positions, orders, portfolio, and gated trade execution.",
+  "author": "io.github.MarvelNwachukwu",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/MarvelNwachukwu/mcp-pear",
+    "repo": "MarvelNwachukwu/mcp-pear"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@marvelcodes/mcp-pear"
+    ],
+    "env": [
+      {
+        "name": "PEAR_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PEAR_ADDRESS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PEAR_JWT",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PEAR_REFRESH_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PEAR_TRADE_ENABLED",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-18T21:05:06.326232Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

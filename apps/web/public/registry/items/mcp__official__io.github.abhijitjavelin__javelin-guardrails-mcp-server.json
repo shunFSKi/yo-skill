@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.abhijitjavelin/javelin-guardrails-mcp-server",
+  "type": "mcp",
+  "name": "javelin-guardrails-mcp-server",
+  "description": "An MCP server that provides Javelin Standalone Guardrails",
+  "author": "io.github.abhijitjavelin",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://abhijitjavelin.github.io/javelin-guardrails-mcp-server/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://abhijitjavelin.github.io/javelin-guardrails-mcp-server/mcp",
+    "env": [
+      {
+        "name": "x-javelin-apikey",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-09-18T17:34:35.233239Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

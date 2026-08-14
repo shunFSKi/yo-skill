@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/com.llmotions.farm/sonnet-5-agent",
+  "type": "mcp",
+  "name": "Sonnet 5 Agent",
+  "description": "Authenticated async Sonnet 5 Agent agent with status polling and artifact results.",
+  "author": "com.llmotions.farm",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://farm.llmotions.com/mcp/agents/sonnet-5-agent",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://farm.llmotions.com/mcp/agents/sonnet-5-agent",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-16T15:29:54.937237Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

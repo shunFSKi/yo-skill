@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.RailKill/mcp-aider-executor",
+  "type": "mcp",
+  "name": "mcp-aider-executor",
+  "description": "Model Context Protocol (MCP) server to execute aider-specific code editing operations",
+  "author": "io.github.RailKill",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/RailKill/mcp-aider-executor",
+    "repo": "RailKill/mcp-aider-executor"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-aider-executor"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-15T21:26:51.598961Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

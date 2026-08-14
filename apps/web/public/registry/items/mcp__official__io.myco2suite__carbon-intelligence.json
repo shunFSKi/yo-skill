@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.myco2suite/carbon-intelligence",
+  "type": "mcp",
+  "name": "carbon-intelligence",
+  "description": "Verified CO2e for any transaction, activity, flight, shipment or CBAM import. 200+ countries.",
+  "author": "io.myco2suite",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://api.myco2suite.io/v1/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.myco2suite.io/v1/mcp",
+    "env": [
+      {
+        "name": "x-api-key",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-08T12:35:54.890157Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

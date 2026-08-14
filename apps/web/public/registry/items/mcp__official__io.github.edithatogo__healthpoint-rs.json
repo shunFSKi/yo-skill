@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.edithatogo/healthpoint-rs",
+  "type": "mcp",
+  "name": "healthpoint-rs",
+  "description": "Read-only MCP server for licensed Healthpoint HL7 FHIR API access.",
+  "author": "io.github.edithatogo",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/edithatogo/healthpoint-rs",
+    "repo": "edithatogo/healthpoint-rs"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/edithatogo/healthpoint-mcp:0.1.0"
+    ],
+    "env": [
+      {
+        "name": "HEALTHPOINT_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "HEALTHPOINT_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "HEALTHPOINT_AUTH_SCHEME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "HEALTHPOINT_GEO_SEARCH_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "HEALTHPOINT_TIMEOUT_SECS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-30T01:49:36.233188Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

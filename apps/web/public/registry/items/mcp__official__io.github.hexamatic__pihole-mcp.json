@@ -1,0 +1,94 @@
+{
+  "id": "mcp:official/io.github.hexamatic/pihole-mcp",
+  "type": "mcp",
+  "name": "Pi-hole MCP Server",
+  "description": "Manage Pi-hole v6: DNS blocking, domains, clients, query analysis, DHCP, and multi-instance sync.",
+  "author": "io.github.hexamatic",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/hexamatic/pihole-mcp",
+    "repo": "hexamatic/pihole-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/hexamatic/pihole-mcp:0.8.0"
+    ],
+    "env": [
+      {
+        "name": "PIHOLE_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "PIHOLE_PASSWORD",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "TZ",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PIHOLE_TLS_SKIP_VERIFY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PIHOLE_REQUEST_TIMEOUT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PIHOLE_MAX_RETRIES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PIHOLE_RETRY_MAX_DELAY",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-25T08:38:54.760243Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

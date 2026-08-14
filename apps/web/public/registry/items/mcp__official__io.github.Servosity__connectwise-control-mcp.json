@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.Servosity/connectwise-control-mcp",
+  "type": "mcp",
+  "name": "ConnectWise Control MCP",
+  "description": "Manage ConnectWise Control (ScreenConnect) remote support and access sessions from one CLI or agent.",
+  "author": "io.github.Servosity",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/servosity/msp-skills",
+    "repo": "servosity/msp-skills"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/Servosity/msp-skills/releases/download/connectwise-control-v0.1.1/connectwise-control-mcp.mcpb"
+    ],
+    "env": [
+      {
+        "name": "CONNECTWISE_CONTROL_BASE_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "CONNECTWISE_CONTROL_USERNAME",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "CONNECTWISE_CONTROL_PASSWORD",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-17T01:56:46.054455Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

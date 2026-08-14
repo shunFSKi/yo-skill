@@ -1,0 +1,99 @@
+{
+  "id": "mcp:official/io.github.dewtech-technologies/tubemind-secure-mcp",
+  "type": "mcp",
+  "name": "tubemind-secure-mcp",
+  "description": "Secure MCP server for YouTube intelligence — 18 tools, OAuth2, OWASP Top 10 controls.",
+  "author": "io.github.dewtech-technologies",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dewtech-technologies/tubemind-secure-mcp",
+    "repo": "dewtech-technologies/tubemind-secure-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "tubemind-secure-mcp"
+    ],
+    "env": [
+      {
+        "name": "YOUTUBE_CLIENT_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "YOUTUBE_CLIENT_SECRET",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "YOUTUBE_REDIRECT_URI",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TOKEN_ENCRYPTION_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "RATE_LIMIT_PER_MINUTE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "REQUEST_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AUDIT_LOG_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "NODE_ENV",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-07T21:36:41.84838Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

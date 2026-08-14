@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.markswendsen-code/doordash",
+  "type": "mcp",
+  "name": "doordash",
+  "description": "MCP server for DoorDash - let AI agents order food delivery autonomously with browser-based ordering",
+  "author": "io.github.markswendsen-code",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/markswendsen-code/mcp-doordash",
+    "repo": "markswendsen-code/mcp-doordash"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@striderlabs/mcp-doordash"
+    ],
+    "env": [
+      {
+        "name": "DOORDASH_EMAIL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "DOORDASH_PASSWORD",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "DOORDASH_ADDRESS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-17T04:02:27.045129Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

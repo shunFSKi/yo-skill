@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/dev.e2a/mcp-server",
+  "type": "mcp",
+  "name": "e2a — email for AI agents",
+  "description": "Authenticated email gateway for AI agents — per-agent inboxes, HITL approval, SPF/DKIM verified.",
+  "author": "dev.e2a",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/tokencanopy/e2a",
+    "repo": "tokencanopy/e2a"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.e2a.dev/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-28T18:16:32.15806Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

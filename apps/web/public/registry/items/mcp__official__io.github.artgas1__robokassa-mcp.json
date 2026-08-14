@@ -1,0 +1,78 @@
+{
+  "id": "mcp:official/io.github.artgas1/robokassa-mcp",
+  "type": "mcp",
+  "name": "robokassa-mcp",
+  "description": "Comprehensive MCP server for the Robokassa payment gateway (18 tools, full API coverage).",
+  "author": "io.github.artgas1",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/artgas1/robokassa-mcp",
+    "repo": "artgas1/robokassa-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "robokassa-mcp"
+    ],
+    "env": [
+      {
+        "name": "ROBOKASSA_LOGIN",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "ROBOKASSA_PASSWORD1",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ROBOKASSA_PASSWORD2",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ROBOKASSA_PASSWORD3",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-23T23:32:30.065988Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

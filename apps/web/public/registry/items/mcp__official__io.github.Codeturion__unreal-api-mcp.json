@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.Codeturion/unreal-api-mcp",
+  "type": "mcp",
+  "name": "Unreal Engine API Documentation",
+  "description": "Accurate UE5 C++ API docs for AI agents. Prevents hallucinated signatures and includes.",
+  "author": "io.github.Codeturion",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Codeturion/unreal-api-mcp",
+    "repo": "Codeturion/unreal-api-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "unreal-api-mcp"
+    ],
+    "env": [
+      {
+        "name": "UNREAL_VERSION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "UNREAL_PROJECT_PATH",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-19T13:48:36.250822Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

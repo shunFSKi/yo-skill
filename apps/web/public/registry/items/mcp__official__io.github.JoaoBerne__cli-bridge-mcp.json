@@ -1,0 +1,73 @@
+{
+  "id": "mcp:official/io.github.JoaoBerne/cli-bridge-mcp",
+  "type": "mcp",
+  "name": "cli-bridge-mcp",
+  "description": "Other AI CLIs (Gemini, GPT, Claude, opencode, Ollama) as a council — ban-safe, no API keys.",
+  "author": "io.github.JoaoBerne",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/JoaoBerne/cli-bridge-mcp",
+    "repo": "JoaoBerne/cli-bridge-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "cli-bridge-mcp"
+    ],
+    "env": [
+      {
+        "name": "CLI_BRIDGE_PROFILE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CLI_BRIDGE_TERSE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CLI_BRIDGE_CACHE_TTL_S",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-29T13:44:09.165167Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

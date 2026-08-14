@@ -1,0 +1,78 @@
+{
+  "id": "mcp:official/io.github.hoodsy/solar-data-mcp",
+  "type": "mcp",
+  "name": "Solar Data",
+  "description": "US open solar data for agents: PVWatts production, tariffs & ROI, market data, forecasts. 18 tools.",
+  "author": "io.github.hoodsy",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/hoodsy/solar-data-mcp",
+    "repo": "hoodsy/solar-data-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "solar-data-mcp"
+    ],
+    "env": [
+      {
+        "name": "NREL_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "OPENEI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "EIA_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "AHJ_REGISTRY_TOKEN",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-06T21:24:26.216301Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

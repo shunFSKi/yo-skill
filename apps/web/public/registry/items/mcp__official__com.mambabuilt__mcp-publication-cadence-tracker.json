@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/com.mambabuilt/mcp-publication-cadence-tracker",
+  "type": "mcp",
+  "name": "mcp-publication-cadence-tracker",
+  "description": "How often a company publishes long-form work, and whether that rate is rising or falling.",
+  "author": "com.mambabuilt",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mambalabsdev/mcp-publication-cadence-tracker",
+    "repo": "mambalabsdev/mcp-publication-cadence-tracker"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@mambalabsdev/mcp-publication-cadence-tracker"
+    ],
+    "env": [
+      {
+        "name": "APIFY_TOKEN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T08:22:28.882474Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "skill:claudeskills/kotlin-backend-jpa-entity-mapping",
+  "type": "skill",
+  "name": "kotlin-backend-jpa-entity-mapping",
+  "description": "Model Kotlin persistence code correctly for Spring Data JPA and Hibernate. Covers entity design, identity and equality, uniqueness constraints, relationships, fetch plans, and common ORM (Object-Relational Mapping) traps  specific to Kotlin. Use when creating or reviewing JPA (Java Persistence API)  entities, diagnosing N+1 or LazyInitializationException, placing indexes and  uniqueness rules, or preventing Kotlin-specific bugs such as data class  entities and broken equals/hashCode.",
+  "author": "Kotlin",
+  "source": {
+    "registry": "claudeskills",
+    "url": "https://github.com/Kotlin/kotlin-agent-skills",
+    "repo": "Kotlin/kotlin-agent-skills"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 514,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "[![Incubator](https://jb.gg/badges/incubator-plastic.svg)](https://github.com/JetBrains#jetbrains-on-github)\n\n# AI agent skills for Kotlin\n\nA collection of AI agent skills useful for projects using the Kotlin language. Skills are following the Agent Skills\nstandard, see [agentskills.io](https://agentskills.io) for more information.\n\n## How do Skills work?\n\nIn practice, skills are self-contained folders that package instructions, scripts, and resources together for \nan AI agent to use on a specific use case. Each folder includes a `SKILL.md` file with YAML \nfrontmatter (name and description) followed by the guidance your coding agent follows while the skill is active.\n\n### Skill naming conventions\n\nAll skills in the repository should follow the following naming convention: `kotlin-<category>-<functional-name>`.\n\n`<category>` here is one of predefined categories. Current categories are:\n- `backend` - server-side development skills, such as correct use of Spring, JPA, and other backend frameworks with Kotlin\n- `tooling` - any tooling related skills, for example build tooling one\n\nPlease open an issue to add additional categories.\n\n`<functional-name>` should be a short, descriptive name of the skill, using kebab-case naming convention. \n\n## Installation\n\n### Using the skills CLI\n\nInstall skills from this repository:\n\n```bash\nnpx skills add Kotlin/kotlin-agent-skills\n```\n\nSee [npx skills](https://github.com/vercel-labs/skills) for more options.\n\n### Claude Code\n\n```sh\nclaude plugin marketplace add Kotlin/kotlin-agent-skills\n```\n\n```sh\nclaude plugin install kotlin-agent-skills@Kotlin\n```\n\n### Codex\n\nIn shell:\n```shell\ncodex plugin marketplace add Kotlin/kotlin-agent-skills\n```\n\nThen inside `codex` invoke `/plugins`, search for `kotlin-agent-skills`, press 'Enter' and select 'Install plugin'.\n\n### Manual installation\n\nCopy the desired skill folder from [skills](./skills) into the skills directory of your agent, for example:\n\n```bash\ncp -r skills/kotlin-tooling-agp9-migration .claude/skills/\n```\n\n### Repository layout\n\n- [skills/](./skills) - a directory where all skills are located\n\n## Contributing\n\nSee [CONTRIBUTING.md](./CONTRIBUTING.md) for more details.\n",
+  "status": "curated"
+}

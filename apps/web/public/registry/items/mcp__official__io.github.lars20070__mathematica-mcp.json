@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.lars20070/mathematica-mcp",
+  "type": "mcp",
+  "name": "mathematica-mcp",
+  "description": "MCP server for WolframScript",
+  "author": "io.github.lars20070",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/lars20070/mathematica-mcp",
+    "repo": "lars20070/mathematica-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mathematica_mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-16T05:15:30.674133Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

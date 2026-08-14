@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.Rotwang9000/flashbank",
+  "type": "mcp",
+  "name": "FlashBank",
+  "description": "Fixed-fee P2P term loans (no oracles) and flash loans on Ethereum, Base, Arbitrum and Sepolia.",
+  "author": "io.github.Rotwang9000",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Rotwang9000/flashbank-net",
+    "repo": "Rotwang9000/flashbank-net"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@flashbank/mcp"
+    ],
+    "env": [
+      {
+        "name": "FLASHBANK_MCP_PRIVATE_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "FLASHBANK_MCP_ALLOW_MAINNET",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "FLASHBANK_MCP_RPC_SEPOLIA",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-12T07:51:31.252988Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

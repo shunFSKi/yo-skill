@@ -1,0 +1,99 @@
+{
+  "id": "mcp:official/io.github.lhf552004/cloudpulse",
+  "type": "mcp",
+  "name": "cloudpulse",
+  "description": "Cross-cloud observability for AI agents. Covers AWS, GCP, Vercel, and Cloudflare.",
+  "author": "io.github.lhf552004",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Galadriel-Tech-Solutions/cloudpulse-mcp",
+    "repo": "Galadriel-Tech-Solutions/cloudpulse-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "cloudpulse-mcp"
+    ],
+    "env": [
+      {
+        "name": "AWS_ACCESS_KEY_ID",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "AWS_SECRET_ACCESS_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "AWS_REGION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "VERCEL_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GOOGLE_APPLICATION_CREDENTIALS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GOOGLE_CLOUD_PROJECT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CLOUDFLARE_API_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "CLOUDFLARE_ACCOUNT_ID",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-19T16:05:48.364798Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

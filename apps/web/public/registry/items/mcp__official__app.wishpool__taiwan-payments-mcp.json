@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/app.wishpool/taiwan-payments-mcp",
+  "type": "mcp",
+  "name": "Taiwan Payments & E-Invoice (ECPay 綠界 / NewebPay 藍新)",
+  "description": "Taiwan payments (ECPay 綠界 + NewebPay 藍新) & e-invoices for AI agents. Stateless, never holds funds.",
+  "author": "app.wishpool",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/junter1989k-ai/taiwan-payments-mcp",
+    "repo": "junter1989k-ai/taiwan-payments-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.wishpool.app/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-08T11:40:50.625067Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

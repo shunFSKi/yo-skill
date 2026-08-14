@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/gallery.a1/a1-gallery",
+  "type": "mcp",
+  "name": "A1 Gallery",
+  "description": "Search a curated gallery of real website designs by style, font, colour, section and technology.",
+  "author": "gallery.a1",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/bryntay/a1-mcp",
+    "repo": "bryntay/a1-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://www.a1.gallery/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T06:53:08.19585Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

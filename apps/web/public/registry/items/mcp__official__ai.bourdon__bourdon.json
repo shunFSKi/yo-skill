@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/ai.bourdon/bourdon",
+  "type": "mcp",
+  "name": "Bourdon",
+  "description": "Recognition-first cross-agent memory federation. One shared memory across all your agents.",
+  "author": "ai.bourdon",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers/ai.bourdon%2Fbourdon",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "bourdon"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-04T16:06:49.647698Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.saagpatel/operant-mcp",
+  "type": "mcp",
+  "name": "operant-mcp",
+  "description": "Read-only MCP server for the OPERANT AI operating-agent calibration benchmark.",
+  "author": "io.github.saagpatel",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/saagpatel/operant",
+    "repo": "saagpatel/operant"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "saagar-operant-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-28T08:31:06.866389Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

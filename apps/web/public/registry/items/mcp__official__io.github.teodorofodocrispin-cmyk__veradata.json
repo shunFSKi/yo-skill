@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.teodorofodocrispin-cmyk/veradata",
+  "type": "mcp",
+  "name": "VeraData",
+  "description": "Verified LATAM data for AI agents: sanctions, entity, rates, KYB. Pay via x402.",
+  "author": "io.github.teodorofodocrispin-cmyk",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/teodorofodocrispin-cmyk/veradata",
+    "repo": "teodorofodocrispin-cmyk/veradata"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.veradata.dev/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-21T03:42:39.528137Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

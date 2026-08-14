@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.Alfred768/mantis",
+  "type": "mcp",
+  "name": "Mantis",
+  "description": "Cross-venue prediction market routing for AI agents with arbitrage, quotes, history, and signals.",
+  "author": "io.github.Alfred768",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Alfred768/prediction-router-portal",
+    "repo": "Alfred768/prediction-router-portal"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mantiss.store/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-14T22:25:58.878938Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

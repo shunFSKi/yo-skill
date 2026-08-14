@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.getveles/cpq",
+  "type": "mcp",
+  "name": "Veles CPQ",
+  "description": "Configure, price, and quote with Veles CPQ",
+  "author": "com.getveles",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://app.getveles.com/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://app.getveles.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-21T19:53:28.164362Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

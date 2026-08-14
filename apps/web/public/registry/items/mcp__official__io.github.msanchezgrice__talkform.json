@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.msanchezgrice/talkform",
+  "type": "mcp",
+  "name": "talkform",
+  "description": "Local Talkform schemas, bundled interview templates, and config validation for AI agents.",
+  "author": "io.github.msanchezgrice",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/msanchezgrice/audioform",
+    "repo": "msanchezgrice/audioform"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@talkform/mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-22T21:17:42.467151Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.therealtimex/browser-use",
+  "type": "mcp",
+  "name": "browser-use",
+  "description": "AI browser automation - navigate, click, type, extract content, and run autonomous web tasks",
+  "author": "io.github.therealtimex",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/therealtimex/browser-use",
+    "repo": "therealtimex/browser-use"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "realtimex-browser-use"
+    ],
+    "env": [
+      {
+        "name": "OPENAI_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-10-01T11:22:24.309888Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

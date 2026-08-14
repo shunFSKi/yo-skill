@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/org.sovgrid/self-hosted-ai",
+  "type": "mcp",
+  "name": "self-hosted-ai",
+  "description": "Engineering log of self-hosted AI on NVIDIA DGX Spark (GB10/SM121A). 60+ articles indexed.",
+  "author": "org.sovgrid",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/cipherfoxie/sovereign-mcp",
+    "repo": "cipherfoxie/sovereign-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.sovgrid.org/self-hosted-ai?ref=mcp-io"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-05T19:53:43.971133Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

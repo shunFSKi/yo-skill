@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.Digital-Defiance/mcp-debugger",
+  "type": "mcp",
+  "name": "mcp-debugger",
+  "description": "Node.js and TypeScript debugging with 25+ tools for AI agents",
+  "author": "io.github.Digital-Defiance",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Digital-Defiance/mcp-debugger-server",
+    "repo": "Digital-Defiance/mcp-debugger-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@ai-capabilities-suite/mcp-debugger-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-12-05T18:41:27.065015Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

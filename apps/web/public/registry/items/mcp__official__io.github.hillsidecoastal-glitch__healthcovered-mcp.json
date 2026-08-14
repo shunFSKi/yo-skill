@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.hillsidecoastal-glitch/healthcovered-mcp",
+  "type": "mcp",
+  "name": "healthcovered-mcp",
+  "description": "ACA health insurance eligibility, subsidy checker, and enrollment dates for 2026.",
+  "author": "io.github.hillsidecoastal-glitch",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/hillsidecoastal-glitch/healthcovered-mcp",
+    "repo": "hillsidecoastal-glitch/healthcovered-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://healthcovered-mcp.onrender.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-31T21:25:41.069Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

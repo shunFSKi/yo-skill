@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.ErikEJ/SqlServer.Rules",
+  "type": "mcp",
+  "name": "SqlServer.Rules",
+  "description": "Analyze T-SQL scripts for design, naming, and performance issues and prevent bad practices.",
+  "author": "io.github.ErikEJ",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ErikEJ/SqlServer.Rules",
+    "repo": "ErikEJ/SqlServer"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ErikEJ.DacFX.TSQLAnalyzer.Cli"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-29T06:19:21.053316Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

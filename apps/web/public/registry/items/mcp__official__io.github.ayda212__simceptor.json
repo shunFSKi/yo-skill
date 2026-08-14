@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.ayda212/simceptor",
+  "type": "mcp",
+  "name": "simceptor",
+  "description": "AI-native mock API server with MCP. Create REST/SOAP mocks from Claude, Cursor, or Windsurf.",
+  "author": "io.github.ayda212",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://simceptor.com/api/mcp/sse",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://simceptor.com/api/mcp/sse",
+    "env": [
+      {
+        "name": "",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-19T01:54:37.356233Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

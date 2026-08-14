@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.tosin2013/mcp-adr-analysis-server",
+  "type": "mcp",
+  "name": "mcp-adr-analysis-server",
+  "description": "AI-powered MCP server for analyzing Architectural Decision Records (ADRs).",
+  "author": "io.github.tosin2013",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/tosin2013/mcp-adr-analysis-server",
+    "repo": "tosin2013/mcp-adr-analysis-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-adr-analysis-server"
+    ],
+    "env": [
+      {
+        "name": "PROJECT_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OPENROUTER_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "EXECUTION_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ADR_DIRECTORY",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-05T21:10:05.07471Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

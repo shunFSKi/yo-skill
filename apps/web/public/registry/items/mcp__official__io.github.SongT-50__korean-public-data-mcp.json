@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.SongT-50/korean-public-data-mcp",
+  "type": "mcp",
+  "name": "Korean Public Data",
+  "description": "Korean government open data - weather, population, law search via data.go.kr",
+  "author": "io.github.SongT-50",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/SongT-50/korean-public-data-mcp",
+    "repo": "SongT-50/korean-public-data-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://korean-public-data-mcp.onrender.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-08T23:56:23.541055Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.NicolaiJohannesen/tradetime-mcp",
+  "type": "mcp",
+  "name": "TradeTi.me — Market Hours",
+  "description": "Read-only trading hours for 30 stock exchanges — open now, next open, holidays, sessions.",
+  "author": "io.github.NicolaiJohannesen",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/NicolaiJohannesen/global_trading_timeline",
+    "repo": "NicolaiJohannesen/global_trading_timeline"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "tradetime-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-06T12:38:29.506017Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

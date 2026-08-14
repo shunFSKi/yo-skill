@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/com.qronoplay/qronoplay",
+  "type": "mcp",
+  "name": "qronoplay",
+  "description": "QR-code marketing games and contests: campaigns, prizes, QR codes, winners, stats. GDPR-native (EU).",
+  "author": "com.qronoplay",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://api.qronoplay.fr/v1/ai/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.qronoplay.fr/v1/ai/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-08T15:39:34.494893Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

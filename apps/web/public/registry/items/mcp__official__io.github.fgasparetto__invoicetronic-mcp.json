@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.fgasparetto/invoicetronic-mcp",
+  "type": "mcp",
+  "name": "Invoicetronic MCP Server",
+  "description": "MCP server for Italian electronic invoicing (SDI) via Invoicetronic API",
+  "author": "io.github.fgasparetto",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/fgasparetto/invoicetronic-mcp",
+    "repo": "fgasparetto/invoicetronic-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "invoicetronic-mcp"
+    ],
+    "env": [
+      {
+        "name": "INVOICETRONIC_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-12T10:53:01.323183Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

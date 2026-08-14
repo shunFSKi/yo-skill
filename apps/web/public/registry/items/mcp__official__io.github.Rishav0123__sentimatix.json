@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.Rishav0123/sentimatix",
+  "type": "mcp",
+  "name": "Sentimatix",
+  "description": "Real-time NSE/BSE stock sentiment, news NLP, technical analysis & RAG search via MCP.",
+  "author": "io.github.Rishav0123",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Rishav0123/sentimatix",
+    "repo": "Rishav0123/sentimatix"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "sentimatix-mcp"
+    ],
+    "env": [
+      {
+        "name": "BACKEND_API_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SENTIMATIX_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-15T21:44:03.93234Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

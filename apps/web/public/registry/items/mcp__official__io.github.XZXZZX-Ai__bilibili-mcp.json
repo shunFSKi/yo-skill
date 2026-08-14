@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.XZXZZX-Ai/bilibili-mcp",
+  "type": "mcp",
+  "name": "Bilibili MCP Server",
+  "description": "Bilibili MCP tool for video metadata, transcripts, subtitles, and comment summarization",
+  "author": "io.github.XZXZZX-Ai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/XZXZZX-Ai/bilibili-mcp",
+    "repo": "XZXZZX-Ai/bilibili-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@xzxzzx/bilibili-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-09T05:31:37.109368Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

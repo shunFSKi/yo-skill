@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/bot.402/discovery-oracle",
+  "type": "mcp",
+  "name": "discovery-oracle",
+  "description": "Discover live agent APIs, ranked endpoints, trust, payment telemetry, and x402 surfaces.",
+  "author": "bot.402",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://api.402.bot/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.402.bot/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-08T03:24:57.935141Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

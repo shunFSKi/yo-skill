@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/com.playbykey/theory-mcp",
+  "type": "mcp",
+  "name": "PlayByKey Music Theory",
+  "description": "Chords, scales, progressions, transposition, and MIDI tools for music theory AI agents.",
+  "author": "com.playbykey",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/DigitalBrewLLC/playbykey-dev-tools",
+    "repo": "DigitalBrewLLC/playbykey-dev-tools"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@playbykey/theory-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-28T00:09:55.288921Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

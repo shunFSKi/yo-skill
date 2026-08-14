@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/com.pinappai/mcp",
+  "type": "mcp",
+  "name": "PinAppAI",
+  "description": "Visual website feedback your coding agent applies: pin change requests on the live site over MCP.",
+  "author": "com.pinappai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.pinappai.com/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@pinappai/mcp"
+    ],
+    "env": [
+      {
+        "name": "PINAPPAI_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-25T22:26:59.086832Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

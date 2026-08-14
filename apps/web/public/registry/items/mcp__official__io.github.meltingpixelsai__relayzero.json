@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.meltingpixelsai/relayzero",
+  "type": "mcp",
+  "name": "relayzero",
+  "description": "Agent economy on Solana — USDC via x402. Ships a BuyerAgent SDK + relayzero pay CLI.",
+  "author": "io.github.meltingpixelsai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/meltingpixelsai/relayzero",
+    "repo": "meltingpixelsai/relayzero"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "relayzero"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-04T13:46:55.549446Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

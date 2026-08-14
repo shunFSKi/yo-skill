@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/com.clauxel.sregymgate/sregymgate-mcp",
+  "type": "mcp",
+  "name": "sregymgate-mcp",
+  "description": "A paid remote MCP for SREGym, built to return verdicts, receipts, usage logs, and audit-ready JSON.",
+  "author": "com.clauxel.sregymgate",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/clauxel/sregym-incident-replay-gate-mcp",
+    "repo": "clauxel/sregym-incident-replay-gate-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://sregymgate.clauxel.com/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-27T16:25:31.125426Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

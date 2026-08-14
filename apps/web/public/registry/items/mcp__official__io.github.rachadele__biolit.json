@@ -1,0 +1,88 @@
+{
+  "id": "mcp:official/io.github.rachadele/biolit",
+  "type": "mcp",
+  "name": "biolit",
+  "description": "LLM-assisted biomedical literature screening and extraction for PubMed, GEO, and preprints.",
+  "author": "io.github.rachadele",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/rachadele/biolit",
+    "repo": "rachadele/biolit"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "biolit"
+    ],
+    "env": [
+      {
+        "name": "ANTHROPIC_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "OPENAI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "LLM_PROVIDER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LLM_MODEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SEMANTIC_SCHOLAR_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "UNPAYWALL_EMAIL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-01T19:05:07.949986Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

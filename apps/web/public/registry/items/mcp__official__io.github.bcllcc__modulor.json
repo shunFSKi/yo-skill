@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.bcllcc/modulor",
+  "type": "mcp",
+  "name": "modulor",
+  "description": "Agent-native CAD: draw plans, model 3D, render checks, export DXF/SVG/STL/GLB/IFC, import DXF.",
+  "author": "io.github.bcllcc",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/bcllcc/modulor",
+    "repo": "bcllcc/modulor"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "modulor"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-12T07:00:46.793602Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

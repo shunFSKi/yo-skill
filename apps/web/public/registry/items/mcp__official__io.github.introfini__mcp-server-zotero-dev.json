@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.introfini/mcp-server-zotero-dev",
+  "type": "mcp",
+  "name": "mcp-server-zotero-dev",
+  "description": "MCP server enabling AI assistants to build, test, and debug Zotero plugins",
+  "author": "io.github.introfini",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/introfini/mcp-server-zotero-dev",
+    "repo": "introfini/mcp-server-zotero-dev"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@introfini/mcp-server-zotero-dev"
+    ],
+    "env": [
+      {
+        "name": "ZOTERO_RDP_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ZOTERO_RDP_HOST",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-25T14:24:59.20136Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

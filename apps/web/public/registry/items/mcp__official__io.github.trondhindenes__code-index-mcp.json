@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.trondhindenes/code-index-mcp",
+  "type": "mcp",
+  "name": "Code Index",
+  "description": "Fast local source code searching using Zoekt trigram-based indexing",
+  "author": "io.github.trondhindenes",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/trondhindenes/code-index-mcp",
+    "repo": "trondhindenes/code-index-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/trondhindenes/code-index-mcp/releases/download/1.0.16/code-index-mcp-darwin-amd64.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-11-30T18:33:39.778751Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

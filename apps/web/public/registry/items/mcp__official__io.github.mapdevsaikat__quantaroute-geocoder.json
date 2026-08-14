@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.mapdevsaikat/quantaroute-geocoder",
+  "type": "mcp",
+  "name": "quantaroute-geocoder",
+  "description": "Geocode addresses, lookup administrative boundaries, and process DigiPin codes for India",
+  "author": "io.github.mapdevsaikat",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mapdevsaikat/quantaroute-geocoder",
+    "repo": "mapdevsaikat/quantaroute-geocoder"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@quantaroute/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "QUANTAROUTE_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-12T18:11:36.09671Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

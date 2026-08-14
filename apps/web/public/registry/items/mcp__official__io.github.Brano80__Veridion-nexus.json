@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.Brano80/Veridion-nexus",
+  "type": "mcp",
+  "name": "Veridion-nexus",
+  "description": "Veridion Nexus MCP server - GDPR Art. 44-49 runtime compliance for AI agents",
+  "author": "io.github.Brano80",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Brano80/Veridion-nexus",
+    "repo": "Brano80/Veridion-nexus"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "veridion-nexus-mcp"
+    ],
+    "env": [
+      {
+        "name": "VERIDION_NEXUS_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-23T08:03:20.229707Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

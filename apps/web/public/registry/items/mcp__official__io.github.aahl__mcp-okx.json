@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.aahl/mcp-okx",
+  "type": "mcp",
+  "name": "OKX MCP Server",
+  "description": "MCP Server for okx.com",
+  "author": "io.github.aahl",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/aahl/mcp-okx",
+    "repo": "aahl/mcp-okx"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-okx"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-11-10T10:08:56.611262Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

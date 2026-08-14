@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.sethclawd-prog/schemaguard",
+  "type": "mcp",
+  "name": "schemaguard",
+  "description": "API Schema Drift Monitor — detect breaking changes in OpenAPI specs",
+  "author": "io.github.sethclawd-prog",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/sethclawd-prog/schemaguard",
+    "repo": "sethclawd-prog/schemaguard"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@sethclawd/schemaguard"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-21T00:37:35.728803Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

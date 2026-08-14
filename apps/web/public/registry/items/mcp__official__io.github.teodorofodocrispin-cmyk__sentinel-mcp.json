@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.teodorofodocrispin-cmyk/sentinel-mcp",
+  "type": "mcp",
+  "name": "SENTINEL",
+  "description": "Pre-execution safety oracle for AI agents. Screens Base contracts, simulates sells, pays via x402.",
+  "author": "io.github.teodorofodocrispin-cmyk",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers/io.github.teodorofodocrispin-cmyk%2Fsentinel-mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "sentinel-mcp"
+    ],
+    "env": [
+      {
+        "name": "AGENT_WALLET_PRIVATE_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-21T03:24:10.51828Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

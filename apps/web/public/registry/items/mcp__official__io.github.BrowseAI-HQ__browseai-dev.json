@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.BrowseAI-HQ/browseai-dev",
+  "type": "mcp",
+  "name": "BrowseAI Dev",
+  "description": "Evidence-backed web research for AI agents with citations and confidence scores.",
+  "author": "io.github.BrowseAI-HQ",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/BrowseAI-HQ/BrowseAI-Dev",
+    "repo": "BrowseAI-HQ/BrowseAI-Dev"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "browseai-dev"
+    ],
+    "env": [
+      {
+        "name": "BROWSE_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-07T21:05:08.686961Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

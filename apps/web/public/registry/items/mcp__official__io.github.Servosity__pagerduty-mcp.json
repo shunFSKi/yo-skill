@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.Servosity/pagerduty-mcp",
+  "type": "mcp",
+  "name": "PagerDuty MCP",
+  "description": "Operate PagerDuty from your AI agent via MCP.",
+  "author": "io.github.Servosity",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/servosity/msp-skills",
+    "repo": "servosity/msp-skills"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/Servosity/msp-skills/releases/download/pagerduty-v0.1.0/pagerduty-mcp.mcpb"
+    ],
+    "env": [
+      {
+        "name": "PAGERDUTY_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-07T02:07:14.231852Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.Joyall-au/cardossier-market-api",
+  "type": "mcp",
+  "name": "cardossier-market-api",
+  "description": "Polish used-car market data: valuations, price history, liquidity, regional prices. Keyless demo.",
+  "author": "io.github.Joyall-au",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Joyall-au/cardossier-mcp-server",
+    "repo": "Joyall-au/cardossier-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "cardossier-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "CARDOSSIER_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-31T06:29:33.684207Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

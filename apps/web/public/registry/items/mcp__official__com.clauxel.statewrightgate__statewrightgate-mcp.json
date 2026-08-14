@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/com.clauxel.statewrightgate/statewrightgate-mcp",
+  "type": "mcp",
+  "name": "statewrightgate-mcp",
+  "description": "A paid remote MCP for Statewright, built to return verdicts, receipts, usage logs, and audit-ready J",
+  "author": "com.clauxel.statewrightgate",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/clauxel/statewright-transition-gate-mcp",
+    "repo": "clauxel/statewright-transition-gate-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://statewrightgate.clauxel.com/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-27T16:26:12.527882Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

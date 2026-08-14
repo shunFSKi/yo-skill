@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.dsbissett/excel-webview2-mcp",
+  "type": "mcp",
+  "name": "excel-webview2-mcp",
+  "description": "MCP server for Excel add-ins via WebView2 CDP",
+  "author": "io.github.dsbissett",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dsbissett/excel-webview2-mcp",
+    "repo": "dsbissett/excel-webview2-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@dsbissett/excel-webview2-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-25T18:06:34.474816Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

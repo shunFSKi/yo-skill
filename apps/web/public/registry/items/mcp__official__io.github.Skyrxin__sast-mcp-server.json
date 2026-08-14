@@ -1,0 +1,78 @@
+{
+  "id": "mcp:official/io.github.Skyrxin/sast-mcp-server",
+  "type": "mcp",
+  "name": "SAST MCP Server",
+  "description": "11-scanner SAST/DAST MCP server with closed-loop remediation, SBOM/SARIF, and CI integrations",
+  "author": "io.github.Skyrxin",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Skyrxin/sast-mcp-server",
+    "repo": "Skyrxin/sast-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "sast-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "SAST_MCP_TIMEOUT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SAST_MCP_LOG_LEVEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SAST_MCP_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SAST_MCP_JWT_SECRET",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-24T10:18:21.757323Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

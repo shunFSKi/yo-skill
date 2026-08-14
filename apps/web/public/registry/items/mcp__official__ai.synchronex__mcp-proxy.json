@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/ai.synchronex/mcp-proxy",
+  "type": "mcp",
+  "name": "Synchronex",
+  "description": "Connect any AI agent to your Synchronex workspace — portable memory, decisions, and workers.",
+  "author": "ai.synchronex",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/kmdesle/synchronex",
+    "repo": "kmdesle/synchronex"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@synchronex/mcp-proxy"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T21:29:19.624363Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

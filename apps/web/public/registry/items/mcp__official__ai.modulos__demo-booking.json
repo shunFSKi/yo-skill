@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/ai.modulos/demo-booking",
+  "type": "mcp",
+  "name": "Modulos Demo Booking",
+  "description": "Book a Modulos demo. AI Governance Platform for EU AI Act, ISO 42001, NIST AI RMF.",
+  "author": "ai.modulos",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://www.modulos.ai/api/mcp/",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://www.modulos.ai/api/mcp/"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-21T15:01:57.628905Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

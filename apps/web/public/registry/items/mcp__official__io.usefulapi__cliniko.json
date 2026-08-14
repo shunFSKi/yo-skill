@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.usefulapi/cliniko",
+  "type": "mcp",
+  "name": "cliniko",
+  "description": "Hosted MCP server for Cliniko — patients, appointments, availability, and invoices for AI agents.",
+  "author": "io.usefulapi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/m190/usefulapi-mcp",
+    "repo": "m190/usefulapi-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://cliniko.usefulapi.io/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-17T20:29:40.796192Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

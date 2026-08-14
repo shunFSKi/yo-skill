@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.raskolnikovdd/adaptive-memory-graph",
+  "type": "mcp",
+  "name": "Adaptive Memory Graph",
+  "description": "Persistent memory for Claude via weighted, interconnected knowledge nodes.",
+  "author": "io.github.raskolnikovdd",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/raskolnikovdd/adaptive-memory-graph.git",
+    "repo": "raskolnikovdd/adaptive-memory-graph"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "adaptive-memory-graph"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-11T18:46:11.212765Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

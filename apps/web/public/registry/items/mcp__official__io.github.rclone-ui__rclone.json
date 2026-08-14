@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.rclone-ui/rclone",
+  "type": "mcp",
+  "name": "rclone",
+  "description": "MCP server for the Rclone RC API, with selectable toolsets.",
+  "author": "io.github.rclone-ui",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/rclone-ui/rclone-mcp",
+    "repo": "rclone-ui/rclone-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "rclone-mcp"
+    ],
+    "env": [
+      {
+        "name": "RCLONE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RCLONE_USER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RCLONE_PASS",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "RCLONE_TOOLSETS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RCLONE_READ_ONLY",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-08T21:38:28.915796Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

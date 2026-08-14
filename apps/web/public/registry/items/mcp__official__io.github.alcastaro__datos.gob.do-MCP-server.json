@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.alcastaro/datos.gob.do-MCP-server",
+  "type": "mcp",
+  "name": "datos.gob.do-MCP-server",
+  "description": "MCP server for datos.gob.do — Dominican Republic open government data (CKAN 2.11).",
+  "author": "io.github.alcastaro",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/alcastaro/datos.gob.do-MCP-server",
+    "repo": "alcastaro/datos"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "dominican-open-data-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T22:12:38.386057Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.toflow-ai/toflow",
+  "type": "mcp",
+  "name": "ToFlow",
+  "description": "AI sales automation for toflow.ai — prospect, enrich, sequence across email, LinkedIn, WhatsApp.",
+  "author": "io.github.toflow-ai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/toflow-ai/toflow-mcp",
+    "repo": "toflow-ai/toflow-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.toflow.ai/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-28T09:33:17.754799Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

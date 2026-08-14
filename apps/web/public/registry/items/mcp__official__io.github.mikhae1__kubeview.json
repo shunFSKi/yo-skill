@@ -1,0 +1,179 @@
+{
+  "id": "mcp:official/io.github.mikhae1/kubeview",
+  "type": "mcp",
+  "name": "kubeview",
+  "description": "Read-only Model Context Protocol MCP server enabling code-driven AI analysis of Kubernetes clusters.",
+  "author": "io.github.mikhae1",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mikhae1/kubeview-mcp",
+    "repo": "mikhae1/kubeview-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "kubeview-mcp"
+    ],
+    "env": [
+      {
+        "name": "KUBECONFIG",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_TRANSPORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_CODE_MODE_DISABLED_TOOLS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_ARGO_TOOLS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_ARGOCD_TOOLS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_LOG_LEVEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_KUBE_CONTEXT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_K8S_SKIP_TLS_VERIFY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_HIDE_SENSITIVE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_TIMEOUT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_HTTP_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_HTTP_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_HTTP_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_HTTP_JSON_RESPONSE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_APPROVAL_STATE_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MCP_APPROVAL_REPLAY_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_ALLOWED_HOSTS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_ALLOWED_ORIGINS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "KUBE_MCP_FORCE_VM_SANDBOX",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_DISABLE_KUBERNETES_PLUGIN",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_DISABLE_HELM_PLUGIN",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_DISABLE_ARGO_PLUGIN",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_DISABLE_ARGOCD_PLUGIN",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T18:41:03.220271Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

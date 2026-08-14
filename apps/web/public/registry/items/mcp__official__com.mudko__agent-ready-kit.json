@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.mudko/agent-ready-kit",
+  "type": "mcp",
+  "name": "agent-ready-kit",
+  "description": "Agent-readiness scanner (0-5 score), robots.txt + llms.txt generators, managed agent enablement.",
+  "author": "com.mudko",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/lmno100/mudko",
+    "repo": "lmno100/mudko"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mudko.com/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T06:59:19.531767Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# Agent Ready Kit\n\n**Make any website discoverable and callable by AI agents.** Agent Ready Kit\nscans a site against the agent-ready spec, generates the full agent surface\n(agent card, MCP server card, `llms.txt`, `robots.txt` for AI, OASF record,\nA2A card), and can close and deliver a managed agent-enablement engagement\nautonomously.\n\n- **Website:** https://mudko.com\n- **MCP endpoint:** `https://mudko.com/api/mcp` (Streamable HTTP, no signup — 25 tools)\n- **Free scanner:** https://mudko.com/tools/scan\n- **Tools catalog:** https://mudko.com/tools\n- **Agent card:** https://mudko.com/.well-known/agent-card.json\n- **x402 agent payments:** live on Base (7 endpoints in the Coinbase x402 Bazaar)\n\nRegistries: [Official MCP Registry](https://registry.modelcontextprotocol.io/v0/servers?search=com.mudko/agent-ready-kit)\n· [Smithery](https://smithery.ai/servers/@lmno100/agent-ready-kit)\n\nThe product runs as a hosted service at mudko.com. This repository is the\npublic home for the listing; the implementation is proprietary.\n\n_© Agent Ready Kit. Not open source._\n",
+  "status": "curated"
+}

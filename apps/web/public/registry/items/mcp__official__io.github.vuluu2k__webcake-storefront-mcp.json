@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.vuluu2k/webcake-storefront-mcp",
+  "type": "mcp",
+  "name": "WebCake Storefront",
+  "description": "Build pages and manage products, orders, and content on the WebCake/StoreCake storefront builder.",
+  "author": "io.github.vuluu2k",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/vuluu2k/webcake-storefront-mcp",
+    "repo": "vuluu2k/webcake-storefront-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "webcake-storefront-mcp"
+    ],
+    "env": [
+      {
+        "name": "WEBCAKE_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "WEBCAKE_SESSION_ID",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "WEBCAKE_ENV",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PEXELS_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-29T02:41:32.731196Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

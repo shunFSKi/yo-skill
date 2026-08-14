@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.mortenator/charta",
+  "type": "mcp",
+  "name": "charta",
+  "description": "Generate beautiful, presentation-ready charts (SVG + PNG). Supports 14+ chart types.",
+  "author": "io.github.mortenator",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mortenator/charta-mcp",
+    "repo": "mortenator/charta-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@charta/mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-14T12:50:19.784138Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

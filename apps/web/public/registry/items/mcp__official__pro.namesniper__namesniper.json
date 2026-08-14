@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/pro.namesniper/namesniper",
+  "type": "mcp",
+  "name": "NameSniper",
+  "description": "Monitor taken usernames and get alerted when they drop, plus handle, domain, and trademark checks.",
+  "author": "pro.namesniper",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ArvaNet/NameSniper-MCP",
+    "repo": "ArvaNet/NameSniper-MCP"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "namesniper-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T23:51:08.143269Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# NameSniper MCP Server\n\n[![npm version](https://img.shields.io/npm/v/namesniper-mcp.svg)](https://www.npmjs.com/package/namesniper-mcp)\n[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)\n[![Node](https://img.shields.io/badge/node-%3E%3D22-brightgreen.svg)](https://nodejs.org)\n[![Model Context Protocol](https://img.shields.io/badge/MCP-server-blue.svg)](https://modelcontextprotocol.io)\n\nNameSniper monitors taken usernames and alerts you the moment one frees up or drops, so you can claim a handle before anyone else. It also checks live handle availability across all the major social platforms, checks domains across popular TLDs, and screens names for trademark conflicts. All from your AI client - Claude, Cursor, or any MCP host.\n\nThe server runs remotely at `https://namesniper.pro/mcp` (Streamable HTTP). Checking and alternatives are free and need no account; name generation, trademark screening, and handle monitoring need a NameSniper API key (Pro or Business plan).\n\n## Handle monitoring\n\nMost availability checkers give a one-time yes or no. NameSniper keeps watching: put a taken handle on watch with `namesniper_watch` and get notified the instant it frees up across every platform we support, so you can register it first. Every plan includes watch slots (more on paid tiers); Instagram, TikTok, and X monitoring requires a paid plan.\n\n## Connect\n\n### Option A: remote URL (clients with native remote MCP support)\n\n```json\n{\n  \"mcpServers\": {\n    \"namesniper\": {\n      \"url\": \"https://namesniper.pro/mcp\"\n    }\n  }\n}\n```\n\n### Option B: npx bridge (works with any stdio MCP client)\n\n```json\n{\n  \"mcpServers\": {\n    \"namesniper\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"namesniper-mcp\"]\n    }\n  }\n}\n```\n\nWith an API key for the paid tools (generate, trademark, watch):\n\n```json\n{\n  \"mcpServers\": {\n    \"namesniper\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"namesniper-mcp\"],\n      \"env\": { \"NAMESNIPER_API_KEY\": \"ns_sk_your_key_here\" }\n    }\n  }\n}\n```\n\nYou can also pass the key as a flag: `npx namesniper-mcp --key ns_sk_...`. Get a key at [namesniper.pro/dashboard](https://namesniper.pro/dashboard).\n\nConfig file locations:\n- Claude Desktop: `claude_desktop_config.json`\n- Cursor: `.cursor/mcp.json`\n\n## Tools\n\n| Tool | What it does | API key |\n| --- | --- | --- |\n| `namesniper_check` | Name across domains + social, with brand score (trademark screening when authenticated) | Free |\n| `namesniper_check_domains` | Domain availability across TLDs | Free |\n| `namesniper_check_social` | Username availability across platforms | Free |\n| `namesniper_alternatives` | Brand name variations and creative patterns | Free |\n| `namesniper_telegram_price` | Telegram username market history: peak/latest sale in TON, live auction state, from public TON blockchain records | Free |\n| `namesniper_roblox_rarity` | Roblox username rarity rating from measured namespace data, with live availability | Free |\n| `namesniper_generate` | AI brand name generation from a description | Required |\n| `namesniper_trademark` | USPTO trademark conflict screening | Required |\n| `namesniper_watch` | Start monitoring a handle and get notified when it frees up | Required |\n| `namesniper_watches` | List monitored handles and their status | Required |\n\nUnauthenticated calls are rate limited. Provide an API key for higher limits and the paid tools.\n\n## Resources\n\n| Resource | URI |\n| --- | --- |\n| Pricing and per-call costs | `namesniper://pricing` |\n| Supported platforms and TLDs | `namesniper://platforms` |\n\n## Platforms\n\nYouTube, Reddit, TikTok, Instagram, X (Twitter), GitHub, npm, Twitch, Threads, Bluesky, Pinterest, Snapchat, Kick, Substack, Linktree, Roblox.\n\n## Links\n\n- Website: https://namesniper.pro\n- API docs: https://namesniper.pro/docs/api\n\n## License\n\nMIT\n",
+  "status": "curated"
+}

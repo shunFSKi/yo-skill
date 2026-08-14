@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/care.fysio/discovery",
+  "type": "mcp",
+  "name": "fysio.care clinic discovery",
+  "description": "Discover Swedish MSK clinics on fysio.care: search clinics, services, and open appointment times.",
+  "author": "care.fysio",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Fysio-care/fysio-care",
+    "repo": "Fysio-care/fysio-care"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://fysio.care/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-22T20:14:32.525034Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

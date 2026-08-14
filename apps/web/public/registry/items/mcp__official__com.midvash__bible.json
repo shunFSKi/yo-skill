@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.midvash/bible",
+  "type": "mcp",
+  "name": "Bible by Midvash",
+  "description": "Free, no-key Bible MCP server — 86 translations in 32 languages, from any MCP client.",
+  "author": "com.midvash",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/midvash/bible-mcp",
+    "repo": "midvash/bible-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.midvash.com/mcp/registry"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-29T19:58:52.313878Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

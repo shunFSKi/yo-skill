@@ -1,0 +1,124 @@
+{
+  "id": "mcp:official/io.github.piprail/mcp",
+  "type": "mcp",
+  "name": "PipRail",
+  "description": "Budget-bound x402 payment wallet for AI agents — pays HTTP 402 URLs, capped locally. No backend.",
+  "author": "io.github.piprail",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/piprail/piprail",
+    "repo": "piprail/piprail"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@piprail/mcp"
+    ],
+    "env": [
+      {
+        "name": "PIPRAIL_PRIVATE_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PIPRAIL_CHAIN",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PIPRAIL_CHAINS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PIPRAIL_MAX_AMOUNT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PIPRAIL_MAX_TOTAL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PIPRAIL_MAX_TOTAL_DENOM",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PIPRAIL_MAX_PAYMENTS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PIPRAIL_MAX_PAYMENTS_PER_WINDOW",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PIPRAIL_WARN_AT_FRACTION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PIPRAIL_SPEND_LOG",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PIPRAIL_EVENT_LOG",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PIPRAIL_TOKENS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PIPRAIL_SCHEMES",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-20T14:35:49.266978Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

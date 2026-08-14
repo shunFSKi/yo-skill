@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.domdomegg/openfoodfacts-mcp",
+  "type": "mcp",
+  "name": "Open Food Facts",
+  "description": "Search and contribute to the Open Food Facts database.",
+  "author": "io.github.domdomegg",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/domdomegg/openfoodfacts-mcp.git",
+    "repo": "domdomegg/openfoodfacts-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "openfoodfacts-mcp"
+    ],
+    "env": [
+      {
+        "name": "OFF_USER_AGENT",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "OFF_USER_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OFF_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "OFF_COUNTRY",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-09T20:44:16.084271Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

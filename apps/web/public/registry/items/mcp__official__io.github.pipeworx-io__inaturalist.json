@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.pipeworx-io/inaturalist",
+  "type": "mcp",
+  "name": "Inaturalist",
+  "description": "iNaturalist MCP — citizen-science species observations (free, no auth for read-only)",
+  "author": "io.github.pipeworx-io",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/pipeworx-io/mcp-inaturalist",
+    "repo": "pipeworx-io/mcp-inaturalist"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://gateway.pipeworx.io/inaturalist/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-11T21:42:47.88223Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

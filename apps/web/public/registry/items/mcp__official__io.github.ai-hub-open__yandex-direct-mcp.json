@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.ai-hub-open/yandex-direct-mcp",
+  "type": "mcp",
+  "name": "yandex-direct-mcp",
+  "description": "MCP server for Yandex Direct API: campaigns, ads, keywords, bids, reports. Click.ru or OAuth.",
+  "author": "io.github.ai-hub-open",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ai-hub-open/yandex-direct-mcp",
+    "repo": "ai-hub-open/yandex-direct-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@ai-hub-open/yandex-direct-mcp"
+    ],
+    "env": [
+      {
+        "name": "CLICK_RU_PROXY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CLICK_RU_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "CLICK_RU_CLIENT_LOGIN",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "YANDEX_DIRECT_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "YANDEX_DIRECT_SANDBOX",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-30T08:39:16.610883Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

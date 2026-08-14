@@ -1,0 +1,134 @@
+{
+  "id": "mcp:official/io.form/formio-uag",
+  "type": "mcp",
+  "name": "formio-uag",
+  "description": "The Universal Agent Gateway (UAG) enables in-process agentic automation using Form.io.",
+  "author": "io.form",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/formio/uag",
+    "repo": "formio/uag"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@formio/uag"
+    ],
+    "env": [
+      {
+        "name": "PROJECT",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "PROJECT_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ADMIN_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "UAG_LICENSE",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "JWT_SECRET",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PROJECT_TTL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "JWT_EXPIRE_TIME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PORTAL_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MONGO",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MONGO_CONFIG",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BASE_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "LOGIN_FORM",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CORS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DEBUG",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-05T14:20:34.451071Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

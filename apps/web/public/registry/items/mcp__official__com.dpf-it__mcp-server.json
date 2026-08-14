@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.dpf-it/mcp-server",
+  "type": "mcp",
+  "name": "mcp-server",
+  "description": "AI-powered data integration platform. Onboard users and run DPF data workflows.",
+  "author": "com.dpf-it",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://api.dpf-it.com/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.dpf-it.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-26T18:43:08.01318Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

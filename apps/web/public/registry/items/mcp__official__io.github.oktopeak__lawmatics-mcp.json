@@ -1,0 +1,109 @@
+{
+  "id": "mcp:official/io.github.oktopeak/lawmatics-mcp",
+  "type": "mcp",
+  "name": "lawmatics-mcp",
+  "description": "Connect Claude to Lawmatics: matters, contacts, pipelines, tasks, forms, custom fields, invoices.",
+  "author": "io.github.oktopeak",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/oktopeak/lawmatics-mcp",
+    "repo": "oktopeak/lawmatics-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@oktopeak/lawmatics-mcp"
+    ],
+    "env": [
+      {
+        "name": "LAWMATICS_ACCESS_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "LAWMATICS_READ_ONLY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LAWMATICS_EXPERIMENTAL_TOOLS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LAWMATICS_RATE_LIMIT_PER_MIN",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LAWMATICS_AUDIT_LOG",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LAWMATICS_AUDIT_LOG_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LAWMATICS_CLIENT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LAWMATICS_CLIENT_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "LAWMATICS_REDIRECT_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LAWMATICS_API_BASE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-08T09:37:33.89071Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

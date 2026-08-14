@@ -1,0 +1,114 @@
+{
+  "id": "mcp:official/com.pulsemcp/ssh",
+  "type": "mcp",
+  "name": "ssh",
+  "description": "MCP server for SSH remote server management with SSH agent authentication support.",
+  "author": "com.pulsemcp",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/pulsemcp/mcp-servers",
+    "repo": "pulsemcp/mcp-servers"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ssh-agent-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "SSH_HOST",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "SSH_USERNAME",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "SSH_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SSH_AUTH_SOCK",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SSH_PRIVATE_KEY_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SSH_PASSPHRASE",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SSH_TIMEOUT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SSH_COMMAND_TIMEOUT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ENABLED_TOOLGROUPS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SKIP_HEALTH_CHECKS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "HEALTH_CHECK_TIMEOUT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-14T17:29:52.855171Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

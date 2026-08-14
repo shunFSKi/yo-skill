@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.ArkNill/docpick",
+  "type": "mcp",
+  "name": "Docpick",
+  "description": "Schema-driven document extraction with local OCR + LLM. Document in, Structured JSON out.",
+  "author": "io.github.ArkNill",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/QuartzUnit/docpick",
+    "repo": "QuartzUnit/docpick"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "docpick"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-17T01:45:47.811703Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

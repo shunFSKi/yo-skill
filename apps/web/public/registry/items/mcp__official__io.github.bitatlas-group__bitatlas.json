@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.bitatlas-group/bitatlas",
+  "type": "mcp",
+  "name": "bitatlas",
+  "description": "Zero-knowledge encrypted storage for humans and AI agents. Client-side AES-256-GCM, EU-hosted.",
+  "author": "io.github.bitatlas-group",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/bitatlas-group/bitatlas",
+    "repo": "bitatlas-group/bitatlas"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@bitatlas/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "BITATLAS_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "BITATLAS_MASTER_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "BITATLAS_API_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BITATLAS_WEB_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-14T18:02:08.990371Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

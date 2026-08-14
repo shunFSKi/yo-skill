@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.heidiEC/context-pod",
+  "type": "mcp",
+  "name": "context-pod",
+  "description": "Persistent context for AI agents built fromlearned vectors with certainty scores.",
+  "author": "io.github.heidiEC",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Nervous-Machine/context-pod",
+    "repo": "Nervous-Machine/context-pod"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://context.nervousmachine.com/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-25T05:15:04.394925Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

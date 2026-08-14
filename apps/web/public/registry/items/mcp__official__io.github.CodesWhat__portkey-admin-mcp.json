@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.CodesWhat/portkey-admin-mcp",
+  "type": "mcp",
+  "name": "portkey-admin-mcp",
+  "description": "Portkey Admin API MCP server with current coverage and Prisma AIRS interoperability guidance.",
+  "author": "io.github.CodesWhat",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/CodesWhat/portkey-admin-mcp",
+    "repo": "CodesWhat/portkey-admin-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "portkey-admin-mcp"
+    ],
+    "env": [
+      {
+        "name": "PORTKEY_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "PORTKEY_TOOL_DOMAINS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PORTKEY_BASE_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T00:39:13.216633Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

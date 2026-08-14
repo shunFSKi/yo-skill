@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.huoshuiai42/huoshui-pdf-translator",
+  "type": "mcp",
+  "name": "huoshui-pdf-translator",
+  "description": "An MCP server that provides PDF translation service",
+  "author": "io.github.huoshuiai42",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/huoshuiai42/huoshui-pdf-translator",
+    "repo": "huoshuiai42/huoshui-pdf-translator"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "huoshui-pdf-translator"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-09-11T01:31:51.354566Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

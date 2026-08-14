@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/com.mcpbundles/uk-case-law",
+  "type": "mcp",
+  "name": "UK Case Law MCP Server from MCPBundles",
+  "description": "Search UK court judgments and tribunal decisions from the National Archives",
+  "author": "com.mcpbundles",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/thinkchainai/mcpbundles",
+    "repo": "thinkchainai/mcpbundles"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/thinkchainai/mcpbundles/releases/download/uk-case-law-v1.0.0+build.1c935870/uk-case-law.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-11T18:02:16.49973Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

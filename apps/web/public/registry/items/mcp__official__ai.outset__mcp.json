@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/ai.outset/mcp",
+  "type": "mcp",
+  "name": "Outset",
+  "description": "AI-moderated research platform: create and launch studies and query interview results.",
+  "author": "ai.outset",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Outset-AI/outset-mcp",
+    "repo": "Outset-AI/outset-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.outset.ai/mcp/"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-02T20:29:22.357679Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

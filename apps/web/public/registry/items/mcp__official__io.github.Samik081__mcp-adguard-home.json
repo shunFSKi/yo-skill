@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.Samik081/mcp-adguard-home",
+  "type": "mcp",
+  "name": "AdGuard Home MCP Server",
+  "description": "Manage AdGuard Home through AI assistants",
+  "author": "io.github.Samik081",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Samik081/mcp-adguard-home",
+    "repo": "Samik081/mcp-adguard-home"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@samik081/mcp-adguard-home"
+    ],
+    "env": [
+      {
+        "name": "ADGUARD_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "ADGUARD_USERNAME",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "ADGUARD_PASSWORD",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T09:10:48.974422Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

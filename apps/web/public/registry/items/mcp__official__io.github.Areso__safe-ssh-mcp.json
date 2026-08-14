@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.Areso/safe-ssh-mcp",
+  "type": "mcp",
+  "name": "safe-ssh-mcp",
+  "description": "A secured scoped SSH MCP server for executing safe read-only diagnostic DevOps / SysOps commands",
+  "author": "io.github.Areso",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Areso/safe-ssh-mcp",
+    "repo": "Areso/safe-ssh-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "safe-ssh-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-04T20:13:43.20832Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

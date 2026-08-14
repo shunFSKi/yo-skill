@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.caglarbozkurt/heimdall",
+  "type": "mcp",
+  "name": "heimdall",
+  "description": "Scan an MCP server or agent config for injection, exfiltration, and risky capabilities.",
+  "author": "io.github.caglarbozkurt",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/caglarbozkurt/mcp-heimdall",
+    "repo": "caglarbozkurt/mcp-heimdall"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-heimdall-scan"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-05T16:24:48.875881Z"
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

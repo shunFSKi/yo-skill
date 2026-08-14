@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/com.clauxel.clawmanagerfleet/clawmanagerfleet-mcp",
+  "type": "mcp",
+  "name": "clawmanagerfleet-mcp",
+  "description": "A paid remote MCP for ClawManager, built to return verdicts, receipts, usage logs, and audit-ready J",
+  "author": "com.clauxel.clawmanagerfleet",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/clauxel/clawmanager-fleet-control-mcp",
+    "repo": "clauxel/clawmanager-fleet-control-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://clawmanagerfleet.clauxel.com/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-27T16:26:02.45488Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

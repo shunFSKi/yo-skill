@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.sophiacave/apple-fm-mcp",
+  "type": "mcp",
+  "name": "apple-fm-mcp",
+  "description": "Apple Foundation Models on-device. Generate, summarize, classify via Apple Intelligence.",
+  "author": "io.github.sophiacave",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/sophiacave/apple-fm-mcp",
+    "repo": "sophiacave/apple-fm-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "apple-fm-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-09T18:59:50.90785Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

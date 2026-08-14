@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.opendatalab/mineru-open-mcp",
+  "type": "mcp",
+  "name": "MinerU Open MCP",
+  "description": "Parse PDFs, images, doc, docx, ppt, pptx, xls, xlsx, html into Markdown using MinerU API.",
+  "author": "io.github.opendatalab",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/opendatalab/MinerU-Ecosystem",
+    "repo": "opendatalab/MinerU-Ecosystem"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mineru-open-mcp"
+    ],
+    "env": [
+      {
+        "name": "MINERU_API_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "OUTPUT_DIR",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-13T03:30:08.683636Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.seungdori/tickscope-mcp",
+  "type": "mcp",
+  "name": "Tickscope",
+  "description": "Real-time, free crypto market data for any AI agent — via MCP.",
+  "author": "io.github.seungdori",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/seungdori/tickscope-mcp",
+    "repo": "seungdori/tickscope-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "tickscope-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-02T11:36:15.05034Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

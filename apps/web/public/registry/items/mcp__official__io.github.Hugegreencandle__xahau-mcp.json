@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.Hugegreencandle/xahau-mcp",
+  "type": "mcp",
+  "name": "Xahau MCP",
+  "description": "First MCP for the Xahau network — offline Hook WASM VM + static analyzer, read-only ledger tools.",
+  "author": "io.github.Hugegreencandle",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Hugegreencandle/xahau-mcp",
+    "repo": "Hugegreencandle/xahau-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/Hugegreencandle/xahau-mcp/releases/download/v2.0.1/xahau-mcp-2.0.1.mcpb"
+    ],
+    "env": [
+      {
+        "name": "XAHAU_RPC_URLS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "XAHAU_TEST_RPC_URLS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-11T22:51:50.018725Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.cocaxcode/database-mcp",
+  "type": "mcp",
+  "name": "database-mcp",
+  "description": "MCP server for database connectivity. Multi-DB (PostgreSQL, MySQL, SQLite), 19 tools.",
+  "author": "io.github.cocaxcode",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/cocaxcode/database-mcp",
+    "repo": "cocaxcode/database-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@cocaxcode/database-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-25T20:56:36.431698Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

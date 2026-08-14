@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/dev.lastseen/mortality",
+  "type": "mcp",
+  "name": "lastseen mortality",
+  "description": "Check whether an npm package, GitHub Action, MCP server or Docker image is dead or abandoned.",
+  "author": "dev.lastseen",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/agentidx/lastseen-mcp",
+    "repo": "agentidx/lastseen-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "lastseen-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T17:29:57.115928Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

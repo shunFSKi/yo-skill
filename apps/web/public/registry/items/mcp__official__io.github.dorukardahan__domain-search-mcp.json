@@ -1,0 +1,89 @@
+{
+  "id": "mcp:official/io.github.dorukardahan/domain-search-mcp",
+  "type": "mcp",
+  "name": "domain-search-mcp",
+  "description": "Naming engine with availability intelligence: score names, check domains, socials and registries.",
+  "author": "io.github.dorukardahan",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dorukardahan/domain-search-mcp",
+    "repo": "dorukardahan/domain-search-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "domain-search-mcp"
+    ],
+    "env": [
+      {
+        "name": "PRICING_API_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PRICING_API_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PORKBUN_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PORKBUN_API_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "NAMECHEAP_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "NAMECHEAP_API_USER",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-29T07:22:07.496471Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

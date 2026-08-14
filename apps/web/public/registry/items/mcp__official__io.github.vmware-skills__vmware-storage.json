@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.vmware-skills/vmware-storage",
+  "type": "mcp",
+  "name": "VMware Storage",
+  "description": "VMware vSphere storage management with 11 MCP tools: datastores, iSCSI, vSAN.",
+  "author": "io.github.vmware-skills",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/vmware-skills/VMware-Storage",
+    "repo": "vmware-skills/VMware-Storage"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "vmware-storage"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-06T09:45:28.563561Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

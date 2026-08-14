@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.bitterdev/dropscan-mcp",
+  "type": "mcp",
+  "name": "dropscan-mcp",
+  "description": "MCP server for the Dropscan postal mail scanning API: read scanned letters, act on mailings.",
+  "author": "io.github.bitterdev",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/bitterdev/dropscan-mcp",
+    "repo": "bitterdev/dropscan-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "dropscan-mcp"
+    ],
+    "env": [
+      {
+        "name": "DROPSCAN_API_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "DROPSCAN_ALLOW_WRITES",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-27T15:43:21.173965Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.dantwoashim/project-parva",
+  "type": "mcp",
+  "name": "Project Parva",
+  "description": "Read-only Nepali date, calendar, festival, Panchanga, and temporal verification tools.",
+  "author": "io.github.dantwoashim",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dantwoashim/Project_Parva",
+    "repo": "dantwoashim/Project_Parva"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/dantwoashim/parva-mcp-server:1.0.0"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-05T13:48:16.574884Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

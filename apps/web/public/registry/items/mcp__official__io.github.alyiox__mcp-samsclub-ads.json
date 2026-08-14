@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.alyiox/mcp-samsclub-ads",
+  "type": "mcp",
+  "name": "Sam's Club Sponsored Ads APIs",
+  "description": "MCP server for Sam's Club Sponsored Ads APIs",
+  "author": "io.github.alyiox",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/alyiox/mcp-samsclub-ads",
+    "repo": "alyiox/mcp-samsclub-ads"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-samsclub-ads"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T08:50:41.989392Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

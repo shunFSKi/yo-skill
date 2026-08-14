@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.100xPercent/pop-pay",
+  "type": "mcp",
+  "name": "pop-pay",
+  "description": "Runtime security for AI agent commerce. CLI + MCP server blocks hallucinated purchases.",
+  "author": "io.github.100xPercent",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/100xPercent/pop-pay",
+    "repo": "100xPercent/pop-pay"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "pop-pay"
+    ],
+    "env": [
+      {
+        "name": "POP_CDP_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "POP_ALLOWED_CATEGORIES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "POP_MAX_PER_TX",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "POP_MAX_DAILY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "POP_GUARDRAIL_ENGINE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-13T23:08:06.213077Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

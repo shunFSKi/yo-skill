@@ -1,0 +1,78 @@
+{
+  "id": "mcp:official/io.github.subhatta123/twilize",
+  "type": "mcp",
+  "name": "Twilize",
+  "description": "Generate Tableau .twb/.twbx workbooks: 47 tools for charts, dashboards, rules, CSV pipelines.",
+  "author": "io.github.subhatta123",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/subhatta123/twilize",
+    "repo": "subhatta123/twilize"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "twilize"
+    ],
+    "env": [
+      {
+        "name": "PYTHONUNBUFFERED",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PYTHONIOENCODING",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_LOG_LEVEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OPENAI_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-02T17:24:17.719296Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

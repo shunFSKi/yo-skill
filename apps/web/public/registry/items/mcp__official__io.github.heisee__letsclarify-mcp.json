@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.heisee/letsclarify-mcp",
+  "type": "mcp",
+  "name": "letsclarify-mcp",
+  "description": "Human-in-the-Loop API: AI agents create forms, share URLs with humans, get JSON back.",
+  "author": "io.github.heisee",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/heisee/LetsClarify",
+    "repo": "heisee/LetsClarify"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@heisee/letsclarify-mcp"
+    ],
+    "env": [
+      {
+        "name": "LETSCLARIFY_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-19T00:54:27.963681Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

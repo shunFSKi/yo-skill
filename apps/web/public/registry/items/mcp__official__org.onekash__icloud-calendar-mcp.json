@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/org.onekash/icloud-calendar-mcp",
+  "type": "mcp",
+  "name": "icloud-calendar-mcp",
+  "description": "MCP server for iCloud (Apple) Calendar access via CalDAV",
+  "author": "org.onekash",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/icloud-calendar-mcp/icloud-calendar-mcp",
+    "repo": "icloud-calendar-mcp/icloud-calendar-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@icloud-calendar-mcp/server"
+    ],
+    "env": [
+      {
+        "name": "ICLOUD_USERNAME",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "ICLOUD_PASSWORD",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-22T04:32:55.07265Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

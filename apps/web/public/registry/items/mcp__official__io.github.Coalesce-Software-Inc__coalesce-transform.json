@@ -1,0 +1,184 @@
+{
+  "id": "mcp:official/io.github.Coalesce-Software-Inc/coalesce-transform",
+  "type": "mcp",
+  "name": "coalesce-transform",
+  "description": "MCP server for managing Coalesce Transform workspaces, nodes, pipelines, and runs.",
+  "author": "io.github.Coalesce-Software-Inc",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Coalesce-Software-Inc/coalesce-transform-mcp",
+    "repo": "Coalesce-Software-Inc/coalesce-transform-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "coalesce-transform-mcp"
+    ],
+    "env": [
+      {
+        "name": "COALESCE_ACCESS_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "COALESCE_PROFILE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "COALESCE_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "COALESCE_ORG_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "COALESCE_REPO_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "COALESCE_CACHE_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "COALESCE_MCP_AUTO_CACHE_MAX_BYTES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "COALESCE_MCP_INLINE_RESPONSES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "COALESCE_MCP_LINEAGE_TTL_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "COALESCE_MCP_MAX_REQUEST_BODY_BYTES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "COALESCE_MCP_REQUEST_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "COALESCE_MCP_DETAIL_FETCH_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "COALESCE_MCP_NODE_TYPE_RANKING_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "COALESCE_MCP_INVENTORY_CACHE_TTL_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "COALESCE_MCP_NODE_INDEX_CACHE_TTL_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "COALESCE_MCP_NODE_DETAIL_CACHE_TTL_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "COALESCE_MCP_READ_ONLY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "COALESCE_MCP_SKILLS_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SNOWFLAKE_ACCOUNT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SNOWFLAKE_USERNAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SNOWFLAKE_KEY_PAIR_KEY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SNOWFLAKE_PAT",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SNOWFLAKE_KEY_PAIR_PASS",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SNOWFLAKE_WAREHOUSE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SNOWFLAKE_ROLE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-03T03:21:08.713633Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

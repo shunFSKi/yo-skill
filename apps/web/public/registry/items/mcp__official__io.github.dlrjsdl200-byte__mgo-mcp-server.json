@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.dlrjsdl200-byte/mgo-mcp-server",
+  "type": "mcp",
+  "name": "MGO — Multi-chain Gas Optimizer",
+  "description": "Find the cheapest EVM chain across up to 9 networks with savings %. Pay-per-call via x402 on Base.",
+  "author": "io.github.dlrjsdl200-byte",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dlrjsdl200-byte/mgo-mcp-server",
+    "repo": "dlrjsdl200-byte/mgo-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "chain-ops-mgo"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-15T03:09:48.345313Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

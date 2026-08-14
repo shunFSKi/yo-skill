@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.looptech-ai/understand-quickly",
+  "type": "mcp",
+  "name": "understand-quickly",
+  "description": "Public registry of code-knowledge graphs for AI agents with schema validation and drift detection.",
+  "author": "io.github.looptech-ai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/looptech-ai/understand-quickly",
+    "repo": "looptech-ai/understand-quickly"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@looptech-ai/understand-quickly-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-10T09:17:19.003307Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

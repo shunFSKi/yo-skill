@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.xkumakichi/veridict",
+  "type": "mcp",
+  "name": "veridict",
+  "description": "Know if you can trust your MCP server. Trust judgment for AI agents.",
+  "author": "io.github.xkumakichi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/xkumakichi/veridict.git",
+    "repo": "xkumakichi/veridict"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "veridict"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-30T03:04:27.381962Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

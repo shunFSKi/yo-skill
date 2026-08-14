@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.morinokami/astro-mcp",
+  "type": "mcp",
+  "name": "astro-mcp",
+  "description": "MCP server to support Astro project development",
+  "author": "io.github.morinokami",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/morinokami/astro-mcp",
+    "repo": "morinokami/astro-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "astro-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-09-11T17:37:51.510706Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

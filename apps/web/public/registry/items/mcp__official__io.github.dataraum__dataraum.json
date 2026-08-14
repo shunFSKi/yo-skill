@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.dataraum/dataraum",
+  "type": "mcp",
+  "name": "DataRaum",
+  "description": "Pre-computed metadata context engine for AI-driven data analytics",
+  "author": "io.github.dataraum",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dataraum/dataraum",
+    "repo": "dataraum/dataraum"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "dataraum"
+    ],
+    "env": [
+      {
+        "name": "ANTHROPIC_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "DATARAUM_HOME",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-17T12:13:13.131705Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

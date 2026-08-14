@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/services.gera/mcp-gera-eats",
+  "type": "mcp",
+  "name": "mcp-gera-eats",
+  "description": "Look up UK food hygiene ratings and city hygiene profiles from real FSA FHRS/FHIS data. No auth.",
+  "author": "services.gera",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/geraservicesuk/globetura",
+    "repo": "geraservicesuk/globetura"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@gera-services/mcp-gera-eats"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-23T09:16:37.201814Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

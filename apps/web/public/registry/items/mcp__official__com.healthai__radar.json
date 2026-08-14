@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.healthai/radar",
+  "type": "mcp",
+  "name": "Constat MCP — FDA Device Evidence Lifecycle",
+  "description": "FDA and CMS evidence for AI medical devices: 510(k), postmarket, reimbursement, and compliance.",
+  "author": "com.healthai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/healthai-hq/fda-risk-radar",
+    "repo": "healthai-hq/fda-risk-radar"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://constat.dev/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-30T03:24:08.805083Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

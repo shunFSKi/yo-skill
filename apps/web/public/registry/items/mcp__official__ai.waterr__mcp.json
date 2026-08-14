@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/ai.waterr/mcp",
+  "type": "mcp",
+  "name": "mcp",
+  "description": "List WaterrAI scenarios, fetch AI-run meetings, and pull rubric-scored analyses.",
+  "author": "ai.waterr",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://api.waterr.ai/v1/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.waterr.ai/v1/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-05T05:34:05.325154Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

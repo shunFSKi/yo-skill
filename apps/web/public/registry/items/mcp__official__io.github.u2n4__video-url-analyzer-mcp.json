@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.u2n4/video-url-analyzer-mcp",
+  "type": "mcp",
+  "name": "Video URL Analyzer",
+  "description": "Analyze YouTube/TikTok/Instagram videos: transcripts, AI insights, tutorial extraction",
+  "author": "io.github.u2n4",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/u2n4/video-url-analyzer-mcp",
+    "repo": "u2n4/video-url-analyzer-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "video-url-analyzer-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-17T18:22:50.715698Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

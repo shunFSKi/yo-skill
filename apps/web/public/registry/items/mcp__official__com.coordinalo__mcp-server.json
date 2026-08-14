@@ -1,0 +1,65 @@
+{
+  "id": "mcp:official/com.coordinalo/mcp-server",
+  "type": "mcp",
+  "name": "Coordinalo — Service Business Operations",
+  "description": "Scheduling, availability, clients, billing and CRM for appointment-based services.",
+  "author": "com.coordinalo",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/danioni/coordinalo-mcp",
+    "repo": "danioni/coordinalo-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://coordinalo.com/api/mcp",
+    "env": [
+      {
+        "name": "X-Org-Api-Key",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "X-Bootstrap-Key",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-25T17:42:23.618469Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

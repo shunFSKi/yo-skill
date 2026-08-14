@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.localseodata/mcp-server",
+  "type": "mcp",
+  "name": "mcp-server",
+  "description": "42 local SEO tools for AI assistants. SERP tracking, reviews, keywords, audits, and more.",
+  "author": "io.github.localseodata",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/localseodata/mcp-server",
+    "repo": "localseodata/mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@localseodata/mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-09T17:09:21.594345Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

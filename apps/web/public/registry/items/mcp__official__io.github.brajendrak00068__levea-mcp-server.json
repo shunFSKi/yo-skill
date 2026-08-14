@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.brajendrak00068/levea-mcp-server",
+  "type": "mcp",
+  "name": "levea-mcp-server",
+  "description": "Autonomous AI video editor over MCP: viral clips, captions, reframe, chroma key, MP4 export",
+  "author": "io.github.brajendrak00068",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/brajendrak00068/openclaw-ai-video-editor",
+    "repo": "brajendrak00068/openclaw-ai-video-editor"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "levea-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "LEVEA_API_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "LEVEA_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-17T17:41:54.664203Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

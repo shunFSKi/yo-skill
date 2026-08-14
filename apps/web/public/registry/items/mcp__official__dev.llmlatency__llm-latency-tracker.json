@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/dev.llmlatency/llm-latency-tracker",
+  "type": "mcp",
+  "name": "llm-latency-tracker",
+  "description": "Measured latency & uptime for AI inference APIs, by region. Exposes a get_ai_api_latency tool.",
+  "author": "dev.llmlatency",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mazamaka/llm-latency-tracker",
+    "repo": "mazamaka/llm-latency-tracker"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://llmlatency.dev/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-23T18:27:14.570003Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

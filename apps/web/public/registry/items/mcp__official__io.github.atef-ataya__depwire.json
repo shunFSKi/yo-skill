@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.atef-ataya/depwire",
+  "type": "mcp",
+  "name": "depwire",
+  "description": "Dependency graph + 24 MCP tools. Impact analysis, simulation, security, agent coordination",
+  "author": "io.github.atef-ataya",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/depwire/depwire",
+    "repo": "depwire/depwire"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "depwire-cli"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-11T19:04:28.292119Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

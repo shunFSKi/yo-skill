@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.shibley/apistatuscheck",
+  "type": "mcp",
+  "name": "API Status Check",
+  "description": "Check real-time uptime and incident status for 285 APIs and cloud services.",
+  "author": "io.github.shibley",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/shibley/apistatuscheck-mcp-server",
+    "repo": "shibley/apistatuscheck-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://apistatuscheck.com/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-03T05:36:49.760973Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

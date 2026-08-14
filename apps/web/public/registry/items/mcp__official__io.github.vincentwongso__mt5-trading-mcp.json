@@ -1,0 +1,73 @@
+{
+  "id": "mcp:official/io.github.vincentwongso/mt5-trading-mcp",
+  "type": "mcp",
+  "name": "MetaTrader 5 MCP Bridge",
+  "description": "Let an AI agent read and trade a MetaTrader 5 account over MCP, behind a human-approval gate.",
+  "author": "io.github.vincentwongso",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/vincentwongso/mt5-trading-mcp",
+    "repo": "vincentwongso/mt5-trading-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mt5-trading-mcp"
+    ],
+    "env": [
+      {
+        "name": "MT5_LOGIN",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MT5_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MT5_SERVER",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-25T10:36:58.25485Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

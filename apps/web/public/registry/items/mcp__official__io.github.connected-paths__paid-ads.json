@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.connected-paths/paid-ads",
+  "type": "mcp",
+  "name": "paid-ads",
+  "description": "Hosted MCP server for Google Ads and LinkedIn Ads analysis.",
+  "author": "io.github.connected-paths",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Connected-Paths/mcp-linkedinads",
+    "repo": "Connected-Paths/mcp-linkedinads"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://paidads-mcp.connectedpaths.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-29T20:13:05.286996Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

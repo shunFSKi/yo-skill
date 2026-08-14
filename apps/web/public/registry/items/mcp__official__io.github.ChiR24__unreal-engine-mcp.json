@@ -1,0 +1,129 @@
+{
+  "id": "mcp:official/io.github.ChiR24/unreal-engine-mcp",
+  "type": "mcp",
+  "name": "unreal-engine-mcp",
+  "description": "MCP server for Unreal Engine 5 with 23 tools for game development automation.",
+  "author": "io.github.ChiR24",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ChiR24/Unreal_mcp.git",
+    "repo": "ChiR24/Unreal_mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "unreal-engine-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "LOG_LEVEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_ROUTE_STDOUT_LOGS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "UE_PROJECT_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "UE_EDITOR_EXE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "UE_SCREENSHOT_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_AUTOMATION_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_AUTOMATION_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_AUTOMATION_ALLOW_NON_LOOPBACK",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_AUTOMATION_CLIENT_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_AUTOMATION_USE_TLS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_CONNECTION_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_REQUEST_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_AUTOMATION_MAX_MESSAGES_PER_MINUTE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_AUTOMATION_MAX_AUTOMATION_REQUESTS_PER_MINUTE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-05T10:43:45.090029Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

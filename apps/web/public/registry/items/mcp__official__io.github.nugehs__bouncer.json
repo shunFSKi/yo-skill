@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.nugehs/bouncer",
+  "type": "mcp",
+  "name": "bouncer",
+  "description": "Static compliance-controls checker for UK Online Safety Act & ICO Children's Code. CLI + MCP.",
+  "author": "io.github.nugehs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/nugehs/bouncer",
+    "repo": "nugehs/bouncer"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@nugehs/bouncer"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-16T11:59:14.912466Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.rootsbymenda/cosmetic-regulatory",
+  "type": "mcp",
+  "name": "cosmetic-regulatory",
+  "description": "Cosmetic safety: NOAEL, MoS, SCCS, 12 jurisdictions. 30K ingredients. Free.",
+  "author": "io.github.rootsbymenda",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/rootsbymenda/roots-mcp-server",
+    "repo": "rootsbymenda/roots-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://roots-mcp-server.rootsbybenda.workers.dev/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-22T21:58:03.731417Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

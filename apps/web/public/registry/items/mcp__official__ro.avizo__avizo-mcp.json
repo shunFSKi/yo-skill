@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/ro.avizo/avizo-mcp",
+  "type": "mcp",
+  "name": "avizo-mcp",
+  "description": "Avizo (RO SME compliance-deadline SaaS) as MCP tools: about, plans, categories, docs. Read-only.",
+  "author": "ro.avizo",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://avizo.ro/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://avizo.ro/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-14T08:53:23.331311Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

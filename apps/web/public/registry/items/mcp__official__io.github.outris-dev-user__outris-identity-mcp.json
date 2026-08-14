@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.outris-dev-user/outris-identity-mcp",
+  "type": "mcp",
+  "name": "outris-identity-mcp",
+  "description": "Identity resolution MCP server for phone/email lookups across 31+ services. Global + India coverage.",
+  "author": "io.github.outris-dev-user",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/outris-dev-user/outris-identity-mcp",
+    "repo": "outris-dev-user/outris-identity-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp-server.outris.com/http",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-01-28T06:51:09.460446Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

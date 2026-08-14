@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/uk.minia2a/minia2a",
+  "type": "mcp",
+  "name": "minia2a",
+  "description": "171 pay-per-call AI agent tools via x402 USDC. Captcha, gas, DNS, web scraping, DeFi, Polymarket.",
+  "author": "uk.minia2a",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/afu20260324/minia2a",
+    "repo": "afu20260324/minia2a"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "minia2a-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-31T03:20:16.313227Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

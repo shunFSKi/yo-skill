@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.olgasafonova/productplan-mcp-server",
+  "type": "mcp",
+  "name": "ProductPlan MCP Server",
+  "description": "Talk to roadmaps with AI. Query and manage bars, OKRs, ideas, and launches.",
+  "author": "io.github.olgasafonova",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/olgasafonova/productplan-mcp-server",
+    "repo": "olgasafonova/productplan-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/olgasafonova/productplan-mcp-server:5.1.0"
+    ],
+    "env": [
+      {
+        "name": "PRODUCTPLAN_API_TOKEN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-03T09:54:09.942603Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

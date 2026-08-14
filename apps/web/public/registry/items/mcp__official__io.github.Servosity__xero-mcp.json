@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.Servosity/xero-mcp",
+  "type": "mcp",
+  "name": "Xero MCP",
+  "description": "Every Xero Accounting read plus a local SQLite ledger  -  aging, reconciliation, and GL tie-out",
+  "author": "io.github.Servosity",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/servosity/msp-skills",
+    "repo": "servosity/msp-skills"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/Servosity/msp-skills/releases/download/xero-v0.1.0/xero-mcp.mcpb"
+    ],
+    "env": [
+      {
+        "name": "XERO_ACCESS_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "XERO_ACCOUNTING_OAUTH2",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "XERO_TENANT_ID",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-07T02:52:02.766951Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

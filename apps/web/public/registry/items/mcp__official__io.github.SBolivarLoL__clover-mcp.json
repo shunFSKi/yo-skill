@@ -1,0 +1,98 @@
+{
+  "id": "mcp:official/io.github.SBolivarLoL/clover-mcp",
+  "type": "mcp",
+  "name": "Clover POS",
+  "description": "Clover POS for a single merchant: sales, inventory, orders, customers (reads + safe writes).",
+  "author": "io.github.SBolivarLoL",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/SBolivarLoL/clover-mcp-server",
+    "repo": "SBolivarLoL/clover-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "clover-mcp"
+    ],
+    "env": [
+      {
+        "name": "CLOVER_MERCHANT_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "CLOVER_ACCESS_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "CLOVER_REGION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CLOVER_SANDBOX",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CLOVER_AUTH_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CLOVER_REFRESH_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "CLOVER_OAUTH_CLIENT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CLOVER_OAUTH_CLIENT_SECRET",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-02T10:38:12.416678Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

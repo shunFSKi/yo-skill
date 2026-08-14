@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.jaimenbell/discord-mcp",
+  "type": "mcp",
+  "name": "discord-mcp",
+  "description": "MCP server for the Discord REST API: 5 read tools always on, 7 write tools env-gated, default off.",
+  "author": "io.github.jaimenbell",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/jaimenbell/discord-mcp",
+    "repo": "jaimenbell/discord-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "jaimenbell-discord-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-24T15:43:10.084926Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

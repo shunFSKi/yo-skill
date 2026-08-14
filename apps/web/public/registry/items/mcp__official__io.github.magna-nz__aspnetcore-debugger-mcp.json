@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.magna-nz/aspnetcore-debugger-mcp",
+  "type": "mcp",
+  "name": "ASP.NET Core Debugger — MCP Server for AI Agents",
+  "description": "MCP server giving AI agents interactive .NET / ASP.NET Core debugging via netcoredbg + DAP.",
+  "author": "io.github.magna-nz",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/magna-nz/aspnetcore-debugger-mcp",
+    "repo": "magna-nz/aspnetcore-debugger-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "AspNetCoreDebuggerMcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-27T09:28:26.80102Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

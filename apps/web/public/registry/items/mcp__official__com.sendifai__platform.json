@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.sendifai/platform",
+  "type": "mcp",
+  "name": "sendifai",
+  "description": "335 MCP tools, 75 playbooks. AI-native CRM, email/SMS, events, OAuth.",
+  "author": "com.sendifai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/MSCandCo/sendifai",
+    "repo": "MSCandCo/sendifai"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://www.sendifai.com/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-31T21:36:50.083776Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

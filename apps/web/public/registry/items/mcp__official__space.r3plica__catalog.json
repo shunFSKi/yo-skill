@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/space.r3plica/catalog",
+  "type": "mcp",
+  "name": "R3PLICA AI Connector",
+  "description": "Catalog of certified digital replicas from premium design brands, for any MCP-compatible AI agent.",
+  "author": "space.r3plica",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/R3PLICAsrl/r3-cli",
+    "repo": "R3PLICAsrl/r3-cli"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "r3plica"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-13T00:43:32.3438Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

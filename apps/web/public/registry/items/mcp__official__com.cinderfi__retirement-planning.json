@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/com.cinderfi/retirement-planning",
+  "type": "mcp",
+  "name": "Cinderfi — Retirement Planning",
+  "description": "Retirement planning for Canada & US. CPP/OAS, Social Security, RRSP/TFSA, 401k/IRA, Monte Carlo.",
+  "author": "com.cinderfi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/cinderfi/cinderfi-mcp",
+    "repo": "cinderfi/cinderfi-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.cinderfi.com/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-14T00:45:06.07236Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

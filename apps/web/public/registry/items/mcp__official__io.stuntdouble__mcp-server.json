@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.stuntdouble/mcp-server",
+  "type": "mcp",
+  "name": "Stunt Double",
+  "description": "Deploy AI user personas to validate user journeys at scale. Find UX friction before real users do.",
+  "author": "io.stuntdouble",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/stunt-double/stuntdouble-mcp",
+    "repo": "stunt-double/stuntdouble-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://app.stuntdouble.io/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-19T11:21:55.311195Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

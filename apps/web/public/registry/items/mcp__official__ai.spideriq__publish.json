@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/ai.spideriq/publish",
+  "type": "mcp",
+  "name": "publish",
+  "description": "SpiderIQ Publish: content platform MCP (pages, posts, templates, components, domains, media)",
+  "author": "ai.spideriq",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/SpiderIQ/SpiderIQ",
+    "repo": "SpiderIQ/SpiderIQ"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@spideriq/mcp-publish"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-19T23:39:42.215763Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

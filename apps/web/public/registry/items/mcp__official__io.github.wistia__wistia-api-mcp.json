@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.wistia/wistia-api-mcp",
+  "type": "mcp",
+  "name": "Wistia API",
+  "description": "Manage Wistia videos, channels, folders, captions, customizations, and analytics via MCP.",
+  "author": "io.github.wistia",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://api.wistia.com/mcp/api",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.wistia.com/mcp/api",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-15T17:42:17.830195Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

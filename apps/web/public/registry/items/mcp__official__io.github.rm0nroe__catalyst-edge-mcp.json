@@ -1,0 +1,78 @@
+{
+  "id": "mcp:official/io.github.rm0nroe/catalyst-edge-mcp",
+  "type": "mcp",
+  "name": "Catalyst Edge Research",
+  "description": "Source-linked market intelligence for AI agents researching public-company tickers.",
+  "author": "io.github.rm0nroe",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/rm0nroe/catalyst-edge-mcp",
+    "repo": "rm0nroe/catalyst-edge-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "catalyst-edge-mcp"
+    ],
+    "env": [
+      {
+        "name": "CATALYST_EDGE_SEC_USER_AGENT",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "CATALYST_EDGE_EVIDENCE_STORE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CATALYST_EDGE_GDELT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CATALYST_EDGE_BLUESKY",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-07T17:48:39.928051Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

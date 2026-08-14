@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.DavidSirota/rollin-mcp-server",
+  "type": "mcp",
+  "name": "rollin-mcp-server",
+  "description": "Wheelchair accessibility scores for 70,000+ US restaurants. Search, filter, and submit feedback.",
+  "author": "io.github.DavidSirota",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/DavidSirota/rollin-mcp-server",
+    "repo": "DavidSirota/rollin-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "rollin-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "ROLLIN_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-01T18:37:09.760283Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

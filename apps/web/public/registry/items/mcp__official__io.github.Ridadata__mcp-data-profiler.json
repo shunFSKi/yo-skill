@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.Ridadata/mcp-data-profiler",
+  "type": "mcp",
+  "name": "Data Profiler",
+  "description": "Profile local CSV, Parquet, JSON and Excel files into a compact data-quality summary.",
+  "author": "io.github.Ridadata",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Ridadata/mcp-data-profiler",
+    "repo": "Ridadata/mcp-data-profiler"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-data-profiler"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-03T19:27:57.639811Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

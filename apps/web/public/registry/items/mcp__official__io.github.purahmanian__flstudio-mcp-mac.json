@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.purahmanian/flstudio-mcp-mac",
+  "type": "mcp",
+  "name": "FL Studio MCP Mac",
+  "description": "macOS-first MCP bridge for FL Studio using CoreMIDI and FL Studio Python MIDI scripts.",
+  "author": "io.github.purahmanian",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/purahmanian/flstudio-mcp-mac",
+    "repo": "purahmanian/flstudio-mcp-mac"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "flstudio-mcp-mac"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-05T18:39:11.085246Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

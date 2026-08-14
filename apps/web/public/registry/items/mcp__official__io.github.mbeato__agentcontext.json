@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.mbeato/agentcontext",
+  "type": "mcp",
+  "name": "agentcontext",
+  "description": "Normalize AGENTS.md / CLAUDE.md / .cursor/rules / .clinerules / .windsurf/rules from one source.",
+  "author": "io.github.mbeato",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mbeato/agentcontext-mcp",
+    "repo": "mbeato/agentcontext-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@mbeato/agentcontext-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-29T22:58:22.599908Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

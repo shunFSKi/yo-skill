@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.instadash/server",
+  "type": "mcp",
+  "name": "Instadash",
+  "description": "Live data grids for AI agents. Push structured data; humans review, agents read back via MCP.",
+  "author": "io.instadash",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/instadashio/instadash",
+    "repo": "instadashio/instadash"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.instadash.io/"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-12T10:13:12.837528Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

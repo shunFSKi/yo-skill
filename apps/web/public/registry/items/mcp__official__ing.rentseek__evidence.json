@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/ing.rentseek/evidence",
+  "type": "mcp",
+  "name": "RentSeek Evidence",
+  "description": "Source-linked executive compensation data for AI agents and developers.",
+  "author": "ing.rentseek",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://rentseek.ing/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://rentseek.ing/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-16T05:51:42.327624Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.verivusOSS-releases/sqry",
+  "type": "mcp",
+  "name": "sqry - Semantic Code Search",
+  "description": "AST-based semantic code search: 33 tools, 35 languages, call tracing, impact analysis",
+  "author": "io.github.verivusOSS-releases",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/verivus-oss/sqry",
+    "repo": "verivus-oss/sqry"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/verivus-oss/sqry:4.8.16"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-06T05:57:15.963236Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

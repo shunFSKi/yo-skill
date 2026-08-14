@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.nirholas/alibaba-cloud",
+  "type": "mcp",
+  "name": "Alibaba Cloud DashScope — Qwen",
+  "description": "Alibaba Cloud DashScope MCP: Qwen chat, embeddings, and model discovery on your own account.",
+  "author": "io.github.nirholas",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/nirholas/three.ws",
+    "repo": "nirholas/three"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@three-ws/alibaba-cloud-mcp"
+    ],
+    "env": [
+      {
+        "name": "DASHSCOPE_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "DASHSCOPE_MODEL_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DASHSCOPE_EMBED_MODEL_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DASHSCOPE_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DASHSCOPE_REGION",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-20T21:38:32.292455Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

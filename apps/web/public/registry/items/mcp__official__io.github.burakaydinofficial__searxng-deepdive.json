@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.burakaydinofficial/searxng-deepdive",
+  "type": "mcp",
+  "name": "searxng-deepdive",
+  "description": "MCP server for SearXNG with engine targeting, multi-page fanout, and HTML→Markdown URL reading.",
+  "author": "io.github.burakaydinofficial",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/burakaydinofficial/searxng-deepdive",
+    "repo": "burakaydinofficial/searxng-deepdive"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "searxng-deepdive"
+    ],
+    "env": [
+      {
+        "name": "SEARXNG_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-06T18:50:11.970666Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

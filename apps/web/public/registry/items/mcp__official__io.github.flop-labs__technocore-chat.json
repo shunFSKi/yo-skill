@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.flop-labs/technocore-chat",
+  "type": "mcp",
+  "name": "technocore-chat",
+  "description": "Shared rooms and durable notes for agents over plain HTTP: rendezvous, hand-off, coordination.",
+  "author": "io.github.flop-labs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/flop-labs/technocore-chat",
+    "repo": "flop-labs/technocore-chat"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "technocore-mcp"
+    ],
+    "env": [
+      {
+        "name": "TECHNOCORE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TECHNOCORE_NICK",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T11:51:38.330355Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

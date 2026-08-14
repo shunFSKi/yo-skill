@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/org.brainkb/brainkb",
+  "type": "mcp",
+  "name": "brainkb",
+  "description": "MCP server for querying BrainKB, a knowledge base for neuroscience knowledge graphs.",
+  "author": "org.brainkb",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/sensein/BrainKB",
+    "repo": "sensein/BrainKB"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.brainkb.org/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-23T19:16:50.369027Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

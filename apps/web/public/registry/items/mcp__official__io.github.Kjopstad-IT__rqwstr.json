@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.Kjopstad-IT/rqwstr",
+  "type": "mcp",
+  "name": "rqwstr",
+  "description": "AI-native HTTP security testing MCP server — 17 tools with raw HTTP/1.1 + HTTP/2 control",
+  "author": "io.github.Kjopstad-IT",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Kjopstad-IT/rqwstr-mcp",
+    "repo": "Kjopstad-IT/rqwstr-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/Kjopstad-IT/rqwstr-mcp/releases/download/v1.1.0/rqwstr_1.1.0_universal.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-18T14:30:06.289179Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

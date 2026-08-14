@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.moniantov/timera",
+  "type": "mcp",
+  "name": "timera",
+  "description": "AI Chief of Staff for your time. Drift score, calendar, goals, and AI coaching.",
+  "author": "io.github.moniantov",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/moniantov/timera",
+    "repo": "moniantov/timera"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "timera-mcp"
+    ],
+    "env": [
+      {
+        "name": "TIMERA_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-10T05:23:31.277225Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.adelaidasofia/instagram-mcp",
+  "type": "mcp",
+  "name": "instagram-mcp",
+  "description": "Official, multi-account Instagram Graph API MCP: read, publish, analytics, comments, DMs.",
+  "author": "io.github.adelaidasofia",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/adelaidasofia/instagram-mcp",
+    "repo": "adelaidasofia/instagram-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "adelaidasofia-instagram-mcp"
+    ],
+    "env": [
+      {
+        "name": "INSTAGRAM_MCP_ACCESS_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "INSTAGRAM_MCP_IG_USER_ID",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-17T19:54:22.990323Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

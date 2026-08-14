@@ -1,0 +1,73 @@
+{
+  "id": "mcp:official/io.github.yubinkim444/ai-first-scraper-mcp",
+  "type": "mcp",
+  "name": "AI-First Scraper",
+  "description": "Three MCP tools: fetch_page, fetch_pages_batch, search_web. Ad-free Markdown for AI agents.",
+  "author": "io.github.yubinkim444",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/yubinkim444/ai-first-scraper-mcp",
+    "repo": "yubinkim444/ai-first-scraper-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "ai-first-scraper-mcp"
+    ],
+    "env": [
+      {
+        "name": "SCRAPER_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SEARCH_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AFS_TIMEOUT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-19T03:06:06.583896Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

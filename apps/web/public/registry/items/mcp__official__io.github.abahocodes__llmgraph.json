@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.abahocodes/llmgraph",
+  "type": "mcp",
+  "name": "llmgraph",
+  "description": "Invoke deployed LLMGraph no-code LLM workflows (chat, RAG, automations) as MCP tools.",
+  "author": "io.github.abahocodes",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/abahocodes/llmgraph-mcp-server",
+    "repo": "abahocodes/llmgraph-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@llmgraph/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "LLMGRAPH_ENDPOINT",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "LLMGRAPH_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-15T02:03:53.146211Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

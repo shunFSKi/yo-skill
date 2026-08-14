@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.UncleTIM-GZ/oprocess",
+  "type": "mcp",
+  "name": "oprocess",
+  "description": "AI-native process classification. 2436 processes + 3284 KPIs from APQC, ITIL, SCOR.",
+  "author": "io.github.UncleTIM-GZ",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/UncleTIM-GZ/O-Process",
+    "repo": "UncleTIM-GZ/O-Process"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "oprocess"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-16T15:53:48.033148Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

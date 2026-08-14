@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.damoqiongqiu/mcp-local-translate",
+  "type": "mcp",
+  "name": "mcp-local-translate",
+  "description": "Local NLLB translation for 200+ languages. Zero cloud, zero cost, runs entirely on your machine.",
+  "author": "io.github.damoqiongqiu",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/damoqiongqiu/mcp-local-translate",
+    "repo": "damoqiongqiu/mcp-local-translate"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@damoqiongqiu/mcp-local-translate"
+    ],
+    "env": [
+      {
+        "name": "HF_ENDPOINT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "HF_AUTO_MIRROR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CACHE_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TRANSLATE_DEVICE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "HTTPS_PROXY",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-12T01:23:48.477489Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

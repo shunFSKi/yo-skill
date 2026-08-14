@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.cyanheads/cdc-health-mcp-server",
+  "type": "mcp",
+  "name": "cdc-health-mcp-server",
+  "description": "Search and query CDC public health data — mortality, vaccinations, surveillance, behavioral risk.",
+  "author": "io.github.cyanheads",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/cyanheads/cdc-health-mcp-server",
+    "repo": "cyanheads/cdc-health-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@cyanheads/cdc-health-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "CDC_APP_TOKEN",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-09T16:10:55.678937Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

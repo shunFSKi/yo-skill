@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.ThomasViennet/referencime",
+  "type": "mcp",
+  "name": "referencime",
+  "description": "Identifiez les meilleurs spots netlinking selon leur performance Google réelle.",
+  "author": "io.github.ThomasViennet",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ThomasViennet/mcp-referencime",
+    "repo": "ThomasViennet/mcp-referencime"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@referencime/mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-16T12:17:33.617254Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.mission69b/t2000",
+  "type": "mcp",
+  "name": "t2000",
+  "description": "MCP server for AI agent bank accounts on Sui — 23 tools, 15 prompts, stdio transport",
+  "author": "io.github.mission69b",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mission69b/t2000",
+    "repo": "mission69b/t2000"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@t2000/mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-17T03:47:25.45991Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

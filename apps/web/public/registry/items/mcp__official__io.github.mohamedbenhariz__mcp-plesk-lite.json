@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.mohamedbenhariz/mcp-plesk-lite",
+  "type": "mcp",
+  "name": "mcp-plesk-lite",
+  "description": "MCP server for Plesk: manage domains, DNS, mail, SSL, backups, databases and WordPress via AI.",
+  "author": "io.github.mohamedbenhariz",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mohamedbenhariz/mcp-plesk-lite",
+    "repo": "mohamedbenhariz/mcp-plesk-lite"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-plesk-lite"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-18T16:25:44.08567Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

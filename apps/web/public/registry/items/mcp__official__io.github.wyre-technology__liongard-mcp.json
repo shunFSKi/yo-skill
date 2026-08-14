@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.wyre-technology/liongard-mcp",
+  "type": "mcp",
+  "name": "Liongard",
+  "description": "MCP server for Liongard — inspectors, environments, metrics, detections, and timeline data.",
+  "author": "io.github.wyre-technology",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/wyre-technology/liongard-mcp",
+    "repo": "wyre-technology/liongard-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/wyre-technology/liongard-mcp:v2.3.5"
+    ],
+    "env": [
+      {
+        "name": "LIONGARD_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "LIONGARD_INSTANCE",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "MCP_TRANSPORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AUTH_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T20:12:51.222653Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# Liongard MCP Server\n\nAn MCP (Model Context Protocol) server for interacting with the [Liongard](https://www.liongard.com/) platform. Provides AI assistants with tools to manage inspectors, systems, metrics, alerts, users, and more through Liongard's API.\n\n## One-Click Deployment\n\n> [!IMPORTANT]\n> **Before you click:** this server depends on `@wyre-technology/node-liongard`,\n> which is hosted on the **GitHub Packages** npm registry. GitHub Packages has no\n> anonymous access — even though the package is public, every `npm install` needs a\n> token. The cloud builder runs `npm install` for you, so you must give it one, or\n> the build fails with `npm error 401 Unauthorized ... npm.pkg.github.com`.\n>\n> 1. Create a GitHub **Personal Access Token** with the `read:packages` scope\n>    ([classic token](https://github.com/settings/tokens/new?scopes=read:packages&description=liongard-mcp%20deploy)).\n>    Any GitHub account works — you do **not** need to be a member of the\n>    `wyre-technology` org to read its public packages.\n> 2. Add it as a build variable when prompted by the deploy flow:\n>    - **Cloudflare Workers** → set a build variable named **`NODE_AUTH_TOKEN`** to your PAT\n>      (Workers → Settings → Build → Variables and Secrets).\n>    - **DigitalOcean App Platform** → set an encrypted env var named **`GITHUB_TOKEN`**\n>      with scope **Build Time** to your PAT (the Dockerfile reads it for the install).\n\n[![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/wyre-technology/liongard-mcp/tree/main)\n\n[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/wyre-technology/liongard-mcp)\n\n## Features\n\n- Decision-tree tool architecture — starts with a navigation tool, then exposes domain-specific tools on demand\n- 25 tools across inspectors, systems, metrics, alerts, users, groups, environments, and integrations\n- Interactive detection card via MCP Apps (SEP-1865): `liongard_detections_get` renders as a read-only card in MCP Apps hosts (Claude Desktop/web) with severity/status badges and server-resolved system/environment names — neutral by default, brandable via `window.__BRAND__` injection or `MCP_BRAND_*` env vars (`MCP_BRAND_NAME`, `MCP_BRAND_LOGO_URL`, `MCP_BRAND_PRIMARY_COLOR`, `MCP_BRAND_ACCENT_COLOR`, `MCP_BRAND_BG`, `MCP_BRAND_TEXT`), no rebuild needed\n- Dual API version support (v1 and v2)\n- 128 tests\n\n## Installation\n\nThis project depends on `@wyre-technology/node-liongard`, published to the\n**GitHub Packages** npm registry, which requires a token even for public packages.\nAuthenticate once, then install:\n\n```bash\n# Authenticate npm to GitHub Packages (token needs the read:packages scope)\nexport NODE_AUTH_TOKEN=$(gh auth token)   # or a PAT with read:packages\n\nnpm install\n```\n\nThe repo's `.npmrc` already points the `@wyre-technology` scope at GitHub Packages and\nreads the token from `NODE_AUTH_TOKEN`, so no further config is needed.\n\n## Configuration\n\nSet the following environment variables:\n\n| Variable | Description |\n|----------|-------------|\n| `LIONGARD_URL` | Your Liongard instance URL |\n| `LIONGARD_ACCESS_KEY` | API access key |\n| `LIONGARD_ACCESS_SECRET` | API access secret |\n\n## Usage\n\n```bash\nnpm start\n```\n\n## Development\n\n```bash\nnpm run build       # Build the project\nnpm run test        # Run tests\nnpm run lint        # Run linter\nnpm run typecheck   # Type-check\n```\n\n## License\n\n[Apache-2.0](LICENSE)\n",
+  "status": "curated"
+}

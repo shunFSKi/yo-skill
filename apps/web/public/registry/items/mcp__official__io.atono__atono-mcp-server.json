@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.atono/atono-mcp-server",
+  "type": "mcp",
+  "name": "Atono",
+  "description": "Give your AI coding tools your team's product context: stories, bugs, epics, and glossary.",
+  "author": "io.atono",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/atono-io/atono-mcp-server",
+    "repo": "atono-io/atono-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "docker.io/atonoio/atono-mcp-server:1.1.1"
+    ],
+    "env": [
+      {
+        "name": "X_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T17:32:41.433626Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

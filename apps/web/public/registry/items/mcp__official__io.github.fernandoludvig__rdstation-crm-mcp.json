@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.fernandoludvig/rdstation-crm-mcp",
+  "type": "mcp",
+  "name": "rdstation-crm-mcp",
+  "description": "Manage RD Station CRM contacts, deals, tasks and notes, with pipeline health reports",
+  "author": "io.github.fernandoludvig",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/fernandoludvig/rdstation-crm-mcp",
+    "repo": "fernandoludvig/rdstation-crm-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "rdstation-crm-mcp"
+    ],
+    "env": [
+      {
+        "name": "RDSTATION_CRM_TOKEN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-05T22:26:24.471364Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

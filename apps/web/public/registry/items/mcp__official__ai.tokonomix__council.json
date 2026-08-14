@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/ai.tokonomix/council",
+  "type": "mcp",
+  "name": "Tokonomix Council",
+  "description": "Multi-model consensus: 2-6 frontier LLMs answer, an independent judge synthesises one answer.",
+  "author": "ai.tokonomix",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/TokonoMix/tokonomix-council-mcp",
+    "repo": "TokonoMix/tokonomix-council-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "tokonomix-council-mcp"
+    ],
+    "env": [
+      {
+        "name": "TOKONOMIX_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-26T22:08:21.952848Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

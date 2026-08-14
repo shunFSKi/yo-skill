@@ -1,0 +1,103 @@
+{
+  "id": "mcp:official/io.github.TheAiSingularity/agentic-research",
+  "type": "mcp",
+  "name": "agentic-research",
+  "description": "Local research agent that verifies its own answers. Runs on Gemma 3 4B + Ollama, $0/query.",
+  "author": "io.github.TheAiSingularity",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/TheAiSingularity/agentic-research-engine-oss",
+    "repo": "TheAiSingularity/agentic-research-engine-oss"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "agentic-research-engine"
+    ],
+    "env": [
+      {
+        "name": "OPENAI_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OPENAI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MODEL_SYNTHESIZER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MODEL_PLANNER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "EMBED_MODEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SEARXNG_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LOCAL_CORPUS_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ENABLE_RERANK",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ENABLE_FETCH",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-20T21:47:07.536306Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

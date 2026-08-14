@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/run.domani/domani",
+  "type": "mcp",
+  "name": "domani",
+  "description": "Internet identity for AI agents: register or broker domains, email, DNS - pay by card or USDC.",
+  "author": "run.domani",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/gwendall/domani",
+    "repo": "gwendall/domani"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://domani.run/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-10T14:01:45.466164Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

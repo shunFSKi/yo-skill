@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.santiment/santiment-mcp",
+  "type": "mcp",
+  "name": "Santiment",
+  "description": "Crypto market intelligence: social sentiment, on-chain, trending narratives & analyst insights.",
+  "author": "io.github.santiment",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://api.santiment.net/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.santiment.net/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-11T09:36:26.156448Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

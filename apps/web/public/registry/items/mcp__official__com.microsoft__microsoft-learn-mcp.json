@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.microsoft/microsoft-learn-mcp",
+  "type": "mcp",
+  "name": "Microsoft Learn MCP",
+  "description": "Official Microsoft Learn MCP Server – real-time, trusted docs & code samples for AI and LLMs.",
+  "author": "com.microsoft",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/MicrosoftDocs/mcp",
+    "repo": "MicrosoftDocs/mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://learn.microsoft.com/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-11-21T06:16:59.721831Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

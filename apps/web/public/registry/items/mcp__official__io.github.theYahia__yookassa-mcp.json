@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.theYahia/yookassa-mcp",
+  "type": "mcp",
+  "name": "yookassa-mcp",
+  "description": "MCP server for YooKassa payment API — payments, refunds, receipts (54-FZ). 10 tools. First MCP for ",
+  "author": "io.github.theYahia",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/theYahia/yookassa-mcp",
+    "repo": "theYahia/yookassa-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@theyahia/yookassa-mcp"
+    ],
+    "env": [
+      {
+        "name": "YOOKASSA_SHOP_ID",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-31T08:25:57.146079Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

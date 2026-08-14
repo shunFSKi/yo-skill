@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/com.arcself/arc-security",
+  "type": "mcp",
+  "name": "arc-security",
+  "description": "Scan AI agent skills for 25 attack classes + runtime monitoring. 1,316+ findings.",
+  "author": "com.arcself",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ArcSelf/arc-security-mcp",
+    "repo": "ArcSelf/arc-security-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "arc-security-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-17T23:43:51.442858Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

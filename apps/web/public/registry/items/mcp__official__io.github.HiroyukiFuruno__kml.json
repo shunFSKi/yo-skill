@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.HiroyukiFuruno/kml",
+  "type": "mcp",
+  "name": "KatanA Markdown Linter",
+  "description": "Markdown linter, workspace-scoped stdio MCP server, and self-hosted text-only remote MCP server.",
+  "author": "io.github.HiroyukiFuruno",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/HiroyukiFuruno/katana-markdown-linter",
+    "repo": "HiroyukiFuruno/katana-markdown-linter"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/HiroyukiFuruno/katana-markdown-linter/releases/download/v0.19.4/katana-markdown-linter-0.19.4.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-23T07:22:07.415682Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

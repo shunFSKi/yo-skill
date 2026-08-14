@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.24seagull-beep/sense2-catalogue",
+  "type": "mcp",
+  "name": "Sense2 Promotional Products",
+  "description": "21 tools: search 4,000+ Australian promotional products with live pricing, quotes and curated edits.",
+  "author": "io.github.24seagull-beep",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/24seagull-beep/sense2-next",
+    "repo": "24seagull-beep/sense2-next"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://sense2.com.au/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T22:34:40.239621Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.FoundryNet/foundrynet-search",
+  "type": "mcp",
+  "name": "foundrynet-search",
+  "description": "x402-gated web search gateway. Tools: search, search_enriched.",
+  "author": "io.github.FoundryNet",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/FoundryNet/foundrynet-search",
+    "repo": "FoundryNet/foundrynet-search"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://foundrynet-search-production.up.railway.app/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-22T21:02:17.796151Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.benhuang21828/pdfkit",
+  "type": "mcp",
+  "name": "PDF Kit",
+  "description": "AI-powered PDF tools: fill forms, merge, extract data, and split PDFs",
+  "author": "io.github.benhuang21828",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers/io.github.benhuang21828%2Fpdfkit",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "pdfkit-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-10-25T01:41:56.111014Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

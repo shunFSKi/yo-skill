@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/app.wishpool/saudi-arabia-payments-mcp",
+  "type": "mcp",
+  "name": "Saudi Arabia Payments (Tap Payments — mada / STC Pay)",
+  "description": "Saudi Arabia payments for AI agents — mada / STC Pay via Tap Payments. Never holds funds.",
+  "author": "app.wishpool",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/junter1989k-ai/saudi-arabia-payments-mcp",
+    "repo": "junter1989k-ai/saudi-arabia-payments-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp-sa.wishpool.app/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-08T21:37:00.509615Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

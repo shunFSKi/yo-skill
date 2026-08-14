@@ -1,0 +1,73 @@
+{
+  "id": "mcp:official/io.github.millerchou/rocketchat-mcp",
+  "type": "mcp",
+  "name": "rocketchat-mcp",
+  "description": "MCP server for Rocket.Chat — messages, DMs, search, files, and channels over stdio",
+  "author": "io.github.millerchou",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/millerchou/rocketchat-mcp",
+    "repo": "millerchou/rocketchat-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "rocketchat-mcp"
+    ],
+    "env": [
+      {
+        "name": "ROCKETCHAT_SERVER_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "ROCKETCHAT_USER_ID",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "ROCKETCHAT_AUTH_TOKEN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-16T08:46:12.609183Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

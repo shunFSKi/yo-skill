@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.KaiErikNiermann/task-warrior-mcp",
+  "type": "mcp",
+  "name": "Taskwarrior MCP",
+  "description": "MCP server wrapping the Taskwarrior CLI for structured, project-scoped task management.",
+  "author": "io.github.KaiErikNiermann",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/KaiErikNiermann/taskwarrior-mcp",
+    "repo": "KaiErikNiermann/taskwarrior-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/KaiErikNiermann/taskwarrior-mcp/releases/download/v0.1.2/task-warrior-mcp.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-03T16:31:22.981335Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.atomno-mcp/mcp-erid",
+  "type": "mcp",
+  "name": "mcp-erid",
+  "description": "Russian ad marking (38-FZ) checker: erid validation, ad-page audit, compliance hints.",
+  "author": "io.github.atomno-mcp",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/atomno-mcp/mcp-erid",
+    "repo": "atomno-mcp/mcp-erid"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "atomno-mcp-erid"
+    ],
+    "env": [
+      {
+        "name": "MCP_ERID_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-14T18:56:28.080913Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

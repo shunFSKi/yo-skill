@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.satoshiapi/mcp",
+  "type": "mcp",
+  "name": "SatoshiAPI — Bitcoin Intelligence via Lightning",
+  "description": "Bitcoin intelligence API. Pay per call via L402 Lightning (10-200 sats). No accounts needed.",
+  "author": "io.satoshiapi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/SatoshiAPI/satoshi-btc-api",
+    "repo": "SatoshiAPI/satoshi-btc-api"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "satoshiapi-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-26T01:36:23.801515Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

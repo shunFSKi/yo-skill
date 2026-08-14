@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.yotsuda/markdown-pointer",
+  "type": "mcp",
+  "name": "MarkdownPointer",
+  "description": "Markdown viewer for AI-assisted document review. Click any element to copy file path + line number.",
+  "author": "io.github.yotsuda",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/yotsuda/MarkdownPointer",
+    "repo": "yotsuda/MarkdownPointer"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/yotsuda/MarkdownPointer/releases/download/v0.1.1/MarkdownPointer-0.1.1-win-x64.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-07T03:10:11.89305Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

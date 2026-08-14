@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.VladUZH/sidclaw-governance-mcp",
+  "type": "mcp",
+  "name": "sidclaw-governance-mcp",
+  "description": "Governance proxy for MCP servers — policy evaluation, human approval, audit trails.",
+  "author": "io.github.VladUZH",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/sidclawhq/platform",
+    "repo": "sidclawhq/platform"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@sidclaw/sdk"
+    ],
+    "env": [
+      {
+        "name": "SIDCLAW_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "SIDCLAW_AGENT_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "SIDCLAW_UPSTREAM_CMD",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "SIDCLAW_UPSTREAM_ARGS",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "SIDCLAW_APPROVAL_MODE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-28T14:55:53.422768Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

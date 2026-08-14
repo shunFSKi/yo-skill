@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.xt765/mcp_documents_reader",
+  "type": "mcp",
+  "name": "MCP Document Reader",
+  "description": "An MCP enabled multi-format document reader supporting DOCX, PDF, TXT, and Excel files",
+  "author": "io.github.xt765",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/xt765/mcp_documents_reader",
+    "repo": "xt765/mcp_documents_reader"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-documents-reader"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-13T02:35:35.110387Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

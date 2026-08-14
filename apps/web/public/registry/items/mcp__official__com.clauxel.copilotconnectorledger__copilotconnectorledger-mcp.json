@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/com.clauxel.copilotconnectorledger/copilotconnectorledger-mcp",
+  "type": "mcp",
+  "name": "copilotconnectorledger-mcp",
+  "description": "Copilot connector permission audits with owner signoff receipts.",
+  "author": "com.clauxel.copilotconnectorledger",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/clauxel/copilot-connector-ledger-mcp",
+    "repo": "clauxel/copilot-connector-ledger-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://copilotconnectorledger.clauxel.com/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-19T18:38:19.92587Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

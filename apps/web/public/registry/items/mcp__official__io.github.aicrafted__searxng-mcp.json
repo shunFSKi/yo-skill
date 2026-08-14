@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.aicrafted/searxng-mcp",
+  "type": "mcp",
+  "name": "searxng-mcp",
+  "description": "MCP server for SearXNG aggregator — web search across multiple engines via Model Context Protocol",
+  "author": "io.github.aicrafted",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/aicrafted/searxng-mcp",
+    "repo": "aicrafted/searxng-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/aicrafted/searxng-mcp:latest"
+    ],
+    "env": [
+      {
+        "name": "SEARXNG_URL",
+        "required": true,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-22T22:54:09.995734Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.martc03/natural-disaster-intel",
+  "type": "mcp",
+  "name": "Natural Disaster Intel",
+  "description": "FEMA disasters, NOAA weather alerts, USGS earthquakes. 4 tools.",
+  "author": "io.github.martc03",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/martc03/gov-mcp-servers",
+    "repo": "martc03/gov-mcp-servers"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://natural-disaster-intel-mcp.apify.actor/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-27T06:23:47.441683Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

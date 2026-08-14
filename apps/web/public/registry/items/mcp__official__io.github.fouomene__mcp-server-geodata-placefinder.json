@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.fouomene/mcp-server-geodata-placefinder",
+  "type": "mcp",
+  "name": "mcp-server-geodata-placefinder",
+  "description": "MCP GeoData Placefinder: search places, reverse geocode, and find nearby locations.",
+  "author": "io.github.fouomene",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/fouomene/geodataplacefinder",
+    "repo": "fouomene/geodataplacefinder"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-server-geodata-placefinder"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-25T01:09:32.041879Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

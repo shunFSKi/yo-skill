@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.SupplyMaven-SCR/supply-chain-intelligence",
+  "type": "mcp",
+  "name": "supply-chain-intelligence",
+  "description": "Real-time supply chain risk intelligence — 24 tools, proprietary indices, predictive signals",
+  "author": "io.github.SupplyMaven-SCR",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://supplymaven.com/api/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://supplymaven.com/api/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-06T13:44:47.705865Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

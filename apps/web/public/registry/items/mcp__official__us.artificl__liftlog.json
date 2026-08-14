@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/us.artificl/liftlog",
+  "type": "mcp",
+  "name": "liftlog",
+  "description": "Forklift & aerial-lift compliance records for warehouses — read-only demo tools.",
+  "author": "us.artificl",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://liftlog.artificl.us/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://liftlog.artificl.us/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T20:40:54.712707Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/ai.smithery/rfdez-pvpc-mcp-server",
+  "type": "mcp",
+  "name": "rfdez-pvpc-mcp-server",
+  "description": "Retrieve daily PVPC electricity tariffs for 2.0 TD consumers, published by Red Eléctrica.",
+  "author": "ai.smithery",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/rfdez/pvpc-mcp-server",
+    "repo": "rfdez/pvpc-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://server.smithery.ai/@rfdez/pvpc-mcp-server/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-09-10T16:57:17.590562Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

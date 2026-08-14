@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.temrjan/rustok-wallet",
+  "type": "mcp",
+  "name": "Rustok Wallet",
+  "description": "Self-custody Ethereum Agent Wallet. All chains enabled by default. User assumes all risks.",
+  "author": "io.github.temrjan",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/temrjan/rustok",
+    "repo": "temrjan/rustok"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "rustok-agent-mcp"
+    ],
+    "env": [
+      {
+        "name": "RUSTOK_AGENT_PASSWORD",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-24T07:17:31.827355Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

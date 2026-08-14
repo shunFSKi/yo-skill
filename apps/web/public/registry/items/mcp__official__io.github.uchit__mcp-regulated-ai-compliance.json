@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.uchit/mcp-regulated-ai-compliance",
+  "type": "mcp",
+  "name": "mcp-regulated-ai-compliance",
+  "description": "Regulated-industry AI compliance: EU AI Act, APRA, NIST AI RMF, ISO 42001, AU AI Safety.",
+  "author": "io.github.uchit",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/uchit/mcp-regulated-ai-compliance",
+    "repo": "uchit/mcp-regulated-ai-compliance"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@hellouchit/mcp-regulated-ai-compliance"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-06T08:43:24.90843Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

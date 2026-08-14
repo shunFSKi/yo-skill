@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.llmops-pro/nwc-mcp",
+  "type": "mcp",
+  "name": "nwc-mcp",
+  "description": "Lightning wallet for AI agents via Nostr Wallet Connect (NIP-47): budget caps, confirm, audit log.",
+  "author": "io.github.llmops-pro",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/llmops-pro/nwc-mcp",
+    "repo": "llmops-pro/nwc-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "nwc-mcp"
+    ],
+    "env": [
+      {
+        "name": "NWC_CONNECTION_STRING",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "NWC_DAILY_BUDGET_SATS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "NWC_READ_ONLY",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-12T10:09:03.718906Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

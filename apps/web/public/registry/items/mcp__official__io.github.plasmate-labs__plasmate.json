@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.plasmate-labs/plasmate",
+  "type": "mcp",
+  "name": "plasmate",
+  "description": "Browser engine for AI agents. HTML in, Semantic Object Model out. 16x fewer tokens.",
+  "author": "io.github.plasmate-labs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/plasmate-labs/plasmate-mcp",
+    "repo": "plasmate-labs/plasmate-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "plasmate-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-25T11:34:23.810366Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

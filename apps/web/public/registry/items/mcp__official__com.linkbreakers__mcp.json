@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/com.linkbreakers/mcp",
+  "type": "mcp",
+  "name": "Linkbreakers MCP",
+  "description": "QR-driven customer-journey platform for tracked QR codes, short links, and analytics.",
+  "author": "com.linkbreakers",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/linkbreakers-com/api",
+    "repo": "linkbreakers-com/api"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.linkbreakers.com",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T06:41:14.611596Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.himorishige/hatago-mcp-hub",
+  "type": "mcp",
+  "name": "hatago-mcp-hub",
+  "description": "Unified MCP Hub for managing multiple Model Context Protocol servers",
+  "author": "io.github.himorishige",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/himorishige/hatago-mcp-hub",
+    "repo": "himorishige/hatago-mcp-hub"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@himorishige/hatago-mcp-hub"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-09-14T14:57:18.596181Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

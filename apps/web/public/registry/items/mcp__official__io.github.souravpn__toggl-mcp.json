@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.souravpn/toggl-mcp",
+  "type": "mcp",
+  "name": "toggl-mcp",
+  "description": "MCP server for Toggl Track — gives Claude access to your time tracking data",
+  "author": "io.github.souravpn",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/souravpn/toggl-mcp",
+    "repo": "souravpn/toggl-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@souravpn/toggl-mcp"
+    ],
+    "env": [
+      {
+        "name": "TOGGL_API_TOKEN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-27T07:30:49.050598Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

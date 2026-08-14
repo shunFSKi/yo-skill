@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/sh.antrieb/antrieb",
+  "type": "mcp",
+  "name": "antrieb",
+  "description": "Validates AI infra code on real VMs. Self-corrects until it works. No containers, no sandboxes.",
+  "author": "sh.antrieb",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/jade-pico/antrieb-mcp-server",
+    "repo": "jade-pico/antrieb-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://antrieb.sh/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-28T01:02:44.083184Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

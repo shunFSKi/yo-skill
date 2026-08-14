@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.NyxToolsDev/dicom-hl7-mcp-server",
+  "type": "mcp",
+  "name": "DICOM/HL7/FHIR Interoperability MCP Server",
+  "description": "Bridges DICOM, HL7v2, and FHIR with cross-standard mapping and optional PACS connectivity.",
+  "author": "io.github.NyxToolsDev",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/NyxToolsDev/dicom-hl7-mcp-server",
+    "repo": "NyxToolsDev/dicom-hl7-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "dicom-hl7-mcp"
+    ],
+    "env": [
+      {
+        "name": "DICOM_HL7_LICENSE_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-02T22:11:53.399254Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

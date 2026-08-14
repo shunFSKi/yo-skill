@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.Evil-Bane/eyebrowse",
+  "type": "mcp",
+  "name": "eyebrowse",
+  "description": "Stealthy, LLM-drivable browser engine — a Python library + 85-tool MCP server on stealth Chromium.",
+  "author": "io.github.Evil-Bane",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Evil-Bane/eyebrowse",
+    "repo": "Evil-Bane/eyebrowse"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "eyebrowse"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-18T19:38:36.743021Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

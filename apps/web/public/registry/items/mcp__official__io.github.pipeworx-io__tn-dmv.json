@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.pipeworx-io/tn-dmv",
+  "type": "mcp",
+  "name": "Tennessee Driver Services",
+  "description": "Tennessee driver service centers with REAL ID and CDL testing, plus crash statistics",
+  "author": "io.github.pipeworx-io",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/pipeworx-io/mcp-tn-dmv",
+    "repo": "pipeworx-io/mcp-tn-dmv"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://gateway.pipeworx.io/tn-dmv/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-30T23:04:24.693407Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

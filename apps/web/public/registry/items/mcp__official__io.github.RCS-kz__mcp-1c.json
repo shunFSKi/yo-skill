@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.RCS-kz/mcp-1c",
+  "type": "mcp",
+  "name": "mcp-1c",
+  "description": "MCP server for 1C:Enterprise — read+write CRM/ERP through Claude/Cursor/Cline.",
+  "author": "io.github.RCS-kz",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/rcs-kz/mcp-1c",
+    "repo": "rcs-kz/mcp-1c"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@rcs-kz/mcp-1c"
+    ],
+    "env": [
+      {
+        "name": "MCP_1C_BASE",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "MCP_1C_USER",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "MCP_1C_PASSWORD",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "RCS_LICENSE_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-26T20:15:03.355635Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

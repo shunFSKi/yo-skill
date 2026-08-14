@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.delorenj/mcp-server-trello",
+  "type": "mcp",
+  "name": "mcp-server-trello",
+  "description": "MCP server for Trello boards with rate limiting, type safety, and comprehensive API integration.",
+  "author": "io.github.delorenj",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/delorenj/mcp-server-trello",
+    "repo": "delorenj/mcp-server-trello"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@delorenj/mcp-server-trello"
+    ],
+    "env": [
+      {
+        "name": "TRELLO_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "TRELLO_TOKEN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-25T22:48:46.618199Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

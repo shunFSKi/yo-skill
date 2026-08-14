@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/dev.pingzen/mcp",
+  "type": "mcp",
+  "name": "PingZen Uptime Monitoring",
+  "description": "Uptime monitoring with 127 tools across 23 protocols. Tag filtering + Code Mode.",
+  "author": "dev.pingzen",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://gitlab.com/dobryj/recorder2025",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "docker.io/ilyakong/pingzen-mcp:0.9.3"
+    ],
+    "env": [
+      {
+        "name": "MCP_API_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "DATABASE_URL",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SECRET_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-31T20:31:01.075653Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

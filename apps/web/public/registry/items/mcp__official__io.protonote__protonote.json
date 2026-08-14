@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.protonote/protonote",
+  "type": "mcp",
+  "name": "ProtoNote",
+  "description": "Share prototypes for team review: publish HTML, reviewers pin notes, pull feedback back to apply.",
+  "author": "io.protonote",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://protonote.io/api/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://protonote.io/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-22T00:52:15.28384Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

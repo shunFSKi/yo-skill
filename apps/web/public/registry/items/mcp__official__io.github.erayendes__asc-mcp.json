@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.erayendes/asc-mcp",
+  "type": "mcp",
+  "name": "Heimdall",
+  "description": "Every App Store Connect + StoreKit 2 endpoint. 883 tools in 13 profiles, narrow to 24.",
+  "author": "io.github.erayendes",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/erayendes/app-store-connect-mcp",
+    "repo": "erayendes/app-store-connect-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@erayendes/asc-mcp"
+    ],
+    "env": [
+      {
+        "name": "ASC_KEY_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ASC_ISSUER_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ASC_PRIVATE_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ASC_PRIVATE_KEY_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ASC_BUNDLE_ID",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T11:10:37.565636Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.Mason-Levyy/mfp-mcp",
+  "type": "mcp",
+  "name": "MyFitnessPal",
+  "description": "MCP server for MyFitnessPal: log, search, and analyze your food diary.",
+  "author": "io.github.Mason-Levyy",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Mason-Levyy/myfitnesspal-mcp",
+    "repo": "Mason-Levyy/myfitnesspal-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mfp-mcp"
+    ],
+    "env": [
+      {
+        "name": "MFP_COOKIE",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MFP_USERNAME",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-27T01:24:46.377566Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

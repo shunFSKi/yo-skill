@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.LGDiMaggio/predictive-maintenance-mcp",
+  "type": "mcp",
+  "name": "Predictive Maintenance",
+  "description": "Industrial vibration analysis, bearing fault diagnosis, ISO 20816, and ML anomaly detection",
+  "author": "io.github.LGDiMaggio",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers/io.github.LGDiMaggio%2Fpredictive-maintenance-mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "predictive-maintenance-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-09T16:10:53.394349Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

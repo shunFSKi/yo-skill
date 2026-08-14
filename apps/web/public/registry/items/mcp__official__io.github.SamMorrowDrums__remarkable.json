@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.SamMorrowDrums/remarkable",
+  "type": "mcp",
+  "name": "reMarkable MCP Server",
+  "description": "Access your reMarkable tablet - read documents, browse files, extract text and OCR",
+  "author": "io.github.SamMorrowDrums",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/SamMorrowDrums/remarkable-mcp",
+    "repo": "SamMorrowDrums/remarkable-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "remarkable-mcp"
+    ],
+    "env": [
+      {
+        "name": "REMARKABLE_TOKEN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-12T16:08:01.153134Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

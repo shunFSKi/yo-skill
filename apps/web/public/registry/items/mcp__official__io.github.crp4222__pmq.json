@@ -1,0 +1,113 @@
+{
+  "id": "mcp:official/io.github.crp4222/pmq",
+  "type": "mcp",
+  "name": "pmq (Polymarket CLOB V2)",
+  "description": "Production-proven Polymarket CLOB V2 trading and data. Fail-closed fills; keys stay local.",
+  "author": "io.github.crp4222",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/crp4222/pmq",
+    "repo": "crp4222/pmq"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "pmquant"
+    ],
+    "env": [
+      {
+        "name": "PMQ_MCP_LIVE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PMQ_MCP_PAPER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PMQ_MCP_PAPER_USD",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PMQ_MCP_MAX_USD",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PMQ_MCP_DAILY_USD",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PMQ_MCP_STATE_FILE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "POLY_PRIVATE_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "POLY_FUNDER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "POLY_SIG_TYPE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "POLY_ORDER_LOG",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "POLY_FOREIGN_ORDER_LOGS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-14T17:04:41.075781Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

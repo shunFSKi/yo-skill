@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.shmindmaster/repocontext",
+  "type": "mcp",
+  "name": "RepoContext",
+  "description": "Read-only, commit-pinned repository context for coding agents.",
+  "author": "io.github.shmindmaster",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/shmindmaster/repocontext",
+    "repo": "shmindmaster/repocontext"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@shmindmaster/repocontext"
+    ],
+    "env": [
+      {
+        "name": "REPOCONTEXT_REGISTRY",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-30T08:07:45.648882Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

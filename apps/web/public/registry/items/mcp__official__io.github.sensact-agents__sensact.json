@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.sensact-agents/sensact",
+  "type": "mcp",
+  "name": "Sensact",
+  "description": "An authenticated remote MCP server for user-owned devices and one-shot capability invocation.",
+  "author": "io.github.sensact-agents",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/sensact-agents/Sensact",
+    "repo": "sensact-agents/Sensact"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://helavgrvwipmdvyejfom.supabase.co/functions/v1/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-11T03:00:12.309629Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

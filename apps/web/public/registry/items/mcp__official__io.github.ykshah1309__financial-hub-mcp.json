@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.ykshah1309/financial-hub-mcp",
+  "type": "mcp",
+  "name": "financial-hub-mcp",
+  "description": "SEC EDGAR filings, XBRL financials, FRED economic data, and real-time market quotes",
+  "author": "io.github.ykshah1309",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ykshah1309/financial-hub-mcp",
+    "repo": "ykshah1309/financial-hub-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "financial-hub-mcp"
+    ],
+    "env": [
+      {
+        "name": "FRED_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "SEC_USER_AGENT_EMAIL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "FINNHUB_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-17T16:21:43.239635Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

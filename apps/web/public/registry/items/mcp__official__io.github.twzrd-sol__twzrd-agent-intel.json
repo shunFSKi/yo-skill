@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.twzrd-sol/twzrd-agent-intel",
+  "type": "mcp",
+  "name": "TWZRD Agent Intelligence",
+  "description": "Trust + receipt layer for x402 agents on Solana: free preflight + paid signed V6 trust receipt.",
+  "author": "io.github.twzrd-sol",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/twzrd-sol/twzrd-trust",
+    "repo": "twzrd-sol/twzrd-trust"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "twzrd-agent-intel"
+    ],
+    "env": [
+      {
+        "name": "TWZRD_SIGNAL_SOURCE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-27T06:33:20.223743Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

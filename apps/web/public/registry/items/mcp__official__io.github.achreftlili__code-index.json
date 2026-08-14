@@ -1,0 +1,88 @@
+{
+  "id": "mcp:official/io.github.achreftlili/code-index",
+  "type": "mcp",
+  "name": "Code Index",
+  "description": "SQLite-backed hybrid (vector + FTS) code search index for Claude Code over MCP.",
+  "author": "io.github.achreftlili",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/achreftlili/code-index",
+    "repo": "achreftlili/code-index"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-code-index"
+    ],
+    "env": [
+      {
+        "name": "CODE_INDEX_EMBEDDER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CODE_INDEX_EMBED_MODEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CODE_INDEX_EMBED_DIM",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CODE_INDEX_DB",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CODE_INDEX_EMBED_BATCH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CODE_INDEX_EMBED_DEVICE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-14T21:04:32.716695Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,83 @@
+{
+  "id": "mcp:official/io.github.sbrunner-atx/wsjtx-mcp",
+  "type": "mcp",
+  "name": "wsjtx-mcp",
+  "description": "Operate WSJT-X (FT8/FT4/WSPR) from MCP clients over its UDP message protocol.",
+  "author": "io.github.sbrunner-atx",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/sbrunner-atx/wsjtx-mcp",
+    "repo": "sbrunner-atx/wsjtx-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "wsjtx-mcp"
+    ],
+    "env": [
+      {
+        "name": "WSJTX_CALLSIGN",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WSJTX_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WSJTX_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WSJTX_MULTICAST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WSJTX_INSTANCE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-27T05:45:51.874418Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

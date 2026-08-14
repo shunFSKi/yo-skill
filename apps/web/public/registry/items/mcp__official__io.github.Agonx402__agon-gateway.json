@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.Agonx402/agon-gateway",
+  "type": "mcp",
+  "name": "agon-gateway",
+  "description": "MCP server for Agon Gateway x402, Helius Wallet, and Tokens API market data.",
+  "author": "io.github.Agonx402",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Agonx402/agon-gateway-agentic",
+    "repo": "Agonx402/agon-gateway-agentic"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@agonx402/gateway-mcp"
+    ],
+    "env": [
+      {
+        "name": "AGON_GATEWAY_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AGON_SIGNER_COMMAND",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AGON_WALLET_PROFILE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AGON_PAYMENT_MAX_AMOUNT_USD",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AGON_PAYMENT_DAILY_LIMIT_USD",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-02T16:05:35.863191Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

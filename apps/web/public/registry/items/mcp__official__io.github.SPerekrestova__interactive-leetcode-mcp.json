@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.SPerekrestova/interactive-leetcode-mcp",
+  "type": "mcp",
+  "name": "interactive-leetcode-mcp",
+  "description": "Interactive LeetCode MCP server with authorization and solution submission capabilities",
+  "author": "io.github.SPerekrestova",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/SPerekrestova/interactive-leetcode-mcp",
+    "repo": "SPerekrestova/interactive-leetcode-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@sperekrestova/interactive-leetcode-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-24T22:45:40.524091Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

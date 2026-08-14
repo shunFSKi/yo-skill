@@ -1,0 +1,94 @@
+{
+  "id": "mcp:official/io.github.cyanheads/eia-energy-mcp-server",
+  "type": "mcp",
+  "name": "eia-energy-mcp-server",
+  "description": "Browse and query the EIA API v2 — electricity, petroleum, natural gas, coal, forecasts via MCP.",
+  "author": "io.github.cyanheads",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/cyanheads/eia-energy-mcp-server",
+    "repo": "cyanheads/eia-energy-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@cyanheads/eia-energy-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "EIA_API_KEY",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "EIA_DATASET_TTL_SECONDS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "EIA_DATAFRAME_DROP_ENABLED",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "EIA_CANVAS_MAX_ROWS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "EIA_FACET_VALUE_CAP",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CANVAS_PROVIDER_TYPE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-06T06:02:30.374204Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

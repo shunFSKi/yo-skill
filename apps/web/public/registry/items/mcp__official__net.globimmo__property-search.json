@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/net.globimmo/property-search",
+  "type": "mcp",
+  "name": "Globimmo Property Search",
+  "description": "International real-estate search and buyer workflows for AI agents via MCP and OAuth 2.1.",
+  "author": "net.globimmo",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://www.globimmo.net/{locale}/api/agent/v1/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://www.globimmo.net/{locale}/api/agent/v1/mcp",
+    "env": [
+      {
+        "name": "X-Globimmo-Agent-Key",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-09T16:01:41.514549Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

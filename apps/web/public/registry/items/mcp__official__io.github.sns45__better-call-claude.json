@@ -1,0 +1,119 @@
+{
+  "id": "mcp:official/io.github.sns45/better-call-claude",
+  "type": "mcp",
+  "name": "better-call-claude",
+  "description": "Voice Calls, SMS, and WhatsApp for Claude Code with cross-channel context sharing.",
+  "author": "io.github.sns45",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/sns45/better-call-claude",
+    "repo": "sns45/better-call-claude"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "better-call-claude"
+    ],
+    "env": [
+      {
+        "name": "BETTERCALLCLAUDE_PHONE_PROVIDER",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "BETTERCALLCLAUDE_PHONE_NUMBER",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "BETTERCALLCLAUDE_PHONE_ACCOUNT_SID",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "BETTERCALLCLAUDE_PHONE_AUTH_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "BETTERCALLCLAUDE_USER_PHONE_NUMBER",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "BETTERCALLCLAUDE_OPENAI_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "BETTERCALLCLAUDE_WHATSAPP_NUMBER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BETTERCALLCLAUDE_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TAILSCALE_HOSTNAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BETTERCALLCLAUDE_WHATSAPP_PROVIDER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BETTERCALLCLAUDE_BAILEYS_AUTH_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BETTERCALLCLAUDE_WHATSAPP_CHAT_HISTORY_SIZE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-23T14:10:58.198579Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

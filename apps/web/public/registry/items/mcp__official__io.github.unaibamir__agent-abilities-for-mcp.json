@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.unaibamir/agent-abilities-for-mcp",
+  "type": "mcp",
+  "name": "Agent Abilities for MCP",
+  "description": "Self-hosted WordPress MCP server with per-capability permission controls and a full audit log.",
+  "author": "io.github.unaibamir",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/unaibamir/agent-abilities-for-mcp",
+    "repo": "unaibamir/agent-abilities-for-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://{hostname}/wp-json/agent-abilities-for-mcp/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T22:31:13.928307Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

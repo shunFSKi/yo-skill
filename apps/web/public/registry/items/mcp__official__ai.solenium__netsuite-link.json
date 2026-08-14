@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/ai.solenium/netsuite-link",
+  "type": "mcp",
+  "name": "NetSuite Link (beta)",
+  "description": "BETA — Run SuiteQL, read/write NetSuite records, query SuiteAnalytics, and run saved bookmarks.",
+  "author": "ai.solenium",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/BorisProsper/netsuite-link",
+    "repo": "BorisProsper/netsuite-link"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://netsuite.solenium.ai/api/v1/mcp",
+    "env": [
+      {
+        "name": "X-Api-Key",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-03T21:53:15.677361Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.UliRCS/mastr-mcp-server",
+  "type": "mcp",
+  "name": "MaStR MCP Server",
+  "description": "MCP server for the German Marktstammdatenregister (MaStR) energy market register",
+  "author": "io.github.UliRCS",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/UliRCS/mastr-mcp-server",
+    "repo": "UliRCS/mastr-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mastr-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "MASTR_USER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MASTR_TOKEN",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-15T08:05:31.38102Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

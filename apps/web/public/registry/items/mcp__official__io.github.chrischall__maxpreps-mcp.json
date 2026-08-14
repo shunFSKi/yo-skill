@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.chrischall/maxpreps-mcp",
+  "type": "mcp",
+  "name": "maxpreps-mcp",
+  "description": "MaxPreps MCP — high school schedules, scores, records, rosters and stat leaders",
+  "author": "io.github.chrischall",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/chrischall/maxpreps-mcp",
+    "repo": "chrischall/maxpreps-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "maxpreps-mcp"
+    ],
+    "env": [
+      {
+        "name": "MAXPREPS_USER_AGENT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MAXPREPS_CACHE_TTL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MAXPREPS_MIN_INTERVAL_MS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-01T20:20:39.914277Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

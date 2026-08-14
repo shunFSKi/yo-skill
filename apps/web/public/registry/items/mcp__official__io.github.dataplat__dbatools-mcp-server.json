@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.dataplat/dbatools-mcp-server",
+  "type": "mcp",
+  "name": "dbatools-mcp-server",
+  "description": "MCP server for dbatools — exposes SQL Server management commands as MCP tools",
+  "author": "io.github.dataplat",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dataplat/dbatools-mcp-server",
+    "repo": "dataplat/dbatools-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "dbatools-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "DBATOOLS_SAFE_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MAX_OUTPUT_ROWS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "COMMAND_TIMEOUT_SECONDS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PWSH_EXE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-18T17:28:11.671977Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

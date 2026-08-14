@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.pozymasika/please-remind",
+  "type": "mcp",
+  "name": "Please Remind",
+  "description": "Connects to PleaseRemind.com to allow read and write access to all your reminders.",
+  "author": "io.github.pozymasika",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/pozymasika/remind-me",
+    "repo": "pozymasika/remind-me"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://pleaseremind.com/api/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-01-12T13:34:02.197848Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

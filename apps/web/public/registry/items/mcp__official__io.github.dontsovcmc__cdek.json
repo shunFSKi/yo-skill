@@ -1,0 +1,108 @@
+{
+  "id": "mcp:official/io.github.dontsovcmc/cdek",
+  "type": "mcp",
+  "name": "cdek",
+  "description": "MCP server for CDEK delivery service API — create orders, track shipments, search delivery points",
+  "author": "io.github.dontsovcmc",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dontsovcmc/mcp-server-cdek",
+    "repo": "dontsovcmc/mcp-server-cdek"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-server-cdek"
+    ],
+    "env": [
+      {
+        "name": "CDEK_CLIENT",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "CDEK_SECRET",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "CDEK_SENDER_COMPANY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CDEK_SENDER_NAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CDEK_SENDER_FULL_NAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CDEK_SENDER_EMAIL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CDEK_SENDER_PHONE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CDEK_MY_PVZ",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CDEK_TIMEOUT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CDEK_FILE_TIMEOUT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-11T19:50:02.88283Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

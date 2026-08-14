@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.andreacappelletti97/google-flights",
+  "type": "mcp",
+  "name": "google-flights",
+  "description": "MCP server for Google Flights: search, price tracking, cabin comparison, emissions, and more.",
+  "author": "io.github.andreacappelletti97",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/andreacappelletti97/google-flights-mcp",
+    "repo": "andreacappelletti97/google-flights-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "google-flights-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-17T21:16:45.624665Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

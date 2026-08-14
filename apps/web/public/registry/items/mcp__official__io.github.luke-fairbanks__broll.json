@@ -1,0 +1,104 @@
+{
+  "id": "mcp:official/io.github.luke-fairbanks/broll",
+  "type": "mcp",
+  "name": "broll",
+  "description": "Content studio MCP for coding agents: BYO keys, deterministic video rendering, draft-first posting",
+  "author": "io.github.luke-fairbanks",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/luke-fairbanks/broll",
+    "repo": "luke-fairbanks/broll"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "broll-mcp"
+    ],
+    "env": [
+      {
+        "name": "OPENAI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GEMINI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "BLUESKY_IDENTIFIER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BLUESKY_APP_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MASTODON_ACCESS_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "X_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "X_API_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "X_ACCESS_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "X_ACCESS_TOKEN_SECRET",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-12T07:49:55.962631Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

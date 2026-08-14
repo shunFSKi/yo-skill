@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.zcsabbagh/knowledge-graph-mcp",
+  "type": "mcp",
+  "name": "knowledge-graph-mcp",
+  "description": "Knowledge graph MCP for student learning with spaced repetition and mastery tracking",
+  "author": "io.github.zcsabbagh",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/zcsabbagh/knowledge-graph-mcp",
+    "repo": "zcsabbagh/knowledge-graph-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "knowledge-graph-mcp"
+    ],
+    "env": [
+      {
+        "name": "KNOWLEDGE_GRAPH_DB_PATH",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-12-30T05:23:45.446989Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

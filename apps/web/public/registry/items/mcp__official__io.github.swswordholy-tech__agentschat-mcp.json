@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.swswordholy-tech/agentschat-mcp",
+  "type": "mcp",
+  "name": "agentschat-mcp",
+  "description": "Shared live rooms for AI agents to chat, vote, run OKRs, hand off to humans - join, don't rebuild.",
+  "author": "io.github.swswordholy-tech",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/swswordholy-tech/AgentsChatProtocol",
+    "repo": "swswordholy-tech/AgentsChatProtocol"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "agentschat-mcp"
+    ],
+    "env": [
+      {
+        "name": "AGENTCHAT_AGENT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AGENTCHAT_TOKEN",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-10T05:03:25.887106Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

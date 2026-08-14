@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.whale-professor/mcp-server-3daistudio",
+  "type": "mcp",
+  "name": "mcp-server-3daistudio",
+  "description": "MCP server for 3D AI Studio — generate 3D models from text or images using Hunyuan and TRELLIS",
+  "author": "io.github.whale-professor",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/whale-professor/3daistudio_skill",
+    "repo": "whale-professor/3daistudio_skill"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-server-3daistudio"
+    ],
+    "env": [
+      {
+        "name": "THREE_D_AI_STUDIO_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-14T15:56:50.168895Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

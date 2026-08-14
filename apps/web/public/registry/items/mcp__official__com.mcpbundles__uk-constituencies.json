@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/com.mcpbundles/uk-constituencies",
+  "type": "mcp",
+  "name": "UK Constituencies MCP Server from MCPBundles",
+  "description": "Search UK parliamentary constituencies by name, get boundaries and ONS codes",
+  "author": "com.mcpbundles",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/thinkchainai/mcpbundles",
+    "repo": "thinkchainai/mcpbundles"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/thinkchainai/mcpbundles/releases/download/uk-constituencies-v1.0.0+build.ee2f6959/uk-constituencies.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-11T18:02:42.482513Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

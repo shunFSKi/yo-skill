@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.hashicorp/terraform-mcp-server",
+  "type": "mcp",
+  "name": "Terraform",
+  "description": "Generate more accurate Terraform and automate workflows for HCP Terraform and Terraform Enterprise",
+  "author": "io.github.hashicorp",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/hashicorp/terraform-mcp-server",
+    "repo": "hashicorp/terraform-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "docker.io/hashicorp/terraform-mcp-server:1.0.0"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-10T18:53:10.818441Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

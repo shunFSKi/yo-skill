@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/ink.utilia/solana-preflight",
+  "type": "mcp",
+  "name": "Utilia Solana Transaction Evidence",
+  "description": "Solana transaction diagnosis, simulation, token-risk evidence, and priority fees via x402 USDC.",
+  "author": "ink.utilia",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mohamedkuch/utilia-solana-agent",
+    "repo": "mohamedkuch/utilia-solana-agent"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "utilia-solana-agent"
+    ],
+    "env": [
+      {
+        "name": "SOLANA_KEYPAIR_PATH",
+        "required": true,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-28T18:07:37.846001Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

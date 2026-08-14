@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.doriku/task-manager",
+  "type": "mcp",
+  "name": "Doriku",
+  "description": "Shared control plane for AI coding agents — tasks, memory, decisions, file locks. 12 tools.",
+  "author": "io.doriku",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/doriku-io/doriku.cli",
+    "repo": "doriku-io/doriku"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.doriku.io/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-06T07:18:19.662663Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

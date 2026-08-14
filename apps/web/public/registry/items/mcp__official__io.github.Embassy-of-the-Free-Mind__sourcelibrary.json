@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.Embassy-of-the-Free-Mind/sourcelibrary",
+  "type": "mcp",
+  "name": "Source Library",
+  "description": "Search 15K rare pre-modern texts translated to English: philosophy, religion, science, literature.",
+  "author": "io.github.Embassy-of-the-Free-Mind",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Embassy-of-the-Free-Mind/sourcelibrary-v2",
+    "repo": "Embassy-of-the-Free-Mind/sourcelibrary-v2"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://sourcelibrary.org/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-20T17:28:25.689056Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

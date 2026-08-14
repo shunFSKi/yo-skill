@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.praveendias1180/easypaydirect-mcp",
+  "type": "mcp",
+  "name": "easypaydirect-mcp",
+  "description": "Read-only MCP server for the Easy Pay Direct (EPD) / NMI-family payment gateway Query API.",
+  "author": "io.github.praveendias1180",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/praveendias1180/easypaydirect-mcp",
+    "repo": "praveendias1180/easypaydirect-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "easypaydirect-mcp"
+    ],
+    "env": [
+      {
+        "name": "NMI_SECURITY_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "NMI_API_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-06T18:13:38.230371Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

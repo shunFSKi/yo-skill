@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/ai.onelore/lore",
+  "type": "mcp",
+  "name": "OneLore",
+  "description": "Shared project context for AI agents and teams: docs, tasks, and messages that stay current.",
+  "author": "ai.onelore",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/SolidKeyAB/lore-mcp",
+    "repo": "SolidKeyAB/lore-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.onelore.ai"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-23T20:15:14.809432Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

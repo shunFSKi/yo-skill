@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/ai.ludo/game-assets",
+  "type": "mcp",
+  "name": "Ludo AI Game Assets",
+  "description": "Generate game assets with AI: sprites, 3D models, animations, sound effects, music, and voices.",
+  "author": "ai.ludo",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Ludo-AI/ludo-mcp",
+    "repo": "Ludo-AI/ludo-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.ludo.ai/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-01-30T17:59:40.034021Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

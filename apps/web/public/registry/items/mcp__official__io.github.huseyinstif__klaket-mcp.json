@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.huseyinstif/klaket-mcp",
+  "type": "mcp",
+  "name": "klaket-mcp",
+  "description": "Let AI agents watch videos: local transcripts, speakers, scenes, chapters and moment search",
+  "author": "io.github.huseyinstif",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/huseyinstif/klaket",
+    "repo": "huseyinstif/klaket"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "klaket-mcp"
+    ],
+    "env": [
+      {
+        "name": "KLAKET_API_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "KLAKET_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-13T12:56:53.318528Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

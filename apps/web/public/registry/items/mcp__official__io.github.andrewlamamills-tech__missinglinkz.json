@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.andrewlamamills-tech/missinglinkz",
+  "type": "mcp",
+  "name": "MissingLinkz",
+  "description": "Campaign link infrastructure for AI agents — validate, build, and inspect UTM-tracked links.",
+  "author": "io.github.andrewlamamills-tech",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/andrewlamamills-tech/missing-linkz",
+    "repo": "andrewlamamills-tech/missing-linkz"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "missinglinkz"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-22T09:25:02.596736Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

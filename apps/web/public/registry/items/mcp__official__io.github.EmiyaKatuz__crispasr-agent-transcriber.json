@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.EmiyaKatuz/crispasr-agent-transcriber",
+  "type": "mcp",
+  "name": "CrispASR Agent Transcriber",
+  "description": "Transcribe and understand local audio/video with CrispASR and local models only.",
+  "author": "io.github.EmiyaKatuz",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/EmiyaKatuz/crispasr-agent-transcriber",
+    "repo": "EmiyaKatuz/crispasr-agent-transcriber"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "crispasr-agent-transcriber"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-26T10:28:29.739441Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

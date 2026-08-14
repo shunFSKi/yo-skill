@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.traffiycom-ui/paidsync",
+  "type": "mcp",
+  "name": "PaidSync.ai",
+  "description": "Manage Google Ads, Meta Ads, and LinkedIn Ads through AI. 200+ tools, full read and write.",
+  "author": "io.github.traffiycom-ui",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/traffiycom-ui/paidsync-mcp-server",
+    "repo": "traffiycom-ui/paidsync-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.paidsync.ai/sse",
+    "env": [
+      {
+        "name": "api_key",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-08T13:56:28.078532Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

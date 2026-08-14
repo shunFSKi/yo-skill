@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.Furowu/brokre",
+  "type": "mcp",
+  "name": "brokre",
+  "description": "AI-safe credential broker for MCP — run saved SSH/MySQL/psql aliases; passwords never reach AI.",
+  "author": "io.github.Furowu",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Furowu/brokre",
+    "repo": "Furowu/brokre"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "brokre"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-27T02:45:46.075912Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

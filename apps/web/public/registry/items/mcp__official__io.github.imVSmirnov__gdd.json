@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.imVSmirnov/gdd",
+  "type": "mcp",
+  "name": "GDD - AI-Controlled Browser Farm",
+  "description": "AI-controlled browser farm: N isolated Chromium instances with 36 MCP tools",
+  "author": "io.github.imVSmirnov",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Cap-of-tea/GDD",
+    "repo": "Cap-of-tea/GDD"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/cap-of-tea/gdd:1.5.0"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-20T10:54:04.677471Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.synergyboat/website",
+  "type": "mcp",
+  "name": "SynergyBoat",
+  "description": "SynergyBoat's public company data — services, case studies, AI use cases, team — and lead capture.",
+  "author": "com.synergyboat",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/synergyboat/landing-webapp",
+    "repo": "synergyboat/landing-webapp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://www.synergyboat.com/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T02:32:07.895908Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

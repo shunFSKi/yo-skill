@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.fgasparetto/voice-transcriber-mcp",
+  "type": "mcp",
+  "name": "Voice Transcriber MCP Server",
+  "description": "MCP server for transcribing Google Chat voice messages using Groq Whisper API",
+  "author": "io.github.fgasparetto",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/fgasparetto/voice-transcriber-mcp",
+    "repo": "fgasparetto/voice-transcriber-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "voice-transcriber-mcp"
+    ],
+    "env": [
+      {
+        "name": "GROQ_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "GCHAT_TOKEN_PATH",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-12T10:53:06.626359Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

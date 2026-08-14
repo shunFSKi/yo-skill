@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.geoacpfilho/paygate-monetize-monetization-x402",
+  "type": "mcp",
+  "name": "PayGate MCP — Monetization Gateway for AI Agents",
+  "description": "Monetize any MCP server: x402 paywall, pay-per-call billing in USDC on Base, agent marketplace.",
+  "author": "io.github.geoacpfilho",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/geoacpfilho/paygate-mcp",
+    "repo": "geoacpfilho/paygate-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://paygate-mcp.rendercriativo.workers.dev/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T00:11:10.537664Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# PayGate MCP\n\n**Monetization gateway for Model Context Protocol servers.** Put any MCP server behind a pay-per-call toll that AI agents can settle autonomously — no signup, no API keys, no human in the loop.\n\nLive endpoint: `https://paygate-mcp.rendercriativo.workers.dev/mcp`\n\n[![x402](https://img.shields.io/badge/x402-v2-4f46e5)](https://github.com/x402-foundation/x402)\n[![network](https://img.shields.io/badge/Base-USDC-06b6d4)](https://basescan.org)\n[![license](https://img.shields.io/badge/license-MIT-059669)](LICENSE)\n\n## What it does\n\nAn agent calls a tool. If the tool is monetized, PayGate answers with an [x402 v2](https://github.com/x402-foundation/x402) payment challenge instead of the result. The agent signs a USDC transfer authorization, retries, and gets its answer. Settlement happens on Base; the developer never touches payment code.\n\n```\nagent ──tools/call──▶ PayGate ──▶ 402 challenge (price, asset, payTo)\nagent ──signed payload──▶ PayGate ──verify──▶ facilitator\n                          PayGate ──▶ developer's MCP server ──▶ result\n                          PayGate ──settle──▶ facilitator ──▶ USDC on Base\nagent ◀── result + settlement receipt\n```\n\nPayment is **verified before** the tool runs and **settled after** it returns. If the tool fails or returns an error, nothing is charged.\n\n## For agents\n\nDiscovery is free. Ask PayGate what is for sale:\n\n```bash\ncurl -X POST https://paygate-mcp.rendercriativo.workers.dev/mcp \\\n  -H 'Content-Type: application/json' \\\n  -d '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"tools/call\",\n       \"params\":{\"name\":\"list_registered_servers\",\"arguments\":{}}}'\n```\n\nCalling a monetized tool without payment returns a spec-compliant challenge — a tool result with `isError: true` whose `structuredContent` holds the `PaymentRequired` object:\n\n```jsonc\n{\n  \"x402Version\": 2,\n  \"error\": \"Payment required: calculate_fator_r custa $0.02 USDC.\",\n  \"resource\": { \"url\": \"mcp://tool/calculate_fator_r\", \"mimeType\": \"application/json\" },\n  \"accepts\": [{\n    \"scheme\": \"exact\",\n    \"network\": \"eip155:8453\",\n    \"amount\": \"20000\",                                     // 6-decimal USDC units\n    \"asset\": \"0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913\",\n    \"payTo\": \"0x82e3...999e\",\n    \"maxTimeoutSeconds\": 120,\n    \"extra\": { \"name\": \"USD Coin\", \"version\": \"2\" }        // EIP-712 domain\n  }]\n}\n```\n\nSign an EIP-3009 `TransferWithAuthorization` using **exactly** the domain in `extra`, then retry the call with the payment attached under `params._meta[\"x402/payment\"]`. The settlement receipt comes back in `_meta[\"x402/payment-response\"]`.\n\n> The USDC EIP-712 domain name is `\"USD Coin\"` on Base mainnet and `\"USDC\"` on Base Sepolia. Using the wrong one makes every signature fail verification.\n\nA working reference client is in [`scripts/pay-test.mjs`](scripts/pay-test.mjs):\n\n```bash\nPRIVATE_KEY=0x... node scripts/pay-test.mjs\n```\n\nThe paying wallet needs USDC on Base — but **no ETH**: gas is covered by the facilitator.\n\nBoth x402 transports are supported. HTTP clients can use the base64 `PAYMENT-REQUIRED` / `PAYMENT-SIGNATURE` / `PAYMENT-RESPONSE` headers instead of the MCP `_meta` binding.\n\n## For sellers\n\nThe whole seller lifecycle is exposed as MCP tools, so an agent can run it end to end — tell your assistant to monetize your server and it can do everything below on its own:\n\n| Tool | What it does |\n| --- | --- |\n| `register_server` | Lists your server. Its tools are imported automatically; you get a proxy URL and a secret `api_key`. |\n| `verify_ownership` | Serve the token from registration at `/.well-known/paygate-verify` on your domain and call this to earn a **verified badge**. Buyers can filter for verified sellers. |\n| `set_tool_price` | Reprice a tool or take it off the market. |\n| `get_earnings` / `get_my_listing` | Revenue report and current listing. |\n\n**Buyers pay your wallet directly on-chain.** PayGate never holds your funds — there is no payout to wait for, no balance to withdraw, and no commission on direct payments. Your server is never modified: PayGate forwards `initialize`, `tools/list`, `resources/list` and `prompts/list` for free and charges only on `tools/call`.\n\nThe same operations exist as REST (`POST /api/register`, `PUT /api/me/tools`, `GET /api/me/earnings`) if you prefer curl:\n\n```bash\ncurl -X POST https://paygate-mcp.rendercriativo.workers.dev/api/register \\\n  -H 'Content-Type: application/json' \\\n  -d '{\"name\":\"Your Service\",\n       \"target_server_url\":\"https://your-mcp-server.example.com/mcp\",\n       \"wallet_address\":\"0xYourWallet\"}'\n```\n\n## Health and diagnostics\n\n`GET /health/x402` reports whether the payment rail is actually able to charge:\n\n```json\n{\n  \"network\": \"eip155:8453\",\n  \"facilitator\": { \"url\": \"...\", \"reachable\": true, \"authenticated\": true },\n  \"ready_to_charge\": true,\n  \"diagnosis\": \"Pronto para cobrar.\"\n}\n```\n\n## Configuration\n\nRuntime values live in `wrangler.jsonc` (`vars`) and Cloudflare secrets.\n\n| Variable | Purpose |\n| --- | --- |\n| `X402_NETWORK` | CAIP-2 network. `eip155:8453` (Base mainnet, default) or `eip155:84532` (Sepolia). |\n| `X402_FACILITATOR_URL` | Facilitator base URL, no `/verify` suffix. Defaults per network. |\n| `PAYGATE_WALLET_ADDRESS` | Wallet that receives payments. |\n| `CONTACT_EMAIL` | Optional; omitted from the UCP manifest when empty. |\n| `CDP_API_KEY_ID` / `CDP_API_KEY_SECRET` | Coinbase CDP credentials. Required for mainnet — it is the only facilitator that settles on Base. |\n| `UPSTREAM_AUTH_TOKEN` | Token forwarded to the developer's MCP server. |\n| `STRIPE_SECRET_KEY` | Optional, for the Stripe path on tools priced ≥ $0.50. |\n\nBase Sepolia needs no credentials: the public facilitator at `https://x402.org/facilitator` settles testnet USDC for free — the cheapest way to try the whole flow.\n\n## Layout\n\n```\nsrc/\n├── index.ts                 routes, health, discovery documents\n├── x402/\n│   ├── config.ts            network registry (CAIP-2, USDC assets, EIP-712 domains)\n│   ├── protocol.ts          v2 structures, MCP + HTTP transport bindings\n│   └── facilitator.ts       /verify and /settle, CDP JWT auth (EdDSA and ES256)\n├── api/\n│   ├── proxy.ts             the paid path: challenge → verify → execute → settle\n│   ├── mcp-server.ts        PayGate's own MCP server\n│   ├── paygate-tools.ts     marketplace tools: register, verify, price, earnings\n│   ├── llms-txt.ts          /llms.txt for AI systems arriving over the web\n│   ├── register.ts          developer onboarding\n│   ├── dev-management.ts    profile, pricing, earnings\n│   └── discovery.ts         server card and UCP manifest\n└── db/schema.ts             developers, tools, transactions, payment proofs\n```\n\n## Development\n\n```bash\nnpm install\nnpx wrangler dev      # local\nnpx wrangler deploy   # production\n```\n\nBuilt on Cloudflare Workers, Hono, and D1.\n\n## License\n\nMIT\n",
+  "status": "curated"
+}

@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.cyanheads/epa-mcp-server",
+  "type": "mcp",
+  "name": "epa-mcp-server",
+  "description": "EPA data: ECHO facility compliance, TRI releases, Superfund, drinking water, and AirNow air quality.",
+  "author": "io.github.cyanheads",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/cyanheads/epa-mcp-server",
+    "repo": "cyanheads/epa-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@cyanheads/epa-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "AIRNOW_API_KEY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "EJSCREEN_API_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-10T21:57:01.438707Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

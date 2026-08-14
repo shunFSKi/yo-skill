@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.rccola990-cloud/agent-toolbelt",
+  "type": "mcp",
+  "name": "agent-toolbelt",
+  "description": "MCP tools for AI agents: fetch any URL as clean text, live crypto prices, review & bid drafting.",
+  "author": "io.github.rccola990-cloud",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/rccola990-cloud/agent-toolbelt",
+    "repo": "rccola990-cloud/agent-toolbelt"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@rileycraig/agent-toolbelt"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-18T02:38:03.95575Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

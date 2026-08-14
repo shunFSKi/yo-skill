@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.ibeal/tidal-mcp",
+  "type": "mcp",
+  "name": "tidal-mcp",
+  "description": "MCP server for TIDAL - search tracks, manage playlists, and get personalized recommendations",
+  "author": "io.github.ibeal",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ibeal/tidal-mcp",
+    "repo": "ibeal/tidal-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/ibeal/tidal-mcp:latest"
+    ],
+    "env": [
+      {
+        "name": "TIDAL_MCP_PORT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-25T04:44:28.936162Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

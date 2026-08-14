@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.MananSingh2001/figma-react",
+  "type": "mcp",
+  "name": "figma-react",
+  "description": "An MCP server that converts Figma designs into React code.",
+  "author": "io.github.MananSingh2001",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/MananSingh2001/figma-react",
+    "repo": "MananSingh2001/figma-react"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@manansiingh/figma-react-mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-18T07:12:16.317576Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

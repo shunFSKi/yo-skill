@@ -1,0 +1,99 @@
+{
+  "id": "mcp:official/io.github.lsequeiraa/mcp-sidecar",
+  "type": "mcp",
+  "name": "MCP Sidecar",
+  "description": "Cross-platform MCP server for managing long-lived background processes from any MCP client",
+  "author": "io.github.lsequeiraa",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/lsequeiraa/mcp-sidecar",
+    "repo": "lsequeiraa/mcp-sidecar"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-sidecar"
+    ],
+    "env": [
+      {
+        "name": "SIDECAR_MAX_PROCESSES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SIDECAR_BUFFER_SIZE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SIDECAR_KILL_TIMEOUT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SIDECAR_CLEANUP_AFTER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SIDECAR_MAX_OUTPUT_SIZE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SIDECAR_ALLOWED_EXECUTABLES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SIDECAR_BLOCKED_PATTERNS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SIDECAR_AUDIT_LOG",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-02T01:55:54.658549Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

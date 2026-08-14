@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.Mapika/portview",
+  "type": "mcp",
+  "name": "portview",
+  "description": "See what's on your ports, the processes behind them, and diagnose conflicts and leaks.",
+  "author": "io.github.Mapika",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Mapika/portview",
+    "repo": "Mapika/portview"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "portview"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-01T07:48:54.147066Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.rafavecchi/grantd",
+  "type": "mcp",
+  "name": "grantd",
+  "description": "Grantd MCP server: let your AI agent act on a user's behalf across third-party APIs via OAuth.",
+  "author": "io.github.rafavecchi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/rafavecchi/grantd",
+    "repo": "rafavecchi/grantd"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "grantd-mcp"
+    ],
+    "env": [
+      {
+        "name": "GRANTD_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "GRANTD_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GRANTD_END_USER",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-09T22:02:36.019889Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

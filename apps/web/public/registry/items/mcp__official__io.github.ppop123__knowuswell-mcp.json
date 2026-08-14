@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.ppop123/knowuswell-mcp",
+  "type": "mcp",
+  "name": "knowuswell-mcp",
+  "description": "Host the KnowUsWell friendship quiz: 16 behaviour questions, four-letter roles, 16 pair types.",
+  "author": "io.github.ppop123",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ppop123/knowuswell-mcp",
+    "repo": "ppop123/knowuswell-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "knowuswell-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-01T02:30:46.880458Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

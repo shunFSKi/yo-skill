@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.trycloudflare.urgent-clean-occupied-catalogs/yultrace-audit",
+  "type": "mcp",
+  "name": "yultrace-audit",
+  "description": "EVM audit (Slither + source + security.txt + MCP-probe + wallet-exposure). 6 tools + /trace.",
+  "author": "com.trycloudflare.urgent-clean-occupied-catalogs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://urgent-clean-occupied-catalogs.trycloudflare.com/mcp/",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://urgent-clean-occupied-catalogs.trycloudflare.com/mcp/"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-19T21:36:26.119766Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

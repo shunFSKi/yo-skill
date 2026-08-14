@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/global.rootz.cars/marketplace",
+  "type": "mcp",
+  "name": "marketplace",
+  "description": "AI-native used car marketplace. 145K+ vehicles, 4300+ dealers, 13 US states, 20 MCP tools.",
+  "author": "global.rootz.cars",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://cars.rootz.global/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://cars.rootz.global/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-07T03:54:05.725643Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

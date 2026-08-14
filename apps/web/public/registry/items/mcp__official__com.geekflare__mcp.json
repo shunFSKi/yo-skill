@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/com.geekflare/mcp",
+  "type": "mcp",
+  "name": "mcp",
+  "description": "Geekflare MCP server for scraping, search, screenshots, broken links, DNS lookup, and network tools.",
+  "author": "com.geekflare",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.geekflare.com/{API_KEY}/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@geekflare/mcp"
+    ],
+    "env": [
+      {
+        "name": "API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-15T08:06:38.200631Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

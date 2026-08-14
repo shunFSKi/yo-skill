@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.energio-es/holded-mcp",
+  "type": "mcp",
+  "name": "holded-mcp",
+  "description": "MCP server for Holded — invoicing, accounting, CRM, projects, and team",
+  "author": "io.github.energio-es",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/energio-es/holded-mcp",
+    "repo": "energio-es/holded-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@energio/holded-mcp"
+    ],
+    "env": [
+      {
+        "name": "HOLDED_API_KEY",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "HOLDED_MODULES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "HOLDED_RATE_LIMIT_PER_SECOND",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "HOLDED_DEBUG",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-01T15:02:56.163561Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

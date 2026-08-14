@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.avalara/cross-border",
+  "type": "mcp",
+  "name": "Avalara Cross-Border",
+  "description": "Cross-border duty-rate and Trade & Tariff content lookups with product compliance and restrictions",
+  "author": "com.avalara",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/avadev/mcp",
+    "repo": "avadev/mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.avalara.com/cross-border"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-25T17:21:50.625008Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

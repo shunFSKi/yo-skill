@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.grzgrzgrz3/pingwa",
+  "type": "mcp",
+  "name": "pingwa",
+  "description": "Zero-setup WhatsApp notifications + human-in-the-loop for AI agents — text 'join', send in 60s.",
+  "author": "io.github.grzgrzgrz3",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/grzgrzgrz3/pingwa-client",
+    "repo": "grzgrzgrz3/pingwa-client"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "pingwa"
+    ],
+    "env": [
+      {
+        "name": "PINGWA_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-16T21:57:33.87554Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

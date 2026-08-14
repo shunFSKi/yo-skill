@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.unitecargo/us-logistics-directory",
+  "type": "mcp",
+  "name": "UNITECARGO U.S. Logistics Provider Directory",
+  "description": "Verified U.S. logistics provider search with canonical profiles, freshness, and read-only tools.",
+  "author": "com.unitecargo",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://unitecargo.com/api/agent/v1/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://unitecargo.com/api/agent/v1/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T02:07:15.935399Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

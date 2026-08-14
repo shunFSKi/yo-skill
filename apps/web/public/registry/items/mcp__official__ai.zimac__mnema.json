@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/ai.zimac/mnema",
+  "type": "mcp",
+  "name": "mnema",
+  "description": "Local-first, formally verified memory for AI agents: consult/learn/related/list over MCP.",
+  "author": "ai.zimac",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Zimac-AI/mnema",
+    "repo": "Zimac-AI/mnema"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/Zimac-AI/mnema/releases/download/v0.2.0/mnema-0.2.0-macos-universal.mcpb"
+    ],
+    "env": [
+      {
+        "name": "MNEMA_DATA_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MNEMA_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MNEMA_TOKEN",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-12T03:25:22.614005Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

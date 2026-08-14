@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.botzrDev/dreamd",
+  "type": "mcp",
+  "name": "dreamd",
+  "description": "Local-first, cross-harness memory for AI coding agents.",
+  "author": "io.github.botzrDev",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/botzrDev/dreamd",
+    "repo": "botzrDev/dreamd"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "dreamd-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-06T15:29:19.326251Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

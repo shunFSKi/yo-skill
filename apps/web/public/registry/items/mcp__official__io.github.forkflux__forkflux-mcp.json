@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.forkflux/forkflux-mcp",
+  "type": "mcp",
+  "name": "forkflux-mcp",
+  "description": "Self-hosted multi-agent collaboration and audit layer for AI-assisted engineering teams",
+  "author": "io.github.forkflux",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/forkflux/forkflux",
+    "repo": "forkflux/forkflux"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "forkflux-mcp"
+    ],
+    "env": [
+      {
+        "name": "FORKFLUX_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "FORKFLUX_API_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-01T17:58:56.492722Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.alias8818/enoch",
+  "type": "mcp",
+  "name": "Enoch",
+  "description": "Operate an Enoch control plane through MCP tools",
+  "author": "io.github.alias8818",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/alias8818/enoch-mcp",
+    "repo": "alias8818/enoch-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "enoch-mcp"
+    ],
+    "env": [
+      {
+        "name": "ENOCH_API_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ENOCH_API_TOKEN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-01T21:09:14.429278Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

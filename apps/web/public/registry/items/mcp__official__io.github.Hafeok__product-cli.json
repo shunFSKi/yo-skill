@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.Hafeok/product-cli",
+  "type": "mcp",
+  "name": "product-cli",
+  "description": "Knowledge graph CLI for managing features, ADRs, and test criteria as MCP-discoverable artifacts.",
+  "author": "io.github.Hafeok",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Hafeok/product-cli",
+    "repo": "Hafeok/product-cli"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/Hafeok/product-cli/releases/download/v0.2.0/product-cli-x86_64-unknown-linux-gnu.tar.xz?source=mcp-registry"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-24T09:24:38.820667Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

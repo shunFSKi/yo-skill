@@ -1,0 +1,83 @@
+{
+  "id": "mcp:official/io.github.vish288/mcp-atlassian-extended",
+  "type": "mcp",
+  "name": "mcp-atlassian-extended",
+  "description": "MCP server for Jira and Confluence — sprints, agile boards, attachments, versions, calendars.",
+  "author": "io.github.vish288",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/vish288/mcp-atlassian-extended",
+    "repo": "vish288/mcp-atlassian-extended"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-atlassian-extended"
+    ],
+    "env": [
+      {
+        "name": "JIRA_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "JIRA_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "CONFLUENCE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CONFLUENCE_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ATLASSIAN_READ_ONLY",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-08T01:04:16.425162Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

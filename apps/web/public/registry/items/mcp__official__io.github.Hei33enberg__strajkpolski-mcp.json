@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.Hei33enberg/strajkpolski-mcp",
+  "type": "mcp",
+  "name": "strajkpolski-mcp",
+  "description": "Verified Polish open data for AI agents: debt, budget, 460 MPs, votings, judiciary search, RAG.",
+  "author": "io.github.Hei33enberg",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Hei33enberg/Strajk-Polski-mcp",
+    "repo": "Hei33enberg/Strajk-Polski-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@strajkpolski/mcp"
+    ],
+    "env": [
+      {
+        "name": "STRAJKPOLSKI_API_BASE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-05T03:03:19.596687Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/app.anakior/atlas-mind",
+  "type": "mcp",
+  "name": "atlas-mind",
+  "description": "Self-hosted git-native knowledge base with an MCP endpoint your AI reads, writes and rewinds",
+  "author": "app.anakior",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Anakior/atlas-mind",
+    "repo": "Anakior/atlas-mind"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://{ATLAS_MCP_URL}"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-30T08:40:55.530898Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

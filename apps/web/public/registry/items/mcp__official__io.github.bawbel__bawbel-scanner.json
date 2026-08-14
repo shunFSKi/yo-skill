@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.bawbel/bawbel-scanner",
+  "type": "mcp",
+  "name": "Bawbel Scanner",
+  "description": "Security scanner for MCP servers and skill files. Detects AVE vulnerabilities before production.",
+  "author": "io.github.bawbel",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/bawbel/bawbel-scanner",
+    "repo": "bawbel/bawbel-scanner"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "bawbel-scanner"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-06T19:19:37.841509Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

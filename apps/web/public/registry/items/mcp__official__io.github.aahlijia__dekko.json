@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.aahlijia/dekko",
+  "type": "mcp",
+  "name": "dekko",
+  "description": "Static code map generator: MAP.md + map.json for any repo, plus a Claude Code /map plugin",
+  "author": "io.github.aahlijia",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/aahlijia/dekko",
+    "repo": "aahlijia/dekko"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "dekko"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-03T20:33:24.856751Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

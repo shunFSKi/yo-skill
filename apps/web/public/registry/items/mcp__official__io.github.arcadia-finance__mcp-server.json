@@ -1,0 +1,99 @@
+{
+  "id": "mcp:official/io.github.arcadia-finance/mcp-server",
+  "type": "mcp",
+  "name": "Arcadia Finance",
+  "description": "Concentrated liquidity on Uniswap/Aerodrome (rebalance, compound, leverage) or single-sided lending.",
+  "author": "io.github.arcadia-finance",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/arcadia-finance/mcp-server",
+    "repo": "arcadia-finance/mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@arcadia-finance/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "RPC_URL_BASE",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "RPC_URL_UNICHAIN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "RPC_URL_OPTIMISM",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PK",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "TRANSPORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ALLOWED_ORIGINS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RATE_LIMIT_RPM",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T11:24:31.694421Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

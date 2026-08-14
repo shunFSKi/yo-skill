@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.PCfVW/mcp-arangodb-async",
+  "type": "mcp",
+  "name": "mcp-arangodb-async",
+  "description": "Async MCP server for ArangoDB: 46 tools for graphs, queries, and multi-tenancy.",
+  "author": "io.github.PCfVW",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/PCfVW/mcp-arangodb-async",
+    "repo": "PCfVW/mcp-arangodb-async"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-arangodb-async"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-01-24T09:36:09.935082Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

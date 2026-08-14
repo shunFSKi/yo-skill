@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/com.metricspot/seo-mcp",
+  "type": "mcp",
+  "name": "seo-mcp",
+  "description": "Six tools for SEO and AI-readability audits. 91 checks, 11 score modules.",
+  "author": "com.metricspot",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/MetricSpot/mcp-server",
+    "repo": "MetricSpot/mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@metricspot/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "MCP_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-14T04:19:24.576034Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

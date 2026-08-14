@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.andretaki/hazmat-cfr-mcp",
+  "type": "mcp",
+  "name": "hazmat-cfr-mcp",
+  "description": "Complete 49 CFR 172.101 hazmat table lookup with special-provision decoding, cited to eCFR.",
+  "author": "io.github.andretaki",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/andretaki/hazmat-cfr-mcp",
+    "repo": "andretaki/hazmat-cfr-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "hazmat-cfr-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-23T17:28:45.079085Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

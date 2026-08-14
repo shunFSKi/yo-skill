@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.Noriget/agentping",
+  "type": "mcp",
+  "name": "AgentPing",
+  "description": "Let your AI agent notify you by email, Slack, Discord, or webhook. One tool: send_notification.",
+  "author": "io.github.Noriget",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Noriget/agentping",
+    "repo": "Noriget/agentping"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://ping.mgm-llc.org/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-09T15:26:31.493319Z"
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

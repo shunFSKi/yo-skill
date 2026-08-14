@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.profitelligence/mcp-server",
+  "type": "mcp",
+  "name": "mcp-server",
+  "description": "Financial intelligence: insider trades, SEC filings, 13F holdings, and market signals.",
+  "author": "io.github.profitelligence",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/profitelligence/profitelligence-mcp-server",
+    "repo": "profitelligence/profitelligence-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.profitelligence.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-01-04T00:38:01.856443Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

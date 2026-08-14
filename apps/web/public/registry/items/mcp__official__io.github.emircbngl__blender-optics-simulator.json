@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.emircbngl/blender-optics-simulator",
+  "type": "mcp",
+  "name": "blender-optics-simulator",
+  "description": "Build, align & render a real optical bench in Blender; drivable by an AI agent over MCP.",
+  "author": "io.github.emircbngl",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/emircbngl/blender-optics-simulator",
+    "repo": "emircbngl/blender-optics-simulator"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "blender-optics-mcp"
+    ],
+    "env": [
+      {
+        "name": "OPTICS_BRIDGE_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OPTICS_BRIDGE_HOST",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-14T23:11:45.404569Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

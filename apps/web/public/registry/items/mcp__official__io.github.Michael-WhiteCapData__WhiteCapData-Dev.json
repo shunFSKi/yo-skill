@@ -1,0 +1,78 @@
+{
+  "id": "mcp:official/io.github.Michael-WhiteCapData/WhiteCapData-Dev",
+  "type": "mcp",
+  "name": "WhiteCapData-Dev",
+  "description": "Operate a k3s / Kubernetes cluster from your AI agent — safe-by-default MCP server.",
+  "author": "io.github.Michael-WhiteCapData",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Michael-WhiteCapData/WhiteCapData-Dev",
+    "repo": "Michael-WhiteCapData/WhiteCapData-Dev"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "whitecapdata-dev"
+    ],
+    "env": [
+      {
+        "name": "HOMELAB_MCP_CONTEXT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "HOMELAB_MCP_READONLY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "HOMELAB_MCP_MUTABLE_NAMESPACES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "HOMELAB_MCP_MAX_REPLICAS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-23T02:18:23.610462Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

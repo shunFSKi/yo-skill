@@ -1,0 +1,88 @@
+{
+  "id": "mcp:official/io.github.Siddharth-coder13/secure-schema",
+  "type": "mcp",
+  "name": "Secure Schema MCP",
+  "description": "Read-only MCP server for exposing database schema metadata without row data.",
+  "author": "io.github.Siddharth-coder13",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Siddharth-coder13/secure_schema_mcp",
+    "repo": "Siddharth-coder13/secure_schema_mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-secure-schema"
+    ],
+    "env": [
+      {
+        "name": "DATABASE_URL",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "DATABASE_SCHEMA",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ALLOWED_TABLES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SECURE_SCHEMA_ENV",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "FASTMCP_CHECK_FOR_UPDATES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "FASTMCP_SHOW_SERVER_BANNER",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-04T14:26:15.036214Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

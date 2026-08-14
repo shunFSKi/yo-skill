@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.korture/hiring",
+  "type": "mcp",
+  "name": "hiring",
+  "description": "Behavioural hiring briefs from any JD: 5 behaviours, evidence, demand, interview questions, rarity.",
+  "author": "com.korture",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/skprasad-korture/korture-mcp",
+    "repo": "skprasad-korture/korture-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.korture.com/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-27T07:02:53.462424Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

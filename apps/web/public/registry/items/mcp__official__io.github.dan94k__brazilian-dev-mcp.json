@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.dan94k/brazilian-dev-mcp",
+  "type": "mcp",
+  "name": "brazilian-dev-mcp",
+  "description": "Utilitários para desenvolvedores brasileiros — CPF, CNPJ, CEP, telefone, moeda, dados fake e mais",
+  "author": "io.github.dan94k",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dan94k/brazilian-dev-mcp",
+    "repo": "dan94k/brazilian-dev-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "brazilian-dev-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-27T02:10:30.185321Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

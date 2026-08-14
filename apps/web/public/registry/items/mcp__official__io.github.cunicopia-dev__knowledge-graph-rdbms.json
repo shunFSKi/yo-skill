@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.cunicopia-dev/knowledge-graph-rdbms",
+  "type": "mcp",
+  "name": "Knowledge Graph RDBMS",
+  "description": "A label property graph on SQLite/Postgres with multi-ontology routing and a gated MCP server.",
+  "author": "io.github.cunicopia-dev",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/cunicopia-dev/knowledge-graph-rdbms",
+    "repo": "cunicopia-dev/knowledge-graph-rdbms"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "knowledge-graph-rdbms"
+    ],
+    "env": [
+      {
+        "name": "KGRDBMS_HOME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "KGRDBMS_DEFAULT_ONTOLOGY",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-25T12:13:34.228336Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

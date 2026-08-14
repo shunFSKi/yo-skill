@@ -1,0 +1,78 @@
+{
+  "id": "mcp:official/io.github.tdries/tableau-graphql-mcp",
+  "type": "mcp",
+  "name": "tableau-graphql-mcp",
+  "description": "Ask any Tableau lineage question, in any MCP client, through the Tableau Metadata API.",
+  "author": "io.github.tdries",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/tdries/tableau-graphQL-mcp",
+    "repo": "tdries/tableau-graphQL-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "tableau-graphql-mcp"
+    ],
+    "env": [
+      {
+        "name": "TABLEAU_SERVER",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "TABLEAU_SITE_CONTENT_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TABLEAU_PAT_NAME",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "TABLEAU_PAT_SECRET",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-13T06:37:05.00818Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

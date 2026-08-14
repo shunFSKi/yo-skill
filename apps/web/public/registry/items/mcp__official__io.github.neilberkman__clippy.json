@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.neilberkman/clippy",
+  "type": "mcp",
+  "name": "Clippy",
+  "description": "Copy AI-generated content to the macOS clipboard: rich Gmail-ready email drafts, text, and files",
+  "author": "io.github.neilberkman",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/neilberkman/clippy",
+    "repo": "neilberkman/clippy"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/neilberkman/clippy/releases/download/v1.8.0/clippy_1.8.0.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-05T17:24:05.144672Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

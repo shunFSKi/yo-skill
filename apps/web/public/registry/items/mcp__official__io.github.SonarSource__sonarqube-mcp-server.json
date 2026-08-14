@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.SonarSource/sonarqube-mcp-server",
+  "type": "mcp",
+  "name": "SonarQube MCP Server",
+  "description": "Analyze code quality and security with SonarQube Server or Cloud directly in AI assistants.",
+  "author": "io.github.SonarSource",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/SonarSource/sonarqube-mcp-server",
+    "repo": "SonarSource/sonarqube-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "docker.io/sonarsource/sonarqube-mcp"
+    ],
+    "env": [
+      {
+        "name": "SONARQUBE_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "SONARQUBE_ORG",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SONARQUBE_URL",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-25T16:10:09.437656Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

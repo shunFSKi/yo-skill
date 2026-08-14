@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/app.wishpool/hungary-payments-mcp",
+  "type": "mcp",
+  "name": "Hungary Payments (Stripe — cards / Apple Pay)",
+  "description": "Hungary payments for AI agents — cards / Apple Pay via Stripe. Never holds funds.",
+  "author": "app.wishpool",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/junter1989k-ai/hungary-payments-mcp",
+    "repo": "junter1989k-ai/hungary-payments-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp-hu.wishpool.app/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-09T02:42:17.124814Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

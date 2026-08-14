@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.piiiico/agentlair",
+  "type": "mcp",
+  "name": "agentlair",
+  "description": "Give AI agents a real email address, vault, calendar, and task delegation via MCP.",
+  "author": "io.github.piiiico",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/piiiico/agentlair",
+    "repo": "piiiico/agentlair"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@agentlair/mcp"
+    ],
+    "env": [
+      {
+        "name": "AGENTLAIR_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-24T21:07:06.650294Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

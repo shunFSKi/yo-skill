@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.KittyCAD/zoo-mcp",
+  "type": "mcp",
+  "name": "zoo-mcp",
+  "description": "An MCP server that provides access to the Zoo API for various CAD operations and tools.",
+  "author": "io.github.KittyCAD",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/KittyCAD/mcp",
+    "repo": "KittyCAD/mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "zoo_mcp"
+    ],
+    "env": [
+      {
+        "name": "ZOO_TOKEN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T19:43:58.00941Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

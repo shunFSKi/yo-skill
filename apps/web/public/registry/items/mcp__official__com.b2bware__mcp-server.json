@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.b2bware/mcp-server",
+  "type": "mcp",
+  "name": "mcp-server",
+  "description": "B2Bware MCP server — access products, orders and customers from Cursor, Claude, Windsurf and more.",
+  "author": "com.b2bware",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.b2bware.com/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.b2bware.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-22T20:45:45.21637Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

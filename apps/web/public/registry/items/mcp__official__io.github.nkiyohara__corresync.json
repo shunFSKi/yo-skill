@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.nkiyohara/corresync",
+  "type": "mcp",
+  "name": "Corresync",
+  "description": "Local-first MCP for provider-neutral mail and calendars with isolated accounts and guarded writes.",
+  "author": "io.github.nkiyohara",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/nkiyohara/corresync",
+    "repo": "nkiyohara/corresync"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/nkiyohara/corresync/releases/download/v0.8.3/corresync_0.8.3.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-30T13:32:31.364594Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

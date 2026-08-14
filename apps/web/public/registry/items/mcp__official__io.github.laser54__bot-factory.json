@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.laser54/bot-factory",
+  "type": "mcp",
+  "name": "Telegram Managed Bot Factory",
+  "description": "Provision owner-confirmed isolated Telegram Managed Bot instances.",
+  "author": "io.github.laser54",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/laser54/telegram-managed-bot-factory",
+    "repo": "laser54/telegram-managed-bot-factory"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "telegram-managed-bot-factory"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-09T08:02:13.877398Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.Alfanous-team/alfanous",
+  "type": "mcp",
+  "name": "Alfanous - Quranic Search Engine",
+  "description": "Search and explore the Holy Qur'an with Arabic text, transliteration, and advanced search support.",
+  "author": "io.github.Alfanous-team",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Alfanous-team/alfanous",
+    "repo": "Alfanous-team/alfanous"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "alfanous3-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-14T01:02:38.132007Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

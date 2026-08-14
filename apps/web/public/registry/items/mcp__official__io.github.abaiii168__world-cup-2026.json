@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.abaiii168/world-cup-2026",
+  "type": "mcp",
+  "name": "World Cup 2026 Tour",
+  "description": "Free MCP server for World Cup 2026 fixtures, local kickoff times, and Dataset JSON-LD.",
+  "author": "io.github.abaiii168",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/abaiii168/world-cup-2026-mcp-server",
+    "repo": "abaiii168/world-cup-2026-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/abaiii168/world-cup-2026-mcp-server:0.1.1"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-15T10:25:04.06936Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

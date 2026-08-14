@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.backspacevenkat/perspectives",
+  "type": "mcp",
+  "name": "perspectives",
+  "description": "Query GPT 5.2, Claude Opus 4.5, Gemini 3, Grok 4.1 simultaneously for AI perspectives",
+  "author": "io.github.backspacevenkat",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/polydev-ai/perspectives-mcp",
+    "repo": "polydev-ai/perspectives-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "polydev-ai"
+    ],
+    "env": [
+      {
+        "name": "POLYDEV_USER_TOKEN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-01-29T22:12:27.652882Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

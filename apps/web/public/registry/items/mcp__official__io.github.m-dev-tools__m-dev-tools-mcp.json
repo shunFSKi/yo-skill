@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.m-dev-tools/m-dev-tools-mcp",
+  "type": "mcp",
+  "name": "m-dev-tools",
+  "description": "MCP server wrapping the m-dev-tools catalog: route_intent, describe, verify.",
+  "author": "io.github.m-dev-tools",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/m-dev-tools/m-dev-tools-mcp",
+    "repo": "m-dev-tools/m-dev-tools-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "m-dev-tools-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-11T19:38:29.372857Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.whitepepper355/liveability-mcp",
+  "type": "mcp",
+  "name": "Liveability MCP",
+  "description": "Liveability scoring for Japanese addresses: shopping, medical, transit, education, nature, safety.",
+  "author": "io.github.whitepepper355",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/whitepepper355/liveability-mcp",
+    "repo": "whitepepper355/liveability-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://liveability.jp/mcp/sse",
+    "env": [
+      {
+        "name": "X-API-Key",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-10T01:12:50.951961Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

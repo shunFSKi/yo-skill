@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.meyusufdemirci/app-store-operator",
+  "type": "mcp",
+  "name": "App Store Operator",
+  "description": "Free App Store competitive intelligence for Claude — rival downloads, revenue, and ASO keywords.",
+  "author": "io.github.meyusufdemirci",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/meyusufdemirci/app-store-operator",
+    "repo": "meyusufdemirci/app-store-operator"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "app-store-operator"
+    ],
+    "env": [
+      {
+        "name": "ASO_CACHE_TTL_HOURS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-25T18:19:00.677604Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

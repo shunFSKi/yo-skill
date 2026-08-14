@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.seob5285-alt/x402-facilitator-proxy",
+  "type": "mcp",
+  "name": "x402 Facilitator Proxy",
+  "description": "Multi-tenant HTTP 402 infrastructure gateway and stdio MCP server for machine payments.",
+  "author": "io.github.seob5285-alt",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/seob5285-alt/x402-facilitator-proxy",
+    "repo": "seob5285-alt/x402-facilitator-proxy"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "x402-facilitator-proxy"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-14T10:36:41.480126Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

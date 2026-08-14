@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/app.wishpool/denmark-invoice-mcp",
+  "type": "mcp",
+  "name": "Denmark Invoices (Peppol / NemHandel via Storecove)",
+  "description": "Denmark Peppol/NemHandel e-invoices for AI agents: send, check recipient, get delivery proof.",
+  "author": "app.wishpool",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/junter1989k-ai/denmark-invoice-mcp",
+    "repo": "junter1989k-ai/denmark-invoice-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://inv-dk.wishpool.app/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-10T08:57:59.514636Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

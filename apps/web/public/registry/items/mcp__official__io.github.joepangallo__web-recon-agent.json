@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.joepangallo/web-recon-agent",
+  "type": "mcp",
+  "name": "web-recon-agent",
+  "description": "Owned-target web security assessment MCP server for authenticated, high-friction apps.",
+  "author": "io.github.joepangallo",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/joepangallo/web-recon-agent",
+    "repo": "joepangallo/web-recon-agent"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-web-recon-agent"
+    ],
+    "env": [
+      {
+        "name": "MCP_TARGET_ALLOWLIST",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "MCP_OWNED_TARGETS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_JOB_STORE_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_MAX_CONCURRENT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_CONFIG_PATH",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-25T14:39:47.797999Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.hunterpercival/apex",
+  "type": "mcp",
+  "name": "apex",
+  "description": "APEX — AI operating system for founders. Join waitlist or request a demo.",
+  "author": "io.github.hunterpercival",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/hunterpercival/apex-mcp-server",
+    "repo": "hunterpercival/apex-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "apex-mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-16T17:12:43.353668Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

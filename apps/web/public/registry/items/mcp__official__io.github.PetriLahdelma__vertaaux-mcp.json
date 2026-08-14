@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.PetriLahdelma/vertaaux-mcp",
+  "type": "mcp",
+  "name": "vertaaux-mcp",
+  "description": "Autonomous UX and a11y audit, fix, and verify loop. 38 tools, framework-aware patches.",
+  "author": "io.github.PetriLahdelma",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/VertaaUX/mcp-server",
+    "repo": "VertaaUX/mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@vertaaux/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "VERTAAUX_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-12T17:56:58.708963Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

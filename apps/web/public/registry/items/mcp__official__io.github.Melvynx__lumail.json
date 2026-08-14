@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.Melvynx/lumail",
+  "type": "mcp",
+  "name": "Lumail",
+  "description": "Official Lumail email marketing MCP for campaigns, subscribers, and workflows.",
+  "author": "io.github.Melvynx",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Melvynx/lumail-opensource",
+    "repo": "Melvynx/lumail-opensource"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://lumail.io/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T05:34:09.278743Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": "# Lumail Agent Plugin\n\nConnect [Lumail](https://lumail.io) to Claude Code and Codex. Read your\nsubscribers, campaigns, workflows and analytics, draft campaigns, and build\nworkflow sequences from the session where you already work.\n\nAuthentication is browser OAuth. **There is no API token to create, paste, or\nstore.**\n\n## Install\n\nThe fastest path is to let your agent do it. Paste this into Claude Code:\n\n```text\nRead lumail.io/claude-code and install the Lumail plugin for me.\n```\n\nor into Codex:\n\n```text\nRead lumail.io/codex and set up the Lumail connection for me.\n```\n\nor, for the terminal workflow (full API, including sending), into any agent:\n\n```text\nRead lumail.io/cli and set up the Lumail CLI for me.\n```\n\nPrefer to run it yourself:\n\n```bash\nclaude plugin marketplace add https://github.com/Melvynx/lumail-opensource.git\nclaude plugin install lumail@lumail\nclaude mcp login plugin:lumail:lumail\n```\n\nFull guides: [docs/claude-code-install.md](./docs/claude-code-install.md) ·\n[docs/codex-install.md](./docs/codex-install.md)\n\n## What is in here\n\n| Path                              | What it is                                            |\n| --------------------------------- | ----------------------------------------------------- |\n| `.claude-plugin/marketplace.json` | Claude Code marketplace descriptor                    |\n| `claude/.claude-plugin/plugin.json` | Claude Code plugin, declares the MCP server inline   |\n| `codex/.codex-plugin/plugin.json` | Codex plugin metadata                                 |\n| `codex/.mcp.json`                 | Codex MCP server configuration                        |\n| `.agents/plugins/marketplace.json` | Codex marketplace descriptor                         |\n| `skills/lumail/`                  | The `lumail` CLI skill (`npx lumail`) — canonical copy |\n| `skills/lumail-plugin/`           | How to drive the MCP connection, its limits and errors |\n\n`claude/skills` and `codex/skills` are real copies of `skills/` (symlinks break\non Windows checkouts), so both hosts ship the same two skills. Edit the\ntop-level `skills/` first, then sync the copies.\n\n## How the connection works\n\nThe plugin points both hosts at `https://lumail.io/mcp`, an OAuth 2.1 protected\nresource. The host registers itself through dynamic client registration, runs\nPKCE, and stores the access token itself. During the browser flow you sign in,\npick **which organization** the agent may reach, and approve the scopes. Only\nowners and admins of an organization can authorize it.\n\nAccess tokens carry the organization as a claim, so a session can never reach\nanother organization in your account. Revoke from the connected-apps list in\nLumail settings and access stops on the next request, with no local config to\nclean up.\n\n## What agents can do\n\n**Read** — subscribers, tags, campaigns, campaign analytics and progress,\nworkflows and workflow groups, org stats, subscriber growth, senders, custom\nfields, snippets, writing style.\n\n**Write** — add subscribers, create and apply tags, create and edit campaign\ndrafts, duplicate campaigns, create and configure workflow drafts.\n\n**Not available over OAuth** — sending, scheduling, publishing or activating a\nworkflow, unsubscribing, and every delete. Those tools are not registered on\nthis endpoint, so an agent cannot reach them even with your approval. Do that\nwork in the Lumail app, or with `npx lumail` if you want it in a terminal.\n\n## The CLI\n\n`npx lumail` reaches the full API, including sending. It authenticates with the\nsame browser flow:\n\n```bash\nnpx lumail auth login\n```\n\nThe `lumail` skill in this repository teaches agents the whole CLI.\n\n## Example prompts\n\n- `How did last week's newsletter perform compared to the one before?`\n- `Draft a launch campaign with three subject line options.`\n- `Add user@example.com to my newsletter and tag them vip.`\n- `Build a three-email welcome sequence over a week and leave it as a draft.`\n- `Show me subscriber growth over the last 30 days.`\n\n## Support\n\n[lumail.io](https://lumail.io) · [Documentation](https://lumail.io/docs/ai-integration)\n\nMIT licensed.\n",
+  "status": "curated"
+}

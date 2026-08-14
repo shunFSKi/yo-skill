@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.selflabbs/weather-intel-mcp",
+  "type": "mcp",
+  "name": "Weather & Geo Intel MCP",
+  "description": "US weather & geo for AI agents: forecasts, alerts, earthquakes, elevation, geocoding. No keys.",
+  "author": "io.github.selflabbs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/selflabbs/weather-intel-mcp",
+    "repo": "selflabbs/weather-intel-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://weather.selflabbs.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-19T07:25:08.634635Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

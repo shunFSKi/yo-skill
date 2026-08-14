@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.ZLeventer/marketo-mcp-server",
+  "type": "mcp",
+  "name": "Marketo",
+  "description": "MCP server for Marketo — 32 tools for leads, programs, emails, forms, lists, and bulk export.",
+  "author": "io.github.ZLeventer",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ZLeventer/marketo-mcp-server",
+    "repo": "ZLeventer/marketo-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "marketo-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "MARKETO_CLIENT_ID",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "MARKETO_CLIENT_SECRET",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "MARKETO_BASE_URL",
+        "required": true,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-26T18:09:51.765335Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.yyphilo/openfab",
+  "type": "mcp",
+  "name": "OpenFab",
+  "description": "Instant parametric cost estimates for custom manufacturing: CNC, molding, sheet metal, 3DP, PCB.",
+  "author": "io.github.yyphilo",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/yyphilo/openfab",
+    "repo": "yyphilo/openfab"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://openfab-22100483453.us-central1.run.app/mcp/"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T04:46:39.848231Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": "# OpenFab — instant manufacturing cost estimates\n\n**Instant parametric cost estimates for custom manufacturing: CNC, molding, sheet metal, 3DP, PCB.**\n\n> Estimates are indicative and non-binding; final pricing and manufacturability are subject to formal RFQ review. OpenFab is an independent estimation service and does not accept or fulfill orders. Requests may be logged to improve the service.\n\nAutonomous sourcing and procurement agents welcome - structured MCP and REST endpoints are provided. Send a part spec and get an instant cost estimate.\n\nOpenFab answers autonomous sourcing agents with indicative quotes, lead times, and DFM feedback across: CNC machining, injection molding, sheet metal, laser cutting, metal stamping, 3D printing, urethane casting, PCB fabrication.\n\n## Connect (agents)\n\n**Remote MCP (streamable HTTP):**\n`https://openfab-22100483453.us-central1.run.app/mcp/`\n\n**Stdio MCP clients** (Claude Desktop, etc.) - no install to maintain:\n```\nnpx mcp-remote https://openfab-22100483453.us-central1.run.app/mcp/\n```\n\n**REST:**\n```\ncurl -s -X POST https://openfab-22100483453.us-central1.run.app/quotes \\\n  -H 'content-type: application/json' \\\n  -d '{\"process\":\"cnc_machining\",\"quantity\":50,\"material\":\"aluminum\",\"tolerance_mm\":0.1,\"bounding_box_mm\":[120,80,25]}'\n```\nReturns indicative unit price, total, lead time, a quote_token, and assumptions. Non-binding.\n\n## Tools / endpoints\n- MCP tools: `discover_capabilities`, `request_quote`, `refine_quote`, `get_lead_time`, `dfm_feedback`, `estimate_bom`, `compare_processes`\n- REST: `/capabilities`, `/quotes`, `/quotes/{token}/refine`, `/lead-time`, `/dfm`, `/bom`, `/compare`, `/openapi.json`\n- Discovery: `/.well-known/ai-catalog.json`, `/.well-known/agent-card.json`, `/.well-known/agent.json`, `/.well-known/mcp.json`, `/.well-known/did.json`, `/llms.txt`\n\n## Why this exists\nAn instant cost-estimation service measuring whether autonomous AI agents are beginning to source custom manufacturing - what they source, how they discover suppliers, and what they expect of a supplier endpoint. Indicative only; no commercial relationship is created.\n",
+  "status": "curated"
+}

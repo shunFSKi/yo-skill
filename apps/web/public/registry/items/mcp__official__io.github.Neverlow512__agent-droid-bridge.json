@@ -1,0 +1,138 @@
+{
+  "id": "mcp:official/io.github.Neverlow512/agent-droid-bridge",
+  "type": "mcp",
+  "name": "Agent Droid Bridge",
+  "description": "MCP server giving AI agents eyes and hands inside Android devices via ADB",
+  "author": "io.github.Neverlow512",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Neverlow512/agent-droid-bridge",
+    "repo": "Neverlow512/agent-droid-bridge"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "agent-droid-bridge"
+    ],
+    "env": [
+      {
+        "name": "ADB_EXECUTION_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ADB_ALLOW_SHELL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ADB_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ADB_EXTRA_TOOL_PACKS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ADB_DENIED_TOOLS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ADB_SHELL_ALLOWLIST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ADB_SHELL_DENYLIST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_LOG_ENABLED",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_LOG_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ADB_LOG_LEVEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ADB_COMMAND_TIMEOUT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ADB_SCREENSHOT_TIMEOUT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ADB_UI_CHANGE_TIMEOUT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ADB_UI_CHANGE_POLL_INTERVAL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ADB_AAPT_TIMEOUT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ADB_CONFIG_SOURCE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-15T20:05:19.844775Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

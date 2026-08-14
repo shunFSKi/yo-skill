@@ -1,0 +1,94 @@
+{
+  "id": "mcp:official/io.github.wyre-technology/meraki-mcp",
+  "type": "mcp",
+  "name": "Cisco Meraki",
+  "description": "MCP server for the Cisco Meraki Dashboard: networks, devices, wireless, switch, appliance.",
+  "author": "io.github.wyre-technology",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/wyre-technology/meraki-mcp",
+    "repo": "wyre-technology/meraki-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/wyre-technology/meraki-mcp:v1.1.2"
+    ],
+    "env": [
+      {
+        "name": "MERAKI_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "MERAKI_ORG_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MERAKI_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "READ_ONLY_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_TRANSPORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AUTH_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-07T01:55:07.41893Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

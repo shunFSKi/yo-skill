@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.IsaiahDupree/realtystack-mcp",
+  "type": "mcp",
+  "name": "realtystack-mcp",
+  "description": "U.S. real-estate data: property records, AVM value + rent estimates, sale/rental listings.",
+  "author": "io.github.IsaiahDupree",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/IsaiahDupree/realtystack-mcp",
+    "repo": "IsaiahDupree/realtystack-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://realtystack-mcp.vercel.app/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-01T02:34:07.169821Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

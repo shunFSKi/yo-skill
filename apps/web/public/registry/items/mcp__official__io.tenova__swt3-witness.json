@@ -1,0 +1,89 @@
+{
+  "id": "mcp:official/io.tenova/swt3-witness",
+  "type": "mcp",
+  "name": "SWT3 AI Witness",
+  "description": "Cryptographic AI governance + audit. 33 tools, 36 frameworks. EU AI Act, NIST, OWASP, CMMC, SR 11-7",
+  "author": "io.tenova",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/tenova-labs/swt3-ai",
+    "repo": "tenova-labs/swt3-ai"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@tenova/swt3-mcp"
+    ],
+    "env": [
+      {
+        "name": "SWT3_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SWT3_TENANT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SWT3_CONFIG_FILE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SWT3_CLEARING_LEVEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SWT3_AGENT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SWT3_SIGNING_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-11T11:44:55.823381Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

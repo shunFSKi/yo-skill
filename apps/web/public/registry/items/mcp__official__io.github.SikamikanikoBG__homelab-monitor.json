@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.SikamikanikoBG/homelab-monitor",
+  "type": "mcp",
+  "name": "HomeLab Monitor",
+  "description": "Self-hosted homelab dashboard with a built-in read-only MCP server (hosts, Docker, GPU, services).",
+  "author": "io.github.SikamikanikoBG",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/SikamikanikoBG/homelab-monitor",
+    "repo": "SikamikanikoBG/homelab-monitor"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "docker.io/sikamikaniko123/homelab-monitor:0.14.2"
+    ],
+    "env": [
+      {
+        "name": "HOMELAB_MONITOR_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "MCP_TRANSPORT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-09T07:33:33.753776Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

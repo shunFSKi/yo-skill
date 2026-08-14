@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/com.sportwizzard/sportwizzard",
+  "type": "mcp",
+  "name": "sportwizzard",
+  "description": "Real-time sports betting data: odds, player props, edges and arbitrage from 35+ books and DFS apps.",
+  "author": "com.sportwizzard",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/adamruehle/sportwizzard-mcp",
+    "repo": "adamruehle/sportwizzard-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "sportwizzard-mcp"
+    ],
+    "env": [
+      {
+        "name": "SPORTWIZZARD_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-23T18:23:57.627852Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

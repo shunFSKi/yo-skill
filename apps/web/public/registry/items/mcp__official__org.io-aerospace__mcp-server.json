@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/org.io-aerospace/mcp-server",
+  "type": "mcp",
+  "name": "IO Aerospace MCP Server",
+  "description": "MCP server for aerospace calculations: orbital mechanics, ephemeris, DSN operations, ...",
+  "author": "org.io-aerospace",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/IO-Aerospace-software-engineering/mcp-server",
+    "repo": "IO-Aerospace-software-engineering/mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.io-aerospace.org"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-10-19T12:42:23.141647Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

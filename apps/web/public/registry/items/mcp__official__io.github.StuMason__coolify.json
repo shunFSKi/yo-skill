@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.StuMason/coolify",
+  "type": "mcp",
+  "name": "coolify",
+  "description": "44 optimized tools for managing Coolify infrastructure, diagnostics, and docs search",
+  "author": "io.github.StuMason",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/StuMason/coolify-mcp",
+    "repo": "StuMason/coolify-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@masonator/coolify-mcp"
+    ],
+    "env": [
+      {
+        "name": "COOLIFY_ACCESS_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "COOLIFY_BASE_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-06T11:25:18.448905Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

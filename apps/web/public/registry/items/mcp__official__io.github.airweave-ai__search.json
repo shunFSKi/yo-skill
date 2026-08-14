@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.airweave-ai/search",
+  "type": "mcp",
+  "name": "Airweave Search",
+  "description": "MCP server for searching Airweave collections with natural language queries.",
+  "author": "io.github.airweave-ai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/airweave-ai/airweave",
+    "repo": "airweave-ai/airweave"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "airweave-mcp-search"
+    ],
+    "env": [
+      {
+        "name": "AIRWEAVE_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "AIRWEAVE_COLLECTION",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "AIRWEAVE_BASE_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-07T17:48:14.839407Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

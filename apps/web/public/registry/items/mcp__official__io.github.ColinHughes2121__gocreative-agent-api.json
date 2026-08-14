@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.ColinHughes2121/gocreative-agent-api",
+  "type": "mcp",
+  "name": "GoCreative Agent API",
+  "description": "17-model LLM gateway + 350+ data/KYB/sanctions tools. Pay-per-call USDC via x402, no API key.",
+  "author": "io.github.ColinHughes2121",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://api.gocreativeai.com/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.gocreativeai.com/mcp",
+    "env": [
+      {
+        "name": "X-Wallet-Key",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-20T01:17:42.643833Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

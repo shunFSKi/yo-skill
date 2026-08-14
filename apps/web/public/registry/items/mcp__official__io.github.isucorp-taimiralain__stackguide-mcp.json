@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.isucorp-taimiralain/stackguide-mcp",
+  "type": "mcp",
+  "name": "stackguide-mcp",
+  "description": "Dynamic context loading for AI assistants with TDD workflow and AST analysis",
+  "author": "io.github.isucorp-taimiralain",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/isucorp-taimiralain/StackGuide-MCP",
+    "repo": "isucorp-taimiralain/StackGuide-MCP"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@stackguide/mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-24T21:03:21.562428Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.stucchi/nexi-xpay",
+  "type": "mcp",
+  "name": "Nexi XPay",
+  "description": "MCP server for Nexi XPay Back Office APIs: orders, transactions, warnings.",
+  "author": "io.github.stucchi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/stucchi/nexi-xpay-mcp-server",
+    "repo": "stucchi/nexi-xpay-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "nexi-xpay-mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-22T22:40:45.558443Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

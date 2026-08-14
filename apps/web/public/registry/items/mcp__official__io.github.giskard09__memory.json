@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.giskard09/memory",
+  "type": "mcp",
+  "name": "Giskard Memory",
+  "description": "Pay-per-use semantic memory for AI agents. SHA256 commitment, Ed25519 sig, Lightning.",
+  "author": "io.github.giskard09",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/giskard09/giskard-memory",
+    "repo": "giskard09/giskard-memory"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://memory.rgiskard.xyz/sse"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-14T17:21:03.883381Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

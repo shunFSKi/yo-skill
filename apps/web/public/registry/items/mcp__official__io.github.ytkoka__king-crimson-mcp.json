@@ -1,0 +1,73 @@
+{
+  "id": "mcp:official/io.github.ytkoka/king-crimson-mcp",
+  "type": "mcp",
+  "name": "king-crimson-mcp",
+  "description": "King Crimson discography and live-performance history with a curated line-up-era model.",
+  "author": "io.github.ytkoka",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ytkoka/king-crimson-mcp",
+    "repo": "ytkoka/king-crimson-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "king-crimson-mcp"
+    ],
+    "env": [
+      {
+        "name": "MCP_CONTACT",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "SETLISTFM_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "DISCOGS_TOKEN",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-11T00:39:08.982966Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

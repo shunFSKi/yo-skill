@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.PatrickPi1312/eu-compliance",
+  "type": "mcp",
+  "name": "EU Compliance Tools (pay-per-call, x402)",
+  "description": "Agent bookkeeping, sanctions, KYB, VAT and e-invoice checks - pay per call in USDC",
+  "author": "io.github.PatrickPi1312",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/PatrickPi1312/eucompliance-tools",
+    "repo": "PatrickPi1312/eucompliance-tools"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.eucompliance.tools/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-31T08:50:12.545015Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "mcp:official/io.github.Sathvik-1007/graphmem-mcp",
+  "type": "mcp",
+  "name": "Graph-Mem",
+  "description": "Persistent knowledge-graph memory for AI agents, with local semantic search. No API keys.",
+  "author": "io.github.Sathvik-1007",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Sathvik-1007/GraphMem-MCP",
+    "repo": "Sathvik-1007/GraphMem-MCP"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "graphmem-mcp"
+    ],
+    "env": [
+      {
+        "name": "GRAPHMEM_DB_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GRAPHMEM_EMBEDDING_MODEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GRAPHMEM_TRAVERSAL_NODE_BUDGET",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GRAPHMEM_LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-21T20:48:15.045045Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

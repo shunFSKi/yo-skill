@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.ag3ntlab-ai/negbit",
+  "type": "mcp",
+  "name": "negbit",
+  "description": "Buy negbit's curated, provenance-verified knowledge bundles with your own x402 wallet. Read-only.",
+  "author": "io.github.ag3ntlab-ai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ag3ntlab-ai/negbit",
+    "repo": "ag3ntlab-ai/negbit"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "negbit-mcp"
+    ],
+    "env": [
+      {
+        "name": "NEGBIT_BASE_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-10T16:12:28.038579Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

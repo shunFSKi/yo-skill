@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.matjmat/eulerian-marketing-platform-mcp",
+  "type": "mcp",
+  "name": "eulerian-marketing-platform-mcp",
+  "description": "Provides access to the Eulerian Marketing Platform: analytics, attribution & data activation.",
+  "author": "io.github.matjmat",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/EulerianTechnologies/eulerian-marketing-platform-mcp",
+    "repo": "EulerianTechnologies/eulerian-marketing-platform-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "eulerian-marketing-platform"
+    ],
+    "env": [
+      {
+        "name": "EMP_API_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "EMP_API_ENDPOINT",
+        "required": true,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-03T13:35:05.936847Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

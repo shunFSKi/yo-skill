@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.HeyZod/fylings",
+  "type": "mcp",
+  "name": "fylings",
+  "description": "Search, verify & screen 1M+ African companies + their government contracts across 18 registries.",
+  "author": "io.github.HeyZod",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/HeyZod/fylings",
+    "repo": "HeyZod/fylings"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://www.fylings.com/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-28T23:27:38.977607Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

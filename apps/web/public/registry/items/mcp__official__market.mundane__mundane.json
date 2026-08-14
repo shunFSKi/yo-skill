@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/market.mundane/mundane",
+  "type": "mcp",
+  "name": "Mundane",
+  "description": "Hire verified, escrow-paid humans for real-world tasks: errands, photos, queues, bookings.",
+  "author": "market.mundane",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/sttruji/mundane-mcp",
+    "repo": "sttruji/mundane-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mundane-mcp"
+    ],
+    "env": [
+      {
+        "name": "MUNDANE_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "MUNDANE_API_BASE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-31T20:56:42.293187Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

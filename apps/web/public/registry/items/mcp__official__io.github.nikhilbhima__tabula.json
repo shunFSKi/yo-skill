@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.nikhilbhima/tabula",
+  "type": "mcp",
+  "name": "Tabula",
+  "description": "Cross-AI personal memory. Save once in ChatGPT, recall in Claude, Mistral, Grok, or any MCP client.",
+  "author": "io.github.nikhilbhima",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/nikhilbhima/tabula-mcp",
+    "repo": "nikhilbhima/tabula-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://www.tabula360.com/api/mcp/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-16T19:11:38.584684Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

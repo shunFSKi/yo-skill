@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.Odyssey365/mcp-server",
+  "type": "mcp",
+  "name": "mcp-server",
+  "description": "Odyssey 앱의 할일·메모·프로젝트·타임라인을 MCP 클라이언트에서 관리",
+  "author": "io.github.Odyssey365",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Odyssey365App/odyssey30_60",
+    "repo": "Odyssey365App/odyssey30_60"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@odyssey365/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "ODYSSEY_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-15T11:01:14.508307Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

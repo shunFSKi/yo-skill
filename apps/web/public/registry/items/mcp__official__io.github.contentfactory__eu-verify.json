@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.contentfactory/eu-verify",
+  "type": "mcp",
+  "name": "eu-verify",
+  "description": "European business verification for AI agents: registry, VAT, sanctions, IBAN. Pay-per-call x402.",
+  "author": "io.github.contentfactory",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/contentfactory/eu-verify",
+    "repo": "contentfactory/eu-verify"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://data.greeneris.io/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-25T05:33:04.217655Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.shanjai-raj/commune-mcp",
+  "type": "mcp",
+  "name": "Commune",
+  "description": "Email and SMS MCP server for AI agents — 41 tools for inboxes, sending, search, and SMS.",
+  "author": "io.github.shanjai-raj",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/shanjai-raj/commune-mcp",
+    "repo": "shanjai-raj/commune-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "commune-mcp"
+    ],
+    "env": [
+      {
+        "name": "COMMUNE_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-03T08:17:21.971076Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

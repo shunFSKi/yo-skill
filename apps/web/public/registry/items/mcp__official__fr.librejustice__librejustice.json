@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/fr.librejustice/librejustice",
+  "type": "mcp",
+  "name": "LibreJustice",
+  "description": "Search French and European case law and French legal texts (codes, statutes, treaties).",
+  "author": "fr.librejustice",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/librejustice/librejustice",
+    "repo": "librejustice/librejustice"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://librejustice.fr/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-24T00:54:35.706872Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

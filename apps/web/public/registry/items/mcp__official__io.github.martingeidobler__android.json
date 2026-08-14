@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.martingeidobler/android",
+  "type": "mcp",
+  "name": "android",
+  "description": "Control Android devices and emulators via ADB — screenshots, UI automation, and logcat.",
+  "author": "io.github.martingeidobler",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/martingeidobler/android-mcp-server",
+    "repo": "martingeidobler/android-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "android-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "ANDROID_HOME",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-17T22:30:42.74204Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

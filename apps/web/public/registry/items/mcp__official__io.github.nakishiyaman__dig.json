@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.nakishiyaman/dig",
+  "type": "mcp",
+  "name": "dig",
+  "description": "MCP server for code archaeology: git blame, file history, contributors, and co-change analysis",
+  "author": "io.github.nakishiyaman",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/nakishiyaman/mcp-server-dig",
+    "repo": "nakishiyaman/mcp-server-dig"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-server-dig"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-10T12:48:16.459108Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

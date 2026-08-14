@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.romainsantoli-web/mcp-openclaw",
+  "type": "mcp",
+  "name": "MCP OpenClaw Extensions",
+  "description": "138-tool MCP server for AI agent firms: security, A2A, Hebbian memory, fleet mgmt",
+  "author": "io.github.romainsantoli-web",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/romainsantoli-web/mcp-openclaw",
+    "repo": "romainsantoli-web/mcp-openclaw"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-openclaw-extensions"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-03T11:23:18.418046Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

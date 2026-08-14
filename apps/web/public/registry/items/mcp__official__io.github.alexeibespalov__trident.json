@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.alexeibespalov/trident",
+  "type": "mcp",
+  "name": "trident",
+  "description": "Create and edit collaborative architecture diagrams with any AI assistant using the Trident 2D DSL.",
+  "author": "io.github.alexeibespalov",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/alexeibespalov/tridentpublic",
+    "repo": "alexeibespalov/tridentpublic"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "trident-mcp"
+    ],
+    "env": [
+      {
+        "name": "TRIDENT_API_KEY",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-30T21:23:14.355867Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

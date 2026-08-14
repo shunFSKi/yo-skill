@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.arielbk/anki-mcp",
+  "type": "mcp",
+  "name": "anki-mcp",
+  "description": "MCP server for integrating with Anki flashcards through conversational AI",
+  "author": "io.github.arielbk",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/arielbk/anki-mcp",
+    "repo": "arielbk/anki-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@arielbk/anki-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-09-11T12:16:49.682389Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

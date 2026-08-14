@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.gauthierpiarrette/datadiffer",
+  "type": "mcp",
+  "name": "datadiffer",
+  "description": "Read-only table diffs with segment attribution: which slice of your data changed.",
+  "author": "io.github.gauthierpiarrette",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/gauthierpiarrette/datadiffer",
+    "repo": "gauthierpiarrette/datadiffer"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "datadiffer"
+    ],
+    "env": [
+      {
+        "name": "DATADIFFER_CONFIG",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-27T17:26:47.002573Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

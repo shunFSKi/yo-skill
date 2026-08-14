@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.harshithsunku/mcp-gtags-server",
+  "type": "mcp",
+  "name": "mcp-gtags-server",
+  "description": "Indexed C/C++ code navigation for AI agents — GNU Global (gtags) lookups over MCP, not grep scans.",
+  "author": "io.github.harshithsunku",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/harshithsunku/mcp-gtags-server",
+    "repo": "harshithsunku/mcp-gtags-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-gtags-server"
+    ],
+    "env": [
+      {
+        "name": "GTAGS_MCP_ROOT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GTAGS_MCP_AUTO_SETUP",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-11T10:07:05.612462Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

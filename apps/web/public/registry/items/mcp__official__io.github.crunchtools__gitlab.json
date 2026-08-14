@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.crunchtools/gitlab",
+  "type": "mcp",
+  "name": "MCP Gitlab",
+  "description": "Secure MCP server for GitLab projects, merge requests, issues, and pipelines",
+  "author": "io.github.crunchtools",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/crunchtools/mcp-gitlab",
+    "repo": "crunchtools/mcp-gitlab"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-gitlab-crunchtools"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-02T04:02:49.700358Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.mumega848/mcpwp",
+  "type": "mcp",
+  "name": "mcpwp",
+  "description": "MCP for WordPress — connect Claude, Cursor, or Windsurf to any WordPress site.",
+  "author": "io.github.mumega848",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Mumega-com/mcpwp",
+    "repo": "Mumega-com/mcpwp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@mcpwp.net/mcpwp"
+    ],
+    "env": [
+      {
+        "name": "WP_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "WP_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-30T12:22:25.43459Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

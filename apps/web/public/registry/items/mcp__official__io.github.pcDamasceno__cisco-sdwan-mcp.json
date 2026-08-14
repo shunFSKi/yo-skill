@@ -1,0 +1,93 @@
+{
+  "id": "mcp:official/io.github.pcDamasceno/cisco-sdwan-mcp",
+  "type": "mcp",
+  "name": "Cisco SD-WAN MCP Server",
+  "description": "MCP server for Cisco Catalyst SD-WAN (vManage): fabric inventory, device health, alarms, policies.",
+  "author": "io.github.pcDamasceno",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/pcDamasceno/cisco-sdwan-mcp",
+    "repo": "pcDamasceno/cisco-sdwan-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "cisco-sdwan-mcp"
+    ],
+    "env": [
+      {
+        "name": "SDWAN_VMANAGE_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "SDWAN_USERNAME",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "SDWAN_PASSWORD",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "MCP_TRANSPORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SDWAN_VERIFY_SSL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SDWAN_CA_BUNDLE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SDWAN_ENABLE_WRITES",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-04T18:22:30.556004Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/br.com.music360.app/mcp-server",
+  "type": "mcp",
+  "name": "Music360 MCP",
+  "description": "API do Music360 para agentes de IA - artistas, obras, fonogramas, contratos, shows, tarefas e mais",
+  "author": "br.com.music360.app",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/music360app/music360app",
+    "repo": "music360app/music360app"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://app.music360.com.br/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-04T22:48:35.892873Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

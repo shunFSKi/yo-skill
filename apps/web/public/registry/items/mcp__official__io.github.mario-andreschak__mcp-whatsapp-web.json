@@ -1,0 +1,124 @@
+{
+  "id": "mcp:official/io.github.mario-andreschak/mcp-whatsapp-web",
+  "type": "mcp",
+  "name": "WhatsApp Web MCP Server",
+  "description": "MCP server for WhatsApp via whatsapp-web.js: send/receive messages, media, chats, groups, contacts",
+  "author": "io.github.mario-andreschak",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mario-andreschak/mcp-whatsapp-web",
+    "repo": "mario-andreschak/mcp-whatsapp-web"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-whatsapp-web"
+    ],
+    "env": [
+      {
+        "name": "LOG_LEVEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LOG_STDERR_LEVEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WHATSAPP_HEADLESS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BROWSER_EXECUTABLE_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WHATSAPP_SESSION_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WHATSAPP_PAIRING_PHONE_NUMBER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "FFMPEG_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WA_WEB_VERSION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "HEALTH_CHECK_INTERVAL_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TOOL_READY_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_HTTP_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_HTTP_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_OAUTH",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-05T22:53:43.407676Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

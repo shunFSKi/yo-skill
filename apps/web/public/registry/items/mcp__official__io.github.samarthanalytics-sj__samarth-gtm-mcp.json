@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.samarthanalytics-sj/samarth-gtm-mcp",
+  "type": "mcp",
+  "name": "samarth-gtm-mcp",
+  "description": "Google Tag Manager + read-only GA4 MCP server. Read-only by default, gated writes, audits.",
+  "author": "io.github.samarthanalytics-sj",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/samarthanalytics-sj/samarth-analytics-mcp",
+    "repo": "samarthanalytics-sj/samarth-analytics-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "samarth-gtm-mcp"
+    ],
+    "env": [
+      {
+        "name": "GOOGLE_OAUTH_CLIENT_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "GOOGLE_OAUTH_CLIENT_SECRET",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "GTM_MCP_ENABLE_WRITES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GTM_MCP_ENABLE_PUBLISH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GTM_MCP_ENABLE_DELETES",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-12T16:02:12.129314Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

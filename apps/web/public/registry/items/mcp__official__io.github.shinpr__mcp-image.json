@@ -1,0 +1,94 @@
+{
+  "id": "mcp:official/io.github.shinpr/mcp-image",
+  "type": "mcp",
+  "name": "mcp-image",
+  "description": "AI image generation and editing with prompt optimization and quality presets",
+  "author": "io.github.shinpr",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/shinpr/mcp-image",
+    "repo": "shinpr/mcp-image"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-image"
+    ],
+    "env": [
+      {
+        "name": "IMAGE_PROVIDER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GEMINI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "OPENAI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ARK_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "IMAGE_OUTPUT_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "IMAGE_QUALITY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SKIP_PROMPT_ENHANCEMENT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-03T22:11:32.271181Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

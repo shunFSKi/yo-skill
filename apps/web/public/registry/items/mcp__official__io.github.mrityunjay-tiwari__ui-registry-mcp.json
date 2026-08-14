@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.mrityunjay-tiwari/ui-registry-mcp",
+  "type": "mcp",
+  "name": "UI Registry",
+  "description": "Live access to 12 shadcn-style component libraries so agents compose UI from real components.",
+  "author": "io.github.mrityunjay-tiwari",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mrityunjay-tiwari/ui-registry-mcp",
+    "repo": "mrityunjay-tiwari/ui-registry-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ui-registry-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-13T09:27:34.243289Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

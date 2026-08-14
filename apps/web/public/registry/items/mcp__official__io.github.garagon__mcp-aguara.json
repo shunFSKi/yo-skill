@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.garagon/mcp-aguara",
+  "type": "mcp",
+  "name": "Aguara MCP",
+  "description": "Scan skills, MCP configs, and agent content for injection and supply-chain risks. Offline, no LLM.",
+  "author": "io.github.garagon",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/garagon/mcp-aguara",
+    "repo": "garagon/mcp-aguara"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/garagon/mcp-aguara:0.8.0"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-01T22:44:19.426135Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/ai.keenable/web-search",
+  "type": "mcp",
+  "name": "web-search",
+  "description": "Live web search and clean-markdown page fetch over the Keenable web index.",
+  "author": "ai.keenable",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/keenableai/keenable-mcp",
+    "repo": "keenableai/keenable-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@keenable/mcp"
+    ],
+    "env": [
+      {
+        "name": "KEENABLE_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-26T14:00:39.740011Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

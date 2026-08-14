@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.BargLabs/cejel",
+  "type": "mcp",
+  "name": "Cejel",
+  "description": "Offline deterministic engineering-trust certificates for repositories, with no telemetry.",
+  "author": "io.github.BargLabs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/BargLabs/cejel",
+    "repo": "BargLabs/cejel"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/barglabs/cejel@sha256:db0cbf9a7c24202d45001d2a2ad5482cb96cd1295ce9f0182ffa69f495c2a4cb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T03:30:55.193822Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,73 @@
+{
+  "id": "mcp:official/io.github.snoozelieb/coach-mcp",
+  "type": "mcp",
+  "name": "coach-mcp",
+  "description": "Adaptive AI training coach MCP server backed by Garmin Connect",
+  "author": "io.github.snoozelieb",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/snoozelieb/coach-mcp",
+    "repo": "snoozelieb/coach-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "garmin-coach-mcp"
+    ],
+    "env": [
+      {
+        "name": "GARMIN_EMAIL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "GARMIN_PASSWORD",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "COACH_DATA_DIR",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-10T14:20:37.684136Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

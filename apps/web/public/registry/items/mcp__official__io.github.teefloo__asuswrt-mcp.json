@@ -1,0 +1,83 @@
+{
+  "id": "mcp:official/io.github.teefloo/asuswrt-mcp",
+  "type": "mcp",
+  "name": "asuswrt-mcp",
+  "description": "Secure AsusWRT router administration via SSH — 42+ tools, guarded mutations",
+  "author": "io.github.teefloo",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/teefloo/asuswrt-mcp",
+    "repo": "teefloo/asuswrt-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "asuswrt-mcp"
+    ],
+    "env": [
+      {
+        "name": "ASUSWRT_HOST",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "ASUSWRT_SSH_USERNAME",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "ASUSWRT_SSH_PASSWORD",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "ASUSWRT_SSH_KEY_FILE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ASUSWRT_ALLOW_MUTATIONS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-27T21:01:07.242893Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

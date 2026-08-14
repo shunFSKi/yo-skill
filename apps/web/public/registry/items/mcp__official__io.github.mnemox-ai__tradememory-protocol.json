@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.mnemox-ai/tradememory-protocol",
+  "type": "mcp",
+  "name": "tradememory-protocol",
+  "description": "MCP memory for AI trading agents. Store trades, recall similar setups, track strategy performance.",
+  "author": "io.github.mnemox-ai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mnemox-ai/tradememory-protocol",
+    "repo": "mnemox-ai/tradememory-protocol"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "tradememory-protocol"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-29T13:38:28.306742Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

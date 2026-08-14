@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.pixelvault-dev/pixelvault",
+  "type": "mcp",
+  "name": "pixelvault",
+  "description": "Agent-first image hosting — upload images and get instant CDN URLs.",
+  "author": "io.github.pixelvault-dev",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.pixelvault.dev/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.pixelvault.dev/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-27T10:01:55.173559Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.AgentsKit-io/doc-bridge",
+  "type": "mcp",
+  "name": "Doc Bridge",
+  "description": "Resolve documentation ownership, edit roots, checks, and human handoffs before an agent edits code.",
+  "author": "io.github.AgentsKit-io",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/AgentsKit-io/doc-bridge",
+    "repo": "AgentsKit-io/doc-bridge"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@agentskit/doc-bridge"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-03T22:58:05.787629Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/ai.odei/connect",
+  "type": "mcp",
+  "name": "connect",
+  "description": "Governed personal world model and memory for your AI agent. Pair once, connect over MCP.",
+  "author": "ai.odei",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Zer0H1ro/ODEI",
+    "repo": "Zer0H1ro/ODEI"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.odei.ai/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-12T22:50:36.212634Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,113 @@
+{
+  "id": "mcp:official/io.github.eodozzy/icloud-mcp",
+  "type": "mcp",
+  "name": "icloud-mcp",
+  "description": "Read-only-by-default MCP server for iCloud mail, calendar, and contacts (IMAP/CalDAV/CardDAV).",
+  "author": "io.github.eodozzy",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/eodozzy/icloud-mcp",
+    "repo": "eodozzy/icloud-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "icloud-mcp"
+    ],
+    "env": [
+      {
+        "name": "ICLOUD_USERNAME",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "ICLOUD_KEYRING_SERVICE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ICLOUD_APP_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ICLOUD_ENABLE_WRITES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ICLOUD_IMAP_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ICLOUD_IMAP_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ICLOUD_SMTP_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ICLOUD_SMTP_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ICLOUD_CALDAV_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ICLOUD_CARDDAV_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ICLOUD_TZ",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-30T03:34:54.265578Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

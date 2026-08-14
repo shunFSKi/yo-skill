@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.pro-target/ai-r",
+  "type": "mcp",
+  "name": "ai-r",
+  "description": "Read local AI agent sessions (Claude Code, Codex, OpenCode, Antigravity, Pi): intents, plans, tools",
+  "author": "io.github.pro-target",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/pro-target/ai-r",
+    "repo": "pro-target/ai-r"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "agent-session-reader"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-14T06:05:54.932126Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

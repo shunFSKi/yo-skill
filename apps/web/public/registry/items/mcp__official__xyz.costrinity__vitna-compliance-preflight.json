@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/xyz.costrinity/vitna-compliance-preflight",
+  "type": "mcp",
+  "name": "VITNA — Agent Compliance Preflight",
+  "description": "Pre-action allow/deny for AI agents. 24 statutes, 13 jurisdictions: EU AI Act, GDPR, DPDP.",
+  "author": "xyz.costrinity",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/COSTRINITY/vitna-compliance-mcp",
+    "repo": "COSTRINITY/vitna-compliance-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@costrinity/vitna-compliance-mcp"
+    ],
+    "env": [
+      {
+        "name": "VITNA_OWNER_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "VITNA_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "VITNA_EMAIL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "VITNA_BASE_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-11T05:22:28.944318Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.compl-i-agent/csf",
+  "type": "mcp",
+  "name": "csf",
+  "description": "NIST CSF 2.0 - Professional cybersecurity framework with 35 tools and 12 prompts",
+  "author": "io.github.compl-i-agent",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/compligent/mcp-platform",
+    "repo": "compligent/mcp-platform"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@compligent-mcp/csf"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-10-01T04:57:35.783318Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

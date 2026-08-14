@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.vdalhambra/financekit-mcp",
+  "type": "mcp",
+  "name": "financekit-mcp",
+  "description": "Stock quotes, technical analysis, crypto prices, and portfolio insights for AI agents",
+  "author": "io.github.vdalhambra",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/vdalhambra/financekit-mcp",
+    "repo": "vdalhambra/financekit-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "financekit-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-14T11:57:30.604779Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

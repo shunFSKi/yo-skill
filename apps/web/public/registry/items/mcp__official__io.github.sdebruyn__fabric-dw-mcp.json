@@ -1,0 +1,89 @@
+{
+  "id": "mcp:official/io.github.sdebruyn/fabric-dw-mcp",
+  "type": "mcp",
+  "name": "fabric-dw",
+  "description": "MCP server for Microsoft Fabric Data Warehouses and SQL Analytics Endpoints",
+  "author": "io.github.sdebruyn",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/sdebruyn/fabric-dw-mcp-cli",
+    "repo": "sdebruyn/fabric-dw-mcp-cli"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/sdebruyn/fabric-dw:2026.7.3"
+    ],
+    "env": [
+      {
+        "name": "FABRIC_AUTH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "FABRIC_MCP_READONLY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "FABRIC_MCP_ALLOW_DESTRUCTIVE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "FABRIC_MCP_WORKSPACES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "FABRIC_MCP_ALLOW_REMOTE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "FABRIC_LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-19T22:32:04.0315Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

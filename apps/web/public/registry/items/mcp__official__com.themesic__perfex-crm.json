@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/com.themesic/perfex-crm",
+  "type": "mcp",
+  "name": "Perfex CRM",
+  "description": "Read and write a self-hosted Perfex CRM from an AI agent: 148 permission-filtered tools.",
+  "author": "com.themesic",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/themesic/perfex-rest-api-examples",
+    "repo": "themesic/perfex-rest-api-examples"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://{perfex_host}/api/mcp",
+    "env": [
+      {
+        "name": "authtoken",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-06T15:04:08.462945Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

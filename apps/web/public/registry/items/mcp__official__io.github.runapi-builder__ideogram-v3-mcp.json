@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.runapi-builder/ideogram-v3-mcp",
+  "type": "mcp",
+  "name": "ideogram-v3-mcp",
+  "description": "RunAPI MCP server for Ideogram V3: create tasks, poll status, check pricing.",
+  "author": "io.github.runapi-builder",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/runapi-ai/ideogram-v3-mcp",
+    "repo": "runapi-ai/ideogram-v3-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@runapi.ai/ideogram-v3-mcp"
+    ],
+    "env": [
+      {
+        "name": "RUNAPI_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-31T09:38:20.615226Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

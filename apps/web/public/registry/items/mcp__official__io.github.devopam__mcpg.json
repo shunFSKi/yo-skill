@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.devopam/mcpg",
+  "type": "mcp",
+  "name": "mcpg",
+  "description": "Production-grade PostgreSQL MCP server — 254 tools for query, tuning & ops, read-only by default.",
+  "author": "io.github.devopam",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/devopam/MCPg",
+    "repo": "devopam/MCPg"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcpg"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-04T17:17:13.369033Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

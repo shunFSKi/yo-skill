@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.omoshola-o/xap",
+  "type": "mcp",
+  "name": "xap",
+  "description": "Agent settlement protocol — discover, negotiate, settle, and verify with XAP.",
+  "author": "io.github.omoshola-o",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/agentra-commerce/xap-sdk",
+    "repo": "agentra-commerce/xap-sdk"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@agenticamem/xap-mcp"
+    ],
+    "env": [
+      {
+        "name": "XAP_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "XAP_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-21T14:29:35.493134Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

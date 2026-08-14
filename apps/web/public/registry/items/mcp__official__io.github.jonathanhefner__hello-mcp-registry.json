@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.jonathanhefner/hello-mcp-registry",
+  "type": "mcp",
+  "name": "hello-mcp-registry",
+  "description": "A simple MCP server.",
+  "author": "io.github.jonathanhefner",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/jonathanhefner/hello-mcp-registry",
+    "repo": "jonathanhefner/hello-mcp-registry"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@jonathanhefner/hello-mcp-registry"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-10-21T16:42:43.411081Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/com.backtest360/backtest360",
+  "type": "mcp",
+  "name": "Backtest360",
+  "description": "MCP server exposing the Backtest360 engine API as tools for AI agents.",
+  "author": "com.backtest360",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Backtest360/backtest360-mcp",
+    "repo": "Backtest360/backtest360-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "backtest360-mcp"
+    ],
+    "env": [
+      {
+        "name": "BACKTEST360_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-29T22:19:34.344011Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

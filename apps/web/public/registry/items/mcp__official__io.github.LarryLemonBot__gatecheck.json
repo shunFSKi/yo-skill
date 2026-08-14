@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.LarryLemonBot/gatecheck",
+  "type": "mcp",
+  "name": "GateCheck by LarryBuildsAI",
+  "description": "One-cent x402 and MCP readiness checks plus fixed-price marketplace launch packs.",
+  "author": "io.github.LarryLemonBot",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/LarryLemonBot/gatecheck",
+    "repo": "LarryLemonBot/gatecheck"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://proofbeforepay.vercel.app/gatecheck/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-14T23:20:49.409908Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

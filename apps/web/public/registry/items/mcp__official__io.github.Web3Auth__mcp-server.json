@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.Web3Auth/mcp-server",
+  "type": "mcp",
+  "name": "MetaMask Embedded Wallets (Web3Auth) MCP",
+  "description": "Helps AI coding agents integrate MetaMask Embedded Wallets (Web3Auth) SDKs.",
+  "author": "io.github.Web3Auth",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Web3Auth/web3auth-mcp",
+    "repo": "Web3Auth/web3auth-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.web3auth.io"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-31T13:11:29.605978Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/sa.com.ventureinsights.solutions/venture-diagnostic",
+  "type": "mcp",
+  "name": "Venture Insights Concept Diagnostic",
+  "description": "Venture Insights' free Concept Diagnostic, requested by an AI assistant for a founder.",
+  "author": "sa.com.ventureinsights.solutions",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/VI-Ai-2026/ventureai",
+    "repo": "VI-Ai-2026/ventureai"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://solutions.ventureinsights.com.sa/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-04T23:14:02.618859Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

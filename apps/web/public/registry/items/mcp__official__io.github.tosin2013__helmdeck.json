@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.tosin2013/helmdeck",
+  "type": "mcp",
+  "name": "Helmdeck",
+  "description": "Self-hosted MCP server: sandboxed browser, desktop, vision, code-edit packs for any agent.",
+  "author": "io.github.tosin2013",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/tosin2013/helmdeck",
+    "repo": "tosin2013/helmdeck"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@helmdeck/mcp-bridge"
+    ],
+    "env": [
+      {
+        "name": "HELMDECK_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "HELMDECK_TOKEN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-22T16:35:24.608987Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

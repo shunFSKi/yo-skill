@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.pzalutski-pixel/sharplens",
+  "type": "mcp",
+  "name": "SharpLens",
+  "description": "67 semantic C#/.NET analysis tools via Roslyn: navigation, refactoring, codegen, audit.",
+  "author": "io.github.pzalutski-pixel",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/pzalutski-pixel/sharplens-mcp",
+    "repo": "pzalutski-pixel/sharplens-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "sharplens-mcp"
+    ],
+    "env": [
+      {
+        "name": "DOTNET_SOLUTION_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ROSLYN_LOG_LEVEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ROSLYN_TIMEOUT_SECONDS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-20T01:56:37.127566Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

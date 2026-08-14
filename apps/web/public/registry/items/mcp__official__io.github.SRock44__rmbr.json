@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.SRock44/rmbr",
+  "type": "mcp",
+  "name": "rmbr",
+  "description": "Embedded, local-first memory and retrieval for AI agents. One SQLite file, no server, no API key.",
+  "author": "io.github.SRock44",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/SRock44/rmbr",
+    "repo": "SRock44/rmbr"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "rmbr"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-31T04:43:18.490473Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

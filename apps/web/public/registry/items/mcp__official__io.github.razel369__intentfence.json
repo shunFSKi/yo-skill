@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.razel369/intentfence",
+  "type": "mcp",
+  "name": "IntentFence Agent Action Firewall",
+  "description": "Fail-closed action authorization, MCP risk scanning, x402 checks, and signed receipts.",
+  "author": "io.github.razel369",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/razel369/intentfence",
+    "repo": "razel369/intentfence"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://agentpass-protocol.rmalka06.chatgpt.site/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-25T08:52:25.961742Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

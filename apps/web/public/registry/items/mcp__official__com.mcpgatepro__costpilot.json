@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.mcpgatepro/costpilot",
+  "type": "mcp",
+  "name": "CostPilot",
+  "description": "Hosted MCP server for AWS cloud spend: service breakdowns, anomalies, savings and forecasts.",
+  "author": "com.mcpgatepro",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://api.mcpgatepro.com/mcp/costpilot",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.mcpgatepro.com/mcp/costpilot"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-02T21:17:12.260979Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

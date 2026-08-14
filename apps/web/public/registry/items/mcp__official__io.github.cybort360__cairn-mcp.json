@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.cybort360/cairn-mcp",
+  "type": "mcp",
+  "name": "Cairn",
+  "description": "Log Claude Code work sessions, file edits, and tasks to your Cairn account.",
+  "author": "io.github.cybort360",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/cybort360/cairn",
+    "repo": "cybort360/cairn"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "cairn-mcp"
+    ],
+    "env": [
+      {
+        "name": "CAIRN_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "CAIRN_API_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-21T23:19:52.416503Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

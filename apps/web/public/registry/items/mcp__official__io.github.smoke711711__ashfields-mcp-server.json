@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.smoke711711/ashfields-mcp-server",
+  "type": "mcp",
+  "name": "Ashfields MCP Server",
+  "description": "Burn $ASH to mint on-chain NFTs on Ethereum. No browser. Two agent tool calls.",
+  "author": "io.github.smoke711711",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/smoke711711/ashfields-mcp-server",
+    "repo": "smoke711711/ashfields-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ashfields-mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-30T16:15:24.592738Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

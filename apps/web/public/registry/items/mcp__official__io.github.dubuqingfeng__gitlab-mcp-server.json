@@ -1,0 +1,89 @@
+{
+  "id": "mcp:official/io.github.dubuqingfeng/gitlab-mcp-server",
+  "type": "mcp",
+  "name": "gitlab-mcp-server",
+  "description": "GitLab MCP (Model Context Protocol) server for AI agents",
+  "author": "io.github.dubuqingfeng",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dubuqingfeng/gitlab-mcp-server",
+    "repo": "dubuqingfeng/gitlab-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@dubuqingfeng/gitlab-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "GITLAB_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "GITLAB_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LARK_WEBHOOK_URL",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "LARK_SECRET_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "LARK_ENABLE_NOTIFICATION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GITLAB_NOTE_MODE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-09-11T09:41:43.896888Z"
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

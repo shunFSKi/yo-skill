@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.vhspace/agentbase",
+  "type": "mcp",
+  "name": "AgentBase",
+  "description": "Shared knowledge base for AI agents. Semantic search across agents, no setup required — just a URL.",
+  "author": "io.github.vhspace",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/vhspace/agentbase",
+    "repo": "vhspace/agentbase"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.agentbase.tools/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-15T22:40:20.514951Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

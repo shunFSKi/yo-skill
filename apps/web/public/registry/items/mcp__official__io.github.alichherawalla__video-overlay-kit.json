@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.alichherawalla/video-overlay-kit",
+  "type": "mcp",
+  "name": "video-overlay-kit",
+  "description": "Animated b-roll overlays for short-form video. Paste a script, get an mp4. Free, MIT, local.",
+  "author": "io.github.alichherawalla",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/alichherawalla/video-overlay-kit",
+    "repo": "alichherawalla/video-overlay-kit"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@alichherawalla/video-overlay-kit"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-14T13:20:36.231068Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

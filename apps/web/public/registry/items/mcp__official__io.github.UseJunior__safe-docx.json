@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.UseJunior/safe-docx",
+  "type": "mcp",
+  "name": "Safe Docx",
+  "description": "AI-native surgical editing of Word .docx and OpenDocument .odt files with formatting preservation",
+  "author": "io.github.UseJunior",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/UseJunior/safe-docx",
+    "repo": "UseJunior/safe-docx"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@usejunior/safe-docx"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-24T23:44:23.059449Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

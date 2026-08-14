@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.dadang11/cryptoiz",
+  "type": "mcp",
+  "name": "cryptoiz",
+  "description": "Solana DEX whale intelligence: alpha, divergence, phase scoring, BTC regime. USDC payments via x402.",
+  "author": "io.github.dadang11",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dadang11/cryptoiz-mcp",
+    "repo": "dadang11/cryptoiz-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "cryptoiz-mcp"
+    ],
+    "env": [
+      {
+        "name": "SVM_PRIVATE_KEY",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-29T21:24:53.577467Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

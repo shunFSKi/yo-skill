@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.Ayo-Fam/mcp-cloudflare-dns",
+  "type": "mcp",
+  "name": "MCP Cloudflare DNS",
+  "description": "Cloudflare DNS MCP server: manage zones, records, cache purge, and page rules.",
+  "author": "io.github.Ayo-Fam",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/apexradius/mcp-cloudflare-dns",
+    "repo": "apexradius/mcp-cloudflare-dns"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-cloudflare-dns"
+    ],
+    "env": [
+      {
+        "name": "CF_API_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "CF_ALLOW_DESTRUCTIVE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-30T10:02:31.342988Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

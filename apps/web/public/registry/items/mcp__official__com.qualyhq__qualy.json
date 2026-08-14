@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/com.qualyhq/qualy",
+  "type": "mcp",
+  "name": "Qualy",
+  "description": "AI access to your Qualy payments back office: contacts, payment requests, and search.",
+  "author": "com.qualyhq",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/QualyHQ/docs",
+    "repo": "QualyHQ/docs"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.qualyhq.com/v1/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-08T10:24:03.266127Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

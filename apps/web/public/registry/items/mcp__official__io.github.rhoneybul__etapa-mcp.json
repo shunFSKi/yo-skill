@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.rhoneybul/etapa-mcp",
+  "type": "mcp",
+  "name": "Etapa — Cycling Coach MCP",
+  "description": "AI cycling coach — training plans and beginner guidance via the Etapa API.",
+  "author": "io.github.rhoneybul",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/rhoneybul/etapa",
+    "repo": "rhoneybul/etapa"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "etapa-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-20T13:14:02.926049Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

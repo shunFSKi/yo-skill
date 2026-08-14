@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.almostjacked/fitness-tools",
+  "type": "mcp",
+  "name": "Fitness Tools",
+  "description": "Deterministic fitness calculators — TDEE, adaptive TDEE, body fat, 1RM, macros — with consensus.",
+  "author": "io.github.almostjacked",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/almostjacked/fitness-tools",
+    "repo": "almostjacked/fitness-tools"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@almostjacked/fitness-tools-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-24T16:58:20.765892Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/app.wishpool/costa-rica-invoice-mcp",
+  "type": "mcp",
+  "name": "Costa Rica Invoices (Hacienda comprobante electronico v4.4)",
+  "description": "Costa Rica Hacienda v4.4: AI agents submit and query electronic invoices, stateless BYO.",
+  "author": "app.wishpool",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/junter1989k-ai/costa-rica-invoice-mcp",
+    "repo": "junter1989k-ai/costa-rica-invoice-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://inv-cr.wishpool.app/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-10T05:16:16.57932Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

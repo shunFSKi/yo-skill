@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/tools.clean/mcp",
+  "type": "mcp",
+  "name": "mcp",
+  "description": "Read-only developer, date, finance, and text utilities. Authless remote MCP server by Clean.tools.",
+  "author": "tools.clean",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.clean.tools/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@clean-tools/mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-07T03:16:46.242611Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

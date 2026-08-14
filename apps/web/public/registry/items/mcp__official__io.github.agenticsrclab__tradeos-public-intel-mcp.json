@@ -1,0 +1,94 @@
+{
+  "id": "mcp:official/io.github.agenticsrclab/tradeos-public-intel-mcp",
+  "type": "mcp",
+  "name": "TradeOS Public Intelligence",
+  "description": "Crypto market intelligence, evidence, watchlists, feedback, and paid x402 SKU routing.",
+  "author": "io.github.agenticsrclab",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/agenticsrclab/tradeos-public-intel-kit",
+    "repo": "agenticsrclab/tradeos-public-intel-kit"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@agenticsrclab/tradeos-public-intel-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "TRADEOS_API_BASE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TRADEOS_PUBLIC_INTEL_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "TRADEOS_ACCOUNT_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "TRADEOS_X402_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TRADEOS_X402_AGENT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TRADEOS_X402_PAYMENT_HEADER",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "TRADEOS_X402_WALLET_ADDRESS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-15T01:26:19.184983Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

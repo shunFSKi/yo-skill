@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.nirholas/threews-x402-bazaar",
+  "type": "mcp",
+  "name": "three.ws x402 Bazaar",
+  "description": "Discover and price paid agent services across the live x402 network, by three.ws.",
+  "author": "io.github.nirholas",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/nirholas/three.ws",
+    "repo": "nirholas/three"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://three.ws/api/mcp-bazaar"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-12T23:54:24.721105Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

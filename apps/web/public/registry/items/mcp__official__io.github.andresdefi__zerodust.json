@@ -1,0 +1,109 @@
+{
+  "id": "mcp:official/io.github.andresdefi/zerodust",
+  "type": "mcp",
+  "name": "zerodust",
+  "description": "Recover stranded native gas: empty a chain's balance to exactly zero on 25 EVM chains.",
+  "author": "io.github.andresdefi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/andresdefi/zerodust",
+    "repo": "andresdefi/zerodust"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@zerodust/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "ZERODUST_API_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ZERODUST_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ZERODUST_ALLOW_EXECUTE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ZERODUST_SIGNER_MODULE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ZERODUST_KEYSTORE_FILE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ZERODUST_KEYSTORE_PASSWORD_FILE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ZERODUST_KEYSTORE_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ZERODUST_PRIVATE_KEY_FILE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ZERODUST_PRIVATE_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ZERODUST_ALLOWED_DESTINATIONS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-25T12:48:47.567913Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

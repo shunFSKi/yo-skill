@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.danbones33/clawcast",
+  "type": "mcp",
+  "name": "clawcast",
+  "description": "AI rap songs about today's headlines in any rapper's style. Free trial + x402 payments.",
+  "author": "io.github.danbones33",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/danbones33/ClawCast",
+    "repo": "danbones33/ClawCast"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-server-clawcast"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-27T23:54:57.930525Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

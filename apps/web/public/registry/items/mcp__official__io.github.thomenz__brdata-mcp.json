@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.thomenz/brdata-mcp",
+  "type": "mcp",
+  "name": "brdata-mcp",
+  "description": "Brazilian company, risk & public-tender data (CNPJ, CEIS/CNEP, PNCP) as x402-paid agent tools",
+  "author": "io.github.thomenz",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/thomenz/brdata-mcp",
+    "repo": "thomenz/brdata-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "brdata-mcp"
+    ],
+    "env": [
+      {
+        "name": "EVM_PRIVATE_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SOLANA_PRIVATE_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SOLANA_RPC_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BRDATA_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "X402_NETWORK",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-04T12:46:38.212574Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.cdata/cdata-connect-ai",
+  "type": "mcp",
+  "name": "CData Connect AI",
+  "description": "Cloud-hosted MCP server for secure AI access to enterprise data sources via CData Connect AI.",
+  "author": "com.cdata",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.cloud.cdata.com/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.cloud.cdata.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-01T18:17:27.463824Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

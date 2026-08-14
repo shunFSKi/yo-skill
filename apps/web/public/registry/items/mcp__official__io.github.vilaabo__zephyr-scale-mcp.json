@@ -1,0 +1,119 @@
+{
+  "id": "mcp:official/io.github.vilaabo/zephyr-scale-mcp",
+  "type": "mcp",
+  "name": "zephyr-scale-mcp",
+  "description": "Zephyr Scale on self-hosted Jira Server/DC: test cases, cycles, executions, plans and attachments",
+  "author": "io.github.vilaabo",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/vilaabo/zephyr-scale-mcp",
+    "repo": "vilaabo/zephyr-scale-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "zephyr-scale-mcp"
+    ],
+    "env": [
+      {
+        "name": "JIRA_BASE_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "JIRA_PAT",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "JIRA_AUTH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "JIRA_USERNAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "JIRA_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ZEPHYR_DEFAULT_PROJECT_KEY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ZEPHYR_ALLOW_INTERNAL_API",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ZEPHYR_READONLY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "JIRA_TLS_REJECT_UNAUTHORIZED",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "JIRA_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "JIRA_MAX_RETRIES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ZEPHYR_LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-31T19:59:12.464915Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

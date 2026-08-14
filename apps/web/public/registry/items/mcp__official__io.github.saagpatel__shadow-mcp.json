@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.saagpatel/shadow-mcp",
+  "type": "mcp",
+  "name": "shadow-mcp",
+  "description": "Local MCP server that inventories and risk-grades MCP servers configured on this machine.",
+  "author": "io.github.saagpatel",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/saagpatel/shadow-mcp",
+    "repo": "saagpatel/shadow-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "shadow-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-03T13:42:30.030792Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

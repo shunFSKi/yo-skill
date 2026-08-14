@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/ai.vidocu/vidocu",
+  "type": "mcp",
+  "name": "vidocu",
+  "description": "AI Knowledge Platform: turn videos, PDFs, and slides into subtitles, voiceovers, and documentation",
+  "author": "ai.vidocu",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.vidocu.ai/",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.vidocu.ai/",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-26T11:26:06.294095Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.mrfentmen/vg-resource-mcp",
+  "type": "mcp",
+  "name": "vg-resource-mcp",
+  "description": "Search and download sprites, models, textures, and sounds from VG Resource.",
+  "author": "io.github.mrfentmen",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mrfentmen/vg-resource-mcp",
+    "repo": "mrfentmen/vg-resource-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "vg-resource-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-08T12:55:05.340122Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

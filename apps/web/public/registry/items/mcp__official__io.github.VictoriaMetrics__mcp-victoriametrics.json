@@ -1,0 +1,94 @@
+{
+  "id": "mcp:official/io.github.VictoriaMetrics/mcp-victoriametrics",
+  "type": "mcp",
+  "name": "mcp-victoriametrics",
+  "description": "MCP Server for VictoriaMetrics. Provides integration with VictoriaMetrics API and documentation",
+  "author": "io.github.VictoriaMetrics",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/VictoriaMetrics/mcp-victoriametrics",
+    "repo": "VictoriaMetrics/mcp-victoriametrics"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/victoriametrics/mcp-victoriametrics:1.120.1"
+    ],
+    "env": [
+      {
+        "name": "VM_INSTANCE_ENTRYPOINT",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "VM_INSTANCE_TYPE",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "VM_INSTANCE_BEARER_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "VMC_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MCP_DISABLED_TOOLS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_DISABLE_RESOURCES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_PASSTHROUGH_HEADERS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-19T09:28:40.370932Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

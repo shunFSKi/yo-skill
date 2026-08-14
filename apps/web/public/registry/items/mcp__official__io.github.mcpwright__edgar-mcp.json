@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.mcpwright/edgar-mcp",
+  "type": "mcp",
+  "name": "EDGAR (SEC filings)",
+  "description": "SEC filings in your agent: issuers, Reg CF/D/A raises, XBRL financials, insider trades.",
+  "author": "io.github.mcpwright",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mcpwright/edgar-mcp",
+    "repo": "mcpwright/edgar-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcpwright-edgar"
+    ],
+    "env": [
+      {
+        "name": "EDGAR_MCP_USER_AGENT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-04T05:58:41.742668Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

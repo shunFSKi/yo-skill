@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.pcmedsinge/mcp-terminology",
+  "type": "mcp",
+  "name": "mcp-terminology",
+  "description": "LOINC/SNOMED CT/RxNorm/ICD-10 lookup, search, translation and ValueSet expansion via FHIR.",
+  "author": "io.github.pcmedsinge",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/pcmedsinge/fhir-mcp-suite",
+    "repo": "pcmedsinge/fhir-mcp-suite"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-terminology"
+    ],
+    "env": [
+      {
+        "name": "TERMINOLOGY_BASE_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-20T09:22:31.210699Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

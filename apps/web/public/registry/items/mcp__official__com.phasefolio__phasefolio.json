@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/com.phasefolio/phasefolio",
+  "type": "mcp",
+  "name": "phasefolio",
+  "description": "Biotech rNPV/PoS engine for AI agents. Signed exports, evidence register, asset landscape.",
+  "author": "com.phasefolio",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://app.phasefolio.com/api/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@phasefolio/mcp"
+    ],
+    "env": [
+      {
+        "name": "PHASEFOLIO_TOKEN",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-03T08:52:53.51502Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.yessGlory17/jobverify",
+  "type": "mcp",
+  "name": "jobverify",
+  "description": "Detect fake-recruiter and job-offer scams using free OSINT. No API keys.",
+  "author": "io.github.yessGlory17",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/yessGlory17/job-verify",
+    "repo": "yessGlory17/job-verify"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "jobverify-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-03T14:44:38.733384Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

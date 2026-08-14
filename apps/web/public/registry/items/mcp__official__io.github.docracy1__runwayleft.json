@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.docracy1/runwayleft",
+  "type": "mcp",
+  "name": "runwayleft",
+  "description": "Cash runway, breakeven, and burn multiple calculator. Free, no login. MCP connector.",
+  "author": "io.github.docracy1",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/docracy1/runwayleft",
+    "repo": "docracy1/runwayleft"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://runwayleft.netlify.app/.netlify/functions/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-14T19:22:07.525282Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

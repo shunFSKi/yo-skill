@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.RudrenduPaul/taskswarm",
+  "type": "mcp",
+  "name": "taskswarm",
+  "description": "Wraps the taskswarm CLI as a single generic MCP tool for multi-agent task coordination.",
+  "author": "io.github.RudrenduPaul",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/RudrenduPaul/taskswarm",
+    "repo": "RudrenduPaul/taskswarm"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "taskswarm-cli"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-11T05:24:49.300142Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

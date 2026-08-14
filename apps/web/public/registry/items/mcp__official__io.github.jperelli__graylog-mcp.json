@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.jperelli/graylog-mcp",
+  "type": "mcp",
+  "name": "Graylog MCP Server",
+  "description": "Query logs from Graylog: get streams, search messages, aggregate, and get full data.",
+  "author": "io.github.jperelli",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/jperelli/graylog-mcp",
+    "repo": "jperelli/graylog-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@jperelli/graylog-mcp"
+    ],
+    "env": [
+      {
+        "name": "GRAYLOG_BASE_URL_INSTANCE_1",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "GRAYLOG_API_TOKEN_INSTANCE_1",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "GRAYLOG_LABEL_INSTANCE_1",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-17T12:06:04.471509Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

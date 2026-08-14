@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.RudrenduPaul/tenantguard",
+  "type": "mcp",
+  "name": "tenantguard",
+  "description": "Scans self-hosted multi-tenant AI-agent platforms for tenant-isolation gaps via an MCP tool.",
+  "author": "io.github.RudrenduPaul",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/RudrenduPaul/TenantGuard",
+    "repo": "RudrenduPaul/TenantGuard"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "tenantguard-cli"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-11T02:54:07.178396Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

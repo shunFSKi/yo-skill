@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.johnisanerd/google-local",
+  "type": "mcp",
+  "name": "Google Local",
+  "description": "Find local businesses on Google: name, address, phone, hours, ratings, and photos.",
+  "author": "io.github.johnisanerd",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/johnisanerd/google-local-mcp",
+    "repo": "johnisanerd/google-local-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.apify.com/?tools=johnvc/google-local-api",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-19T07:00:14.80995Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

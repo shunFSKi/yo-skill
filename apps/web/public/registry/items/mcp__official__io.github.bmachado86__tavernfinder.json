@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.bmachado86/tavernfinder",
+  "type": "mcp",
+  "name": "TavernFinder",
+  "description": "Find tabletop events, venues, and games. RSVP, register, create events via personal token.",
+  "author": "io.github.bmachado86",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/bmachado86/tavernfinder",
+    "repo": "bmachado86/tavernfinder"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.tavernfinder.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-28T13:02:26.276356Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

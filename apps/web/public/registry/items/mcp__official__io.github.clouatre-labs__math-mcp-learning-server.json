@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.clouatre-labs/math-mcp-learning-server",
+  "type": "mcp",
+  "name": "Math MCP Learning",
+  "description": "Educational MCP server with 17 math/stats tools, visualizations, and persistent workspace",
+  "author": "io.github.clouatre-labs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/clouatre-labs/math-mcp-learning-server",
+    "repo": "clouatre-labs/math-mcp-learning-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "math-mcp-learning-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-02T11:02:48.324476Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

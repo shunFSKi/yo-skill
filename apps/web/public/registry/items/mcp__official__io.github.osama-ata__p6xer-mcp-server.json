@@ -1,0 +1,73 @@
+{
+  "id": "mcp:official/io.github.osama-ata/p6xer-mcp-server",
+  "type": "mcp",
+  "name": "p6xer MCP Server",
+  "description": "An MCP server for Primavera P6 XER files.",
+  "author": "io.github.osama-ata",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/osama-ata/p6xer-mcp-server",
+    "repo": "osama-ata/p6xer-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "p6xer-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "P6XER_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "P6XER_ENDPOINT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "P6XER_LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-25T09:31:50.873825Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

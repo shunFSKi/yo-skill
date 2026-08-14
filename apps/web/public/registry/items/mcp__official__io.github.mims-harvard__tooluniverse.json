@@ -1,0 +1,143 @@
+{
+  "id": "mcp:official/io.github.mims-harvard/tooluniverse",
+  "type": "mcp",
+  "name": "tooluniverse",
+  "description": "2,500+ scientific tools for AI scientists: life science, research, literature, and more.",
+  "author": "io.github.mims-harvard",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mims-harvard/ToolUniverse",
+    "repo": "mims-harvard/ToolUniverse"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "tooluniverse"
+    ],
+    "env": [
+      {
+        "name": "OPENAI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ANTHROPIC_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GEMINI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "OPENROUTER_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "AZURE_OPENAI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "HF_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "NCBI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SEMANTIC_SCHOLAR_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "BIOGRID_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "DISGENET_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "OMIM_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ONCOKB_API_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "NVIDIA_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "USPTO_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "UMLS_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "BRENDA_EMAIL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BRENDA_PASSWORD",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T15:26:49.876362Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

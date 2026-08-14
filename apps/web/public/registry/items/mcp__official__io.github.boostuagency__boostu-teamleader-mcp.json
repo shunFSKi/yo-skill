@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.boostuagency/boostu-teamleader-mcp",
+  "type": "mcp",
+  "name": "boostu-teamleader-mcp",
+  "description": "MCP server for Teamleader Focus CRM. Use Teamleader in Claude and other AI assistants.",
+  "author": "io.github.boostuagency",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/boostuagency/boostu-teamleader-mcp",
+    "repo": "boostuagency/boostu-teamleader-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "boostu-teamleader-mcp"
+    ],
+    "env": [
+      {
+        "name": "TEAMLEADER_CLIENT_ID",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "TEAMLEADER_CLIENT_SECRET",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "TEAMLEADER_REFRESH_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "TEAMLEADER_TOKEN_STORE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TEAMLEADER_TOOLS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-14T12:00:23.132309Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.lutolearn/myaitwin",
+  "type": "mcp",
+  "name": "MyAITwin",
+  "description": "A personal RAG database you build from chat, so AI creates work that sounds like you.",
+  "author": "com.lutolearn",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/LutoLabs/mytwin-mcp",
+    "repo": "LutoLabs/mytwin-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://myaitwin.lutolearn.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-24T09:47:54.432272Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

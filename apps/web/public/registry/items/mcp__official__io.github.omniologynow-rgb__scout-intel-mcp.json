@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.omniologynow-rgb/scout-intel-mcp",
+  "type": "mcp",
+  "name": "Scout Intel MCP — The Google for AI Agents",
+  "description": "The Google for AI agents — company intel, competitor tracking, market research via MCP. JSON output",
+  "author": "io.github.omniologynow-rgb",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://scout-intel.mcpize.run",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "scout-intel-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-28T00:43:13.277203Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

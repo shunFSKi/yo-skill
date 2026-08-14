@@ -1,0 +1,73 @@
+{
+  "id": "mcp:official/io.github.ivanostanin/lucius-mcp",
+  "type": "mcp",
+  "name": "Lucius MCP",
+  "description": "MCP server for managing Allure TestOps tests, launches, plans, defects, and metadata.",
+  "author": "io.github.ivanostanin",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ivanostanin/lucius-mcp",
+    "repo": "ivanostanin/lucius-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "lucius-mcp"
+    ],
+    "env": [
+      {
+        "name": "ALLURE_ENDPOINT",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "ALLURE_PROJECT_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "ALLURE_API_TOKEN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T09:57:10.872943Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

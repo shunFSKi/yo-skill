@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.foxitsoftware/foxit-pdf-api-mcp-server",
+  "type": "mcp",
+  "name": "Foxit PDF API MCP Server",
+  "description": "MCP server that exposes Foxit PDF API capabilities via stdio.",
+  "author": "io.github.foxitsoftware",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/foxitsoftware/foxit-pdf-api-mcp-server",
+    "repo": "foxitsoftware/foxit-pdf-api-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@foxitsoftware/foxit-pdf-api-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "FOXIT_CLOUD_API_HOST",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "FOXIT_CLOUD_API_CLIENT_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "FOXIT_CLOUD_API_CLIENT_SECRET",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-12-16T06:18:50.500818Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

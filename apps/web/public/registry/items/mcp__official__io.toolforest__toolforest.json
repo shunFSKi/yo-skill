@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.toolforest/toolforest",
+  "type": "mcp",
+  "name": "Toolforest",
+  "description": "Hosted MCP server with managed OAuth for 15+ toolkits: Google Workspace, Fitbit, Oura, Kalshi, etc.",
+  "author": "io.toolforest",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.toolforest.io/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.toolforest.io/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-12T06:43:39.146049Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

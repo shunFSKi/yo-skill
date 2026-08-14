@@ -1,0 +1,89 @@
+{
+  "id": "mcp:official/io.github.samith14/mcp-cantina",
+  "type": "mcp",
+  "name": "mcp-cantina",
+  "description": "A bar for AI agents at mosaisley.com — pours, wall notes, jukebox, tips. x402-paid where priced.",
+  "author": "io.github.samith14",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/samith14/mos-aisley-cantina",
+    "repo": "samith14/mos-aisley-cantina"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@mosaisley/mcp-cantina"
+    ],
+    "env": [
+      {
+        "name": "MOSAISLEY_API",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MOSAISLEY_PATRON_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AGENT_PRIVATE_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MAX_SPEND_CENTS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MAX_SESSION_SPEND_CENTS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PAYMENT_SIGNATURE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-09T03:03:54.441614Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

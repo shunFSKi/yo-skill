@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.agenthustler/crypto-signals-mcp",
+  "type": "mcp",
+  "name": "Crypto Signals MCP",
+  "description": "Real-time crypto volume anomaly detection across 50+ tokens with pump signals.",
+  "author": "io.github.agenthustler",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/agenthustler/crypto-signals-mcp",
+    "repo": "agenthustler/crypto-signals-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "crypto-signals-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-06T15:54:45.911009Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

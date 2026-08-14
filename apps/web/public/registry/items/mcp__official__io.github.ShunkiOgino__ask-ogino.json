@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.ShunkiOgino/ask-ogino",
+  "type": "mcp",
+  "name": "ask-ogino",
+  "description": "Query Shunki Ogino's public profile: his thesis, the tools he builds, and his writing.",
+  "author": "io.github.ShunkiOgino",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ShunkiOgino/homepage",
+    "repo": "ShunkiOgino/homepage"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://homepage-flax-two.vercel.app/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-20T04:56:32.388599Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

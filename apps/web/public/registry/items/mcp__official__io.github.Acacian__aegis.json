@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.Acacian/aegis",
+  "type": "mcp",
+  "name": "Aegis — AI Agent Governance",
+  "description": "Policy-based governance for AI agent tool calls. YAML policy, approval gates, audit logging.",
+  "author": "io.github.Acacian",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Acacian/aegis",
+    "repo": "Acacian/aegis"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "agent-aegis"
+    ],
+    "env": [
+      {
+        "name": "AEGIS_POLICY_PATH",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-22T16:09:51.939795Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

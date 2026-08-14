@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.getjoystick/nanobanana-mcp",
+  "type": "mcp",
+  "name": "nanobanana-mcp",
+  "description": "Lean MCP server for Google's Nano Banana (Gemini) image models. Returns file paths, not base64.",
+  "author": "io.github.getjoystick",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/getjoystick/nanobanana-mcp",
+    "repo": "getjoystick/nanobanana-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@nanobanana/mcp"
+    ],
+    "env": [
+      {
+        "name": "GEMINI_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "NANOBANANA_MODEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "NANOBANANA_OUTPUT_DIR",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-02T20:27:50.463727Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

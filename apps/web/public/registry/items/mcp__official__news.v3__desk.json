@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/news.v3/desk",
+  "type": "mcp",
+  "name": "V³ News",
+  "description": "Cited geopolitical events, multi-perspective briefs, and live breaking news from V³ News.",
+  "author": "news.v3",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.v3.news/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.v3.news/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-07T03:28:42.077869Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

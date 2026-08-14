@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.bpolania/bulwark",
+  "type": "mcp",
+  "name": "Bulwark",
+  "description": "AI agent governance: content scanning, audit logs, policy evaluation, session management.",
+  "author": "io.github.bpolania",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/bpolania/bulwark",
+    "repo": "bpolania/bulwark"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/bpolania/bulwark:v0.2.0"
+    ],
+    "env": [
+      {
+        "name": "BULWARK_CONFIG",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BULWARK_SESSION_TOKEN",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-25T08:36:37.806124Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

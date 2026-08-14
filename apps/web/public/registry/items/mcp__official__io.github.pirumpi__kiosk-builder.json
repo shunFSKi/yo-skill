@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.pirumpi/kiosk-builder",
+  "type": "mcp",
+  "name": "Kiosk Builder",
+  "description": "Build and manage airline self-service kiosk apps — styling, pages, CMS, and CUSS2.",
+  "author": "io.github.pirumpi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/elevation-ai/portal-appgen",
+    "repo": "elevation-ai/portal-appgen"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://ai-elevation.azurewebsites.net/mcp",
+    "env": [
+      {
+        "name": "elevated-auth",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-05T18:29:58.925642Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

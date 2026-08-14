@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.lusha.mcp/mcp",
+  "type": "mcp",
+  "name": "mcp",
+  "description": "Lusha MCP server for authorized business profile, usage, and buying-signal insights.",
+  "author": "com.lusha.mcp",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/lusha-oss/lusha-mcp-plugin",
+    "repo": "lusha-oss/lusha-mcp-plugin"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.lusha.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-18T13:19:50.964884Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

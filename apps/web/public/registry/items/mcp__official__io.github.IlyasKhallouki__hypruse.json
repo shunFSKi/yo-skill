@@ -1,0 +1,93 @@
+{
+  "id": "mcp:official/io.github.IlyasKhallouki/hypruse",
+  "type": "mcp",
+  "name": "hypruse",
+  "description": "Computer use for Hyprland: semantic desktop state over IPC, plus vision and native input",
+  "author": "io.github.IlyasKhallouki",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/IlyasKhallouki/hypruse",
+    "repo": "IlyasKhallouki/hypruse"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "hypruse"
+    ],
+    "env": [
+      {
+        "name": "HYPRUSE_SCREENSHOT_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "HYPRUSE_READONLY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "HYPRUSE_CONFINE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "HYPRUSE_AUTH_GUARD",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "HYPRUSE_STRICT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "HYPRUSE_MARK",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "HYPRUSE_CLIPBOARD",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-26T10:32:34.776172Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/ai.kernora/agent-sec",
+  "type": "mcp",
+  "name": "agent-sec",
+  "description": "Zero-install security baseline for AI coding agents — OWASP/CWE-cited rules over MCP.",
+  "author": "ai.kernora",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/kernora-ai/agent-sec",
+    "repo": "kernora-ai/agent-sec"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://agentsec.kernora.ai/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-31T21:35:17.153565Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

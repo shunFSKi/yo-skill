@@ -1,0 +1,88 @@
+{
+  "id": "mcp:official/io.github.salahawad/outlook-personal-mcp",
+  "type": "mcp",
+  "name": "Outlook Personal MCP",
+  "description": "Full-control MCP server for a personal Outlook.com mailbox and calendar (Microsoft Graph).",
+  "author": "io.github.salahawad",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/salahawad/outlook-personal-mcp",
+    "repo": "salahawad/outlook-personal-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-outlook-personal"
+    ],
+    "env": [
+      {
+        "name": "OUTLOOK_MCP_CLIENT_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "OUTLOOK_MCP_AUTHORITY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OUTLOOK_MCP_FILE_ROOT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OUTLOOK_MCP_MAX_FILE_BYTES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OUTLOOK_MCP_ALLOW_PERMANENT_DELETE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OUTLOOK_MCP_DEBUG",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-28T09:42:16.75211Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

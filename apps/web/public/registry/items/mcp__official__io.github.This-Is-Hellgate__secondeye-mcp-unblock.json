@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.This-Is-Hellgate/secondeye-mcp-unblock",
+  "type": "mcp",
+  "name": "Second Eyes Agent Workflow Services",
+  "description": "Workflow diagnostics, capability routing, and x402 settlement for MCP-compatible agents.",
+  "author": "io.github.This-Is-Hellgate",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/This-Is-Hellgate/second-eyes-ai",
+    "repo": "This-Is-Hellgate/second-eyes-ai"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@secondeyes/mcp-unblock"
+    ],
+    "env": [
+      {
+        "name": "SECOND_EYE_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_X402_WALLET_KEY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_X402_MAX_SPEND_USD",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_X402_SESSION_MAX_USD",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_X402_ALLOW_SLUGS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-07T21:05:38.820613Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

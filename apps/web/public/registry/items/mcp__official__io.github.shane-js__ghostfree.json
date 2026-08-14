@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.shane-js/ghostfree",
+  "type": "mcp",
+  "name": "GhostFree",
+  "description": "MCP server that scans your repo's dependencies for security vulnerabilities based on published CVEs.",
+  "author": "io.github.shane-js",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/shane-js/ghostfree",
+    "repo": "shane-js/ghostfree"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghostfree"
+    ],
+    "env": [
+      {
+        "name": "GHOSTFREE_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GHOSTFREE_MIN_SEVERITY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "NVD_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-07T01:48:43.139412Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

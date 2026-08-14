@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.threadctx-dev/threadctx-mcp",
+  "type": "mcp",
+  "name": "threadctx-mcp",
+  "description": "Shared memory MCP server for AI coding agents — local by default, team-shared via threadctx.dev.",
+  "author": "io.github.threadctx-dev",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/threadctx-dev/threadctx-mcp",
+    "repo": "threadctx-dev/threadctx-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "threadctx-mcp"
+    ],
+    "env": [
+      {
+        "name": "THREADCTX_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "THREADCTX_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-14T22:40:46.710931Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

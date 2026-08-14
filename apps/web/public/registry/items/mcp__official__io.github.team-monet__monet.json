@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.team-monet/monet",
+  "type": "mcp",
+  "name": "Monet",
+  "description": "Local-first, state-centric memory for coding agents. MCP server + CLI.",
+  "author": "io.github.team-monet",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/team-monet/with-monet",
+    "repo": "team-monet/with-monet"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@team-monet/monet"
+    ],
+    "env": [
+      {
+        "name": "MONET_STORAGE_DIR",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-23T11:45:18.318568Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/xyz.virifi.numetric-mcp/numetric",
+  "type": "mcp",
+  "name": "NuMetric",
+  "description": "Read-only NuMetric.work accounting & ERP data: statements, KPIs, reports, invoices, documents.",
+  "author": "xyz.virifi.numetric-mcp",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/lowwmax/numetric-mcp-connector",
+    "repo": "lowwmax/numetric-mcp-connector"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://numetric-mcp.virifi.xyz/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-04T10:56:15.367395Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

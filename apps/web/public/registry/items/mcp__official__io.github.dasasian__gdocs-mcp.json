@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.dasasian/gdocs-mcp",
+  "type": "mcp",
+  "name": "gdocs-mcp",
+  "description": "Treat a Google Doc like a local file: content editing, tracked-changes review, comments, tables.",
+  "author": "io.github.dasasian",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dasasian/gdocs-mcp",
+    "repo": "dasasian/gdocs-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@dasasian/gdocs-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-31T22:45:47.188726Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

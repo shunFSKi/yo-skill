@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.fieldcure/rag",
+  "type": "mcp",
+  "name": "rag",
+  "description": "MCP RAG server with hybrid search, multi-KB support, and AI-powered chunk contextualization.",
+  "author": "io.github.fieldcure",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/fieldcure/fieldcure-mcp-rag",
+    "repo": "fieldcure/fieldcure-mcp-rag"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "FieldCure.Mcp.Rag"
+    ],
+    "env": [
+      {
+        "name": "OPENAI_API_KEY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ANTHROPIC_API_KEY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GEMINI_API_KEY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "VOYAGE_API_KEY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GROQ_API_KEY",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-25T09:26:38.625457Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

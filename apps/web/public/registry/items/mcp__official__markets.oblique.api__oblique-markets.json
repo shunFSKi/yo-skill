@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/markets.oblique.api/oblique-markets",
+  "type": "mcp",
+  "name": "Oblique Markets",
+  "description": "x402-paid analytics, market intelligence, research, and LLM inference for AI agents.",
+  "author": "markets.oblique.api",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/oblique-markets/mcp-server",
+    "repo": "oblique-markets/mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.oblique.markets/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-29T19:46:52.967742Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

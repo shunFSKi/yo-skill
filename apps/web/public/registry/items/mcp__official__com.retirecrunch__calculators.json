@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.retirecrunch/calculators",
+  "type": "mcp",
+  "name": "calculators",
+  "description": "FIRE & retirement calculators + a multi-currency portfolio rebalancer (exact buy/sell trades).",
+  "author": "com.retirecrunch",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/malagodia/fire",
+    "repo": "malagodia/fire"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.retirecrunch.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-15T10:57:38.273695Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

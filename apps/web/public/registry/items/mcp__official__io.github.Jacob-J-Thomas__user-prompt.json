@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.Jacob-J-Thomas/user-prompt",
+  "type": "mcp",
+  "name": "user-prompt",
+  "description": "An MCP server that enables AI agents to ask users clarifying questions via pop-up terminal windows.",
+  "author": "io.github.Jacob-J-Thomas",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Jacob-J-Thomas/user-context-retrieval-mcp-server",
+    "repo": "Jacob-J-Thomas/user-context-retrieval-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "UserPrompt"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-11T04:52:07.168974Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

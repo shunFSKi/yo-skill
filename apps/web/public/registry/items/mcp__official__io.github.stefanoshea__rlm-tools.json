@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.stefanoshea/rlm-tools",
+  "type": "mcp",
+  "name": "RLM Tools",
+  "description": "Persistent Python sandbox for token-efficient codebase exploration in MCP clients",
+  "author": "io.github.stefanoshea",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/stefanoshea/rlm-tools",
+    "repo": "stefanoshea/rlm-tools"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "rlm-tools"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-13T05:48:44.377363Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

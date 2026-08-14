@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.gogogadgetbytes/planka",
+  "type": "mcp",
+  "name": "planka",
+  "description": "MCP server for PLANKA kanban boards. Full CRUD for cards, tasks, comments, and labels.",
+  "author": "io.github.gogogadgetbytes",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/gogogadgetbytes/planka-mcp",
+    "repo": "gogogadgetbytes/planka-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@gogogadgetbytes/planka-mcp"
+    ],
+    "env": [
+      {
+        "name": "PLANKA_BASE_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "PLANKA_AGENT_EMAIL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "PLANKA_AGENT_PASSWORD",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-03T23:08:11.516291Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

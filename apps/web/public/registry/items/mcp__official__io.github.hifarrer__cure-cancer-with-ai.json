@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.hifarrer/cure-cancer-with-ai",
+  "type": "mcp",
+  "name": "Cure Cancer With AI",
+  "description": "Free oncology data (research, trials, FDA approvals, news) plus IBM MAMMAL biomedical predictions.",
+  "author": "io.github.hifarrer",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/hifarrer/ccwai-api",
+    "repo": "hifarrer/ccwai-api"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://www.curecancerwithai.com/api/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-12T16:48:10.173478Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

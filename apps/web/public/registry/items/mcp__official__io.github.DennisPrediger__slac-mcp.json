@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.DennisPrediger/slac-mcp",
+  "type": "mcp",
+  "name": "slac-mcp",
+  "description": "MCP server exposing SLAC (Simple Logic & Arithmetic Compiler) as tools for LLM agents",
+  "author": "io.github.DennisPrediger",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/DennisPrediger/SLAC-MCP",
+    "repo": "DennisPrediger/SLAC-MCP"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "slac-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-18T18:40:28.008828Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

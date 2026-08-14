@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.Py2755/aiogram-mcp",
+  "type": "mcp",
+  "name": "aiogram-mcp",
+  "description": "MCP server for aiogram Telegram bots — 30 tools, 7 resources, 3 prompts, event streaming",
+  "author": "io.github.Py2755",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Py2755/aiogram-mcp",
+    "repo": "Py2755/aiogram-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "aiogram-mcp"
+    ],
+    "env": [
+      {
+        "name": "BOT_TOKEN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-14T05:45:04.624175Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

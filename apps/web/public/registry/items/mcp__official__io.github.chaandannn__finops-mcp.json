@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.chaandannn/finops-mcp",
+  "type": "mcp",
+  "name": "nable",
+  "description": "Local-first FinOps copilot: ask AWS, Azure, GCP, Kubernetes and SaaS cost questions in your editor.",
+  "author": "io.github.chaandannn",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/chaandannn/finopsmcp",
+    "repo": "chaandannn/finopsmcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "finops-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-14T03:26:24.886641Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

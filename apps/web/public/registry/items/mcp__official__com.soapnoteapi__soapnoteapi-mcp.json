@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/com.soapnoteapi/soapnoteapi-mcp",
+  "type": "mcp",
+  "name": "SOAPNoteAPI",
+  "description": "Generate clinical SOAP notes, billing codes, and visit summaries from transcripts or audio.",
+  "author": "com.soapnoteapi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/soapnoteaicom/soapnoteapi-mcp",
+    "repo": "soapnoteaicom/soapnoteapi-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "soapnoteapi-mcp"
+    ],
+    "env": [
+      {
+        "name": "SOAPNOTEAPI_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-16T15:52:20.954729Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

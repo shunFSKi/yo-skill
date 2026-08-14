@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.kanishka089/realhands",
+  "type": "mcp",
+  "name": "realhands — Real Desktop Computer Use",
+  "description": "Lets Claude drive your REAL mouse, keyboard & screen — works in your own logged-in apps.",
+  "author": "io.github.kanishka089",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/kanishka089/computer-use-mcp",
+    "repo": "kanishka089/computer-use-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "realhands"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-17T08:57:40.825116Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

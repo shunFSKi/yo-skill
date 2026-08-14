@@ -1,0 +1,89 @@
+{
+  "id": "mcp:official/io.github.d-khomenko/clipboard-history-mcp",
+  "type": "mcp",
+  "name": "Clipboard History MCP",
+  "description": "Your clipboard, but Claude can read it. Type-classified, secret-encrypted. macOS + Linux.",
+  "author": "io.github.d-khomenko",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/d-khomenko/clipboard-history-mcp",
+    "repo": "d-khomenko/clipboard-history-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/d-khomenko/clipboard-history-mcp/releases/download/v0.5.0-alpha.0/clipboard-history-mcp.mcpb"
+    ],
+    "env": [
+      {
+        "name": "CLIPBOARD_VAULT_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CLIPBOARD_CAPTURE_WINDOW_TITLE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CLIPBOARD_IGNORE_APPS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CLIPBOARD_NEVER_STORE_SECRETS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CLIPBOARD_HISTORY_MAX",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CLIPBOARD_POLL_MS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-06T06:57:01.353254Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,103 @@
+{
+  "id": "mcp:official/io.github.Semiotronika/LINZA-MCP",
+  "type": "mcp",
+  "name": "LINZA",
+  "description": "Local-first MCP sidecar for Markdown artifacts, review intents, and supervised knowledge growth.",
+  "author": "io.github.Semiotronika",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Semiotronika/LINZA-MCP",
+    "repo": "Semiotronika/LINZA-MCP"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "linza-mcp"
+    ],
+    "env": [
+      {
+        "name": "LINZA_VAULT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LINZA_EMBED_PROVIDER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LINZA_EMBED_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LINZA_EMBED_MODEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LINZA_EMBED_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "LINZA_BRIDGE_THRESHOLD",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LINZA_MAX_BRIDGE_PAIRS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LINZA_DEFAULT_PROFILE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LINZA_LANGUAGE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-01T14:18:03.516974Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

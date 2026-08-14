@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.SPAZIO-GENESI/attest-mcp-remote",
+  "type": "mcp",
+  "name": "attest-mcp-remote",
+  "description": "Zero-install remote MCP server for proof-of-existence file attestation.",
+  "author": "io.github.SPAZIO-GENESI",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/SPAZIO-GENESI/attest-mcp-remote",
+    "repo": "SPAZIO-GENESI/attest-mcp-remote"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://attest-mcp-remote.it-e3f.workers.dev/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-13T08:29:31.242715Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

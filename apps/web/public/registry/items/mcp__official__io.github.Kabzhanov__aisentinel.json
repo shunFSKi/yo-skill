@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.Kabzhanov/aisentinel",
+  "type": "mcp",
+  "name": "AISentinel by BizDNAi",
+  "description": "Pre-tool policy enforcement + JSONL audit for AI agents. Apache 2.0.",
+  "author": "io.github.Kabzhanov",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Kabzhanov/AISentinel",
+    "repo": "Kabzhanov/AISentinel"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/Kabzhanov/AISentinel/releases/download/v1.0.6/aisentinel-v1.0.6.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-09T14:23:11.274379Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

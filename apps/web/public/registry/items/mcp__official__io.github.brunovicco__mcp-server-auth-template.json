@@ -1,0 +1,109 @@
+{
+  "id": "mcp:official/io.github.brunovicco/mcp-server-auth-template",
+  "type": "mcp",
+  "name": "MCP Server Auth Template",
+  "description": "OAuth 2.1/OIDC resource-server reference for secure MCP authorization",
+  "author": "io.github.brunovicco",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/brunovicco/mcp-server-auth-template",
+    "repo": "brunovicco/mcp-server-auth-template"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/brunovicco/mcp-server-auth-template:v0.6.2"
+    ],
+    "env": [
+      {
+        "name": "MCP_SERVER_RESOURCE_SERVER_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "MCP_SERVER_AUTH_PROVIDER",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "MCP_SERVER_REQUIRED_SCOPES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_SERVER_TRANSPORT_ALLOWED_HOSTS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_SERVER_ENTRA_TENANT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_SERVER_ENTRA_AUDIENCE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_SERVER_ENTRA_APPLICATION_ID_URI",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_SERVER_GENERIC_ISSUER_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_SERVER_GENERIC_AUDIENCE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_SERVER_GENERIC_JWKS_ALLOWED_ORIGINS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-11T13:19:10.300987Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

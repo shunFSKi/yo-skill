@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.EllisMorrow/caelune-mcp",
+  "type": "mcp",
+  "name": "Caelune",
+  "description": "Read-only local-first MCP server for private Markdown, PDF, and Tika-backed search on Windows.",
+  "author": "io.github.EllisMorrow",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/EllisMorrow/Caelune",
+    "repo": "EllisMorrow/Caelune"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/EllisMorrow/Caelune/releases/download/v0.5.6/caelune-mcp-win-x64-v0.5.6.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-08T15:47:58.696184Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

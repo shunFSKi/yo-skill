@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.joshrotenberg/hexpm-mcp",
+  "type": "mcp",
+  "name": "Hex.pm MCP",
+  "description": "MCP server for hex.pm and hexdocs.pm: search, inspect, compare, and audit Elixir packages",
+  "author": "io.github.joshrotenberg",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/joshrotenberg/hexpm-mcp",
+    "repo": "joshrotenberg/hexpm-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://hexpm-mcp.fly.dev/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-15T23:04:52.469587Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

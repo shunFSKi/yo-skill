@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.invapi-org/invapi-mcp",
+  "type": "mcp",
+  "name": "invapi-mcp",
+  "description": "Extract, create, convert & validate invoices (UBL, CII, XRechnung, ZUGFeRD, PDF, Excel)",
+  "author": "io.github.invapi-org",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/invapi-org/invapi-mcp",
+    "repo": "invapi-org/invapi-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@invapi/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "INVAPI_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-22T13:18:08.766804Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

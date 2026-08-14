@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.baphometnxg/aloha-fyi-mcp",
+  "type": "mcp",
+  "name": "aloha.fyi Hawaii",
+  "description": "Hawaii MCP: tours, events, weather, restaurants, and day-plan itineraries across 4 islands.",
+  "author": "io.github.baphometnxg",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/baphometnxg/aloha-fyi-mcp",
+    "repo": "baphometnxg/aloha-fyi-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp-server-nani-v3-20.up.railway.app/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-12T08:04:46.554751Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

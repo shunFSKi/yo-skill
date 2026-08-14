@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.royashbrook/hush",
+  "type": "mcp",
+  "name": "hush",
+  "description": "A secret store for AI agents: the agent never sees the plaintext.",
+  "author": "com.royashbrook",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/royashbrook/hush",
+    "repo": "royashbrook/hush"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://royashbrook.com/hush"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-29T04:12:43.027896Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,88 @@
+{
+  "id": "mcp:official/io.github.SamuelSHernandez/laserfiche-mcp",
+  "type": "mcp",
+  "name": "laserfiche-mcp",
+  "description": "MCP server for self-hosted Laserfiche repositories — search and read documents from Claude.",
+  "author": "io.github.SamuelSHernandez",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/SamuelSHernandez/laserfiche-mcp",
+    "repo": "SamuelSHernandez/laserfiche-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "laserfiche-mcp"
+    ],
+    "env": [
+      {
+        "name": "LF_REPO_API_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "LF_REPOSITORY_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "LF_USERNAME",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "LF_PASSWORD",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "LF_API_VERSION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LF_READ_ONLY",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-09T07:44:34.441879Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

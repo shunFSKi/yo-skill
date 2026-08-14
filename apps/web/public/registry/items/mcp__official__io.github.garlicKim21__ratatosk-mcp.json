@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.garlicKim21/ratatosk-mcp",
+  "type": "mcp",
+  "name": "ratatosk-mcp",
+  "description": "CNCF release intelligence: typed changes from release notes; check_stack compares versions locally.",
+  "author": "io.github.garlicKim21",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/garlicKim21/ratatosk-mcp",
+    "repo": "garlicKim21/ratatosk-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/garlickim21/ratatosk-mcp:0.7.4"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T09:50:42.52264Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

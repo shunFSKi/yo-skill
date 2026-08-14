@@ -1,0 +1,73 @@
+{
+  "id": "mcp:official/com.trustnotch/trustnotch-mcp",
+  "type": "mcp",
+  "name": "TrustNotch",
+  "description": "Tamper-evident audit logs for AI agents: submit, fetch, and verify cryptographic proof bundles.",
+  "author": "com.trustnotch",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers/com.trustnotch%2Ftrustnotch-mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "trustnotch-mcp"
+    ],
+    "env": [
+      {
+        "name": "TRUSTNOTCH_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "TRUSTNOTCH_API_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TRUSTNOTCH_PUBKEYS_PATH",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-08T19:10:22.244439Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

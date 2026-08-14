@@ -1,0 +1,123 @@
+{
+  "id": "mcp:official/io.github.mhajder/librenms-mcp",
+  "type": "mcp",
+  "name": "LibreNMS MCP",
+  "description": "MCP server for LibreNMS network monitoring - query devices, ports, alerts, and manage infrastructure",
+  "author": "io.github.mhajder",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mhajder/librenms-mcp",
+    "repo": "mhajder/librenms-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "librenms-mcp"
+    ],
+    "env": [
+      {
+        "name": "LIBRENMS_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "LIBRENMS_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "LIBRENMS_VERIFY_SSL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LIBRENMS_TIMEOUT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "READ_ONLY_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DISABLED_TAGS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LOG_LEVEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RATE_LIMIT_ENABLED",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RATE_LIMIT_MAX_REQUESTS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RATE_LIMIT_WINDOW_MINUTES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TOOL_SEARCH_ENABLED",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TOOL_SEARCH_STRATEGY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TOOL_SEARCH_MAX_RESULTS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T19:07:52.657141Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

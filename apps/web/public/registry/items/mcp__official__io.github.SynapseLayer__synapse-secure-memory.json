@@ -1,0 +1,78 @@
+{
+  "id": "mcp:official/io.github.SynapseLayer/synapse-secure-memory",
+  "type": "mcp",
+  "name": "Synapse Layer — Zero-Knowledge Memory",
+  "description": "Zero-Knowledge Context™ & Neural Handover™ for AI Agents. The Trust Layer for AI Memory.",
+  "author": "io.github.SynapseLayer",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/SynapseLayer/synapse-layer",
+    "repo": "SynapseLayer/synapse-layer"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "synapse-layer"
+    ],
+    "env": [
+      {
+        "name": "SYNAPSE_AGENT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SYNAPSE_PRIVACY_EPSILON",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SYNAPSE_ENCRYPTION_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-08T18:42:52.289669Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

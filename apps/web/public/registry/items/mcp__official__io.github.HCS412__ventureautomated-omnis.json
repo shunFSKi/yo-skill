@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.HCS412/ventureautomated-omnis",
+  "type": "mcp",
+  "name": "Omnis Venture Intelligence MCP",
+  "description": "Venture intelligence for autonomous agents with discovery, scoring, and workspace automation.",
+  "author": "io.github.HCS412",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/HCS412/ventureautomated",
+    "repo": "HCS412/ventureautomated"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://www.bamboosnow.co/api/v1/mcp",
+    "env": [
+      {
+        "name": "x-api-key",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-07T02:25:43.873884Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

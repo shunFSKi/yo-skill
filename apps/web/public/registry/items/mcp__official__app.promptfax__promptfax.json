@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/app.promptfax/promptfax",
+  "type": "mcp",
+  "name": "PromptFax",
+  "description": "Send a one-off fax from inside ChatGPT or Claude. Pay-per-use, $2-$4.50 per delivered fax.",
+  "author": "app.promptfax",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://promptfax.app/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://promptfax.app/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-30T17:57:28.233218Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,134 @@
+{
+  "id": "mcp:official/io.github.temporal-cortex/mcp",
+  "type": "mcp",
+  "name": "Temporal Cortex Calendar MCP",
+  "description": "18 deterministic calendar tools: contact resolution, temporal context, availability, booking",
+  "author": "io.github.temporal-cortex",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/temporal-cortex/mcp",
+    "repo": "temporal-cortex/mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@temporal-cortex/cortex-mcp"
+    ],
+    "env": [
+      {
+        "name": "GOOGLE_CLIENT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GOOGLE_CLIENT_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GOOGLE_OAUTH_CREDENTIALS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MICROSOFT_CLIENT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MICROSOFT_CLIENT_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "TIMEZONE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WEEK_START",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TENANT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LOCK_TTL_SECS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OAUTH_REDIRECT_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "HTTP_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "HTTP_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ALLOWED_ORIGINS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TEMPORAL_CORTEX_TELEMETRY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "REDIS_URLS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-10T11:18:08.918334Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

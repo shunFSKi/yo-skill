@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.5dive-ai/5dive-mcp",
+  "type": "mcp",
+  "name": "5dive-mcp",
+  "description": "Expose the 5dive agent-fleet CLI (tasks, agents, digest) as stdio MCP tools.",
+  "author": "io.github.5dive-ai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/5dive-ai/5dive-mcp",
+    "repo": "5dive-ai/5dive-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@5dive/mcp"
+    ],
+    "env": [
+      {
+        "name": "FIVEDIVE_SUDO",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "FIVEDIVE_BIN",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "FIVEDIVE_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-11T20:29:33.868057Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

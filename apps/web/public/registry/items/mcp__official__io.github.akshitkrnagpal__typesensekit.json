@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.akshitkrnagpal/typesensekit",
+  "type": "mcp",
+  "name": "TypesenseKit",
+  "description": "95 typed Typesense operations for AI agents through an MCP server that is read-only by default.",
+  "author": "io.github.akshitkrnagpal",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/akshitkrnagpal/typesensekit",
+    "repo": "akshitkrnagpal/typesensekit"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@typesensekit/mcp"
+    ],
+    "env": [
+      {
+        "name": "TYPESENSE_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "TYPESENSE_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "TYPESENSEKIT_READ_ONLY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TYPESENSE_CONNECTION_TIMEOUT_SECONDS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-12T20:45:07.586696Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,124 @@
+{
+  "id": "mcp:official/io.github.nirholas/x402-bridge",
+  "type": "mcp",
+  "name": "x402 Universal Payer",
+  "description": "Pay any x402 endpoint on the open web: auto-paying bridge with Bazaar discovery and spend caps.",
+  "author": "io.github.nirholas",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/nirholas/three.ws",
+    "repo": "nirholas/three"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@three-ws/mcp-bridge"
+    ],
+    "env": [
+      {
+        "name": "MCP_BRIDGE_EVM_PRIVATE_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MCP_BRIDGE_SVM_PRIVATE_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MCP_BRIDGE_MAX_PRICE_PER_CALL_ATOMIC",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_BRIDGE_MAX_TOTAL_ATOMIC",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_BRIDGE_ALLOWED_PAYTO",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_BRIDGE_ALLOWED_HOSTS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_BRIDGE_ALLOW_HTTP",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_BRIDGE_DISCOVER_LIMIT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_BRIDGE_BAZAAR_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_BRIDGE_BATCH_DEPOSIT_MULTIPLIER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_BRIDGE_MAX_DEPOSIT_ATOMIC",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "X402_MCP_BRIDGE_CHANNELS_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RPC_URL_8453",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-20T21:38:19.569586Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.vassiliylakhonin/agenda-intelligence-md",
+  "type": "mcp",
+  "name": "Agenda Intelligence MD",
+  "description": "Evidence-readiness MCP server: validate, audit, and score briefs, memos, and evidence packs.",
+  "author": "io.github.vassiliylakhonin",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/vassiliylakhonin/agenda-intelligence-md",
+    "repo": "vassiliylakhonin/agenda-intelligence-md"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "agenda-intelligence-md"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-22T07:34:11.121249Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.olyport/fbi-crime",
+  "type": "mcp",
+  "name": "FBI Crime Data",
+  "description": "Crime estimates by type, state arrest data, and national crime trends from the FBI UCR",
+  "author": "com.olyport",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.olyport.com/fbi-crime/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.olyport.com/fbi-crime/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-02T02:26:42.027183Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

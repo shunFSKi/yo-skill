@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.codehabits-dev/codehabits-mcp",
+  "type": "mcp",
+  "name": "Codehabits",
+  "description": "Team conventions, anti-patterns, and domain knowledge from .codehabits/ for AI coding agents.",
+  "author": "io.github.codehabits-dev",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/codehabits-dev/codehabits",
+    "repo": "codehabits-dev/codehabits"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@codehabits/mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-30T02:46:27.613269Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

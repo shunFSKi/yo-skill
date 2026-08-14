@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.betterlytics/mcp",
+  "type": "mcp",
+  "name": "Betterlytics",
+  "description": "Query your Betterlytics web analytics from AI agents: traffic, funnels, journeys, errors, uptime.",
+  "author": "io.betterlytics",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/betterlytics/betterlytics",
+    "repo": "betterlytics/betterlytics"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://betterlytics.io/api/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-02T17:22:25.075706Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

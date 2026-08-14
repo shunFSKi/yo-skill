@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.pendurov/betafinds-mcp",
+  "type": "mcp",
+  "name": "BetaFinds",
+  "description": "Publish and update your startup on BetaFinds from an AI agent — listings, changelog, releases.",
+  "author": "io.github.pendurov",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/pendurov/betafinds-mcp",
+    "repo": "pendurov/betafinds-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://betafinds.com/api/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-08T11:22:05.512904Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

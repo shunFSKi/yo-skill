@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/ai.alpic.mcp/alpic-mcp",
+  "type": "mcp",
+  "name": "Alpic",
+  "description": "Manage your projects, debug deployment, and check analytics for any MCP server you host with Alpic",
+  "author": "ai.alpic.mcp",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.alpic.ai",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.alpic.ai"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-18T15:32:32.672631Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

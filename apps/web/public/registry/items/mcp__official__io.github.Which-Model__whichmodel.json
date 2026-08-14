@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.Which-Model/whichmodel",
+  "type": "mcp",
+  "name": "WhichModel",
+  "description": "Cost-optimized LLM model routing recommendations for autonomous AI agents",
+  "author": "io.github.Which-Model",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/whichmodel/whichmodel-mcp",
+    "repo": "whichmodel/whichmodel-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://whichmodel.dev/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-07T11:12:22.823506Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.ivanantigravity-lgtm/perplexity-polza-mcp-server",
+  "type": "mcp",
+  "name": "perplexity-polza-mcp-server",
+  "description": "Perplexity MCP server backed by the Polza.ai chat completions API.",
+  "author": "io.github.ivanantigravity-lgtm",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ivanantigravity-lgtm/perplexity-polza-mcp-server",
+    "repo": "ivanantigravity-lgtm/perplexity-polza-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "perplexity-polza-mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-22T11:05:39.318231Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.AIWerk/mcp-server-shopify",
+  "type": "mcp",
+  "name": "mcp-server-shopify",
+  "description": "Shopify Admin GraphQL API: products, orders, customers, inventory, and more (read and write).",
+  "author": "io.github.AIWerk",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/AIWerk/mcp-server-shopify",
+    "repo": "AIWerk/mcp-server-shopify"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@aiwerk/mcp-server-shopify"
+    ],
+    "env": [
+      {
+        "name": "SHOPIFY_STORE_DOMAIN",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "SHOPIFY_CLIENT_ID",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "SHOPIFY_CLIENT_SECRET",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-24T00:24:29.768163Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

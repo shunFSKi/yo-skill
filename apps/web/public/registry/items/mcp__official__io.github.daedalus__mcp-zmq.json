@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.daedalus/mcp-zmq",
+  "type": "mcp",
+  "name": "mcp-zmq",
+  "description": "MCP server for ZMQ messaging",
+  "author": "io.github.daedalus",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/daedalus/mcp-zmq",
+    "repo": "daedalus/mcp-zmq"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-zmq"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-05T23:38:01.571901Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

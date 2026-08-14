@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.pepabo/muumuu-domain-mcp",
+  "type": "mcp",
+  "name": "Muumuu Domain MCP Server",
+  "description": "Official remote MCP server bridge for Muumuu Domain.",
+  "author": "io.github.pepabo",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/pepabo/muumuu-domain-mcp",
+    "repo": "pepabo/muumuu-domain-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.muumuu-domain.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-21T03:35:48.98251Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

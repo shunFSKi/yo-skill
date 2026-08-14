@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.frankchu91/mindbase",
+  "type": "mcp",
+  "name": "mindbase",
+  "description": "LLM-maintained personal wiki: cross-references sources, flags contradictions. Local markdown.",
+  "author": "io.github.frankchu91",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/frankchu91/mindbase",
+    "repo": "frankchu91/mindbase"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mindbase-mcp"
+    ],
+    "env": [
+      {
+        "name": "MINDBASE_DATA_DIR",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-25T02:22:47.241904Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.cesteral/msads-mcp",
+  "type": "mcp",
+  "name": "Microsoft Advertising MCP Server",
+  "description": "Microsoft Ads management — CRUD, Google Ads import, ad extensions, and async reports",
+  "author": "io.github.cesteral",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/cesteral/mcp-open-advertising",
+    "repo": "cesteral/mcp-open-advertising"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@cesteral/msads-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-10T15:10:38.214099Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

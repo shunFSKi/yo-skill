@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.sralli/agendum",
+  "type": "mcp",
+  "name": "Agendum",
+  "description": "AI agent memory: task tracking, scoped work packages, decisions, and cross-session continuity",
+  "author": "io.github.sralli",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/sralli/agendum",
+    "repo": "sralli/agendum"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "agendum"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-13T14:16:02.292572Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

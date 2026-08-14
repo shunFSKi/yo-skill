@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.racter-ciso/ractermx",
+  "type": "mcp",
+  "name": "RacterMX",
+  "description": "Manage RacterMX email forwarding — domains, aliases, webhooks, and more — via AI.",
+  "author": "io.github.racter-ciso",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/racter-ciso/ractermx-mcp",
+    "repo": "racter-ciso/ractermx-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@ractermx/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "RACTERMX_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "RACTERMX_API_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-18T06:00:57.781885Z"
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

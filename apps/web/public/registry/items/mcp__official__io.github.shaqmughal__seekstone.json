@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.shaqmughal/seekstone",
+  "type": "mcp",
+  "name": "seekstone",
+  "description": "Filesystem-direct Obsidian MCP server — search and edit your vault with low context-tax.",
+  "author": "io.github.shaqmughal",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/shaqmughal/seekstone",
+    "repo": "shaqmughal/seekstone"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "seekstone"
+    ],
+    "env": [
+      {
+        "name": "SEEKSTONE_VAULT",
+        "required": true,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-08T21:33:11.165227Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

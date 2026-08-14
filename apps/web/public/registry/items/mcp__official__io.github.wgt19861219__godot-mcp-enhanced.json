@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.wgt19861219/godot-mcp-enhanced",
+  "type": "mcp",
+  "name": "godot-mcp-enhanced",
+  "description": "Enhanced Godot 4.5-4.7 MCP: headless+editor+bridge, secure GDScript sandbox, closed-loop AI dev.",
+  "author": "io.github.wgt19861219",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/wgt19861219/godot-mcp-enhanced",
+    "repo": "wgt19861219/godot-mcp-enhanced"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "godot-mcp-enhanced"
+    ],
+    "env": [
+      {
+        "name": "GODOT_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GODOT_PROJECT_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ALLOWED_PROJECT_PATHS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-25T14:22:51.433789Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

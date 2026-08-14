@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/work.agentexchange.tooldrift/monitor",
+  "type": "mcp",
+  "name": "monitor",
+  "description": "Check if an MCP server tool changed or hides injection patterns before you trust it.",
+  "author": "work.agentexchange.tooldrift",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://tooldrift.agentexchange.work/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://tooldrift.agentexchange.work/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T03:11:13.898295Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.JuzzyDee/audio-analyzer",
+  "type": "mcp",
+  "name": "audio-analyzer",
+  "description": "Gives LLMs ears. Spectral, harmonic, rhythm, stereo, and structural audio analysis.",
+  "author": "io.github.JuzzyDee",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/JuzzyDee/audio-analyzer-rs",
+    "repo": "JuzzyDee/audio-analyzer-rs"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/JuzzyDee/audio-analyzer-rs/releases/download/v1.0.0/audio-analyzer-darwin-arm64.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-13T20:49:25.909838Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

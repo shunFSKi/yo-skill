@@ -1,0 +1,98 @@
+{
+  "id": "mcp:official/io.github.openkash/abap-accelerator",
+  "type": "mcp",
+  "name": "ABAP Accelerator",
+  "description": "MCP server for SAP ABAP development with 15 tools for ABAP objects, syntax, ATC, and more",
+  "author": "io.github.openkash",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/openkash/abap-accelerator",
+    "repo": "openkash/abap-accelerator"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "abap-accelerator"
+    ],
+    "env": [
+      {
+        "name": "SAP_HOST",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "SAP_INSTANCE_NUMBER",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "SAP_CLIENT",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "SAP_USERNAME",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "SAP_PASSWORD",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "SAP_LANGUAGE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SAP_SECURE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SSL_VERIFY",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-03T20:28:09.667037Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

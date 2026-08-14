@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/email.fixture/email-testing",
+  "type": "mcp",
+  "name": "fixture.email — Email Testing for Agents",
+  "description": "Disposable test mailboxes on a real domain: send, receive and assert on real email.",
+  "author": "email.fixture",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/j6-integrated/fixture.email",
+    "repo": "j6-integrated/fixture"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.fixture.email/mcp",
+    "env": [
+      {
+        "name": "X-API-Key",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T03:34:22.85754Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

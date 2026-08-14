@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/bot.ttrpg/grimoire",
+  "type": "mcp",
+  "name": "Grimoire",
+  "description": "Manage TTRPG campaigns: NPCs, locations, factions, quests, sessions, lore, and knowledge graphs.",
+  "author": "bot.ttrpg",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/zafety-vibin/grimoire-mcp",
+    "repo": "zafety-vibin/grimoire-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.ttrpg.bot/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-27T18:32:41.999209Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

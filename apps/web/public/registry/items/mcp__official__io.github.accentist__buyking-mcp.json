@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.accentist/buyking-mcp",
+  "type": "mcp",
+  "name": "BuyKing MCP Server",
+  "description": "세일프라자 AI 사자왕 Bㅏ이킹의 핫딜 시맨틱 검색 서버. 쿠팡, 알리익스프레스, 11번가, G마켓 등 국내외 방대한 초특가/핫딜 정보를 시맨틱 검색으로 제공합니다.",
+  "author": "io.github.accentist",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/accentist/buyking-mcp",
+    "repo": "accentist/buyking-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "buyking-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-06T12:01:18.519434Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

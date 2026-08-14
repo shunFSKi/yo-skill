@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.jonnybottles/azure-updates",
+  "type": "mcp",
+  "name": "azure-updates",
+  "description": "MCP server for Azure Updates RSS feed - search, filter, and summarize Azure service updates",
+  "author": "io.github.jonnybottles",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/jonnybottles/azure-updates-mcp",
+    "repo": "jonnybottles/azure-updates-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "azure-updates-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-01-31T13:24:28.694965Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.yolo-labz/wa",
+  "type": "mcp",
+  "name": "wa — safe WhatsApp automation",
+  "description": "Safety-first WhatsApp tools: draft-gated sends, enforced rate limits, append-only audit.",
+  "author": "io.github.yolo-labz",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/yolo-labz/wa",
+    "repo": "yolo-labz/wa"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/yolo-labz/wa/releases/download/v2.2.0/wa_2.2.0_darwin_arm64.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-02T16:43:14.078678Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

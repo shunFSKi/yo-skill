@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.AlexDeMichieli/weather",
+  "type": "mcp",
+  "name": "weather",
+  "description": "An MCP server for weather information.",
+  "author": "io.github.AlexDeMichieli",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/alexdemichieli/mcp-weather-server",
+    "repo": "alexdemichieli/mcp-weather-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@alexdemichieli/mcp-weather-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-01-12T19:37:44.758462Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

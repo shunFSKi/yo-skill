@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/ai.maximem/synap",
+  "type": "mcp",
+  "name": "Synap Memory",
+  "description": "Persistent memory for AI agents — log and recall conversation context over MCP.",
+  "author": "ai.maximem",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/maximem-ai/maximem_synap_sdk",
+    "repo": "maximem-ai/maximem_synap_sdk"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://synap-mcp.maximem.ai/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-22T06:30:15.069666Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

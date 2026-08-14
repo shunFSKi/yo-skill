@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/dev.kaimeilabs/guardian-engine",
+  "type": "mcp",
+  "name": "Guardian Engine",
+  "description": "Deterministic recipe verification engine — validates AI-generated recipes against master SOPs.",
+  "author": "dev.kaimeilabs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/kaimeilabs/guardian-api-docs",
+    "repo": "kaimeilabs/guardian-api-docs"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.kaimeilabs.dev/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-27T16:38:20.300474Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

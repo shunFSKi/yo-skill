@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.ox31461/robyn",
+  "type": "mcp",
+  "name": "Robyn — Gasless Cross-Chain for AI Agents",
+  "description": "Gasless cross-chain for AI agents: 25 nodes incl. Solana & native Bitcoin. One signature, no gas.",
+  "author": "io.github.ox31461",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ox31461/Gasless-Anygas-ROBYN-Relay",
+    "repo": "ox31461/Gasless-Anygas-ROBYN-Relay"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "anygas-mcp"
+    ],
+    "env": [
+      {
+        "name": "ROBYN_SVC",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ROBYN_SIGNER_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-14T07:00:21.967438Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

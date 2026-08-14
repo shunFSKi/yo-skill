@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.eltociear/skill-audit-mcp",
+  "type": "mcp",
+  "name": "skill-audit-mcp",
+  "description": "Scan agent skills and MCP servers for malicious patterns before you load them",
+  "author": "io.github.eltociear",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/eltociear/skill-audit-mcp",
+    "repo": "eltociear/skill-audit-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://eltociear-skill-audit.hf.space/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-29T09:02:51.61601Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

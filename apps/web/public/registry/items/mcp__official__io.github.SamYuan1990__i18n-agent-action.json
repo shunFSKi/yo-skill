@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.SamYuan1990/i18n-agent-action",
+  "type": "mcp",
+  "name": "i18n-agent-action",
+  "description": "An i18n github action for language translate",
+  "author": "io.github.SamYuan1990",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers/io.github.SamYuan1990%2Fi18n-agent-action",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/SamYuan1990/i18n-agent-action:mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-09-24T12:17:46.198378Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

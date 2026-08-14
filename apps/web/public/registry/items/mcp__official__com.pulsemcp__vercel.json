@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/com.pulsemcp/vercel",
+  "type": "mcp",
+  "name": "vercel",
+  "description": "MCP server for Vercel — manage deployments and view build and runtime application logs.",
+  "author": "com.pulsemcp",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/pulsemcp/mcp-servers",
+    "repo": "pulsemcp/mcp-servers"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "vercel-platform-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "VERCEL_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "VERCEL_TEAM_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "VERCEL_TEAM_SLUG",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "VERCEL_ENABLED_TOOLGROUPS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-14T17:30:16.282977Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

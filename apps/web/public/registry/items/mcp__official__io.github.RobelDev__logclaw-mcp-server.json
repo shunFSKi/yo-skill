@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.RobelDev/logclaw-mcp-server",
+  "type": "mcp",
+  "name": "logclaw-mcp-server",
+  "description": "Connect AI coding tools to LogClaw incidents, logs, and anomaly detections.",
+  "author": "io.github.RobelDev",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/logclaw/logclaw",
+    "repo": "logclaw/logclaw"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "logclaw-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "LOGCLAW_API_KEY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LOGCLAW_ENDPOINT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-11T08:28:52.009912Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

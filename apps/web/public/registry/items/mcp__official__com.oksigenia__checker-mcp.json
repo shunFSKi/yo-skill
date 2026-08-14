@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/com.oksigenia/checker-mcp",
+  "type": "mcp",
+  "name": "checker-mcp",
+  "description": "Domain security & privacy checker as an MCP server. 17 live checks, 0-100 score, local-first.",
+  "author": "com.oksigenia",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/OksigeniaSL/checker-mcp",
+    "repo": "OksigeniaSL/checker-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@oksigenia/checker-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-21T23:22:31.599136Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

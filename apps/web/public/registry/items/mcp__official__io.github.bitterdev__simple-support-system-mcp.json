@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.bitterdev/simple-support-system-mcp",
+  "type": "mcp",
+  "name": "simple-support-system-mcp",
+  "description": "MCP server for the Simple Support System helpdesk API: read, answer and move tickets.",
+  "author": "io.github.bitterdev",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/bitterdev/simple-support-system-mcp",
+    "repo": "bitterdev/simple-support-system-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "simple-support-system-mcp"
+    ],
+    "env": [
+      {
+        "name": "SIMPLE_SUPPORT_SYSTEM_BASE_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "SIMPLE_SUPPORT_SYSTEM_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SIMPLE_SUPPORT_SYSTEM_PROJECT_TOKEN",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-27T15:15:23.952384Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

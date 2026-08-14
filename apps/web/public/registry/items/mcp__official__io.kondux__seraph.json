@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.kondux/seraph",
+  "type": "mcp",
+  "name": "Seraph",
+  "description": "Crypto transaction firewall and risk tools for MCP agents.",
+  "author": "io.kondux",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Kondux/seraph-mcp-public",
+    "repo": "Kondux/seraph-mcp-public"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://seraph.kondux.io/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-09T19:06:31.60946Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

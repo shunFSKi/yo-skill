@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.oneprofile-dev/curatedmcp-catalog-mcp",
+  "type": "mcp",
+  "name": "curatedmcp-catalog-mcp",
+  "description": "Search the CuratedMCP catalog of risk-classified MCP servers and check verification status.",
+  "author": "io.github.oneprofile-dev",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/oneprofile-dev/curatedmcp-catalog-mcp",
+    "repo": "oneprofile-dev/curatedmcp-catalog-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@curatedmcp/mcp"
+    ],
+    "env": [
+      {
+        "name": "CURATEDMCP_APP_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-05T03:44:31.759234Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

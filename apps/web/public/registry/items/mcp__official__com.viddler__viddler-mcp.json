@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/com.viddler/viddler-mcp",
+  "type": "mcp",
+  "name": "Viddler",
+  "description": "Official Viddler MCP: list videos, manage access control, pull proof-of-viewing analytics.",
+  "author": "com.viddler",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.viddler.com/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.viddler.com/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-28T15:56:53.13915Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

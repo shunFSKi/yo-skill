@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/com.readyapis/api",
+  "type": "mcp",
+  "name": "Ready APIs",
+  "description": "135 MCP tools: geo, email, phone, company, DNS, FX, equities, weather, tax, econ, intel — one key.",
+  "author": "com.readyapis",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ReadyAPIs-com/readyapis",
+    "repo": "ReadyAPIs-com/readyapis"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://readyapis.com/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-13T14:43:16.880489Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

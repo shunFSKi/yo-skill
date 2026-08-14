@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.VCoder25/vugola-mcp",
+  "type": "mcp",
+  "name": "vugola-mcp",
+  "description": "Clip videos into captioned shorts, add captions & schedule posts — from Claude, ChatGPT, Cursor.",
+  "author": "io.github.VCoder25",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/VCoder25/vugola-mcp",
+    "repo": "VCoder25/vugola-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "vugola-mcp"
+    ],
+    "env": [
+      {
+        "name": "VUGOLA_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-09T02:49:04.690137Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

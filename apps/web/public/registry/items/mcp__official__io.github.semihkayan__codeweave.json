@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.semihkayan/codeweave",
+  "type": "mcp",
+  "name": "codeweave",
+  "description": "Save tokens while coding — your AI agent gets structured code context, not file dumps.",
+  "author": "io.github.semihkayan",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/semihkayan/codeweave-mcp",
+    "repo": "semihkayan/codeweave-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@codeweave/mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-03T08:13:58.295328Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

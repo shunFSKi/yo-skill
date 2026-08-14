@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/dev.filetopdf/filetopdf-mcp",
+  "type": "mcp",
+  "name": "FileToPDF",
+  "description": "Convert files, HTML, and Markdown to PDF via the FileToPDF API. Bring your own API key.",
+  "author": "dev.filetopdf",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/FileToPDF/filetopdf-mcp",
+    "repo": "FileToPDF/filetopdf-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "filetopdf-mcp"
+    ],
+    "env": [
+      {
+        "name": "FILETOPDF_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-10T19:15:10.443867Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

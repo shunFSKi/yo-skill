@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.zigpoll/zigpoll-mcp",
+  "type": "mcp",
+  "name": "Zigpoll",
+  "description": "Analyze Zigpoll survey responses, track trends, and get AI-powered insights.",
+  "author": "com.zigpoll",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/JasonZigelbaum/zigpoll-mcp-plugin",
+    "repo": "JasonZigelbaum/zigpoll-mcp-plugin"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.zigpoll.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-13T21:44:55.021467Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

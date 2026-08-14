@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.pcas-io/plexus",
+  "type": "mcp",
+  "name": "plexus",
+  "description": "Typed on-prem knowledge graph for AI agents — read-only for humans, write-only for agents via MCP.",
+  "author": "io.github.pcas-io",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/pcas-io/plexus",
+    "repo": "pcas-io/plexus"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://{plexus_host}/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-27T11:40:42.528354Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

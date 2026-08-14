@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/ai.physea/liminality",
+  "type": "mcp",
+  "name": "Liminality",
+  "description": "Breaks a hard question or decision into grounded sub-questions and returns a checkable route.",
+  "author": "ai.physea",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/jaybro2042-alt/liminality-mcp",
+    "repo": "jaybro2042-alt/liminality-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://liminality.physea.ai/mcp",
+    "env": [
+      {
+        "name": "X-API-Key",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-06T01:02:37.781217Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

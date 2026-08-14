@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.theUpsider/lsp-mcp",
+  "type": "mcp",
+  "name": "lsp-mcp",
+  "description": "Universal LSP MCP server",
+  "author": "io.github.theUpsider",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/theUpsider/lsp-mcp",
+    "repo": "theUpsider/lsp-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@theupsider/lsp-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-05T12:57:16.62623Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

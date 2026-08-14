@@ -1,0 +1,83 @@
+{
+  "id": "mcp:official/io.github.54yyyu/zotero-mcp",
+  "type": "mcp",
+  "name": "Zotero MCP",
+  "description": "Search, read, annotate, and add to your Zotero research library, local or web.",
+  "author": "io.github.54yyyu",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/54yyyu/zotero-mcp",
+    "repo": "54yyyu/zotero-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "zotero-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "ZOTERO_LOCAL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ZOTERO_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ZOTERO_LIBRARY_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ZOTERO_LIBRARY_TYPE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ZOTERO_MCP_TOOLSETS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-06T00:38:45.116904Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

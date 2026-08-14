@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/dev.workers.perch-app.meetwhen/meetwhen",
+  "type": "mcp",
+  "name": "meetwhen",
+  "description": "Free no-signup group scheduling (a modern When2meet): share one link, find a time for everyone.",
+  "author": "dev.workers.perch-app.meetwhen",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://meetwhen.perch-app.workers.dev/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://meetwhen.perch-app.workers.dev/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-29T18:08:27.113119Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

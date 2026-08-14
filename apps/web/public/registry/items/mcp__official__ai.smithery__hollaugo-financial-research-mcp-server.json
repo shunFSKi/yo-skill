@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/ai.smithery/hollaugo-financial-research-mcp-server",
+  "type": "mcp",
+  "name": "hollaugo-financial-research-mcp-server",
+  "description": "Analyze stocks with summaries, price targets, and analyst recommendations. Track SEC filings, divi…",
+  "author": "ai.smithery",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/hollaugo/tutorials",
+    "repo": "hollaugo/tutorials"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://server.smithery.ai/@hollaugo/financial-research-mcp-server/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-09-29T16:56:54.604903Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/run.stas/stas",
+  "type": "mcp",
+  "name": "STAS Running Coach for Claude",
+  "description": "Connect Claude to your Intervals.icu watch data for fitness, workout review, and plan writing.",
+  "author": "run.stas",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/hivrich/stas.run",
+    "repo": "hivrich/stas"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://stas.run/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-17T12:08:25.134876Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

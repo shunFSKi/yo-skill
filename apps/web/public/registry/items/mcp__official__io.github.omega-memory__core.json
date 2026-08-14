@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.omega-memory/core",
+  "type": "mcp",
+  "name": "core",
+  "description": "Persistent memory for AI coding agents. #1 on LongMemEval. Local-first.",
+  "author": "io.github.omega-memory",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/omega-memory/core",
+    "repo": "omega-memory/core"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "omega-memory"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-15T08:44:10.803635Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.alexar76/aimarket-plugins",
+  "type": "mcp",
+  "name": "AIMarket MCP Packager",
+  "description": "Stdio MCP packager: AIMarket hub plugins into self-hosted MCP server products.",
+  "author": "io.github.alexar76",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/alexar76/aimarket-plugins",
+    "repo": "alexar76/aimarket-plugins"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "aimarket-mcp-packager"
+    ],
+    "env": [
+      {
+        "name": "AIMARKET_HUB_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-07T17:53:12.739341Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

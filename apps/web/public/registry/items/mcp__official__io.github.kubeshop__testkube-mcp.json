@@ -1,0 +1,104 @@
+{
+  "id": "mcp:official/io.github.kubeshop/testkube-mcp",
+  "type": "mcp",
+  "name": "testkube-mcp",
+  "description": "MCP server for Testkube - Manage test workflows, executions, and artifacts via AI assistants",
+  "author": "io.github.kubeshop",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/kubeshop/testkube",
+    "repo": "kubeshop/testkube"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "docker.io/kubeshop/mcp-server:2.9.1"
+    ],
+    "env": [
+      {
+        "name": "TK_ACCESS_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "TK_ORG_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "TK_ENV_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "TK_CONTROL_PLANE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TK_DASHBOARD_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TK_DEBUG",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TK_MCP_TRANSPORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TK_MCP_SHTTP_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TK_MCP_SHTTP_PORT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-24T08:35:31.489242Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

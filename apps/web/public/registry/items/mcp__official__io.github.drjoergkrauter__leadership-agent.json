@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.drjoergkrauter/leadership-agent",
+  "type": "mcp",
+  "name": "leadership-agent",
+  "description": "MCP-Server zum Buch 'Zukunft führen' (Dr. Jörg Krauter): BANI & Leadership-Impulse.",
+  "author": "io.github.drjoergkrauter",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/drjoergkrauter/zukunft-fuehren",
+    "repo": "drjoergkrauter/zukunft-fuehren"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://zukunft-fuehren-mcp.joerg-krauter.workers.dev/"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-17T15:02:31.480116Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

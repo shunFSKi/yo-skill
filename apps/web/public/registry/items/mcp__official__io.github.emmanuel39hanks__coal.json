@@ -1,0 +1,65 @@
+{
+  "id": "mcp:official/io.github.emmanuel39hanks/coal",
+  "type": "mcp",
+  "name": "Coal — Payments for AI agents",
+  "description": "Payment rails for AI agents. Pay merchants in USDC on Base. Dual-protocol: x402 + OKX APP.",
+  "author": "io.github.emmanuel39hanks",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/emmanuel39hanks/coal",
+    "repo": "emmanuel39hanks/coal"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.usecoal.xyz/api/mcp",
+    "env": [
+      {
+        "name": "X-Coal-Agent-Key",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "X-Coal-Api-Key",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-07T14:00:33.260438Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

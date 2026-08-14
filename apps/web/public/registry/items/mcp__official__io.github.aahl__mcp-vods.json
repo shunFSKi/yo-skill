@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.aahl/mcp-vods",
+  "type": "mcp",
+  "name": "MCP Server for Binge-watch",
+  "description": "MCP Server for Binge-watch / MoonTV / LunaTV. 一个用于追剧/追番的MCP服务器，为AI提供搜索影视播放地址的能力，并支持在小米等安卓电视/投影仪上直接播放",
+  "author": "io.github.aahl",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/aahl/mcp-vods",
+    "repo": "aahl/mcp-vods"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-vods"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-01-29T14:27:05.01654Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

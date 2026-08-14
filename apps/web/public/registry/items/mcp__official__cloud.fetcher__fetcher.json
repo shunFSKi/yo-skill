@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/cloud.fetcher/fetcher",
+  "type": "mcp",
+  "name": "fetcher",
+  "description": "The web capability layer for AI agents: render, extract, DNS, SSL, WHOIS & more via x402.",
+  "author": "cloud.fetcher",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/fetchercloud/fetcher-cloud",
+    "repo": "fetchercloud/fetcher-cloud"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.fetcher.cloud/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-04T19:33:17.795503Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

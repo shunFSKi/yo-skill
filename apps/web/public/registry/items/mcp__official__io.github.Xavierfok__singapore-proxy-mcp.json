@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.Xavierfok/singapore-proxy-mcp",
+  "type": "mcp",
+  "name": "singapore-proxy-mcp",
+  "description": "Browse the web and run Google search through real Singapore mobile carrier IPs.",
+  "author": "io.github.Xavierfok",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Xavierfok/singapore-proxy-mcp",
+    "repo": "Xavierfok/singapore-proxy-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.singaporemobileproxy.com/mcp",
+    "env": [
+      {
+        "name": "x-api-key",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-02T15:38:18.256756Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

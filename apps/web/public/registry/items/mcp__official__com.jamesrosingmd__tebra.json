@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/com.jamesrosingmd/tebra",
+  "type": "mcp",
+  "name": "tebra",
+  "description": "MCP server for Tebra/Kareo practice management — patients, billing, scheduling, FHIR (45 tools)",
+  "author": "com.jamesrosingmd",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/jamesrosing/tebra-mcp-server",
+    "repo": "jamesrosing/tebra-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "tebra-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "TEBRA_SOAP_USER",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "TEBRA_SOAP_PASSWORD",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "TEBRA_CUSTOMER_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-28T09:39:32.426191Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

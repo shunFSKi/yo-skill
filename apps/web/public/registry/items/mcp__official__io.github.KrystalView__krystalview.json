@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.KrystalView/krystalview",
+  "type": "mcp",
+  "name": "KrystalView Analytics",
+  "description": "Read-only MCP access to sessions, funnels, campaigns, errors, live visitors, and anomalies.",
+  "author": "io.github.KrystalView",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/KrystalView/krystalview-mcp",
+    "repo": "KrystalView/krystalview-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "krystalview-mcp"
+    ],
+    "env": [
+      {
+        "name": "KRYSTALVIEW_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "KRYSTALVIEW_BASE_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-10T11:36:48.831276Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

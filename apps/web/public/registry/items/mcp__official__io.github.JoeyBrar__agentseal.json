@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.JoeyBrar/agentseal",
+  "type": "mcp",
+  "name": "agentseal",
+  "description": "Verifiable action logs for AI agents. Every action is recorded in a SHA-256 hash chain.",
+  "author": "io.github.JoeyBrar",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/JoeyBrar/agentseal-mcp",
+    "repo": "JoeyBrar/agentseal-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "agentseal-mcp"
+    ],
+    "env": [
+      {
+        "name": "AGENTSEAL_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-18T13:58:21.945057Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

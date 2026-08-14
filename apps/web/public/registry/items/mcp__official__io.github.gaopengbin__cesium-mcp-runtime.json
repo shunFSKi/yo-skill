@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.gaopengbin/cesium-mcp-runtime",
+  "type": "mcp",
+  "name": "cesium-mcp-runtime",
+  "description": "AI-powered 3D globe control via MCP. Camera, layers, markers, spatial analysis with CesiumJS.",
+  "author": "io.github.gaopengbin",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/gaopengbin/cesium-mcp",
+    "repo": "gaopengbin/cesium-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "cesium-mcp-runtime"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-14T20:11:48.793448Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

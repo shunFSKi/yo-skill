@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.kamil5b/db2toon-mcp",
+  "type": "mcp",
+  "name": "DB2TOON MCP",
+  "description": "Read-only SQL database and plain-text SQL dump schema extraction to compact TOON for MCP clients.",
+  "author": "io.github.kamil5b",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/kamil5b/db2toon",
+    "repo": "kamil5b/db2toon"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/kamil5b/db2toon:v1.4.4"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T00:51:26.415109Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

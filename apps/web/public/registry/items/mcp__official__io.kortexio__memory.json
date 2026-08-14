@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.kortexio/memory",
+  "type": "mcp",
+  "name": "Kortexio Memory",
+  "description": "Hosted ambient memory for AI agents. Retrieve context and save notes via MCP tools with OAuth.",
+  "author": "io.kortexio",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Kortexio/ContextMemory",
+    "repo": "Kortexio/ContextMemory"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.kortexio.io/{appId}/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-22T21:25:44.049071Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

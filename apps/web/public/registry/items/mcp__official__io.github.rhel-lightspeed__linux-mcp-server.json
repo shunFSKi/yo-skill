@@ -1,0 +1,113 @@
+{
+  "id": "mcp:official/io.github.rhel-lightspeed/linux-mcp-server",
+  "type": "mcp",
+  "name": "linux-mcp-server",
+  "description": "MCP server for read-only Linux system administration, diagnostics, and troubleshooting",
+  "author": "io.github.rhel-lightspeed",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/rhel-lightspeed/linux-mcp-server",
+    "repo": "rhel-lightspeed/linux-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "linux-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "LINUX_MCP_USER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LINUX_MCP_SSH_KEY_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LINUX_MCP_KEY_PASSPHRASE",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "LINUX_MCP_SEARCH_FOR_SSH_KEY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LINUX_MCP_COMMAND_TIMEOUT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LINUX_MCP_VERIFY_HOST_KEYS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LINUX_MCP_KNOWN_HOSTS_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LINUX_MCP_ALLOWED_LOG_PATHS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LINUX_MCP_LOG_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LINUX_MCP_LOG_LEVEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LINUX_MCP_LOG_RETENTION_DAYS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-09T17:41:03.997574Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

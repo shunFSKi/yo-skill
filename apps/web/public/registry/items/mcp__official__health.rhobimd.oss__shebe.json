@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/health.rhobimd.oss/shebe",
+  "type": "mcp",
+  "name": "shebe",
+  "description": "Fast BM25 full-text search for code repositories. 14 MCP tools, 2ms search latency.",
+  "author": "health.rhobimd.oss",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://gitlab.com/rhobimd-oss/shebe",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://gitlab.com/rhobimd-oss/shebe/-/releases/v0.5.8/downloads/shebe-mcp-v0.5.8.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-03T20:11:28.51098Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

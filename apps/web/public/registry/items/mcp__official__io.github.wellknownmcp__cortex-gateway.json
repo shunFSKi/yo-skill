@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.wellknownmcp/cortex-gateway",
+  "type": "mcp",
+  "name": "cortex-gateway",
+  "description": "Self-hosted federated MCP gateway: one OAuth 2.1 MCP server in front of N apps, user-level scopes.",
+  "author": "io.github.wellknownmcp",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/wellknownmcp/cortex-gateway",
+    "repo": "wellknownmcp/cortex-gateway"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/wellknownmcp/cortex-gateway:v0.2.0"
+    ],
+    "env": [
+      {
+        "name": "CORTEX_CANONICAL_URI",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "OAUTH_ISSUER",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "CORTEX_BACKENDS",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "CORTEX_TECHNICAL_TOKEN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-20T11:51:16.164263Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

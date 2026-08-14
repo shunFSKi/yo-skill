@@ -1,0 +1,88 @@
+{
+  "id": "mcp:official/io.github.ykshah1309/global-sentinel-mcp",
+  "type": "mcp",
+  "name": "global-sentinel-mcp",
+  "description": "Polymarket, GDELT, OpenSky, Cloudflare Radar unified as one MCP server.",
+  "author": "io.github.ykshah1309",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ykshah1309/global-sentinel-mcp",
+    "repo": "ykshah1309/global-sentinel-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "global-sentinel-mcp"
+    ],
+    "env": [
+      {
+        "name": "OPENSKY_CLIENT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OPENSKY_CLIENT_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "OPENSKY_USERNAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OPENSKY_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "CLOUDFLARE_API_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-20T16:22:00.717936Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

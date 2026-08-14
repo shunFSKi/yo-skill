@@ -1,0 +1,123 @@
+{
+  "id": "mcp:official/io.github.Snowflake-Labs/mcp",
+  "type": "mcp",
+  "name": "OSS Snowflake MCP Server",
+  "description": "MCP Server for Snowflake from Snowflake Labs",
+  "author": "io.github.Snowflake-Labs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Snowflake-Labs/mcp",
+    "repo": "Snowflake-Labs/mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "snowflake-labs-mcp"
+    ],
+    "env": [
+      {
+        "name": "SNOWFLAKE_ACCOUNT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SNOWFLAKE_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SNOWFLAKE_USER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SNOWFLAKE_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SNOWFLAKE_ROLE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SNOWFLAKE_WAREHOUSE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SNOWFLAKE_PASSCODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SNOWFLAKE_PRIVATE_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SNOWFLAKE_PRIVATE_KEY_FILE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SNOWFLAKE_PRIVATE_KEY_FILE_PWD",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SNOWFLAKE_MCP_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SNOWFLAKE_MCP_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SNOWFLAKE_MCP_ENDPOINT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-10-28T15:19:33.176334Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

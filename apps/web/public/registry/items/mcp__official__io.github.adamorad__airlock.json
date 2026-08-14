@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.adamorad/airlock",
+  "type": "mcp",
+  "name": "airlock",
+  "description": "Local daemon giving AI agents named locks, shared state, events, and a task queue over MCP.",
+  "author": "io.github.adamorad",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/adamorad/airlock",
+    "repo": "adamorad/airlock"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/adamorad/airlock:2.0.0"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-18T09:37:08.771411Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

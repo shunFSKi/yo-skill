@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.SalesforgeAI/forge-mcp",
+  "type": "mcp",
+  "name": "forge-mcp",
+  "description": "MCP server for Salesforge, Primeforge, Leadsforge, Infraforge, Warmforge, and Mailforge",
+  "author": "io.github.SalesforgeAI",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/SalesforgeAI/forge-mcp",
+    "repo": "SalesforgeAI/forge-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@salesforge/forge-mcp"
+    ],
+    "env": [
+      {
+        "name": "SALESFORGE_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PRIMEFORGE_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "LEADSFORGE_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "INFRAFORGE_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MAILFORGE_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-25T23:08:22.256742Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

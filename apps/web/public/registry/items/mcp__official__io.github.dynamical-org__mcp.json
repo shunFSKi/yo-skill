@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.dynamical-org/mcp",
+  "type": "mcp",
+  "name": "dynamical.org Weather & Climate Catalog",
+  "description": "Search dynamical.org's open STAC catalog of weather & climate datasets (GFS, ECMWF, HRRR).",
+  "author": "io.github.dynamical-org",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.dynamical.org/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.dynamical.org/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-06T19:52:29.107585Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

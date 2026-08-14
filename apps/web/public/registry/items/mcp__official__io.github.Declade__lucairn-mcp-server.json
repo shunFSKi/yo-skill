@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.Declade/lucairn-mcp-server",
+  "type": "mcp",
+  "name": "lucairn-mcp-server",
+  "description": "Pseudonymizes PII before your LLM and returns a cryptographically signed receipt per response.",
+  "author": "io.github.Declade",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Declade/lucairn-sdks",
+    "repo": "Declade/lucairn-sdks"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@lucairn/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "LUCAIRN_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "ANTHROPIC_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "OPENAI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "LUCAIRN_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LUCAIRN_TRANSPORT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-31T11:56:56.669441Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

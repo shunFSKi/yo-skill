@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.Br0ski777/twitter-scraper",
+  "type": "mcp",
+  "name": "Twitter Scraper API",
+  "description": "Scrape Twitter/X profiles, tweets, search. No API key. Structured JSON. x402 pay-per-call.",
+  "author": "io.github.Br0ski777",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Br0ski777/twitter-scraper-x402",
+    "repo": "Br0ski777/twitter-scraper-x402"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://twitter-scraper.api.klymax402.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-16T13:33:14.405907Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

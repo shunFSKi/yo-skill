@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.Philongevity/phi-longevity-prism",
+  "type": "mcp",
+  "name": "phi-longevity-prism",
+  "description": "Analyze biomarker panels with an MD-led clinical engine. Guideline-cited. Synthetic data only.",
+  "author": "io.github.Philongevity",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Philongevity/phi-mcp-server",
+    "repo": "Philongevity/phi-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@phi-longevity/mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-20T16:32:23.133417Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

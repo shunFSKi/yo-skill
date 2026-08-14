@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.darrenjrobinson/microsoft-ai-roundup",
+  "type": "mcp",
+  "name": "microsoft-ai-roundup",
+  "description": "Search Merill's Weekly Microsoft AI Roundup (msai.ms) archive — curated weekly Microsoft AI news",
+  "author": "io.github.darrenjrobinson",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/darrenjrobinson/microsoft-ai-roundup-mcp",
+    "repo": "darrenjrobinson/microsoft-ai-roundup-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "microsoft-ai-roundup-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-16T00:46:34.931609Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

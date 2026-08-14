@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/nz.agenticrail/gate",
+  "type": "mcp",
+  "name": "AgenticRail Gate - sequence enforcement and verifiable audit receipts for AI agent compliance",
+  "description": "Deterministic runtime enforcement of step order for AI agents: ALLOW/DENY before a step runs.",
+  "author": "nz.agenticrail",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.agenticrail.nz/",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.agenticrail.nz/"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-06T21:33:46.722864Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

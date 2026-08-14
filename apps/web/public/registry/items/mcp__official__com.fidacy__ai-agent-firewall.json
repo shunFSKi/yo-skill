@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/com.fidacy/ai-agent-firewall",
+  "type": "mcp",
+  "name": "ai-agent-firewall",
+  "description": "Every agent action watched, every money-moving one gated, every verdict independently verifiable.",
+  "author": "com.fidacy",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/lucaslubi/fidacy-mcp",
+    "repo": "lucaslubi/fidacy-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@fidacy/mcp"
+    ],
+    "env": [
+      {
+        "name": "FIDACY_ENGINE_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "FIDACY_OPERATOR_EMAIL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "FIDACY_MODE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-29T02:12:58.943148Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

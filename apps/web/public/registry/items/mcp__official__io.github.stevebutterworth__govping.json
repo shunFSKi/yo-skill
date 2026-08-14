@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.stevebutterworth/govping",
+  "type": "mcp",
+  "name": "govping",
+  "description": "Free regulatory intelligence. Search 27,000+ changes across 2,000+ government sources.",
+  "author": "io.github.stevebutterworth",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/stevebutterworth/govping-mcp",
+    "repo": "stevebutterworth/govping-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "govping-mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-28T15:48:16.187299Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

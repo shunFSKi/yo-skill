@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.eugenelabonarsky/votura-tours",
+  "type": "mcp",
+  "name": "Votura Tours",
+  "description": "Search AI-powered audio tours and points of interest by city. Walking, cycling, and driving tours.",
+  "author": "io.github.eugenelabonarsky",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/eugenelabonarsky/votura-mcp",
+    "repo": "eugenelabonarsky/votura-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.votura.app/functions/v1/app_a0630e492b_mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-23T21:07:04.863387Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

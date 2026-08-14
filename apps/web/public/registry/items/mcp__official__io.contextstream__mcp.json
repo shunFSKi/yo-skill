@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.contextstream/mcp",
+  "type": "mcp",
+  "name": "ContextStream",
+  "description": "Persistent memory and cross-session learning for AI coding assistants (hosted remote MCP).",
+  "author": "io.contextstream",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/contextstream/mcp-server",
+    "repo": "contextstream/mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.contextstream.io/mcp?default_context_mode=fast&src=registry"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-13T19:43:31.116331Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

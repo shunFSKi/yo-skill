@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.Evozim/logisticflow",
+  "type": "mcp",
+  "name": "LogisticFlow",
+  "description": "Logistics path finder and supply chain route optimizer.",
+  "author": "io.github.Evozim",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://logisticflow-mcp.vercel.app/api/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://logisticflow-mcp.vercel.app/api/mcp",
+    "env": [
+      {
+        "name": "payment-signature",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-28T16:24:32.873048Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

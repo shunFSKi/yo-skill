@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.inviti8/obolus",
+  "type": "mcp",
+  "name": "Obolus",
+  "description": "Disposable Algorand wallet for AI agents. Pay x402 resources in USDC, no human provisioning.",
+  "author": "io.github.inviti8",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/inviti8/Obolus",
+    "repo": "inviti8/Obolus"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "obolus"
+    ],
+    "env": [
+      {
+        "name": "OBOLUS_NETWORK",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OBOLUS_DATA_DIR",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T06:09:38.722736Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "<!-- mcp-name: io.github.inviti8/obolus -->\n\n<p align=\"center\">\n  <img src=\"https://raw.githubusercontent.com/inviti8/Obolus/main/assets/obolus-logo.svg\" alt=\"Obolus\" width=\"120\" height=\"120\">\n</p>\n\n<h1 align=\"center\">Obolus</h1>\n\n<!-- The logo above is a placeholder. Replace assets/obolus-logo.svg; the only\n     reference is the absolute URL above, which is absolute because PyPI does\n     not resolve relative paths in a long description. -->\n\n<p align=\"center\">\nAn <b>MCP server that gives an AI agent a disposable Algorand wallet</b>, so it can\npay for <a href=\"https://x402.org\">x402</a> resources without a human provisioning\nanything.\n</p>\n\nThe name is the coin paid to the ferryman for passage: small denomination, one\npurpose, spent and gone.\n\n```\nagent → x402_fetch(url) → 402 → sign → pay → body\n```\n\nx402 has over a thousand listed resources and almost no buyers — a handful of\nwallets account for nearly all volume, and they are scripted loops rather than\nagents. The rail exists; nothing can reach it. Obolus is the buyer-side piece:\naccount setup, opt-in, signing and sweeping handled invisibly, so an agent just\nspends.\n\n---\n\n## Install\n\n```bash\nuv tool install obolus\n```\n\n`uv tool install` rather than `uvx`: `uvx` re-resolves dependencies on every\ninvocation, which is the wrong trade for something an agent calls constantly.\n`pipx install obolus` works too.\n\n### Add it to Claude Code\n\n```bash\nclaude mcp add obolus -e OBOLUS_NETWORK=testnet -- obolus-mcp\n```\n\n### Add it to any other MCP client\n\n```json\n{\n  \"mcpServers\": {\n    \"obolus\": {\n      \"command\": \"obolus-mcp\",\n      \"env\": { \"OBOLUS_NETWORK\": \"testnet\" }\n    }\n  }\n}\n```\n\n**It starts on testnet.** Mainnet is never disabled — Obolus is meant to make real\npayments — but it is never what you get by forgetting to choose.\n\n---\n\n## Fund it\n\nA new vault holds nothing, and the order is forced by the chain:\n\n```bash\nobolus vault          # says which of the three steps you are on\nobolus vault qr       # scannable codes for the two things you can send\n```\n\n| # | Step | Who |\n|---|---|---|\n| 1 | Send ≥ 0.21 ALGO to the vault | you |\n| 2 | Opt the vault into USDC (`obolus vault optin`) | Obolus |\n| 3 | Send USDC | you |\n\n**Step 3 before step 2 fails.** An Algorand account cannot receive an asset it\nhas not opted into — the transfer is rejected outright, it does not sit pending.\nThat is why the QR codes encode the asset id and not just the address, and why\n`wallet_funding_info` tells you which step you are on every time rather than only\non error.\n\nThe QR codes carry **no amount**. You type that into your own wallet, where you\nsee it before confirming.\n\n---\n\n## Use it\n\nThree tools, deliberately:\n\n| Tool | What it does |\n|---|---|\n| `x402_fetch` | Fetch a URL, paying if it answers `402`. Returns the body. |\n| `wallet_status` | Balances, the active session, spending today, the caps. |\n| `wallet_funding_info` | How to put money in. For the human, not the agent. |\n\nThere is no tool for any particular merchant. Everything is reached through\n`x402_fetch`, because the moment a wallet grows first-class verbs for one seller\nit stops being a wallet.\n\n---\n\n## What bounds a loss\n\n**The session balance, enforced by the chain.** Payments come from a short-lived\nsession account funded from your vault, never from the vault itself. A session\ncannot spend what it does not hold, and that is true regardless of what any code\nhere does.\n\nEverything else is in-process and configurable in `config.toml` inside your data\ndirectory:\n\n```toml\n[caps]\nsession_balance_micro = 5000000   # $5 per session\nper_call_micro        = 500000    # $0.50 per call\ndaily_micro           = 2000000   # $2 a day, resets 00:00 UTC\nallowlist             = []        # payTo addresses or hostnames; empty = any\n\n[session]\nidle_timeout_seconds  = 600       # close and sweep back after this\n\n[files]\n# root = \"/path/you/choose\"       # off unless set - see Safety\n```\n\nSome refusals are not caps and have no config key: paying an address we control,\na non-`https` resource on mainnet, an asset the wallet does not hold, and any\nchallenge that is not a well-formed x402 v2 `402`.\n\n---\n\n## Safety\n\n**Your seed is the only way back to your money.** It lives in your data\ndirectory. Pointing `OBOLUS_DATA_DIR` at a new location creates a *new* wallet; it\ndoes not move the old one. Back the directory up.\n\n**File access is off by default.** `x402_fetch` can send a file to a paid\nendpoint and write the response back, which is how you get an image signed or a\ndocument processed. Both are disabled unless you set `[files] root`, and confined\nto that directory when you do. This is deliberate: moving bytes off your machine\nis not something a spend cap can bound.\n\n**Approval is per tool, not per payment.** Most MCP clients ask once and remember.\nThat means the caps above are your real spending boundary, not the prompt — see\n[`DESIGN.md`](https://github.com/inviti8/Obolus/blob/main/DESIGN.md) §7.1, which documents what was measured rather than\nwhat was assumed.\n\n**A settled payment proves settlement and nothing else** — not that the resource\nwas correct, honest, or worth its price.\n\n---\n\n## Documentation\n\n- **[CLAUDE.md](https://github.com/inviti8/Obolus/blob/main/CLAUDE.md)** — orientation, and the x402 facts that cost real\n  debugging time to learn.\n- **[DESIGN.md](https://github.com/inviti8/Obolus/blob/main/DESIGN.md)** — architecture, the security model, and the\n  limitations stated plainly.\n- **[IMPLEMENTATION_PLAN.md](https://github.com/inviti8/Obolus/blob/main/IMPLEMENTATION_PLAN.md)** — build order and what\n  each phase actually proved.\n\n## Status\n\n**Working on mainnet.** On 2026-08-13 and 08-14 an agent used Obolus over MCP to\nbuy three resources from a live merchant with real USDC — a notarisation at\n$0.05, a second at $0.05, and a C2PA signature over a 13 MB TIFF at $0.15. Each\npayment came from a disposable session account that was derived, funded, spent\nand swept closed; two sessions, both reconciled, nothing stranded. All three\nsettlements landed with `fee: 0`, sponsored by the facilitator, as designed.\n\nWhat that demonstrates is the rail, end to end: an agent with no human in the\nloop held a key, answered a `402`, and got the bytes. It does not say the\nresources were worth their price — settlement proves settlement and nothing more.\n\nTestnet remains the default and the place to develop. Mainnet is guarded, never\ndisabled.\n",
+  "status": "curated"
+}

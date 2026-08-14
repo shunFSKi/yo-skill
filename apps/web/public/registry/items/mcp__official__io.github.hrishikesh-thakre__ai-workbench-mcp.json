@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.hrishikesh-thakre/ai-workbench-mcp",
+  "type": "mcp",
+  "name": "AI Workbench MCP",
+  "description": "Goose-first MCP server for Workbench-owned acceptance evidence, validation gates, and analytics.",
+  "author": "io.github.hrishikesh-thakre",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/hrishikesh-thakre/ai-workbench-mcp",
+    "repo": "hrishikesh-thakre/ai-workbench-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "ai-workbench-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-19T15:28:14.349907Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,89 @@
+{
+  "id": "mcp:official/io.github.florentine-ai/mcp",
+  "type": "mcp",
+  "name": "mcp",
+  "description": "MCP server for Florentine.ai - Natural language to MongoDB aggregations",
+  "author": "io.github.florentine-ai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/florentine-ai/mcp",
+    "repo": "florentine-ai/mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@florentine-ai/mcp"
+    ],
+    "env": [
+      {
+        "name": "FLORENTINE_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "LLM_SERVICE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LLM_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SESSION_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RETURN_TYPES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "REQUIRED_INPUTS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-10-07T12:53:53.745395Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/co.heista/api",
+  "type": "mcp",
+  "name": "Heista",
+  "description": "Decode video ads, load brand intelligence, generate ad scripts.",
+  "author": "co.heista",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Heista-co/heista-mcp",
+    "repo": "Heista-co/heista-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://www.heista.co/api/mcp/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-11T04:18:46.865402Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

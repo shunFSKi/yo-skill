@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.Grinv/tmdb-mcp",
+  "type": "mcp",
+  "name": "TMDB MCP Server",
+  "description": "MCP server for The Movie Database (TMDB) with IMDb/Rotten Tomatoes/Metacritic ratings via OMDb.",
+  "author": "io.github.Grinv",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Grinv/tmdb-mcp",
+    "repo": "Grinv/tmdb-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "tmdb-mcp"
+    ],
+    "env": [
+      {
+        "name": "TMDB_API_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "OMDB_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "TMDB_LANGUAGE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TMDB_REGION",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-30T14:59:29.75531Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

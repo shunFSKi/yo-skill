@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.aethynio/aethyn-browser-mcp",
+  "type": "mcp",
+  "name": "aethyn-browser-mcp",
+  "description": "Local Playwright browser through residential proxies — agent picks country + sticky identity",
+  "author": "io.github.aethynio",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/aethynio/aethyn-browser-mcp",
+    "repo": "aethynio/aethyn-browser-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "aethyn-browser-mcp"
+    ],
+    "env": [
+      {
+        "name": "AETHYN_USERNAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AETHYN_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "AETHYN_DEFAULT_TIER",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-11T18:16:50.95681Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

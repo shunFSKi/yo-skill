@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.darksider4all/leadgen-mcp",
+  "type": "mcp",
+  "name": "Leadgen MCP",
+  "description": "Romanian business-registry lookup, director search, contact extraction, and WHOIS/DNS audit.",
+  "author": "io.github.darksider4all",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/darksider4all/leadgen-mcp",
+    "repo": "darksider4all/leadgen-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://hermes.adrianhomelab.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T18:23:05.537054Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# Leadgen MCP\n\nLead-generation & enrichment tools for AI agents — a self-hosted MCP server over\nStreamable HTTP, publicly reachable at `https://hermes.adrianhomelab.com/mcp`\n(no auth — validation phase).\n\n## Tools\n\n| Tool | What it does | Data source |\n|---|---|---|\n| `lookup_business(query)` | Romanian business registry search + detail enrichment | official ONRC data (data.gov.ro CKAN), local SQLite + FTS5 |\n| `lookup_director(name)` | Find companies by director / legal-representative name | ONRC reprezentanti table (FTS5, diacritic-insensitive) |\n| `extract_contacts(website)` | Crawl a site for emails, phones, socials | live crawl |\n| `lookup_domain(domain)` | WHOIS + DNS + SPF/DMARC security audit | live WHOIS/DNS |\n\n## Connect\n\nStreamable HTTP — point any MCP client at:\n\n```\nhttps://hermes.adrianhomelab.com/mcp\n```\n\n## Run locally\n\n```bash\nuv venv venv\nuv pip install --python venv/bin/python -r requirements.txt\nvenv/bin/python server.py --transport streamable-http --host 0.0.0.0 --port 8766\n```\n\nOr via the mcp CLI:\n\n```bash\nvenv/bin/mcp run server.py --transport streamable-http --port 8766\n```\n\n## Data\n\nThe ONRC database is built from public data.gov.ro CKAN snapshots:\n\n```bash\npython3 load_onrc.py          # download + load the monthly snapshot\npython3 load_nomenclatoare.py # decode tables\n```\n\nThe default DB path is `/opt/leadgen-mcp/data/onrc.db`.\n\n## Deploy (homelab)\n\nSee the `homelab-mcp-deploy` skill: uv venv on the target LXC, systemd unit,\nSSH tunnel, Hermes MCP HTTP config.\n\n## Validation status\n\nFree tier, no billing yet. Validate the wedge (do agents call it?) before\nwiring metering.\n",
+  "status": "curated"
+}

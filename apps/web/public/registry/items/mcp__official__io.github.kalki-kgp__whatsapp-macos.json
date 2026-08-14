@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.kalki-kgp/whatsapp-macos",
+  "type": "mcp",
+  "name": "whatsapp-macos",
+  "description": "WhatsApp MCP for macOS - Read messages from local DB, send via WhatsApp Web.",
+  "author": "io.github.kalki-kgp",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/kalki-kgp/whatsapp-mcp",
+    "repo": "kalki-kgp/whatsapp-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "whatsapp-mcp-macos"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-14T00:50:57.514584Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

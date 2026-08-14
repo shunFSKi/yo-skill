@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.ikshan-ai/doableclaw-mcp",
+  "type": "mcp",
+  "name": "DoableClaw Research",
+  "description": "AI research on companies and industries — one MCP tool per research domain.",
+  "author": "io.github.ikshan-ai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ikshan-ai/doableclaw-mcp",
+    "repo": "ikshan-ai/doableclaw-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://ikshan-be-prod-6gbup6suoq-el.a.run.app/mcp/research-v4",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T14:02:05.989324Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.NOTTIBOY137/update-hijack-poc",
+  "type": "mcp",
+  "name": "update-hijack-poc",
+  "description": "PoC benign MCP server for update-hijack security research",
+  "author": "io.github.NOTTIBOY137",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/NOTTIBOY137/mcp-update-hijack-poc",
+    "repo": "NOTTIBOY137/mcp-update-hijack-poc"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@nottiboy1337/mcp-update-hijack-poc"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-03T05:55:49.963322Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

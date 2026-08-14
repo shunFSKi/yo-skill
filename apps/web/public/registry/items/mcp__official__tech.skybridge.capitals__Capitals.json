@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/tech.skybridge.capitals/Capitals",
+  "type": "mcp",
+  "name": "Skybridge Capitals Example",
+  "description": "Example MCP and ChatGPT App based on Skybridge framework showing capitals in a world map",
+  "author": "tech.skybridge.capitals",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://capitals.skybridge.tech",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://capitals.skybridge.tech"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-20T10:20:33.363809Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

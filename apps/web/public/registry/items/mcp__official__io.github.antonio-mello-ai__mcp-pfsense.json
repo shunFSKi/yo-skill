@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.antonio-mello-ai/mcp-pfsense",
+  "type": "mcp",
+  "name": "mcp-pfsense",
+  "description": "Manage pfSense firewalls through AI assistants — rules, DHCP, DNS, and more",
+  "author": "io.github.antonio-mello-ai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/antonio-mello-ai/mcp-pfsense",
+    "repo": "antonio-mello-ai/mcp-pfsense"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-pfsense"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-10T21:14:33.076264Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

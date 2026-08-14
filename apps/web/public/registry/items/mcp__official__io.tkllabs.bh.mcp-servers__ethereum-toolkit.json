@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.tkllabs.bh.mcp-servers/ethereum-toolkit",
+  "type": "mcp",
+  "name": "ethereum-toolkit",
+  "description": "Real-time Ethereum blockchain data (gas prices, account balances etc) on Mainnet and Sepolia",
+  "author": "io.tkllabs.bh.mcp-servers",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/teckel-mcp-servers/ethereum-toolkit",
+    "repo": "teckel-mcp-servers/ethereum-toolkit"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp-servers.bh.tkllabs.io:9780/ethereum-mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-01-01T12:03:01.091564Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

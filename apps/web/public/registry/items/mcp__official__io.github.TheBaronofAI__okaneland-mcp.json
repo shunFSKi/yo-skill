@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.TheBaronofAI/okaneland-mcp",
+  "type": "mcp",
+  "name": "okaneland-mcp",
+  "description": "Verified AI-tool prices and AI product margin math for agents.",
+  "author": "io.github.TheBaronofAI",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/TheBaronofAI/okaneland-mcp",
+    "repo": "TheBaronofAI/okaneland-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@okaneland/mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-18T00:34:22.420368Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

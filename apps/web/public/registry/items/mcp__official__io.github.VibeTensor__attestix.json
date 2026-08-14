@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.VibeTensor/attestix",
+  "type": "mcp",
+  "name": "Attestix",
+  "description": "AI agent identity, W3C credentials, EU AI Act compliance. 47 MCP tools.",
+  "author": "io.github.VibeTensor",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/VibeTensor/attestix",
+    "repo": "VibeTensor/attestix"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "attestix"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-21T15:54:36.044315Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

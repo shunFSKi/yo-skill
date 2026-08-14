@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.k4771kim/human-design-api",
+  "type": "mcp",
+  "name": "Human Design API (Human Design Hub)",
+  "description": "JPL-referenced Human Design charts for AI agents: bodygraph, transit, composite, Penta, DreamRave.",
+  "author": "io.github.k4771kim",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://api.humandesignhub.app/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.humandesignhub.app/mcp",
+    "env": [
+      {
+        "name": "X-API-KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-29T04:30:20.720946Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

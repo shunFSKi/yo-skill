@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/com.getinquira/inquira",
+  "type": "mcp",
+  "name": "Inquira",
+  "description": "AI survey platform: create and publish surveys, collect responses, generate AI analysis reports.",
+  "author": "com.getinquira",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/BayarBH/inquira-agent-plugin",
+    "repo": "BayarBH/inquira-agent-plugin"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://getinquira.com/api/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-16T05:09:28.408561Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

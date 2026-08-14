@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.Fr4nZ82/mwe-mcp",
+  "type": "mcp",
+  "name": "mwe-mcp — Memory Wiki Engine",
+  "description": "Self-hosted multi-user memory for AI agents: a human-readable Markdown wiki with per-fragment ACL.",
+  "author": "io.github.Fr4nZ82",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Fr4nZ82/mwe-mcp",
+    "repo": "Fr4nZ82/mwe-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/Fr4nZ82/mwe-mcp/releases/download/v1.4.0/mwe-mcp-v1.4.0-x86_64-unknown-linux-gnu.tar.gz"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-15T11:40:28.561426Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "mcp:official/io.github.WaterTian/wechat-devtools-mcp",
+  "type": "mcp",
+  "name": "wechat-devtools-mcp",
+  "description": "MCP Server for WeChat DevTools CLI - Automate development & testing with 7 aggregated APIs.",
+  "author": "io.github.WaterTian",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/WaterTian/wechat-devtools-mcp",
+    "repo": "WaterTian/wechat-devtools-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "wechat-devtools-mcp"
+    ],
+    "env": [
+      {
+        "name": "WECHAT_DEVTOOLS_CLI",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "WECHAT_PROJECT_PATH",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "WECHAT_CLI_TIMEOUT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "NODE_PATH",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-10T06:29:06.620048Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

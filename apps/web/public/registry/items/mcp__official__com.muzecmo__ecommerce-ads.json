@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.muzecmo/ecommerce-ads",
+  "type": "mcp",
+  "name": "Muze Ecommerce Ads",
+  "description": "Run your ecommerce ads from Claude & ChatGPT: Meta, Google, Amazon, Shopify (150 tools)",
+  "author": "com.muzecmo",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://backend.muzecmo.com/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://backend.muzecmo.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-26T12:07:50.087912Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

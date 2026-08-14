@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.SMABoundless/orcid",
+  "type": "mcp",
+  "name": "orcid",
+  "description": "Search ORCID researcher profiles, retrieve works, and export citations",
+  "author": "io.github.SMABoundless",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/SMABoundless/orcid-mcp-server.git",
+    "repo": "SMABoundless/orcid-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "orcid-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "ORCID_CLIENT_ID",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "ORCID_CLIENT_SECRET",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-04T20:19:04.458205Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

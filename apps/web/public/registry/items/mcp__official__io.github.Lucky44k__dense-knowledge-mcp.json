@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.Lucky44k/dense-knowledge-mcp",
+  "type": "mcp",
+  "name": "Dense Knowledge",
+  "description": "Local-first MCP memory server for persistent LLM knowledge with BM25 retrieval.",
+  "author": "io.github.Lucky44k",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Lucky44k/dense-knowledge-mcp",
+    "repo": "Lucky44k/dense-knowledge-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "dense-knowledge-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-29T23:33:21.39412Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

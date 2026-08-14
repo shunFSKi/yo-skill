@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.echojobsio/jdl-mcp-server",
+  "type": "mcp",
+  "name": "JobDataLake",
+  "description": "Search 1M+ enriched job listings. Filter by skills, salary, location, and more. Free.",
+  "author": "io.github.echojobsio",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/echojobsio/jdl-mcp-server",
+    "repo": "echojobsio/jdl-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@jobdatalake/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "JDL_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-18T15:54:15.658611Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

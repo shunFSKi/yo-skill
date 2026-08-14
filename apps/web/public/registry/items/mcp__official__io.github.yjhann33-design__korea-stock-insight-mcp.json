@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.yjhann33-design/korea-stock-insight-mcp",
+  "type": "mcp",
+  "name": "korea-stock-insight-mcp",
+  "description": "Korean stock market MCP — DART disclosures + KRX prices, English-first for global LLM analysts.",
+  "author": "io.github.yjhann33-design",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/yjhann33-design/korea-stock-insight-mcp",
+    "repo": "yjhann33-design/korea-stock-insight-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "korea-stock-insight-mcp"
+    ],
+    "env": [
+      {
+        "name": "DART_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-16T13:15:32.533749Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

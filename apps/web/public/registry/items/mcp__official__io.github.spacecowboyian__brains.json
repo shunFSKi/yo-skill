@@ -1,0 +1,99 @@
+{
+  "id": "mcp:official/io.github.spacecowboyian/brains",
+  "type": "mcp",
+  "name": "brains",
+  "description": "Personal wiki and memory for AI assistants: store, search, and recall structured notes.",
+  "author": "io.github.spacecowboyian",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/spacecowboyian/brains",
+    "repo": "spacecowboyian/brains"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "brains-mcp"
+    ],
+    "env": [
+      {
+        "name": "WIKI_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "STORAGE_BACKEND",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GOOGLE_CLIENT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GOOGLE_CLIENT_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GOOGLE_REFRESH_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "DRIVE_FOLDER_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SUPABASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SUPABASE_SERVICE_ROLE_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T14:52:09.021009Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

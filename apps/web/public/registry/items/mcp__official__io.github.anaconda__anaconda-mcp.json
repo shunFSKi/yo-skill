@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.anaconda/anaconda-mcp",
+  "type": "mcp",
+  "name": "Anaconda MCP",
+  "description": "Beta conda env/package MCP server; requires conda, auth, and Beta Terms.",
+  "author": "io.github.anaconda",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/anaconda/anaconda-mcp",
+    "repo": "anaconda/anaconda-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/anaconda/anaconda-mcp/releases/download/mcpb-v1.1.1-ana-v0.2.2/anaconda-mcp.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-24T18:17:26.968479Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

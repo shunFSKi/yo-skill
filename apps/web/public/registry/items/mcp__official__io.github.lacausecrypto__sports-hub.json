@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.lacausecrypto/sports-hub",
+  "type": "mcp",
+  "name": "sports-hub",
+  "description": "41 sports API providers, 396 tools: scores, stats, odds, esports, chess, motorsport & more.",
+  "author": "io.github.lacausecrypto",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/lacausecrypto/mcp-sports-hub",
+    "repo": "lacausecrypto/mcp-sports-hub"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-sports-hub"
+    ],
+    "env": [
+      {
+        "name": "SPORTS_HUB_PROVIDERS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "API_SPORTS_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PANDASCORE_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "THE_ODDS_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-24T10:49:37.367086Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

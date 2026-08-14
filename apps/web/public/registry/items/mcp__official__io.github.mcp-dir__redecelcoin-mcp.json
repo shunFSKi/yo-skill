@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.mcp-dir/redecelcoin-mcp",
+  "type": "mcp",
+  "name": "Rede Celcoin MCP",
+  "description": "Connect your Rede Celcoin account to AI via Brazil's Open Finance: balances, statements, cards, inve",
+  "author": "io.github.mcp-dir",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mcp-dir/redecelcoin-mcp",
+    "repo": "mcp-dir/redecelcoin-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.mcp.ai/p_redecelcoin"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-11T19:06:17.223985Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

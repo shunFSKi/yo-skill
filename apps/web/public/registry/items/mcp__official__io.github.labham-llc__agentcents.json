@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.labham-llc/agentcents",
+  "type": "mcp",
+  "name": "agentcents",
+  "description": "Local LLM cost proxy: forecasts each call and recommends the cheapest model that clears the task.",
+  "author": "io.github.labham-llc",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/labham-llc/agentcents-skill",
+    "repo": "labham-llc/agentcents-skill"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "agentcents"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-24T22:04:36.753821Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

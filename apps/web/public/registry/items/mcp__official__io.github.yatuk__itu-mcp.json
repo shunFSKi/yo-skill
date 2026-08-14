@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.yatuk/itu-mcp",
+  "type": "mcp",
+  "name": "İTÜ MCP",
+  "description": "İTÜ Ninova LMS ve OBS öğrenci portalı — dersler, notlar, yoklama, yemekhane, kampüs kart, GPA",
+  "author": "io.github.yatuk",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/yatuk/itu-mcp",
+    "repo": "yatuk/itu-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "itu-mcp"
+    ],
+    "env": [
+      {
+        "name": "NINOVA_USERNAME",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "NINOVA_PASSWORD",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-11T11:29:50.058464Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

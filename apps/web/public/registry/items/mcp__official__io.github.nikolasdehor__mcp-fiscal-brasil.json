@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.nikolasdehor/mcp-fiscal-brasil",
+  "type": "mcp",
+  "name": "MCP Fiscal Brasil",
+  "description": "Servidor MCP para integrar IAs com o sistema fiscal brasileiro: CNPJ, NFe, NFSe, SPED, eSocial.",
+  "author": "io.github.nikolasdehor",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/nikolasdehor/mcp-fiscal-brasil",
+    "repo": "nikolasdehor/mcp-fiscal-brasil"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-fiscal-brasil"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-29T21:43:06.824701Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

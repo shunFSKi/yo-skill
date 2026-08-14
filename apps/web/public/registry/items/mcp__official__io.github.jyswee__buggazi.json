@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.jyswee/buggazi",
+  "type": "mcp",
+  "name": "buggazi",
+  "description": "Project management for coding agents. Bugs, features, sprints. 73 tools stdio, 74 remote SSE.",
+  "author": "io.github.jyswee",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/jyswee/buggazi",
+    "repo": "jyswee/buggazi"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "buggazi"
+    ],
+    "env": [
+      {
+        "name": "BGZ_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T12:06:31.8997Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

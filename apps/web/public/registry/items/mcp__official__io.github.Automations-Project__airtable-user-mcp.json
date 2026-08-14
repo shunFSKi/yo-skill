@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.Automations-Project/airtable-user-mcp",
+  "type": "mcp",
+  "name": "Airtable User MCP",
+  "description": "Manage Airtable bases: schema, field CRUD, views, formula validation, extensions",
+  "author": "io.github.Automations-Project",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Automations-Project/VSCode-Airtable-Formula",
+    "repo": "Automations-Project/VSCode-Airtable-Formula"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "airtable-user-mcp"
+    ],
+    "env": [
+      {
+        "name": "AIRTABLE_HEADLESS_ONLY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AIRTABLE_NO_BROWSER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AIRTABLE_USER_MCP_HOME",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-11T17:28:03.942874Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

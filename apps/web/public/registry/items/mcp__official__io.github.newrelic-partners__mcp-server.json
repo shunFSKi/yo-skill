@@ -1,0 +1,65 @@
+{
+  "id": "mcp:official/io.github.newrelic-partners/mcp-server",
+  "type": "mcp",
+  "name": "New Relic MCP Server",
+  "description": "Monitor, troubleshoot, and optimize your technology stack with Intelligent Observability.",
+  "author": "io.github.newrelic-partners",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.newrelic.com/mcp/",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.newrelic.com/mcp/",
+    "env": [
+      {
+        "name": "api-key",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "include-tags",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-08T19:01:17.579293Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

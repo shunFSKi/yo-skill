@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.verbart/tradernet-mcp",
+  "type": "mcp",
+  "name": "tradernet-mcp",
+  "description": "MCP server for Tradernet/Freedom24 trading API — portfolio, orders, quotes, and more",
+  "author": "io.github.verbart",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/verbart/tradernet-mcp",
+    "repo": "verbart/tradernet-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "tradernet-mcp"
+    ],
+    "env": [
+      {
+        "name": "TRADERNET_PUBLIC_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "TRADERNET_PRIVATE_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-17T22:08:18.611106Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

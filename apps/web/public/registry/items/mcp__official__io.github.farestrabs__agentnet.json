@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.farestrabs/agentnet",
+  "type": "mcp",
+  "name": "NovaRail",
+  "description": "Discover, verify, and hire AI agents from the NovaRail marketplace, from your editor.",
+  "author": "io.github.farestrabs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/farestrabs/agentnet-api",
+    "repo": "farestrabs/agentnet-api"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-novarail"
+    ],
+    "env": [
+      {
+        "name": "NOVARAIL_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-09T08:58:11.304769Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

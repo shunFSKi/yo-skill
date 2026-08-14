@@ -1,0 +1,363 @@
+{
+  "id": "mcp:official/com.knitli/codeweaver",
+  "type": "mcp",
+  "name": "codeweaver",
+  "description": "Semantic code search built for AI agents. Hybrid, AST-aware, context for 166 languages.",
+  "author": "com.knitli",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/knitli/codeweaver",
+    "repo": "knitli/codeweaver"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "code-weaver"
+    ],
+    "env": [
+      {
+        "name": "CODEWEAVER_CONFIG_FILE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CODEWEAVER_DEBUG",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CODEWEAVER_EMBEDDING_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "CODEWEAVER_EMBEDDING_MODEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CODEWEAVER_EMBEDDING_PROVIDER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CODEWEAVER_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CODEWEAVER_LOG_LEVEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CODEWEAVER_MCP_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CODEWEAVER_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CODEWEAVER_PROFILE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CODEWEAVER_PROJECT_NAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CODEWEAVER_PROJECT_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CODEWEAVER_RERANKING_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "CODEWEAVER_RERANKING_MODEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CODEWEAVER_RERANKING_PROVIDER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CODEWEAVER_SPARSE_EMBEDDING_MODEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CODEWEAVER_SPARSE_EMBEDDING_PROVIDER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CODEWEAVER_VECTOR_STORE_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "CODEWEAVER_VECTOR_STORE_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CODEWEAVER_VECTOR_STORE_PROVIDER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CODEWEAVER_VECTOR_STORE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CODEWEAVER__TELEMETRY__DISABLE_TELEMETRY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CODEWEAVER__TELEMETRY__TOOLS_OVER_PRIVACY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "HTTPS_PROXY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OPENAI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "OPENAI_LOG",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SSL_CERT_FILE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AI_GATEWAY_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "AWS_ACCOUNT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AWS_REGION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AWS_SECRET_ACCESS_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "AZURE_COHERE_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "AZURE_COHERE_ENDPOINT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AZURE_COHERE_REGION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AZURE_OPENAI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "AZURE_OPENAI_ENDPOINT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AZURE_OPENAI_REGION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "COHERE_API_KEY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CO_API_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DEEPSEEK_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GEMINI_API_KEY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GOOGLE_API_KEY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "HF_HUB_VERBOSITY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "HF_TOKEN",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "HTTPS_PROXY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "INFERENCE_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "INFERENCE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MISTRAL_API_KEY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OPENAI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "OPENAI_LOG",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "QDRANT__LOG_LEVEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "QDRANT__SERVICE__API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "QDRANT__SERVICE__ENABLE_TLS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "QDRANT__SERVICE__HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "QDRANT__SERVICE__HTTP_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "QDRANT__TLS__CERT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SSL_CERT_FILE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TAVILY_API_KEY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TOGETHER_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "VERCEL_OIDC_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "VOYAGE_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-12-03T00:26:17.054017Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

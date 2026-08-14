@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/ai.justdeploy/mcp",
+  "type": "mcp",
+  "name": "JustDeploy",
+  "description": "Deploy and manage your apps, databases, storage, and scheduled jobs from your AI agent",
+  "author": "ai.justdeploy",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.justdeploy.ai/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.justdeploy.ai/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-19T05:10:40.161842Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

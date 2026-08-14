@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.sneaker-hub/shop",
+  "type": "mcp",
+  "name": "STRIDE Sneaker Shop",
+  "description": "Pre-owned sneaker shop catalog: search in-stock shoes by keyword/brand/price, get buy links.",
+  "author": "com.sneaker-hub",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://sneaker-hub.com/api/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://sneaker-hub.com/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-04T10:57:01.965901Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

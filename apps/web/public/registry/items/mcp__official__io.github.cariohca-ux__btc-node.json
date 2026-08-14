@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.cariohca-ux/btc-node",
+  "type": "mcp",
+  "name": "IRONCLAW BTC Node",
+  "description": "Real BTC full node: fees, mempool, txs, portfolio, trace, whales, SEC, scraping, Reddit via x402.",
+  "author": "io.github.cariohca-ux",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/cariohca-ux/x402-btc-node",
+    "repo": "cariohca-ux/x402-btc-node"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.btcnode.uk/sse"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-25T21:08:58.635594Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

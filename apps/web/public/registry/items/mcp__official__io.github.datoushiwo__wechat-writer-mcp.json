@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.datoushiwo/wechat-writer-mcp",
+  "type": "mcp",
+  "name": "wechat-writer-mcp",
+  "description": "面向技术博主的 AI 内容加工流水线 MCP —— 从原始素材到公众号草稿箱",
+  "author": "io.github.datoushiwo",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/datoushiwo/wechat-writer-mcp",
+    "repo": "datoushiwo/wechat-writer-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "wechat-writer-mcp"
+    ],
+    "env": [
+      {
+        "name": "WECHAT_APP_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "WECHAT_APP_SECRET",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "WECHAT_COVERS_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WECHAT_DEFAULT_AUTHOR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WECHAT_API_TIMEOUT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T02:53:02.051028Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": "# wechat-writer-mcp\n\n<div align=\"center\">\n\n<!-- 核心信息徽章 -->\n<div style=\"margin-bottom: 8px;\">\n  <a href=\"https://www.npmjs.com/package/wechat-writer-mcp\">\n    <img src=\"https://img.shields.io/npm/v/wechat-writer-mcp?style=flat-square&logo=npm&color=cb3837\" alt=\"NPM Version\" />\n  </a>\n  <a href=\"https://github.com/datoushiwo/wechat-writer-mcp/blob/main/LICENSE\">\n    <img src=\"https://img.shields.io/npm/l/wechat-writer-mcp?style=flat-square&color=green\" alt=\"License\" />\n  </a>\n  <a href=\"https://www.npmjs.com/package/wechat-writer-mcp\">\n    <img src=\"https://img.shields.io/npm/dm/wechat-writer-mcp?style=flat-square&logo=npm&color=blue\" alt=\"Downloads\" />\n  </a>\n</div>\n\n<!-- 技术栈徽章 -->\n<div>\n  <a href=\"https://nodejs.org/\">\n    <img src=\"https://img.shields.io/node/v/wechat-writer-mcp?style=flat-square&logo=node.js&color=339933\" alt=\"Node.js\" />\n  </a>\n  <a href=\"https://www.typescriptlang.org/\">\n    <img src=\"https://img.shields.io/badge/TypeScript-5.0+-blue?style=flat-square&logo=typescript\" alt=\"TypeScript\" />\n  </a>\n  <a href=\"https://modelcontextprotocol.io/\">\n    <img src=\"https://img.shields.io/badge/MCP-1.1.3-purple?style=flat-square\" alt=\"MCP\" />\n  </a>\n  <a href=\"https://developers.weixin.qq.com/doc/offiaccount/Draft_Box/Add_draft.html\">\n    <img src=\"https://img.shields.io/badge/微信公众号-官方API-07c160?style=flat-square\" alt=\"WeChat\" />\n  </a>\n</div>\n\n</div>\n\n面向技术博主的 AI 内容加工流水线 MCP —— 从原始素材到公众号草稿箱，**只存草稿，不自动发布**。\n\n## ⚡ 快速开始\n\n### 一键启动\n\n```bash\nnpx wechat-writer-mcp\n```\n\n### MCP 配置\n\n```json\n{\n  \"mcpServers\": {\n    \"wechat-writer\": {\n      \"command\": \"npx\",\n      \"args\": [\"wechat-writer-mcp\"],\n      \"env\": {\n        \"WECHAT_APP_ID\": \"your_app_id\",\n        \"WECHAT_APP_SECRET\": \"your_app_secret\"\n      }\n    }\n  }\n}\n```\n\n### 立即体验\n\n```text\nAI指令: \"导入 ./my-article.md，帮我排版成公众号格式，检查原创度后存入草稿箱\"\n```\n\n## 🛠️ 核心功能\n\n- **4 个专业工具** - 导入素材、智能排版、原创检测、存入草稿箱\n- **官方 API** - 基于微信公众号草稿箱 API，完全合规\n- **内容加工** - 段落切分、代码块处理、超链接转脚注、头尾模板、标题候选\n- **安全第一** - 永远只存草稿箱，永远不自动群发/发布\n- **即插即用** - 支持 Claude Code、Cursor、Claude Desktop\n\n## 📦 工具列表\n\n| 工具 | 说明 | 输入 | 输出 |\n|------|------|------|------|\n| `import_source` | 导入原始内容 | 本地 markdown 文件或网页 URL | raw_markdown + 标题/字数等元数据 |\n| `transform_for_wechat` | 公众号智能排版 | markdown 内容 | 适配 HTML + 3 个标题候选 + 摘要建议 |\n| `estimate_originality` | 原创度自评 | 文章内容 | 原创度评分 + 与历史草稿的相似段落 |\n| `save_to_wechat_draft` | 存入草稿箱 | 标题 + HTML 内容 | media_id + 后台链接 |\n\n## 💡 使用流程\n\n```\n用户: 导入 ./my-article.md\nAI:   [调 import_source] 已读入 838 字 markdown\n      标题识别：《我用 Claude Code 三周做了一个 MCP Server》\n\n用户: 帮我按公众号风格排版\nAI:   [调 transform_for_wechat]\n      - 代码块已处理为公众号可显示格式\n      - 已应用头尾模板\n      - 3 个标题候选：\n        1. 我用 Claude Code 三周做了一个 MCP Server\n        2. 我用 Claude Code 三周做了一个 MCP Server：完整实践指南\n        3. 一文读懂我用 Claude Code 三周做了一个 MCP Server\n      要哪个？\n\n用户: 用 1，检查下原创度\nAI:   [调 estimate_originality]\n      深度原创（92/100）\n      建议：可以标记\"原创\"\n      历史比对：无重复内容\n\n用户: OK 存草稿箱\nAI:   [调 save_to_wechat_draft]\n      ✅ 已存入公众号草稿箱\n      → 请前往 mp.weixin.qq.com → 内容管理 → 草稿箱 手动发送\n```\n\n## ⚙️ 安装配置\n\n### 方式一：npx 直接运行（推荐）\n\n```bash\nnpx wechat-writer-mcp\n```\n\n### 方式二：本地安装\n\n```bash\ngit clone https://github.com/datoushiwo/wechat-writer-mcp.git\ncd wechat-writer-mcp\nnpm install\nnpm run build\n```\n\n### 环境变量\n\n```bash\ncp .env.example .env\n```\n\n| 变量 | 必填 | 说明 |\n|------|------|------|\n| `WECHAT_APP_ID` | ✅ | 公众号 AppID |\n| `WECHAT_APP_SECRET` | ✅ | 公众号 AppSecret |\n| `WECHAT_COVERS_DIR` | | 封面图片目录，默认 `~/Pictures/wechat-covers` |\n| `WECHAT_DEFAULT_AUTHOR` | | 默认作者名 |\n| `WECHAT_API_TIMEOUT` | | API 超时毫秒数，默认 15000 |\n\n### 前置条件\n\n1. **公众号 AppID/AppSecret**：mp.weixin.qq.com → 开发 → 基本配置\n2. **IP 白名单**：将你的出口 IP 添加到公众号后台 → 开发 → 基本配置 → IP 白名单\n\n### 客户端配置\n\n<details>\n<summary><b>Claude Code</b></summary>\n\n在 `~/.claude/mcp.json` 或项目下 `.claude/mcp.json` 中添加：\n\n```json\n{\n  \"mcpServers\": {\n    \"wechat-writer\": {\n      \"command\": \"npx\",\n      \"args\": [\"wechat-writer-mcp\"],\n      \"env\": {\n        \"WECHAT_APP_ID\": \"your_app_id\",\n        \"WECHAT_APP_SECRET\": \"your_app_secret\"\n      }\n    }\n  }\n}\n```\n\n</details>\n\n<details>\n<summary><b>Cursor</b></summary>\n\n在 Cursor Settings → MCP 中添加，配置同上。\n\n</details>\n\n<details>\n<summary><b>Claude Desktop</b></summary>\n\n编辑 `~/Library/Application Support/Claude/claude_desktop_config.json`：\n\n```json\n{\n  \"mcpServers\": {\n    \"wechat-writer\": {\n      \"command\": \"npx\",\n      \"args\": [\"wechat-writer-mcp\"],\n      \"env\": {\n        \"WECHAT_APP_ID\": \"your_app_id\",\n        \"WECHAT_APP_SECRET\": \"your_app_secret\"\n      }\n    }\n  }\n}\n```\n\n</details>\n\n## ⚠️ 注意事项\n\n- **安全**：AppSecret 永远不要提交到 Git，`.env` 已在 `.gitignore` 中\n- **权限**：只调用 `draft/add`，永远不调用 `freepublish/submit` 或 `mass/send`\n- **查重**：`estimate_originality` 只与你自己的历史草稿比对，**不能替代微信官方查重**\n- **封面**：默认从 `~/Pictures/wechat-covers/` 随机选取，无封面时自动生成占位图\n- **模板**：可自定义 `templates/wechat-header.html` 和 `templates/wechat-footer.html`\n\n## 🗺️ Roadmap\n\n- [x] v0.1 - MVP：4 个核心 tool + 公众号草稿箱 API\n- [ ] 自定义排版主题\n- [ ] 封面图片 AI 推荐\n- [ ] 掘金同步发布（v2）\n- [ ] 发布后数据反馈\n- [ ] 多标题 A/B 建议\n\n## 🤝 贡献\n\n欢迎提 Issue 和 PR。\n\n```bash\ngit clone https://github.com/datoushiwo/wechat-writer-mcp.git\ncd wechat-writer-mcp\nnpm install\nnpm run dev  # 开发模式\n```\n\n## 📄 License\n\nMIT\n\n---\n\n**让 AI 帮你搞定公众号排版，你只管写内容。** ✍️\n",
+  "status": "curated"
+}

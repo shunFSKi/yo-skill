@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.StonesofCreation/stackswap",
+  "type": "mcp",
+  "name": "StackSwap",
+  "description": "B2B GTM stack intelligence: search ~400 tools, compare vendors, find overlaps, audit SaaS spend.",
+  "author": "io.github.StonesofCreation",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/StonesofCreation/stackswap-mcp",
+    "repo": "StonesofCreation/stackswap-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://stackswap.ai/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-10T20:04:53.91598Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

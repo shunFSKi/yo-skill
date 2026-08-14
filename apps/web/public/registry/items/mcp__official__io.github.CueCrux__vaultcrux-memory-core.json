@@ -1,0 +1,70 @@
+{
+  "id": "mcp:official/io.github.CueCrux/vaultcrux-memory-core",
+  "type": "mcp",
+  "name": "VaultCrux Memory Core",
+  "description": "VaultCrux Memory Core — 32 tools: knowledge, decisions, constraints, signals, coverage",
+  "author": "io.github.CueCrux",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/CueCrux/VaultCrux",
+    "repo": "CueCrux/VaultCrux"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.vaultcrux.com/memory-core/mcp",
+    "env": [
+      {
+        "name": "x-api-key",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "x-tenant-id",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "x-agent-id",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-25T20:43:11.306883Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

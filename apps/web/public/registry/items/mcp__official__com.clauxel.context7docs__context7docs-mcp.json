@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/com.clauxel.context7docs/context7docs-mcp",
+  "type": "mcp",
+  "name": "context7docs-mcp",
+  "description": "A paid remote MCP for Context7 MCP docs, built to return verdicts, receipts, usage logs, and audit-r",
+  "author": "com.clauxel.context7docs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/clauxel/context7-private-docs-mcp-mcp",
+    "repo": "clauxel/context7-private-docs-mcp-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://context7docs.clauxel.com/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-26T12:42:08.829726Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

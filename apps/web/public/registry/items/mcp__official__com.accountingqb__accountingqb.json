@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.accountingqb/accountingqb",
+  "type": "mcp",
+  "name": "accountingqb",
+  "description": "QuickBooks Online for Claude: reports, bookkeeping cleanup, and US & Canadian tax prep.",
+  "author": "com.accountingqb",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/RCOLKITT/AccountingQB-MCP",
+    "repo": "RCOLKITT/AccountingQB-MCP"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.accountingqb.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-03T22:02:47.891647Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

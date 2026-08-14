@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.microsoft/workiq-wordserver",
+  "type": "mcp",
+  "name": "Work IQ Word MCP Server",
+  "description": "MCP Server containing tools to work with Microsoft Word document",
+  "author": "com.microsoft",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/bap-microsoft/MCP-Platform/",
+    "repo": "bap-microsoft/MCP-Platform"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://agent365.svc.cloud.microsoft/agents/tenants/{tenant_id}/servers/mcp_WordServer"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-25T09:26:37.675616Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

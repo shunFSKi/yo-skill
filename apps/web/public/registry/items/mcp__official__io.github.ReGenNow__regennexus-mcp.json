@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.ReGenNow/regennexus-mcp",
+  "type": "mcp",
+  "name": "regennexus-mcp",
+  "description": "AI-controlled hardware: GPIO, robotics, sensors, cameras, mesh networking for IoT",
+  "author": "io.github.ReGenNow",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ReGenNow/regennexus-mcp",
+    "repo": "ReGenNow/regennexus-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "regennexus-mcp"
+    ],
+    "env": [
+      {
+        "name": "REGENNEXUS_MODE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-01-11T03:43:48.77599Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

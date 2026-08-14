@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/press.respira/respira-wordpress",
+  "type": "mcp",
+  "name": "Respira WordPress MCP",
+  "description": "WordPress MCP with native page-builder editing, full-page creation, and WooCommerce tools.",
+  "author": "press.respira",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers/press.respira%2Frespira-wordpress",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@respira/wordpress-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "WORDPRESS_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WORDPRESS_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "RESPIRA_CONFIG_B64",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "RESPIRA_CONFIG_FILE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-29T20:50:03.543797Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

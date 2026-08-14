@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.tryflask/flask",
+  "type": "mcp",
+  "name": "flask",
+  "description": "Feedback layer for video. Reviewers talk through feedback; agents read it as structured comments.",
+  "author": "io.github.tryflask",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/tryflask/skills",
+    "repo": "tryflask/skills"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.flask.do/api/mcp/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-08T07:58:38.93172Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

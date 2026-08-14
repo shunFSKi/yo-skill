@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/com.mambabuilt/mcp-gtm-job-discovery",
+  "type": "mcp",
+  "name": "mcp-gtm-job-discovery",
+  "description": "Find companies hiring for your role keywords, with firmographics and LinkedIn per posting.",
+  "author": "com.mambabuilt",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mambalabsdev/mcp-gtm-job-discovery",
+    "repo": "mambalabsdev/mcp-gtm-job-discovery"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@mambalabsdev/mcp-gtm-job-discovery"
+    ],
+    "env": [
+      {
+        "name": "APIFY_TOKEN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T08:21:22.798397Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

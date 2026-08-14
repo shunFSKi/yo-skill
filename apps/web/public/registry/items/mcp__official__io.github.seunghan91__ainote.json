@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.seunghan91/ainote",
+  "type": "mcp",
+  "name": "ainote",
+  "description": "Agent-native notes, tasks, dev-docs, vaults, sync & handoffs. MCP + OpenAPI dual surface.",
+  "author": "io.github.seunghan91",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/seunghan91/ainote",
+    "repo": "seunghan91/ainote"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@ainote/mcp"
+    ],
+    "env": [
+      {
+        "name": "AINOTE_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-14T11:01:40.815105Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.saurabhsharma2u/search-console-mcp",
+  "type": "mcp",
+  "name": "Search Console MCP",
+  "description": "Google Search Console + Bing Webmaster Tools + GA4 — unified SEO intelligence for AI agents.",
+  "author": "io.github.saurabhsharma2u",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/saurabhsharma2u/search-console-mcp",
+    "repo": "saurabhsharma2u/search-console-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "search-console-mcp"
+    ],
+    "env": [
+      {
+        "name": "GOOGLE_APPLICATION_CREDENTIALS",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "BING_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PAGESPEED_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-09T06:45:51.600589Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

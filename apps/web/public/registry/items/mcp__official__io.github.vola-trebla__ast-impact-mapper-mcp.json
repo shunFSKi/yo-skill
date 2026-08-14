@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.vola-trebla/ast-impact-mapper-mcp",
+  "type": "mcp",
+  "name": "ast-impact-mapper-mcp",
+  "description": "MCP server that uses TypeScript AST to find which tests are affected by a code change",
+  "author": "io.github.vola-trebla",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/vola-trebla/ast-impact-mapper-mcp",
+    "repo": "vola-trebla/ast-impact-mapper-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ast-impact-mapper-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-21T12:06:47.49155Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

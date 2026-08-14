@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/run.daslab/sap-abap-sql",
+  "type": "mcp",
+  "name": "sap-abap-sql",
+  "description": "Checks and fixes ABAP Open SQL for SAP's ADT data-preview console. Connects to nothing.",
+  "author": "run.daslab",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/daslabhq/sap-abap-sql-mcp",
+    "repo": "daslabhq/sap-abap-sql-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "sap-abap-sql-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-08T00:35:33.986665Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.rasinmuhammed/misata",
+  "type": "mcp",
+  "name": "misata",
+  "description": "Multi-table synthetic data with FK integrity and exact declared aggregates. No real data.",
+  "author": "io.github.rasinmuhammed",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/rasinmuhammed/misata",
+    "repo": "rasinmuhammed/misata"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "misata"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-16T16:27:29.345869Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

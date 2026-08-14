@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.vistoya/market",
+  "type": "mcp",
+  "name": "market",
+  "description": "Search and get fashion products recommendations across multiple e-ecom stores",
+  "author": "io.github.vistoya",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/vistoya/vistoya-mcp",
+    "repo": "vistoya/vistoya-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.vistoya.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-11T20:40:35.292116Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

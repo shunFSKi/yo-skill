@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.ralphieusa/idevice-wearables",
+  "type": "mcp",
+  "name": "iDevice Wearables",
+  "description": "Wearable tech roadmaps: Apple, Meta, Samsung, Google, Oura. Claims, timelines, analysis.",
+  "author": "io.github.ralphieusa",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ralphieusa/ralphie",
+    "repo": "ralphieusa/ralphie"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://idevice.com/api/mcp",
+    "env": [
+      {
+        "name": "X-API-Key",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-27T09:32:14.23405Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

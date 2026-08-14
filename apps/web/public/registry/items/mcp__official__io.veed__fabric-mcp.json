@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.veed/fabric-mcp",
+  "type": "mcp",
+  "name": "VEED AI Video Generator",
+  "description": "Generate AI talking-head videos with custom characters and voices.",
+  "author": "io.veed",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://www.veed.io/api/v1/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://www.veed.io/api/v1/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-02T08:39:50.1946Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

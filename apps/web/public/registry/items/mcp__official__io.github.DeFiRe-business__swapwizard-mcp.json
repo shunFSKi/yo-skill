@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.DeFiRe-business/swapwizard-mcp",
+  "type": "mcp",
+  "name": "SwapWizard",
+  "description": "Non-custodial DeFi for AI agents: swaps, concentrated liquidity (V3/V4) zaps + ranges, 5 EVM chains",
+  "author": "io.github.DeFiRe-business",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/DeFiRe-business/swapwizard-mcp",
+    "repo": "DeFiRe-business/swapwizard-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@swapwizard/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "SWAPWIZARD_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-13T03:56:32.609006Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

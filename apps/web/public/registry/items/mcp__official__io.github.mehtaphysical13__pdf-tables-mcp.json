@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.mehtaphysical13/pdf-tables-mcp",
+  "type": "mcp",
+  "name": "pdf-tables-mcp",
+  "description": "Reliable PDF table extraction. Pass a URL, get structured JSON tables with citations.",
+  "author": "io.github.mehtaphysical13",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mehtaphysical13/pdf-tables-mcp",
+    "repo": "mehtaphysical13/pdf-tables-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://pdf-tables-mcp.vercel.app/api/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-07T23:13:08.228374Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

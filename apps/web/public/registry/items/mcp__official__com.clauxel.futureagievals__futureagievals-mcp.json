@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/com.clauxel.futureagievals/futureagievals-mcp",
+  "type": "mcp",
+  "name": "futureagievals-mcp",
+  "description": "A paid remote MCP for AI SDK eval dashboard, built to return verdicts, receipts, usage logs, and aud",
+  "author": "com.clauxel.futureagievals",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/clauxel/futureagi-evalops-mcp-mcp",
+    "repo": "clauxel/futureagi-evalops-mcp-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://futureagievals.clauxel.com/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-25T08:57:54.003926Z"
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": false
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

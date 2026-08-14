@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.rohith1125/sentinel-execution-mcp",
+  "type": "mcp",
+  "name": "sentinel-execution-mcp",
+  "description": "AI-controlled algorithmic trading engine exposing 40 MCP tools across 9 namespaces.",
+  "author": "io.github.rohith1125",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/rohith1125/sentinel-execution-mcp",
+    "repo": "rohith1125/sentinel-execution-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "sentinel-execution-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-20T20:37:00.593141Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

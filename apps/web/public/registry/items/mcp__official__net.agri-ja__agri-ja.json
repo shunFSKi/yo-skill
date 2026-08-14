@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/net.agri-ja/agri-ja",
+  "type": "mcp",
+  "name": "agri-ja 日本の農業政策・補助金・米の概算金",
+  "description": "Japanese agriculture policy, subsidies and rice advance payments. 日本の農業政策・補助金・米の概算金",
+  "author": "net.agri-ja",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/agrija2026-create/website",
+    "repo": "agrija2026-create/website"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://agri-ja.net/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-07T06:42:24.275805Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

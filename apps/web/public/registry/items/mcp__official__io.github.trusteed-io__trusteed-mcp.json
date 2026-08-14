@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.trusteed-io/trusteed-mcp",
+  "type": "mcp",
+  "name": "Trusteed",
+  "description": "CTEM for your Trusteed tenant: security summary, findings, compliance gaps, and scans via OAuth.",
+  "author": "io.github.trusteed-io",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/trusteed-io/trusteed-mcp-plugin",
+    "repo": "trusteed-io/trusteed-mcp-plugin"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.trusteed.io/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-17T04:36:01.621893Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

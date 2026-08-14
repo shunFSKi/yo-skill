@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.rghsoftware/linux-filesystem",
+  "type": "mcp",
+  "name": "Linux Filesystem",
+  "description": "Enhanced Linux filesystem access with symlinks, permissions, and chmod support",
+  "author": "io.github.rghsoftware",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers/io.github.rghsoftware%2Flinux-filesystem",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/rghsoftware/linux-filesystem-extension/releases/download/v1.2.1/linux-filesystem.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-10-26T04:07:30.533036Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

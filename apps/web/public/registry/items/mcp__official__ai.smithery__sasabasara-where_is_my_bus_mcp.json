@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/ai.smithery/sasabasara-where_is_my_bus_mcp",
+  "type": "mcp",
+  "name": "sasabasara-where_is_my_bus_mcp",
+  "description": "Get real-time NYC bus arrivals, live vehicle locations, and service alerts. Plan trips between any…",
+  "author": "ai.smithery",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://server.smithery.ai/@sasabasara/where_is_my_bus_mcp/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://server.smithery.ai/@sasabasara/where_is_my_bus_mcp/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-09-11T03:53:53.151653Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

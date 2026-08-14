@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.scrape-badger/scrapebadger",
+  "type": "mcp",
+  "name": "ScrapeBadger",
+  "description": "Twitter/X scraping API for AI agents. Get profiles, tweets, trends, and more.",
+  "author": "io.github.scrape-badger",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/scrape-badger/scrapebadger-mcp",
+    "repo": "scrape-badger/scrapebadger-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "scrapebadger-mcp"
+    ],
+    "env": [
+      {
+        "name": "SCRAPEBADGER_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-12-29T18:35:04.265851Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

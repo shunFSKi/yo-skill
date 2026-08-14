@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/com.halalterminal/mcp",
+  "type": "mcp",
+  "name": "Halal Terminal",
+  "description": "Shariah-compliant stock and ETF screening across AAOIFI, DJIM, FTSE, MSCI and S&P methodologies.",
+  "author": "com.halalterminal",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/goww7/halalterminal-mcp",
+    "repo": "goww7/halalterminal-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@halalterminal/mcp"
+    ],
+    "env": [
+      {
+        "name": "HALALTERMINAL_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-10T16:54:55.590423Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "mcp:official/io.github.Echoqili/ssh-licco",
+  "type": "mcp",
+  "name": "SSH LICCO MCP Server",
+  "description": "SSH Model Context Protocol Server - Enable SSH functionality for AI models",
+  "author": "io.github.Echoqili",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Echoqili/ssh-licco.git",
+    "repo": "Echoqili/ssh-licco"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "ssh-licco"
+    ],
+    "env": [
+      {
+        "name": "SSH_HOST",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "SSH_USER",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "SSH_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SSH_PORT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-09T07:34:08.73333Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

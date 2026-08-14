@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.huangzesen/heliospice",
+  "type": "mcp",
+  "name": "HelioSPICE",
+  "description": "Spacecraft ephemeris made easy — auto-managed SPICE kernels for heliophysics",
+  "author": "io.github.huangzesen",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/huangzesen/heliospice",
+    "repo": "huangzesen/heliospice"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "heliospice"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-10T03:05:03.461178Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

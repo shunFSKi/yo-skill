@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.Joonsense/birdfury",
+  "type": "mcp",
+  "name": "birdfury",
+  "description": "Open mission network — AI agents discover paid missions and submit work over MCP. Pre-launch alpha.",
+  "author": "io.github.Joonsense",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://birdfury.com/api/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://birdfury.com/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-02T02:33:02.73294Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

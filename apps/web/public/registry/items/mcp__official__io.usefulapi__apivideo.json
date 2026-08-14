@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.usefulapi/apivideo",
+  "type": "mcp",
+  "name": "apivideo",
+  "description": "Manage videos and live streams, inspect captions, players and webhooks, and read play analytics.",
+  "author": "io.usefulapi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/m190/usefulapi-mcp",
+    "repo": "m190/usefulapi-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://apivideo.usefulapi.io/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-17T20:27:34.964101Z"
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.LuxAlgo/luxalgo-mcp-server",
+  "type": "mcp",
+  "name": "luxalgo-mcp-server",
+  "description": "LuxAlgo Library — the encyclopedia of trading & technical analysis for AI agents. Free, keyless.",
+  "author": "io.github.LuxAlgo",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/LuxAlgo/luxalgo-mcp-server",
+    "repo": "LuxAlgo/luxalgo-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@luxalgo/mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T15:53:43.997005Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

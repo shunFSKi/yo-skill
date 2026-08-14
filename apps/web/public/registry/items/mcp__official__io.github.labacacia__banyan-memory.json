@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.labacacia/banyan-memory",
+  "type": "mcp",
+  "name": "Banyan Memory",
+  "description": "Persistent, governed local memory for MCP-compatible AI clients.",
+  "author": "io.github.labacacia",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/labacacia/banyan-brain-lite",
+    "repo": "labacacia/banyan-brain-lite"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "Banyan.Mcp.Server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-27T06:54:08.459855Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

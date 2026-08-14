@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.aplaceforallmystuff/mcp-kit",
+  "type": "mcp",
+  "name": "mcp-kit",
+  "description": "MCP server for Kit.com (ConvertKit) - manage subscribers, tags, sequences, broadcasts",
+  "author": "io.github.aplaceforallmystuff",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/aplaceforallmystuff/mcp-kit",
+    "repo": "aplaceforallmystuff/mcp-kit"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "kit-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "KIT_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-11-27T16:11:48.684226Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

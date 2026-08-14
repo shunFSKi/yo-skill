@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/dev.claw-link/clawlink",
+  "type": "mcp",
+  "name": "ClawLink",
+  "description": "MCP server connecting AI agents to 100+ apps (Gmail, Slack, Notion, GitHub) via one-click OAuth.",
+  "author": "dev.claw-link",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/hith3sh/clawlink",
+    "repo": "hith3sh/clawlink"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://claw-link.dev/api/mcp",
+    "env": [
+      {
+        "name": "x-clawlink-api-key",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-23T09:43:32.905256Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.anzy-renlab-ai/pronounce",
+  "type": "mcp",
+  "name": "pronounce",
+  "description": "How engineers actually pronounce developer jargon — 1848+ sourced entries (kubectl, nginx, GIF).",
+  "author": "io.github.anzy-renlab-ai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/anzy-renlab-ai/pronounce",
+    "repo": "anzy-renlab-ai/pronounce"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "pronounce-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-13T02:07:30.541454Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

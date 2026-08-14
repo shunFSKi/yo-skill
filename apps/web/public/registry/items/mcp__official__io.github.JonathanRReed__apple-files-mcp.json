@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.JonathanRReed/apple-files-mcp",
+  "type": "mcp",
+  "name": "Apple Files",
+  "description": "Inspect and manage local files and folders inside allowed roots on macOS.",
+  "author": "io.github.JonathanRReed",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/JonathanRReed/Apple-MCPs",
+    "repo": "JonathanRReed/Apple-MCPs"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "apple-files-mcp"
+    ],
+    "env": [
+      {
+        "name": "APPLE_FILES_MCP_SAFETY_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "APPLE_FILES_MCP_ALLOWED_ROOTS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-05T18:22:21.72568Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

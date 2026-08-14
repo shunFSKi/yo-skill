@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/com.stagenth/qr-kit",
+  "type": "mcp",
+  "name": "stagenth · 二维码工具箱",
+  "description": "QR & barcode toolkit: generate, decode, vector SVG, logo QR, WiFi and vCard QR codes.",
+  "author": "com.stagenth",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://stagenth.com/mcp/qr-kit/",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://stagenth.com/mcp/qr-kit/",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-05T15:48:48.797091Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

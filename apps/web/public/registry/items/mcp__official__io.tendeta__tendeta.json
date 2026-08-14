@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.tendeta/tendeta",
+  "type": "mcp",
+  "name": "Tendeta",
+  "description": "Manage a Tendeta store's catalogue and orders with store-scoped permissions.",
+  "author": "io.tendeta",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.tendeta.io/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.tendeta.io/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-17T23:26:39.892126Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

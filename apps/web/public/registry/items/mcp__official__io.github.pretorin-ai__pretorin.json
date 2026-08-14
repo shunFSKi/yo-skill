@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.pretorin-ai/pretorin",
+  "type": "mcp",
+  "name": "Pretorin Compliance",
+  "description": "Access Pretorin compliance systems, controls, evidence, and narratives from your AI tools.",
+  "author": "io.github.pretorin-ai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/pretorin-ai/pretorin-cli.git",
+    "repo": "pretorin-ai/pretorin-cli"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "pretorin"
+    ],
+    "env": [
+      {
+        "name": "PRETORIN_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T21:37:33.473371Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

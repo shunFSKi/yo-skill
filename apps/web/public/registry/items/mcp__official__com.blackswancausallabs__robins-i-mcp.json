@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/com.blackswancausallabs/robins-i-mcp",
+  "type": "mcp",
+  "name": "ROBINS-I V2 MCP",
+  "description": "ROBINS-I V2 (not V1): risk of bias in one result of a non-randomized cohort study",
+  "author": "com.blackswancausallabs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Black-Swan-Causal-Labs/robins-i-mcp",
+    "repo": "Black-Swan-Causal-Labs/robins-i-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "robins-i-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-04T05:57:20.175889Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,104 @@
+{
+  "id": "mcp:official/com.nuverlabs/image-gen",
+  "type": "mcp",
+  "name": "Image Gen",
+  "description": "Generate and edit images from your coding agent with Gemini and OpenAI, using your own API keys.",
+  "author": "com.nuverlabs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/nuver-labs/image-gen-mcp",
+    "repo": "nuver-labs/image-gen-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@nuver-labs/image-gen-mcp"
+    ],
+    "env": [
+      {
+        "name": "GEMINI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "OPENAI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "IMAGE_GEN_MCP_DEFAULT_PROVIDER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "IMAGE_GEN_MCP_GEMINI_MODEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "IMAGE_GEN_MCP_OPENAI_MODEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "IMAGE_GEN_MCP_OUTPUT_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "IMAGE_GEN_MCP_ALLOWED_DIRS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "IMAGE_GEN_MCP_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "IMAGE_GEN_MCP_LOG_FILE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T11:04:46.12209Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

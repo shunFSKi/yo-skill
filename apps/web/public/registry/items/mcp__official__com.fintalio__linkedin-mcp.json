@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/com.fintalio/linkedin-mcp",
+  "type": "mcp",
+  "name": "Fintalio LinkedIn MCP",
+  "description": "LinkedIn outreach MCP server — 19 tools for AI agents to prospect, sequence, and manage contacts.",
+  "author": "com.fintalio",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/saybil-lab/mnareach",
+    "repo": "saybil-lab/mnareach"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://fintalio.com/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-09T11:40:48.638439Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

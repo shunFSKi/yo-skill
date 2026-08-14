@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.AdelElo13/mac-control-mcp",
+  "type": "mcp",
+  "name": "mac-control-mcp",
+  "description": "Native Swift macOS automation — 143 tools: AX, EventKit, voice, browser DOM, undo.",
+  "author": "io.github.AdelElo13",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/AdelElo13/mac-control-mcp",
+    "repo": "AdelElo13/mac-control-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/AdelElo13/mac-control-mcp/releases/download/v0.8.2/mac-control-mcp-v0.8.2.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-06T15:33:08.70481Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

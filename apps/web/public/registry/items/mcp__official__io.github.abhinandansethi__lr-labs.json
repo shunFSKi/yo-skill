@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.abhinandansethi/lr-labs",
+  "type": "mcp",
+  "name": "lr-labs",
+  "description": "Deterministic cross-border tax engine: PE, GAAR, Indian TP, rule-level lookup. Compiled law, no LLM.",
+  "author": "io.github.abhinandansethi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/abhinandansethi/lr-labs-mcp",
+    "repo": "abhinandansethi/lr-labs-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://lrlabs.ai/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T21:26:49.820783Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# LR Labs — cross-border tax law as a callable API\n\n**[lrlabs.ai](https://lrlabs.ai)** · MCP endpoint: `https://lrlabs.ai/mcp`\n\nLR Labs is a **deterministic reasoning engine** for cross-border tax. It\ncompiles law — treaty text, statute, circulars, judgments — into conditions\na machine can evaluate, then computes the position: the answer, the\nconditions it stands on, the assumptions it makes, the unresolved facts it\nturns on, and the authority for each step.\n\nThe engine is symbolic, not generative. **The same facts and the same law\nalways produce the same answer.** Where the authorities divide, it says so\ninstead of guessing. Outside the law it has compiled, it refuses rather than\nanswering. No language model sits anywhere in the evaluation path.\n\nThis repository is the **client connector**. The engine itself is hosted at\n[lrlabs.ai](https://lrlabs.ai) — you do not need to run anything to use it.\n\n---\n\n## Why an agent should call this\n\nLanguage models are strong translators of legal text into structure and\nweak executors of compositional legal inference — error compounds across\nevery condition, threshold and date. A solver's does not. Recent work makes\nthe point empirically: on contamination-controlled statutory-tax splits,\nthe same frontier models gain roughly twenty points when they translate into\na formal representation and delegate inference to a symbolic engine, and the\ngain does *not* shrink as models improve.[^1]\n\nLR Labs is that engine for cross-border tax, with the legal work already\ndone: provisions compiled to spans, judgments carrying string-verified\nquotes and pinpoints, and every conclusion shipped with the conditions it\ndepends on.\n\n[^1]: Kordjamshidi, Aslan, Seshadri, Barrett & Santus, *Reasoners or\nTranslators? Contamination-aware Evaluation and Neuro-Symbolic Robustness on\nTax Law*, SURGeLLM @ ACL 2026, pp. 344–360\n([ACL Anthology](https://aclanthology.org/2026.surgellm-1.23.pdf) ·\n[arXiv 2605.16052](https://arxiv.org/abs/2605.16052)).\n\n## Connect\n\n**Claude Code**\n\n```bash\nclaude mcp add --transport http lr-labs https://lrlabs.ai/mcp\n```\n\n**Claude Desktop / claude.ai** — Settings → Connectors → Add custom\nconnector → `https://lrlabs.ai/mcp`\n\n**ChatGPT (developer mode) / OpenAI Agents SDK**\n\n```python\nfrom agents.mcp import MCPServerStreamableHttp\nlr_labs = MCPServerStreamableHttp(params={\"url\": \"https://lrlabs.ai/mcp\"})\n```\n\n**Cursor** — `.cursor/mcp.json`\n\n```json\n{ \"mcpServers\": { \"lr-labs\": { \"url\": \"https://lrlabs.ai/mcp\" } } }\n```\n\n**Gemini CLI** — `~/.gemini/settings.json`\n\n```json\n{ \"mcpServers\": { \"lr-labs\": { \"httpUrl\": \"https://lrlabs.ai/mcp\" } } }\n```\n\n**stdio (this repo)** — for clients that cannot speak remote MCP:\n\n```json\n{ \"mcpServers\": { \"lr-labs\": { \"command\": \"python3\",\n  \"args\": [\"/path/to/lr_labs_mcp.py\"] } } }\n```\n\n**No MCP client?** The engine is also a plain GET — every intake key is a\nquery parameter, no key required:\n\n```\nhttps://lrlabs.ai/compute?agentType=dependent&concludesContracts=secures&agentExclusivity=yes\n```\n\nFetch [`/compute`](https://lrlabs.ai/compute) with no parameters for the\nfull parameter manual, or [`/llms.txt`](https://lrlabs.ai/llms.txt) for the\nmachine-readable overview.\n\n## Tools\n\n| Tool | Answers |\n|---|---|\n| `analyze_cross_border_tax` | Permanent-establishment exposure and Indian tax liability for a treaty pair — the condition tree, the GIVEN set, deciding facts, the GAAR gate, authorities |\n| `screen_transfer_pricing` | Safe harbour (Rule 10TD), documentation thresholds (Rule 10D), method eligibility, tested party, the 35th–65th percentile range |\n| `verify_tax_research_note` | Any tax analysis, checked against compiled law — citations resolved, thresholds and temporal claims verified |\n| `list_compiled_corridors` | Honest coverage: what the engine can and cannot answer |\n\n## What is compiled\n\n- **India–US Article 5 in full**, including the **1989 Exchange of Notes** —\n  which fixes four conjunctive conditions on the securing-orders limb\n  (frequent acceptance of orders; substantially-all sales-related\n  activities; holding out that acceptance binds; enterprise-fostered\n  belief). \"Only if\" makes each one necessary. No reported Indian decision\n  has yet applied them, and that caveat travels with every answer that\n  relies on them.\n- **The domestic charge** — s.9(1)(i) with Explanations 1, 2 and 2A: the\n  agent routes, significant economic presence, and the apportionment limit,\n  read against s.90(2) treaty relief.\n- **Treaty access and the GAAR gate** — after *AAR v Tiger Global*\n  (2026 INSC 60): a TRC is necessary but no longer sufficient; the Chapter\n  X-A applicability screen (Rule 10U exclusions, s.95(2) commencement,\n  s.144BA invocation) is computed, while the substantive s.96 evaluation is\n  never computed and says so.\n- **The judgment line** with string-verified quotes and paragraph pinpoints\n  — Morgan Stanley, e-Funds, Formula One, Progress Rail, UAE Exchange,\n  Centrica, Rolls Royce, GE Energy, and others.\n- **Indian transfer pricing** — safe harbour, documentation, methods, range.\n\n127 compiled rules across 10 corridors. Coverage is honest and inspectable:\ncall `list_compiled_corridors` or read\n[lrlabs.ai/q](https://lrlabs.ai/q) for worked examples.\n\n## Design commitments\n\n- **Deterministic** — same facts + same law ⇒ byte-identical answer.\n- **No model in the evaluation path** — an LLM only translates a question\n  in and renders a note out; it never decides.\n- **Refuses outside coverage** — an uncompiled corridor returns a structured\n  refusal naming what *is* compiled, never a guess.\n- **Every conclusion ships its conditions** — no answer without its GIVEN\n  set, its assumptions, and the facts that would change it.\n\n## Not legal advice\n\nLR Labs produces computed legal research, not advice. Outputs carry their\nas-at date, their assumptions, and their open questions. Verify before\nrelying.\n\n## Licence\n\nMIT (this connector). The compiled corpus and the hosted engine are\nproprietary.\n",
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/dev.cz-agents/sanctions",
+  "type": "mcp",
+  "name": "sanctions",
+  "description": "Sanctions screening for KYC/AML — EU FSF + OFAC SDN checks for Czech companies & individuals.",
+  "author": "dev.cz-agents",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/martinhavel/cz-agents-mcp",
+    "repo": "martinhavel/cz-agents-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@czagents/sanctions"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-02T11:42:28.085949Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

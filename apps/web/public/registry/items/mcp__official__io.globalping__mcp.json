@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.globalping/mcp",
+  "type": "mcp",
+  "name": "mcp",
+  "description": "Interact with a global network measurement platform.Run network commands from any point in the world",
+  "author": "io.globalping",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/jsdelivr/globalping-mcp-server",
+    "repo": "jsdelivr/globalping-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.globalping.io/sse"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-09-09T15:58:08.139459Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.amitsingh-24/pixlint",
+  "type": "mcp",
+  "name": "pixlint",
+  "description": "Lint, curate & prepare computer-vision datasets from your AI assistant — MCP server, 67 tools",
+  "author": "io.github.amitsingh-24",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/amitsingh-24/PixLint",
+    "repo": "amitsingh-24/PixLint"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "pixlint"
+    ],
+    "env": [
+      {
+        "name": "CV_DATA_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CV_WORKSPACE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-25T20:30:17.592997Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

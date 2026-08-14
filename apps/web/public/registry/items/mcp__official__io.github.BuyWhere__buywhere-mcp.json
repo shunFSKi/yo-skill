@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.BuyWhere/buywhere-mcp",
+  "type": "mcp",
+  "name": "BuyWhere MCP Server",
+  "description": "Agent-native product catalog for AI shopping agents. 296M+ products, 28 countries.",
+  "author": "io.github.BuyWhere",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/BuyWhere/buywhere",
+    "repo": "BuyWhere/buywhere"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.buywhere.ai/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-29T05:57:52.560778Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

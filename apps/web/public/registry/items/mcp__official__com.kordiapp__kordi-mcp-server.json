@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/com.kordiapp/kordi-mcp-server",
+  "type": "mcp",
+  "name": "Kordi — Subscription Intelligence",
+  "description": "Track, analyze, and act on your streaming and SaaS subscriptions from any AI agent.",
+  "author": "com.kordiapp",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/kordi-labs/kordi-mcp-server",
+    "repo": "kordi-labs/kordi-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://kordiapp.com/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-10T16:42:07.441776Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

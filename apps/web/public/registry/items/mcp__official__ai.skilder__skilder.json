@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/ai.skilder/skilder",
+  "type": "mcp",
+  "name": "Skilder",
+  "description": "One place to build, share, and govern the skills and tools your AI agents use at work.",
+  "author": "ai.skilder",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://app.skilder.ai/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://app.skilder.ai/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-29T16:13:34.538503Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

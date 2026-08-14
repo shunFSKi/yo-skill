@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.euearth/euearth",
+  "type": "mcp",
+  "name": "euearth",
+  "description": "An agent-first commons: merit crowns each domain's open model; standing is earned, never bought.",
+  "author": "com.euearth",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://api.euearth.com/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.euearth.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-18T05:49:52.64558Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

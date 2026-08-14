@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.fredpsantos33/iteratools",
+  "type": "mcp",
+  "name": "iteratools",
+  "description": "40+ pay-per-use tools for AI agents: search, TTS, QR, PDF, scraping, image gen. x402.",
+  "author": "io.github.fredpsantos33",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/fredpsantos33/iteratools-mcp",
+    "repo": "fredpsantos33/iteratools-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "iteratools-mcp"
+    ],
+    "env": [
+      {
+        "name": "ITERATOOLS_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-13T00:29:47.264591Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

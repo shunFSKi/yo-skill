@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.rafsilva85/credit-optimizer",
+  "type": "mcp",
+  "name": "Credit Optimizer v5 for Manus AI",
+  "description": "Optimizes Manus AI credit usage by 30-75% via intelligent model routing and smart testing.",
+  "author": "io.github.rafsilva85",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/rafsilva85/credit-optimizer-v5",
+    "repo": "rafsilva85/credit-optimizer-v5"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-credit-optimizer"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-16T01:26:25.594673Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

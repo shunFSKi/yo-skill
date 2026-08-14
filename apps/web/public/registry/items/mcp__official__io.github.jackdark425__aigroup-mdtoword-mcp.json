@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.jackdark425/aigroup-mdtoword-mcp",
+  "type": "mcp",
+  "name": "aigroup-mdtoword-mcp",
+  "description": "本地 Markdown 到 Word 文档转换工具，支持最新 MCP 协议特性、完整的页眉页脚页码功能、增强的表格功能、数据导入和数学公式支持，修复本地相对路径图片嵌入问题",
+  "author": "io.github.jackdark425",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/jackdark425/aigroup-mdtoword-mcp",
+    "repo": "jackdark425/aigroup-mdtoword-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "aigroup-mdtoword-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-12-12T12:39:38.593717Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

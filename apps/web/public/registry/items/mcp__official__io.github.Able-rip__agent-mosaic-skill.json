@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.Able-rip/agent-mosaic-skill",
+  "type": "mcp",
+  "name": "agent-mosaic-skill",
+  "description": "Convert photos to LEGO-style brick mosaic previews with AI-powered color quantization.",
+  "author": "io.github.Able-rip",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Able-rip/agent-mosaic-skill",
+    "repo": "Able-rip/agent-mosaic-skill"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@bmbrick/agent-mosaic-skill"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-12T15:51:42.502653Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

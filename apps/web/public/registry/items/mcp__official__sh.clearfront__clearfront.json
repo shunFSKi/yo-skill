@@ -1,0 +1,83 @@
+{
+  "id": "mcp:official/sh.clearfront/clearfront",
+  "type": "mcp",
+  "name": "clearfront",
+  "description": "OSINT sweep of a digital footprint: breaches, accounts, data brokers, domains and IPs",
+  "author": "sh.clearfront",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/scottmartinanderson/clearfront",
+    "repo": "scottmartinanderson/clearfront"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "clearfront"
+    ],
+    "env": [
+      {
+        "name": "HIBP_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "IPINFO_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SHODAN_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "VIRUSTOTAL_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ANTHROPIC_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-30T15:00:20.008619Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.javalenciacai/siigo-pyme-mcp",
+  "type": "mcp",
+  "name": "siigo-pyme-mcp",
+  "description": "SIIGO Pyme as MCP tools: the 47 ExcelSIIGO functions, plus company discovery.",
+  "author": "io.github.javalenciacai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/javalenciacai/siigo-pyme-mcp.git",
+    "repo": "javalenciacai/siigo-pyme-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "siigo-pyme-mcp"
+    ],
+    "env": [
+      {
+        "name": "SIIGO_USUARIO",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SIIGO_CLAVE",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SIIGO_ANO",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SIIGO_TOOLS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SIIGO_MCP_CONFIG_DIR",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T22:50:28.549223Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

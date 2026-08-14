@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.olgasafonova/miro-mcp-server",
+  "type": "mcp",
+  "name": "Miro",
+  "description": "Control Miro whiteboards with AI. 105 tools for boards, diagrams, mindmaps, comments, SVG.",
+  "author": "io.github.olgasafonova",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/olgasafonova/miro-mcp-server",
+    "repo": "olgasafonova/miro-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/olgasafonova/miro-mcp-server:1.23.0"
+    ],
+    "env": [
+      {
+        "name": "MIRO_ACCESS_TOKEN",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T23:17:43.269011Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

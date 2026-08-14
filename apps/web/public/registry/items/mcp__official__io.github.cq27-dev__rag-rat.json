@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.cq27-dev/rag-rat",
+  "type": "mcp",
+  "name": "rag-rat",
+  "description": "Repository intelligence, code graph, history, papertrail, and cross-agent memory for coding agents.",
+  "author": "io.github.cq27-dev",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/cq27-dev/rag-rat",
+    "repo": "cq27-dev/rag-rat"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@rag-rat/bin"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-02T08:13:07.200953Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

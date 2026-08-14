@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.beepboop2025/groundcheck",
+  "type": "mcp",
+  "name": "groundcheck",
+  "description": "Verify claims, resolve FIGI identity, extract claims, and sign x402 delivery receipts over MCP.",
+  "author": "io.github.beepboop2025",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/beepboop2025/groundcheck",
+    "repo": "beepboop2025/groundcheck"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "groundcheck-mcp"
+    ],
+    "env": [
+      {
+        "name": "GROUNDCHECK_ENGINE_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-02T09:10:39.691415Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,114 @@
+{
+  "id": "mcp:official/io.github.es617/obsidian-sync-mcp",
+  "type": "mcp",
+  "name": "obsidian-sync-mcp",
+  "description": "Give AI agents access to your Obsidian vault via local files or Self-hosted LiveSync.",
+  "author": "io.github.es617",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/es617/obsidian-sync-mcp.git",
+    "repo": "es617/obsidian-sync-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "obsidian-sync-mcp"
+    ],
+    "env": [
+      {
+        "name": "VAULT_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "COUCHDB_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "COUCHDB_USER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "COUCHDB_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "COUCHDB_DATABASE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "COUCHDB_PASSPHRASE",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "COUCHDB_OBFUSCATE_PROPERTIES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "VAULT_NAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_AUTH_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PORT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-30T23:27:39.284107Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

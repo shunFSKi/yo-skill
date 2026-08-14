@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.Goran-Arsov/freshjots-mcp",
+  "type": "mcp",
+  "name": "Fresh Jots",
+  "description": "Read and write your Fresh Jots notes from Claude, Cursor, and any MCP client.",
+  "author": "io.github.Goran-Arsov",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Goran-Arsov/freshjots-mcp",
+    "repo": "Goran-Arsov/freshjots-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "freshjots-mcp"
+    ],
+    "env": [
+      {
+        "name": "FRESHJOTS_TOKEN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-03T19:11:48.63569Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

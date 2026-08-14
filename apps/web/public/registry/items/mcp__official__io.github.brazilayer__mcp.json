@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.brazilayer/mcp",
+  "type": "mcp",
+  "name": "Brazilayer — Brazilian Public Data",
+  "description": "Brazilian company registry (CNPJ), sanctions, funds & market data for AI agents, paid via x402.",
+  "author": "io.github.brazilayer",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/brazilayer/mcp",
+    "repo": "brazilayer/mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/brazilayer/mcp/releases/download/v0.12.0/brazilayer-mcp.mcpb"
+    ],
+    "env": [
+      {
+        "name": "BRAZILAYER_PRIVATE_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T10:40:33.040703Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

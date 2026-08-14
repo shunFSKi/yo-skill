@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.Happygallo/apple-ads",
+  "type": "mcp",
+  "name": "apple-ads",
+  "description": "Manage Apple Search Ads campaigns, keywords, budgets, and reports via API v5.",
+  "author": "io.github.Happygallo",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Happygallo/apple-ads-mcp",
+    "repo": "Happygallo/apple-ads-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "apple-ads-mcp"
+    ],
+    "env": [
+      {
+        "name": "ASA_CLIENT_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "ASA_TEAM_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "ASA_KEY_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "ASA_PRIVATE_KEY_PATH",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "ASA_ORG_ID",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-17T09:06:40.53346Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

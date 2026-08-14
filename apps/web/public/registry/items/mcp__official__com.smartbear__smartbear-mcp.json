@@ -1,0 +1,144 @@
+{
+  "id": "mcp:official/com.smartbear/smartbear-mcp",
+  "type": "mcp",
+  "name": "SmartBear MCP",
+  "description": "MCP server for AI access to SmartBear tools, including BugSnag, Reflect, Swagger, PactFlow, QTM4J.",
+  "author": "com.smartbear",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/SmartBear/smartbear-mcp",
+    "repo": "SmartBear/smartbear-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@smartbear/mcp"
+    ],
+    "env": [
+      {
+        "name": "BEARQ_API_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "BEARQ_API_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BUGSNAG_AUTH_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "BUGSNAG_PROJECT_API_KEY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "REFLECT_API_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SWAGGER_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SWAGGER_FUNCTIONAL_TESTING_API_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SWAGGER_FUNCTIONAL_TESTING_BASE_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PACT_BROKER_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PACT_BROKER_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PACT_BROKER_USERNAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PACT_BROKER_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ZEPHYR_API_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ZEPHYR_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "QTM4J_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "QTM4J_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "QTM4J_AUTOMATION_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-11T06:30:32.932666Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

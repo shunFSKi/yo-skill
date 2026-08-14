@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.frisian-mcp/django",
+  "type": "mcp",
+  "name": "Frisian MCP (Django)",
+  "description": "Your DRF API as MCP tools — 1,800 endpoints become 16 dispatchers, permissioned by Django.",
+  "author": "com.frisian-mcp",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Frisian-MCP/frisian-mcp",
+    "repo": "Frisian-MCP/frisian-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.frisian-mcp.com/mcp/"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-23T20:13:53.70856Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

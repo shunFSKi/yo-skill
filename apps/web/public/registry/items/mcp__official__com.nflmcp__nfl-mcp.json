@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.nflmcp/nfl-mcp",
+  "type": "mcp",
+  "name": "NFL MCP",
+  "description": "NFL analytics tools for AI agents: stats, fantasy, injuries, schedules, and advanced analysis.",
+  "author": "com.nflmcp",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.nflmcp.com/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.nflmcp.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-22T20:51:29.233801Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.Tom409114/rrdoctor",
+  "type": "mcp",
+  "name": "Research Repo Doctor",
+  "description": "Deterministic Artifact Evaluation preflight and run-path grader for research repositories.",
+  "author": "io.github.Tom409114",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Tom409114/research-repo-doctor",
+    "repo": "Tom409114/research-repo-doctor"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "rrdoctor"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-10T07:27:14.056653Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

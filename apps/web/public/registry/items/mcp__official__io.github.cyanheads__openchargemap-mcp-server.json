@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.cyanheads/openchargemap-mcp-server",
+  "type": "mcp",
+  "name": "openchargemap-mcp-server",
+  "description": "Find EV charging stations, detail, and reliability check-ins via the global Open Charge Map.",
+  "author": "io.github.cyanheads",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/cyanheads/openchargemap-mcp-server",
+    "repo": "cyanheads/openchargemap-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@cyanheads/openchargemap-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "OPENCHARGEMAP_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "OPENCHARGEMAP_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OPENCHARGEMAP_REFERENCE_REFRESH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-06T19:00:52.778751Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

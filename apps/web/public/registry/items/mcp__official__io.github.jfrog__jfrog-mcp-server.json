@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.jfrog/jfrog-mcp-server",
+  "type": "mcp",
+  "name": "JFrog Remote MCP Server",
+  "description": "MCP Server for JFrog, providing tools for development and artifact management.",
+  "author": "io.github.jfrog",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/jfrog/jfrog-mcp-server",
+    "repo": "jfrog/jfrog-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://myPlatform.jfrog.github.io/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-10-26T11:26:09.107883Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

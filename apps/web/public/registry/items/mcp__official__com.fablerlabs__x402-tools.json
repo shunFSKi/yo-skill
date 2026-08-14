@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.fablerlabs/x402-tools",
+  "type": "mcp",
+  "name": "Fabler x402 Tools",
+  "description": "Free catalog and 2,048-character secret-scan preview for Fabler's x402 agent tools on Base.",
+  "author": "com.fablerlabs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/fablerlabs/x402-tools",
+    "repo": "fablerlabs/x402-tools"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://x402.fablerlabs.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-10T08:26:18.839125Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,89 @@
+{
+  "id": "mcp:official/io.github.XFuel-Lab/xfuel-mcp",
+  "type": "mcp",
+  "name": "XFuel",
+  "description": "Submit AI inference to XFuel, pay per task (USDC via x402 or TFUEL), fetch/verify ZK proofs.",
+  "author": "io.github.XFuel-Lab",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/XFuel-Lab/xfuel-protocol",
+    "repo": "XFuel-Lab/xfuel-protocol"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "xfuel-mcp"
+    ],
+    "env": [
+      {
+        "name": "XFUEL_API_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "XFUEL_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "XFUEL_MCP_AUTH_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "XFUEL_RPC_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ZK_VERIFIER_ADDRESS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "XFUEL_PAYER_PRIVATE_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-09T08:39:04.072224Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/me.drwho/tools",
+  "type": "mcp",
+  "name": "drwho.me developer tools",
+  "description": "Remote MCP server: 10 developer utilities (base64, JWT, DNS, UUID, URL, JSON, UA, IP lookup).",
+  "author": "me.drwho",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/hikmahtech/drwhome",
+    "repo": "hikmahtech/drwhome"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://drwho.me/mcp/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-17T09:55:44.614016Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

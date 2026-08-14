@@ -1,0 +1,83 @@
+{
+  "id": "mcp:official/io.github.arpe-io/lakexpress-mcp",
+  "type": "mcp",
+  "name": "lakexpress-mcp",
+  "description": "MCP server for LakeXpress — automated database-to-cloud data pipeline as Parquet",
+  "author": "io.github.arpe-io",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/arpe-io/lakexpress-mcp",
+    "repo": "arpe-io/lakexpress-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "lakexpress-mcp"
+    ],
+    "env": [
+      {
+        "name": "LAKEXPRESS_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LAKEXPRESS_TIMEOUT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LAKEXPRESS_LOG_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "FASTBCP_DIR_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-16T14:41:37.501199Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

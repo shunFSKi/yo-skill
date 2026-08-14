@@ -1,0 +1,88 @@
+{
+  "id": "mcp:official/io.github.wmarceau/hvac-quotes",
+  "type": "mcp",
+  "name": "hvac-quotes",
+  "description": "HVAC equipment RFQ management - submit quotes to distributors",
+  "author": "io.github.wmarceau",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/wmarceau/hvac-quotes-mcp",
+    "repo": "wmarceau/hvac-quotes-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "hvac-quotes-mcp"
+    ],
+    "env": [
+      {
+        "name": "HVAC_MOCK_EMAIL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SMTP_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SMTP_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SMTP_USER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SMTP_PASS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SMTP_FROM",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-01-14T13:49:45.343817Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

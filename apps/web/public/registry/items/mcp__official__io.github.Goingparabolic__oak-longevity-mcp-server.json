@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.Goingparabolic/oak-longevity-mcp-server",
+  "type": "mcp",
+  "name": "oak-longevity-mcp-server",
+  "description": "Longevity medicine MCP: medication dosing, labs, monitoring, drug interactions & intake screening",
+  "author": "io.github.Goingparabolic",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Goingparabolic/oak-longevity-mcp-server",
+    "repo": "Goingparabolic/oak-longevity-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "oak-longevity-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "LONGEVITY_LICENSE_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-30T20:40:30.624784Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/email.deadsimple/dead-simple-email",
+  "type": "mcp",
+  "name": "Dead Simple Email",
+  "description": "Give an agent its own inbox: send, receive, and pull signup codes from real email.",
+  "author": "email.deadsimple",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/deadsimple-email/deadsimple-email",
+    "repo": "deadsimple-email/deadsimple-email"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "deadsimple-email"
+    ],
+    "env": [
+      {
+        "name": "DSE_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-30T04:18:40.849217Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

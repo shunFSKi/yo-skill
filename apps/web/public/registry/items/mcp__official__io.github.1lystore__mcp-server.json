@@ -1,0 +1,114 @@
+{
+  "id": "mcp:official/io.github.1lystore/mcp-server",
+  "type": "mcp",
+  "name": "mcp-server",
+  "description": "MCP server for 1ly.store — buy/sell APIs and launch tokens on Bags.fm with USDC & $1LY.",
+  "author": "io.github.1lystore",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/1lystore/1ly-mcp-server",
+    "repo": "1lystore/1ly-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@1ly/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "ONELY_WALLET_SOLANA_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ONELY_WALLET_EVM_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ONELY_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ONELY_WALLET_PROVIDER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ONELY_NETWORK",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ONELY_SOLANA_RPC_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ONELY_BUDGET_PER_CALL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ONELY_BUDGET_DAILY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ONELY_BUDGET_STATE_FILE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ONELY_SOLANA_DRY_RUN",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ONELY_API_BASE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-18T19:55:13.366521Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

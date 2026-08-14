@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.LarryWalkerDEV/immostage",
+  "type": "mcp",
+  "name": "ImmoStage Virtual Staging",
+  "description": "AI virtual staging for real estate — stage rooms, beautify floor plans, classify images.",
+  "author": "io.github.LarryWalkerDEV",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/LarryWalkerDEV/mcp-immostage",
+    "repo": "LarryWalkerDEV/mcp-immostage"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.immostage.ai/api/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-18T14:40:49.446545Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

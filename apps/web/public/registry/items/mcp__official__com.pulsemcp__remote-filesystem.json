@@ -1,0 +1,99 @@
+{
+  "id": "mcp:official/com.pulsemcp/remote-filesystem",
+  "type": "mcp",
+  "name": "remote-filesystem",
+  "description": "MCP server for remote filesystem operations on cloud storage (Google Cloud Storage).",
+  "author": "com.pulsemcp",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/pulsemcp/mcp-servers",
+    "repo": "pulsemcp/mcp-servers"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "remote-filesystem-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "GCS_BUCKET",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "GCS_PROJECT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GCS_CLIENT_EMAIL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GCS_PRIVATE_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GOOGLE_APPLICATION_CREDENTIALS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GCS_ROOT_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GCS_MAKE_PUBLIC",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ENABLED_TOOLGROUPS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-26T14:07:53.723164Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

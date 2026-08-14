@@ -1,0 +1,99 @@
+{
+  "id": "mcp:official/io.github.uarlouski/testrail-mcp-server",
+  "type": "mcp",
+  "name": "testrail-mcp-server",
+  "description": "Model Context Protocol (MCP) server for TestRail platform, enabling LLMs to manage test artifacts.",
+  "author": "io.github.uarlouski",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/uarlouski/testrail-mcp-server",
+    "repo": "uarlouski/testrail-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@uarlouski/testrail-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "TESTRAIL_INSTANCE_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "TESTRAIL_USERNAME",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "TESTRAIL_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "TESTRAIL_ENABLE_SHARED_STEPS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TESTRAIL_ALLOW_WRITE_OPERATIONS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TESTRAIL_ALLOW_READ_OPERATIONS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TESTRAIL_ALLOW_DELETE_OPERATIONS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TESTRAIL_ENABLE_DEPRECATED_TOOLS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T21:38:34.240592Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "<div align=\"center\">\n  <h1>🚀 TestRail MCP Server</h1>\n  <p>\n    <strong>An open-source Model Context Protocol (MCP) server that connects Claude, Cursor, Windsurf, and other AI assistants directly to TestRail.</strong>\n  </p>\n  <p>\n    Manage TestRail projects, search and create test cases, kick off test runs, record results, and attach files — all through natural-language conversation with your AI assistant. Built for QA engineers and AI-assisted test automation.\n  </p>\n</div>\n\n<p align=\"center\">\n  <a href=\"https://www.npmjs.com/package/@uarlouski/testrail-mcp-server\"><img src=\"https://badge.fury.io/js/@uarlouski%2Ftestrail-mcp-server.svg\" alt=\"npm version\"></a>\n  <a href=\"https://www.npmjs.com/package/@uarlouski/testrail-mcp-server\"><img src=\"https://img.shields.io/npm/dm/@uarlouski/testrail-mcp-server.svg\" alt=\"npm downloads\"></a>\n  <a href=\"https://github.com/uarlouski/testrail-mcp-server/actions/workflows/ci.yml\"><img src=\"https://github.com/uarlouski/testrail-mcp-server/actions/workflows/ci.yml/badge.svg\" alt=\"CI Status\"></a>\n  <a href=\"https://opensource.org/licenses/Apache-2.0\"><img src=\"https://img.shields.io/badge/License-Apache_2.0-blue.svg\" alt=\"License\"></a>\n  <a href=\"https://www.typescriptlang.org/\"><img src=\"https://img.shields.io/badge/TypeScript-5.9-blue.svg\" alt=\"TypeScript\"></a>\n  <a href=\"https://github.com/uarlouski/testrail-mcp-server\"><img src=\"https://img.shields.io/github/stars/uarlouski/testrail-mcp-server.svg?style=social&label=Star\" alt=\"GitHub stars\"></a>\n  <a href=\"https://glama.ai/mcp/servers/uarlouski/testrail-mcp-server\"><img src=\"https://glama.ai/mcp/servers/uarlouski/testrail-mcp-server/badges/score.svg\" alt=\"Score Badge\"></a>\n</p>\n\n<p align=\"center\">\n  <strong>Compatible with:</strong>\n  <img src=\"https://img.shields.io/badge/Claude%20Desktop-D97757?logo=anthropic&logoColor=white\" alt=\"Claude Desktop\">\n  <img src=\"https://img.shields.io/badge/Cursor-000000?logo=cursor&logoColor=white\" alt=\"Cursor\">\n  <img src=\"https://img.shields.io/badge/Windsurf-19A1BC?logo=codeium&logoColor=white\" alt=\"Windsurf\">\n  <img src=\"https://img.shields.io/badge/VS%20Code-007ACC?logo=visualstudiocode&logoColor=white\" alt=\"VS Code\">\n</p>\n\n<!-- TODO: insert demo.gif — short screencast of asking \"create a test case\" in Claude or Cursor and seeing the case appear in TestRail -->\n\n---\n\n## 🌟 Why Choose TestRail MCP Server?\n\nManaging test cases manually is tedious and error-prone. With the **TestRail MCP Server**, your AI assistant (whether it’s **Claude, Cursor, Windsurf**, or any MCP-compliant client) interacts directly with your TestRail instance. Instruct it to find test cases, draft new ones, kick off test runs, and record test results—all through natural conversation.\n\n**No context switching. No tedious copy-pasting. Just ask your AI.**\n\n## ✨ Key Features & Capabilities\n\n| Capability | Description |\n|------------|-------------|\n| **🔍 Intelligent Discovery** | Browse projects, test suites, and sections to automatically map your QA organization. |\n| **📋 Full Case Management** | Fetch, create, update, and bulk-edit test cases with comprehensive custom field support. |\n| **▶️ Actionable Execution** | Create test runs, update results by `test_id` or `case_id`, attach files, and track statuses. |\n| **🧠 Context-Aware AI** | Dynamically exposes templates, fields, priorities, and statuses so LLMs generate valid, structured data. |\n\n## 🚀 Quick Start Guide\n\n### 1. Obtain Your TestRail API Key\n\nNavigate to **My Settings → API Keys** in your TestRail platform and generate a new key for authentication.\n\n### 2. Configure Your MCP Client\n\nAdd the server to your chosen MCP client configuration. The Claude Desktop example is shown below; Cursor, Windsurf, and other clients use the same pattern (see the collapsible sections further down).\n\n#### 🤖 Claude Desktop\n\nAdd this to your `claude_desktop_config.json`:\n\n```json\n{\n  \"mcpServers\": {\n    \"testrail\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@uarlouski/testrail-mcp-server@latest\"],\n      \"env\": {\n        \"TESTRAIL_INSTANCE_URL\": \"https://your-instance.testrail.io\",\n        \"TESTRAIL_USERNAME\": \"your@email.com\",\n        \"TESTRAIL_API_KEY\": \"your-api-key\",\n        \"TESTRAIL_ENABLE_SHARED_STEPS\": \"true\"\n      }\n    }\n  }\n}\n```\n\n<details>\n<summary><strong>⌨️ Cursor</strong></summary>\n\nOpen **Settings → Features → MCP** and add a new configuration:\n\n```json\n{\n  \"mcpServers\": {\n    \"testrail\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@uarlouski/testrail-mcp-server@latest\"],\n      \"env\": {\n        \"TESTRAIL_INSTANCE_URL\": \"https://your-instance.testrail.io\",\n        \"TESTRAIL_USERNAME\": \"your@email.com\",\n        \"TESTRAIL_API_KEY\": \"your-api-key\"\n      }\n    }\n  }\n}\n```\n</details>\n\n<details>\n<summary><strong>🌊 Windsurf</strong></summary>\n\nUpdate your Windsurf MCP configuration file:\n\n```json\n{\n  \"mcpServers\": {\n    \"testrail\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@uarlouski/testrail-mcp-server@latest\"],\n      \"env\": {\n        \"TESTRAIL_INSTANCE_URL\": \"https://your-instance.testrail.io\",\n        \"TESTRAIL_USERNAME\": \"your@email.com\",\n        \"TESTRAIL_API_KEY\": \"your-api-key\"\n      }\n    }\n  }\n}\n```\n</details>\n\n<details>\n<summary><strong>🌐 Other MCP Clients</strong></summary>\n\nAny MCP-compliant client can utilize this server. The pattern is universal—point your client at the `npx` command with the required environment variables.\n</details>\n\n### 3. See It in Action\n\nOnce configured, turbo-charge your QA workflow by asking your AI assistant:\n\n- *\"List all projects in TestRail to find the latest active project.\"*\n- *\"Show me all active users in the project to find the right assignee.\"*\n- *\"Show me all test cases in section 5 of project 3.\"*\n- *\"Create a comprehensive test case for 'Login Validation' with detailed steps.\"*\n- *\"Start a new test run containing cases from section 5.\"*\n- *\"Mark test case ID 1042 as passed with the comment 'Tested successfully on staging'.\"*\n\n---\n\n## ⚙️ Environment Variables & Security Controls\n\n| Variable | Description | Required | Default |\n|----------|-------------|:--------:|:-------:|\n| `TESTRAIL_INSTANCE_URL` | Your TestRail instance URL (e.g., `https://example.testrail.io`) | ✅ | |\n| `TESTRAIL_USERNAME` | Your TestRail user email address | ✅ | |\n| `TESTRAIL_API_KEY` | Your TestRail API key ([Guide](https://support.testrail.com/hc/en-us/articles/7077039051412-Accessing-the-TestRail-API)) | ✅ | |\n| `TESTRAIL_ENABLE_SHARED_STEPS` | Set to `true` to enable Shared Steps management tools | | `false` |\n| `TESTRAIL_ALLOW_WRITE_OPERATIONS` | Allow write operations (e.g. adding/updating test cases, test runs, sections) | | `true` |\n| `TESTRAIL_ALLOW_READ_OPERATIONS` | Allow read operations (e.g. retrieving projects, test cases, templates) | | `true` |\n| `TESTRAIL_ALLOW_DELETE_OPERATIONS` | Allow delete operations (e.g. deleting cases or shared steps). Enabled strictly via `true`. | | `false` |\n| `TESTRAIL_ENABLE_DEPRECATED_TOOLS` | Enable deprecated tools for backward compatibility. Set to `false` to reduce context token overhead. | | `true` |\n\n### ⚠️ Deprecation Lifecycle & Features Scheduled for Removal\n\nTo ensure smooth transitions, deprecated tools remain available by default (`TESTRAIL_ENABLE_DEPRECATED_TOOLS=true`) and will be removed in future major releases:\n\n| Deprecated Tool | Replacement | Status |\n|-----------------|-------------|--------|\n| `add_attachment_to_run` | `add_attachment` (`entity_type: \"case\" \\| \"run\"`) | Deprecated in `2.3.0`, scheduled for removal in `3.0.0` |\n\n> **💡 Token Tip**: If you are not using legacy tools, set `TESTRAIL_ENABLE_DEPRECATED_TOOLS=false` in your environment to eliminate deprecated tool definitions from the LLM prompt and save tokens!\n\n---\n\n## 🛠️ Complete Tool Reference\n\nThe TestRail MCP Server provides heavily typed, descriptive tools designed specifically for LLM interaction:\n\n> **💡 Pro Tip: Handling Large Data Sets & Permissions**\n> - **Large Data Sets**: For list-based tools like `get_cases` and `get_sections`, you can supply the `output_file` parameter with an absolute file path. The server will bypass the LLM context window by writing the raw JSON directly to disk and returning a concise summary, allowing you to run external scripts against the export!\n> - **Intelligent User Fallback**: When fetching users using `get_users` without admin rights, TestRail denies access globally. The server dynamically catches this permission restriction and falls back to polling all active projects in parallel, retrieving and deduplicating active users so assignees and reviewers can always be mapped.\n\n### 🔭 Discovery & Navigation\n| Tool | Functionality |\n|------|-------------|\n| `query_project` | Retrieve a single project (`action: \"one\"`) or all active projects (`action: \"many\"`). |\n| `query_suite` | Retrieve a single test suite (`action: \"one\"`) or all test suites for a project (`action: \"many\"`). |\n| `get_sections` | Navigate the precise folder/section hierarchy of any test suite. |\n| `mutate_suite` | Create a new test suite or update an existing one in TestRail. |\n| `mutate_section` | Create a new section or update an existing section in TestRail. |\n| `get_users` | Retrieve active users. Handles per-project filtering and automatic fallback polling for non-admin accounts. |\n\n### 📋 Test Case Management\n| Tool | Functionality |\n|------|-------------|\n| `get_cases` | Query test cases with advanced filtering (priority, template, type, etc.) and pagination. |\n| `get_case` | Fetch complete, structured details of a specific test case, including custom steps and fields. |\n| `add_case` | Seamlessly create a new test case equipped with robust custom field validation. |\n| `update_case` | Modify an existing test case's steps, metadata, or titles. |\n| `update_cases` | Execute bulk-updates on multiple test cases simultaneously to save time. |\n\n### ▶️ Test Execution & Tracking\n| Tool | Functionality |\n|------|-------------|\n| `query_run` | Retrieve a single test run (`action: \"one\"`) or all test runs for a project (`action: \"many\"`, supporting filters). |\n| `mutate_run` | Create a new test run or update an existing one in TestRail. |\n| `get_tests` | Retrieve individual tests for a specific test run, with optional status filtering. |\n| `get_results` | Retrieve paginated results for a specific test ID. |\n| `add_results` | Submit test results to a test run using the specific `test_id`. |\n| `add_results_for_cases` | Submits results to a run mapping directly to `case_id`s, streamlining automation workflows. |\n\n### 📎 Attachments & Media\n| Tool | Functionality |\n|------|-------------|\n| `add_attachment` | Add an attachment (screenshot, log, file, or auto-zipped directory) to a test case or test run (`entity_type: \"case\" \\| \"run\"`). |\n| `query_attachment` | Download an attachment to a local file (`action: \"one\"`) or retrieve attachment metadata for a test case or test run (`action: \"many\"`, supporting `output_file` export). |\n\n### 🔗 Shared Steps (Optional)\n| Tool | Functionality |\n|------|-------------|\n| `get_shared_steps` | List shared test steps for a project with optional reference filtering. |\n| `get_shared_step` | Retrieve precise details of a specific shared test step set. |\n| `get_shared_step_history` | View the complete audit trail and version history of a shared step set. |\n| `add_shared_step` | Create a new reusable set of shared test steps. |\n| `update_shared_step` | Modify an existing shared step set (changes propagate to all linked test cases). |\n\n### 🗑️ Deletion\n| Tool | Functionality |\n|------|-------------|\n| `delete_entity` | Deletes a specified TestRail entity (supports `\"case\"`, `\"shared_step\"`, or `\"attachment\"`) by its ID. Requires `TESTRAIL_ALLOW_DELETE_OPERATIONS` to be set to `true` in your environment. |\n\n### 🧠 System Metadata\n| Tool | Functionality |\n|------|-------------|\n| `get_statuses` | Systematically list all configured test statuses (Passed, Failed, Blocked, Retest, etc.). |\n| `get_priorities` | Retrieve priority levels c\n\n…",
+  "status": "curated"
+}

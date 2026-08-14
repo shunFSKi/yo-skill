@@ -1,0 +1,88 @@
+{
+  "id": "mcp:official/io.github.Hasilt/images-mcp",
+  "type": "mcp",
+  "name": "Stock Image MCP",
+  "description": "Search and download stock images from Unsplash, Pexels, Pixabay, Freepik, StockVault, and Burst",
+  "author": "io.github.Hasilt",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Hasilt/images-mcp",
+    "repo": "Hasilt/images-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "stock-image-mcp"
+    ],
+    "env": [
+      {
+        "name": "UNSPLASH_ACCESS_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PEXELS_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PIXABAY_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "FREEPIK_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "STOCKVAULT_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "DEFAULT_PROVIDER",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-02T14:24:25.814746Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.xt765/mcp-document-converter",
+  "type": "mcp",
+  "name": "mcp-document-converter",
+  "description": "Convert PDF, DOCX, HTML, Markdown, and Text for AI assistant context injection.",
+  "author": "io.github.xt765",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/xt765/mcp-document-converter",
+    "repo": "xt765/mcp-document-converter"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-document-converter"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-02T06:30:08.020855Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

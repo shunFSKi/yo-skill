@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.sebastienrousseau/ap2-iso20022",
+  "type": "mcp",
+  "name": "ap2-iso20022",
+  "description": "Bridge AP2 / x402 agent-payment mandates into wire-valid ISO 20022 pain.001 / pacs.008 records.",
+  "author": "io.github.sebastienrousseau",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/sebastienrousseau/ap2-iso20022",
+    "repo": "sebastienrousseau/ap2-iso20022"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "ap2-iso20022"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-29T07:32:41.395813Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

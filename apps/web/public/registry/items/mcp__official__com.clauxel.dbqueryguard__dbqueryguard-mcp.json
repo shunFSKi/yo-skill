@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/com.clauxel.dbqueryguard/dbqueryguard-mcp",
+  "type": "mcp",
+  "name": "DB Query Guard MCP",
+  "description": "Paid remote MCP for governed database query review, SQL simulation, approvals, and audits.",
+  "author": "com.clauxel.dbqueryguard",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://dbqueryguard.clauxel.com/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://dbqueryguard.clauxel.com/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-17T19:24:57.398192Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

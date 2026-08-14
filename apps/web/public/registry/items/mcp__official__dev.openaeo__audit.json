@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/dev.openaeo/audit",
+  "type": "mcp",
+  "name": "OpenAEO",
+  "description": "Asks 8 AI crawlers for your page, checks who really answered, and writes the fixes. MIT.",
+  "author": "dev.openaeo",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/charlacsina/openaeo-audit",
+    "repo": "charlacsina/openaeo-audit"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "openaeo-audit"
+    ],
+    "env": [
+      {
+        "name": "OPENAEO_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-11T18:12:32.752014Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

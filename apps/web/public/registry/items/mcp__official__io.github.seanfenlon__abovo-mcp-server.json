@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.seanfenlon/abovo-mcp-server",
+  "type": "mcp",
+  "name": "ABOVO.co — Email-to-Web Publishing",
+  "description": "Publish content to the web by emailing POST@abovo.co. No API key, no signup. SMTP is the API.",
+  "author": "io.github.seanfenlon",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/seanfenlon/abovo-mcp-server",
+    "repo": "seanfenlon/abovo-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/seanfenlon/abovo-mcp-server/releases/download/v1.1.1/abovo-mcp-server-1.1.1.mcpb"
+    ],
+    "env": [
+      {
+        "name": "ABOVO_SMTP_USER",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "ABOVO_SMTP_PASS",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "ABOVO_SMTP_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ABOVO_SMTP_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ABOVO_SENDER_EMAIL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-01T02:02:59.994451Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

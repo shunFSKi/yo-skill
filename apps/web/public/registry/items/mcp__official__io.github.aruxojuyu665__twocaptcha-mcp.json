@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.aruxojuyu665/twocaptcha-mcp",
+  "type": "mcp",
+  "name": "2Captcha MCP",
+  "description": "Full 2Captcha API (43 tools) for Claude Code: 31 captcha solvers + management + webhook.",
+  "author": "io.github.aruxojuyu665",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/aruxojuyu665/2Captcha-MCP",
+    "repo": "aruxojuyu665/2Captcha-MCP"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "twocaptcha-mcp"
+    ],
+    "env": [
+      {
+        "name": "2Captcha_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-05T04:10:27.04097Z"
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

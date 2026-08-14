@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.gpavan1992/globalpulse-mcp",
+  "type": "mcp",
+  "name": "globalpulse-mcp",
+  "description": "Real-world intelligence MCP — macroeconomics, climate, disasters, trade & aviation.",
+  "author": "io.github.gpavan1992",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/gpavan1992/Globalpulse-MCP",
+    "repo": "gpavan1992/Globalpulse-MCP"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "globalpulse-mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-10T16:32:55.083948Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

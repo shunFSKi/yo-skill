@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/au.com.travellersgroup/agent",
+  "type": "mcp",
+  "name": "Travellers Group — Regional Australia Hotels",
+  "description": "Verified facts and direct-booking handoff for five Travellers Group hotels in regional Australia.",
+  "author": "au.com.travellersgroup",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://agent.travellersgroup.com.au/v1/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://agent.travellersgroup.com.au/v1/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-14T05:20:22.736694Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

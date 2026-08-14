@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.pfeilisolana/scry-mcp",
+  "type": "mcp",
+  "name": "scry-mcp",
+  "description": "Keyless MCP bridge to Scry Solana wallet intel: free coverage check, catalog, x402 paid endpoints.",
+  "author": "io.github.pfeilisolana",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/pfeilisolana/scry-mcp",
+    "repo": "pfeilisolana/scry-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "scry-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-06T17:15:32.563418Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

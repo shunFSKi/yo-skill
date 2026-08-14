@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.anymailmcp/mail",
+  "type": "mcp",
+  "name": "mail",
+  "description": "Email + calendar for any IMAP/CalDAV mailbox — OVH, Gandi, iCloud, Zoho, Fastmail and more.",
+  "author": "com.anymailmcp",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://anymailmcp.com/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://anymailmcp.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-14T00:12:38.518684Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

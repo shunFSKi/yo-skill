@@ -1,0 +1,98 @@
+{
+  "id": "mcp:official/io.github.Blite-HQ/qnexus-mcp",
+  "type": "mcp",
+  "name": "qnexus-mcp",
+  "description": "MCP server for Quantinuum Nexus, wrapping the qnexus SDK. Not affiliated with Quantinuum.",
+  "author": "io.github.Blite-HQ",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Blite-HQ/qnexus-mcp",
+    "repo": "Blite-HQ/qnexus-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "qnexus-mcp"
+    ],
+    "env": [
+      {
+        "name": "QNEXUS_MCP_TOOLSETS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "QNEXUS_MCP_ALLOW_SPEND",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "QNEXUS_MCP_ALLOW_HARDWARE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "QNEXUS_MCP_ALLOW_DESTRUCTIVE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "QNEXUS_MCP_MAX_CREDITS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "QNEXUS_MCP_MAX_OUTCOMES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "QNEXUS_MCP_MAX_SUBMISSIONS_PER_MINUTE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "QNEXUS_MCP_PROJECTS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-23T07:04:57.817104Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

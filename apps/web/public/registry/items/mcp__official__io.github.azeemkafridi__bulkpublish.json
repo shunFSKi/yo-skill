@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.azeemkafridi/bulkpublish",
+  "type": "mcp",
+  "name": "bulkpublish",
+  "description": "Publish, schedule, and manage social media across 11 platforms via MCP.",
+  "author": "io.github.azeemkafridi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/azeemkafridi/bulkpublish-api",
+    "repo": "azeemkafridi/bulkpublish-api"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@bulkpublish/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "BULKPUBLISH_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-11T20:59:12.867523Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

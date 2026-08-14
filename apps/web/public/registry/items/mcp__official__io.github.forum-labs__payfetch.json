@@ -1,0 +1,109 @@
+{
+  "id": "mcp:official/io.github.forum-labs/payfetch",
+  "type": "mcp",
+  "name": "payfetch",
+  "description": "x402 paying-fetch client for AI agents. Spending caps, approval, receipts. Non-custodial.",
+  "author": "io.github.forum-labs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/forum-labs/payfetch",
+    "repo": "forum-labs/payfetch"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@forum-labs/payfetch"
+    ],
+    "env": [
+      {
+        "name": "PAYFETCH_PRIVATE_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PAYFETCH_KEY_FILE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PAYFETCH_CDP_API_KEY_ID",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PAYFETCH_CDP_API_KEY_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PAYFETCH_CDP_WALLET_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PAYFETCH_CDP_ACCOUNT_NAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PAYFETCH_DATA_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PAYFETCH_TEST_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PAYFETCH_APPROVER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PAYFETCH_VIA",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-06T18:30:03.440542Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,73 @@
+{
+  "id": "mcp:official/io.github.wmarceau/amazon-seller",
+  "type": "mcp",
+  "name": "amazon-seller",
+  "description": "Amazon seller tools: FBA fees, inventory optimization, restock recommendations.",
+  "author": "io.github.wmarceau",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/MarceauSolutions/dev-sandbox",
+    "repo": "MarceauSolutions/dev-sandbox"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "amazon-seller-mcp"
+    ],
+    "env": [
+      {
+        "name": "AMAZON_REFRESH_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "AMAZON_LWA_APP_ID",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "AMAZON_LWA_CLIENT_SECRET",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-01-14T02:07:44.987683Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

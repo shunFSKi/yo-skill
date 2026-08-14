@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/online.siima/esim",
+  "type": "mcp",
+  "name": "Siima eSIM",
+  "description": "Search travel eSIM plans for 150+ countries and buy via Stripe link; eSIM QR delivered by email.",
+  "author": "online.siima",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://api.siima.online/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.siima.online/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-10T12:11:51.769721Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

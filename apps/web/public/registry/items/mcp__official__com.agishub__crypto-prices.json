@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.agishub/crypto-prices",
+  "type": "mcp",
+  "name": "crypto-prices",
+  "description": "Live USD crypto spot prices by ticker (BTC, ETH, SOL, …) for AI agents. x402 pay-per-call.",
+  "author": "com.agishub",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/agishub/agishub-mcp",
+    "repo": "agishub/agishub-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.agishub.com/mcp/crypto"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-28T19:02:12.872949Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

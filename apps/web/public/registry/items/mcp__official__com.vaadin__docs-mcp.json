@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.vaadin/docs-mcp",
+  "type": "mcp",
+  "name": "docs-mcp",
+  "description": "Provides Vaadin Documentation and help with development tasks",
+  "author": "com.vaadin",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/vaadin/vaadin-documentation-services",
+    "repo": "vaadin/vaadin-documentation-services"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.vaadin.com/docs/"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-10-29T10:21:35.912202Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

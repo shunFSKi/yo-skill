@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.mguay22/fundlens",
+  "type": "mcp",
+  "name": "fundlens",
+  "description": "SEC fund holdings for AI agents: who holds X, what changed, returns, flows, and fund overlap.",
+  "author": "io.github.mguay22",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mguay22/fundlens",
+    "repo": "mguay22/fundlens"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@fundlens/mcp"
+    ],
+    "env": [
+      {
+        "name": "FUNDLENS_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-11T00:57:34.370261Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

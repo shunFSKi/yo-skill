@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.rafapra3008/lu-mcp-server",
+  "type": "mcp",
+  "name": "Lingua Universale MCP Server",
+  "description": "Verify AI agent communication with session types and formal proofs",
+  "author": "io.github.rafapra3008",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/rafapra3008/cervellaswarm.git",
+    "repo": "rafapra3008/cervellaswarm"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "lu-mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-15T08:19:22.451957Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

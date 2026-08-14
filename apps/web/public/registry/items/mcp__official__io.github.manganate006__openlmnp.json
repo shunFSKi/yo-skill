@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.manganate006/openlmnp",
+  "type": "mcp",
+  "name": "OpenLMNP",
+  "description": "Accounting MCP for French LMNP furnished rentals: income, expenses, depreciation, tax return & FEC",
+  "author": "io.github.manganate006",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/manganate006/openlmnp",
+    "repo": "manganate006/openlmnp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://app.openlmnp.fr/mcp?demo_token=openlmnp_demo_ro_ebd891f45e8a771ca1a718f239b733b438a31d48",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-30T07:21:30.859603Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

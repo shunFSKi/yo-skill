@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.kiki830621/che-word-mcp",
+  "type": "mcp",
+  "name": "che-word-mcp",
+  "description": "Swift-native MCP server for Word (.docx) manipulation with 148 tools",
+  "author": "io.github.kiki830621",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/PsychQuant/che-word-mcp",
+    "repo": "PsychQuant/che-word-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/PsychQuant/che-word-mcp/releases/download/v1.17.0/CheWordMCP"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-13T18:24:16.483577Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

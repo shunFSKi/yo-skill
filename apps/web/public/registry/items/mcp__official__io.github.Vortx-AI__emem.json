@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.Vortx-AI/emem",
+  "type": "mcp",
+  "name": "emem, the verifiable memory protocol for the physical world",
+  "description": "Shared, verifiable memory for AI agents and robots: signed tokens that resolve and verify offline.",
+  "author": "io.github.Vortx-AI",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Vortx-AI/emem",
+    "repo": "Vortx-AI/emem"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/vortx-ai/emem:latest"
+    ],
+    "env": [
+      {
+        "name": "PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "EMEM_BIND",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "EMEM_DATA",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "EMEM_PUBLIC_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "EMEM_TLS_DOMAINS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T05:03:18.229653Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

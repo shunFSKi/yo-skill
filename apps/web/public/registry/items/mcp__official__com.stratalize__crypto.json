@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.stratalize/crypto",
+  "type": "mcp",
+  "name": "Stratalize Crypto & DeFi",
+  "description": "Crypto and DeFi benchmarks: gas fees, chain TVL, stablecoin yields, options IV, and correlations.",
+  "author": "com.stratalize",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Stratalize/Stratalize",
+    "repo": "Stratalize/Stratalize"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://www.stratalize.com/api/mcp-public?vertical=crypto"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-21T16:10:06.164737Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

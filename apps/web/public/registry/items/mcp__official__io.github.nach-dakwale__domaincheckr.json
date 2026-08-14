@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.nach-dakwale/domaincheckr",
+  "type": "mcp",
+  "name": "DomainCheckr",
+  "description": "Check domain name availability via RDAP. Single, bulk, and smart suggestions. No API key needed.",
+  "author": "io.github.nach-dakwale",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/nach-dakwale/domaincheckr-mcp",
+    "repo": "nach-dakwale/domaincheckr-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://domaincheckr.fly.dev/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-13T23:47:57.782198Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

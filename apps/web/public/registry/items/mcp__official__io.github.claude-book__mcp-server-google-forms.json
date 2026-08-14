@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.claude-book/mcp-server-google-forms",
+  "type": "mcp",
+  "name": "mcp-server-google-forms",
+  "description": "Cria, edita e publica Google Forms a partir do Claude: quizzes, seções e leitura de respostas.",
+  "author": "io.github.claude-book",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/claude-book/mcp-server-google-forms",
+    "repo": "claude-book/mcp-server-google-forms"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-server-google-forms"
+    ],
+    "env": [
+      {
+        "name": "GOOGLE_FORMS_MCP_DIR",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-10T14:19:50.41445Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

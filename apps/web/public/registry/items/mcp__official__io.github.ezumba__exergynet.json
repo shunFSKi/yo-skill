@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.ezumba/exergynet",
+  "type": "mcp",
+  "name": "exergynet",
+  "description": "ExergyNet thermodynamic compute settlement for autonomous agents.",
+  "author": "io.github.ezumba",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ezumba/exergynet-mcp-server",
+    "repo": "ezumba/exergynet-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "exergynet-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "BASE_PRIVATE_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "RPC_URL",
+        "required": true,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-07T00:11:43.356485Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

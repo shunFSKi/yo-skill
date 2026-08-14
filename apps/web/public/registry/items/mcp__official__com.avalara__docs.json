@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.avalara/docs",
+  "type": "mcp",
+  "name": "Avalara Developer Documentation",
+  "description": "Provides access to Avalara developer documentation, integration guides, and code examples",
+  "author": "com.avalara",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/avadev/mcp",
+    "repo": "avadev/mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.avalara.com/docs"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-19T18:13:25.472692Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

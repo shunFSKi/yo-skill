@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/cz.audioknihy/catalog",
+  "type": "mcp",
+  "name": "audioknihy.cz Catalog",
+  "description": "Czech audiobook catalog MCP server. Search 12 000+ titles + compare prices across 5 partners.",
+  "author": "cz.audioknihy",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/H2ejctu/audioknihy-cz",
+    "repo": "H2ejctu/audioknihy-cz"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://audioknihy.cz/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-02T19:08:50.013358Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

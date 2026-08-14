@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/com.codescene/codescene-mcp-server",
+  "type": "mcp",
+  "name": "codescene-mcp-server",
+  "description": "An MCP server that provides CodeScene Code Health analysis tools.",
+  "author": "com.codescene",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/codescene-oss/codescene-mcp-server",
+    "repo": "codescene-oss/codescene-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@codescene/codehealth-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-12T15:24:22.509552Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

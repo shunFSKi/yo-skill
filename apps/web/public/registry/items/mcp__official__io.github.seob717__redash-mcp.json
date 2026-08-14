@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.seob717/redash-mcp",
+  "type": "mcp",
+  "name": "redash-mcp",
+  "description": "Connect Redash to Claude -- query data, manage dashboards, and run SQL with natural language.",
+  "author": "io.github.seob717",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/seob717/redash-mcp",
+    "repo": "seob717/redash-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "redash-mcp"
+    ],
+    "env": [
+      {
+        "name": "REDASH_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "REDASH_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "REDASH_SAFETY_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "REDASH_SAFETY_DISABLE_PII",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "REDASH_SAFETY_DISABLE_COST",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-07T09:23:14.953126Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

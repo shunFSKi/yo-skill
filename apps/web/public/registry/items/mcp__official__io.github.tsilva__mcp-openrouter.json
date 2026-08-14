@@ -1,0 +1,88 @@
+{
+  "id": "mcp:official/io.github.tsilva/mcp-openrouter",
+  "type": "mcp",
+  "name": "OpenRouter",
+  "description": "MCP server providing access to 300+ AI models via OpenRouter",
+  "author": "io.github.tsilva",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/tsilva/mcp-openrouter",
+    "repo": "tsilva/mcp-openrouter"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-openrouter"
+    ],
+    "env": [
+      {
+        "name": "OPENROUTER_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "DEFAULT_TEXT_MODEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DEFAULT_IMAGE_MODEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DEFAULT_CODE_MODEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DEFAULT_VISION_MODEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DEFAULT_EMBEDDING_MODEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-29T16:31:37.904186Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

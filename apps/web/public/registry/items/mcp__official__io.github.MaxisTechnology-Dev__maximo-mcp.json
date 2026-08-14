@@ -1,0 +1,93 @@
+{
+  "id": "mcp:official/io.github.MaxisTechnology-Dev/maximo-mcp",
+  "type": "mcp",
+  "name": "Maximo Enterprise MCP",
+  "description": "MCP server for IBM Maximo, by Maxis Technology — assets, work orders, inventory, purchasing, labor.",
+  "author": "io.github.MaxisTechnology-Dev",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/MaxisTechnology-Dev/Maximo-MCP",
+    "repo": "MaxisTechnology-Dev/Maximo-MCP"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "maximo-enterprise-mcp"
+    ],
+    "env": [
+      {
+        "name": "MAXIMO_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "MAXIMO_HOST",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "AUTH_MODE",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "MAXIMO_USERNAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MAXIMO_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MAXIMO_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "CURRENT_USER_ROLE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-13T08:36:42.536306Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

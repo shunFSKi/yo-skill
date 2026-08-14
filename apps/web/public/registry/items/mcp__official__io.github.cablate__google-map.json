@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.cablate/google-map",
+  "type": "mcp",
+  "name": "Google Maps MCP Server",
+  "description": "18 Google Maps tools for AI agents — geocode, search, directions, weather, and more.",
+  "author": "io.github.cablate",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/cablate/mcp-google-map",
+    "repo": "cablate/mcp-google-map"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@cablate/mcp-google-map"
+    ],
+    "env": [
+      {
+        "name": "GOOGLE_MAPS_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "GOOGLE_MAPS_ENABLED_TOOLS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T11:44:37.356273Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

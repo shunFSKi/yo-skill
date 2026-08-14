@@ -1,0 +1,94 @@
+{
+  "id": "mcp:official/io.github.murilojrpereira/mcp-graphql-bridge",
+  "type": "mcp",
+  "name": "mcp-graphql-bridge",
+  "description": "Bridges any GraphQL API to Claude Code — auto-generates MCP tools via schema introspection.",
+  "author": "io.github.murilojrpereira",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/murilojrpereira/mcp-graphql-bridge",
+    "repo": "murilojrpereira/mcp-graphql-bridge"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-graphql-bridge"
+    ],
+    "env": [
+      {
+        "name": "GRAPHQL_API_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GRAPHQL_INTROSPECTION_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GRAPHQL_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GRAPHQL_INTROSPECTION_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GRAPHQL_MAX_TOOLS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GRAPHQL_INCLUDE_MUTATIONS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GRAPHQL_MAX_RETRIES",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-28T21:34:23.930055Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

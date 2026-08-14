@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.diecoscai/hevy-mcp",
+  "type": "mcp",
+  "name": "Hevy MCP",
+  "description": "MCP server for the Hevy fitness API — spec-generated schemas, dry-run-safe writes, easy setup.",
+  "author": "io.github.diecoscai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/diecoscai/hevy-mcp",
+    "repo": "diecoscai/hevy-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@diecoscai/hevy-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-22T21:03:58.238484Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

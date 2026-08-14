@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.bjornj12/trackman-mcp",
+  "type": "mcp",
+  "name": "trackman-mcp",
+  "description": "Fetch your Trackman Golf stats (handicap, rounds, shots, club gapping) as MCP tools.",
+  "author": "io.github.bjornj12",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/bjornj12/trackman-mcp-client",
+    "repo": "bjornj12/trackman-mcp-client"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "trackman-mcp"
+    ],
+    "env": [
+      {
+        "name": "TRACKMAN_TOKEN",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-02T13:20:50.595301Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

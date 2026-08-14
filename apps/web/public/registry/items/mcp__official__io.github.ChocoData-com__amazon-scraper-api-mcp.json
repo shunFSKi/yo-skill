@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.ChocoData-com/amazon-scraper-api-mcp",
+  "type": "mcp",
+  "name": "Amazon Scraper API",
+  "description": "Scrape Amazon products, search, and async batch ASIN lookups across 20 marketplaces",
+  "author": "io.github.ChocoData-com",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ChocoData-com/amazon-scraper-api-mcp",
+    "repo": "ChocoData-com/amazon-scraper-api-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "amazon-scraper-api-mcp"
+    ],
+    "env": [
+      {
+        "name": "ASA_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-15T13:46:27.92338Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

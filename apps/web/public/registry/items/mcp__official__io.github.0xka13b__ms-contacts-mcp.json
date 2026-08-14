@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.0xka13b/ms-contacts-mcp",
+  "type": "mcp",
+  "name": "ms-contacts-mcp",
+  "description": "Microsoft Contacts MCP server — read and manage your address book through Microsoft Graph.",
+  "author": "io.github.0xka13b",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/0xka13b/microsoft-mcps",
+    "repo": "0xka13b/microsoft-mcps"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ms-contacts-mcp"
+    ],
+    "env": [
+      {
+        "name": "MICROSOFT_CLIENT_ID",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-08T18:47:57.823344Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

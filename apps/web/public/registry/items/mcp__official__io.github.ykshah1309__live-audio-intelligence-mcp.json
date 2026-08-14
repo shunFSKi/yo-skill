@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.ykshah1309/live-audio-intelligence-mcp",
+  "type": "mcp",
+  "name": "Live Audio Intelligence",
+  "description": "Live webcast transcription + vocal stress analysis (F0 jitter, hesitation) for earnings calls.",
+  "author": "io.github.ykshah1309",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ykshah1309/live-audio-intelligence-mcp",
+    "repo": "ykshah1309/live-audio-intelligence-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "live-audio-intelligence-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-16T18:42:37.859262Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

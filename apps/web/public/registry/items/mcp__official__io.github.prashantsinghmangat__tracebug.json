@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.prashantsinghmangat/tracebug",
+  "type": "mcp",
+  "name": "tracebug",
+  "description": "AI agents read TraceBug bug reports (console, network, replay, repro timeline) from local disk.",
+  "author": "io.github.prashantsinghmangat",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/prashantsinghmangat/tracebug-ai",
+    "repo": "prashantsinghmangat/tracebug-ai"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "tracebug"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-23T10:58:17.339154Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

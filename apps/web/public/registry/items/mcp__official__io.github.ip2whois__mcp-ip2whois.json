@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.ip2whois/mcp-ip2whois",
+  "type": "mcp",
+  "name": "mcp-ip2whois",
+  "description": "WHOIS domain MCP server that query the WHOIS information using IP2WHOIS API.",
+  "author": "io.github.ip2whois",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ip2whois/mcp-ip2whois",
+    "repo": "ip2whois/mcp-ip2whois"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-ip2whois"
+    ],
+    "env": [
+      {
+        "name": "IP2WHOIS_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-25T06:54:53.725058Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

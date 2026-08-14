@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.examova/mcp",
+  "type": "mcp",
+  "name": "Examova — Exam Prep",
+  "description": "Practice questions, exam facts & study guides for professional certification exams.",
+  "author": "com.examova",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://examova.com/api/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://examova.com/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-04T20:17:20.722922Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.yb48666-ctrl/otr-protocol",
+  "type": "mcp",
+  "name": "otr-protocol",
+  "description": "Merchant trust verification for AI agents. One call = trust score, badge, and purchase safety.",
+  "author": "io.github.yb48666-ctrl",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/yb48666-ctrl/OTR-Protocol-by-orbexa",
+    "repo": "yb48666-ctrl/OTR-Protocol-by-orbexa"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@otr-protocol/mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-13T08:48:20.560578Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

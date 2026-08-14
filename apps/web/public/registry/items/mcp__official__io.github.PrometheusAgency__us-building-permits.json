@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.PrometheusAgency/us-building-permits",
+  "type": "mcp",
+  "name": "us-building-permits",
+  "description": "Fresh US building permits with contacts from official city APIs. Construction lead generation.",
+  "author": "io.github.PrometheusAgency",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.apify.com/?actors=prometheusagency/us-building-permits",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.apify.com/?actors=prometheusagency/us-building-permits",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-02T06:10:14.022624Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

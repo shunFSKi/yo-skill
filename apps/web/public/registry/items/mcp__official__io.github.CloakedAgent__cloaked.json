@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.CloakedAgent/cloaked",
+  "type": "mcp",
+  "name": "Cloaked Agent",
+  "description": "Trustless spending accounts for AI agents on Solana with on-chain enforced limits.",
+  "author": "io.github.CloakedAgent",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/CloakedAgent/cloaked",
+    "repo": "CloakedAgent/cloaked"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@cloakedagent/sdk"
+    ],
+    "env": [
+      {
+        "name": "CLOAKED_AGENT_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "CLOAKED_BACKEND_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SOLANA_RPC_URL",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-20T14:04:50.331608Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

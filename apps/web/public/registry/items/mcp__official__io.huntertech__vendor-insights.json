@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.huntertech/vendor-insights",
+  "type": "mcp",
+  "name": "Huntertech.io Vendor Insights",
+  "description": "AI-ready vendor incident status with public active incidents and plan-scoped history.",
+  "author": "io.huntertech",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://www.huntertech.io/api/v1/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://www.huntertech.io/api/v1/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-07T04:06:44.688031Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

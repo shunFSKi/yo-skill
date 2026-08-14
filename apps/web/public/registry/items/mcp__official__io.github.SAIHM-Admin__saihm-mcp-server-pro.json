@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.SAIHM-Admin/saihm-mcp-server-pro",
+  "type": "mcp",
+  "name": "saihm-mcp-server-pro",
+  "description": "Sovereign encrypted memory for AI agents. Sealed on your machine. Start free: say Join SAIHM.",
+  "author": "io.github.SAIHM-Admin",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/SAIHM-Admin/saihm-mcp-server-pro",
+    "repo": "SAIHM-Admin/saihm-mcp-server-pro"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@saihm/mcp-server-pro"
+    ],
+    "env": [
+      {
+        "name": "SAIHM_ENDPOINT_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SAIHM_SELF_JOIN",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SAIHM_MASTER_SECRET_FILE",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SAIHM_HOME",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-02T08:21:05.413617Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

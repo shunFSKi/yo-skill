@@ -1,0 +1,83 @@
+{
+  "id": "mcp:official/io.github.ogconstrutorasp/apex-contabil",
+  "type": "mcp",
+  "name": "apex-contabil",
+  "description": "Framework MCP do Apex ERP Contábil: CNAEs, jurídico, obrigações, financeiro, marketing e WhatsApp.",
+  "author": "io.github.ogconstrutorasp",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ogconstrutorasp/apex-mcp-framework",
+    "repo": "ogconstrutorasp/apex-mcp-framework"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "apex-mcp-framework"
+    ],
+    "env": [
+      {
+        "name": "ERP_BASE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ERP_MCP_EMAIL",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ERP_MCP_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SUPABASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SUPABASE_ANON_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T19:58:01.090358Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# apex-mcp-framework\n\n<!-- mcp-name: io.github.ogconstrutorasp/apex-contabil -->\n\nFramework **MCP reutilizável** que conecta um ERP a agentes Model Context Protocol via **stdio** (Python, SDK oficial `mcp` 1.x). Expõe capacidades de negócio — classificação de CNAEs, revisão jurídica de contratos, obrigações fiscais, financeiro, marketing com publicação real em Facebook/Instagram, WhatsApp e relatórios — como **ferramentas MCP** autenticadas.\n\n> Projeto derivado do [Apex ERP Contábil](https://github.com/ogconstrutorasp/Apex-Contabil). Este repositório é o **home público do servidor MCP** — a publicação nos registries (Smithery, Glama, mcp.so, registry oficial) aponta para cá.\n\n---\n\n## ✨ O que é um \"framework\" aqui?\n\nVocê não edita o núcleo do servidor para mudar comportamento. A estrutura é modular:\n\n```\napex-mcp-framework/\n├── pyproject.toml          # empacotamento (pip install -e .)\n├── requirements.txt        # mcp>=1.0.0,<2.0.0 (API 1.x do SDK)\n├── server.json             # metadados p/ registries MCP\n├── src/apex_mcp/\n│   ├── __main__.py         # python -m apex_mcp\n│   ├── server.py           # servidor MCP (stdio) — raramente mexe\n│   ├── config.py           # config via env (ERP_BASE, credenciais)\n│   ├── http_client.py      # cliente HTTP com auth Bearer + refresh automático\n│   └── tools.py            # ⭐ catálogo de ferramentas — É AQUI QUE VOCÊ ADICIONA\n└── examples/\n    └── mcp_client.py       # cliente MCP de exemplo\n```\n\n**Para adicionar uma ferramenta nova**, edite apenas `src/apex_mcp/tools.py`:\n\n```python\n# 1) acrescente o Tool (o agente vê nome + descrição + schema)\nTool(name=\"minha_ferramenta\", description=\"O que ela faz\",\n     inputSchema={\"type\": \"object\", \"properties\": {\"campo\": {\"type\": \"string\"}}, \"required\": [\"campo\"]}),\n\n# 2) acrescente a rota (método, path na API do ERP)\n\"minha_ferramenta\": (\"POST\", \"/api/meu-modulo/acao\", None),\n```\n\nPronto — o servidor expõe automaticamente. Nenhum outro arquivo muda.\n\n---\n\n## 🚀 Instalação e execução\n\n```bash\ngit clone https://github.com/ogconstrutorasp/apex-mcp-framework.git\ncd apex-mcp-framework\npip install -r requirements.txt     # ou: pip install -e .\npython -m apex_mcp                  # inicia o servidor (stdio)\n```\n\n**Configuração (variáveis de ambiente):**\n\n| Variável | Descrição | Padrão |\n|---|---|---|\n| `ERP_BASE` | URL base da API do ERP | `http://localhost:3001` (produção: `https://apex-contabil.vercel.app`) |\n| `SUPABASE_URL` | URL do Supabase (login da conta de serviço) | `https://vebileaugzzrgnhgmvmr.supabase.co` |\n| `SUPABASE_ANON_KEY` | chave anon do Supabase | `<anon-key>` |\n| `ERP_MCP_EMAIL` / `ERP_MCP_PASSWORD` | **conta de serviço** — o framework autentica com Bearer em todas as chamadas e renova o token sozinho | vazio (modo sem auth, avisa) |\n\n> API key por tenant (`x-api-key`): consulte o painel do ERP (Fase 5 — máquina-a-máquina).\n\n## 🔌 Conectar em um cliente MCP\n\nClaude Desktop / qualquer cliente MCP:\n\n```json\n{\n  \"mcpServers\": {\n    \"apex-contabil\": {\n      \"command\": \"python\",\n      \"args\": [\"-m\", \"apex_mcp\"]\n    }\n  }\n}\n```\n\n## 🧰 Ferramentas (13)\n\n`classificar_cnae` · `revisar_contrato` · `consultar_saldo_cliente` · `consultar_cronograma_obrigacoes` · `gerar_post_marketing` · `publicar_post_agora` · `analytics_marketing` · `criar_campanha_meta` · `gerar_criativos_multiplataforma` · `enviar_whatsapp` · `alertas_pendentes` · `gerar_relatorio` · `enviar_notificacao`\n\n## 🧪 Testar localmente\n\n```bash\npython examples/mcp_client.py\n# Handshake OK — 13 ferramentas:\n#   - classificar_cnae: ...\n#   ...\n```\n\n## 🌐 Catálogo público\n\n- Metadados para registro: [`server.json`](server.json)\n- Catálogo do ERP: `https://apex-contabil.vercel.app/api/mcp/catalogo`\n- Guia de publicação nos registries: veja `docs/PUBLICAR-MCP-REGISTRIES.md` no repo do ERP.\n\n## 🔒 Segurança\n\n- O framework **só expõe ferramentas do próprio ERP via API autenticada** (Bearer de conta de serviço ou `x-api-key` por tenant) — nunca shell/arquivos arbitrários.\n- Credenciais vêm **somente** de variáveis de ambiente; nada é commitado.\n- O SDK está fixado em `mcp<2` porque o servidor usa a API 1.x (`Server.list_tools`/`call_tool`), removida no 2.x.\n\n## 📄 Licença\n\nMIT — veja [LICENSE](LICENSE).\n",
+  "status": "curated"
+}

@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.cyanheads/openstates-mcp-server",
+  "type": "mcp",
+  "name": "openstates-mcp-server",
+  "description": "Search bills, legislators, committees, and events across all 50 US states, DC, and 5 US territories.",
+  "author": "io.github.cyanheads",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/cyanheads/openstates-mcp-server",
+    "repo": "cyanheads/openstates-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@cyanheads/openstates-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "OPENSTATES_API_KEY",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "OPENSTATES_DAILY_REQUEST_BUDGET",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OPENSTATES_REQUEST_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OPENSTATES_TOTAL_REQUEST_BUDGET_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-31T13:11:31.676216Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.dropwatchhq/price-check",
+  "type": "mcp",
+  "name": "Scalper Price Checker",
+  "description": "Check if a collectible's price is FAIR/OVER/SCALPED vs the current retail median across shops.",
+  "author": "com.dropwatchhq",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://price.dropwatchhq.com/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://price.dropwatchhq.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-22T11:34:11.867766Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

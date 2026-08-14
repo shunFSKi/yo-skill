@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.drhelius/gearsystem",
+  "type": "mcp",
+  "name": "Gearsystem MCP Server",
+  "description": "MCP server for Gearsystem Sega Master System / Game Gear / SG-1000 emulator",
+  "author": "io.github.drhelius",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/drhelius/gearsystem",
+    "repo": "drhelius/gearsystem"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/drhelius/gearsystem/releases/download/3.9.15/Gearsystem-3.9.15-mcpb-macos-arm64.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-07T13:26:09.676975Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

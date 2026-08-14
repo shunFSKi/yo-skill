@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.jbrand0n/market-intelligence-mcp",
+  "type": "mcp",
+  "name": "market-intelligence-mcp",
+  "description": "Recession probability, capital rotation scoring, and economic data API",
+  "author": "io.github.jbrand0n",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/BullrunData/market-intelligence-mcp",
+    "repo": "BullrunData/market-intelligence-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@bullrundata/market-intelligence"
+    ],
+    "env": [
+      {
+        "name": "BULLRUNDATA_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-07T00:12:48.7666Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

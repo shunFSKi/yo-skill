@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.tlaloc-sh/tlaloc-mcp",
+  "type": "mcp",
+  "name": "tlaloc-mcp",
+  "description": "Official Mexican data for AI agents: CURP, RFC, CFDI, postal codes, phone, SPEI/CEP, DOF, geocoding.",
+  "author": "io.github.tlaloc-sh",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/tlaloc-sh/tlaloc-mcp",
+    "repo": "tlaloc-sh/tlaloc-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.tlaloc.sh/mx/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-12T02:49:14.658701Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

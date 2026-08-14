@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.Muvon/octocode",
+  "type": "mcp",
+  "name": "Octocode",
+  "description": "AI-powered code indexer with semantic search and knowledge graphs",
+  "author": "io.github.Muvon",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/muvon/octocode",
+    "repo": "muvon/octocode"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/Muvon/octocode/releases/download/0.20.2/octocode-0.20.2-aarch64-apple-darwin.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-04T15:43:07.144509Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

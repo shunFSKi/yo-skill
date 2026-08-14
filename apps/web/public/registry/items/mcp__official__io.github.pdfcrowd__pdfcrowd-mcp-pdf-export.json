@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.pdfcrowd/pdfcrowd-mcp-pdf-export",
+  "type": "mcp",
+  "name": "PDFCrowd PDF Export",
+  "description": "Create polished, professional PDFs from a single prompt. Documentation, reports, charts, and more.",
+  "author": "io.github.pdfcrowd",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/pdfcrowd/pdfcrowd-mcp-pdf-export",
+    "repo": "pdfcrowd/pdfcrowd-mcp-pdf-export"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "pdfcrowd-mcp-pdf-export"
+    ],
+    "env": [
+      {
+        "name": "PDFCROWD_USERNAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PDFCROWD_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-20T15:07:51.981959Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

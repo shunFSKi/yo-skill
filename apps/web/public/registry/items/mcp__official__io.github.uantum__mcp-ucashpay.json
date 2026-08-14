@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.uantum/mcp-ucashpay",
+  "type": "mcp",
+  "name": "U.CASH Pay (merchant MCP)",
+  "description": "U.CASH Pay merchant MCP: create checkouts, verify webhooks, read settings. Non-custodial.",
+  "author": "io.github.uantum",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers/io.github.uantum%2Fmcp-ucashpay",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-ucashpay"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-11T20:53:45.487074Z"
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

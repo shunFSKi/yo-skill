@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.n24q02m/better-email-mcp",
+  "type": "mcp",
+  "name": "better-email-mcp",
+  "description": "IMAP/SMTP MCP server for Email with composite tools. Multi-account, auto-discovery.",
+  "author": "io.github.n24q02m",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/n24q02m/better-email-mcp.git",
+    "repo": "n24q02m/better-email-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@n24q02m/better-email-mcp"
+    ],
+    "env": [
+      {
+        "name": "EMAIL_CREDENTIALS",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T06:24:03.22096Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

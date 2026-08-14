@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.Ayo-Fam/mcp-google-ads",
+  "type": "mcp",
+  "name": "MCP Google Ads",
+  "description": "Multi-account Google Ads MCP: campaigns, keywords, search terms, and ad performance.",
+  "author": "io.github.Ayo-Fam",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/apexradius/mcp-google-ads",
+    "repo": "apexradius/mcp-google-ads"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-google-ads-multi"
+    ],
+    "env": [
+      {
+        "name": "GOOGLE_ADS_DEVELOPER_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "GOOGLE_ADS_ACCOUNTS_CONFIG",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-30T19:00:55.454202Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

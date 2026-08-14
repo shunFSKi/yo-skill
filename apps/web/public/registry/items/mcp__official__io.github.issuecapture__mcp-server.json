@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.issuecapture/mcp-server",
+  "type": "mcp",
+  "name": "mcp-server",
+  "description": "Install the IssueCapture bug reporting widget for Jira. Auto-detects your framework.",
+  "author": "io.github.issuecapture",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/issuecapture/issuecapture",
+    "repo": "issuecapture/issuecapture"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@issuecapture/mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-09T22:13:45.2672Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/com.mambabuilt/mcp-team-page-people-extractor",
+  "type": "mcp",
+  "name": "mcp-team-page-people-extractor",
+  "description": "Extract the people a company publishes on its own team, leadership or about page.",
+  "author": "com.mambabuilt",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mambalabsdev/mcp-team-page-people-extractor",
+    "repo": "mambalabsdev/mcp-team-page-people-extractor"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@mambalabsdev/mcp-team-page-people-extractor"
+    ],
+    "env": [
+      {
+        "name": "APIFY_TOKEN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T08:22:35.369738Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.comet-ml/opik-mcp",
+  "type": "mcp",
+  "name": "Opik MCP Server",
+  "description": "Interact with Opik prompts, traces, datasets and metrics through the Model Context Protocol.",
+  "author": "io.github.comet-ml",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/comet-ml/opik-mcp",
+    "repo": "comet-ml/opik-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "opik-mcp"
+    ],
+    "env": [
+      {
+        "name": "OPIK_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "OPIK_API_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OPIK_WORKSPACE_NAME",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-29T12:16:19.608302Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

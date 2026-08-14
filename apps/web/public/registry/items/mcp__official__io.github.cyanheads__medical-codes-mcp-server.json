@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.cyanheads/medical-codes-mcp-server",
+  "type": "mcp",
+  "name": "medical-codes-mcp-server",
+  "description": "Offline US medical code lookup and crosswalk — ICD-10-CM/PCS, HCPCS Level II, RxNorm. Keyless.",
+  "author": "io.github.cyanheads",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/cyanheads/medical-codes-mcp-server",
+    "repo": "cyanheads/medical-codes-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@cyanheads/medical-codes-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "MCP_LOG_LEVEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MEDCODE_DB_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MEDCODE_MAX_RESULTS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-09T14:53:41.609159Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

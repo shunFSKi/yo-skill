@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.heisencodex-jpg/github-repo-intel-mcp",
+  "type": "mcp",
+  "name": "GitHub Repository Intelligence",
+  "description": "Repo intel for AI coding agents: overview, PRs, contributors, hot files, CI, deps. Remote MCP.",
+  "author": "io.github.heisencodex-jpg",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/heisencodex-jpg/github-repo-intel-mcp",
+    "repo": "heisencodex-jpg/github-repo-intel-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://cg-nguyen--github-repo-intel-mcp.apify.actor/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-21T08:25:54.18161Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

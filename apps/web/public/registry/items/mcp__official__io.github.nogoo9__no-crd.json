@@ -1,0 +1,224 @@
+{
+  "id": "mcp:official/io.github.nogoo9/no-crd",
+  "type": "mcp",
+  "name": "no-crd",
+  "description": "Dynamic pod spawner & proxy for ephemeral AI agent workspaces on Kubernetes without CRDs",
+  "author": "io.github.nogoo9",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/nogoo9/no-crd",
+    "repo": "nogoo9/no-crd"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@nogoo9/no-crd"
+    ],
+    "env": [
+      {
+        "name": "KUBECONFIG",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "STATELESS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TLS_CERT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TLS_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "TLS_CA",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "NODE_TLS_REJECT_UNAUTHORIZED",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "REGISTRY_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TEMPLATES_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BUILTIN_TEMPLATES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AUTH_ENABLED",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "JWT_VERIFICATION_REQUIRED",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "JWT_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "JWT_PUBLIC_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "JWKS_URI",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "INTROSPECTION_ENDPOINT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OAUTH_CLIENT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OAUTH_CLIENT_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "JWT_AUDIENCE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AUTH_ISSUER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AUTH_SUB_JSONPATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AUTH_ADMIN_ROLE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AUTH_ADMIN_USERS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PROXY_SESSION_TTL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PROXY_SESSION_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "UI_ENABLED",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "THEMES_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "THEMES_CONFIGMAP",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DOCS_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OAUTH_DISCOVERY_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OAUTH_LOGIN_METHOD",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "UI_TITLE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "UI_SUBTITLE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T16:42:05.795235Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

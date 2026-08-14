@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/com.parseapi/mcp",
+  "type": "mcp",
+  "name": "parseAPI",
+  "description": "Official parseAPI MCP. Place, IP, email, phone, weather, currency lookups.",
+  "author": "com.parseapi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/parseapi/mcp",
+    "repo": "parseapi/mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "parseapi-mcp"
+    ],
+    "env": [
+      {
+        "name": "PARSEAPI_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T01:43:38.787266Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

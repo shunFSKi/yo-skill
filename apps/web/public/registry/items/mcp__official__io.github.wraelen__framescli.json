@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.wraelen/framescli",
+  "type": "mcp",
+  "name": "FramesCLI",
+  "description": "Make videos AI-readable. Extract timestamped frames and transcripts from any video for AI agents.",
+  "author": "io.github.wraelen",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/wraelen/framescli",
+    "repo": "wraelen/framescli"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/wraelen/framescli/releases/download/v0.1.0/framescli.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-14T20:43:28.718666Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

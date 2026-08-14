@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.Ringosystems/tractorbeeam-mcp",
+  "type": "mcp",
+  "name": "TractorBeeam365 MCP",
+  "description": "MCP server for Veeam Backup for Microsoft 365: read-only review + gated, audited restore tier.",
+  "author": "io.github.Ringosystems",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Ringosystems/TractorBeeam-MCP",
+    "repo": "Ringosystems/TractorBeeam-MCP"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/ringosystems/tractorbeeam-mcp:2.2.0"
+    ],
+    "env": [
+      {
+        "name": "VB365_HOST",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "VB365_USERNAME",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "VB365_PASSWORD",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-01T03:48:09.375074Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

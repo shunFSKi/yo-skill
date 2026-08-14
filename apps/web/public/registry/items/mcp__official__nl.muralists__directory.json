@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/nl.muralists/directory",
+  "type": "mcp",
+  "name": "Muralists Directory",
+  "description": "Search the curated directory of professional muralists and street artists in the Netherlands.",
+  "author": "nl.muralists",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.muralists.nl/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.muralists.nl/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-27T14:35:55.291633Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

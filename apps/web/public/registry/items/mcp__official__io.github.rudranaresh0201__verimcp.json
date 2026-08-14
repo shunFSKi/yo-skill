@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.rudranaresh0201/verimcp",
+  "type": "mcp",
+  "name": "verimcp",
+  "description": "Transparent MCP proxy that independently re-verifies tool-call claims before the Host trusts them.",
+  "author": "io.github.rudranaresh0201",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/rudranaresh0201/mcp",
+    "repo": "rudranaresh0201/mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "verimcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-11T20:28:44.246577Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

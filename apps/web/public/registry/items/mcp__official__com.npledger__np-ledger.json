@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.npledger/np-ledger",
+  "type": "mcp",
+  "name": "NP Ledger",
+  "description": "Nonprofit fund accounting your AI agent helps you run — read the books and post entries.",
+  "author": "com.npledger",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.npledger.com/v1/",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.npledger.com/v1/"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-12T03:41:58.935318Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

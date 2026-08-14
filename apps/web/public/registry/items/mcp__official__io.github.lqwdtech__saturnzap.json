@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.lqwdtech/saturnzap",
+  "type": "mcp",
+  "name": "SaturnZap",
+  "description": "Non-custodial Bitcoin Lightning (LDK) wallet for AI agents — pays L402 APIs from CLI or MCP.",
+  "author": "io.github.lqwdtech",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/lqwdtech/SaturnZap",
+    "repo": "lqwdtech/SaturnZap"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "saturnzap"
+    ],
+    "env": [
+      {
+        "name": "SZ_PASSPHRASE",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "SZ_MCP_MAX_SPEND_SATS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-21T01:36:18.858422Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

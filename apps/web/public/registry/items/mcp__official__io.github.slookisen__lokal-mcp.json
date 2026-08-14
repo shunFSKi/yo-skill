@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.slookisen/lokal-mcp",
+  "type": "mcp",
+  "name": "lokal-mcp",
+  "description": "Norwegian local-food MCP: 1,431+ farms, shops, markets + umbrellas (Bondens marked, Hanen, REKO).",
+  "author": "io.github.slookisen",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/slookisen/lokal",
+    "repo": "slookisen/lokal"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "lokal-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-15T20:55:27.575673Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.CedricKouma/fetch-extract",
+  "type": "mcp",
+  "name": "fetch-extract",
+  "description": "MCP server (stdio): fetch web pages as clean readable markdown via the AgentForge API",
+  "author": "io.github.CedricKouma",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://apim-agentforge-6lfm33.azure-api.net/fetch-extract/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "agentforge-fetch-extract-mcp"
+    ],
+    "env": [
+      {
+        "name": "AGENTFORGE_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AGENTFORGE_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-15T02:12:03.162965Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,109 @@
+{
+  "id": "mcp:official/io.github.demwick/polymarket-agent-mcp",
+  "type": "mcp",
+  "name": "polymarket-agent-mcp",
+  "description": "Polymarket trading, market discovery, copy trading and backtesting — 48 MCP tools.",
+  "author": "io.github.demwick",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/demwick/polymarket-agent-mcp",
+    "repo": "demwick/polymarket-agent-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "polymarket-agent-mcp"
+    ],
+    "env": [
+      {
+        "name": "COPY_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "POLY_PRIVATE_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "POLY_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "POLY_API_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "POLY_API_PASSPHRASE",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "POLY_FUNDER_ADDRESS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DAILY_BUDGET",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MIN_CONVICTION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CHAIN_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DB_PATH",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-07T01:05:18.443686Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

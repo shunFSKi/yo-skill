@@ -1,0 +1,83 @@
+{
+  "id": "mcp:official/io.github.SupercmoHQ/supercmo",
+  "type": "mcp",
+  "name": "SuperCMO",
+  "description": "Marketing media generation — image, video, voice — for AI agents. BYO keys.",
+  "author": "io.github.SupercmoHQ",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/SupercmoHQ/superCMO-skills",
+    "repo": "SupercmoHQ/superCMO-skills"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "supercmo-skills"
+    ],
+    "env": [
+      {
+        "name": "WAVESPEED_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "FAL_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ELEVENLABS_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GEMINI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "FIRECRAWL_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T11:35:05.720921Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

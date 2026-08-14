@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.daanielcruz/gsearch",
+  "type": "mcp",
+  "name": "gsearch",
+  "description": "Free Google Search with inline citations for any MCP-compatible AI tool.",
+  "author": "io.github.daanielcruz",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/daanielcruz/gsearch-mcp",
+    "repo": "daanielcruz/gsearch-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@daanielcruz/gsearch-mcp"
+    ],
+    "env": [
+      {
+        "name": "GSEARCH_PROJECT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GEMINI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GSEARCH_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-30T10:00:23.44159Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

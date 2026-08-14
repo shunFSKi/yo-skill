@@ -1,0 +1,89 @@
+{
+  "id": "mcp:official/io.github.xbbg-org/xbbg-mcp",
+  "type": "mcp",
+  "name": "xbbg MCP",
+  "description": "Local Bloomberg tools for xbbg users.",
+  "author": "io.github.xbbg-org",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/xbbg-org/xbbg",
+    "repo": "xbbg-org/xbbg"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/xbbg-org/xbbg/releases/download/v1.4.6/xbbg-mcp-v1.4.6.mcpb"
+    ],
+    "env": [
+      {
+        "name": "XBBG_MCP_LIB_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "XBBG_MCP_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "XBBG_MCP_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "XBBG_MCP_AUTH_METHOD",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "XBBG_MCP_MAX_ROWS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "XBBG_MCP_MAX_STRING_CHARS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-07T00:02:03.423463Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

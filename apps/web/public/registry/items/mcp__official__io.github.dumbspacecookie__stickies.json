@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.dumbspacecookie/stickies",
+  "type": "mcp",
+  "name": "stickies",
+  "description": "Persistent, expiring, importance-graded sticky notes for Claude Code.",
+  "author": "io.github.dumbspacecookie",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dumbspacecookie/stickies",
+    "repo": "dumbspacecookie/stickies"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "stickies-mcp"
+    ],
+    "env": [
+      {
+        "name": "STICKIES_DB",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "STICKIES_DISCORD_WEBHOOK",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "STICKIES_SYNC_REPO",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-03T18:15:02.321335Z"
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

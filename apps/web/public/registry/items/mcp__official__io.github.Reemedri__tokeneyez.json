@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.Reemedri/tokeneyez",
+  "type": "mcp",
+  "name": "TokenEyez",
+  "description": "Track every AI token across Claude, ChatGPT, Gemini, Cursor, and Claude Code.",
+  "author": "io.github.Reemedri",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Reemedri/tokeneyez",
+    "repo": "Reemedri/tokeneyez"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@tokeneyez/mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-21T12:55:48.361237Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

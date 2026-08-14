@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.mnemox-ai/idea-reality-mcp",
+  "type": "mcp",
+  "name": "idea-reality-mcp",
+  "description": "Pre-build reality check. Scans GitHub, HN, npm, PyPI, Product Hunt — returns 0-100 signal.",
+  "author": "io.github.mnemox-ai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mnemox-ai/idea-reality-mcp",
+    "repo": "mnemox-ai/idea-reality-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "idea-reality-mcp"
+    ],
+    "env": [
+      {
+        "name": "GITHUB_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PRODUCTHUNT_TOKEN",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-27T14:26:51.609568Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

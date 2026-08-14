@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.sigaoli/profile",
+  "type": "mcp",
+  "name": "Sigao Li — personal MCP server",
+  "description": "Read-only access to Sigao Li's profile, CV and case studies. Bilingual (EN/ZH).",
+  "author": "com.sigaoli",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/SigaoLi/SigaoLi.github.io",
+    "repo": "SigaoLi/SigaoLi"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.sigaoli.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-05T07:49:52.181083Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

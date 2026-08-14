@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.lgpoliveira/bugiadata-mcp",
+  "type": "mcp",
+  "name": "BugiaData",
+  "description": "Relational locale-aware fake data for Cursor and Claude via MCP (SSE). Free tier at bugiadata.com.",
+  "author": "io.github.lgpoliveira",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/lgpoliveira/bugiadata-mcp",
+    "repo": "lgpoliveira/bugiadata-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.bugiadata.com/sse",
+    "env": [
+      {
+        "name": "X-API-Key",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-27T07:59:16.575177Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.haiyunsky/hpsilab-quant-finance-mcp",
+  "type": "mcp",
+  "name": "HPSILab Quant Finance",
+  "description": "HPSILab Quant finance MCP for US stocks, ETFs, options, Monte Carlo, backtesting, and risk analysis.",
+  "author": "io.github.haiyunsky",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/haiyunsky/hpsilab-quant-finance-mcp",
+    "repo": "haiyunsky/hpsilab-quant-finance-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "hpsilab-quant-finance-mcp"
+    ],
+    "env": [
+      {
+        "name": "HPSILAB_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-11T02:51:42.269589Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

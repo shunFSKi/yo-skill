@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.anthony-chaudhary/dos-kernel",
+  "type": "mcp",
+  "name": "DOS — the trust substrate for agent fleets",
+  "description": "Verify what agents actually shipped, arbitrate file collisions, refuse with structured reasons.",
+  "author": "io.github.anthony-chaudhary",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/anthony-chaudhary/dos-kernel",
+    "repo": "anthony-chaudhary/dos-kernel"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "dos-kernel"
+    ],
+    "env": [
+      {
+        "name": "DISPATCH_WORKSPACE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-17T18:20:12.371876Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

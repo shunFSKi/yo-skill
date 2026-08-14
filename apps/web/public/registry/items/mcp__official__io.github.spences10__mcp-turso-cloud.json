@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.spences10/mcp-turso-cloud",
+  "type": "mcp",
+  "name": "mcp-turso-cloud",
+  "description": "MCP server for integrating Turso with LLMs",
+  "author": "io.github.spences10",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/spences10/mcp-turso-cloud",
+    "repo": "spences10/mcp-turso-cloud"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-turso-cloud"
+    ],
+    "env": [
+      {
+        "name": "TURSO_API_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "TURSO_ORGANIZATION",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "TURSO_DEFAULT_DATABASE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TOKEN_EXPIRATION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TOKEN_PERMISSION",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-09-26T21:22:07.39904Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.Dempty-glitch/z-zero-mcp",
+  "type": "mcp",
+  "name": "z-zero-mcp",
+  "description": "Payments for AI agents: gasless USDC on Base + JIT single-use virtual cards, PAN never in context.",
+  "author": "io.github.Dempty-glitch",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Dempty-glitch/Z-Zero-mcp",
+    "repo": "Dempty-glitch/Z-Zero-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "z-zero-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "Z_ZERO_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-05T09:57:00.123651Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.formulahendry/spec-driven-development",
+  "type": "mcp",
+  "name": "spec-driven-development",
+  "description": "MCP Server that facilitates spec-driven development workflows, not just Vibe Coding.",
+  "author": "io.github.formulahendry",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/formulahendry/mcp-server-spec-driven-development",
+    "repo": "formulahendry/mcp-server-spec-driven-development"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-server-spec-driven-development"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-09-26T06:51:26.732082Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

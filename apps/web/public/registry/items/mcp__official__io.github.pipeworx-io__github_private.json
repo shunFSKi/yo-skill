@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.pipeworx-io/github_private",
+  "type": "mcp",
+  "name": "Github_private",
+  "description": "GitHub Private MCP Pack — access private repos, org data via OAuth.",
+  "author": "io.github.pipeworx-io",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/pipeworx-io/mcp-github_private",
+    "repo": "pipeworx-io/mcp-github_private"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://gateway.pipeworx.io/github_private/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-22T01:32:20.181494Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

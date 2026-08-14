@@ -1,0 +1,124 @@
+{
+  "id": "mcp:official/io.github.Maxim-Mazurok/teams-api",
+  "type": "mcp",
+  "name": "Microsoft Teams API",
+  "description": "AI-native Microsoft Teams integration — read chats, send messages, search people",
+  "author": "io.github.Maxim-Mazurok",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Maxim-Mazurok/teams-api",
+    "repo": "Maxim-Mazurok/teams-api"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "teams-api"
+    ],
+    "env": [
+      {
+        "name": "TEAMS_EMAIL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TEAMS_AUTO",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TEAMS_LOGIN",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TEAMS_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "TEAMS_REGION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TEAMS_BEARER_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "TEAMS_SUBSTRATE_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "TEAMS_DEBUG",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TEAMS_TELEMETRY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TEAMS_TELEMETRY_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TEAMS_IMAGE_DESCRIPTION_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "TEAMS_IMAGE_DESCRIPTION_MODEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TEAMS_IMAGE_DESCRIPTION_BASE_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T01:06:38.981487Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

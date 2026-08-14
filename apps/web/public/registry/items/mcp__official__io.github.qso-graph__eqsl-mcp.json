@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.qso-graph/eqsl-mcp",
+  "type": "mcp",
+  "name": "eqsl-mcp",
+  "description": "eQSL.cc MCP server. Inbox download, QSO verification, Authenticity Guaranteed status.",
+  "author": "io.github.qso-graph",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/qso-graph/eqsl-mcp",
+    "repo": "qso-graph/eqsl-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "eqsl-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-06T05:50:40.591197Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/app.netlify.agent-rescue-desk/production-triage",
+  "type": "mcp",
+  "name": "Agent Rescue Desk Production Triage",
+  "description": "Read-only triage for n8n, MCP, webhook, and AI agent workflow production failures.",
+  "author": "app.netlify.agent-rescue-desk",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://agent-rescue-desk.netlify.app/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://agent-rescue-desk.netlify.app/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-27T08:44:52.689279Z"
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

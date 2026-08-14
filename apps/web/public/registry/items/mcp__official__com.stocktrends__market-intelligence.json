@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/com.stocktrends/market-intelligence",
+  "type": "mcp",
+  "name": "Stock Trends Market Intelligence",
+  "description": "Equity trend, relative-strength, expected-return, market-context, and research resources for agents.",
+  "author": "com.stocktrends",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/skotlander/stocktrends-mcp-server",
+    "repo": "skotlander/stocktrends-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@stocktrends-publications/stocktrends-mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-19T03:51:06.632561Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

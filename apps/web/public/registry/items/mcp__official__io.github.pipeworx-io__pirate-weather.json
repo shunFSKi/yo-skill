@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.pipeworx-io/pirate-weather",
+  "type": "mcp",
+  "name": "Pirate Weather",
+  "description": "Pirate Weather forecast API (Dark Sky-compatible). Free key required.",
+  "author": "io.github.pipeworx-io",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/pipeworx-io/mcp-pirate-weather",
+    "repo": "pipeworx-io/mcp-pirate-weather"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://gateway.pipeworx.io/pirate-weather/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-19T22:21:46.342395Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

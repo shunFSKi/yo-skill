@@ -1,0 +1,389 @@
+{
+  "id": "mcp:official/io.github.oaslananka/easyeda-mcp-pro",
+  "type": "mcp",
+  "name": "easyeda-mcp-pro",
+  "description": "MCP server for EasyEDA Pro: PCB inspection, BOM, exports, and hardware review.",
+  "author": "io.github.oaslananka",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/oaslananka/easyeda-mcp-pro",
+    "repo": "oaslananka/easyeda-mcp-pro"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "easyeda-mcp-pro"
+    ],
+    "env": [
+      {
+        "name": "NODE_ENV",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LOG_LEVEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TOOL_PROFILE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_PROTOCOL_VERSION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_BRIDGE_BACKEND",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_REMOTE_SESSION_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TRANSPORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "HTTP_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "HTTP_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "HTTP_AUTH_DISABLED",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "HTTP_RATE_LIMIT_MAX",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CORS_ORIGIN",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ALLOWED_ORIGINS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_TASKS_ENABLED",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_APPS_ENABLED",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_V2_EXPERIMENTAL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_RAW_EXEC_EXPERIMENTAL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BRIDGE_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BRIDGE_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BRIDGE_PORT_SCAN",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BRIDGE_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BRIDGE_HEARTBEAT_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BRIDGE_RECONNECT_MAX_ATTEMPTS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BRIDGE_WAIT_FOR_EDA_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BRIDGE_MAX_PAYLOAD_SIZE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BRIDGE_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "EASYEDA_DEV_BRIDGE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BRIDGE_RAW_EXEC_ENABLED",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DATA_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SQLITE_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ARTIFACT_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CACHE_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AI_PROVIDER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AI_MODEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "AI_MAX_TOKENS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AI_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AI_ALLOW_DESIGN_MUTATIONS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "JLCPCB_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "JLCPCB_CLIENT_ID",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "JLCPCB_CLIENT_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "JLCPCB_API_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "JLCPCB_ENABLE_ORDERING",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "JLCPCB_DEFAULT_CURRENCY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "JLCSEARCH_ENABLED",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "JLCSEARCH_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LCSC_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "LCSC_API_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MOUSER_ENABLED",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MOUSER_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MOUSER_API_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DIGIKEY_ENABLED",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DIGIKEY_CLIENT_ID",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "DIGIKEY_CLIENT_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "DIGIKEY_SANDBOX",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DIGIKEY_LOCALE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DIGIKEY_CURRENCY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OAUTH_ENABLED",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OAUTH_ISSUER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OAUTH_AUDIENCE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OAUTH_JWKS_URI",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OAUTH_REQUIRED_SCOPES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OTEL_ENABLED",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OTEL_SERVICE_NAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OTEL_EXPORTER_OTLP_ENDPOINT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TRACE_SAMPLE_RATE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-27T20:14:17.893604Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

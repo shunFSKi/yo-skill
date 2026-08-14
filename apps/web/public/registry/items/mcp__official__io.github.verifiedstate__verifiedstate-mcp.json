@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.verifiedstate/verifiedstate-mcp",
+  "type": "mcp",
+  "name": "VerifiedState Memory",
+  "description": "Verified memory for AI agents. Signed assertions, billing attestation, session continuity.",
+  "author": "io.github.verifiedstate",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/verifiedstate/verified-memory",
+    "repo": "verifiedstate/verified-memory"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.verifiedstate.ai/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-04T16:51:05.93477Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

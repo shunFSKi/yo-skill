@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.zetadeck/zetadeck",
+  "type": "mcp",
+  "name": "Zetadeck",
+  "description": "One workspace for tasks, CRM, docs, and live runway from your bank feed.",
+  "author": "com.zetadeck",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://zetadeck.com/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://zetadeck.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-30T05:14:18.286969Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

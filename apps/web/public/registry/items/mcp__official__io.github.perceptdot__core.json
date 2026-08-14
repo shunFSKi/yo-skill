@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.perceptdot/core",
+  "type": "mcp",
+  "name": "Perceptdot Core",
+  "description": "B2A2H MCP server — AI agent app store. Auto-discover and recommend MCP servers for any project.",
+  "author": "io.github.perceptdot",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers/io.github.perceptdot%2Fcore",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@perceptdot/core"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-01T06:26:08.967863Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

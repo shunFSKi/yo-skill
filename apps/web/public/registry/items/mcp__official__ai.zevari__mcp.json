@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/ai.zevari/mcp",
+  "type": "mcp",
+  "name": "Zevari",
+  "description": "Controlled LinkedIn and GTM MCP server with review-gated prospecting and outreach workflows.",
+  "author": "ai.zevari",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.zevari.ai/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.zevari.ai/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-02T13:56:21.466567Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

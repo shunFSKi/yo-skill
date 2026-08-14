@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.kontent-ai/mcp-server",
+  "type": "mcp",
+  "name": "mcp-server",
+  "description": "Connect to Kontent.ai to manage content, types, taxonomies, and workflows via natural language",
+  "author": "io.github.kontent-ai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/kontent-ai/mcp-server",
+    "repo": "kontent-ai/mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@kontent-ai/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "KONTENT_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "KONTENT_ENVIRONMENT_ID",
+        "required": true,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-11T09:09:23.247483Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

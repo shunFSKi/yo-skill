@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.chrischall/evite-mcp",
+  "type": "mcp",
+  "name": "evite-mcp",
+  "description": "Evite for Claude — list events, guest lists & RSVPs, RSVP, message guests, and create/edit events",
+  "author": "io.github.chrischall",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/chrischall/evite-mcp",
+    "repo": "chrischall/evite-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "evite-mcp"
+    ],
+    "env": [
+      {
+        "name": "EVITE_EMAIL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "EVITE_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "EVITE_SESSION_COOKIE",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-06T00:42:08.061875Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

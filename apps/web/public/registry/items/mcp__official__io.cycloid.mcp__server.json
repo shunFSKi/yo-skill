@@ -1,0 +1,65 @@
+{
+  "id": "mcp:official/io.cycloid.mcp/server",
+  "type": "mcp",
+  "name": "server",
+  "description": "An MCP server that let you interact with Cycloid.io Internal Development Portal and Platform",
+  "author": "io.cycloid.mcp",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/cycloidio/cycloid-mcp-server",
+    "repo": "cycloidio/cycloid-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.cycloid.io/mcp",
+    "env": [
+      {
+        "name": "X-CY-API-KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "X-CY-ORG",
+        "required": true,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-10-08T12:49:02.342984Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

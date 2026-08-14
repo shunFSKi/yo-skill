@@ -1,0 +1,65 @@
+{
+  "id": "mcp:official/io.github.joachim-aqf/azure-devops",
+  "type": "mcp",
+  "name": "Azure DevOps (unofficial remote entry)",
+  "description": "Unofficial entry for Microsoft's hosted Azure DevOps MCP server. Not affiliated with Microsoft.",
+  "author": "io.github.joachim-aqf",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.dev.azure.com/{organization}",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.dev.azure.com/{organization}",
+    "env": [
+      {
+        "name": "X-MCP-Toolsets",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "X-MCP-Readonly",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-11T09:07:01.311031Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

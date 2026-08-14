@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/pl.iteon/mcp",
+  "type": "mcp",
+  "name": "ITEON MCP Server",
+  "description": "Polski software house B2B: 5 public + 7 OAuth 2.1 private MCP tools (AI estimate, draft, risk).",
+  "author": "pl.iteon",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ITEONpl/iteon-apps",
+    "repo": "ITEONpl/iteon-apps"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.iteon.pl/api/v1/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-14T07:01:07.265006Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

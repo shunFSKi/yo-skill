@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.corply-dev/corply",
+  "type": "mcp",
+  "name": "corply",
+  "description": "Incorporate a Delaware C-Corp from your agent — docs, cofounder e-sign, human-reviewed filing.",
+  "author": "io.github.corply-dev",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/corply-dev/corply-plugin",
+    "repo": "corply-dev/corply-plugin"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://corply.dev/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-03T17:45:00.223945Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

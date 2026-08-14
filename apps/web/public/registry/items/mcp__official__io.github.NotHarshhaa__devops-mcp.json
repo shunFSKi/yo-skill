@@ -1,0 +1,104 @@
+{
+  "id": "mcp:official/io.github.NotHarshhaa/devops-mcp",
+  "type": "mcp",
+  "name": "devops-mcp",
+  "description": "Unified MCP server for Kubernetes, ArgoCD, Prometheus, PagerDuty, and Loki",
+  "author": "io.github.NotHarshhaa",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/NotHarshhaa/devops-mcp",
+    "repo": "NotHarshhaa/devops-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@notharshhaa/devops-mcp"
+    ],
+    "env": [
+      {
+        "name": "KUBECONFIG",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "K8S_CONTEXT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ARGOCD_SERVER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ARGOCD_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PROMETHEUS_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PROMETHEUS_BEARER_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PAGERDUTY_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "LOKI_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LOKI_TOKEN",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-29T11:42:46.373588Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

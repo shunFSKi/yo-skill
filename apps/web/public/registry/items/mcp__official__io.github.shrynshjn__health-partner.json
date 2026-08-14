@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.shrynshjn/health-partner",
+  "type": "mcp",
+  "name": "health-partner",
+  "description": "Manage your Health Partner account, log food, water, workouts, body using agent",
+  "author": "io.github.shrynshjn",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/shrynshjn/health_partner",
+    "repo": "shrynshjn/health_partner"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://healthpartner.shrynshjn.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T02:57:28.87192Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.freema/openclaw-mcp",
+  "type": "mcp",
+  "name": "OpenClaw MCP Server",
+  "description": "MCP server bridging Claude.ai/Desktop with self-hosted OpenClaw via OAuth 2.1.",
+  "author": "io.github.freema",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/freema/openclaw-mcp",
+    "repo": "freema/openclaw-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "openclaw-mcp"
+    ],
+    "env": [
+      {
+        "name": "OPENCLAW_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "OPENCLAW_GATEWAY_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "OPENCLAW_MODEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OPENCLAW_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-26T08:14:40.863127Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

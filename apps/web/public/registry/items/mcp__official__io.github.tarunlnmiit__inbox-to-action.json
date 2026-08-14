@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.tarunlnmiit/inbox-to-action",
+  "type": "mcp",
+  "name": "inbox-to-action",
+  "description": "Agentic Gmail triage: classify, summarize, extract tasks, draft replies. Never sends.",
+  "author": "io.github.tarunlnmiit",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/tarunlnmiit/inbox-to-action",
+    "repo": "tarunlnmiit/inbox-to-action"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "inbox-to-action"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-05T18:43:46.927271Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/dev.workers.perch-app.skim/skim",
+  "type": "mcp",
+  "name": "skim",
+  "description": "URL to Markdown or structured JSON (schema.org/OG); renders SPA; batch reads. No signup/key.",
+  "author": "dev.workers.perch-app.skim",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://skim.perch-app.workers.dev/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://skim.perch-app.workers.dev/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T00:58:32.139495Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

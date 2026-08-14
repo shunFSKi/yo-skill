@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.pelletfi/mcp",
+  "type": "mcp",
+  "name": "Pellet",
+  "description": "Token intelligence on Base. Market data, safety flags, and analysis via x402.",
+  "author": "io.github.pelletfi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/pelletfi/pellet",
+    "repo": "pelletfi/pellet"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@pelletfi/mcp"
+    ],
+    "env": [
+      {
+        "name": "EVM_PRIVATE_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-01T16:52:26.604904Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

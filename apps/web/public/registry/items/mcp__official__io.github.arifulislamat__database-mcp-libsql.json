@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.arifulislamat/database-mcp-libsql",
+  "type": "mcp",
+  "name": "database-mcp-libsql",
+  "description": "MCP server for libSQL/Turso, local or remote. Read-only by default, row caps, timeouts.",
+  "author": "io.github.arifulislamat",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/arifulislamat/database-mcp",
+    "repo": "arifulislamat/database-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@database-mcp/libsql"
+    ],
+    "env": [
+      {
+        "name": "LIBSQL_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "LIBSQL_AUTH_TOKEN",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-16T18:45:02.779935Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

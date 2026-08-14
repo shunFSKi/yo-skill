@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.rog0x/file",
+  "type": "mcp",
+  "name": "file",
+  "description": "Dir tree, file stats, duplicates, LOC for AI agents",
+  "author": "io.github.rog0x",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/rog0x/mcp-file-tools",
+    "repo": "rog0x/mcp-file-tools"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@rog0x/mcp-file-tools"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-22T22:53:41.466612Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

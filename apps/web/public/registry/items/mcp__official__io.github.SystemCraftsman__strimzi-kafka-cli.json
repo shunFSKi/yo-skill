@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.SystemCraftsman/strimzi-kafka-cli",
+  "type": "mcp",
+  "name": "strimzi-kafka-cli",
+  "description": "Manage Apache Kafka on Kubernetes via Strimzi. Clusters, topics, users, connectors, MM2.",
+  "author": "io.github.SystemCraftsman",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/SystemCraftsman/strimzi-kafka-cli",
+    "repo": "SystemCraftsman/strimzi-kafka-cli"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "strimzi-kafka-cli"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-11T17:46:34.329891Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

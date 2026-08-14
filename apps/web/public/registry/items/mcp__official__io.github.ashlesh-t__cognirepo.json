@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.ashlesh-t/cognirepo",
+  "type": "mcp",
+  "name": "CogniRepo",
+  "description": "FAISS, call graph, AST, BM25 — 34 MCP tools for AI agents. 50-80% token reduction. Offline.",
+  "author": "io.github.ashlesh-t",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ashlesh-t/cognirepo",
+    "repo": "ashlesh-t/cognirepo"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "cognirepo"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-14T17:03:43.437481Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

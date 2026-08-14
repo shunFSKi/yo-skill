@@ -1,0 +1,103 @@
+{
+  "id": "mcp:official/io.github.adelaidasofia/whatsapp-mcp",
+  "type": "mcp",
+  "name": "WhatsApp MCP",
+  "description": "WhatsApp MCP. SQLCipher-encrypted, scrubber-CI-gated, draft-and-confirm sends, voice transcription.",
+  "author": "io.github.adelaidasofia",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/adelaidasofia/whatsapp-mcp",
+    "repo": "adelaidasofia/whatsapp-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "adelaidasofia-whatsapp-mcp"
+    ],
+    "env": [
+      {
+        "name": "WHATSAPP_BRIDGE_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WHATSAPP_BRIDGE_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WHATSAPP_VAULT_CRM_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WHATSAPP_WHISPER_BACKEND",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WHATSAPP_WHISPER_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "WHATSAPP_WHISPER_MODEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WHATSAPP_SCRUB_PROMPT_INJECTION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WHATSAPP_AUDIT_LOG",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WHATSAPP_ENCRYPT_DB",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-20T02:16:46.081761Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

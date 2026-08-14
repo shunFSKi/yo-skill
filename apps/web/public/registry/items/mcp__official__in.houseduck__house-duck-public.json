@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/in.houseduck/house-duck-public",
+  "type": "mcp",
+  "name": "House Duck",
+  "description": "Read-only public information about House Duck games and its Korean-first development Blog.",
+  "author": "in.houseduck",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/chaddungnam/chaddungnam.github.io",
+    "repo": "chaddungnam/chaddungnam"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://bbgwvpwzkyudbtcgrbtm.supabase.co/functions/v1/house-duck-mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-11T07:43:54.210771Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

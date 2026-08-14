@@ -1,0 +1,113 @@
+{
+  "id": "mcp:official/io.github.Blahaj-gif/hitl-finance-mcp",
+  "type": "mcp",
+  "name": "Finance MCP",
+  "description": "Market data, SEC filings and risk tools for Webull, Saxo and IBKR. Only you can send an order.",
+  "author": "io.github.Blahaj-gif",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Blahaj-gif/Finance-mcp",
+    "repo": "Blahaj-gif/Finance-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "hitl-finance-mcp"
+    ],
+    "env": [
+      {
+        "name": "WEBULL_APP_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "WEBULL_APP_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "WEBULL_REGION_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WEBULL_ENVIRONMENT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "FINANCE_BROKER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SAXO_ACCESS_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SAXO_ENVIRONMENT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "IBKR_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "IBKR_TLS_INSECURE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SEC_USER_AGENT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BLS_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T16:56:29.541666Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

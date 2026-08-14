@@ -1,0 +1,73 @@
+{
+  "id": "mcp:official/io.github.Lucav21/heu-mcp",
+  "type": "mcp",
+  "name": "heu-mcp",
+  "description": "HEU Legal e-signature MCP: manage HEU documents and PDFs, prompt signers, download PDFs.",
+  "author": "io.github.Lucav21",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Lucav21/heu-mcp",
+    "repo": "Lucav21/heu-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "heu-mcp"
+    ],
+    "env": [
+      {
+        "name": "HEU_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "HEU_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "HEU_DOWNLOAD_DIR",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-06T16:04:32.09972Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.SnipMCP/gadschain",
+  "type": "mcp",
+  "name": "gadschain",
+  "description": "Google Ads MCP server. Read campaigns, manage budgets, pause/enable, add negative keywords.",
+  "author": "io.github.SnipMCP",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/SnipMCP/gadschain",
+    "repo": "SnipMCP/gadschain"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "gadschain"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-23T21:45:49.078994Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

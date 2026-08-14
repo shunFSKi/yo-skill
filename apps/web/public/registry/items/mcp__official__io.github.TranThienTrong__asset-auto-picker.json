@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.TranThienTrong/asset-auto-picker",
+  "type": "mcp",
+  "name": "asset-auto-picker",
+  "description": "An MCP server that provides [describe what your server does]",
+  "author": "io.github.TranThienTrong",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/TranThienTrong/asset_auto_picker",
+    "repo": "TranThienTrong/asset_auto_picker"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "asset-auto-picker"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-10-28T10:30:25.101235Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

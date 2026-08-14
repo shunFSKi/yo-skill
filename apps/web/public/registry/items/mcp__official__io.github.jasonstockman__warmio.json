@@ -1,0 +1,94 @@
+{
+  "id": "mcp:official/io.github.jasonstockman/warmio",
+  "type": "mcp",
+  "name": "Warm",
+  "description": "Context and automation MCP server for Warm financial data and approved write operations.",
+  "author": "io.github.jasonstockman",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/jasonstockman/warm-mcp",
+    "repo": "jasonstockman/warm-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@warmio/mcp"
+    ],
+    "env": [
+      {
+        "name": "WARM_CONTEXT_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "WARM_CONTEXT_API_KEY_FILE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WARM_AUTOMATION_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "WARM_AUTOMATION_API_KEY_FILE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WARM_CONFIG_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WARM_API_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WARM_API_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-15T02:02:26.422174Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

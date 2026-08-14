@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.japlete/md-vision",
+  "type": "mcp",
+  "name": "md-vision",
+  "description": "Read markdown with inlined images and index headings for agentic RAG workflows.",
+  "author": "io.github.japlete",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/japlete/md-vision-mcp",
+    "repo": "japlete/md-vision-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "md-vision"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-20T21:59:43.755723Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

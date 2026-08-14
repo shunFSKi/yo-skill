@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.BenSpank/pollbolt",
+  "type": "mcp",
+  "name": "pollbolt",
+  "description": "AI-native survey & form builder. Manage surveys, responses, analytics, and webhooks.",
+  "author": "io.github.BenSpank",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://api.pollbolt.com/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.pollbolt.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-14T15:26:14.871291Z"
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

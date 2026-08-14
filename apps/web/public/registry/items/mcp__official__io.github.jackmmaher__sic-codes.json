@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.jackmmaher/sic-codes",
+  "type": "mcp",
+  "name": "SIC Codes UK",
+  "description": "UK SIC code lookup, GICS/ICB mapping, and Companies House search. 731 codes, 5.6M companies.",
+  "author": "io.github.jackmmaher",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/jackmmaher/siccodes.co.uk",
+    "repo": "jackmmaher/siccodes"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "sic-codes-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-08T15:10:00.850619Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

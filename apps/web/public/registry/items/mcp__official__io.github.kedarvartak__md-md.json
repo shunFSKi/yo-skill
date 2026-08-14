@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.kedarvartak/md-md",
+  "type": "mcp",
+  "name": "md-md",
+  "description": "MCP server for md.md - provides team knowledge context to AI assistants",
+  "author": "io.github.kedarvartak",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/kedarvartak/md.md",
+    "repo": "kedarvartak/md"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "md-md-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "MD_MD_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "MD_MD_API_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MD_MD_TEAM_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MD_MD_WORKSPACE_ID",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-10T11:16:35.755644Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "mcp:official/io.github.mshegolev/gitlab-ci-mcp",
+  "type": "mcp",
+  "name": "gitlab-ci-mcp",
+  "description": "GitLab CI/CD MCP — pipelines, jobs, schedules, MRs, files. Any GitLab (SaaS or self-hosted).",
+  "author": "io.github.mshegolev",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mshegolev/gitlab-ci-mcp",
+    "repo": "mshegolev/gitlab-ci-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "gitlab-ci-mcp"
+    ],
+    "env": [
+      {
+        "name": "GITLAB_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "GITLAB_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "GITLAB_PROJECT_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GITLAB_SSL_VERIFY",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-17T17:43:20.002643Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

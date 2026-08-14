@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/net.andrii/booking",
+  "type": "mcp",
+  "name": "Andrii Co. Notary & Apostille Assistant",
+  "description": "Book a Washington notary or apostille appointment, get a quote, and track it, via AI assistant.",
+  "author": "net.andrii",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://andrii.net/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://andrii.net/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-07T00:18:39.183976Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

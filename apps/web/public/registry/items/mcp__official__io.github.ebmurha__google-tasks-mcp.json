@@ -1,0 +1,83 @@
+{
+  "id": "mcp:official/io.github.ebmurha/google-tasks-mcp",
+  "type": "mcp",
+  "name": "Google Tasks MCP Server",
+  "description": "Manage Google Tasks from MCP-compatible AI clients.",
+  "author": "io.github.ebmurha",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ebmurha/google-tasks-mcp",
+    "repo": "ebmurha/google-tasks-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "google-tasks-mcp"
+    ],
+    "env": [
+      {
+        "name": "GOOGLE_CLIENT_ID",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "GOOGLE_CLIENT_SECRET",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "GOOGLE_REDIRECT_URI",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "DB_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DEFAULT_TASKLIST",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-22T01:34:05.616206Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

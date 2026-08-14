@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.gabrielmahia/church-mcp",
+  "type": "mcp",
+  "name": "church-mcp",
+  "description": "MCP server for congregation and community-organization coordination in East Africa",
+  "author": "io.github.gabrielmahia",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/gabrielmahia/church-mcp",
+    "repo": "gabrielmahia/church-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "church-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-18T23:35:15.890247Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

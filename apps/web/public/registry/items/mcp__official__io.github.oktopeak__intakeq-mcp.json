@@ -1,0 +1,94 @@
+{
+  "id": "mcp:official/io.github.oktopeak/intakeq-mcp",
+  "type": "mcp",
+  "name": "IntakeQ MCP",
+  "description": "IntakeQ/PracticeQ MCP connector with HIPAA §164.312(b) audit logging on every PHI read/write",
+  "author": "io.github.oktopeak",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/oktopeak/IntakeQ",
+    "repo": "oktopeak/IntakeQ"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@oktopeak/intakeq-mcp"
+    ],
+    "env": [
+      {
+        "name": "INTAKEQ_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "INTAKEQ_API_BASE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MCP_ALLOW_NO_AUTH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TRANSPORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PORT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-02T11:24:04.032074Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

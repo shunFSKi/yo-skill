@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.xiaojiou176-open/notestorelab-mcp",
+  "type": "mcp",
+  "name": "NoteStore Lab MCP",
+  "description": "Local copy-first Apple Notes recovery and review MCP server for NoteStore Lab case roots.",
+  "author": "io.github.xiaojiou176-open",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/xiaojiou176-open/apple-notes-forensics",
+    "repo": "xiaojiou176-open/apple-notes-forensics"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "apple-notes-forensics"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-08T06:42:16.346716Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

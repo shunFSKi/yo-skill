@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.RightOnPar-LLC/mesh-connector",
+  "type": "mcp",
+  "name": "MeshMarket",
+  "description": "The agent-to-agent capability exchange — rent memory, reasoning and safety, settled per call.",
+  "author": "io.github.RightOnPar-LLC",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/RightOnPar-LLC/mesh-connector",
+    "repo": "RightOnPar-LLC/mesh-connector"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://market.meshtool.ai/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-11T20:38:11.229086Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

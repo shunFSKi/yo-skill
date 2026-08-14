@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.epistemedeus/ai-readiness",
+  "type": "mcp",
+  "name": "AI Readiness",
+  "description": "Check if a website is visible to AI search (ChatGPT, Perplexity, Claude) and get per-gap fixes.",
+  "author": "io.github.epistemedeus",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/epistemedeus/ai-readiness",
+    "repo": "epistemedeus/ai-readiness"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/epistemedeus/ai-readiness/releases/download/v1.1.3/ai-readiness.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-24T02:40:30.678677Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

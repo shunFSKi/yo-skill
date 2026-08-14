@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.shulex-voc/smart-crawler",
+  "type": "mcp",
+  "name": "smart-crawler",
+  "description": "E-commerce competitor intelligence, VOC sentiment, Amazon ASIN analysis, Reddit growth playbooks.",
+  "author": "io.github.shulex-voc",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/shulex-voc/smart-crawler",
+    "repo": "shulex-voc/smart-crawler"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://smartcrawler.io/mcp/",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-08T10:43:58.949101Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

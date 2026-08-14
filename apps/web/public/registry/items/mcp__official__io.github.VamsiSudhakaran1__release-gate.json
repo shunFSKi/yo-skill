@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.VamsiSudhakaran1/release-gate",
+  "type": "mcp",
+  "name": "release-gate",
+  "description": "Pre-deploy security auditor for AI agent code — the risks generic SAST misses.",
+  "author": "io.github.VamsiSudhakaran1",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/VamsiSudhakaran1/release-gate",
+    "repo": "VamsiSudhakaran1/release-gate"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "release-gate"
+    ],
+    "env": [
+      {
+        "name": "RG_MCP_ALLOWED_ROOTS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-07T10:20:10.213407Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

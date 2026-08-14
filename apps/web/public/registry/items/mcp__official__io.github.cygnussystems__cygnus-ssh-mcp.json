@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.cygnussystems/cygnus-ssh-mcp",
+  "type": "mcp",
+  "name": "cygnus-ssh-mcp",
+  "description": "SSH-based MCP control of remote Linux, macOS, and Windows servers -- 46 purpose-built tools.",
+  "author": "io.github.cygnussystems",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/cygnussystems/cygnus-ssh-mcp",
+    "repo": "cygnussystems/cygnus-ssh-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "cygnus-ssh-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-21T20:23:14.346999Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.resolvemesh/compatibility",
+  "type": "mcp",
+  "name": "ResolveMesh Compatibility Intelligence",
+  "description": "Read-only, source-backed compatibility lookups and approved changes for ResolveMesh's catalog.",
+  "author": "com.resolvemesh",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://resolvemesh.com/mcp/public",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://resolvemesh.com/mcp/public"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-13T14:56:31.066275Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

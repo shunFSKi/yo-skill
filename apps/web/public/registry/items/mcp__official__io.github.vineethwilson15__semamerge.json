@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.vineethwilson15/semamerge",
+  "type": "mcp",
+  "name": "semamerge",
+  "description": "Detects semantic merge conflicts between Git branches using AST-level analysis",
+  "author": "io.github.vineethwilson15",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/vineethwilson15/semamerge",
+    "repo": "vineethwilson15/semamerge"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "semamerge"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-25T13:30:51.261773Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

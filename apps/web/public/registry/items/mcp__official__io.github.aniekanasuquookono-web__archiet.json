@@ -1,0 +1,73 @@
+{
+  "id": "mcp:official/io.github.aniekanasuquookono-web/archiet",
+  "type": "mcp",
+  "name": "Archiet",
+  "description": "Archiet MCP server: scaffold full-stack apps from PRD text and extract capabilities.",
+  "author": "io.github.aniekanasuquookono-web",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/aniekanasuquookono-web/archiet",
+    "repo": "aniekanasuquookono-web/archiet"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-archiet"
+    ],
+    "env": [
+      {
+        "name": "ARCHIET_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "ARCHIET_API_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ARCHIET_API_TIMEOUT_SECONDS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-22T13:31:19.107682Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

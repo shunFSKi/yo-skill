@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.Nomadu27/insaits",
+  "type": "mcp",
+  "name": "InsAIts - AI Communication Security Monitor",
+  "description": "Runtime AI-to-AI security monitor. 23 anomaly types, OWASP MCP Top 10 coverage.",
+  "author": "io.github.Nomadu27",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Nomadu27/InsAIts",
+    "repo": "Nomadu27/InsAIts"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "insa-its"
+    ],
+    "env": [
+      {
+        "name": "INSAITS_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-09T05:58:16.657244Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

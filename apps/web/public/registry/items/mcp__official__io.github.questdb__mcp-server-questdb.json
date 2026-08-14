@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.questdb/mcp-server-questdb",
+  "type": "mcp",
+  "name": "QuestDB Web Console MCP Server",
+  "description": "Connects coding agents to a running QuestDB Web Console: notebook cells, SQL queries, and charts.",
+  "author": "io.github.questdb",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/questdb/mcp-server-questdb",
+    "repo": "questdb/mcp-server-questdb"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@questdb/mcp-server-questdb"
+    ],
+    "env": [
+      {
+        "name": "CONSOLE_ORIGIN",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_BRIDGE_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LOG_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-11T17:27:48.739253Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

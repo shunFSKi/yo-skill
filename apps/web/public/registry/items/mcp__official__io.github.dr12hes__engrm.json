@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.dr12hes/engrm",
+  "type": "mcp",
+  "name": "engrm",
+  "description": "Shared memory across devices, sessions, and agents for OpenClaw, Claude Code, and Codex.",
+  "author": "io.github.dr12hes",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dr12hes/engrm",
+    "repo": "dr12hes/engrm"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "engrm"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-18T21:21:04.086619Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

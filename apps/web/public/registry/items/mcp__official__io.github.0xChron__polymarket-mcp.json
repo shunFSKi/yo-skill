@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.0xChron/polymarket-mcp",
+  "type": "mcp",
+  "name": "polymarket-mcp",
+  "description": "Read-only Polymarket prediction market data for AI agents.",
+  "author": "io.github.0xChron",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/0xChron/polymarket-mcp",
+    "repo": "0xChron/polymarket-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "0xchron-polymarket-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-21T08:03:55.919276Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

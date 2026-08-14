@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.gribstream/mcp",
+  "type": "mcp",
+  "name": "GribStream MCP",
+  "description": "Hosted weather data MCP for discovery, validation, and OAuth-protected GribStream queries.",
+  "author": "com.gribstream",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/GribStream/gribstream-mcp",
+    "repo": "GribStream/gribstream-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://gribstream.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-07T17:09:28.360006Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

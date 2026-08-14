@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.gparientee/gp-intel",
+  "type": "mcp",
+  "name": "GP Intel",
+  "description": "Verified European PE ownership: who owns a company, GP portfolios, exits by year. Hand-checked.",
+  "author": "io.github.gparientee",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/gparientee/gp-intel-mcp",
+    "repo": "gparientee/gp-intel-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://www.gp-intel.com/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-12T19:55:43.996488Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

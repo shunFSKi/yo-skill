@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.branch-docs/ai",
+  "type": "mcp",
+  "name": "Branch Docs",
+  "description": "Access and search Branch's official API documentation directly within any AI agent or client.",
+  "author": "io.github.branch-docs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://docs.branchapp.com/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://docs.branchapp.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-21T02:42:00.345446Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

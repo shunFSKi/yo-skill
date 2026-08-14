@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/sh.stipple/openwarrant",
+  "type": "mcp",
+  "name": "OpenWarrant — Document Verification Suite",
+  "description": "Document forensics: tamper/AI checks, extract, identity, PII, adverse media. No API key needed.",
+  "author": "sh.stipple",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Sketchjar/openwarrant",
+    "repo": "Sketchjar/openwarrant"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://www.stipple.sh/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-23T04:29:35.760897Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

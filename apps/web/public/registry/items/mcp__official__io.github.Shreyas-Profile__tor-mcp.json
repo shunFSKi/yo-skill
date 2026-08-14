@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.Shreyas-Profile/tor-mcp",
+  "type": "mcp",
+  "name": "tor-mcp",
+  "description": "Route HTTP requests through the Tor network. Rotating exit IPs, .onion support, no body logging.",
+  "author": "io.github.Shreyas-Profile",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/globalion/tor-mcp",
+    "repo": "globalion/tor-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://tor.regiq.in/api/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-17T13:21:13.289473Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

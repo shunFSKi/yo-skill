@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/ru.akeda.erp/akeda-erp",
+  "type": "mcp",
+  "name": "Akeda ERP",
+  "description": "Official Akeda ERP connector for tasks, CRM, chats, documents, finance and operations.",
+  "author": "ru.akeda.erp",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://erp.akeda.ru/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://erp.akeda.ru/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-10T23:16:31.218744Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

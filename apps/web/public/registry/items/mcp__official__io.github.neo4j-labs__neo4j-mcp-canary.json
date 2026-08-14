@@ -1,0 +1,78 @@
+{
+  "id": "mcp:official/io.github.neo4j-labs/neo4j-mcp-canary",
+  "type": "mcp",
+  "name": "neo4j-mcp-canary",
+  "description": "Neo4j MCP Canary — The canary goes first so the rest of us know what's coming",
+  "author": "io.github.neo4j-labs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/neo4j-labs/neo4j-mcp-canary",
+    "repo": "neo4j-labs/neo4j-mcp-canary"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "neo4j-mcp-canary"
+    ],
+    "env": [
+      {
+        "name": "NEO4J_URI",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "NEO4J_USERNAME",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "NEO4J_PASSWORD",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "NEO4J_DATABASE",
+        "required": true,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-21T21:40:45.461445Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

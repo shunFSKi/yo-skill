@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/so.jinko/jinko-mcp",
+  "type": "mcp",
+  "name": "jinko-mcp",
+  "description": "Jinko is a travel MCP server that provides hotel search and booking capabilities.",
+  "author": "so.jinko",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/jinkoso/jinko-mcp",
+    "repo": "jinkoso/jinko-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp-remote.jinko.so/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-09-16T21:19:26.720482Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

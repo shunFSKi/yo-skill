@@ -1,0 +1,149 @@
+{
+  "id": "mcp:official/io.github.aliasunder/vault-cortex",
+  "type": "mcp",
+  "name": "Vault Cortex",
+  "description": "Standalone MCP server for Obsidian vaults — hybrid search, notes & files, memory, tasks, OAuth 2.1",
+  "author": "io.github.aliasunder",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/aliasunder/vault-cortex",
+    "repo": "aliasunder/vault-cortex"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/aliasunder/vault-cortex:0.36.3"
+    ],
+    "env": [
+      {
+        "name": "MCP_AUTH_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "PUBLIC_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "EMBEDDING_ENABLED",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RERANK_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WINDOWS_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MEMORY_ENABLED",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "FILE_TOOLS_ENABLED",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MEMORY_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TZ",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LOG_LEVEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LOG_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LOG_RETENTION_DAYS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PROTECTED_PATHS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ORPHAN_EXCLUDE_FOLDERS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SERVICE_DOCUMENTATION_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MAX_FILE_BYTES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MAX_IMAGE_OUTPUT_BYTES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MAX_PDF_RENDER_PAGES",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T02:41:24.804286Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": "<p align=\"center\">\n  <img src=\"./assets/banner.svg\" width=\"720\" alt=\"Vault Cortex\">\n</p>\n\n<div align=\"center\">\n\n[![CI](https://img.shields.io/github/actions/workflow/status/aliasunder/vault-cortex/ci.yml?branch=main&logo=github&label=CI&cacheSeconds=43200)](https://github.com/aliasunder/vault-cortex/actions/workflows/ci.yml)\n[![Gitleaks](https://img.shields.io/github/actions/workflow/status/aliasunder/vault-cortex/gitleaks.yml?branch=main&logo=github&label=Gitleaks&cacheSeconds=43200)](https://github.com/aliasunder/vault-cortex/actions/workflows/gitleaks.yml)\n[![Trivy](https://img.shields.io/github/actions/workflow/status/aliasunder/vault-cortex/trivy.yml?branch=main&logo=github&label=Trivy&cacheSeconds=43200&v=1)](https://github.com/aliasunder/vault-cortex/actions/workflows/trivy.yml)\n[![GitHub Release](https://img.shields.io/github/v/release/aliasunder/vault-cortex?cacheSeconds=43200)](https://github.com/aliasunder/vault-cortex/releases)\n[![npm](https://img.shields.io/npm/v/vault-cortex?logo=npm&label=npm&cacheSeconds=43200)](https://www.npmjs.com/package/vault-cortex)\n[![License: MIT](https://img.shields.io/github/license/aliasunder/vault-cortex?v=1&cacheSeconds=43200)](https://github.com/aliasunder/vault-cortex/blob/main/LICENSE)\n[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/aliasunder/vault-cortex)\n[![vault-cortex MCP server](https://glama.ai/mcp/servers/aliasunder/vault-cortex/badges/score.svg)](https://glama.ai/mcp/servers/aliasunder/vault-cortex)\n\n</div>\n\n**Vault Cortex** is a standalone MCP server that gives any AI agent **hybrid search, task management, structured memory, and read/write access** to your [Obsidian](https://obsidian.md) vault. No plugins, no running Obsidian, no separate bridge. One Docker container, your vault folder, a full tool suite + guided prompts. Deploy on a VPS with Obsidian Sync and the same vault is accessible from your phone, claude.ai, or any remote MCP client, secured with OAuth 2.1.\n\n**Contents** — [What you get](#what-you-get) · [Quick Start](#quick-start) · [How It Works](#how-it-works) · [Hybrid Search](#hybrid-search) · [Memory](#memory) · [Tasks](#tasks) · [Files](#files) · [Tools](#tools) · [Prompts](#prompts) · [Properties](#properties) · [Config](#configuration) · [Daily Notes](#daily-notes) · [Data Integrity](#data-integrity) · [Auth](#authentication) · [Deployment](#deployment-options) · [Community Deployments](#community-deployments)\n\n## What you get\n\n<table align=\"center\">\n  <tr>\n    <td align=\"center\"><strong>Search the vault</strong></td>\n    <td align=\"center\"><strong>Reason over notes</strong></td>\n    <td align=\"center\"><strong>Write back to Obsidian</strong></td>\n  </tr>\n  <tr>\n    <td><img src=\"./assets/demo-remember.gif\" width=\"240\" alt=\"Ask Claude about a past trip — it searches the vault and recalls the route, cities, and highlights\"></td>\n    <td><img src=\"./assets/demo-reason.gif\" width=\"240\" alt=\"Ask what went wrong — Claude synthesizes lessons from session logs and itinerary notes\"></td>\n    <td><img src=\"./assets/demo-writeback.gif\" width=\"240\" alt=\"Save lessons learned to the vault, update travel preferences, then see both in Obsidian\"></td>\n  </tr>\n</table>\n\n<p align=\"center\"><em>All three demos run on Claude mobile. The vault is on a remote server, not the phone.</em></p>\n\n- **[Remote access](#deployment-options)** — works from your phone, a remote server, or any MCP client via OAuth 2.1. Deploy on a VPS with Obsidian Sync for access from anywhere.\n- **[Plugin-free](#how-it-works)** — Obsidian doesn't need to be running. The server works directly with `.md` files on disk. Headless sync keeps the vault current.\n- **[Hybrid search](#hybrid-search)** — FTS5 keyword matching + vector semantic similarity via RRF fusion, refined by cross-encoder reranking for intent-heavy queries. Keywords stay precise on exact terms and jargon; vectors find notes even when your words differ from the vault's.\n- **[Structured memory](#memory)** — dated, append-only entries accumulate into a personal knowledge layer, auto-initialized for AI personalization. Topic recall answers \"what do I think about X?\" with the current take and the dated history behind it — evolution included.\n- **[Tasks](#tasks)** — Kanban-aware task queries and updates: triage by status, dates, or priority, then complete, reprioritize, or move tasks between lanes in one call. Parses both [Tasks plugin](https://publish.obsidian.md/tasks/) emoji and [Dataview](https://blacksmithgu.github.io/obsidian-dataview/) inline-field formats.\n- **[Link graph](#tools)** — backlinks, outgoing links, and orphan detection across the vault\n- **[Files](#files)** — read the vault's non-markdown files too: images arrive as actual images (shrunk to fit when needed), PDFs as structured text or rendered pages, canvases as readable outlines, data files as text\n- **[Obsidian-native](#properties)** — understands frontmatter, wikilinks, tags, headings, and daily notes\n- **[Guided workflows](#prompts)** — built-in prompts for vault health, memory review, and daily reconciliation — assembled from live vault data each time\n\n**Tested across a 15-day trip through Europe.** 30+ sessions from a phone, 216 tool calls, zero laptop access needed. Writes in one session were immediately available in the next, across cities and days.\n\n## Quick Start\n\n### Local (2 minutes — Docker + your vault folder)\n\n**Prerequisites:** [Docker](https://docs.docker.com/get-docker/) (or a Docker-compatible runtime, e.g. OrbStack, Colima, Podman), Node.js >= 20.12 (only for the CLI — the server itself runs in Docker), and an Obsidian vault (or any folder of `.md` files).\n\n```bash\nnpx vault-cortex@latest init\n```\n\nThat's it — the CLI asks for your vault path, generates the auth token and config files, starts the server, and prints the connection details for your MCP client ([CLI reference →](./cli/)).\n\n![npx vault-cortex@latest init — the interactive setup wizard picks a mode, finds your vault, offers the optional settings, generates the config, and starts the server](./assets/demo-cli-init.gif)\n\n**Set up with the CLI?** It manages the server from here on — `configure`, `upgrade`, `start`, `restart`, `logs`, `down` ([CLI reference →](./cli/)).\n\n**Set up with Compose?** Stick with Compose for updates too (`docker compose pull && docker compose up -d`) — the CLI and Compose manage the container independently.\n\n<details>\n<summary><strong>Manual setup</strong> (no Node.js needed)</summary>\n\n```bash\n# 1. Get the quickstart files\ncurl -O https://raw.githubusercontent.com/aliasunder/vault-cortex/main/deploy/local/docker-compose.yml\ncurl -O https://raw.githubusercontent.com/aliasunder/vault-cortex/main/deploy/local/.env.example\n\n# 2. Configure\ncp .env.example .env\n# Edit .env — set MCP_AUTH_TOKEN (openssl rand -hex 32) and VAULT_PATH\n\n# 3. Start\ndocker compose up\n```\n\n</details>\n\n**[Full local guide →](./deploy/local/)** (includes [Windows setup](./deploy/local/#windows-docker-desktop))\n\n### Remote (access from anywhere — Docker + Obsidian Sync)\n\n**Prerequisites:** a VPS with [Docker](https://docs.docker.com/engine/install/) (or a Docker-compatible runtime), an [Obsidian Sync](https://obsidian.md/sync) subscription, and Node.js >= 20.12 (only for the CLI — the server itself runs in Docker).\n\n```bash\n# On your VPS:\nnpx vault-cortex@latest init --mode remote\n```\n\nThat's it — the CLI walks through the public URL, Obsidian Sync token (it can run [`get-sync-token`](./cli/#get-sync-token) for you), and auth config, then starts the server ([CLI reference →](./cli/)).\n\n**Set up with the CLI?** It manages the server from here on — `configure`, `upgrade`, `start`, `restart`, `logs`, `down` ([CLI reference →](./cli/)).\n\n**Set up with Compose?** Stick with Compose for updates too (`docker compose pull && docker compose up -d`) — the CLI and Compose manage the container independently.\n\n<details>\n<summary><strong>Manual setup</strong> (no Node.js needed)</summary>\n\n```bash\n# On your VPS:\nmkdir -p /opt/vault-cortex && cd /opt/vault-cortex\ncurl -O https://raw.githubusercontent.com/aliasunder/vault-cortex/main/deploy/remote/docker-compose.yml\ncurl -O https://raw.githubusercontent.com/aliasunder/vault-cortex/main/deploy/remote/.env.example\ncp .env.example .env\n# Edit .env — set MCP_AUTH_TOKEN, PUBLIC_URL, OBSIDIAN_AUTH_TOKEN, VAULT_NAME\ndocker compose up -d\n```\n\n</details>\n\n**[Full remote guide →](./deploy/remote/)**\n\n### Connect your MCP client\n\n| Setup      | Server URL                  |\n| ---------- | --------------------------- |\n| **Local**  | `http://localhost:8000/mcp` |\n| **Remote** | `<PUBLIC_URL>/mcp`          |\n\nAdd the server URL in any MCP client — Claude Code, Claude Desktop, Cursor, OpenCode, or any other. OAuth clients open a consent page in your browser — approve with your token, and the client handles token renewal from then on. Clients without OAuth (MCP Inspector, scripts) send the token directly as an `Authorization: Bearer` header.\n\n**Claude Code:**\n\n```bash\nclaude mcp add --scope user --transport http vault-cortex http://localhost:8000/mcp   # local (or <PUBLIC_URL>/mcp)\n```\n\n`--scope user` registers the server for every project; omit it to scope it to the current directory only.\n\n<details>\n<summary><strong>Claude Desktop</strong> (localhost requires mcp-remote bridge)</summary>\n\nThe \"Add custom connector\" dialog only accepts `https` URLs. With an `https` PUBLIC_URL, add it directly in the connector dialog; for a localhost server, register it in `claude_desktop_config.json` through the [mcp-remote](https://github.com/geelen/mcp-remote) stdio bridge instead:\n\n```json\n{\n  \"mcpServers\": {\n    \"vault-cortex\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"mcp-remote\",\n        \"http://localhost:8000/mcp\",\n        \"--header\",\n        \"Authorization: Bearer <your MCP_AUTH_TOKEN>\"\n      ]\n    }\n  }\n}\n```\n\n</details>\n\n**claude.ai (web and mobile)** connects to the remote setup only — its connectors are fetched server-side and can never reach localhost.\n\n> \"Remote MCP server\" refers to the connection type (HTTP) — in the local setup the server still runs entirely on your machine.\n\nSee [Authentication](#authentication) for both methods and token lifetimes.\n\n## How It Works\n\nEverything runs in one Docker container, working directly with the `.md` files on disk:\n\n- **Your vault stays the source of truth** — the server reads and writes the same plain Markdown files your Obsidian apps do.\n- **Search is derived data** — a file watcher keeps the index (keywords + vectors) current as notes change, and it can be rebuilt from your notes at any time.\n- **The remote image adds a sync loop** — a bundled Obsidian Sync service keeps the container's vault current with every device: edit a note on your phone and it's searchable moments later; an agent writes a note and it shows up in Obsidian.\n\n```mermaid\ngraph LR\n    subgraph container [\"One Docker container\"]\n        Sync[\"sync service<br/>(remote image)\"]\n        Vault[(\"/vault<br/>.md files — source of truth\")]\n        Index[(\"search index<br/>keywords + vectors\")]\n        Server[\"MCP server\"]\n        Sync <-->|read/write| Vault\n        Vault -->|file watcher| Index\n        Server <-->|read/write| Vault\n        Server -->|query| Index\n    end\n    Obsidian[\"Your Obsidian apps<br/>(phone, laptop)\"] <-->|Obsidian Sync| Sync\n    Client[\"Any MCP client<br/>(Claude, Cursor, claude.ai)\"] -->|OAuth 2.1 / Bearer| Server\n```\n\nSee [ARCHITECTURE.md](./ARCHITECTURE.md) for the full design, auth flow diagrams, and component breakdown.\n\n## Hybrid Search\n\nKeyword search alone fails when your vocabulary doesn't match the vault's — \"aspirations\" won't find a note about \"targets\", \"coworkers\" won't surface your \"references\" file. In testing against a real vault, 30% of natural-language queries returned zero or tangential results with keywords alone. Hybrid search eliminated those misses — vectors bridge the vocabulary gap, and the reranker rescues intent-heavy queri\n\n…",
+  "status": "curated"
+}

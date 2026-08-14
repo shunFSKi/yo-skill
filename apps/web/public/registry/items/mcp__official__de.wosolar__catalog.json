@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/de.wosolar/catalog",
+  "type": "mcp",
+  "name": "wosolar.de Preisvergleich",
+  "description": "Deutscher Preisvergleich für Solaranlagen & Balkonkraftwerke – Bestpreis-Suche (read-only).",
+  "author": "de.wosolar",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://wosolar.de/api/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://wosolar.de/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-06T07:02:49.789933Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

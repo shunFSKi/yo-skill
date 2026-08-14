@@ -1,0 +1,78 @@
+{
+  "id": "mcp:official/io.github.NtrpyDev/proton-workflow-connector",
+  "type": "mcp",
+  "name": "proton-workflow-connector",
+  "description": "Unofficial self-hosted MCP connector for Proton Mail Bridge and SimpleLogin.",
+  "author": "io.github.NtrpyDev",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/NtrpyDev/proton-workflow-connector",
+    "repo": "NtrpyDev/proton-workflow-connector"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "proton-workflow-connector"
+    ],
+    "env": [
+      {
+        "name": "PROTON_BRIDGE_USERNAME",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "PROTON_BRIDGE_PASSWORD",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "PROTON_BRIDGE_EMAIL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "SIMPLELOGIN_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-02T00:14:15.904365Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

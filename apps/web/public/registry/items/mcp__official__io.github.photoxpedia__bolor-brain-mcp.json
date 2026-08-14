@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.photoxpedia/bolor-brain-mcp",
+  "type": "mcp",
+  "name": "bolor-brain-mcp",
+  "description": "Cognitive architecture MCP server with memory, learning, and contextual understanding",
+  "author": "io.github.photoxpedia",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/photoxpedia/bolor-brain-mcp.git",
+    "repo": "photoxpedia/bolor-brain-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "bolor-brain-mcp"
+    ],
+    "env": [
+      {
+        "name": "BRAIN_USE_SQLITE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BRAIN_LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-11-26T01:01:09.811479Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

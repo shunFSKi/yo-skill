@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.Fauxetine/t1-t2-protocol",
+  "type": "mcp",
+  "name": "T1/T2 Protocol",
+  "description": "Caller-side T1/T2 heterogeneous validation MCP server. Stdlib-only Python.",
+  "author": "io.github.Fauxetine",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Fauxetine/t1-t2-protocol",
+    "repo": "Fauxetine/t1-t2-protocol"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "t1-t2-protocol"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-16T07:06:44.612722Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

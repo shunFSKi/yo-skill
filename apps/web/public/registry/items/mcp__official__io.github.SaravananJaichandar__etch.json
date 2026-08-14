@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.SaravananJaichandar/etch",
+  "type": "mcp",
+  "name": "etch",
+  "description": "Etch is a signed audit chain for AI agent decisions, offline-verifiable against pinned public keys.",
+  "author": "io.github.SaravananJaichandar",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/SaravananJaichandar/etch-mcp",
+    "repo": "SaravananJaichandar/etch-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://etch.systems/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T06:00:35.548387Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# etch-mcp\n\n**Etch is a signed audit chain for AI agent decisions, offline-verifiable against pinned public keys.**\n\nThis repository is the MCP integration surface for [Etch](https://etch.systems), the hosted service. It carries only:\n\n- The MCP registry metadata (`server.json`, `glama.json`)\n- Per-client integration examples for Claude Code / Cursor / Continue / Cline / Codex\n- Documentation for attaching an MCP-compliant client to Etch\n\nThe hosted Etch service source is proprietary and lives in a separate repository. Nothing in this repository is required to be inspected or modified in order to use Etch.\n\n## Try in 30 seconds, no signup\n\n```\ncurl -X POST https://etch.systems/v1/your-project\n```\n\nThe response returns a bearer token, an MCP endpoint URL, and an anonymous project id. Point any MCP-compliant client at `https://etch.systems/mcp` with the token. Anonymous projects carry 500 signed events over 14 days; convert to a persistent project any time to keep the chain forever.\n\nFull walk-through: [etch.systems/docs/quickstart](https://etch.systems/docs/quickstart).\n\n## Per-client config\n\n### Claude Code\n\n`~/.claude/settings.json`:\n\n```json\n{\n  \"mcpServers\": {\n    \"etch\": {\n      \"url\": \"https://etch.systems/mcp\",\n      \"headers\": {\n        \"Authorization\": \"Bearer wm_YOUR_ANON_TOKEN\"\n      }\n    }\n  }\n}\n```\n\n### Cursor\n\n`~/.cursor/mcp.json` (or `.cursor/mcp.json` at the project root):\n\n```json\n{\n  \"mcpServers\": {\n    \"etch\": {\n      \"url\": \"https://etch.systems/mcp\",\n      \"headers\": {\n        \"Authorization\": \"Bearer wm_YOUR_ANON_TOKEN\"\n      }\n    }\n  }\n}\n```\n\n### Continue\n\n`~/.continue/config.yaml`:\n\n```yaml\nmcpServers:\n  - name: etch\n    url: https://etch.systems/mcp\n    headers:\n      Authorization: Bearer wm_YOUR_ANON_TOKEN\n```\n\n### Cline (VS Code)\n\n`~/.config/Cline/User/globalStorage/saoudrizwan.claude-dev/settings/cline_mcp_settings.json`:\n\n```json\n{\n  \"mcpServers\": {\n    \"etch\": {\n      \"url\": \"https://etch.systems/mcp\",\n      \"headers\": {\n        \"Authorization\": \"Bearer wm_YOUR_ANON_TOKEN\"\n      }\n    }\n  }\n}\n```\n\n### Codex CLI\n\n`~/.codex/config.toml`:\n\n```toml\n[mcp_servers.etch]\nurl = \"https://etch.systems/mcp\"\nheaders = { Authorization = \"Bearer wm_YOUR_ANON_TOKEN\" }\n```\n\nPer-client documentation with current config file locations is kept up-to-date at [etch.systems/docs/mcp-clients](https://etch.systems/docs/mcp-clients).\n\n## Verify\n\nEvery event Etch signs is verifiable offline against pinned public keys with the OSS reference verifier. Auditors pin fingerprints once at pilot onboarding; every past epoch is verifiable indefinitely without contacting Etch.\n\n- Reference verifier posture and benchmark numbers: [etch.systems](https://etch.systems)\n- Framework mapping (SR 11-7, EU AI Act Article 12, ISO 42001, NIST AI RMF): [etch.systems/aarm](https://etch.systems/aarm)\n- FAQ: [etch.systems/docs/faq](https://etch.systems/docs/faq)\n\n## What Etch is NOT\n\n- Not a media-provenance envelope (that lane is C2PA and SPIF). Etch signs decisions, not content. Comparison: [etch.systems/vs/c2pa](https://etch.systems/vs/c2pa).\n- Not a transparency log (that lane is Sigstore Rekor). Etch is a per-project chain that anchors epochs on Rekor. Comparison: [etch.systems/vs/sigstore-rekor](https://etch.systems/vs/sigstore-rekor).\n- Not a watermarking system. Etch records who reviewed an output and what they applied, not whether a specific model touched the text.\n\n## License\n\nThe metadata and documentation in this repository are MIT-licensed (see `LICENSE`). The hosted Etch service is Business Source License 1.1 with a hosted-service restriction; see [etch.systems/pricing](https://etch.systems/pricing) for terms.\n\n## Registry listings\n\nEtch is listed on:\n\n- [Official MCP Registry](https://registry.modelcontextprotocol.io) as `io.github.SaravananJaichandar/etch`\n- [Glama.ai MCP servers](https://glama.ai/mcp/servers) (auto-indexed from `glama.json` in this repo)\n- Submissions pending on mcp.so, Smithery, PulseMCP\n\nFor issues with the hosted service, contact via [etch.systems](https://etch.systems). For issues with the metadata or integration examples in this repository, open a GitHub issue here.\n",
+  "status": "curated"
+}

@@ -1,0 +1,89 @@
+{
+  "id": "mcp:official/io.github.wyre-technology/avanan-mcp",
+  "type": "mcp",
+  "name": "Avanan",
+  "description": "MCP server for Check Point Harmony Email & Collaboration (Avanan) email security.",
+  "author": "io.github.wyre-technology",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/wyre-technology/avanan-mcp",
+    "repo": "wyre-technology/avanan-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/wyre-technology/avanan-mcp:v2.2.2"
+    ],
+    "env": [
+      {
+        "name": "AVANAN_CLIENT_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "AVANAN_CLIENT_SECRET",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "AVANAN_API_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_TRANSPORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AUTH_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T00:27:35.123825Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.somosvelora/velora",
+  "type": "mcp",
+  "name": "velora",
+  "description": "Hosted Argentine commerce MCP: real AFIP invoicing, MercadoPago, logistics, catalog & WhatsApp.",
+  "author": "com.somosvelora",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/crossi-dev/velora-mcp",
+    "repo": "crossi-dev/velora-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://tools.somosvelora.com/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-14T04:27:24.398521Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

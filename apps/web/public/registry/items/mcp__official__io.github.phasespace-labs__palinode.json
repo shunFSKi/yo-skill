@@ -1,0 +1,83 @@
+{
+  "id": "mcp:official/io.github.phasespace-labs/palinode",
+  "type": "mcp",
+  "name": "Palinode",
+  "description": "Git-versioned markdown memory for AI agents: save, search, compact, lint, and audit.",
+  "author": "io.github.phasespace-labs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/phasespace-labs/palinode",
+    "repo": "phasespace-labs/palinode"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "palinode"
+    ],
+    "env": [
+      {
+        "name": "PALINODE_DIR",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "PALINODE_API_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PALINODE_API_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PALINODE_API_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PALINODE_API_TOKEN_FILE",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-11T04:00:06.588362Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

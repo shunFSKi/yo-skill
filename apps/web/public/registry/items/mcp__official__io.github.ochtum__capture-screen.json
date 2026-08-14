@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.ochtum/capture-screen",
+  "type": "mcp",
+  "name": "Capture Screen MCP",
+  "description": "Windows screen capture MCP server with display, region, and active-window capture tools.",
+  "author": "io.github.ochtum",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ochtum/CaptureScreenMCP",
+    "repo": "ochtum/CaptureScreenMCP"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "CaptureScreenMcp"
+    ],
+    "env": [
+      {
+        "name": "CAPTURE_SCREEN_DEFAULT_DISPLAY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CAPTURE_SCREEN_OUTPUT_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CAPTURE_SCREEN_HIDE_FOREGROUND_WINDOWS_TERMINAL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-17T14:29:44.286015Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

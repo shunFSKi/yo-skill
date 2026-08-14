@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.commandplusk/command-k",
+  "type": "mcp",
+  "name": "Command+K",
+  "description": "Manage a Command+K workspace: widgets, conversations, MCP connections, and usage analytics.",
+  "author": "com.commandplusk",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://commandplusk.com/api/public/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://commandplusk.com/api/public/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-18T17:30:12.316789Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

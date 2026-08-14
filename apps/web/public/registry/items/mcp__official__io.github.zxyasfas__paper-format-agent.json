@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.zxyasfas/paper-format-agent",
+  "type": "mcp",
+  "name": "paper-format-agent",
+  "description": "Local-first DOCX formatter for academic papers with a content-fingerprint integrity guard.",
+  "author": "io.github.zxyasfas",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/zxyasfas/paper_format_agent",
+    "repo": "zxyasfas/paper_format_agent"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "paper-format-agent"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-04T16:27:43.563326Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

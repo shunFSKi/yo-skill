@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.complianceautomator/public-mcp",
+  "type": "mcp",
+  "name": "ComplianceAutomator Public MCP",
+  "description": "Public read-only MCP for products, frameworks, guides, methodology, and blog metadata.",
+  "author": "com.complianceautomator",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://www.complianceautomator.com/api/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://www.complianceautomator.com/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-28T19:33:21.119352Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

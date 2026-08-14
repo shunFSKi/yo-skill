@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.Syronius/cryptair-mcp-server",
+  "type": "mcp",
+  "name": "cryptair-mcp-server",
+  "description": "Tamper-evident attestation tools for AI agents — on-chain receipts on Hedera Hashgraph mainnet.",
+  "author": "io.github.Syronius",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Syronius/cryptair-mcp-server",
+    "repo": "Syronius/cryptair-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@cryptair/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "CRYPTAIR_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "CRYPTAIR_EMAIL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CRYPTAIR_BASE_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-08T20:37:04.598384Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

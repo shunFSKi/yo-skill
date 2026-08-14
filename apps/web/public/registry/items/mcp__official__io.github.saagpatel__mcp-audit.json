@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.saagpatel/mcp-audit",
+  "type": "mcp",
+  "name": "mcp-audit",
+  "description": "Scan, enumerate, and risk-score every MCP server configured on your machine.",
+  "author": "io.github.saagpatel",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/saagpatel/MCPAudit",
+    "repo": "saagpatel/MCPAudit"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-audits"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-05T11:19:05.521787Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

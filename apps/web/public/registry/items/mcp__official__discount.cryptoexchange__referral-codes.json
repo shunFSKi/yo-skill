@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/discount.cryptoexchange/referral-codes",
+  "type": "mcp",
+  "name": "referral-codes",
+  "description": "Verified referral and discount codes for crypto exchanges, wallets and trading tools. Read-only.",
+  "author": "discount.cryptoexchange",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://cryptoexchange.discount/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://cryptoexchange.discount/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-09T00:20:44.783791Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

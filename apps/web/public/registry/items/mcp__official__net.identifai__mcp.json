@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/net.identifai/mcp",
+  "type": "mcp",
+  "name": "identifAI MCP Server",
+  "description": "Detect AI-generated images, videos, and audio with identifAI's deepfake detection tools.",
+  "author": "net.identifai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.identifai.net",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.identifai.net",
+    "env": [
+      {
+        "name": "X-Api-Key",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-16T13:54:38.939747Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.a2al/a2ald",
+  "type": "mcp",
+  "name": "A2AL Daemon",
+  "description": "Makes any AI agent globally reachable and discoverable—no cloud, domain, or port forwarding needed.",
+  "author": "io.github.a2al",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/a2al/a2al",
+    "repo": "a2al/a2al"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "a2ald"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-03T19:01:46.995088Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

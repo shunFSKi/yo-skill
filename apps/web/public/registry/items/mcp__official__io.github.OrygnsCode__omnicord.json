@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.OrygnsCode/omnicord",
+  "type": "mcp",
+  "name": "omnicord",
+  "description": "Discord server management MCP for AI agents: chat, moderation, admin, and full server building.",
+  "author": "io.github.OrygnsCode",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/OrygnsCode/Omnicord",
+    "repo": "OrygnsCode/Omnicord"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@orygn/omnicord"
+    ],
+    "env": [
+      {
+        "name": "DISCORD_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "OMNICORD_GUILD",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T01:40:49.159971Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

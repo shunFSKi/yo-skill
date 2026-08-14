@@ -1,0 +1,78 @@
+{
+  "id": "mcp:official/io.github.mshegolev/harbor-registry-mcp",
+  "type": "mcp",
+  "name": "harbor-registry-mcp",
+  "description": "Harbor Registry MCP — projects, repos, artifacts, storage reports, cleanup (with dry-run).",
+  "author": "io.github.mshegolev",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mshegolev/harbor-registry-mcp",
+    "repo": "mshegolev/harbor-registry-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "harbor-registry-mcp"
+    ],
+    "env": [
+      {
+        "name": "HARBOR_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "HARBOR_USERNAME",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "HARBOR_PASSWORD",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "HARBOR_SSL_VERIFY",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-18T03:37:29.280424Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

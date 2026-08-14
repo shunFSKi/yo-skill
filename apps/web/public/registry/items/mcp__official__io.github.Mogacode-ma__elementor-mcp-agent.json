@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.Mogacode-ma/elementor-mcp-agent",
+  "type": "mcp",
+  "name": "elementor-mcp-agent",
+  "description": "Agency-grade MCP for WordPress Elementor — multi-site, safe edits, templates, versions.",
+  "author": "io.github.Mogacode-ma",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Mogacode-ma/elementor-mcp-agent",
+    "repo": "Mogacode-ma/elementor-mcp-agent"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "elementor-mcp-agent"
+    ],
+    "env": [
+      {
+        "name": "ELEMENTOR_MCP_SITES",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ELEMENTOR_MCP_CONFIG_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ELEMENTOR_MCP_DEFAULT_SITE_ID",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-07T08:24:15.668341Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

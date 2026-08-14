@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/ai.outlit/outlit",
+  "type": "mcp",
+  "name": "Outlit",
+  "description": "Outlit gives agents real-time understanding of customers to automate support and revenue workflows.",
+  "author": "ai.outlit",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/OutlitAI/outlit-sdk",
+    "repo": "OutlitAI/outlit-sdk"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.outlit.ai/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-25T06:51:17.539297Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

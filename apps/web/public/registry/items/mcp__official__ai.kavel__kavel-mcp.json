@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/ai.kavel/kavel-mcp",
+  "type": "mcp",
+  "name": "kavel-mcp",
+  "description": "Discover Kavel's AI photo/video generators, get tuned prompts, and open the right tool on kavel.ai.",
+  "author": "ai.kavel",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/hanshs474/kavel-mcp",
+    "repo": "hanshs474/kavel-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "kavel-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-15T08:07:56.211621Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

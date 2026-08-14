@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.vitas/evidra",
+  "type": "mcp",
+  "name": "Evidra",
+  "description": "Evidra — Flight recorder for AI infrastructure agents",
+  "author": "io.github.vitas",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers/io.github.vitas%2Fevidra",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/vitas/evidra-mcp:0.4.7"
+    ],
+    "env": [
+      {
+        "name": "EVIDRA_ENVIRONMENT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "EVIDRA_EVIDENCE_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "EVIDRA_SIGNING_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "EVIDRA_SIGNING_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "EVIDRA_SIGNING_KEY_PATH",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-11T14:14:54.466747Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

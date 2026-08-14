@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.jessesorsa/omnier",
+  "type": "mcp",
+  "name": "Omnier",
+  "description": "Turn signals from email, CRM, and meetings into a prioritized daily sales to-do list.",
+  "author": "io.github.jessesorsa",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/jessesorsa/omnier-mcp-server",
+    "repo": "jessesorsa/omnier-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.getomnier.com/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-27T15:52:13.589762Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

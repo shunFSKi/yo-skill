@@ -1,0 +1,78 @@
+{
+  "id": "mcp:official/io.github.olanokhin/openresearch-mcp",
+  "type": "mcp",
+  "name": "OpenResearch MCP",
+  "description": "Zero-auth research MCP: web, academic, finance, news, weather, macro, social, SEC. No keys.",
+  "author": "io.github.olanokhin",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/olanokhin/openresearch-mcp",
+    "repo": "olanokhin/openresearch-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "openresearch-mcp"
+    ],
+    "env": [
+      {
+        "name": "GITHUB_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "OPENALEX_EMAIL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "STACKEXCHANGE_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SEC_USER_AGENT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-08T21:23:52.557083Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

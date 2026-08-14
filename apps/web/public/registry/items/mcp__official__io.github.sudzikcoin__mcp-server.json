@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.sudzikcoin/mcp-server",
+  "type": "mcp",
+  "name": "mcp-server",
+  "description": "Pay-per-call x402 tools: crypto market pulse, wallet reputation, token check, endpoint search.",
+  "author": "io.github.sudzikcoin",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/sudzikcoin/suverse-mcp",
+    "repo": "sudzikcoin/suverse-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@suverselabs/mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-21T20:28:37.464248Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

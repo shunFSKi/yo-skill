@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.mcpqueen/registry",
+  "type": "mcp",
+  "name": "MCP Queen",
+  "description": "The evidence layer for MCP: live operational grades plus Trust Receipts for every registry server.",
+  "author": "com.mcpqueen",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mcpqueen/mcpqueen",
+    "repo": "mcpqueen/mcpqueen"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcpqueen.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-28T03:57:49.96267Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

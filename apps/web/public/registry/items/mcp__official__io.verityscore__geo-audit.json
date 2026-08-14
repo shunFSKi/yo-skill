@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.verityscore/geo-audit",
+  "type": "mcp",
+  "name": "Verity Score",
+  "description": "GEO audit for Shopify: AI readiness score, recommendations, and 15 vertical checklists.",
+  "author": "io.verityscore",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Milka974/verityscore-mcp",
+    "repo": "Milka974/verityscore-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@verityscore/mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-11T13:28:53.938149Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.europebeachmap/beachmap",
+  "type": "mcp",
+  "name": "Beachmap — Europe Beach Data",
+  "description": "Europe's 478 best beaches: sea temperature, sand, best months, swimming, surf. Free, CC BY 4.0.",
+  "author": "com.europebeachmap",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Flightmussy/beachmap-mcp",
+    "repo": "Flightmussy/beachmap-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://europebeachmap.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-12T11:48:30.513103Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

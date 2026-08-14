@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/com.unfoldip/patent-search",
+  "type": "mcp",
+  "name": "UnfoldIP Patent Search",
+  "description": "Search 14.3M US patents (2005+) and read full claims and descriptions, with cited source links.",
+  "author": "com.unfoldip",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://unfoldip.com/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://unfoldip.com/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-01T02:24:13.88457Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

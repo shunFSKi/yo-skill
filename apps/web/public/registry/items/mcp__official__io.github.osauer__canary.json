@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.osauer/canary",
+  "type": "mcp",
+  "name": "Canary MCP",
+  "description": "Canary MCP server for Interactive Brokers: daily brief, account and position data, risk checks.",
+  "author": "io.github.osauer",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/osauer/canary",
+    "repo": "osauer/canary"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/osauer/canary/releases/download/v3.0.1/canary-v3.0.1.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-09T14:05:37.907637Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

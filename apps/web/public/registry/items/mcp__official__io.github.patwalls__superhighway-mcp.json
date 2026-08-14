@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.patwalls/superhighway-mcp",
+  "type": "mcp",
+  "name": "superhighway-mcp",
+  "description": "Web search for AI agents — 5 tools: search, news, images, scrape, research. x402/USDC or API key.",
+  "author": "io.github.patwalls",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/patwalls/superhighway-mcp",
+    "repo": "patwalls/superhighway-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "superhighway-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-11T02:22:43.445664Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

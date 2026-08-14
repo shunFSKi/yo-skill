@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/ai.limitguard.api/trust-intelligence",
+  "type": "mcp",
+  "name": "LimitGuard Trust Intelligence",
+  "description": "Entity verification, sanctions screening, and trust scoring for AI agents.",
+  "author": "ai.limitguard.api",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/JWconsultancy1234/limitguard-ai",
+    "repo": "JWconsultancy1234/limitguard-ai"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.limitguard.ai/mcp",
+    "env": [
+      {
+        "name": "X-API-Key",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-24T13:42:25.987571Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.marketscore/marketscore-direct-mcp",
+  "type": "mcp",
+  "name": "marketscore-direct-mcp",
+  "description": "MCP for Yandex Direct: manage ad campaigns & analytics from Claude or ChatGPT",
+  "author": "io.github.marketscore",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/marketscore/marketscore-direct-mcp",
+    "repo": "marketscore/marketscore-direct-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://app.marketscore.ru/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-30T16:20:27.683467Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

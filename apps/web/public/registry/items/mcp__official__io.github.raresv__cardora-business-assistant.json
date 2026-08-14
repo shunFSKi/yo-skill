@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.raresv/cardora-business-assistant",
+  "type": "mcp",
+  "name": "cardora-business-assistant",
+  "description": "Cardora loyalty program analytics for business owners. Customer joins, stamps, rewards, and trends.",
+  "author": "io.github.raresv",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/raresv/neocards",
+    "repo": "raresv/neocards"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@cardora/business-assistant"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-17T17:39:50.584539Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

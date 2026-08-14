@@ -1,0 +1,113 @@
+{
+  "id": "mcp:official/io.github.tspicer/amazon_ads_mcp",
+  "type": "mcp",
+  "name": "amazon_ads_mcp",
+  "description": "Amazon Ads API MCP server for Amazon Advertising API",
+  "author": "io.github.tspicer",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/KuudoAI/amazon_ads_mcp",
+    "repo": "KuudoAI/amazon_ads_mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "amazon-ads-mcp"
+    ],
+    "env": [
+      {
+        "name": "AMAZON_ADS_AUTH_METHOD",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AMAZON_AD_API_CLIENT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AMAZON_AD_API_CLIENT_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "AMAZON_AD_API_REFRESH_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "AMAZON_AD_API_PROFILE_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OPENBRIDGE_REFRESH_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "OPENBRIDGE_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "OPENBRIDGE_REMOTE_IDENTITY_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AMAZON_ADS_REGION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AMAZON_AD_API_PACKAGES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AMAZON_ADS_DOWNLOAD_AUTH_TOKEN",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-03T00:47:01.281791Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/ai.fluxink/fci-mcp",
+  "type": "mcp",
+  "name": "fci-mcp",
+  "description": "Convert handwriting into text, LaTeX math, chemistry, or molecular structures.",
+  "author": "ai.fluxink",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.fluxink.ai/servers/f6b6758dba6c4c92b83407a113fdb80b/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.fluxink.ai/servers/f6b6758dba6c4c92b83407a113fdb80b/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-22T00:30:47.497862Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

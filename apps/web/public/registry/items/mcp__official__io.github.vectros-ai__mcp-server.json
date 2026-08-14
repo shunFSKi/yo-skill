@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.vectros-ai/mcp-server",
+  "type": "mcp",
+  "name": "mcp-server",
+  "description": "Typed record store + hybrid search over MCP: deterministic lookups + semantic memory, per-customer.",
+  "author": "io.github.vectros-ai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/vectros-ai/vectros-mcp-server",
+    "repo": "vectros-ai/vectros-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@vectros-ai/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "VECTROS_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "VECTROS_KEYRING_ALIAS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "VECTROS_API_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "VECTROS_MCP_TOOLS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T00:16:39.900498Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

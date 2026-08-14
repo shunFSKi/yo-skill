@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.sequentum/mcp",
+  "type": "mcp",
+  "name": "mcp",
+  "description": "Turn the web into structured, reliable, actionable enterprise data for AI Agents",
+  "author": "com.sequentum",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Sequentum/sequentum-mcp",
+    "repo": "Sequentum/sequentum-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.sequentum.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-11T16:56:41.617324Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

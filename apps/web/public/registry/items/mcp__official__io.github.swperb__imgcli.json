@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.swperb/imgcli",
+  "type": "mcp",
+  "name": "imgcli",
+  "description": "Convert, resize, crop, filter & composite images via the imgcli CLI (lightweight, no deps)",
+  "author": "io.github.swperb",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/swperb/imgcli",
+    "repo": "swperb/imgcli"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "imgcli-mcp"
+    ],
+    "env": [
+      {
+        "name": "IMGCLI_BIN",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-15T05:22:46.305512Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

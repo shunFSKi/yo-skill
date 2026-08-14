@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.putput-io-dev/putput-mcp",
+  "type": "mcp",
+  "name": "putput-mcp",
+  "description": "File uploads for AI agents. Upload, list, and manage files. No signup required.",
+  "author": "io.github.putput-io-dev",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/putput-io/mcp",
+    "repo": "putput-io/mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@putput/mcp"
+    ],
+    "env": [
+      {
+        "name": "PUTPUT_TOKEN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-27T19:57:37.574374Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

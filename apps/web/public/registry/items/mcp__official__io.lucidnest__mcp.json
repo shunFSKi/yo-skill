@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.lucidnest/mcp",
+  "type": "mcp",
+  "name": "mcp",
+  "description": "ADHD-friendly tasks, notes & projects for LucidNest - 18 tools, scoped tokens, Streamable HTTP.",
+  "author": "io.lucidnest",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://lucidnest.io/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://lucidnest.io/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-11T14:53:18.226066Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

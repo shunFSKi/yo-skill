@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.surendranb/google-analytics-mcp",
+  "type": "mcp",
+  "name": "google-analytics-mcp",
+  "description": "GA4 MCP server for AI agents: schema discovery, server-side aggregation, analysis-ready defaults.",
+  "author": "io.github.surendranb",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/surendranb/google-analytics-mcp",
+    "repo": "surendranb/google-analytics-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "google-analytics-mcp"
+    ],
+    "env": [
+      {
+        "name": "GOOGLE_APPLICATION_CREDENTIALS",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "GA4_PROPERTY_ID",
+        "required": true,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-27T04:07:23.187203Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

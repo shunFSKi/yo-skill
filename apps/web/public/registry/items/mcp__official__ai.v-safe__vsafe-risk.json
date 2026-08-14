@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/ai.v-safe/vsafe-risk",
+  "type": "mcp",
+  "name": "vsafe-risk",
+  "description": "KYB risk scores for Israeli companies: sanctions, insolvency, adverse media, cyber, registry.",
+  "author": "ai.v-safe",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.v-safe.ai/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.v-safe.ai/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-20T14:47:56.050866Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

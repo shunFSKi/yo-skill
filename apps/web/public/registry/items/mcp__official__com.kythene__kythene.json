@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.kythene/kythene",
+  "type": "mcp",
+  "name": "Kythene",
+  "description": "Your AI's work, reviewed by your team, remembered - shared artifacts with review, plus team memory.",
+  "author": "com.kythene",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/kythene/kythene",
+    "repo": "kythene/kythene"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://kythene.com/mcp/kythene"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T05:52:23.502789Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

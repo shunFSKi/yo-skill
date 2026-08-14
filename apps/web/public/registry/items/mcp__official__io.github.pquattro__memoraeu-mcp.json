@@ -1,0 +1,83 @@
+{
+  "id": "mcp:official/io.github.pquattro/memoraeu-mcp",
+  "type": "mcp",
+  "name": "MemoraEU",
+  "description": "Zero-knowledge persistent memory for Claude — encrypted, semantic search, EU hosted.",
+  "author": "io.github.pquattro",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/pquattro/memoraeu-memoraeu-mcp.git",
+    "repo": "pquattro/memoraeu-memoraeu-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "memoraeu-mcp"
+    ],
+    "env": [
+      {
+        "name": "MEMORAEU_API_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MEMORAEU_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "MEMORAEU_SECRET",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "MEMORAEU_SALT",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "MISTRAL_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-19T12:35:47.566328Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

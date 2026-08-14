@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.SimoneB79/memory-engine-mcp",
+  "type": "mcp",
+  "name": "Memory Engine MCP",
+  "description": "Local-first graph memory for AI assistants with SQLite, semantic search, and MCP tools.",
+  "author": "io.github.SimoneB79",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/SimoneB79/memory-engine-mcp",
+    "repo": "SimoneB79/memory-engine-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/simoneb79/memory-engine-mcp:1.5.3"
+    ],
+    "env": [
+      {
+        "name": "MEMORY_DB_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MARKDOWN_SOURCE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MEMORY_PORT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-17T07:50:59.860411Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

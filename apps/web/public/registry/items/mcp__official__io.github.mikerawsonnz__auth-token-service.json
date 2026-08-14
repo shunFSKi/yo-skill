@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.mikerawsonnz/auth-token-service",
+  "type": "mcp",
+  "name": "auth-token-service",
+  "description": "Hash passwords with bcrypt and issue/verify JWT session tokens over A2A + MCP.",
+  "author": "io.github.mikerawsonnz",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mikerawsonnz/gosce-agents",
+    "repo": "mikerawsonnz/gosce-agents"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://bcrypt-python-jose-d0e0d0.getvda.ai/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-02T08:21:35.758736Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

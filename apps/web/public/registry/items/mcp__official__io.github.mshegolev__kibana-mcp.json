@@ -1,0 +1,88 @@
+{
+  "id": "mcp:official/io.github.mshegolev/kibana-mcp",
+  "type": "mcp",
+  "name": "kibana-mcp",
+  "description": "Kibana/Elasticsearch MCP — log search, aggregations, index discovery, dashboards.",
+  "author": "io.github.mshegolev",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mshegolev/kibana-mcp",
+    "repo": "mshegolev/kibana-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "kibana-mcp"
+    ],
+    "env": [
+      {
+        "name": "KIBANA_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "ELASTICSEARCH_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "KIBANA_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "KIBANA_USERNAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "KIBANA_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "KIBANA_SSL_VERIFY",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-18T07:28:31.859506Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

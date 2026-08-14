@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.RodrigueDev13/obambu-cpanel-mcp",
+  "type": "mcp",
+  "name": "Obambu cPanel MCP",
+  "description": "MCP server exposing cPanel UAPI (domains, DNS, email, MySQL, files) as tools for AI assistants.",
+  "author": "io.github.RodrigueDev13",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/RodrigueDev13/obambu-cpanel-mcp",
+    "repo": "RodrigueDev13/obambu-cpanel-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "obambu-cpanel-mcp"
+    ],
+    "env": [
+      {
+        "name": "CPANEL_HOST",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "CPANEL_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CPANEL_USERNAME",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "CPANEL_API_TOKEN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-24T21:13:53.208709Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

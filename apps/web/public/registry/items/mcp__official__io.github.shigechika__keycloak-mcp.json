@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.shigechika/keycloak-mcp",
+  "type": "mcp",
+  "name": "KeyCloak MCP",
+  "description": "MCP server for KeyCloak Admin REST API via Service Account",
+  "author": "io.github.shigechika",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/shigechika/keycloak-mcp",
+    "repo": "shigechika/keycloak-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "keycloak-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-11T04:56:54.755652Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

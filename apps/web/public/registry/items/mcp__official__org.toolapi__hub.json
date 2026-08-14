@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/org.toolapi/hub",
+  "type": "mcp",
+  "name": "ToolAPI",
+  "description": "Free public MCP for AI agents — 193 tools, 44 workflows. No API key.",
+  "author": "org.toolapi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/baohuiwb/toolapi",
+    "repo": "baohuiwb/toolapi"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://toolapi.org/sse"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-10T00:06:55.704774Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

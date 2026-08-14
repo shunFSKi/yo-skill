@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.Defenter-AI/defenter-proxy",
+  "type": "mcp",
+  "name": "Defenter Proxy",
+  "description": "Real-time semantic security for AI coding agents and MCP tools",
+  "author": "io.github.Defenter-AI",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Defenter-AI/defenter-proxy",
+    "repo": "Defenter-AI/defenter-proxy"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "defenter-proxy"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-11-18T22:29:24.737606Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

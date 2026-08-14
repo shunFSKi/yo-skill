@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.CryptoAPIs-io/mcp-x402-pay",
+  "type": "mcp",
+  "name": "mcp-x402-pay",
+  "description": "MCP server that pays x402-gated HTTP endpoints — fetch, and on a 402 authorize, sign, retry",
+  "author": "io.github.CryptoAPIs-io",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/CryptoAPIs-io/cryptoapis-mcp-x402-pay",
+    "repo": "CryptoAPIs-io/cryptoapis-mcp-x402-pay"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@cryptoapis-io/mcp-x402-pay"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-30T06:56:22.207675Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

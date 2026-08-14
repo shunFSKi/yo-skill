@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.CU2CU2/aire-channel-bridge",
+  "type": "mcp",
+  "name": "AIRE Channel Bridge",
+  "description": "AI-powered credit union discovery MCP server. Find rates, check eligibility, and open accounts.",
+  "author": "io.github.CU2CU2",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/credit-union-2-0-llc/aire-channel-bridge",
+    "repo": "credit-union-2-0-llc/aire-channel-bridge"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://aire-mcp-server.yellowwater-f52799b2.eastus2.azurecontainerapps.io/sse",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-23T21:51:27.204862Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

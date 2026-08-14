@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.gripforgeai/mcp",
+  "type": "mcp",
+  "name": "mcp",
+  "description": "Attach weapons and props to rigged 3D characters: hand-bone detection, fist close, engine binds.",
+  "author": "io.github.gripforgeai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/gripforgeai/mcp",
+    "repo": "gripforgeai/mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@gripforgeai/mcp"
+    ],
+    "env": [
+      {
+        "name": "GRIPFORGE_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T15:34:02.847319Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

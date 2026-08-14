@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.qxchuckle/qcqx-project-manage-mcp",
+  "type": "mcp",
+  "name": "qcqx-project-manage-mcp",
+  "description": "qcqx-project-manage MCP Server — 将项目管理能力暴露给 AI Agent（Cursor、Claude Desktop 等）",
+  "author": "io.github.qxchuckle",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/qxchuckle/qcqx-project-manage",
+    "repo": "qxchuckle/qcqx-project-manage"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@qcqx/project-manage-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-08T11:30:24.371823Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

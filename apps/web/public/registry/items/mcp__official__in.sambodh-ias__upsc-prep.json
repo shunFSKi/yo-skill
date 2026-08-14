@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/in.sambodh-ias/upsc-prep",
+  "type": "mcp",
+  "name": "Sambodh IAS",
+  "description": "UPSC prep: interactive quizzes, previous-year questions, daily current affairs, cited study search",
+  "author": "in.sambodh-ias",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://api.sambodh-ias.in/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.sambodh-ias.in/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-05T12:01:30.655848Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

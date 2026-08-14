@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/ai.satoshidata/wallet-intelligence",
+  "type": "mcp",
+  "name": "satoshidata — Bitcoin entity intelligence",
+  "description": "Bitcoin entity and risk-exposure evidence for AI agents; keyless MCP, no risk_check score/verdict.",
+  "author": "ai.satoshidata",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://satoshidata.ai/mcp/v1/",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://satoshidata.ai/mcp/v1/",
+    "env": [
+      {
+        "name": "X-WR-API-Key",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-27T22:29:47.985759Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.juanisidoro/securecode",
+  "type": "mcp",
+  "name": "securecode",
+  "description": "Secrets vault for Claude Code with audit logs, access rules, and AES-256 encryption.",
+  "author": "io.github.juanisidoro",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/juanisidoro/securecode-mcp",
+    "repo": "juanisidoro/securecode-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@securecode/mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-17T18:25:35.7571Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

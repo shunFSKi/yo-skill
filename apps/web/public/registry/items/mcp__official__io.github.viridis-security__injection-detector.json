@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.viridis-security/injection-detector",
+  "type": "mcp",
+  "name": "injection-detector",
+  "description": "Formally-verified injection/exfiltration detector for AI agents (MCP-02).",
+  "author": "io.github.viridis-security",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/viridis-security/mcp-services-sdk",
+    "repo": "viridis-security/mcp-services-sdk"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.viridis-security.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-30T14:39:37.937428Z"
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

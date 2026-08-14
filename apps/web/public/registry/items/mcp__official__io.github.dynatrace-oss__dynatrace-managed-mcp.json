@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.dynatrace-oss/dynatrace-managed-mcp",
+  "type": "mcp",
+  "name": "dynatrace-managed-mcp",
+  "description": "MCP server for Dynatrace Managed to access logs, events, and metrics.",
+  "author": "io.github.dynatrace-oss",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dynatrace-oss/dynatrace-managed-mcp",
+    "repo": "dynatrace-oss/dynatrace-managed-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@dynatrace-oss/dynatrace-managed-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "DT_MCP_RATE_LIMIT_MAX_CALLS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DT_MCP_RATE_LIMIT_WINDOW_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DT_ENVIRONMENT_CONFIGS",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "LOG_LEVEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DT_MCP_DISABLE_TELEMETRY",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-04T14:27:54.324774Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.spruikco/send16-mcp",
+  "type": "mcp",
+  "name": "send16-mcp",
+  "description": "Email for AI agents: send mail, manage contacts, automations & webhooks. Zero-DNS first send.",
+  "author": "io.github.spruikco",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/spruikco/send16-mcp",
+    "repo": "spruikco/send16-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "send16-mcp"
+    ],
+    "env": [
+      {
+        "name": "SEND16_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-12T09:48:16.525896Z"
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

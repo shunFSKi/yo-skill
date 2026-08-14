@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.stayce/icd-mcp",
+  "type": "mcp",
+  "name": "icd-mcp",
+  "description": "WHO ICD-10/ICD-11 diagnosis codes. Lookup, search, chapters via official WHO API.",
+  "author": "io.github.stayce",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/stayce/icd-mcp-cloudflare",
+    "repo": "stayce/icd-mcp-cloudflare"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://icd-mcp-server.staycek.workers.dev/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-01-21T00:18:48.932441Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

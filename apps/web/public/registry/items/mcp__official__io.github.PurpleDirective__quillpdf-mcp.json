@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.PurpleDirective/quillpdf-mcp",
+  "type": "mcp",
+  "name": "quillpdf-mcp",
+  "description": "Local-first PDF tools (merge, split, rotate, watermark, Bates, metadata) as MCP server + CLI.",
+  "author": "io.github.PurpleDirective",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/PurpleDirective/quillpdf-mcp",
+    "repo": "PurpleDirective/quillpdf-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "quillpdf-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-14T17:32:46.182106Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

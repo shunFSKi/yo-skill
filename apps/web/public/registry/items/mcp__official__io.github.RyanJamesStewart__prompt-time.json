@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.RyanJamesStewart/prompt-time",
+  "type": "mcp",
+  "name": "prompt-time",
+  "description": "Claude Desktop reminders for Windows. Survives MSIX boundary; persists across restarts. Zero deps.",
+  "author": "io.github.RyanJamesStewart",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/RyanJamesStewart/prompt-time",
+    "repo": "RyanJamesStewart/prompt-time"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/RyanJamesStewart/prompt-time/releases/download/v2.2.6/prompt-time-v2.2.6.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-07T23:01:08.42555Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

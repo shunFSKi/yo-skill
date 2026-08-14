@@ -1,0 +1,89 @@
+{
+  "id": "mcp:official/io.github.tixuz/openemis-pro",
+  "type": "mcp",
+  "name": "openemis-pro",
+  "description": "Read + write MCP server for OpenEMIS — free open-source school management system. 675 resources.",
+  "author": "io.github.tixuz",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/tixuz/openemis-mcp-pro",
+    "repo": "tixuz/openemis-mcp-pro"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "openemis-mcp-pro"
+    ],
+    "env": [
+      {
+        "name": "OPENEMIS_BASE_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "OPENEMIS_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "OPENEMIS_USERNAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OPENEMIS_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "OPENEMIS_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OPENEMIS_CORE_IN_OPERATOR",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-15T18:36:32.101541Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

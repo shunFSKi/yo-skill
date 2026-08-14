@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.0ics-srls/ui-ticket-mcp",
+  "type": "mcp",
+  "name": "ui-ticket-mcp",
+  "description": "Human-to-AI code review bridge. Review UI in the browser, AI agents fix code via MCP.",
+  "author": "io.github.0ics-srls",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/0ics-srls/ui-ticket-mcp_public",
+    "repo": "0ics-srls/ui-ticket-mcp_public"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "ui-ticket-mcp"
+    ],
+    "env": [
+      {
+        "name": "PROJECT_ROOT",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "REVIEW_PORT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-30T07:25:52.053623Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

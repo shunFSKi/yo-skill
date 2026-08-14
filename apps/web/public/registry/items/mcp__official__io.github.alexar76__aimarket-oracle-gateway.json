@@ -1,0 +1,78 @@
+{
+  "id": "mcp:official/io.github.alexar76/aimarket-oracle-gateway",
+  "type": "mcp",
+  "name": "AIMarket Oracle Gateway",
+  "description": "Stdio MCP: 17 verifiable AIMarket oracles, 35 pay-per-call tools for AI agents.",
+  "author": "io.github.alexar76",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/alexar76/aimarket-oracle-gateway",
+    "repo": "alexar76/aimarket-oracle-gateway"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "aimarket-oracle-gateway"
+    ],
+    "env": [
+      {
+        "name": "AIMARKET_HUB_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AIMARKET_ORACLE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AIMARKET_MAX_PER_CALL_USD",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AIMARKET_MAX_SPEND_USD",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-07T17:39:25.06867Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

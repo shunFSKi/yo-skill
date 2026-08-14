@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/dev.urlsnap/urlsnap-mcp",
+  "type": "mcp",
+  "name": "urlsnap-mcp",
+  "description": "Screenshot, PDF, and markdown extraction from any URL via Claude Desktop and Claude Code.",
+  "author": "dev.urlsnap",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/urlsnapdev/urlsnap-mcp",
+    "repo": "urlsnapdev/urlsnap-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "urlsnap-mcp"
+    ],
+    "env": [
+      {
+        "name": "URLSNAP_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-13T17:12:22.126667Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

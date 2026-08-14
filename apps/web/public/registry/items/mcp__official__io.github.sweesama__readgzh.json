@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.sweesama/readgzh",
+  "type": "mcp",
+  "name": "ReadGZH",
+  "description": "Read WeChat public account articles via MCP. 99.89% anti-scraping success, 50-87% token compression.",
+  "author": "io.github.sweesama",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/sweesama/readgzh",
+    "repo": "sweesama/readgzh"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.readgzh.site/mcp-server",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-25T07:05:02.991277Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

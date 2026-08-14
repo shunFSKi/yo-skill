@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.mario-andreschak/mcp-audio-studio",
+  "type": "mcp",
+  "name": "MCP Audio Studio",
+  "description": "A digital audio workstation MCP App with sequencing, mixing, effects, automation, and rendering.",
+  "author": "io.github.mario-andreschak",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/flujo-app/mcp-audio-studio-mcpapp",
+    "repo": "flujo-app/mcp-audio-studio-mcpapp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-audio-studio"
+    ],
+    "env": [
+      {
+        "name": "MCP_AUDIO_STUDIO_DATA",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-07T00:04:39.113197Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

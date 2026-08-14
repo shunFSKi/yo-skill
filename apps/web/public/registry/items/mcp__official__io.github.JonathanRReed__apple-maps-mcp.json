@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.JonathanRReed/apple-maps-mcp",
+  "type": "mcp",
+  "name": "Apple Maps",
+  "description": "Search places, estimate routes, and build Apple Maps links on macOS.",
+  "author": "io.github.JonathanRReed",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/JonathanRReed/Apple-MCPs",
+    "repo": "JonathanRReed/Apple-MCPs"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "apple-maps-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-05T18:22:22.722666Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

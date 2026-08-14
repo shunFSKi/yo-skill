@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.mcp-dir/rdstation-mcp",
+  "type": "mcp",
+  "name": "RD Station",
+  "description": "RD Station Marketing, contacts/leads (get, upsert, funnel), conversion events and webhooks via the o",
+  "author": "io.github.mcp-dir",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mcp-dir/rdstation-mcp",
+    "repo": "mcp-dir/rdstation-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.mcp.ai/p_rdstation"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-10T18:11:53.985464Z"
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

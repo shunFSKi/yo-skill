@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.ZachLaik/legal-data-hunter",
+  "type": "mcp",
+  "name": "legal-data-hunter",
+  "description": "Search 18M+ legal documents worldwide — case law, legislation, and doctrine across 110+ countries.",
+  "author": "io.github.ZachLaik",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/worldwidelaw/legal-sources",
+    "repo": "worldwidelaw/legal-sources"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://legaldatahunter.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-30T22:06:56.601995Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

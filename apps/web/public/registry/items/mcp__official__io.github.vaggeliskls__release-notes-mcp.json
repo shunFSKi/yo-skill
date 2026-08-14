@@ -1,0 +1,83 @@
+{
+  "id": "mcp:official/io.github.vaggeliskls/release-notes-mcp",
+  "type": "mcp",
+  "name": "release-notes-mcp",
+  "description": "A small, generic MCP server for combining GitHub/GitLab/Gitea releases into product release notes",
+  "author": "io.github.vaggeliskls",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/vaggeliskls/release-notes-mcp",
+    "repo": "vaggeliskls/release-notes-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "release-notes-mcp"
+    ],
+    "env": [
+      {
+        "name": "RELEASE_MCP_CONFIG_JSON",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RELEASE_MCP_CONFIG",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PROVIDER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BASE_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-30T12:25:59.326709Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

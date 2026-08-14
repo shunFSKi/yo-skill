@@ -1,0 +1,119 @@
+{
+  "id": "mcp:official/io.github.davidmosiah/google-ads-mcp",
+  "type": "mcp",
+  "name": "google-ads-mcp",
+  "description": "Unofficial Google Ads MCP for campaigns, keywords, budgets, and gated mutations.",
+  "author": "io.github.davidmosiah",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/davidmosiah/google-ads-mcp-unofficial",
+    "repo": "davidmosiah/google-ads-mcp-unofficial"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "google-ads-mcp-unofficial"
+    ],
+    "env": [
+      {
+        "name": "GOOGLE_ADS_DEVELOPER_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GOOGLE_ADS_CLIENT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GOOGLE_ADS_CLIENT_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GOOGLE_ADS_LOGIN_CUSTOMER_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GOOGLE_ADS_REDIRECT_URI",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GOOGLE_ADS_TOKEN_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GOOGLE_ADS_PRIVACY_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GOOGLE_ADS_ALLOW_MUTATIONS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GOOGLE_ADS_CACHE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GOOGLE_ADS_CACHE_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GOOGLE_ADS_CACHE_TTL_SECONDS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GOOGLE_ADS_NO_RETRY",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-03T12:02:45.900412Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

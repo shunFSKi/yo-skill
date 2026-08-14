@@ -1,0 +1,114 @@
+{
+  "id": "mcp:official/io.github.Role1776/mcp-retrieval",
+  "type": "mcp",
+  "name": "MCP Retrieval",
+  "description": "Web search, image search, and page scraping as Markdown. No API keys required.",
+  "author": "io.github.Role1776",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Role1776/mcp-retrieval",
+    "repo": "Role1776/mcp-retrieval"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/role1776/mcp-retrieval:0.1.2"
+    ],
+    "env": [
+      {
+        "name": "MAX_RESULTS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MAX_IMAGES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DEFAULT_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MAX_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MAX_QUERIES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LOG_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PROXY_SCHEME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PROXY_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PROXY_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PROXY_LOGIN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PROXY_PASSWORD",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T01:27:16.085629Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

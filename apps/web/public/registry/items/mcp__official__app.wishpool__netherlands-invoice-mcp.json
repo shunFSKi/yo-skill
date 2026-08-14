@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/app.wishpool/netherlands-invoice-mcp",
+  "type": "mcp",
+  "name": "Netherlands Invoices (Peppol BIS 3.0 via Storecove)",
+  "description": "Netherlands Peppol BIS 3.0 e-invoices for AI agents: send, check recipient, get delivery proof.",
+  "author": "app.wishpool",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/junter1989k-ai/netherlands-invoice-mcp",
+    "repo": "junter1989k-ai/netherlands-invoice-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://inv-nl.wishpool.app/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-10T08:58:00.1182Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

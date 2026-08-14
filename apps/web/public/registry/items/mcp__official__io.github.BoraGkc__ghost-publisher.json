@@ -1,0 +1,104 @@
+{
+  "id": "mcp:official/io.github.BoraGkc/ghost-publisher",
+  "type": "mcp",
+  "name": "ghost-publisher",
+  "description": "Local-first MCP server for safe Ghost posts, Pages, scheduling, images, and publishing.",
+  "author": "io.github.BoraGkc",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/BoraGkc/ghost-publisher-mcp",
+    "repo": "BoraGkc/ghost-publisher-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghost-publisher-mcp"
+    ],
+    "env": [
+      {
+        "name": "GHOST_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "GHOST_ADMIN_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "GHOST_API_VERSION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GHOST_PERMISSION_PROFILE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GHOST_READ_ONLY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GHOST_UPLOAD_ROOTS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GHOST_DEPLOY_HOOK_URL",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GHOST_PUBLIC_POST_URL_TEMPLATE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GHOST_PUBLIC_PAGE_URL_TEMPLATE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-02T13:35:23.122647Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

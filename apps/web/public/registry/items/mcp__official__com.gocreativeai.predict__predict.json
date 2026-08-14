@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/com.gocreativeai.predict/predict",
+  "type": "mcp",
+  "name": "Predict — Prediction Market Data for AI Agents",
+  "description": "Live prediction markets: Polymarket + Kalshi prices, odds, order books. Pay-per-call USDC, no key.",
+  "author": "com.gocreativeai.predict",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://predict.gocreativeai.com/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://predict.gocreativeai.com/mcp",
+    "env": [
+      {
+        "name": "X-Wallet-Key",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-25T02:05:00.899491Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.archradhq/deterministic",
+  "type": "mcp",
+  "name": "deterministic",
+  "description": "Deterministic IR/IR-LINT validation, policy packs, drift vs exports (archrad). Apache-2.0.",
+  "author": "io.github.archradhq",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/archradhq/arch-deterministic",
+    "repo": "archradhq/arch-deterministic"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@archrad/deterministic"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-29T23:07:38.441225Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

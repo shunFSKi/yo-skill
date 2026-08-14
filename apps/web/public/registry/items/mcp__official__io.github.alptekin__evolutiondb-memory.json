@@ -1,0 +1,93 @@
+{
+  "id": "mcp:official/io.github.alptekin/evolutiondb-memory",
+  "type": "mcp",
+  "name": "EvolutionDB Long-Term Memory",
+  "description": "Persistent long-term memory for Claude Desktop / Claude Code, backed by EvolutionDB.",
+  "author": "io.github.alptekin",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/alptekin/evolutiondb",
+    "repo": "alptekin/evolutiondb"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-server-evolutiondb"
+    ],
+    "env": [
+      {
+        "name": "EVOSQL_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "EVOSQL_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "EVOSQL_USER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "EVOSQL_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "EVOSQL_DATABASE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_USER_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "MCP_STORE_PREFIX",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-22T12:50:38.544986Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

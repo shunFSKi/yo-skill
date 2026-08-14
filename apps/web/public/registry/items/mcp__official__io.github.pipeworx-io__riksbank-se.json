@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.pipeworx-io/riksbank-se",
+  "type": "mcp",
+  "name": "Riksbank Se",
+  "description": "Sveriges Riksbank (Sweden's central bank) SWEA v1 MCP. Keyless.",
+  "author": "io.github.pipeworx-io",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/pipeworx-io/mcp-riksbank-se",
+    "repo": "pipeworx-io/mcp-riksbank-se"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://gateway.pipeworx.io/riksbank-se/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-01T23:10:16.025553Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

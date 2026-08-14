@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.oinam/ovellum",
+  "type": "mcp",
+  "name": "Ovellum",
+  "description": "Auto, manual, or hybrid docs that never fall out of sync.",
+  "author": "io.github.oinam",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/oinam/ovellum",
+    "repo": "oinam/ovellum"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ovellum"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-13T03:26:08.598903Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

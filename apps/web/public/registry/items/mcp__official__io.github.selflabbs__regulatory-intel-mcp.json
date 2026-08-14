@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.selflabbs/regulatory-intel-mcp",
+  "type": "mcp",
+  "name": "Regulatory Intel MCP",
+  "description": "US Federal Register for AI agents: rules, notices, executive orders, agency lookup. No keys.",
+  "author": "io.github.selflabbs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/selflabbs/regulatory-intel-mcp",
+    "repo": "selflabbs/regulatory-intel-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://regulatory.selflabbs.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-19T11:59:19.130837Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

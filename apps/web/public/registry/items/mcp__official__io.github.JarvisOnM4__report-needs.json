@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.JarvisOnM4/report-needs",
+  "type": "mcp",
+  "name": "Report Needs MCP Server",
+  "description": "MCP server for AI agents to report infrastructure needs they encounter during task execution",
+  "author": "io.github.JarvisOnM4",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/JarvisOnM4/report-needs",
+    "repo": "JarvisOnM4/report-needs"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "report-needs"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-14T11:44:39.964528Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

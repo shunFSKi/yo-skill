@@ -1,0 +1,109 @@
+{
+  "id": "mcp:official/io.github.flowing-abyss/obsidian-hybrid-search",
+  "type": "mcp",
+  "name": "Obsidian Hybrid Search",
+  "description": "Search Obsidian vaults with hybrid full-text, fuzzy, semantic, and graph retrieval.",
+  "author": "io.github.flowing-abyss",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/flowing-abyss/obsidian-hybrid-search",
+    "repo": "flowing-abyss/obsidian-hybrid-search"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "obsidian-hybrid-search"
+    ],
+    "env": [
+      {
+        "name": "OBSIDIAN_VAULT_PATH",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "OBSIDIAN_PREFIX",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OBSIDIAN_IGNORE_PATTERNS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OBSIDIAN_RESPECT_GITIGNORE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OBSIDIAN_INCLUDE_PATTERNS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OPENAI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "OPENAI_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OPENAI_EMBEDDING_MODEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LOCAL_EMBEDDING_MODEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RERANKER_MODEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T04:06:00.713828Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# Obsidian Hybrid Search\n\n[![npm version](https://img.shields.io/npm/v/obsidian-hybrid-search)](https://www.npmjs.com/package/obsidian-hybrid-search)\n[![Tests](https://github.com/flowing-abyss/obsidian-hybrid-search/actions/workflows/ci.yml/badge.svg)](https://github.com/flowing-abyss/obsidian-hybrid-search/actions)\n[![Total downloads](https://badgen.net/npm/dt/obsidian-hybrid-search)](https://www.npmjs.com/package/obsidian-hybrid-search)\n\n<p align=\"center\">\n  <img src=\"assets/banner.png\" alt=\"Obsidian Hybrid Search explains hybrid retrieval from Obsidian notes\" />\n</p>\n\nYour Obsidian vault already contains your best thinking. Obsidian Hybrid Search makes that thinking easier to find, reuse, and bring into AI-assisted work.\n\nIt gives your vault one retrieval engine and three practical ways to use it. The native [Obsidian plugin][obsidian-plugin] gives you fast search, previews, similar notes, link discovery, and graph views while you write. The MCP server lets AI agents search and read your notes as tool calls. The CLI gives power users the same engine for indexing, filtering, reranking, reading, and scripting.\n\nThe search understands how real vaults are built. It combines semantic search, BM25 full text, fuzzy title and alias matching, tags, folders, frontmatter, wikilinks, backlinks, and similar-note lookup. You can search by idea, phrase, title, relationship, or metadata without remembering the exact words you wrote.\n\nThat turns Obsidian into a stronger personal knowledge system and a better starting point for AI work. Agents can begin from your own notes, pull cited context from source files, follow related material, and work with knowledge you already trust. OHS runs locally by default with SQLite, FTS5, sqlite-vec, RRF ranking, and optional OpenAI-compatible embedding APIs.\n\n## Search quality\n\nEvaluated on the [Obsidian Help vault](eval/README.md) (171 notes, 58 queries, local model):\n\n|                | **OHS** (this project) | [qmd](https://github.com/tobi/qmd) |\n| -------------- | :--------------------: | :--------------------------------: |\n| nDCG@5         |       **0.733**        |               0.659                |\n| MRR            |       **0.788**        |               0.665                |\n| Hit@1          |       **0.724**        |               0.500                |\n| Avg query time |      **571 ms** ¹      |              754 ms ²              |\n| Model download |      **~117 MB**       |              ~2.2 GB               |\n\n¹ CPU (Apple Silicon), hybrid mode, no rerank. ² GPU (Apple Silicon Metal), LLM query expansion + reranking.\n\nOHS uses `Xenova/multilingual-e5-small`. [How to reproduce →](eval/COMPARISON.md) · [Full benchmark →](eval/README.md)\n\n### Real knowledge-vault benchmark\n\nOHS is also evaluated on Andy Matuschak’s public evergreen notes, converted into an Obsidian vault with title-based note filenames, source URLs in frontmatter, local attachments, and `5,000+` internal note links across `1,357` notes.\n\nThe curated golden set includes `78` hand-judged queries across known-item lookup, paraphrases, quote fragments, ambiguous topics, citation lookup, and multi-note evidence.\n\nUsing the default local embedding model, OHS performs strongly on this dense note network.\n\n| Metric    | Value     |\n| --------- | --------- |\n| nDCG@5    | **0.722** |\n| nDCG@10   | 0.753     |\n| MRR       | 0.874     |\n| Hit@1     | 0.795     |\n| Hit@5     | 0.974     |\n| Recall@10 | 0.972     |\n| AllRel@10 | 0.949     |\n\nThe benchmark exercises retrieval over a highly connected real-world knowledge vault, including queries that do not simply repeat note titles.\n\n[Result JSON](eval/results/evergreen-notes-no-rerank.json) · [Reproduce and interpret →](fixtures/evergreen-notes/README.md)\n\n### Large memory benchmark\n\nTo test retrieval on a larger public dataset,\n[LongMemEval-S](https://huggingface.co/datasets/xiaowu0162/longmemeval-cleaned)\nwas converted into a `22,419`-note Obsidian-style vault with `470` retrieval\nqueries. Using `baai/bge-m3` embeddings, OHS ranked the answer-bearing notes\nstrongly:\n\n| Metric    | Value     |\n| --------- | --------- |\n| nDCG@5    | **0.895** |\n| MRR       | 0.920     |\n| Hit@1     | 0.889     |\n| Hit@5     | 0.968     |\n| Recall@10 | 0.950     |\n| AllRel@10 | 0.904     |\n\nFor this benchmark, each query uses the LongMemEval-provided haystack as its\nsearch scope. That makes the result reproducible and easy to inspect query by\nquery, while still exercising retrieval over a large generated memory vault.\n\n[Result JSON](eval/results/longmemeval-s-no-rerank.json) · [Reproduce and interpret →](fixtures/longmemeval-s/README.md)\n\n## Features\n\n- **Hybrid search**\n  - BM25 + fuzzy title + semantic embeddings, fused with RRF\n- **Alias search**\n  - notes with `aliases:` in frontmatter are indexed and searchable by any alias; alias matches are boosted in BM25 (weight 5×) and fuzzy title scoring\n- **Four search modes**\n  - `hybrid`, `semantic`, `fulltext`, `title` (for text queries)\n- **Similar note lookup**\n  - pass `--path` to find semantically related notes using stored chunk embeddings, with a title + content fallback\n- **Graph traversal**\n  - `--path --related` shows linked notes at configurable depth; filter by `--direction outgoing|backlinks|both`\n- **Links & backlinks**\n  - every result includes outgoing links and backlinks\n- **Scope filtering**\n  - restrict to subfolder(s); supports multiple values and exclusions (`-notes/dev/`)\n- **Tag filtering**\n  - filter by tag(s); supports multiple values and exclusions (`-category/cs`)\n- **Snippet control**\n  - `--snippet-length` sets the context window; empty snippets always fall back to note content\n- **Extended output**\n  - `--extended` adds a TAGS/ALIASES column to the CLI table showing frontmatter tags (`#tag`) and aliases\n- **Incremental indexing**\n  - only re-indexes changed files; watches for edits in real time\n- **Multi-query fan-out**\n  - pass multiple queries at once (`ohs \"q1\" \"q2\"` or `queries[]` in MCP); results are merged via RRF, so a note that ranks well in any one query floats to the top; useful when the note may use different vocabulary than the query\n- **Cross-encoder reranking**\n  - `--rerank` re-scores results with `bge-reranker-v2-m3` (ONNX int8, ~570 MB download once); improves precision for conceptual and multilingual queries; applied after multi-query merge\n- **Local embeddings**\n  - works offline via `@huggingface/transformers` (no API key required); default model: Xenova/multilingual-e5-small, 100+ languages\n- **Remote embeddings**\n  - OpenAI-compatible API (OpenRouter, Ollama, etc.)\n- **Note reading**\n  - `read` fetches one or more notes by vault-relative path; returns full content with title, aliases, tags, links, and backlinks; on path miss returns top-3 fuzzy suggestions\n- **Ignore patterns**\n  - exclude folders, extensions, or specific files\n- **Obsidian plugin**\n  - native search modal inside Obsidian powered by the same CLI; see [obsidian-hybrid-search-plugin](https://github.com/flowing-abyss/obsidian-hybrid-search-plugin)\n\n## Installation\n\n```bash\nnpm install -g obsidian-hybrid-search\n```\n\n## CLI usage\n\n### Quick start\n\nThe recommended setup is to set `OBSIDIAN_VAULT_PATH` once in `~/.zshrc` or `~/.bashrc`. This lets you run the CLI from any directory.\n\n```bash\nexport OBSIDIAN_VAULT_PATH=\"/path/to/your/vault\"\n```\n\nOpen a new terminal and index the vault once.\n\n```bash\nohs reindex\n```\n\nYou can now search from any directory.\n\n```bash\nohs \"zettelkasten\"\n```\n\n### Run from a vault\n\nAlternatively, run the CLI without an environment variable from any directory inside your vault. It finds the vault root by walking up to the nearest `.obsidian/` folder.\n\n```bash\ncd /path/to/your/vault\nohs reindex\nohs \"zettelkasten\"\n```\n\nFrom outside the vault, set `OBSIDIAN_VAULT_PATH` or pass `--db /path/to/vault/.obsidian-hybrid-search.db` explicitly.\n\n### Optional remote embeddings\n\nBy default, the CLI uses the local `Xenova/multilingual-e5-small` model. It works offline without an API key, downloads about 117 MB on first use, and supports more than 100 languages.\n\nTo use a remote API, add its settings to your shell profile.\n\n```bash\nexport OPENAI_API_KEY=\"sk-...\"\n\n# Override the default API base for another provider\n# export OPENAI_BASE_URL=\"https://openrouter.ai/api/v1\"  # OpenRouter\n# export OPENAI_BASE_URL=\"http://localhost:11434/v1\"     # Ollama (no key needed)\n# export OPENAI_BASE_URL=\"http://localhost:1234/v1\"      # LM Studio (no key needed)\n\n# Override the default text-embedding-3-small model\n# export OPENAI_EMBEDDING_MODEL=\"text-embedding-3-small\"\n```\n\n### Search modes\n\nThe CLI supports four search modes called `hybrid`, `fulltext`, `semantic`, and `title`, plus graph traversal for linked notes. The commands below show how to use them, apply filters, rerank results, and control the output.\n\n```bash\n# Hybrid search (default)\nohs \"zettelkasten atomic notes\"\n\n# Fulltext BM25 search\nohs \"permanent notes\" --mode fulltext\n\n# Fuzzy title search (fast, typo-tolerant)\nohs \"zettleksten\" --mode title\n\n# Semantic / vector search\nohs \"how to build a knowledge graph\" --mode semantic\n\n# Limit results and set a score threshold\nohs \"productivity systems\" --limit 5 --threshold 0.3\n\n# Restrict to a subfolder\nohs \"daily review\" --scope notes/periodic/\nohs \"daily review\" --folder notes/periodic/    # alias for --scope\n\n# Restrict to multiple subfolders (OR)\nohs \"productivity\" --scope notes/pkm/ --scope notes/2024/\n\n# Exclude a subfolder\nohs \"programming\" --scope notes/ --scope -notes/archive/\n\n# Filter by tag\nohs \"productivity\" --tag pkm\nohs \"machine learning\" --tag note/basic/primary\n\n# Filter by multiple tags (AND include, exclude with -)\nohs \"learning\" --tag pkm --tag work\n\n# Filter by frontmatter / properties (exact match, case-insensitive)\nohs \"notes\" --frontmatter status:todo\nohs \"notes\" --prop priority:high          # --prop is alias for --frontmatter\n\n# Filter by multiple frontmatter fields (AND)\nohs \"notes\" --frontmatter status:todo --frontmatter priority:high\n\n# Exclude by frontmatter value\nohs \"notes\" --frontmatter -status:done\n\n# Filter-only mode: no query, just filters (returns all matching notes sorted by title)\nohs --frontmatter status:todo\nohs --folder notes/2024/\nohs --tag pkm\nohs --frontmatter status:done --tag archived\n\n# Unlimited results in filter-only mode (default limit is 10)\nohs --folder notes/ --limit 0\n\n# Find semantically similar notes\nohs --path notes/pkm/zettelkasten.md\n\n# Graph traversal: show notes linked to/from this note\n# Results show depth: -1/-2 = backlinks, 0 = source, +1/+2 = outgoing links\nohs --path notes/pkm/zettelkasten.md --related\nohs --path notes/pkm/zettelkasten.md --related --depth 2\n\n# Only outgoing links (what this note references)\nohs --path notes/pkm/zettelkasten.md --related --direction outgoing\n\n# Only backlinks (who references this note)\nohs --path notes/pkm/zettelkasten.md --related --direction backlinks\n\n# Traverse standard Markdown note links instead of Obsidian wikilinks\nohs --path notes/pkm/zettelkasten.md --related --link-type markdown\n\n# Traverse both wikilinks and standard Markdown note links\nohs --path notes/pkm/zettelkasten.md --related --link-type all\n\n# Longer context around each link\nohs --path notes/pkm/zettelkasten.md --related --snippet-length 500\n\n# Rerank results with a cross-encoder model (improves precision, ~1-3s extra latency)\n# Downloads bge-reranker-v2-m3 ONNX (~570 MB) on first use, cached in ~/.cache/huggingface/\nohs \"zettelkasten atomic notes\" --rerank\n\n# Show tags and aliases alongside results\nohs \"zettelkasten\" --extended\n\n# JSON output (for scripting)\nohs \"spaced repetition\" --json\n\n# Output only paths (one per line) — useful for piping into read\nohs --frontmatter id:OHS-4 --only-paths\nohs read ${(f)\"$(ohs search --frontmatter status:todo --only-paths)\"}  # zsh: read all matching notes\n\n# Output absolute filesystem paths\nohs \"zettelkasten\" --only-absolute-paths\n\n# Open results in Obsidian (each in a new tab)\no\n\n…",
+  "status": "curated"
+}

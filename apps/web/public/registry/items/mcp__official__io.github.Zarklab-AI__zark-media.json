@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.Zarklab-AI/zark-media",
+  "type": "mcp",
+  "name": "Zark Creative Media",
+  "description": "Create and edit creator-ready images and videos with Zark.",
+  "author": "io.github.Zarklab-AI",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://api.zarklab.ai/v1/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.zarklab.ai/v1/mcp",
+    "env": [
+      {
+        "name": "X-API-Key",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-16T08:04:41.669899Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

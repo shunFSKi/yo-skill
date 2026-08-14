@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.SalZaki/doodleworks-mcp",
+  "type": "mcp",
+  "name": "Doodleworks MCP",
+  "description": "Hand-drawn explainer illustrations in your AI host, via an MCP App with an interactive viewer.",
+  "author": "io.github.SalZaki",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/SalZaki/doodleworks-mcp",
+    "repo": "SalZaki/doodleworks-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "doodleworks-mcp"
+    ],
+    "env": [
+      {
+        "name": "OPENAI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GEMINI_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-30T21:20:22.038898Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

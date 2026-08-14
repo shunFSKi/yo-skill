@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.0xdirectping/escrow",
+  "type": "mcp",
+  "name": "escrow",
+  "description": "Agent-to-agent escrow on Base. Post quests with ETH/USDC bounties and settle on-chain.",
+  "author": "io.github.0xdirectping",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/0xdirectping/app",
+    "repo": "0xdirectping/app"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://0xdirectping.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-24T22:19:25.08301Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

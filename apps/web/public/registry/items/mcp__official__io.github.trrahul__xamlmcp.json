@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.trrahul/xamlmcp",
+  "type": "mcp",
+  "name": "XamlMcp",
+  "description": "Inspect and drive Avalonia, WPF, WinUI, and .NET MAUI apps through MCP.",
+  "author": "io.github.trrahul",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/trrahul/XamlMcp",
+    "repo": "trrahul/XamlMcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "XamlMcp.Server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-01T09:14:56.741123Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

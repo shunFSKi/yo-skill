@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.mobileshop9991-star/clipwise-mcp",
+  "type": "mcp",
+  "name": "Clipwise",
+  "description": "MCP server for Clipwise - AI tools for TikTok, Reels, and Shorts video creators.",
+  "author": "io.github.mobileshop9991-star",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mobileshop9991-star/clipwise-mcp",
+    "repo": "mobileshop9991-star/clipwise-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "clipwise-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "CLIPWISE_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-27T06:49:01.420327Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

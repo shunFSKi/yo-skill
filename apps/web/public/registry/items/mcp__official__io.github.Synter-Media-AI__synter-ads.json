@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.Synter-Media-AI/synter-ads",
+  "type": "mcp",
+  "name": "synter-ads",
+  "description": "Manage ad campaigns across Google, Meta, LinkedIn, Reddit, TikTok, and more via AI.",
+  "author": "io.github.Synter-Media-AI",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Synter-Media-AI/mcp-server",
+    "repo": "Synter-Media-AI/mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.syntermedia.ai",
+    "env": [
+      {
+        "name": "X-Synter-Key",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-11T18:20:28.352549Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

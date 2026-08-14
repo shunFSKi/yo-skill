@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.NodeDex/nodedex",
+  "type": "mcp",
+  "name": "nodedex",
+  "description": "Your project's decision history for agents: decisions, dead-ends, constraints - queryable, local.",
+  "author": "io.github.NodeDex",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/NodeDex/NodeDex-v0.1",
+    "repo": "NodeDex/NodeDex-v0"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "nodedex"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-08T12:55:57.807239Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

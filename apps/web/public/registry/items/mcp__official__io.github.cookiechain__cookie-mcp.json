@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.cookiechain/cookie-mcp",
+  "type": "mcp",
+  "name": "cookie-mcp",
+  "description": "Cookie Chain tools for AI agents: swap, launch, liquidity, staking, NFTs, and a Solana bridge.",
+  "author": "io.github.cookiechain",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/cookiechain/cookie-mcp",
+    "repo": "cookiechain/cookie-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "cookie-mcp"
+    ],
+    "env": [
+      {
+        "name": "COOKIE_RPC_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "COOKIE_PRIVATE_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "COOKIE_MAX_TRADE_COOK",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "COOKIE_SLIPPAGE_BPS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SOLANA_RPC_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-22T13:28:25.483617Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

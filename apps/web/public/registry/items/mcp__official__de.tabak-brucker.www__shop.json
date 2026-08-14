@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/de.tabak-brucker.www/shop",
+  "type": "mcp",
+  "name": "shop",
+  "description": "Tabak Brucker in ChatGPT/Claude: Katalog, Beratung, Angebote & Warenkorb-Hand-off. Kauf 18+ im Shop.",
+  "author": "de.tabak-brucker.www",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.tabak-brucker.de/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.tabak-brucker.de/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-13T18:46:18.151812Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

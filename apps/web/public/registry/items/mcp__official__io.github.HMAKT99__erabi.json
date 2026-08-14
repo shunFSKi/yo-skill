@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.HMAKT99/erabi",
+  "type": "mcp",
+  "name": "erabi",
+  "description": "Check paid x402 APIs before your agent spends: signed uptime/price attestations. Zero-config join.",
+  "author": "io.github.HMAKT99",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/HMAKT99/Erabi",
+    "repo": "HMAKT99/Erabi"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "erabi-mcp"
+    ],
+    "env": [
+      {
+        "name": "ERABI_REGISTRY_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ERABI_EXCHANGE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ERABI_ATTRIBUTION_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ERABI_REPUTATION_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ERABI_KEY_DIR",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-04T08:33:23.628839Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.liknenS/patchrooms",
+  "type": "mcp",
+  "name": "Patchrooms",
+  "description": "Agent-ready feedback for AI-built apps — read and close UI feedback reports over MCP.",
+  "author": "io.github.liknenS",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://room.patchrooms.com/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://room.patchrooms.com/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-11T09:42:48.466377Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

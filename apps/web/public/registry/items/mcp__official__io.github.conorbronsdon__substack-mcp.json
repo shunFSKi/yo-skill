@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.conorbronsdon/substack-mcp",
+  "type": "mcp",
+  "name": "Substack MCP Server",
+  "description": "Substack MCP server: posts are draft-only by design; short-form Notes publish immediately.",
+  "author": "io.github.conorbronsdon",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/conorbronsdon/substack-mcp",
+    "repo": "conorbronsdon/substack-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@conorbronsdon/substack-mcp"
+    ],
+    "env": [
+      {
+        "name": "SUBSTACK_PUBLICATION_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "SUBSTACK_SESSION_TOKEN",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "SUBSTACK_USER_ID",
+        "required": true,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-03T09:48:33.228593Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

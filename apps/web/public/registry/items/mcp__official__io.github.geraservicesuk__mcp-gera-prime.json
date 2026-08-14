@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.geraservicesuk/mcp-gera-prime",
+  "type": "mcp",
+  "name": "mcp-gera-prime",
+  "description": "Gera Prime MCP (placeholder) — Everything subscription meta-product. Launching 2026.",
+  "author": "io.github.geraservicesuk",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/geraservicesuk/globetura",
+    "repo": "geraservicesuk/globetura"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@gera-services/mcp-gera-prime"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-16T21:04:25.526381Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

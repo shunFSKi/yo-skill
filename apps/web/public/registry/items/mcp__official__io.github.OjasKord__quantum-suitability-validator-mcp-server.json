@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.OjasKord/quantum-suitability-validator-mcp-server",
+  "type": "mcp",
+  "name": "Quantum Suitability Validator",
+  "description": "AI triage for quantum computing POC proposals. Screens before budget is allocated.",
+  "author": "io.github.OjasKord",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/OjasKord/quantum-suitability-validator-mcp-server",
+    "repo": "OjasKord/quantum-suitability-validator-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "quantum-suitability-validator-mcp"
+    ],
+    "env": [
+      {
+        "name": "ANTHROPIC_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-25T05:15:19.470572Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

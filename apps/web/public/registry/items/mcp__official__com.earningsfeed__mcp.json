@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.earningsfeed/mcp",
+  "type": "mcp",
+  "name": "Earnings Feed",
+  "description": "SEC filings and insider trades in real-time. 10-K, 10-Q, 8-K, Form 4, and company lookup.",
+  "author": "com.earningsfeed",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://earningsfeed.com/api/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://earningsfeed.com/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-01-04T16:52:07.965678Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

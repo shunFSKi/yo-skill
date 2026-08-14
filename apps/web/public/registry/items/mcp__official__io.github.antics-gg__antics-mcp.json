@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.antics-gg/antics-mcp",
+  "type": "mcp",
+  "name": "antics-mcp",
+  "description": "Deploy a web game to a playable multiplayer URL with rooms, state sync, and leaderboards.",
+  "author": "io.github.antics-gg",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/antics-gg/antics-mcp",
+    "repo": "antics-gg/antics-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "antics-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-04T23:16:51.749447Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.den-indance/shopify-mcp-pro",
+  "type": "mcp",
+  "name": "shopify-mcp-pro",
+  "description": "Shopify MCP server with real analytics (ShopifyQL), auto-refresh auth, and Shopify API 2026-04.",
+  "author": "io.github.den-indance",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/den-indance/shopify-mcp-pro",
+    "repo": "den-indance/shopify-mcp-pro"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@den.dance/shopify-mcp-pro"
+    ],
+    "env": [
+      {
+        "name": "SHOPIFY_STORE_DOMAIN",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "SHOPIFY_CLIENT_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "SHOPIFY_CLIENT_SECRET",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "SHOPIFY_API_VERSION",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-22T07:11:03.183563Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.JarvisOnM4/agent-guardrail",
+  "type": "mcp",
+  "name": "Agent Guardrail MCP Server",
+  "description": "Action-level governance for AI agents -- control what they DO, not what they SAY",
+  "author": "io.github.JarvisOnM4",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/eren-solutions/agent-guardrail",
+    "repo": "eren-solutions/agent-guardrail"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "agent-guardrail"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-14T11:44:44.32898Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

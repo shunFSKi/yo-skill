@@ -1,0 +1,78 @@
+{
+  "id": "mcp:official/io.github.jztan/qt4-doc-mcp-server",
+  "type": "mcp",
+  "name": "qt4-doc-mcp-server",
+  "description": "Offline MCP server for local Qt 4.8, Qt 5, and Qt 6 documentation with full-text search.",
+  "author": "io.github.jztan",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/jztan/qt4-doc-mcp-server",
+    "repo": "jztan/qt4-doc-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "qt4-doc-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "QT_DOC_BASE",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "QT_DOC_STATE_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SERVER_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SERVER_PORT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-20T11:39:30.355109Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

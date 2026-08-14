@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.Gliana-Labs/gliana-ai-mcp",
+  "type": "mcp",
+  "name": "GlianaAI",
+  "description": "Pay-per-call AI: 59 generative models (image, video, music, speech). No signup, no API key.",
+  "author": "io.github.Gliana-Labs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Gliana-Labs/gliana-mcp",
+    "repo": "Gliana-Labs/gliana-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "gliana-ai-mcp"
+    ],
+    "env": [
+      {
+        "name": "GLIANA_WALLET_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GLIANA_SOLANA_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GLIANA_RAIL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GLIANA_API_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-15T01:12:39.67102Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

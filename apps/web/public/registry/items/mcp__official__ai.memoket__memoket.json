@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/ai.memoket/memoket",
+  "type": "mcp",
+  "name": "memoket",
+  "description": "Memoket — access your recording transcripts, summaries, and key takeaways over MCP.",
+  "author": "ai.memoket",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/memoket/memoket-backend-go",
+    "repo": "memoket/memoket-backend-go"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.memoket.ai/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-22T12:26:24.498343Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

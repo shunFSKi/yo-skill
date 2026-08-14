@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/ai.myplot/property-intelligence",
+  "type": "mcp",
+  "name": "myplot.ai Property Intelligence",
+  "description": "US property risk data for agents: flood, hazards, taxes, air quality. Credits or USDC.",
+  "author": "ai.myplot",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://myplot.ai/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://myplot.ai/mcp",
+    "env": [
+      {
+        "name": "X-API-Key",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-06T17:29:17.689966Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

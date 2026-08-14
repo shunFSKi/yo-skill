@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.danishashko/fred-economic-mcp",
+  "type": "mcp",
+  "name": "FRED Economic Data",
+  "description": "FRED economic data: GDP, inflation, unemployment, rates, and 800k+ Federal Reserve time series.",
+  "author": "io.github.danishashko",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/danishashko/fred-economic-mcp",
+    "repo": "danishashko/fred-economic-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "fred-economic-mcp"
+    ],
+    "env": [
+      {
+        "name": "FRED_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-14T15:42:14.87812Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

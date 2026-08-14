@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/net.tasklite/mcp",
+  "type": "mcp",
+  "name": "TaskLite",
+  "description": "Build a full backend from Claude Code — boards, data, REST APIs — plus a ready-made admin UI",
+  "author": "net.tasklite",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.tasklite.net/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.tasklite.net/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-07T09:15:34.699659Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

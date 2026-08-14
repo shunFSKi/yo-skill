@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.kadam-official/mcp-server",
+  "type": "mcp",
+  "name": "Kadam Ad Network",
+  "description": "Kadam advertising platform — manage ads, campaigns, creatives, audiences and stats",
+  "author": "io.github.kadam-official",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/kadam-official/mcp-server",
+    "repo": "kadam-official/mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@kadam-net/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "KADAM_ADV_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "KADAM_PUB_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-19T08:00:26.235541Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

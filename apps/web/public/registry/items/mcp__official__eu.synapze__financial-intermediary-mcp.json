@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/eu.synapze/financial-intermediary-mcp",
+  "type": "mcp",
+  "name": "Synapze — Financial Intermediary MCP",
+  "description": "Connect AI agents to licensed financial intermediaries in France: insurance, credit, wealth.",
+  "author": "eu.synapze",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ycdvll/synapze-mcp",
+    "repo": "ycdvll/synapze-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.synapze.eu/v1/{tenant_id}",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-26T10:22:22.288949Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.dimawin22/qacat",
+  "type": "mcp",
+  "name": "QACAT",
+  "description": "Translation QA: automated checks, AI evaluation, linguistic review, and visual in-context testing.",
+  "author": "io.github.dimawin22",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/alconost/qacat-mcp",
+    "repo": "alconost/qacat-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://qacat-mcp.qacat.workers.dev/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-21T10:23:54.566281Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

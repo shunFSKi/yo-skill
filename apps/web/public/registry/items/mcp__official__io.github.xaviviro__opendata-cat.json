@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.xaviviro/opendata-cat",
+  "type": "mcp",
+  "name": "opendata-cat",
+  "description": "15 Catalan portals + radio archive: gov, INE/REE/CNMC, CORA, Catalònica, radioteca.cat.",
+  "author": "io.github.xaviviro",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/xaviviro/Opendata.cat-MCP-Server",
+    "repo": "xaviviro/Opendata"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@opendata.cat/mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-30T10:58:25.037827Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

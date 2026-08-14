@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.YugantM/hvtracker-mcp",
+  "type": "mcp",
+  "name": "HVTracker MCP",
+  "description": "Pre-connect trust checks for AI agents and MCP servers using HVTracker's public trust registry.",
+  "author": "io.github.YugantM",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/YugantM/hvtracker-mcp",
+    "repo": "YugantM/hvtracker-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "hvtracker-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-13T19:16:12.992495Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

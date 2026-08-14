@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/ai.oruk/speech",
+  "type": "mcp",
+  "name": "oruk Speech",
+  "description": "Hosted speech-to-text + speech emotion/tone analysis for agents. No install; trial keys built in.",
+  "author": "ai.oruk",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://oruk.ai/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://oruk.ai/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-09T18:07:02.637517Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

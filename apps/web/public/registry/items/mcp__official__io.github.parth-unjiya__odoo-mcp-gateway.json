@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.parth-unjiya/odoo-mcp-gateway",
+  "type": "mcp",
+  "name": "odoo-mcp-gateway",
+  "description": "Security-first MCP gateway for Odoo 17/18/19 — YAML-driven security, 27 tools",
+  "author": "io.github.parth-unjiya",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/parth-unjiya/odoo-mcp-gateway",
+    "repo": "parth-unjiya/odoo-mcp-gateway"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "odoo-mcp-gateway"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-17T14:12:23.212064Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.DotNova/context-layer",
+  "type": "mcp",
+  "name": "ContextLayer",
+  "description": "Intelligent context infrastructure for AI teams: knowledge graph, sessions, tasks, documents.",
+  "author": "io.github.DotNova",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/DotNova/context-layer",
+    "repo": "DotNova/context-layer"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.dotnova.io/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-04T22:32:20.533992Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

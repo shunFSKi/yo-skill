@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.ihorponom/agentpack",
+  "type": "mcp",
+  "name": "agentpack",
+  "description": "Repo-native task continuity for AI coding agents: a reviewed task-state ledger served over MCP.",
+  "author": "io.github.ihorponom",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ihorponom/agentpack",
+    "repo": "ihorponom/agentpack"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "agentpack-cli"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T10:32:46.870115Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

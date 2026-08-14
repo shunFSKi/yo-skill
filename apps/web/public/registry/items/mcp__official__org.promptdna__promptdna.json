@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/org.promptdna/promptdna",
+  "type": "mcp",
+  "name": "PromptDNA",
+  "description": "Community library of composable AI prompt blocks for search, composition, and contribution.",
+  "author": "org.promptdna",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.promptdna.org/v1/",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.promptdna.org/v1/"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-19T08:18:48.59396Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

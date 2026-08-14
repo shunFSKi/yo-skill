@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.royalplugins/royal-mcp",
+  "type": "mcp",
+  "name": "royal-mcp",
+  "description": "Security-first WordPress MCP server. 129 tools for Claude, ChatGPT, Gemini. Free on wp.org.",
+  "author": "com.royalplugins",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/royalplugins/royal-mcp",
+    "repo": "royalplugins/royal-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://demo.royalplugins.com/wp-json/royal-mcp/v1/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-10T01:30:43.264312Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

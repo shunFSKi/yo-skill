@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.jamjet-labs/engram-server",
+  "type": "mcp",
+  "name": "engram-server",
+  "description": "Durable memory for AI agents: fact extraction, hybrid retrieval, temporal graph. SQLite/Postgres.",
+  "author": "io.github.jamjet-labs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/jamjet-labs/jamjet",
+    "repo": "jamjet-labs/jamjet"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/jamjet-labs/engram-server:0.5.0"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-12T21:14:49.414545Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

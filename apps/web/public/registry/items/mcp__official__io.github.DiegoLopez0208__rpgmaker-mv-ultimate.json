@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.DiegoLopez0208/rpgmaker-mv-ultimate",
+  "type": "mcp",
+  "name": "RPG Maker MV Ultimate MCP",
+  "description": "RPG Maker MV Ultimate: AI copilot to generate, edit and understand RPG Maker MV projects (MCP)",
+  "author": "io.github.DiegoLopez0208",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/DiegoLopez0208/RpgMakerMVUltimate-MCP",
+    "repo": "DiegoLopez0208/RpgMakerMVUltimate-MCP"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "rpgmaker-mv-mcp"
+    ],
+    "env": [
+      {
+        "name": "RPGMAKER_PROJECT_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "VISION_API_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "VISION_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "VISION_MODEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RPGMV_LEGACY_TOOLS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-29T02:00:55.908973Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

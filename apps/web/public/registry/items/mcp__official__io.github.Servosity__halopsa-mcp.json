@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.Servosity/halopsa-mcp",
+  "type": "mcp",
+  "name": "HaloPSA MCP",
+  "description": "HaloPSA ticket triage, SLA-breach pre-emption, and cross-client analytics for any MCP agent.",
+  "author": "io.github.Servosity",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/servosity/msp-skills",
+    "repo": "servosity/msp-skills"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/Servosity/msp-skills/releases/download/halopsa-v0.2.4/halopsa-mcp.mcpb"
+    ],
+    "env": [
+      {
+        "name": "HALOPSA_TENANT",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "HALOPSA_CLIENT_ID",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "HALOPSA_CLIENT_SECRET",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "HALOPSA_DOMAIN",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T02:04:50.601836Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# Run your MSP tools by asking - MCP servers and Skills for the AI you already use\n\n**MSP Skills** connects your PSA, RMM, backup, and more to the AI you already use - **Claude**, **ChatGPT**, **Codex**, **Cursor**, **Windsurf**, or any agent that speaks MCP. Ask a plain-English question about your stack and get a real answer back.\n<!-- hero-live:start -->\n60 connectors are live today - including Servosity, ConnectWise PSA, HubSpot, and HaloPSA - and more PSA, RMM, backup, and M365 connectors ship every week.\n<!-- hero-live:end -->\nFree, open source, runs on your laptop. A local SQLite mirror lets your agent answer cross-client questions the live API can't return in one shot - no rate-limit hits, no per-tech SaaS fee, no data leaves your network. Built for MSP owners. No developer experience required.\n\n> **New to the term?** What this repo calls an **MCP server** is what ChatGPT calls an *app* or *connector*, Claude on the web calls a *connector*, Microsoft Copilot calls a *connector*, and Claude Code calls a *Skill*. Same standard underneath: the [Model Context Protocol](https://modelcontextprotocol.io). Full plain-language answer: **[What is an MCP server?](https://msp-skills.compoundingteams.com/what-is-an-mcp-server/)**.\n\n[![License: Apache 2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](./LICENSE)\n[![Skills](https://img.shields.io/badge/skills-60-green.svg)](./catalog.json)\n[![MCP](https://img.shields.io/badge/MCP-compatible-1f6feb.svg)](https://modelcontextprotocol.io)\n[![Agent Skills](https://img.shields.io/badge/Agent_Skills-spec-2E7D32.svg)](https://agentskills.io)\n![Status](https://img.shields.io/badge/status-beta-yellow.svg)\n\n[![Run your MSP tools by asking - 14-second demo](./docs/assets/video/hero-14s.gif)](https://msp-skills.compoundingteams.com/)\n\n<p align=\"center\"><a href=\"https://msp-skills.compoundingteams.com/\">▶ Watch the full demo</a> - every skill page has its own 30-second walkthrough (<a href=\"https://msp-skills.compoundingteams.com/skills/hubspot/\">example</a>). Demo data is simulated; every command shown exists in the real CLI.</p>\n\n## First time here? Paste this into Claude Code\n\nYou do not need to know which command does what. Open Claude Code and paste:\n\n> Set up msp-skills for me from https://github.com/servosity/msp-skills. Read the repo's\n> README, install the connectors that fit my stack, and walk me through anything only I can\n> do (like approving a browser extension or signing in to a vendor portal).\n\nTwo notes that save the most time, on Windows and macOS alike:\n\n- Adding the marketplace by its **full HTTPS URL** avoids an SSH key a fresh machine does not have:\n  ```text\n  /plugin marketplace add https://github.com/servosity/msp-skills.git\n  /plugin install connect-tool@msp-skills\n  ```\n  The `.git` suffix matters.\n- **Windows works.** Claude Code runs natively on Windows, and Git for Windows is optional.\n  If you do not have Git, [connect-tool](./skills/connect-tool) installs without it:\n  ```powershell\n  irm https://raw.githubusercontent.com/servosity/msp-skills/main/skills/connect-tool/bootstrap.ps1 | iex\n  ```\n\n**Stuck on credentials?** That is what [connect-tool](./skills/connect-tool) is for: it drives\nthe Chrome you are already logged into, puts the API key straight into Windows Credential\nManager or the macOS Keychain, and refuses to say \"connected\" until a real authenticated call\nreturns your live data.\n\n## What's in the box\n\n<!-- catalog:start -->\n> ⭐ **First-party, by Servosity:** the [servosity](./skills/servosity) backup & DR connector + the [guided concierge](./skills/_meta) and the [connect-tool](./skills/connect-tool).\n\n| Skill | System | Status | Install |\n| --- | --- | --- | --- |\n| ⭐ [msp-skills-concierge](./skills/_meta) | Connector recommendations + guided install for the msp-skills catalog | ![Meta](https://img.shields.io/badge/Meta-skill-6B7280) | [Marketplace](./skills/_meta/README.md) |\n| [abnormal](./skills/abnormal) | cloud email security platform that detects and remediates phishing, business email compromise, account takeover, and vendor email compromise | ![Awaiting live verification](https://img.shields.io/badge/Awaiting-live_verification-EAB308) | [Install](./skills/abnormal/README.md) |\n| [acronis](./skills/acronis) | Acronis Cyber Protect Cloud | ![Awaiting live verification](https://img.shields.io/badge/Awaiting-live_verification-EAB308) | [Install](./skills/acronis/README.md) |\n| [action1](./skills/action1) | Patch management and vulnerability remediation across managed endpoints in every client organization | ![Awaiting live verification](https://img.shields.io/badge/Awaiting-live_verification-EAB308) | [Install](./skills/action1/README.md) |\n| [afi](./skills/afi) | SaaS backup for Microsoft 365 and Google Workspace | ![Awaiting live verification](https://img.shields.io/badge/Awaiting-live_verification-EAB308) | [Install](./skills/afi/README.md) |\n| [appdirect](./skills/appdirect) | AppDirect cloud commerce marketplace | ![Awaiting live verification](https://img.shields.io/badge/Awaiting-live_verification-EAB308) | [Install](./skills/appdirect/README.md) |\n| [atera](./skills/atera) | all-in-one RMM, PSA, and remote-access platform for MSPs and internal IT teams | ![Awaiting live verification](https://img.shields.io/badge/Awaiting-live_verification-EAB308) | [Install](./skills/atera/README.md) |\n| [autotask](./skills/autotask) | Autotask PSA | ![Awaiting live verification](https://img.shields.io/badge/Awaiting-live_verification-EAB308) | [Install](./skills/autotask/README.md) |\n| [aws-billing](./skills/aws-billing) | AWS billing & Cost Explorer - plain-English bill breakdowns and waste flags | ![Awaiting live verification](https://img.shields.io/badge/Awaiting-live_verification-EAB308) | [Install](./skills/aws-billing/README.md) |\n| [axcient](./skills/axcient) | Axcient x360Recover BCDR: fleet backup health, restore-point and RPO checks, AutoVerify boot-proof evidence, and per-client usage from a local mirror | ![Live-verified](https://img.shields.io/badge/Live--verified-by_a_real_MSP-2E7D32) | [Install](./skills/axcient/README.md) |\n| [betterstack](./skills/betterstack) | Better Stack Uptime monitoring, incident management, on-call scheduling, and status pages | ![Awaiting live verification](https://img.shields.io/badge/Awaiting-live_verification-EAB308) | [Install](./skills/betterstack/README.md) |\n| [blumira](./skills/blumira) | cloud SIEM and automated detection and response platform | ![Awaiting live verification](https://img.shields.io/badge/Awaiting-live_verification-EAB308) | [Install](./skills/blumira/README.md) |\n| [cipp](./skills/cipp) | the CyberDrain Improved Partner Portal (CIPP), the open-source Microsoft 365 multi-tenant management platform for MSPs | ![Live-verified](https://img.shields.io/badge/Live--verified-by_a_real_MSP-2E7D32) | [Install](./skills/cipp/README.md) |\n| ⭐ [connect-tool](./skills/connect-tool) | Authentication setup for any CLI, MCP server, or Skill, driven through your own logged-in Chrome. Windows and macOS | ![Meta](https://img.shields.io/badge/Meta-skill-6B7280) | [Marketplace](./skills/connect-tool/README.md) |\n| [connectwise-automate](./skills/connectwise-automate) | ConnectWise Automate (LabTech) RMM: device management, patching, scripting, monitors and alerts for MSPs | ![Awaiting live verification](https://img.shields.io/badge/Awaiting-live_verification-EAB308) | [Install](./skills/connectwise-automate/README.md) |\n| [connectwise-control](./skills/connectwise-control) | ConnectWise Control (ScreenConnect): remote support and access session management for MSPs | ![Awaiting live verification](https://img.shields.io/badge/Awaiting-live_verification-EAB308) | [Install](./skills/connectwise-control/README.md) |\n| [connectwise-manage](./skills/connectwise-manage) | ConnectWise PSA (Manage) | ![Awaiting live verification](https://img.shields.io/badge/Awaiting-live_verification-EAB308) | [Install](./skills/connectwise-manage/README.md) |\n| [cove](./skills/cove) | N-able Cove Data Protection cloud backup and recovery | ![Live-verified](https://img.shields.io/badge/Live--verified-by_a_real_MSP-2E7D32) | [Install](./skills/cove/README.md) |\n| [crowdstrike](./skills/crowdstrike) | CrowdStrike Falcon EDR: alerts, devices, Spotlight vulnerabilities, prevention policies, and MSSP Flight Control across every tenant | ![Awaiting live verification](https://img.shields.io/badge/Awaiting-live_verification-EAB308) | [Install](./skills/crowdstrike/README.md) |\n| [datto-bcdr](./skills/datto-bcdr) | Datto BCDR: appliances, agents, screenshot-verification audits, stale-backup roll-ups, recoverability KPI, and cross-client alert triage from a local mirror | ![Live-verified](https://img.shields.io/badge/Live--verified-by_a_real_MSP-2E7D32) | [Install](./skills/datto-bcdr/README.md) |\n| [datto-rmm](./skills/datto-rmm) | Datto RMM: devices, alerts, patch and AV gaps, warranty, agent drift, and fleet QBR scorecards from a local mirror | ![Awaiting live verification](https://img.shields.io/badge/Awaiting-live_verification-EAB308) | [Install](./skills/datto-rmm/README.md) |\n| [domotz](./skills/domotz) | Domotz network monitoring and device discovery platform | ![Awaiting live verification](https://img.shields.io/badge/Awaiting-live_verification-EAB308) | [Install](./skills/domotz/README.md) |\n| [gradient](./skills/gradient) | the Gradient MSP Synthesize billing-reconciliation vendor API | ![Awaiting live verification](https://img.shields.io/badge/Awaiting-live_verification-EAB308) | [Install](./skills/gradient/README.md) |\n| [halopsa](./skills/halopsa) | HaloPSA, HaloITSM, HaloCRM | ![Live-verified](https://img.shields.io/badge/Live--verified-by_a_real_MSP-2E7D32) | [Install](./skills/halopsa/README.md) |\n| [hubspot](./skills/hubspot) | HubSpot CRM: contacts, companies, deals, tickets, engagements | ![Live-verified](https://img.shields.io/badge/Live--verified-by_a_real_MSP-2E7D32) | [Install](./skills/hubspot/README.md) |\n| [hudu](./skills/hudu) | IT documentation and knowledge-base platform for MSPs | ![Live-verified](https://img.shields.io/badge/Live--verified-by_a_real_MSP-2E7D32) | [Install](./skills/hudu/README.md) |\n| [huntress](./skills/huntress) | managed endpoint detection and response (EDR) security platform | ![Live-verified](https://img.shields.io/badge/Live--verified-by_a_real_MSP-2E7D32) | [Install](./skills/huntress/README.md) |\n| [itglue](./skills/itglue) | IT Glue documentation platform | ![Awaiting live verification](https://img.shields.io/badge/Awaiting-live_verification-EAB308) | [Install](./skills/itglue/README.md) |\n| [kaseya-bms](./skills/kaseya-bms) | Kaseya BMS PSA - tickets, CRM, contracts, finance, and projects | ![Awaiting live verification](https://img.shields.io/badge/Awaiting-live_verification-EAB308) | [Install](./skills/kaseya-bms/README.md) |\n| [knowbe4](./skills/knowbe4) | KnowBe4 KMSAT security awareness training and phishing-simulation reporting | ![Awaiting live verification](https://img.shields.io/badge/Awaiting-live_verification-EAB308) | [Install](./skills/knowbe4/README.md) |\n| [levelio](./skills/levelio) | Level RMM and endpoint monitoring platform | ![Awaiting live verification](https://img.shields.io/badge/Awaiting-live_verification-EAB308) | [Install](./skills/levelio/README.md) |\n| [liongard](./skills/liongard) | Liongard automated documentation and configuration change-detection platform for MSPs | ![Awaiting live verification](https://img.shields.io/badge/Awaiting-live_verification-EAB308) | [Install](./skills/liongard/README.md) |\n| [maxio](./skills/maxio) | Maxio Advanced Billing - subscription revenue, MRR, and retention intelligence | ![Awaiting live verification](https://img.shields.io/badge/Awaiting-live_verification-EAB308) | [Install](./skills/maxio/README.md) |\n| [microsoft-graph](./skills/microsoft-graph) | Microsoft 365 / Entra tenant administration via Microsoft Graph | ![Awaiting live verification](https://img\n\n…",
+  "status": "curated"
+}

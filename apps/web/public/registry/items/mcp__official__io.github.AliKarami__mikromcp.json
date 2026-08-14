@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.AliKarami/mikromcp",
+  "type": "mcp",
+  "name": "MikroMCP",
+  "description": "MCP server for MikroTik RouterOS: typed tools, dry-run, RBAC, audit logs, and rollback.",
+  "author": "io.github.AliKarami",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/AliKarami/MikroMCP",
+    "repo": "AliKarami/MikroMCP"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mikromcp"
+    ],
+    "env": [
+      {
+        "name": "MIKROMCP_CONFIG_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MIKROMCP_STDIO_IDENTITY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MIKROMCP_LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-21T07:03:59.998567Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

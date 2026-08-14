@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.YuzuKyouma/ponzu",
+  "type": "mcp",
+  "name": "ponzu",
+  "description": "ERC-20 token launchpad on Ethereum — deploy, presale, swap, and farm via AI agents",
+  "author": "io.github.YuzuKyouma",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/YuzuKyouma/ponzu-app",
+    "repo": "YuzuKyouma/ponzu-app"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@ponzu_app/mcp"
+    ],
+    "env": [
+      {
+        "name": "PONZU_PRIVATE_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PONZU_RPC_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PONZU_NETWORK",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-02T09:11:29.753442Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

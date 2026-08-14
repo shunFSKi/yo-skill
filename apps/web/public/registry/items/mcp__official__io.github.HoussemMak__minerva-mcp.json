@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.HoussemMak/minerva-mcp",
+  "type": "mcp",
+  "name": "Minerva MCP — Microsoft 365 & Azure",
+  "description": "Microsoft 365 & Azure admin: Graph, ARM, and the PowerShell cmdlets Graph does not expose.",
+  "author": "io.github.HoussemMak",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/HoussemMak/minerva-mcp",
+    "repo": "HoussemMak/minerva-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "minerva-mcp"
+    ],
+    "env": [
+      {
+        "name": "AZURE_TENANT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AZURE_CLIENT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AZURE_CLIENT_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MINERVA_SHAREPOINT_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-29T14:39:57.686124Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

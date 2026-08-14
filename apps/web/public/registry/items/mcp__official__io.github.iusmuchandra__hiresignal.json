@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.iusmuchandra/hiresignal",
+  "type": "mcp",
+  "name": "hiresignal",
+  "description": "Hiring-intent signals for B2B sales/GTM: turn live job postings into buying signals.",
+  "author": "io.github.iusmuchandra",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/iusmuchandra/hiresignal-mcp",
+    "repo": "iusmuchandra/hiresignal-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://hiresignal-mcp-production-d4d9.up.railway.app/sse"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-01T19:54:38.107336Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

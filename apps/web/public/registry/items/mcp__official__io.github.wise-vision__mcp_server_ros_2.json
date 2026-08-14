@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.wise-vision/mcp_server_ros_2",
+  "type": "mcp",
+  "name": "mcp_server_ros_2",
+  "description": "View ROS 2 nodes and topics, and call services and actions via MCP",
+  "author": "io.github.wise-vision",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/wise-vision/mcp_server_ros_2",
+    "repo": "wise-vision/mcp_server_ros_2"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "docker.io/mcp/ros2:latest"
+    ],
+    "env": [
+      {
+        "name": "MCP_CUSTOM_PROMPTS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_PROMPTS_LOCAL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_PROMPTS_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_PROMPTS_MODULE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-11-26T07:59:38.535007Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

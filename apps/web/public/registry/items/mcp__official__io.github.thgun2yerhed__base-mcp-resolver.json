@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.thgun2yerhed/base-mcp-resolver",
+  "type": "mcp",
+  "name": "Base MCP Resolver",
+  "description": "Free onboarding tool providing authentic live transaction analysis on Base mainnet.",
+  "author": "io.github.thgun2yerhed",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/thgun2yerhed/agent-services-v2",
+    "repo": "thgun2yerhed/agent-services-v2"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://agent-services-seven.vercel.app/api/gateway"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-12T04:47:21.726164Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

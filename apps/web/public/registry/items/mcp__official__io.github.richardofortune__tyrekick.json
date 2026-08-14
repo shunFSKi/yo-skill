@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.richardofortune/tyrekick",
+  "type": "mcp",
+  "name": "tyrekick",
+  "description": "Read and resolve human feedback pinned on your live prototype, straight from your coding agent.",
+  "author": "io.github.richardofortune",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/richardofortune/tyrekick",
+    "repo": "richardofortune/tyrekick"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "tyrekick-mcp"
+    ],
+    "env": [
+      {
+        "name": "TYREKICK_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "TYREKICK_TOKEN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-07T11:42:54.672639Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

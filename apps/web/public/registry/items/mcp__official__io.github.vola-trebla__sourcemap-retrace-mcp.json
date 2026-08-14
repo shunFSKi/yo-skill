@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.vola-trebla/sourcemap-retrace-mcp",
+  "type": "mcp",
+  "name": "sourcemap-retrace-mcp",
+  "description": "Decodes minified production stack traces back to original TypeScript source using source maps.",
+  "author": "io.github.vola-trebla",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/vola-trebla/sourcemap-retrace-mcp",
+    "repo": "vola-trebla/sourcemap-retrace-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "sourcemap-retrace-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-20T20:56:38.505614Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.ARCXS-Protocol/mcp-server",
+  "type": "mcp",
+  "name": "mcp-server",
+  "description": "The DNS/SMTP for AI agents: cross-protocol discovery, messaging and transactions. No middleman fees.",
+  "author": "io.github.ARCXS-Protocol",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ARCXS-Protocol/arcxs-mcp-server",
+    "repo": "ARCXS-Protocol/arcxs-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@arcxs-protocol/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "ARCXS_API_KEY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ARCXS_BASE_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-06T11:55:44.552802Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.iamredmh/volta-mcp-server",
+  "type": "mcp",
+  "name": "Volta Notes",
+  "description": "Burn-after-read encrypted notes. E2E encrypted, decentralised on the Internet Computer.",
+  "author": "io.github.iamredmh",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/iamredmh/volta-mcp-server",
+    "repo": "iamredmh/volta-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@voltanotes/mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-08T20:08:19.49657Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

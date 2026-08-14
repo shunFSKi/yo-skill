@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.itcons-app/mcp",
+  "type": "mcp",
+  "name": "Itcons.app",
+  "description": "Connect AI assistants to Itcons.app work orders, reports, projects, users, and resources.",
+  "author": "io.github.itcons-app",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/itcons-app/mcp",
+    "repo": "itcons-app/mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@itcons-app/mcp"
+    ],
+    "env": [
+      {
+        "name": "ITCONS_DOMAIN",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "ITCONS_USERNAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ITCONS_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ITCONS_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ITCONS_TIMEZONE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-21T11:42:39.419518Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.VeyrForge/codehelper",
+  "type": "mcp",
+  "name": "Codehelper",
+  "description": "Local-first code intelligence MCP: symbol graph, impact analysis, 60+ tools.",
+  "author": "io.github.VeyrForge",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/VeyrForge/codehelper",
+    "repo": "VeyrForge/codehelper"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/VeyrForge/codehelper/releases/download/v3.0.3/codehelper_3.0.3_linux_amd64.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-31T17:54:55.646322Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

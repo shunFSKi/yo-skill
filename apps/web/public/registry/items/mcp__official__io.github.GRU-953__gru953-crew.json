@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.GRU-953/gru953-crew",
+  "type": "mcp",
+  "name": "gru953-crew",
+  "description": "GRU953 Crew's autonomous multi-agent coding method, exposed as callable MCP tools.",
+  "author": "io.github.GRU-953",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/GRU-953/gru953-crew",
+    "repo": "GRU-953/gru953-crew"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "gru953-crew-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-26T11:09:33.504097Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

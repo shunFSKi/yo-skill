@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.dcadolph/vamoose",
+  "type": "mcp",
+  "name": "vamoose",
+  "description": "Calendar workflow engine for time off, approvals, and quick actions on any calendar backend.",
+  "author": "io.github.dcadolph",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dcadolph/vamoose",
+    "repo": "dcadolph/vamoose"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/dcadolph/vamoose:v0.35.0"
+    ],
+    "env": [
+      {
+        "name": "VAMOOSE_PROVIDER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "VAMOOSE_TIMEZONE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-13T22:10:42.013486Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

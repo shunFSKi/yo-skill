@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.S2thend/cursor-history",
+  "type": "mcp",
+  "name": "cursor-history",
+  "description": "MCP server for browsing, searching, exporting, and backing up your Cursor AI chat history",
+  "author": "io.github.S2thend",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/S2thend/cursor-history-mcp",
+    "repo": "S2thend/cursor-history-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "cursor-history-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-01-11T04:19:34.77709Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

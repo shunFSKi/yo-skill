@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.hlix-ai/hlix",
+  "type": "mcp",
+  "name": "hlix",
+  "description": "Work with Hlix projects, tasks, cycles, comments, and verified reviews in one workspace.",
+  "author": "io.github.hlix-ai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/hlix-ai/hlix",
+    "repo": "hlix-ai/hlix"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@hlix/mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T23:36:39.713811Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

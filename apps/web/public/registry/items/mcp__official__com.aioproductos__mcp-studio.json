@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/com.aioproductos/mcp-studio",
+  "type": "mcp",
+  "name": "AIOProductOS Studio",
+  "description": "Turn your AI host into a product videographer: scripted app demos, voice-over, captions, MP4/GIF.",
+  "author": "com.aioproductos",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/AIOProductOS/studio-mcp",
+    "repo": "AIOProductOS/studio-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@aioproductoscom/mcp-studio"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-21T10:19:41.885633Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

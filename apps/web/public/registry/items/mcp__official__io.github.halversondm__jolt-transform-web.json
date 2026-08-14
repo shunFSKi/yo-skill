@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.halversondm/jolt-transform-web",
+  "type": "mcp",
+  "name": "jolt-transform-web",
+  "description": "An MCP server that provides bazaarvoic JOLT transformation capabilities.",
+  "author": "io.github.halversondm",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/halversondm/jolt-transform-web",
+    "repo": "halversondm/jolt-transform-web"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://jolt-transform.halversondm.com/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-15T14:38:30.552142Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.CAST-Extend/gatekeeper-mcp-server",
+  "type": "mcp",
+  "name": "CAST Gatekeeper MCP Server",
+  "description": "CAST Dashboard MCP server for compliance, quality, and technical debt insights for AI agents",
+  "author": "io.github.CAST-Extend",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers/io.github.CAST-Extend%2Fgatekeeper-mcp-server",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "docker.io/castbuild/gatekeeper-mcp-server:3.0.0-beta5-46"
+    ],
+    "env": [
+      {
+        "name": "HOST_CONTROL_PANEL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "PORT_CONTROL_PANEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DASHBOARD_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "MCP_SERVER_PORT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-11T09:36:43.43231Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

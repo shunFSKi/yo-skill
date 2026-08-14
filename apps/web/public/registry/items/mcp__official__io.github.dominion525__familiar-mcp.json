@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.dominion525/familiar-mcp",
+  "type": "mcp",
+  "name": "familiar-mcp",
+  "description": "MCP server that drives the user's real macOS Chrome via AppleScript. 32 tools.",
+  "author": "io.github.dominion525",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dominion525/familiar",
+    "repo": "dominion525/familiar"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@dominion525/familiar-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-25T00:34:34.167358Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

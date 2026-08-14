@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.x402supply/chess-eval",
+  "type": "mcp",
+  "name": "chess-eval",
+  "description": "Stockfish chess eval: best move, score, principal variation, multipv. $0.005/call via x402.",
+  "author": "com.x402supply",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://chess-eval.x402supply.com/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://chess-eval.x402supply.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-17T03:41:48.886289Z"
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": false
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

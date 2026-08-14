@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.wjgoarxiv/vmd-hydrate-mcp",
+  "type": "mcp",
+  "name": "vmd-hydrate-mcp",
+  "description": "Drive VMD for GROMACS/LAMMPS analysis + clathrate-hydrate cage science (needs a local VMD)",
+  "author": "io.github.wjgoarxiv",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/wjgoarxiv/vmd-hydrate-mcp",
+    "repo": "wjgoarxiv/vmd-hydrate-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "vmd-hydrate-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-03T01:12:58.780619Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

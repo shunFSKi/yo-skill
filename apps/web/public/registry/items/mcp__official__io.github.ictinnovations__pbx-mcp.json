@@ -1,0 +1,109 @@
+{
+  "id": "mcp:official/io.github.ictinnovations/pbx-mcp",
+  "type": "mcp",
+  "name": "pbx-mcp",
+  "description": "Inspect and control Asterisk (AMI) and FreeSWITCH (ESL) PBX servers from your AI assistant.",
+  "author": "io.github.ictinnovations",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ictinnovations/pbx-mcp",
+    "repo": "ictinnovations/pbx-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "pbx-mcp"
+    ],
+    "env": [
+      {
+        "name": "ASTERISK_AMI_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ASTERISK_AMI_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ASTERISK_AMI_USERNAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ASTERISK_AMI_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ASTERISK_AMI_TLS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "FREESWITCH_ESL_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "FREESWITCH_ESL_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "FREESWITCH_ESL_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PBX_MCP_ALLOW_WRITE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PBX_MCP_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T05:42:42.345864Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

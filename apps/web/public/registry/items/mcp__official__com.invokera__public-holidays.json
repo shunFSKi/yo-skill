@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.invokera/public-holidays",
+  "type": "mcp",
+  "name": "Public Holidays",
+  "description": "Public holidays for 100+ countries — by year, or the next ones coming up. Via Nager.Date.",
+  "author": "com.invokera",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://invokera.com/r/public-holidays",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://invokera.com/r/public-holidays"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-04T11:20:26.607228Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

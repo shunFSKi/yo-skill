@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.mcptoplist/mcptoplist",
+  "type": "mcp",
+  "name": "MCP Toplist",
+  "description": "Search 77,000+ MCP servers ranked by real adoption data to find the right one for any task.",
+  "author": "com.mcptoplist",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcptoplist.com/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcptoplist.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-24T12:33:38.638259Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

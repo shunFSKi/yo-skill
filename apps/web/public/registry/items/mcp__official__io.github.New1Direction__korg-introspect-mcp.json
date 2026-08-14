@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.New1Direction/korg-introspect-mcp",
+  "type": "mcp",
+  "name": "korg-introspect-mcp",
+  "description": "Wrap any korg:introspect@v1-aware binary as a Claude Code tool, honoring declared side-effects.",
+  "author": "io.github.New1Direction",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/New1Direction/korg",
+    "repo": "New1Direction/korg"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@korgg/introspect-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-30T18:37:15.724542Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

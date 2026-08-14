@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.Saga-Labs/dora-mcp",
+  "type": "mcp",
+  "name": "dora-mcp",
+  "description": "Multi-model AI image and video generator. 14 models behind one OAuth-secured MCP endpoint.",
+  "author": "io.github.Saga-Labs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Saga-Labs/dora-mcp",
+    "repo": "Saga-Labs/dora-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://doravideo.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-08T17:38:41.031812Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

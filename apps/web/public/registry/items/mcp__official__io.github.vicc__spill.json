@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.vicc/spill",
+  "type": "mcp",
+  "name": "Spill",
+  "description": "Pull TestFlight screenshot feedback from App Store Connect into AI coding agents.",
+  "author": "io.github.vicc",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/vicc/spill",
+    "repo": "vicc/spill"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@viccalexander/spill"
+    ],
+    "env": [
+      {
+        "name": "ASC_ISSUER_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "ASC_KEY_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "ASC_PRIVATE_KEY_PATH",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "ASC_APP_ID",
+        "required": true,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-10T22:18:58.79375Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

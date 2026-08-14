@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.nguyenanhducs/fpl-mcp-server",
+  "type": "mcp",
+  "name": "fpl-mcp-server",
+  "description": "An MCP server that provides Fantasy Premier League analysis and strategy tools.",
+  "author": "io.github.nguyenanhducs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/nguyenanhducs/fpl-mcp-server",
+    "repo": "nguyenanhducs/fpl-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "fpl-mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-20T02:51:44.419998Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

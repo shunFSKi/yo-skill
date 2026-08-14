@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.disin7c9/asset-management",
+  "type": "mcp",
+  "name": "asset-management",
+  "description": "Drawdown-first risk for your stock/ETF book — every number from a validated core, not the model.",
+  "author": "io.github.disin7c9",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/disin7c9/asset-management",
+    "repo": "disin7c9/asset-management"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/disin7c9/asset-management/releases/download/v2.12.2/asset-management-2.12.2.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-30T08:05:26.982936Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

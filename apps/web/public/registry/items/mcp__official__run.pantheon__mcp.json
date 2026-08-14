@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/run.pantheon/mcp",
+  "type": "mcp",
+  "name": "mcp",
+  "description": "Search your Pantheon contacts, read cross-channel message timelines, and query the AI brain.",
+  "author": "run.pantheon",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/sbs-canada/pantheon",
+    "repo": "sbs-canada/pantheon"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.pantheon.run/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-17T21:09:12.353596Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

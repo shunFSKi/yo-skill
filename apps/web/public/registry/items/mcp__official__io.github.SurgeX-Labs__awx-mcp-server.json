@@ -1,0 +1,83 @@
+{
+  "id": "mcp:official/io.github.SurgeX-Labs/awx-mcp-server",
+  "type": "mcp",
+  "name": "awx-mcp-server",
+  "description": "Control AWX/Ansible Tower through natural language - 49 tools for automation",
+  "author": "io.github.SurgeX-Labs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/SurgeX-Labs/awx-mcp-server",
+    "repo": "SurgeX-Labs/awx-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "awx-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "AWX_BASE_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "AWX_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "AWX_USERNAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AWX_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "AWX_VERIFY_SSL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-13T21:22:58.918392Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.khglynn/spotify-bulk-actions-mcp",
+  "type": "mcp",
+  "name": "spotify-bulk-actions-mcp",
+  "description": "MCP server for bulk Spotify operations - batch playlist creation, exports, management",
+  "author": "io.github.khglynn",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/khglynn/spotify-bulk-actions-mcp",
+    "repo": "khglynn/spotify-bulk-actions-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "spotify-bulk-actions-mcp"
+    ],
+    "env": [
+      {
+        "name": "SPOTIFY_CLIENT_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "SPOTIFY_CLIENT_SECRET",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-12-12T22:34:42.612053Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

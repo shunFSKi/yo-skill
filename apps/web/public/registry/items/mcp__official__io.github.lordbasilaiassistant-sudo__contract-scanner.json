@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.lordbasilaiassistant-sudo/contract-scanner",
+  "type": "mcp",
+  "name": "contract-scanner",
+  "description": "Smart contract security scanner — vulnerabilities, risk scores, and calldata decoding",
+  "author": "io.github.lordbasilaiassistant-sudo",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/lordbasilaiassistant-sudo/mcp-servers",
+    "repo": "lordbasilaiassistant-sudo/mcp-servers"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@thryx/contract-scanner-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "RPC_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "THRYX_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "BASESCAN_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ETHERSCAN_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-07T05:35:57.492585Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

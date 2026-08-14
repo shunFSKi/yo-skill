@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.holiday-forever/holiday-photo-plus-2",
+  "type": "mcp",
+  "name": "holiday-photo-plus-2",
+  "description": "Holiday photo MCP server: list and fetch personal holiday photos inline in Claude chat.",
+  "author": "io.github.holiday-forever",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/holiday-forever/Holiday-Photo-Plus-2",
+    "repo": "holiday-forever/Holiday-Photo-Plus-2"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://holiday-photo-plus-2.vercel.app/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-22T05:52:19.929444Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.GoTolstoy/studio",
+  "type": "mcp",
+  "name": "Tolstoy Studio",
+  "description": "Generate marketing videos and images in chat with Tolstoy Studio's AI creative director.",
+  "author": "io.github.GoTolstoy",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://apilb.gotolstoy.com/mcp/v1/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://apilb.gotolstoy.com/mcp/v1/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-02T10:42:29.473962Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

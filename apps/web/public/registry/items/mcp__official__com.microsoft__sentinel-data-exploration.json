@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.microsoft/sentinel-data-exploration",
+  "type": "mcp",
+  "name": "Microsoft Sentinel Data Exploration",
+  "description": "Find relevant security data from Sentinel data lake for building effective agents. More:aka.ms/s/de",
+  "author": "com.microsoft",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/microsoft/sentinel-data-exploration-mcp",
+    "repo": "microsoft/sentinel-data-exploration-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://sentinel.microsoft.com/mcp/data-exploration"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-01-15T20:08:52.881607Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

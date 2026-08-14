@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.endoflife-ai/endoflife-mcp",
+  "type": "mcp",
+  "name": "endoflife.ai — Software Lifecycle Intelligence",
+  "description": "EOL dates and risk scores for 480+ software products. Check versions, score risk, audit stacks.",
+  "author": "io.github.endoflife-ai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/endoflife-ai/endoflife-mcp",
+    "repo": "endoflife-ai/endoflife-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.endoflife.ai",
+    "env": [
+      {
+        "name": "X-API-Key",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-29T20:49:05.928935Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

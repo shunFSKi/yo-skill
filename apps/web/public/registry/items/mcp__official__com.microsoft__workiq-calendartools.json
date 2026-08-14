@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.microsoft/workiq-calendartools",
+  "type": "mcp",
+  "name": "Work IQ Calendar MCP Server",
+  "description": "Calendar tools for creating, updating, deleting events, managing invites, and checking availability.",
+  "author": "com.microsoft",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://agent365.svc.cloud.microsoft/agents/tenants/{tenant_id}/servers/mcp_CalendarTools",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://agent365.svc.cloud.microsoft/agents/tenants/{tenant_id}/servers/mcp_CalendarTools"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-10T18:32:58.005994Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

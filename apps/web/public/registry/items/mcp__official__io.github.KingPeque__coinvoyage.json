@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.KingPeque/coinvoyage",
+  "type": "mcp",
+  "name": "coinvoyage",
+  "description": "CoinVoyage MCP — create crypto PayOrders, webhooks, swaps across Bitcoin/Solana/EVM chains.",
+  "author": "io.github.KingPeque",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/KingPeque/coinvoyage-paykit",
+    "repo": "KingPeque/coinvoyage-paykit"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@kingpeque/coinvoyage-mcp"
+    ],
+    "env": [
+      {
+        "name": "COINVOYAGE_API_KEY",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "COINVOYAGE_API_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "COINVOYAGE_API_BASE_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-17T07:45:38.455297Z"
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/app.sallim/contract-compass",
+  "type": "mcp",
+  "name": "contract-compass",
+  "description": "Korean public procurement law: rule-engine rulings, statutes search, live court precedents",
+  "author": "app.sallim",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/sallim-app/contract-compass",
+    "repo": "sallim-app/contract-compass"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://contract.sallim.app/mcp?via=official"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T05:07:07.655783Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# 계약나침반 🧭 (Contract Compass)\n\n> **Korean public procurement law MCP server & web service** — a deterministic rule\n> engine for contract-method decisions (94 rules encoded directly from statutes), a\n> searchable corpus of Korean procurement statutes/regulations/adjudication tables,\n> and live court precedents & authoritative interpretations from law.go.kr.\n> All MCP tools are **LLM-free**: your AI client does the reasoning, this server\n> provides verifiable legal grounds. Remote endpoint: `https://contract.sallim.app/mcp`\n\n**공공계약 방법 결정 도우미** — 국가계약법·지방계약법 등 공공계약 법령을 기반으로,\n발주하려는 계약(공사·용역·물품)에 적용 가능한 계약방법(입찰·수의계약·제한경쟁 등)과\n법령 근거를 결정론적으로 안내하는 오픈소스 웹서비스 + **MCP 서버**입니다.\n\n- **결정 위저드**: 계약유형·추정가격·조건을 입력하면 룰엔진(법령 직접 인코딩 94룰)이\n  적용 가능한 계약방법·낙찰자 결정방법·적격심사 기준을 후보와 근거 조문과 함께 제시\n- **법령 챗봇(Ask)**: 국가계약법령·계약예규·감사원 공공계약 실무가이드 등 공개 코퍼스\n  기반 RAG 검색 + 인용 답변 (웹 UI 전용)\n- **MCP 서버(무LLM)**: Claude·ChatGPT·Cursor 등 AI 에이전트가 룰엔진 판정, 법령 조문,\n  예규·적격심사 세부기준(별표 포함), **판례·법령해석례(law.go.kr 실시간)**를 직접 조회\n- **기관유형 지원**: 국가기관 / 지방자치단체 / 공기업·준정부기관 프로파일\n- **결정론 우선**: 계약방법 결정은 LLM이 아닌 룰엔진이 수행 — 같은 입력엔 항상 같은\n  결과. LLM은 웹 챗봇·설명 생성에만 사용(키 없이도 핵심 기능 동작)\n\n> ⚠️ **면책**: 이 서비스는 정보 제공 목적이며 법적 자문·유권해석이 아닙니다.\n> 적격심사 통과점수·낙찰하한율·각종 한도는 발주기관별 세부기준과 법령 개정에 따라\n> 다를 수 있으므로, 실제 발주 전 반드시 소속 기관 계약 부서와 현행 법령을 확인하세요.\n\n## MCP 서버 사용하기\n\n원격 엔드포인트(Streamable HTTP): **`https://contract.sallim.app/mcp`**\n무료: IP당 50콜/일 (전 도구) · 유료 키: 한도 상향 — [요금 안내](https://contract.sallim.app/mcp/pricing)\n\n| 도구 | 설명 | LLM |\n|---|---|---|\n| `decide_contract_method` | 룰엔진 결정론 판정 — 계약방법 후보·법령 근거·적격심사 파라미터 | ✗ |\n| `search_law` | 법령 조문 검색(키워드·조문번호·부분매치·시맨틱 폴백) | ✗ |\n| `get_law_article` | 조문 원문 전체 조회 (현행) — 법률 자체의 미정비 인용은 `notes`로 경고 | ✗ |\n| `get_law_article_asof` | **특정 시점에 시행 중이던 조문** — 과거 계약·처분·감사 대응(행위시법) | ✗ |\n| `search_references` | 전 코퍼스 통합 검색 — 계약예규·조달청/행안부 적격심사 세부기준(별표)·실무가이드 | ✗ |\n| `search_cases` | 판례·법령해석례 검색 (law.go.kr 실시간 — 항상 현행) | ✗ |\n| `get_case` | 판시사항·판결요지·참조조문 / 질의요지·회답·이유 본문 | ✗ |\n| `report_issue` | 오류·개선 제보(오인용·개정 미반영 등) — 운영 검토 파이프라인 직결 | ✗ |\n\n클라이언트 설정:\n\n```bash\n# Claude Code\nclaude mcp add --transport http contract-compass https://contract.sallim.app/mcp\n```\n\n```json\n// Cursor (.cursor/mcp.json) — Streamable HTTP 직접 지원\n{ \"mcpServers\": { \"contract-compass\": { \"url\": \"https://contract.sallim.app/mcp\" } } }\n```\n\n```json\n// Claude Desktop (claude_desktop_config.json) — mcp-remote 경유\n{ \"mcpServers\": { \"contract-compass\": {\n    \"command\": \"npx\", \"args\": [\"-y\", \"mcp-remote\", \"https://contract.sallim.app/mcp\"] } } }\n```\n\nChatGPT: Settings → Connectors → Developer mode에서 위 URL을 커넥터로 추가.\n\n도구 명세·아키텍처·한도 정책 상세는 [docs/MCP.md](docs/MCP.md) 참조.\n로컬 stdio 실행: `python3 mcp/server.py` (등록: `codex mcp add contract-compass -- python3 /path/to/mcp/server.py`)\n\n## 구성\n\n```\nbackend/    FastAPI — 룰엔진·RAG·LLM 연동 (frontend/dist 정적 서빙 포함, :8402)\nfrontend/   React + TypeScript (Vite) — 위저드 UI\nmcp/        MCP 서버 — stdio(로컬) / Streamable HTTP(:8403, 원격) · 무LLM 도구 6종\nedge/       Cloudflare Worker (contract-edge) — 장애 폴백 게이트 · law API 엣지 캐시\nrules/      계약 룰셋 JSON (contract_rules·law_registry 등) ← 결정론 핵심\ntools/      법령·예규·별표 수집/인덱싱 파이프라인 (law.go.kr Open API)\netl/        PDF/DOCX → 청크 → ChromaDB 파이프라인\ndocs/       MCP 명세 · 장애 전환 런북\nscripts/    스탠바이 동기화 · 반출 전 기밀 검사\ntests/      단위·회귀 테스트 + Ask 질문뱅크\n```\n\n## 빠른 시작\n\n```bash\n# 1) 백엔드 의존성 (+ MCP 서버까지 쓰려면 mcp/requirements.txt 추가)\npip install -r backend/requirements.txt\n\n# 2) 프론트 빌드 (Node.js는 빌드 때만 필요)\ncd frontend && npm install && npm run build && cd ..\n\n# 3) 환경설정 (선택 — LLM 키 없이도 동작)\ncp .env.example .env\n\n# 4) 실행 (rate limiter는 SQLite 공유 — 다중 워커 가능, 코어 수에 맞춰 조정)\npython3 -m uvicorn backend.main:app --host 0.0.0.0 --port 8402\n```\n\n## RAG 코퍼스 구축 (선택)\n\n법령 챗봇·근거 검색을 쓰려면 공개 코퍼스를 인덱싱합니다:\n\n```bash\n# 법령 XML을 tools/laws/ 에 준비(law.go.kr Open API — tools/lib/lawgo.py 헬퍼 참조) 후 인덱싱\npython3 tools/index_laws.py            # → law_articles 컬렉션\n\n# 계약예규(행정규칙) 수집·인덱싱\npython3 tools/fetch_admin_rules.py && python3 tools/parse_admin_rules.py\npython3 tools/index_admin_rules.py     # → admin_rules 컬렉션\n\n# 법령 별표·적격심사 세부기준 전문 PDF (부정당 제재기준·하자담보기간·낙찰하한율 별표)\npython3 tools/fetch_law_tables.py\n\n# 공개 간행물(감사원 공공계약 실무가이드 등)을 data/source_docs/ 에 넣고\npython3 tools/reindex_qa.py            # → public_guides 컬렉션\n\n# BM25 하이브리드 인덱스\npython3 tools/build_bm25_index.py\n```\n\n코퍼스가 없으면 위저드(룰엔진)는 정상 동작하고, RAG 검색 결과만 비어 있습니다.\n판례·법령해석례 조회는 코퍼스와 무관하게 law.go.kr Open API 키(`LAW_API_KEY`)만 있으면 동작합니다.\n\n## 데이터 출처 (전부 공개 자료)\n\n- 법령·시행령·시행규칙·별표·판례·법령해석례: [국가법령정보센터](https://law.go.kr) Open API (출처표시)\n- 계약예규(적격심사기준·정부 입찰·계약 집행기준 등): 기획재정부 행정규칙\n- 적격심사 세부기준: 조달청·행정안전부 행정규칙\n- 공공계약 실무가이드: 감사원 공개 간행물\n- 물품분류·중소기업자간 경쟁제품: 조달청·중소벤처기업부 고시\n\n## 라이선스\n\nMIT\n",
+  "status": "curated"
+}

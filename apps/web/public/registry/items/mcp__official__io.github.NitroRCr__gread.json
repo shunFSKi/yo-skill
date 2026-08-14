@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.NitroRCr/gread",
+  "type": "mcp",
+  "name": "gread",
+  "description": "An MCP server that gives your AI access to the source code and docs of all public github repos",
+  "author": "io.github.NitroRCr",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/NitroRCr/gread",
+    "repo": "NitroRCr/gread"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.gread.dev/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-10T16:09:32.709725Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

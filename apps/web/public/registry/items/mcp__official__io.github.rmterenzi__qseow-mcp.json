@@ -1,0 +1,109 @@
+{
+  "id": "mcp:official/io.github.rmterenzi/qseow-mcp",
+  "type": "mcp",
+  "name": "qseow-mcp",
+  "description": "Agent tools for Qlik Sense Enterprise on Windows: troubleshoot, govern, query and build.",
+  "author": "io.github.rmterenzi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/rmterenzi/qseow-mcp",
+    "repo": "rmterenzi/qseow-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "qseow-mcp"
+    ],
+    "env": [
+      {
+        "name": "QSEOW_HOST",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "QSEOW_AUTH_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "QSEOW_CERT_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "QSEOW_CERT_KEY_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "QSEOW_ROOT_CERT_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "QSEOW_JWT",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "QSEOW_VP_PREFIX",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "QSEOW_ALLOW_MUTATIONS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "QSEOW_TOOL_GROUPS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "QSEOW_TLS_VERIFY",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T12:28:29.39285Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

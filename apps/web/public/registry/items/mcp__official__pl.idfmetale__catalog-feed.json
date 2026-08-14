@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/pl.idfmetale/catalog-feed",
+  "type": "mcp",
+  "name": "catalog-feed",
+  "description": "Read-only IDFMETALE precious-metals catalog: live spot prices, availability, VAT status.",
+  "author": "pl.idfmetale",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/gLkzlDmHRc/idfmetale-mcp",
+    "repo": "gLkzlDmHRc/idfmetale-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.idfmetale.pl/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-19T21:11:26.331169Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

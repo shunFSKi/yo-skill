@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.dontsovcmc/tochka-bank",
+  "type": "mcp",
+  "name": "tochka-bank",
+  "description": "MCP server for Tochka Bank API — payments, invoices, acquiring, subscriptions",
+  "author": "io.github.dontsovcmc",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dontsovcmc/mcp-server-tochka-bank",
+    "repo": "dontsovcmc/mcp-server-tochka-bank"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-server-tochka-bank"
+    ],
+    "env": [
+      {
+        "name": "TOCHKA_TOKEN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-11T19:51:18.289475Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

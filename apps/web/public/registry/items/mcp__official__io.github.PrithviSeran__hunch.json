@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.PrithviSeran/hunch",
+  "type": "mcp",
+  "name": "hunch",
+  "description": "Focus-free macOS control for AI agents: drive your real Mac apps in the background, no stolen focus.",
+  "author": "io.github.PrithviSeran",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/PrithviSeran/hunch-mcp",
+    "repo": "PrithviSeran/hunch-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "hunch-sdk"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-29T16:46:30.845357Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/ai.mindola/lens",
+  "type": "mcp",
+  "name": "lens",
+  "description": "Create your digital twin: a public page that answers from your own material, with citations.",
+  "author": "ai.mindola",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Mindola-ai/mcp-server",
+    "repo": "Mindola-ai/mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://app.mindola.ai/mcp/lens"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-02T12:47:54.97371Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.Cocabadger/tick-mcp",
+  "type": "mcp",
+  "name": "tick-mcp",
+  "description": "A time server that keeps your AI honest about time. Real clock + drift guard, zero dependencies.",
+  "author": "io.github.Cocabadger",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Cocabadger/tick-mcp",
+    "repo": "Cocabadger/tick-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://tick-mcp-production.up.railway.app/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-13T08:43:38.496072Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,89 @@
+{
+  "id": "mcp:official/io.github.0xfreak0/sui-mcp",
+  "type": "mcp",
+  "name": "Sui Analytics",
+  "description": "Read-only Sui blockchain analytics: 59 tools, protocol-aware tx decoding, no API keys or wallet.",
+  "author": "io.github.0xfreak0",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/0xfreak0/sui-mcp",
+    "repo": "0xfreak0/sui-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "sui-analytics-mcp"
+    ],
+    "env": [
+      {
+        "name": "SUI_NETWORK",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SUI_FULLNODE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SUI_GRAPHQL_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SUI_TOOLS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SUI_DECOMPILER_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SUI_LABELS_FILE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T03:31:19.732403Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.unstructured/transform",
+  "type": "mcp",
+  "name": "Unstructured Transform",
+  "description": "Turn documents into structured, AI-ready data by parsing, enriching, chunking, and embedding.",
+  "author": "io.unstructured",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Unstructured-IO/unstructured-mcp-integrations",
+    "repo": "Unstructured-IO/unstructured-mcp-integrations"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.transform.unstructured.io"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-20T21:37:15.360811Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.hzy9981/aviation-accident-analysis",
+  "type": "mcp",
+  "name": "Aviation Accident Analysis MCP",
+  "description": "Aviation accident report parsing and prompt generation service under the SHELL framework.",
+  "author": "io.github.hzy9981",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/hzy9981/aviation-accident-analysis",
+    "repo": "hzy9981/aviation-accident-analysis"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "aviation-accident-analysis"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-27T01:12:51.985465Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

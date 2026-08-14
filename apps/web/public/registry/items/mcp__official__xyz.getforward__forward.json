@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/xyz.getforward/forward",
+  "type": "mcp",
+  "name": "Forward",
+  "description": "Get customers, pay per verified result. Agents self-provision: forward_signup grants $25 credits.",
+  "author": "xyz.getforward",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://getforward.xyz/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://getforward.xyz/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-12T13:07:01.168972Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

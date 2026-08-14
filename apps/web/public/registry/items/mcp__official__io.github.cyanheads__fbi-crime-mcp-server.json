@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.cyanheads/fbi-crime-mcp-server",
+  "type": "mcp",
+  "name": "fbi-crime-mcp-server",
+  "description": "FBI Crime Data Explorer — UCR estimates, NIBRS breakdowns, hate crimes, arrests, and agency data.",
+  "author": "io.github.cyanheads",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/cyanheads/fbi-crime-mcp-server",
+    "repo": "cyanheads/fbi-crime-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@cyanheads/fbi-crime-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "FBI_API_KEY",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "MCP_LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-20T05:17:15.050948Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

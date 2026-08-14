@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.liedetectortest/lie-detector-test",
+  "type": "mcp",
+  "name": "Lie Detector Test",
+  "description": "Find polygraph (lie detector) offices, pricing and service info across the US, Canada and the UK.",
+  "author": "com.liedetectortest",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://liedetectortest.com/wp-json/ldt-mcp/v1/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://liedetectortest.com/wp-json/ldt-mcp/v1/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-21T14:31:32.191918Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

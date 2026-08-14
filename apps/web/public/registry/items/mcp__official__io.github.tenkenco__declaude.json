@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.tenkenco/declaude",
+  "type": "mcp",
+  "name": "declaude",
+  "description": "Rewrites Claude-English into plain English, preserving meaning, code and structure.",
+  "author": "io.github.tenkenco",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/tenkenco/declaude",
+    "repo": "tenkenco/declaude"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://speak-english.tenken.co/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T05:48:45.390349Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "# declaude\n\n**Claude-English → plain English, as a service.**\n\nDeclaude is a translation service that rewrites the distinctive, sycophantic writing style of AI assistants into plain, natural English. The service uses a robust open-source model (Qwen2.5-14B) running on dedicated GPU infrastructure, ensuring that your data never touches a commercial AI provider. It offers a generous free tier of 100 translations per month, with unlimited usage available for just $5 per month. Developers can integrate Declaude through a REST API, an MCP server, or a drop-in Claude Code plugin.\n\n**Live**: [speak-english.tenken.co](https://speak-english.tenken.co) · [Get an API key](https://speak-english.tenken.co/signin)\n\n> The paragraph above was written by an AI assistant, then rewritten by declaude itself.\n\n## Quick start\n\n**1. Get a key** — sign in at [/signin](https://speak-english.tenken.co/signin). Keys don't expire.\n\n**2. Pick your surface:**\n\n```bash\n# REST\ncurl -X POST https://speak-english.tenken.co/v1/translate \\\n  -H \"Authorization: Bearer $DECLAUDE_TOKEN\" -H \"Content-Type: application/json\" \\\n  -d '{\"text\": \"Great question! It is worth noting that...\"}'\n```\n\n```bash\n# MCP (Claude Code, Cursor, any MCP client) — sign-in happens in the browser via OAuth\nclaude mcp add --transport http declaude https://speak-english.tenken.co/mcp\n```\n\n```bash\n# claudish-to-english plugin (drop-in, no local Ollama needed)\nexport CLAUDISH_OLLAMA=\"https://x:$DECLAUDE_TOKEN@speak-english.tenken.co\"\nexport CLAUDISH_MODEL=\"qwen2.5-14b-instruct\"\n```\n\nAlso: [hook/](hook/) for a standalone Claude Code Stop-hook, and [skills/declaude/](skills/declaude/) to\ninstall declaude as an agent skill.\n\n## Pricing\n\n100 translations/month free. Past that, requests return `402` with a machine-readable\npayment challenge and an `upgrade_url` → [$5/month, unlimited](https://speak-english.tenken.co/upgrade).\nOnly successful translations count against quota.\n\n## Architecture\n\n```\nclient ── API key / Clerk JWT ──> Cloud Run gateway ── VPC ──> internal LB ──> vLLM GPU MIG\n                                     │                                        (Qwen2.5-14B, spot L4)\n                                     ├─> Firestore (usage, paid flags, key hashes)\n                                     └─> Stripe (payment link + signed webhooks)\n```\n\n- **gateway/** — FastAPI: `/v1/translate`, `/mcp`, `/api/chat` (Ollama-compatible), `/v1/keys`,\n  `/v1/billing/webhook`, `/signin`, `/upgrade`, `/health`. 86 tests; every boundary injectable.\n- **infra/** — Terraform, state in GCS, plan converges to zero diff. GPU tier is private-IP spot\n  instances behind an internal L7 LB; template rollouts are deliberate (OPPORTUNISTIC).\n- **hook/** — Claude Code hook client (fails open; never blocks a session).\n- **CI/CD** — PRs: lint + tests (gateway/hook/infra). Main: test → build → deploy via Workload\n  Identity Federation → smoke test.\n\n## Operating notes\n\n- `/healthz` is reserved by Google Frontend on run.app — use `/health`.\n- Model swaps are one Terraform variable; 32B needs 2×L4 (quota bump), 14B fits one L4.\n- Secrets live in Secret Manager only. API keys are stored as SHA-256 digests.\n- Developed strictly test-first; every production defect found in dogfooding became a\n  regression test before its fix.\n",
+  "status": "curated"
+}

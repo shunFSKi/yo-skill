@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.mikusnuz/gsc",
+  "type": "mcp",
+  "name": "gsc",
+  "description": "MCP server for Google Search Console & Indexing API — search analytics, sitemaps, URL inspection",
+  "author": "io.github.mikusnuz",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mikusnuz/gsc-mcp",
+    "repo": "mikusnuz/gsc-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@mikusnuz/gsc-mcp"
+    ],
+    "env": [
+      {
+        "name": "GSC_CLIENT_ID",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GSC_CLIENT_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GSC_REFRESH_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GSC_SERVICE_ACCOUNT_KEY_PATH",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-19T18:13:37.781353Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

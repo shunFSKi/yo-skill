@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.ebenezer-isaac/llmconveyors",
+  "type": "mcp",
+  "name": "llmconveyors",
+  "description": "53 tools for LLM Conveyors: job hunting, B2B sales, ATS scoring, resume tools.",
+  "author": "io.github.ebenezer-isaac",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ebenezer-isaac/llmconveyors-mcp",
+    "repo": "ebenezer-isaac/llmconveyors-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "llmconveyors-mcp"
+    ],
+    "env": [
+      {
+        "name": "LLMC_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-23T23:04:54.395065Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

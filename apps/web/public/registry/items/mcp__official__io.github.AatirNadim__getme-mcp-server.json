@@ -1,0 +1,78 @@
+{
+  "id": "mcp:official/io.github.AatirNadim/getme-mcp-server",
+  "type": "mcp",
+  "name": "getMe MCP Server",
+  "description": "An MCP server that exposes getMe key-value operations as MCP tools",
+  "author": "io.github.AatirNadim",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/AatirNadim/getMe",
+    "repo": "AatirNadim/getMe"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "getme-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "GETME_SOCKET_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GETME_READ_ONLY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GETME_ALLOW_CLEAR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GETME_KEY_PREFIX",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-10T07:08:40.735966Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

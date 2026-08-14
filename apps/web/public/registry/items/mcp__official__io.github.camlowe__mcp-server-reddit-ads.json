@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.camlowe/mcp-server-reddit-ads",
+  "type": "mcp",
+  "name": "Reddit Ads",
+  "description": "Reddit Ads API v3: campaigns, ad groups, ads, reports, plus working writes with safety tiers.",
+  "author": "io.github.camlowe",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/camlowe/mcp-server-reddit-ads",
+    "repo": "camlowe/mcp-server-reddit-ads"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-server-reddit-ads"
+    ],
+    "env": [
+      {
+        "name": "REDDIT_CLIENT_ID",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "REDDIT_CLIENT_SECRET",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "REDDIT_REFRESH_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "REDDIT_ADS_WRITE_TIER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "REDDIT_ADS_ACCOUNT_ID",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-28T21:56:54.383979Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

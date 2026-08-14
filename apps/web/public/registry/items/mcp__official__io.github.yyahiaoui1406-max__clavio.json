@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.yyahiaoui1406-max/clavio",
+  "type": "mcp",
+  "name": "clavio",
+  "description": "Real-time data resolver for agents. 200 countries, 169k cities, FX, weather, Africa/MENA.",
+  "author": "io.github.yyahiaoui1406-max",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/y-yahiaoui1406/clavio-mcp",
+    "repo": "y-yahiaoui1406/clavio-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "clavio-data-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-15T09:23:35.626872Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

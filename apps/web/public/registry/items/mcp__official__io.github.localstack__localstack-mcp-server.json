@@ -1,0 +1,114 @@
+{
+  "id": "mcp:official/io.github.localstack/localstack-mcp-server",
+  "type": "mcp",
+  "name": "localstack-mcp-server",
+  "description": "A LocalStack MCP Server providing essential tools for local cloud development & testing",
+  "author": "io.github.localstack",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/localstack/localstack-mcp-server",
+    "repo": "localstack/localstack-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@localstack/localstack-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "LOCALSTACK_AUTH_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "AWS_ACCESS_KEY_ID",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "AWS_SECRET_ACCESS_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "AWS_SESSION_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "AWS_DEFAULT_REGION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AWS_REPLICATOR_SOURCE_AWS_ACCESS_KEY_ID",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "AWS_REPLICATOR_SOURCE_AWS_SECRET_ACCESS_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "AWS_REPLICATOR_SOURCE_AWS_SESSION_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "AWS_REPLICATOR_SOURCE_REGION_NAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AWS_REPLICATOR_SOURCE_ENDPOINT_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "APP_INSPECTOR",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-17T20:01:27.772313Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

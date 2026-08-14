@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.diggercamp/music-similarity",
+  "type": "mcp",
+  "name": "diggercamp",
+  "description": "Find independent music by how it sounds — similar tracks and playlists from a track link.",
+  "author": "com.diggercamp",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/tommasosavorana/diggercamp",
+    "repo": "tommasosavorana/diggercamp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.diggercamp.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-31T14:07:05.643968Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

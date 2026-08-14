@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/com.pitbridge/pitbridge",
+  "type": "mcp",
+  "name": "pitbridge",
+  "description": "Local-first MCP bridge for NinjaTrader 8 behind a deterministic guardrail engine.",
+  "author": "com.pitbridge",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ToolstackVault/pitbridge",
+    "repo": "ToolstackVault/pitbridge"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "pitbridge"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-10T11:30:06.033941Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

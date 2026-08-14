@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.cyclimse/mcp-scaleway-functions",
+  "type": "mcp",
+  "name": "MCP Scaleway Functions",
+  "description": "Unofficial MCP Server for Scaleway Serverless Functions",
+  "author": "io.github.cyclimse",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/cyclimse/mcp-scaleway-functions",
+    "repo": "cyclimse/mcp-scaleway-functions"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "docker.io/cyclimse/mcp-scaleway-functions:0.3.4"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-12T20:52:50.696479Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

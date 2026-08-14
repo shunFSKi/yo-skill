@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/ai.justdrop/mcp",
+  "type": "mcp",
+  "name": "mcp",
+  "description": "Live, end-to-end encrypted, ephemeral file transfer between your AI agent and any device.",
+  "author": "ai.justdrop",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Managed-Digital-LLC/justdrop-mcp",
+    "repo": "Managed-Digital-LLC/justdrop-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "justdrop-mcp"
+    ],
+    "env": [
+      {
+        "name": "JUSTDROP_ROOT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "JUSTDROP_DEFAULT_EXPIRY_MINUTES",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-20T11:16:06.439604Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

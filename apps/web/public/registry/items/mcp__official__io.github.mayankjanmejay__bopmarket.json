@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.mayankjanmejay/bopmarket",
+  "type": "mcp",
+  "name": "BopMarket",
+  "description": "AI agent marketplace — search, buy, sell, and track products across 5 platforms",
+  "author": "io.github.mayankjanmejay",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mayankjanmejay/bopmarket-mcp",
+    "repo": "mayankjanmejay/bopmarket-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://bopmarket.store/mcp/sse"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-05T04:30:52.547927Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

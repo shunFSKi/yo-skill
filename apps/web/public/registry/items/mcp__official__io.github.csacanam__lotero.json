@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.csacanam/lotero",
+  "type": "mcp",
+  "name": "lotero",
+  "description": "Provably fair on-chain slot machine for AI agents: x402 spins on Base, Chainlink VRF results.",
+  "author": "io.github.csacanam",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/csacanam/lotero-core",
+    "repo": "csacanam/lotero-core"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "lotero-mcp"
+    ],
+    "env": [
+      {
+        "name": "LOTERO_WALLET_PRIVATE_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "LOTERO_PLAYER_ADDRESS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LOTERO_MAX_SPINS_PER_SESSION",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-12T10:56:39.799227Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

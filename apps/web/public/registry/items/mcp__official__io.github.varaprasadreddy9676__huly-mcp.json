@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.varaprasadreddy9676/huly-mcp",
+  "type": "mcp",
+  "name": "huly-mcp",
+  "description": "MCP server for Huly — manage projects, issues, documents and more via natural language.",
+  "author": "io.github.varaprasadreddy9676",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/varaprasadreddy9676/huly-mcp",
+    "repo": "varaprasadreddy9676/huly-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "huly-mcp-sdk"
+    ],
+    "env": [
+      {
+        "name": "HULY_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "HULY_WORKSPACE",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "HULY_FRONT_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-17T19:57:01.933248Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.bbb-build/mascope-mcp",
+  "type": "mcp",
+  "name": "mascope-mcp",
+  "description": "World MiniApp reviews and analytics — verified human ratings via World ID",
+  "author": "io.github.bbb-build",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/bbb-build/mascope-mcp",
+    "repo": "bbb-build/mascope-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mascope-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-03T13:41:11.004678Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

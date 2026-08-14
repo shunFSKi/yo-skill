@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/com.ai-rete-rag/ai-rete-rag-mcp",
+  "type": "mcp",
+  "name": "ai·rete·rag",
+  "description": "Author rules from policy docs, then decide: a Rete engine gives the verdict, an LLM explains why.",
+  "author": "com.ai-rete-rag",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/zaharajabeen13-create/ai-rete-rag-mcp",
+    "repo": "zaharajabeen13-create/ai-rete-rag-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "ai-rete-rag-mcp"
+    ],
+    "env": [
+      {
+        "name": "AI_RETE_RAG_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "AI_RETE_RAG_API_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-05T18:01:28.461832Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

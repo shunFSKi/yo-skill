@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.lildaddyo/braintube-mcp",
+  "type": "mcp",
+  "name": "BrainTube",
+  "description": "Search everything you save: YouTube, articles, podcasts, PDFs, Notion, Obsidian. API key or OAuth.",
+  "author": "io.github.lildaddyo",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/lildaddyo/braintube-mcp",
+    "repo": "lildaddyo/braintube-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.brain-tube.com/mcp",
+    "env": [
+      {
+        "name": "X-BrainTube-Token",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-04T16:18:41.670107Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

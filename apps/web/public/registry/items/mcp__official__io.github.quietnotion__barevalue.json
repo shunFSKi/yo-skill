@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.quietnotion/barevalue",
+  "type": "mcp",
+  "name": "Barevalue",
+  "description": "Submit podcast orders, check status, and manage webhooks via Barevalue editing API.",
+  "author": "io.github.quietnotion",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/quietnotion/barevalue-mcp",
+    "repo": "quietnotion/barevalue-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "barevalue-mcp"
+    ],
+    "env": [
+      {
+        "name": "BAREVALUE_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-18T17:49:12.71233Z"
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

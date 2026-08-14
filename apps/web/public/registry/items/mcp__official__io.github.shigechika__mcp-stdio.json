@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.shigechika/mcp-stdio",
+  "type": "mcp",
+  "name": "MCP Stdio",
+  "description": "Stdio-to-HTTP gateway — connects MCP clients to remote HTTP MCP servers",
+  "author": "io.github.shigechika",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/shigechika/mcp-stdio",
+    "repo": "shigechika/mcp-stdio"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-stdio"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T07:13:47.990017Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

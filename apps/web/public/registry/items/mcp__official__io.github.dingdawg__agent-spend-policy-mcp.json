@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.dingdawg/agent-spend-policy-mcp",
+  "type": "mcp",
+  "name": "agent-spend-policy-mcp",
+  "description": "Local agent spend-policy checks. No funds, keys, payment authority, or network access.",
+  "author": "io.github.dingdawg",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/DingDawg/dingdawg-agent-spend-policy-mcp",
+    "repo": "DingDawg/dingdawg-agent-spend-policy-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@dingdawg/agent-spend-policy-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-05T20:24:44.72312Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/com.mcpbundles/remote-browser",
+  "type": "mcp",
+  "name": "Remote Browser MCP Server from MCPBundles",
+  "description": "Automate cloud Chrome—navigate, click, type, screenshot, run code, record screen video",
+  "author": "com.mcpbundles",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/thinkchainai/mcp",
+    "repo": "thinkchainai/mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.mcpbundles.com/bundle/remote-browser/",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-16T16:23:12.385986Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

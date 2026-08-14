@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.breckenwander/travel-connector",
+  "type": "mcp",
+  "name": "BreckenWander Travel",
+  "description": "Search flights, hotels & experiences at all-in prices, then build a trip on breckenwander.com.",
+  "author": "com.breckenwander",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/durwardjohnson/breckenwander-travel-connector",
+    "repo": "durwardjohnson/breckenwander-travel-connector"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.breckenwander.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-13T19:44:21.882531Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

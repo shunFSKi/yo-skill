@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/com.repuso/monitoring",
+  "type": "mcp",
+  "name": "monitoring",
+  "description": "Monitor reviews on 50+ platforms: fetch, tag, translate, AI insights, rating history, webhooks.",
+  "author": "com.repuso",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/repuso-hq/claude-plugins",
+    "repo": "repuso-hq/claude-plugins"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.repuso.com/public/v1/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-11T21:25:49.321157Z"
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

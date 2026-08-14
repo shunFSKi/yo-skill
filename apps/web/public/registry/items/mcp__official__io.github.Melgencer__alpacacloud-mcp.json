@@ -1,0 +1,89 @@
+{
+  "id": "mcp:official/io.github.Melgencer/alpacacloud-mcp",
+  "type": "mcp",
+  "name": "alpacacloud-mcp",
+  "description": "Connect AI agents to Alpaca Cloud: Postgres, Auth, Storage, Sandboxes, and Workflows.",
+  "author": "io.github.Melgencer",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Melgencer/alpaca-cloud",
+    "repo": "Melgencer/alpaca-cloud"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@alpacacloud/mcp"
+    ],
+    "env": [
+      {
+        "name": "ALPACACLOUD_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "ALPACACLOUD_SERVICE_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "ALPACACLOUD_ACCOUNT_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ALPACACLOUD_API_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ALPACACLOUD_SANDBOX_TEMPLATE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ALPACACLOUD_SANDBOX_NETWORK",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-18T04:15:27.9343Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.aryawidjaja/marrow",
+  "type": "mcp",
+  "name": "Marrow",
+  "description": "Shared memory for parallel AI coding agents. Local, free, with rooms and file claims.",
+  "author": "io.github.aryawidjaja",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/aryawidjaja/marrow",
+    "repo": "aryawidjaja/marrow"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/aryawidjaja/marrow/releases/download/v0.8.0/marrow-mcp.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T05:13:07.701743Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

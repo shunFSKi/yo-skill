@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/ai.packmind/mcp-server",
+  "type": "mcp",
+  "name": "mcp-server",
+  "description": "Packmind captures, scales, and enforces your organization's technical decisions.",
+  "author": "ai.packmind",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/PackmindHub/packmind",
+    "repo": "PackmindHub/packmind"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://app.packmind.ai/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-11-24T15:23:52.365339Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

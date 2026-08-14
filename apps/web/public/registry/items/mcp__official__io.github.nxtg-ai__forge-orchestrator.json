@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.nxtg-ai/forge-orchestrator",
+  "type": "mcp",
+  "name": "Forge Orchestrator",
+  "description": "Multi-tool AI orchestration: Claude Code, Codex, Gemini on shared repos. 11 MCP tools, stdio.",
+  "author": "io.github.nxtg-ai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/nxtg-ai/forge-orchestrator",
+    "repo": "nxtg-ai/forge-orchestrator"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/nxtg-ai/forge-orchestrator/releases/download/v1.6.0/forge-mcp-server-linux-x86_64.tar.gz"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-08T22:36:13.567431Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

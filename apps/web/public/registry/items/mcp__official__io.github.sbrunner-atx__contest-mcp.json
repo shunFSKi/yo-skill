@@ -1,0 +1,78 @@
+{
+  "id": "mcp:official/io.github.sbrunner-atx/contest-mcp",
+  "type": "mcp",
+  "name": "contest-mcp",
+  "description": "Log amateur-radio QSOs to N3FJP logging software over its TCP API.",
+  "author": "io.github.sbrunner-atx",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/sbrunner-atx/contest-mcp",
+    "repo": "sbrunner-atx/contest-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "contest-mcp"
+    ],
+    "env": [
+      {
+        "name": "N3FJP_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "N3FJP_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "N3FJP_TIMEOUT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "N3FJP_ALLOW_DB_WIPE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-26T19:21:56.327431Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

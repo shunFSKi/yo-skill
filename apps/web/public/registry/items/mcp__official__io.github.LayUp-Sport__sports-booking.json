@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.LayUp-Sport/sports-booking",
+  "type": "mcp",
+  "name": "LayUp Sports Booking",
+  "description": "Search bookable London courts, pitches, lanes and pickup games across every major UK provider.",
+  "author": "io.github.LayUp-Sport",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/LayUp-Sport/layup-frontend",
+    "repo": "LayUp-Sport/layup-frontend"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.layupsport.com"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-12T15:18:39.295981Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

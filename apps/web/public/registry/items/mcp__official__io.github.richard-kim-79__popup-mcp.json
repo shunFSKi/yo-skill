@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.richard-kim-79/popup-mcp",
+  "type": "mcp",
+  "name": "popup-mcp",
+  "description": "Create and manage Popup web pages via AI — no login required. 30초 만에 웹페이지를 만들고 AI로 편집하세요.",
+  "author": "io.github.richard-kim-79",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/richard-kim-79/popup",
+    "repo": "richard-kim-79/popup"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@blueslap/popup-mcp"
+    ],
+    "env": [
+      {
+        "name": "MCP_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-09T11:21:12.45571Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

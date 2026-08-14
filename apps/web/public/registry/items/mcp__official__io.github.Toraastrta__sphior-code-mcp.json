@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.Toraastrta/sphior-code-mcp",
+  "type": "mcp",
+  "name": "sphior-code-mcp",
+  "description": "Deterministic SAST/SCA findings + fix guidance for your GitHub repos, handed to your AI agent.",
+  "author": "io.github.Toraastrta",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Toraastrta/Sphior",
+    "repo": "Toraastrta/Sphior"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "sphior-code-mcp"
+    ],
+    "env": [
+      {
+        "name": "SPHIOR_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "SPHIOR_API_BASE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-14T03:02:18.657651Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

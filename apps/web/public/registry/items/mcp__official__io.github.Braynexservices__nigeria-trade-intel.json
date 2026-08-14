@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.Braynexservices/nigeria-trade-intel",
+  "type": "mcp",
+  "name": "nigeria-trade-intel",
+  "description": "Nigeria import/export stats (UN Comtrade, keyless) + HS-code classification, annual or monthly.",
+  "author": "io.github.Braynexservices",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Braynexservices/nigeria-mcp",
+    "repo": "Braynexservices/nigeria-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@braynexservices/nigeria-mcp-trade-intel"
+    ],
+    "env": [
+      {
+        "name": "TRADE_PROVIDER",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-14T14:59:24.350771Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

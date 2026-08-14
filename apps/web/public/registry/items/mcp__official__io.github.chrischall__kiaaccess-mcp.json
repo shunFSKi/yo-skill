@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.chrischall/kiaaccess-mcp",
+  "type": "mcp",
+  "name": "kiaaccess-mcp",
+  "description": "Kia Access for Claude — vehicle status, location, doors, climate, and charging",
+  "author": "io.github.chrischall",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/chrischall/kiaaccess-mcp",
+    "repo": "chrischall/kiaaccess-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "kiaaccess-mcp"
+    ],
+    "env": [
+      {
+        "name": "KIA_USERNAME",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "KIA_PASSWORD",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "KIA_WRITE_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "KIA_DEVICE_ID",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-11T14:19:13.495647Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

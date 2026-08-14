@@ -1,0 +1,99 @@
+{
+  "id": "mcp:official/io.github.etairl/parallel-browser-mcp",
+  "type": "mcp",
+  "name": "Parallel Browser MCP",
+  "description": "MCP server for parallel browser automation across multiple providers.",
+  "author": "io.github.etairl",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/etairl/parallel-browser-mcp",
+    "repo": "etairl/parallel-browser-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "parallel-browser-mcp"
+    ],
+    "env": [
+      {
+        "name": "BROWSER_MCP_CONFIG",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BROWSER_MCP_CONFIG_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BROWSERBASE_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "BROWSERBASE_PROJECT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ANCHOR_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "CLOUDFLARE_API_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "CLOUDFLARE_ACCOUNT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PLAYWRIGHT_USE_CLOAKBROWSER",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-31T08:44:34.810051Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

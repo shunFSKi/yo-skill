@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.pipeworx-io/nutrition",
+  "type": "mcp",
+  "name": "nutrition",
+  "description": "Nutrition MCP — wraps Open Food Facts API (free, no auth)",
+  "author": "io.github.pipeworx-io",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/pipeworx-io/mcp-nutrition",
+    "repo": "pipeworx-io/mcp-nutrition"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://gateway.pipeworx.io/nutrition/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-01T18:35:29.657414Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/com.focxle/spend",
+  "type": "mcp",
+  "name": "focxle — what your AI agents cost",
+  "description": "Ask what your AI agents cost. Per agent, across every vendor, from your editor.",
+  "author": "com.focxle",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/focxle/focxle-python",
+    "repo": "focxle/focxle-python"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "focxle"
+    ],
+    "env": [
+      {
+        "name": "FOCXLE_NO_HISTORY",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T09:16:41.36406Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

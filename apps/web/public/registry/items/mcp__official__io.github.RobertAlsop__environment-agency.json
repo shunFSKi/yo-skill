@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.RobertAlsop/environment-agency",
+  "type": "mcp",
+  "name": "UK Environment Agency Open Data",
+  "description": "UK Environment Agency data with cleaning - 10 tools for floods, water quality, permits, catchments.",
+  "author": "io.github.RobertAlsop",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/RobertAlsop/bartram_foundry",
+    "repo": "RobertAlsop/bartram_foundry"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "bartram-companies-house"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-05T18:15:08.951416Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

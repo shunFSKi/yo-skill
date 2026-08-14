@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.marras0914/cordon",
+  "type": "mcp",
+  "name": "Cordon for MCP",
+  "description": "Cordon for MCP. Security gateway with policy enforcement, audit log, and HITL approvals.",
+  "author": "io.github.marras0914",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/marras0914/cordon",
+    "repo": "marras0914/cordon"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@getcordon/cli"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-22T03:04:00.15036Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

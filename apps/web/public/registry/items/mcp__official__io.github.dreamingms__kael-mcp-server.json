@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.dreamingms/kael-mcp-server",
+  "type": "mcp",
+  "name": "Kael MCP Server",
+  "description": "16 AI-native tools with dual SSE + streamable-http transport. Free tier available.",
+  "author": "io.github.dreamingms",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dreamingms/kael-mcp-server",
+    "repo": "dreamingms/kael-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://www.kael.ink/mcp/sse"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-05T23:08:47.3182Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

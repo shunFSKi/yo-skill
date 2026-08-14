@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.usenotra/notra",
+  "type": "mcp",
+  "name": "Notra",
+  "description": "Access the Notra API for managing posts, brand identities, integrations, and schedules.",
+  "author": "io.github.usenotra",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/usenotra/notra-mcp",
+    "repo": "usenotra/notra-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.usenotra.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-18T14:27:49.827598Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

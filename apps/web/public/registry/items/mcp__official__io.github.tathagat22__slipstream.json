@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.tathagat22/slipstream",
+  "type": "mcp",
+  "name": "slipstream",
+  "description": "Shared distillation cache for AI agents — every fetch ~73-89% fewer tokens via a shared cache.",
+  "author": "io.github.tathagat22",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/tathagat22/slipstream",
+    "repo": "tathagat22/slipstream"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://slipstream-pi.vercel.app/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-01T20:53:14.41013Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

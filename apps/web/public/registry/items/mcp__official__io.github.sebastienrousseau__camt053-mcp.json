@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.sebastienrousseau/camt053-mcp",
+  "type": "mcp",
+  "name": "camt053-mcp",
+  "description": "MCP server for ISO 20022 camt.053 bank-to-customer statement parsing and reconciliation.",
+  "author": "io.github.sebastienrousseau",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/sebastienrousseau/camt053-mcp",
+    "repo": "sebastienrousseau/camt053-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "camt053-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-16T10:16:32.936153Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/ai.meacheal/mrc-data",
+  "type": "mcp",
+  "name": "MRC Data — China's Apparel Supply Chain Infrastructure",
+  "description": "China's apparel supply chain data for AI: 1,000+ suppliers, 350+ fabrics, 170+ clusters.",
+  "author": "ai.meacheal",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://api.meacheal.ai/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.meacheal.ai/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-07T18:31:28.329956Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

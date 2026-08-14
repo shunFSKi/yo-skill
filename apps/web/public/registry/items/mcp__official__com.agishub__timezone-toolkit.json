@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.agishub/timezone-toolkit",
+  "type": "mcp",
+  "name": "timezone-toolkit",
+  "description": "Timezone tools for agents: convert, world clock, offset, lookup, date math, holidays, slots. x402",
+  "author": "com.agishub",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/agishub/agishub-mcp",
+    "repo": "agishub/agishub-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.agishub.com/mcp/timezone"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-26T11:28:51.681205Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

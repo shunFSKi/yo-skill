@@ -1,0 +1,99 @@
+{
+  "id": "mcp:official/io.github.dcostenco/prism-coder",
+  "type": "mcp",
+  "name": "prism-coder",
+  "description": "Session memory for coding agents: local-first recall, drift detection, on-device inference.",
+  "author": "io.github.dcostenco",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dcostenco/prism-coder",
+    "repo": "dcostenco/prism-coder"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "prism-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "BRAVE_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GEMINI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SUPABASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SUPABASE_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PRISM_USER_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GCP_PROJECT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "VERTEX_LOCATION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "VERTEX_DATA_STORE_ID",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T01:25:40.962887Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "# Prism Coder\n\n**Give your AI agent memory that lasts.** Persistent sessions, knowledge graphs, and offline tool-routing — fully local and free.\n\n[![npm](https://img.shields.io/npm/v/prism-mcp-server?color=cb0000&label=npm)](https://www.npmjs.com/package/prism-mcp-server)\n[![MCP Registry](https://img.shields.io/badge/MCP_Registry-listed-00ADD8)](https://github.com/modelcontextprotocol/servers)\n[![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](LICENSE)\n[![Models on HuggingFace](https://img.shields.io/badge/🤗-prism--coder-yellow)](https://huggingface.co/dcostenco)\n\n<p align=\"center\">\n  <img src=\"docs/mind-palace-dashboard-v20.8.png\" alt=\"Prism Mind Palace dashboard v20.8.0 — project state with handoff summary, pending TODOs, intent health, neural graph, and time-travel history\" width=\"700\" />\n</p>\n\nPrism Coder is an [MCP server](https://modelcontextprotocol.io) that gives Claude, Cursor, and other AI tools long-term memory that survives across sessions. It ships with the open-weight `prism-coder` model fleet (2B–27B) for fast, offline tool-routing — no cloud required.\n\n**No account needed. No API keys. Runs on your machine.**  \nA paid subscription adds cloud sync, higher model tiers, and team features through the [Synalux portal](https://synalux.ai).\n\n---\n\n## What Prism gives you\n\n- **Session memory that survives restarts** — resume projects with handoff notes,\n  recent work, open TODOs, and configurable quick, standard, or deep context.\n- **Local-first inference** — bounded work is routed through local Ollama models\n  first, with automatic 2B/4B/9B/27B selection based on installed models,\n  available RAM, context fit, and subscription entitlements.\n- **Route-output enforcement** — route mode returns only well-formed calls to\n  tools the host actually advertised. Standard and higher plans can add\n  authenticated deterministic correction; `route_guard: \"local\"` keeps the\n  prompt and draft entirely on-device.\n- **One setup for every agent** — `prism connect` configures Claude Code,\n  Claude Desktop, Cursor, Gemini CLI, and Codex while preserving unrelated\n  settings.\n- **Subscription-aware skills** — entitled skills are synchronized before the\n  host launches, with safe upgrades, downgrades, conflict preservation, and\n  offline last-good recovery.\n- **Hook-free startup** — MCP metadata and native instructions request Prism's\n  startup context without requiring lifecycle hooks or a Prism-owned launcher.\n- **Safe escalation and observability** — inference outcomes are explicit,\n  reserved content remains fail-closed, and local/cloud usage is recorded for\n  review.\n\n## Get started\n\n```bash\nnpm install -g prism-mcp-server\nprism connect\n```\n\nUse `prism connect --dry-run` to preview changes, `prism connect --all` to\nconfigure every detected host, or `prism connect --refresh` to reconcile\nPrism-managed entries after an upgrade. Restart the host after connecting.\n\nPrism works locally without an account, API key, or cloud subscription. Add a\nSynalux subscription when you want cloud memory, paid-tier skills, or team\nfeatures.\n\n### Install as a plugin\n\nPrism also ships as a plugin, which registers the MCP server and the startup\nskill for you.\n\n**Claude Code** — from the community marketplace:\n\n```bash\n/plugin marketplace add anthropics/claude-plugins-community\n/plugin install synalux-prism@claude-community\n```\n\n**Codex** — this repository is itself a plugin marketplace:\n\n```bash\ncodex plugin marketplace add dcostenco/prism-coder\ncodex plugin add synalux-prism@prism\n```\n\nThe plugin registers `prism-mcp` via `npx -y prism-mcp-server`. If you already\nconfigured Prism by hand — `prism connect` writes an `mcp_servers.prism-mcp`\nentry — you have that server twice under one key. Install the plugin **or**\nrun `prism connect`, not both.\n\n### What `prism connect` changes about host subagents\n\n`connect` steers bounded work to `prism_infer` on your machine rather than to\nhost-spawned agents. What it writes differs per host, and **it does not disable\nsubagents everywhere** — Claude Code keeps them and is pointed at an economy\nmodel instead. Prism's local workers stay available over MCP in every case.\n\n| Host | Setting written | Effect |\n|---|---|---|\n| Claude Code | `env.CLAUDE_CODE_SUBAGENT_MODEL = \"sonnet\"` in `~/.claude/settings.json` | Subagents stay **enabled**, pinned to an economy model. Fan-out is discouraged by policy text, not by config |\n| Gemini CLI | `experimental.enableAgents = false` in `~/.gemini/settings.json` | Subagents **off**. Gemini exposes one boolean, so that is all there is to set |\n| Codex | `features.multi_agent = false` in `$CODEX_HOME/config.toml` (default `~/.codex`), plus a bounded fallback: 2 threads, depth 1, cheap subagent model, 900s cap | Subagents **off**, with a bounded profile underneath so a deliberate re-enable lands somewhere sane |\n\nTwo things worth knowing:\n\n- **`experimental` is Gemini's namespace, not ours.** Prism is not enabling\n  anything experimental — it writes `false` to a flag Gemini already defines at\n  that path. Writing anywhere else would have no effect.\n- **That namespace is by definition temporary.** If Gemini promotes\n  `enableAgents` out of `experimental`, Prism keeps writing the old path, Gemini\n  reads the new one, and host subagents quietly turn back on. Nothing errors and\n  the settings file still looks correct. If you see host subagents running while\n  `enableAgents` reads `false`, check whether the key has moved before assuming\n  `connect` failed to write it.\n\nBoth writes are idempotent in the sense that a host already configured this way\nis left untouched — but they are **re-applied on every `prism connect` run**,\nnot only on `--refresh`. If you deliberately re-enable host subagents, the next\n`connect` will turn them off again. Keep them on by not re-running `connect`,\nor by re-enabling after each run.\n\n---\n\n<details>\n<summary>Release history (optional)</summary>\n\n## What's New in v20.11.1\n\n- **Saving memory never gets refused.** The save path used to reject\n  `session_save_ledger`/`save_handoff` calls when its path-to-project\n  heuristic disagreed with the project you declared — and the registry the\n  heuristic trusted could contain junk from earlier auto-registration, so\n  legitimate sessions ended unsaved. Your declaration now always wins; the\n  disagreement is returned as an advisory warning, and auto-registration\n  only accepts real repository roots.\n- **Screenshots are evidence again.** `prism browser` captures on macOS were\n  silently *upscaled* to the size cap, so a screenshot no longer showed what\n  actually rendered. Only genuinely oversized captures are resized now, and\n  the cap no longer clips a standard 1920-wide viewport.\n\n## What's New in v20.10.0 – v20.11.0\n\n- **Skill routing now works mid-session.** New prompts are matched on-device\n  as the conversation moves — not just on turn one — and injected within each\n  host's real context limits (Claude Code caps hook output at 10k chars;\n  Codex truncates by default), with pointer-first delivery when a payload\n  can't fit inline.\n- **`prism connect` is a converge command.** It self-updates first, re-execs,\n  then reconciles MCP registration, skills, and hooks — no more\n  \"fresh config, stale code\" machines.\n- **Scoped skills route on prompts too**, and startup output survives hosts\n  that discard structured tool content.\n\n## What's New in v20.9.0 – v20.9.3\n\n- **Your skills follow your account.** `skill_save` stores a skill at the\n  scope you choose: this machine only (`local`, works offline and signed out),\n  your account (`user` — every machine you sign into receives it), or a\n  workspace (`team` — shared with members, admin-managed, optionally targeted\n  to specific people).\n- **Trim the catalog you don't use.** `skill_manage` can release platform\n  skills you never touch — freeing host skill-catalog budget — and restore\n  them any time, losslessly. Deleting a scoped skill archives its final\n  content locally first, so nothing is ever silently unrecoverable.\n\n- **Delivery that queues instead of failing.** Concurrent sessions no longer\n  starve skill sync on the local config store (WAL + busy-timeout) — a failure\n  that previously reported only \"partial\" where nobody could see it.\n- **Withheld rules still bind.** When the context budget can't inline a\n  skill's text, the manifest of withheld names now states that those skills\n  still govern the work and names every way to load them before completion\n  claims.\n- **The budget the floor never spent.** A long-standing accounting bug meant\n  no unprotected skill ever inlined at any normal context level — the\n  always-inlined protected floor was debiting the budget meant for everything\n  else. Task-matched skills (like the completion-evidence checklist) now\n  actually arrive.\n\n## What's New in v20.8.2\n\n- **Skill delivery now admits failure instead of hiding it.** A filesystem\n  permission edge case (a umask stripping the owner-execute bit) could leave\n  skill sync writing nothing while reporting itself current — measured at nine\n  days on a real machine. Broken managed directories are repaired in place,\n  every directory is created umask-proof, and the repair path refuses symlinks\n  via an `O_NOFOLLOW` descriptor.\n- **A stale install tells you at startup.** Prism now tracks the generation\n  that actually reached disk separately from the one the database accepted; if\n  they diverge, the startup banner says so in a warning placed where display\n  truncation cannot cut it. A successful sync clears it automatically.\n\n## What's New in v20.7 – v20.8.0\n\n- **First run proves the memory instead of describing it** — `session_bootstrap`\n  seeds one demo memory and shows it *recalled from disk*, so the save→recall\n  loop is felt in session 1. One-shot, contained in its own `prism-demo`\n  project, removable with one call.\n- **Dashboard fixed** — a quoting typo (shipped 2026-05-29) killed the inline\n  script at parse time, so every dashboard since rendered \"Loading projects...\"\n  forever. Fixed, and the ES5 lint now `node --check`s the built inline script\n  so an unparseable dashboard can never ship again.\n- **Trusted Publishing** — npm releases authenticate via GitHub OIDC. No stored\n  token to expire or leak, and every release carries a signed [provenance\n  attestation](https://docs.npmjs.com/generating-provenance-statements) — you\n  can verify the tarball you install was built from this repo by CI\n  (`npm audit signatures`).\n- **TLS enforced for cloud sync** — a remote `http://` storage URL is upgraded\n  to `https://` instead of silently sending session content in the clear.\n- **Codex plugin collision + enabled-state detection** — `prism connect` skips\n  its own registration only when a plugin *actually* provides `prism-mcp`\n  (cache present **and** enabled), preventing both duplicate and missing\n  servers.\n- Windows CI stabilized; registry/npm listings realigned and deduplicated.\n\n## What's New in v20.6.0\n\n### Delivery Is Not a Suggestion\n\nAn audit of a real incident (an agent wiped demo data after *announcing* the\nwipe — with the ask-first rule committed, bundled, and absent from what any\nagent actually received) found the protected floor had outgrown every delivery\nbudget: \"unprotected\" had quietly come to mean \"never delivered\".\n\n- **`ask-first` and `feature-preservation` join the protected floor** (14 → 16).\n  Protected skills are always inlined; these two now reach every session.\n- **Sync conflicts are loud and named.** Startup used to say \"· 2 local\n  conflicts preserved\" while safety skills sat months stale; it now names each\n  frozen skill and states how to resume updates.\n- **`--storage` accepts `auto` and `synalux`** — the CLI rejected its own\n  documented default and the production backend.\n- **Disclosure:** skill delivery informs; it does not gate. A live probe showed\n  a host agent still edit unverified source with the rule loaded. If your\n  threat model includes an agent acting against \n\n…",
+  "status": "curated"
+}

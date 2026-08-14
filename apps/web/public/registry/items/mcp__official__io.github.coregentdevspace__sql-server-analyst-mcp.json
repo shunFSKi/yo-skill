@@ -1,0 +1,124 @@
+{
+  "id": "mcp:official/io.github.coregentdevspace/sql-server-analyst-mcp",
+  "type": "mcp",
+  "name": "sql-server-analyst-mcp",
+  "description": "Read-only SQL Server Analyst MCP — safe schema, stored procedure, and performance analysis.",
+  "author": "io.github.coregentdevspace",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/coregentdevspace/sql-server-analyst-mcp",
+    "repo": "coregentdevspace/sql-server-analyst-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "sql-server-analyst-mcp"
+    ],
+    "env": [
+      {
+        "name": "MSSQL_SERVER",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "MSSQL_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MSSQL_DATABASE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MSSQL_USER",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "MSSQL_PASSWORD",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "MSSQL_ENCRYPT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MSSQL_TRUST_SERVER_CERT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ALLOWED_DATABASES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ALLOWED_SCHEMAS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MAX_ROWS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MAX_ROWS_LIMIT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "QUERY_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-22T02:08:34.978063Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

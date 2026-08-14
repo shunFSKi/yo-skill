@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.mindstone/mcp-server-canary",
+  "type": "mcp",
+  "name": "Canary",
+  "description": "Mindstone-internal release-pipeline test connector; not for use. Single ping tool; no auth.",
+  "author": "io.github.mindstone",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mindstone/mcp-servers",
+    "repo": "mindstone/mcp-servers"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@mindstone/mcp-server-canary"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-11T14:43:55.651457Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.KyuRish/fiverr-mcp-server",
+  "type": "mcp",
+  "name": "fiverr-mcp-server",
+  "description": "Search Fiverr gigs, sellers, pricing, and reviews. No API key required.",
+  "author": "io.github.KyuRish",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/KyuRish/fiverr-mcp-server",
+    "repo": "KyuRish/fiverr-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "fiverr-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "RATE_LIMIT_DELAY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PROXY_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-24T00:20:05.101409Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

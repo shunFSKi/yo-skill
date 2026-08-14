@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.mindstone/mcp-server-servicenow",
+  "type": "mcp",
+  "name": "ServiceNow",
+  "description": "ServiceNow ITSM MCP server for Model Context Protocol hosts",
+  "author": "io.github.mindstone",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mindstone/mcp-servers",
+    "repo": "mindstone/mcp-servers"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@mindstone/mcp-server-servicenow"
+    ],
+    "env": [
+      {
+        "name": "SERVICENOW_INSTANCE",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "SERVICENOW_USERNAME",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "SERVICENOW_PASSWORD",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "SERVICENOW_CLIENT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SERVICENOW_CLIENT_SECRET",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T00:26:46.446149Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

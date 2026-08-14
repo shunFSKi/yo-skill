@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.buildkite/buildkite-mcp-server",
+  "type": "mcp",
+  "name": "buildkite-mcp-server",
+  "description": "MCP server exposing Buildkite API data (pipelines, builds, jobs, tests) to AI tooling and editors.",
+  "author": "io.github.buildkite",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/buildkite/buildkite-mcp-server",
+    "repo": "buildkite/buildkite-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/buildkite/buildkite-mcp-server:0.7.0"
+    ],
+    "env": [
+      {
+        "name": "BUILDKITE_API_TOKEN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-10-10T05:18:04.942499Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

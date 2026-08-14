@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.vnbochkarev-netizen/vibo-memory",
+  "type": "mcp",
+  "name": "vibo-memory",
+  "description": "Memory for AI agents: persistent L1/L2/L3, web-search savings, thread memory.",
+  "author": "io.github.vnbochkarev-netizen",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/vnbochkarev-netizen/ViBo-memory",
+    "repo": "vnbochkarev-netizen/ViBo-memory"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@vibo-dev/vibo-mcp"
+    ],
+    "env": [
+      {
+        "name": "VIBO_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T16:32:28.36248Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# 💰 Save 50-150× Tokens with ViBo\n\n### ⚡ Cheap token. Pay less. Same AI.\n\n**Persistent memory for AI agents — cuts token costs by 50-150× on every request.**\n\nViBo gives AI agents and bots persistent memory: facts are saved between sessions, found by meaning, and protected by L1/L2/L3 encryption. Instead of loading ALL memory into every prompt, the agent retrieves only the relevant facts — so you pay for what you use, not for everything you know.\n\n![Python 3.11](https://img.shields.io/badge/Python-3.11-blue) ![License: MIT](https://img.shields.io/badge/License-MIT-green) ![Stars](https://img.shields.io/github/stars/vnbochkarev-netizen/ViBo-memory)\n\n---\n\n## ⚡ The headline number\n\n| Without ViBo | With ViBo | Savings |\n|---|---|---|\n| 86,315 tokens per request (all memory) | 1-187 tokens (relevant facts) | **99.9%** |\n| 10,000 facts → 155,000 tokens | ~2,000 tokens | **50-150×** |\n| $130/month (DeepSeek, 6K req) | $2/month | **$128/month saved** |\n\nMeasured on real data. Not estimated.\n\n---\n\n## Why ViBo\n\nAgents forget everything between sessions. Every conversation starts from zero:\n- \"Who is this client again?\"\n- \"What did we agree on last week?\"\n- \"Which API keys does this project use?\"\n\nViBo fixes that. It's memory that actually works:\n\n| Problem | Without ViBo | With ViBo |\n|---|---|---|\n| **Forgetting** | Agent starts blank every session | Facts persist across sessions |\n| **Context cost** | Whole memory dumped into the prompt | Only relevant facts retrieved (50-150× fewer tokens) |\n| **Secrets** | Keys and passwords can leak to the LLM | L1/L2/L3 encryption — secrets never reach the model |\n| **Language** | Memory only in one language | Understands facts and search in 50+ languages |\n\n---\n\n## 🎥 Demo\n\n![ViBo demo](https://github.com/vnbochkarev-netizen/ViBo-memory/raw/main/demo/vibo_demo.gif)\n\n## 📥 Get it\n\n**Try free for 2 days** — the skill comes with a built-in trial key,\nno manual activation:\n\n| Channel | How |\n|---|---|\n| 🌐 **Website** | https://wwwvibo.com → enter email → download `vibo_skill_trial.zip` (key inside) |\n| 🤖 **Telegram bot** | [@ViBomemorybot](https://t.me/ViBomemorybot) → press \"🎁 Try 2 days free\" |\n\nThen: unpack → `python3 check_license.py` → it works. After 2 days\npay $5/month (Stars or USDT) — the same key extends, memory is kept.\n\n**Full license:** $5/month — one key = one machine (renewable).\n\n---\n\n## What you get\n\n- **Persistent memory** — your agent remembers between sessions\n- **Semantic search** — ask \"what did I discuss with Anna?\" and get the right facts\n- **Three encryption tiers**:\n  - **L1 (Public)** — visible to agent and LLM: names, tags, general knowledge\n  - **L2 (Private)** — encrypted with the agent key: notes, plans, roadmaps\n  - **L3 (Secret)** — encrypted with your password: API keys, credentials. **Never** reaches the LLM — only a 🔒 placeholder\n- **Portable** — memory lives in one `.web` file. Backup = one copy command\n- **50+ languages** — write facts in your language, ViBo understands\n- **Works with any agent** — Hermes, OpenClaw, LangChain, or your own (see INSTALL.md)\n\n---\n\n## Quick start\n\n```python\nfrom vibo.core import Graph\nfrom vibo.crypto import Crypto, SecurityLevel\nfrom vibo.web import WebFile\nfrom vibo.navigator import ViBoNavigator\n\n# Load memory (or create)\ngraph = WebFile(\"memory.web\").read() if Path(\"memory.web\").exists() else Graph()\ncrypto = Crypto(agent_key=\"my-agent-key\", user_password=\"my-password\")\n\n# Save a fact\ngraph.add_node(\"Anna\", \"Client, loves coffee without sugar\", tags=[\"person\"])\n\n# Save a secret (never reaches the LLM)\ngraph.add_node(\"api-key\", crypto.seal(SecurityLevel.L3_SECRET, \"sk-...\"), level=\"L3\")\n\n# Ask memory\nnav = ViBoNavigator(graph, crypto)\ncontext = nav.compose(\"what about Anna\")\n\n# Save\nWebFile(\"memory.web\").write(graph, crypto=crypto)\n```\n\n---\n\n## Measured results\n\n| Memory size | Build | Search | Tokens saved |\n|---|---|---|---|\n| 1,000 facts | 0.00s | 39 ms | 37,450 (100%) |\n| 10,000 facts | 0.02s | 145 ms | 374,950 (100%) |\n| 50,000 facts | 0.12s | 700 ms | 1,874,950 (100%) |\n| 100,000 facts | 0.33s | 1,261 ms | 3,749,950 (100%) |\n\nTypical savings: **50-150× fewer tokens** (up to 2,000× on large memories). Measured, not estimated.\n\n---\n\n## 🌐 Product 2: Web Search Savings\n\nWeb search results are huge (5-15K tokens per article). Dumping them all\ninto the LLM context is expensive. ViBo compresses them first.\n\n**Measured: 96.2% fewer tokens** (12,975 → 489 per article).\n\n```python\nfrom vibo_web import compress_article, WebCache\n\n# Compress search results before the LLM sees them\nfor article in search_results:\n    compressed, stats = compress_article(article[\"text\"], query)\n    article[\"text\"] = compressed          # only the essence\n    print(f\"saved {stats['saved_pct']}%\")\n\n# Cache — repeated questions cost 0 tokens\ncache = WebCache(\"web_cache.json\")\nif not cache.get(query):\n    results = search(query)\n    cache.put(query, results)\n```\n\n| Without ViBo | With ViBo |\n|---|---|\n| 10 articles × 12,975 tokens | 10 × 489 tokens |\n| $0.018/query (DeepSeek) | $0.0007/query |\n| repeated: paid again | repeated: **$0** |\n\n---\n\n\n## 🔐 L3 Secrets Vault — the LLM never sees your secrets\n\nEvery agent memory system sends context to the LLM. Not us.\n\n```\nL1 — Public:      general facts, always available\nL2 — Private:     encrypted at rest, agent-only\nL3 — Secrets:     passwords, API keys, medical data —\n                  agent knows a secret EXISTS but never receives it.\n                  The LLM physically cannot leak what it never saw.\n```\n\nNo other agent memory does this — Mem0, Cognee, LangChain Memory\nall put secrets into the context window.\n\n**Secrets aren't just passwords.** Business strategy, trading signals,\nunpublished research, finances, medical data, legal secrets, personal\nlife. Everyone has secrets. Let your agent know they exist — never\nlet it see them.\n\n## When does ViBo save you money?\n\nHonest answer: **savings come from memory work, not code work.**\n\n| Your agent does | Savings |\n|---|---|\n| Talks to people (support, sales, assistant) | **Huge savings** — memory grows, every conversation searches it |\n| Works with big memory (10K+ facts) | **50-150×** — reads only relevant facts |\n| Writes code | **Little to no savings** — code doesn't \"remember\" |\n| Small memory (100 facts) | **~2×** — not much to save yet |\n\nThe bigger the memory, the bigger the savings. ViBo is about **memory work**:\nchatting with clients, researching, consulting, planning — anything where\nthe agent needs to *recall* what it knows.\n\n---\n\n## The math: it pays for itself\n\nAssumptions: 10K facts in memory, 6,000 requests/month (200/day), the agent reads all memory without ViBo. Prices per 1M input tokens.\n\n| Model | Without ViBo | With ViBo | You save | ViBo cost |\n|---|---|---|---|---|\n| DeepSeek ($0.14/M) | $130/mo | $2/mo | **$128/mo** | $5 |\n\n### Honest note (measured, not marketing)\n\nSavings depend on **memory size**:\n\n| Memory size | Savings |\n|---|---|\n| 100 facts | ~2× (measured: 62% fewer tokens) |\n| 1,000 facts | 10-20× |\n| 10,000 facts | **50-150×** (measured) |\n| 100,000+ facts | up to 2,000× |\n\nIn the first days the memory is small, so savings grow over time as facts accumulate.\n\n---\n\n## How the savings work\n\nEvery request reads only the **relevant facts** instead of the whole memory:\n\n```\nWithout ViBo: 10,000 facts → ~155,000 tokens → $0.022 (DeepSeek)\nWith ViBo:    ~2,000 tokens         → $0.0003\n                                    → 50-150× fewer tokens\n```\n\n---\n\n## CLI\n\n```bash\nvibo --file memory.web seed               # demo memory\nvibo --file memory.web find \"query\"       # semantic search\nvibo --file memory.web dream              # nightly self-analysis (TTL, dedup)\nvibo --file memory.web stats              # statistics\nvibo --file memory.web usage              # REAL savings: tokens & money saved\n```\n\n---\n\n\n## ☁️ ViBo Cloud API — memory for YOUR SaaS\n\nGive every user of your product persistent, encrypted memory — one API call.\nNo infrastructure, no tokens burned, 97.5% savings.\n\n```bash\n# Save a fact for a user\ncurl -X POST https://wwwvibo.com/memory/add \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"key\": \"VIBO-...\", \"label\": \"user-pref\", \"content\": \"Anna prefers email\"}'\n\n# Search (only relevant facts → 97.5% fewer tokens)\ncurl -X POST https://wwwvibo.com/memory/search \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"key\": \"VIBO-...\", \"query\": \"how does Anna want to be contacted?\"}'\n\n# Create sub-keys for YOUR users (isolated, encrypted memory each)\ncurl -X POST https://wwwvibo.com/subkey \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"master_key\": \"VIBO-...\", \"user_id\": \"user-42\"}'\n```\n\n- **Per-user memory**: one master key → up to 100 user sub-keys (Business)\n- **Encryption L1/L2/L3**: secrets never reach the LLM\n- **Token savings**: 97.5% fewer tokens per request, web articles 96-99%\n- **Zero infrastructure**: we host, integrate in 10 minutes (OpenAPI)\n- **Plans**: Starter $5 · Business $10 · Enterprise $25 per month\n- **Free trial**: 2 days, 100 facts — https://wwwvibo.com\n\nOpenAPI spec: [integrations/vibo_openapi_dify.json](integrations/vibo_openapi_dify.json)\n\n## Roadmap\n\n- [x] Core memory engine (L1/L2/L3 encryption, semantic search)\n- [x] .web portable format\n- [x] CLI + Python API\n- [x] LangChain adapter\n- [x] Trial system (2 days, built-in key)\n- [ ] MCP server (Model Context Protocol)\n- [ ] Desktop GUI\n- [ ] Team sharing (multi-user memory)\n- [ ] Export to JSON/Markdown\n\n---\n\n## License\n\nViBo is a commercial product. Get a license key: [wwwvibo.com](https://wwwvibo.com)\n\nOne key = one machine. The core is distributed as a compiled module.\n\n## 🔒 Security\n\nYour data is encrypted (AES-256-GCM), secrets never reach the LLM (L3),\nthe file lives on your machine — we cannot read it without your key.\n[Full security overview](docs/SECURITY_EN.md) · [wwwvibo.com](https://wwwvibo.com)\n",
+  "status": "curated"
+}

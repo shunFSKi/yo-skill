@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.oscal-compass/compliance-trestle-mcp",
+  "type": "mcp",
+  "name": "compliance-trestle-mcp",
+  "description": "An MCP server that provides tools to author OSCAL security compliance documentation",
+  "author": "io.github.oscal-compass",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/oscal-compass/compliance-trestle-mcp",
+    "repo": "oscal-compass/compliance-trestle-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "compliance-trestle-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-26T11:37:22.78525Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

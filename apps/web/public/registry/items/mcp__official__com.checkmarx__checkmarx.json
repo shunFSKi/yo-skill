@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.checkmarx/checkmarx",
+  "type": "mcp",
+  "name": "checkmarx",
+  "description": "Official Checkmarx MCP Server",
+  "author": "com.checkmarx",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Checkmarx/cx-agentic-ai",
+    "repo": "Checkmarx/cx-agentic-ai"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://{cxone_base_url}/api/security-mcp/mcp/{tenant_id}"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T07:04:44.096171Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

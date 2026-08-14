@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.bravos-ai/bravos",
+  "type": "mcp",
+  "name": "Bravos AI",
+  "description": "Manage your AI chatbot from your AI assistant: analyze conversations, audit content, configure it.",
+  "author": "com.bravos-ai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.bravos-ai.com/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.bravos-ai.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-29T10:16:57.583537Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

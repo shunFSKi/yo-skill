@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/trade.rubin/exchange",
+  "type": "mcp",
+  "name": "Rubin Exchange",
+  "description": "Rubin: self-custody DEX for crypto perpetuals & spot - trade, read positions, orders, balances.",
+  "author": "trade.rubin",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/rubin-trade/rubin-mainnet-mcp",
+    "repo": "rubin-trade/rubin-mainnet-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.mainnet.rubin.trade/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-22T05:18:01.387205Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

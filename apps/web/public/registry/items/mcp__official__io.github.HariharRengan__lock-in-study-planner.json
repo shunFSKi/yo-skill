@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.HariharRengan/lock-in-study-planner",
+  "type": "mcp",
+  "name": "lock-in-study-planner",
+  "description": "Study planner for high school students. Manage tasks, deadlines, and schedules.",
+  "author": "io.github.HariharRengan",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/lockinplanner/lock-in",
+    "repo": "lockinplanner/lock-in"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://lockinplanner.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-23T15:11:05.214619Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

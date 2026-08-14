@@ -1,0 +1,103 @@
+{
+  "id": "mcp:official/io.github.es617/dbgprobe-mcp-server",
+  "type": "mcp",
+  "name": "dbgprobe-mcp-server",
+  "description": "Let AI agents interact with debug probes — connect, flash, read/write memory, and reset.",
+  "author": "io.github.es617",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/es617/dbgprobe-mcp-server.git",
+    "repo": "es617/dbgprobe-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "dbgprobe-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "DBGPROBE_BACKEND",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DBGPROBE_MCP_LOG_LEVEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DBGPROBE_JLINK_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DBGPROBE_JLINK_GDBSERVER_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DBGPROBE_JLINK_DEVICE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DBGPROBE_INTERFACE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DBGPROBE_SPEED_KHZ",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DBGPROBE_MCP_PLUGINS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DBGPROBE_MCP_TOOL_SEPARATOR",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-13T19:55:44.268643Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

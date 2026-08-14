@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.bitterdev/pixelletter-mcp",
+  "type": "mcp",
+  "name": "pixelletter-mcp",
+  "description": "Send physical letters and faxes through the PixelLetter interface, test mode included.",
+  "author": "io.github.bitterdev",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/bitterdev/pixelletter-mcp",
+    "repo": "bitterdev/pixelletter-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "pixelletter-mcp"
+    ],
+    "env": [
+      {
+        "name": "PIXELLETTER_EMAIL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "PIXELLETTER_PASSWORD",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "PIXELLETTER_DEFAULT_DESTINATION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PIXELLETTER_FORCE_TEST_MODE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-27T15:15:18.948593Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

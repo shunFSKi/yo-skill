@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.mrfentmen/mixpanel-mcp",
+  "type": "mcp",
+  "name": "mixpanel-mcp",
+  "description": "Query Mixpanel events, funnels, retention, cohorts, and user profiles.",
+  "author": "io.github.mrfentmen",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mrfentmen/mixpanel-mcp",
+    "repo": "mrfentmen/mixpanel-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mixpanel-mcp"
+    ],
+    "env": [
+      {
+        "name": "MIXPANEL_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "MIXPANEL_API_SECRET",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-08T12:53:31.977724Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

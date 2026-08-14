@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.DavidPivert/ara-rgaa-mcp",
+  "type": "mcp",
+  "name": "Ara — audits d'accessibilité RGAA",
+  "description": "Piloter des audits RGAA 4.1 sur Ara, référentiel embarqué. Non officiel.",
+  "author": "io.github.DavidPivert",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/DavidPivert/ara-rgaa-mcp",
+    "repo": "DavidPivert/ara-rgaa-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ara-rgaa-mcp"
+    ],
+    "env": [
+      {
+        "name": "ARA_AUTH_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ARA_USERNAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ARA_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ARA_BASE_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-29T14:15:29.394204Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

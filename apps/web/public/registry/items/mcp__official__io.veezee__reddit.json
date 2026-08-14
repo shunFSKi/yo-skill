@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.veezee/reddit",
+  "type": "mcp",
+  "name": "reddit",
+  "description": "Reddit posts, comments, subreddits, and search for AI agents. Free key, self-minted, no signup.",
+  "author": "io.veezee",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/veezeehq/veezee-mcp",
+    "repo": "veezeehq/veezee-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.veezee.io/reddit"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-14T14:10:03.603052Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

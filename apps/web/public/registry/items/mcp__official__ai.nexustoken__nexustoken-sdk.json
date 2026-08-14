@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/ai.nexustoken/nexustoken-sdk",
+  "type": "mcp",
+  "name": "NexusToken",
+  "description": "Create/check agent tasks, discover capabilities, and run V2 Jobs on NexusToken.",
+  "author": "ai.nexustoken",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/bobuilds/nexustoken-sdk",
+    "repo": "bobuilds/nexustoken-sdk"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "nexustoken-sdk"
+    ],
+    "env": [
+      {
+        "name": "NEXUS_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "NEXUS_BASE_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-24T15:11:58.794139Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

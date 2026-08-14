@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.scope-bid/scope-mcp",
+  "type": "mcp",
+  "name": "Scope (Legal)",
+  "description": "Dispatch litigation work to legal vendors from any MCP-compatible AI workflow. Patent pending.",
+  "author": "io.github.scope-bid",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/scope-bid/scope-mcp",
+    "repo": "scope-bid/scope-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@scope-bid/scope-mcp"
+    ],
+    "env": [
+      {
+        "name": "SCOPE_API_BASE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SCOPE_API_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SCOPE_ORG_SLUG",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-03T16:42:57.526295Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

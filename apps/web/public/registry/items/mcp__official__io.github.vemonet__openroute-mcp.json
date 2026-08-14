@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.vemonet/openroute-mcp",
+  "type": "mcp",
+  "name": "openroute-mcp",
+  "description": "Plan routes using the OpenRouteService API, such as for hiking, mountain biking, or driving.",
+  "author": "io.github.vemonet",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/vemonet/openroute-mcp",
+    "repo": "vemonet/openroute-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "openroute-mcp"
+    ],
+    "env": [
+      {
+        "name": "OPENROUTESERVICE_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-01-31T10:25:35.92536Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.presidio-v/presidio-hardened-x402-mcp",
+  "type": "mcp",
+  "name": "presidio-hardened-x402-mcp",
+  "description": "Pre-payment PII screener for x402 — catches emails, SSNs, names before agents sign.",
+  "author": "io.github.presidio-v",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/presidio-v/presidio-hardened-x402-mcp",
+    "repo": "presidio-v/presidio-hardened-x402-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "presidio-hardened-x402-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-31T18:03:45.930292Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

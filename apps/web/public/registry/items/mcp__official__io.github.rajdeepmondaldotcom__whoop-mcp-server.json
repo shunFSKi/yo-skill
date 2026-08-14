@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.rajdeepmondaldotcom/whoop-mcp-server",
+  "type": "mcp",
+  "name": "whoop-mcp-server",
+  "description": "WHOOP recovery, sleep, strain, and workouts for any AI. Analysis tools, demo mode, fast setup.",
+  "author": "io.github.rajdeepmondaldotcom",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/rajdeepmondaldotcom/whoop-mcp-server",
+    "repo": "rajdeepmondaldotcom/whoop-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "whoop-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "WHOOP_MCP_DEMO",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-12T20:26:20.573131Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

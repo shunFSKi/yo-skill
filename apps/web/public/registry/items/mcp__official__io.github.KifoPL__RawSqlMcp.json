@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.KifoPL/RawSqlMcp",
+  "type": "mcp",
+  "name": "Raw SQL MCP",
+  "description": "Execute raw SQL queries against SQL Server, SQLite, PostgreSQL, MySQL, and MariaDB.",
+  "author": "io.github.KifoPL",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/KifoPL/RawSqlMcp",
+    "repo": "KifoPL/RawSqlMcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "RawSqlMcp"
+    ],
+    "env": [
+      {
+        "name": "RawSqlMcp__Databases__Default__Provider",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RawSqlMcp__Databases__Default__ConnectionString",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "RawSqlMcp__ConnectionStrings__Default",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-26T17:30:42.301744Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

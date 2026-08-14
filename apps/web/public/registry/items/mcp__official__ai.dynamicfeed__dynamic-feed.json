@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/ai.dynamicfeed/dynamic-feed",
+  "type": "mcp",
+  "name": "dynamic-feed",
+  "description": "94 keyless tools of live, verifiable data for AI: weather, hazards, space, CVEs. Ed25519-signed.",
+  "author": "ai.dynamicfeed",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://dynamicfeed.ai/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://dynamicfeed.ai/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-26T01:37:59.940833Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

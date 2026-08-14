@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.arod90/virlo",
+  "type": "mcp",
+  "name": "Virlo",
+  "description": "Short-form video analytics and trend intelligence for TikTok, YouTube, and Instagram",
+  "author": "io.github.arod90",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Virlo-AI/virlo-public-api-storefront",
+    "repo": "Virlo-AI/virlo-public-api-storefront"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://dev.virlo.ai/api/mcp/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-01T02:11:05.522296Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

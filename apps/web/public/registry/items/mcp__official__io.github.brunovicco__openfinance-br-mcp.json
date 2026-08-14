@@ -1,0 +1,98 @@
+{
+  "id": "mcp:official/io.github.brunovicco/openfinance-br-mcp",
+  "type": "mcp",
+  "name": "openfinance-br-mcp",
+  "description": "Secure Open Finance Brasil MCP server with typed tools and a credential-free mock mode",
+  "author": "io.github.brunovicco",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/brunovicco/openfinance-br-mcp",
+    "repo": "brunovicco/openfinance-br-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "openfinance-br-mcp"
+    ],
+    "env": [
+      {
+        "name": "ENVIRONMENT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CLIENT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PRIVATE_KEY_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PRIVATE_KEY_KID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MTLS_CERT_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MTLS_KEY_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "REDIS_URL",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ANTHROPIC_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-17T18:44:21.487119Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

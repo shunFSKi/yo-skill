@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.aimoda/rigol-dho824-mcp",
+  "type": "mcp",
+  "name": "Rigol DHO824 Oscilloscope",
+  "description": "Control and query Rigol DHO824 oscilloscope for waveform capture and measurements",
+  "author": "io.github.aimoda",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/aimoda/rigol-dho824-mcp",
+    "repo": "aimoda/rigol-dho824-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/aimoda/rigol-dho824-mcp:0.1.143-main.2b177ae"
+    ],
+    "env": [
+      {
+        "name": "RIGOL_RESOURCE",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "VISA_TIMEOUT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RIGOL_BEEPER_ENABLED",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RIGOL_TEMP_DIR",
+        "required": true,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-11-02T21:24:26.031162Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

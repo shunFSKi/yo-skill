@@ -1,0 +1,65 @@
+{
+  "id": "mcp:official/io.poolparty/main-stage-airtime",
+  "type": "mcp",
+  "name": "PoolParty Main Stage Airtime",
+  "description": "Inspectable public airtime for agents routing demo media, launch videos, and proof assets.",
+  "author": "io.poolparty",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://www.poolparty.io/api/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://www.poolparty.io/api/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "Accept",
+        "required": true,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-30T19:01:10.615662Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

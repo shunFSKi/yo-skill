@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.lanternrow/facebook-pages-mcp",
+  "type": "mcp",
+  "name": "facebook-pages-mcp",
+  "description": "Facebook Pages organic analytics, post management, and insights via Meta Graph API v25.0.",
+  "author": "io.github.lanternrow",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/lanternrow/facebook-pages-mcp",
+    "repo": "lanternrow/facebook-pages-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "facebook-pages-mcp"
+    ],
+    "env": [
+      {
+        "name": "FB_PAGE_ACCESS_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "FB_PAGE_ID",
+        "required": true,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-29T04:17:09.12795Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

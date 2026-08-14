@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.wolfschram/archive35-photography",
+  "type": "mcp",
+  "name": "archive35-photography",
+  "description": "Search and license C2PA verified fine art photography. 1,109 images, 55 countries.",
+  "author": "io.github.wolfschram",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/wolfschram/archive-35.com",
+    "repo": "wolfschram/archive-35"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "archive35-commerce-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-19T21:24:00.479517Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

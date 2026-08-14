@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.TadFuji/kirok-mcp",
+  "type": "mcp",
+  "name": "Kirok Memory",
+  "description": "Persistent memory for AI agents - hybrid semantic + keyword recall with autonomous consolidation",
+  "author": "io.github.TadFuji",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/TadFuji/kirok-mcp",
+    "repo": "TadFuji/kirok-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "kirok-mcp"
+    ],
+    "env": [
+      {
+        "name": "GEMINI_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-20T00:27:07.061481Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

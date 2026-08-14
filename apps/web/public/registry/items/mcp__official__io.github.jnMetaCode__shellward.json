@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.jnMetaCode/shellward",
+  "type": "mcp",
+  "name": "shellward",
+  "description": "AI agent security: 7 MCP tools for injection detection, PII scanning, command safety, DLP.",
+  "author": "io.github.jnMetaCode",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/jnMetaCode/shellward",
+    "repo": "jnMetaCode/shellward"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "shellward"
+    ],
+    "env": [
+      {
+        "name": "SHELLWARD_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SHELLWARD_LOCALE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SHELLWARD_THRESHOLD",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-23T15:00:37.493305Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

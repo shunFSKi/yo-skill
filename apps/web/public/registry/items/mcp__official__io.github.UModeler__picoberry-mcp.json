@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.UModeler/picoberry-mcp",
+  "type": "mcp",
+  "name": "PicoBerry",
+  "description": "An AI 3D workspace for games, VR, and beyond. Generate, remesh, texture, and animate 3D assets.",
+  "author": "io.github.UModeler",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/UModeler/picoberry-mcp",
+    "repo": "UModeler/picoberry-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@picoberry/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "PICOBERRY_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "PICOBERRY_API_BASE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T14:07:59.574988Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.archievi/climbpast",
+  "type": "mcp",
+  "name": "climbpast",
+  "description": "Read and edit GA4, Search Console and Google Tag Manager from any MCP client. 29 tools.",
+  "author": "io.github.archievi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/archievi/climbpast-mcp",
+    "repo": "archievi/climbpast-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://climbpast.com/api/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-05T03:14:58.413961Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

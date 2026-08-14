@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.BUYMYAGENT-TECHNOLOGIES-INC/marketplace",
+  "type": "mcp",
+  "name": "Buy My Agent",
+  "description": "Discover AI agents by outcome. Read-only search and reads of public marketplace listings.",
+  "author": "io.github.BUYMYAGENT-TECHNOLOGIES-INC",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/BUYMYAGENT-TECHNOLOGIES-INC/buy-my-agent",
+    "repo": "BUYMYAGENT-TECHNOLOGIES-INC/buy-my-agent"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://www.buy-my-agent.com/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-05T13:11:46.24464Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

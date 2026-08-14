@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/ai.nothumansearch/search",
+  "type": "mcp",
+  "name": "Not Human Search",
+  "description": "Search the agentic web. 4,100+ sites, 11 tools incl. check_url + verify_mcp for probe-before-use.",
+  "author": "ai.nothumansearch",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://nothumansearch.ai/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://nothumansearch.ai/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-28T00:50:27.63351Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

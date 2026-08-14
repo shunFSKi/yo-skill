@@ -1,0 +1,93 @@
+{
+  "id": "mcp:official/io.github.aidancorrell/spark-sql-mcp-server",
+  "type": "mcp",
+  "name": "Spark SQL",
+  "description": "Query Spark SQL clusters via Thrift/HiveServer2. Works with Spark, EMR, Hive, Impala.",
+  "author": "io.github.aidancorrell",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/aidancorrell/spark-sql-mcp-server",
+    "repo": "aidancorrell/spark-sql-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "spark-sql-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "SPARK_HOST",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "SPARK_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SPARK_DATABASE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SPARK_AUTH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SPARK_USERNAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SPARK_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SPARK_KERBEROS_SERVICE_NAME",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-08T23:39:57.260045Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

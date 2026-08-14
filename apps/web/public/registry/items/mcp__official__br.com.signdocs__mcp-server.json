@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/br.com.signdocs/mcp-server",
+  "type": "mcp",
+  "name": "mcp-server",
+  "description": "SignDocs Brasil e-signature tools for AI agents — signing sessions, envelopes, verification.",
+  "author": "br.com.signdocs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/signdocsbrasil/signdocs-mcp-server",
+    "repo": "signdocsbrasil/signdocs-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@signdocs-brasil/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "SIGNDOCS_CLIENT_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "SIGNDOCS_CLIENT_SECRET",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "SIGNDOCS_ENVIRONMENT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-28T05:20:09.115579Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

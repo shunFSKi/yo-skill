@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.OnourImpram/mneme",
+  "type": "mcp",
+  "name": "mneme Record",
+  "description": "Vault-native, accountable memory for Claude Code and MCP clients. Markdown is ground truth.",
+  "author": "io.github.OnourImpram",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/OnourImpram/mneme",
+    "repo": "OnourImpram/mneme"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mneme-mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-27T20:09:21.096226Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

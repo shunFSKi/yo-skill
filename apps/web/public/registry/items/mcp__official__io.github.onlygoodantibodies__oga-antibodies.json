@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.onlygoodantibodies/oga-antibodies",
+  "type": "mcp",
+  "name": "OGA Antibody Validation",
+  "description": "Knockout-controlled antibody validation lookups over the Only Good Antibodies dataset",
+  "author": "io.github.onlygoodantibodies",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/onlygoodantibodies/oga_website",
+    "repo": "onlygoodantibodies/oga_website"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://oga-mcp.onrender.com/readonly/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-17T16:49:55.369768Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

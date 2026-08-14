@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.hevangel/batch-review-mcp",
+  "type": "mcp",
+  "name": "Batch Review",
+  "description": "Git diff and markdown review with a web UI plus MCP stdio for AI agents.",
+  "author": "io.github.hevangel",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/hevangel/batch-review-mcp",
+    "repo": "hevangel/batch-review-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/hevangel/batch-review-mcp/releases/download/v1.2.0/batch-review-mcp-1.2.0.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-17T14:33:33.635422Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

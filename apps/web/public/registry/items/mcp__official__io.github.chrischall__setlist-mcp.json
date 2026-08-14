@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.chrischall/setlist-mcp",
+  "type": "mcp",
+  "name": "setlist-mcp",
+  "description": "setlist.fm concert data for Claude — setlists, artists, venues, tours, and cities",
+  "author": "io.github.chrischall",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/chrischall/setlist-mcp",
+    "repo": "chrischall/setlist-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "setlist-mcp"
+    ],
+    "env": [
+      {
+        "name": "SETLIST_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "SETLIST_ACCEPT_LANGUAGE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SETLIST_SESSION_COOKIE",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-09T21:02:55.846092Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

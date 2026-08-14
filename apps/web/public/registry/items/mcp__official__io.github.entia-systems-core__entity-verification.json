@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.entia-systems-core/entity-verification",
+  "type": "mcp",
+  "name": "ENTIA Entity Verification",
+  "description": "5.5M verified entities, 10 countries, 13 tools. EU VAT, BORME, GLEIF, KYB. Free 100/mo.",
+  "author": "io.github.entia-systems-core",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ENTIA-IA/entia-mcp-server",
+    "repo": "ENTIA-IA/entia-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.entia.systems/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-13T10:07:05.708272Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

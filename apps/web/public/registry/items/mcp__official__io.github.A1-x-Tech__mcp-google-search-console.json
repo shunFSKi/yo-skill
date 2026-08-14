@@ -1,0 +1,94 @@
+{
+  "id": "mcp:official/io.github.A1-x-Tech/mcp-google-search-console",
+  "type": "mcp",
+  "name": "Google Search Console MCP",
+  "description": "MCP server for the Google Search Console API: search analytics, sitemaps, URL inspection, sites.",
+  "author": "io.github.A1-x-Tech",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/A1-x-Tech/mcp-google-search-console",
+    "repo": "A1-x-Tech/mcp-google-search-console"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-google-search-console"
+    ],
+    "env": [
+      {
+        "name": "GOOGLE_SEARCH_CONSOLE_CLIENT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GOOGLE_SEARCH_CONSOLE_CLIENT_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GOOGLE_SEARCH_CONSOLE_REFRESH_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GOOGLE_SEARCH_CONSOLE_ACCESS_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GOOGLE_SEARCH_CONSOLE_API_BASE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GOOGLE_SEARCH_CONSOLE_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GOOGLE_SEARCH_CONSOLE_MAX_RETRIES",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-11T16:59:04.521523Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

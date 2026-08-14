@@ -1,0 +1,83 @@
+{
+  "id": "mcp:official/io.github.Abhigyan-Shekhar/Waggle-mcp",
+  "type": "mcp",
+  "name": "Waggle-mcp",
+  "description": "Persistent graph-backed conversational memory for AI agents.",
+  "author": "io.github.Abhigyan-Shekhar",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Abhigyan-Shekhar/Waggle-mcp",
+    "repo": "Abhigyan-Shekhar/Waggle-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "waggle-mcp"
+    ],
+    "env": [
+      {
+        "name": "WAGGLE_TRANSPORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WAGGLE_BACKEND",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WAGGLE_DB_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WAGGLE_DEFAULT_TENANT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WAGGLE_MODEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-21T06:52:36.101524Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

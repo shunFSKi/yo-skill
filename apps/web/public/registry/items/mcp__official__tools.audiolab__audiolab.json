@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/tools.audiolab/audiolab",
+  "type": "mcp",
+  "name": "audiolab",
+  "description": "Loudness (EBU R128 / BS.1770-4), true-peak and voice-quality analysis for local files and URLs.",
+  "author": "tools.audiolab",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Audio-Launch/audiolab-mcp-server",
+    "repo": "Audio-Launch/audiolab-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@audiolabtools/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "AUDIOLAB_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "AUDIOLAB_API_BASE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AUDIOLAB_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-11T19:35:31.244424Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

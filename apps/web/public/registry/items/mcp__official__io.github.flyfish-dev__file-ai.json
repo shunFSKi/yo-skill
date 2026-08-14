@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.flyfish-dev/file-ai",
+  "type": "mcp",
+  "name": "File AI",
+  "description": "Agent-ready local document context with stable anchors.",
+  "author": "io.github.flyfish-dev",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/flyfish-dev/file-ai",
+    "repo": "flyfish-dev/file-ai"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@flyfish-dev/file-ai"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-24T08:44:01.334741Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

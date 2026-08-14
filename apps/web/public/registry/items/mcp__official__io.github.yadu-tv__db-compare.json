@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.yadu-tv/db-compare",
+  "type": "mcp",
+  "name": "db-compare",
+  "description": "Read-only MCP to diff SQL Server/Azure SQL schema, procs, views, and tables between environments.",
+  "author": "io.github.yadu-tv",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/yadu-tv/db-compare",
+    "repo": "yadu-tv/db-compare"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "db-compare-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-16T14:29:52.244725Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.adriancisnerosspeed-hub/civic-library-mcp",
+  "type": "mcp",
+  "name": "civic-library-mcp",
+  "description": "US civic & property data: geocoding, census tracts, Opportunity Zones, FEMA flood zones.",
+  "author": "io.github.adriancisnerosspeed-hub",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/adriancisnerosspeed-hub/civic-library-mcp",
+    "repo": "adriancisnerosspeed-hub/civic-library-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "civic-library-mcp"
+    ],
+    "env": [
+      {
+        "name": "CENSUS_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-16T04:28:41.761191Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

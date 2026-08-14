@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.Intuition-Lab/personal-model",
+  "type": "mcp",
+  "name": "Persome",
+  "description": "Local-first personal memory and model server for trusted MCP agents on macOS.",
+  "author": "io.github.Intuition-Lab",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Intuition-Lab/personal-model",
+    "repo": "Intuition-Lab/personal-model"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "personal-model"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-12T16:48:08.543154Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.RoleModel/optics-mcp",
+  "type": "mcp",
+  "name": "optics-mcp",
+  "description": "MCP Server for Optics Design System documentation and token usage.",
+  "author": "io.github.RoleModel",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/RoleModel/optics-mcp",
+    "repo": "RoleModel/optics-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "optics-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-12-05T23:07:51.354595Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

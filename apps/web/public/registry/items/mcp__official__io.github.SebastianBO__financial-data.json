@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.SebastianBO/financial-data",
+  "type": "mcp",
+  "name": "financial-data",
+  "description": "Stock prices, financials, insider trades, institutional holdings for 141K+ companies",
+  "author": "io.github.SebastianBO",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/SebastianBO/quant-platform",
+    "repo": "SebastianBO/quant-platform"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@lician/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "LICIAN_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-01-17T08:52:16.682252Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

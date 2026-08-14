@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.magellandata/spotlight",
+  "type": "mcp",
+  "name": "Magellan Data Spotlight",
+  "description": "Find parent companies, PE backers, corporate families, and portfolio siblings for any company.",
+  "author": "io.magellandata",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/sorrek/mcp",
+    "repo": "sorrek/mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://spotlight-mcp.magellandata.io/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-29T14:55:03.382152Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.croc100/litescope",
+  "type": "mcp",
+  "name": "LiteScope",
+  "description": "Operations toolchain for SQLite, Cloudflare D1 & Turso: inspect, diff, migrate, monitor & repair.",
+  "author": "io.github.croc100",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/croc100/Litescope",
+    "repo": "croc100/Litescope"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "litescope"
+    ],
+    "env": [
+      {
+        "name": "CLOUDFLARE_API_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "CLOUDFLARE_ACCOUNT_ID",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-14T02:12:15.601488Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,89 @@
+{
+  "id": "mcp:official/io.github.mrorigo/bash-command-mcp",
+  "type": "mcp",
+  "name": "bash-command-mcp",
+  "description": "Sophisticated bash command MCP server that runs and manages shell execution.",
+  "author": "io.github.mrorigo",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mrorigo/bash-command-mcp",
+    "repo": "mrorigo/bash-command-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "bash-command-mcp"
+    ],
+    "env": [
+      {
+        "name": "OTEL_ENABLED",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OTEL_SERVICE_NAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OTEL_SERVICE_VERSION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OTEL_EXPORTER_OTLP_ENDPOINT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OTEL_METRIC_EXPORT_INTERVAL_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BASH_COMMAND_MCP_LOG_DIR",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-17T14:17:15.733152Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

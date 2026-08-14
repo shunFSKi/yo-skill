@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/uk.co.frankspace/frankspace-public",
+  "type": "mcp",
+  "name": "FrankSpace Public MCP",
+  "description": "Read-only search over live UK office & workspace listings on FrankSpace.",
+  "author": "uk.co.frankspace",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://bqixfybgflusxwnvzjwu.supabase.co/functions/v1/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://bqixfybgflusxwnvzjwu.supabase.co/functions/v1/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-06T13:22:28.865684Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

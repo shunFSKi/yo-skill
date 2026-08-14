@@ -1,0 +1,83 @@
+{
+  "id": "mcp:official/io.github.helinakdogan/agent-magnet",
+  "type": "mcp",
+  "name": "agent-magnet",
+  "description": "Behavioral memory layer for AI tools. Learns preferences and context across Claude, Cursor, Codex.",
+  "author": "io.github.helinakdogan",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/helinakdogan/magnet-gateway",
+    "repo": "helinakdogan/magnet-gateway"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "agent-magnet"
+    ],
+    "env": [
+      {
+        "name": "MAGNET_USER_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "MAGNET_OPENAI_KEY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MAGNET_LOCAL_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MAGNET_REDIS_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MAGNET_PROJECT_ID",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-18T01:33:38.735446Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.shipmail-to/shipmail-mcp",
+  "type": "mcp",
+  "name": "shipmail-mcp",
+  "description": "Shipmail MCP server for AI agent custom-domain email inboxes with REST API and webhooks.",
+  "author": "io.github.shipmail-to",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/shipmail-to/shipmail-mcp",
+    "repo": "shipmail-to/shipmail-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "shipmail-mcp"
+    ],
+    "env": [
+      {
+        "name": "SHIPMAIL_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-02T09:46:26.864762Z"
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

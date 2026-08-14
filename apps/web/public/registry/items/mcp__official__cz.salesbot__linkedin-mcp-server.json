@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/cz.salesbot/linkedin-mcp-server",
+  "type": "mcp",
+  "name": "LinkedIn MCP Server (Salesbot)",
+  "description": "Human-in-the-loop LinkedIn outreach and a built-in sales CRM for AI agents. Safety-gated, anti-spam.",
+  "author": "cz.salesbot",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Kubis010/linkedin-mcp-server-salesbot",
+    "repo": "Kubis010/linkedin-mcp-server-salesbot"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://app.salesbot.cz/api/mcp",
+    "env": [
+      {
+        "name": "x-mcp-api-key",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-17T12:11:46.558733Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

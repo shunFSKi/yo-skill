@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.darylmcd/roslyn-mcp",
+  "type": "mcp",
+  "name": "roslyn-mcp",
+  "description": "Local-first MCP server for semantic C# analysis & refactoring via Roslyn & MSBuildWorkspace.",
+  "author": "io.github.darylmcd",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/darylmcd/Roslyn-Backed-MCP",
+    "repo": "darylmcd/Roslyn-Backed-MCP"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "Darylmcd.RoslynMcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-09T21:41:34.262238Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

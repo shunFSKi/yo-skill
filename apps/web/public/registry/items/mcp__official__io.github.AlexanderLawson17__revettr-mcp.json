@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.AlexanderLawson17/revettr-mcp",
+  "type": "mcp",
+  "name": "revettr-mcp",
+  "description": "Counterparty risk scoring for agentic commerce via x402 micropayments.",
+  "author": "io.github.AlexanderLawson17",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/AlexanderLawson17/revettr-python",
+    "repo": "AlexanderLawson17/revettr-python"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "revettr"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-29T19:58:03.048914Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

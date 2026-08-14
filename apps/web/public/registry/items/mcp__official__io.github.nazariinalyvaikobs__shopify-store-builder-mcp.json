@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.nazariinalyvaikobs/shopify-store-builder-mcp",
+  "type": "mcp",
+  "name": "shopify-store-builder-mcp",
+  "description": "MCP server for building Shopify stores via the Admin GraphQL API: themes, pages, and navigation",
+  "author": "io.github.nazariinalyvaikobs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/nazariinalyvaikobs/shopify-store-builder-mcp",
+    "repo": "nazariinalyvaikobs/shopify-store-builder-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "shopify-store-builder-mcp"
+    ],
+    "env": [
+      {
+        "name": "SHOPIFY_STORE_DOMAIN",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "SHOPIFY_CLIENT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SHOPIFY_CLIENT_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SHOPIFY_ADMIN_ACCESS_TOKEN",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T13:45:04.953857Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

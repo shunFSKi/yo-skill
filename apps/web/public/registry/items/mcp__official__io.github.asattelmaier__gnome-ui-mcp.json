@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.asattelmaier/gnome-ui-mcp",
+  "type": "mcp",
+  "name": "GNOME UI MCP",
+  "description": "GNOME Wayland desktop automation via AT-SPI discovery and Mutter input.",
+  "author": "io.github.asattelmaier",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/asattelmaier/gnome-ui-mcp",
+    "repo": "asattelmaier/gnome-ui-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/asattelmaier/gnome-ui-mcp:0.5.0"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-26T08:34:28.764972Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

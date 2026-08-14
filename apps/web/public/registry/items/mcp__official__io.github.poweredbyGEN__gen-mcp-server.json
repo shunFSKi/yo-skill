@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.poweredbyGEN/gen-mcp-server",
+  "type": "mcp",
+  "name": "GEN",
+  "description": "GEN is an autonomous social media agent: it spots trends, writes scripts, and creates videos.",
+  "author": "io.github.poweredbyGEN",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/poweredbyGEN/gen-agentic",
+    "repo": "poweredbyGEN/gen-agentic"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "gen-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "GEN_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-22T20:37:29.650526Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

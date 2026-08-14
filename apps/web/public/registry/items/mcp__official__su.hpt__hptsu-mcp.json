@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/su.hpt/hptsu-mcp",
+  "type": "mcp",
+  "name": "hptsu-mcp",
+  "description": "Search hpt.su — Russian/EAEU vehicle compliance documents: type approvals, certificates, VIN lookup.",
+  "author": "su.hpt",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/hpt-su/hptsu-mcp",
+    "repo": "hpt-su/hptsu-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "hptsu-mcp"
+    ],
+    "env": [
+      {
+        "name": "HPTSU_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "HPTSU_BASE_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-09T21:14:31.405454Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

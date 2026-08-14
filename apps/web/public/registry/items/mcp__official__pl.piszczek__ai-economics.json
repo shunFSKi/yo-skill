@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/pl.piszczek/ai-economics",
+  "type": "mcp",
+  "name": "ai-economics",
+  "description": "12 calculators for AI cost, energy and agent verification. Free API, no key.",
+  "author": "pl.piszczek",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/pich/ai-economics-mcp",
+    "repo": "pich/ai-economics-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@michalpiszczek/ai-economics-mcp"
+    ],
+    "env": [
+      {
+        "name": "AI_ECONOMICS_API",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-02T11:39:52.358101Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

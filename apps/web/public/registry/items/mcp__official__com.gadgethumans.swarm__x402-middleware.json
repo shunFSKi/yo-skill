@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/com.gadgethumans.swarm/x402-middleware",
+  "type": "mcp",
+  "name": "x402-middleware",
+  "description": "One-line x402 + Stripe payment middleware for MCP servers. The Stripe for the agent economy.",
+  "author": "com.gadgethumans.swarm",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/scotia1973-bot/gadgethumans-x402",
+    "repo": "scotia1973-bot/gadgethumans-x402"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@gadgethumans/x402"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-02T23:01:30.880008Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

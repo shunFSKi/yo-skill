@@ -1,0 +1,73 @@
+{
+  "id": "mcp:official/io.github.tracegazer/clockify-mcp",
+  "type": "mcp",
+  "name": "Clockify Time Tracking",
+  "description": "Clockify time-tracking MCP: 112 tools across 18 domains, read-only by default with opt-in writes.",
+  "author": "io.github.tracegazer",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/tracegazer/clockify-mcp",
+    "repo": "tracegazer/clockify-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "clockify-mcp"
+    ],
+    "env": [
+      {
+        "name": "CLOCKIFY_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "CLOCKIFY_ACCESS_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CLOCKIFY_DEFAULT_WORKSPACE_ID",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-09T15:58:45.093086Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

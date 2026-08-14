@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.TocharianOU/kibana",
+  "type": "mcp",
+  "name": "Kibana",
+  "description": "Kibana MCP Server with dynamic API discovery and comprehensive Elastic Stack integration",
+  "author": "io.github.TocharianOU",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/TocharianOU/mcp-server-kibana",
+    "repo": "TocharianOU/mcp-server-kibana"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@tocharianou/mcp-server-kibana"
+    ],
+    "env": [
+      {
+        "name": "KIBANA_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "KIBANA_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "KIBANA_USERNAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "KIBANA_PASSWORD",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-03T11:33:27.045794Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

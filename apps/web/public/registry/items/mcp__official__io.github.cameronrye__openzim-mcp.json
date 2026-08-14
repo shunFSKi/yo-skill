@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.cameronrye/openzim-mcp",
+  "type": "mcp",
+  "name": "openzim-mcp",
+  "description": "Offline MCP access to ZIM knowledge archives — Wikipedia, Wiktionary, Stack Exchange, Kiwix.",
+  "author": "io.github.cameronrye",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/cameronrye/openzim-mcp",
+    "repo": "cameronrye/openzim-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "openzim-mcp"
+    ],
+    "env": [
+      {
+        "name": "OPENZIM_MCP_TOOL_MODE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-22T15:49:03.715111Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

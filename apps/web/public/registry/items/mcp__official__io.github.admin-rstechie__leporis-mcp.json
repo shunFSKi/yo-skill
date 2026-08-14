@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.admin-rstechie/leporis-mcp",
+  "type": "mcp",
+  "name": "Leporis WhatsApp",
+  "description": "Send and read WhatsApp messages on your Leporis account from AI coding agents, via your own API key.",
+  "author": "io.github.admin-rstechie",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/admin-rstechie/leporis-mcp",
+    "repo": "admin-rstechie/leporis-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://leporis.mcp.rstechie.in/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-31T03:24:45.302462Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

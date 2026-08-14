@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.riponcm/projectmem",
+  "type": "mcp",
+  "name": "projectmem",
+  "description": "Local-first memory + judgment layer for AI coding agents — warns before repeating failed fixes.",
+  "author": "io.github.riponcm",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/riponcm/projectmem",
+    "repo": "riponcm/projectmem"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "projectmem"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-08T01:28:27.937427Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

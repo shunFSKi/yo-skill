@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.AsaiShota/mcp-server",
+  "type": "mcp",
+  "name": "x402-market",
+  "description": "Let AI agents pay-per-call for any HTTP API via x402 on Base mainnet. One tool: pay_and_call.",
+  "author": "io.github.AsaiShota",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/AsaiShota/x402-market",
+    "repo": "AsaiShota/x402-market"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@x402-market/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "MARKET_API_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_BUYER_PRIVATE_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "BASE_RPC_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BASE_CHAIN_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_MAX_PRICE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-02T06:16:30.253709Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

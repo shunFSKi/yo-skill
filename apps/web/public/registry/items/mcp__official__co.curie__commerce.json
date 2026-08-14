@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/co.curie/commerce",
+  "type": "mcp",
+  "name": "Curie Commerce",
+  "description": "Search, compare in 3D, and buy products from 5.6M+ Shopify stores. Free tier; Pro adds checkout.",
+  "author": "co.curie",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/curievision/curie-shopify-app",
+    "repo": "curievision/curie-shopify-app"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://chat.curie.app/api/mcp/global"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-20T06:10:54.531321Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

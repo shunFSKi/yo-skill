@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.scorecard/mcp",
+  "type": "mcp",
+  "name": "mcp",
+  "description": "MCP server providing access to the Scorecard API to evaluate and optimize LLM systems.",
+  "author": "io.scorecard",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/scorecard-ai/scorecard-node",
+    "repo": "scorecard-ai/scorecard-node"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "scorecard-ai-mcp"
+    ],
+    "env": [
+      {
+        "name": "SCORECARD_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-09-12T04:07:55.578779Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

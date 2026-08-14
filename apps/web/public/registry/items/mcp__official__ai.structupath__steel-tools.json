@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/ai.structupath/steel-tools",
+  "type": "mcp",
+  "name": "steel-tools",
+  "description": "Read-only steel calculators: gauge, plate, shapes, bar/tube, pipe schedule, bolts, MTR checks.",
+  "author": "ai.structupath",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://www.structupath.ai/api/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://www.structupath.ai/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T01:45:51.297232Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

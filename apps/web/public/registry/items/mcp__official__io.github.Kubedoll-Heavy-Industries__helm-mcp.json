@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.Kubedoll-Heavy-Industries/helm-mcp",
+  "type": "mcp",
+  "name": "Helm MCP",
+  "description": "Give your AI assistant access to real Helm chart data. No more hallucinated values.yaml files.",
+  "author": "io.github.Kubedoll-Heavy-Industries",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Kubedoll-Heavy-Industries/helm-mcp",
+    "repo": "Kubedoll-Heavy-Industries/helm-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://helm-mcp.kubedoll.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-18T22:49:05.783941Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

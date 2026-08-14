@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.perforce/perforce-agentic-gateway",
+  "type": "mcp",
+  "name": "Perforce Agentic Gateway",
+  "description": "Local MCP gateway that proxies AI clients to many MCP servers with a token-efficient code mode",
+  "author": "io.github.perforce",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/perforce/perforce-agentic-gateway",
+    "repo": "perforce/perforce-agentic-gateway"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "perforce-agentic-gateway"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-08T23:57:23.481351Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

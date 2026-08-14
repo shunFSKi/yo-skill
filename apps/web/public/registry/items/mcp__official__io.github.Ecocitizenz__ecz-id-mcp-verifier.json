@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.Ecocitizenz/ecz-id-mcp-verifier",
+  "type": "mcp",
+  "name": "ecz-id-mcp-verifier",
+  "description": "Local-first, read-only ECZ-ID verifier over MCP (stdio): checks, reports, explains, routes.",
+  "author": "io.github.Ecocitizenz",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Ecocitizenz/ecz-id-mcp-verifier",
+    "repo": "Ecocitizenz/ecz-id-mcp-verifier"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@ecocitizenz/ecz-id-mcp-verifier"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-01T17:30:02.316527Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

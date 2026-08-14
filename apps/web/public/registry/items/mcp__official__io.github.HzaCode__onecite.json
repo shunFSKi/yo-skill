@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.HzaCode/onecite",
+  "type": "mcp",
+  "name": "onecite",
+  "description": "Generate academic citations from DOI, arXiv, titles, or URLs in BibTeX, APA, MLA formats.",
+  "author": "io.github.HzaCode",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/HzaCode/OneCite",
+    "repo": "HzaCode/OneCite"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "onecite"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-10-12T21:44:12.300272Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

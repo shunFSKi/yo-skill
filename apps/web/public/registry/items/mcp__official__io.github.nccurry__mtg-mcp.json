@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.nccurry/mtg-mcp",
+  "type": "mcp",
+  "name": "mtg-mcp",
+  "description": "An evidence-first .NET MCP server for Magic: The Gathering deckbuilding workflows.",
+  "author": "io.github.nccurry",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/nccurry/mtg-mcp",
+    "repo": "nccurry/mtg-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "Nccurry.MtgMcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-13T01:00:07.617838Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

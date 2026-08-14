@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.postgate-ai/microsoft-exchange",
+  "type": "mcp",
+  "name": "microsoft-exchange",
+  "description": "Microsoft Exchange MCP server - hosted, multi-user, incl. Exchange on-prem & hybrid (EWS)",
+  "author": "com.postgate-ai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.postgate-ai.com",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.postgate-ai.com"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-12T03:32:27.568795Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

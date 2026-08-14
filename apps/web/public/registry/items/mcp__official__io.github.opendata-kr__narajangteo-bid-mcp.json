@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.opendata-kr/narajangteo-bid-mcp",
+  "type": "mcp",
+  "name": "나라장터 입찰공고",
+  "description": "나라장터 입찰공고정보서비스(공공데이터포털 data.go.kr) Open API를 감싼 로컬 MCP 서버",
+  "author": "io.github.opendata-kr",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/opendata-kr/narajangteo-bid-mcp",
+    "repo": "opendata-kr/narajangteo-bid-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@opendata-kr/narajangteo-bid-mcp"
+    ],
+    "env": [
+      {
+        "name": "DATA_GO_KR_SERVICE_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "DATA_GO_KR_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DATA_GO_KR_DOWNLOAD_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DATA_GO_KR_DOWNLOAD_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DATA_GO_KR_DOWNLOAD_MAX_BYTES",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-14T07:57:06.03956Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

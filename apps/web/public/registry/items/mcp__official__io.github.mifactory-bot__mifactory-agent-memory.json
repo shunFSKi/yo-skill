@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.mifactory-bot/mifactory-agent-memory",
+  "type": "mcp",
+  "name": "mifactory-agent-memory",
+  "description": "Persistent memory for AI agents across Claude, ChatGPT and any MCP client.",
+  "author": "io.github.mifactory-bot",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mifactory-bot/agent-memory-api",
+    "repo": "mifactory-bot/agent-memory-api"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://agent-memory-api.vercel.app/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-11T07:13:58.462699Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

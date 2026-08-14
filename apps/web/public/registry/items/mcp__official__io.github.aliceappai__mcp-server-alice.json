@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.aliceappai/mcp-server-alice",
+  "type": "mcp",
+  "name": "mcp-server-alice",
+  "description": "Secure audio transcription meets AI. Connect Alice recordings to Claude, ChatGPT, Gemini, and more.",
+  "author": "io.github.aliceappai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/aliceappai/mcp-server-alice",
+    "repo": "aliceappai/mcp-server-alice"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://aliceapp.ai/mcp/{api_key}"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-23T20:58:49.50458Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

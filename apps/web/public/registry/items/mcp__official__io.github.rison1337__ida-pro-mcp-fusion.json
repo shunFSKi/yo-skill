@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.rison1337/ida-pro-mcp-fusion",
+  "type": "mcp",
+  "name": "IDA Pro MCP Fusion",
+  "description": "IDA Pro MCP fusion with cache queries and multi-binary headless analysis.",
+  "author": "io.github.rison1337",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/rison1337/ida-pro-mcp-fusion",
+    "repo": "rison1337/ida-pro-mcp-fusion"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/rison1337/ida-pro-mcp-fusion/releases/download/v2.0.0/ida-pro-mcp-fusion-2.0.0.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-08T10:13:58.303566Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

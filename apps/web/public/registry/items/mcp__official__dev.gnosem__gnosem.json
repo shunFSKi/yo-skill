@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/dev.gnosem/gnosem",
+  "type": "mcp",
+  "name": "Gnosem",
+  "description": "Cross-vendor AI memory over MCP. One semantic store, readable and writeable from every MCP client.",
+  "author": "dev.gnosem",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/gnosem/gnosem",
+    "repo": "gnosem/gnosem"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://gnosem.dev/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-30T01:13:01.36249Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

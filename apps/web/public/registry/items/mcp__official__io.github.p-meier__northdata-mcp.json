@@ -1,0 +1,78 @@
+{
+  "id": "mcp:official/io.github.p-meier/northdata-mcp",
+  "type": "mcp",
+  "name": "northdata-mcp",
+  "description": "NorthData API for German company, owner, and financial data — with a built-in credit guard.",
+  "author": "io.github.p-meier",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/p-meier/northdata-connectors",
+    "repo": "p-meier/northdata-connectors"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "northdata-mcp"
+    ],
+    "env": [
+      {
+        "name": "NORTHDATA_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "NORTHDATA_APPROVAL_THRESHOLD",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "NORTHDATA_ABSOLUTE_MAX",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "NORTHDATA_CREDIT_LOG",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-18T12:36:07.610067Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

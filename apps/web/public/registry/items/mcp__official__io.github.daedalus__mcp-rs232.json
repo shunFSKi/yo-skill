@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.daedalus/mcp-rs232",
+  "type": "mcp",
+  "name": "mcp-rs232",
+  "description": "An MCP server that exposes RS232 serial port connectivity",
+  "author": "io.github.daedalus",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/daedalus/mcp-rs232",
+    "repo": "daedalus/mcp-rs232"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-rs232"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-28T05:27:52.363322Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

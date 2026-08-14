@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.pipeworx-io/data-europa",
+  "type": "mcp",
+  "name": "Data Europa",
+  "description": "data.europa.eu — official EU open-data hub (~1.6M datasets)",
+  "author": "io.github.pipeworx-io",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/pipeworx-io/mcp-data-europa",
+    "repo": "pipeworx-io/mcp-data-europa"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://gateway.pipeworx.io/data-europa/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-16T01:58:58.027466Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

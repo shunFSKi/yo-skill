@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.Argo-RPG-Platform/argo-mcp",
+  "type": "mcp",
+  "name": "argo-mcp",
+  "description": "MCP server for Argo RPG Platform — connects AI assistants to campaign data via OAuth2",
+  "author": "io.github.Argo-RPG-Platform",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Argo-RPG-Platform/MCP",
+    "repo": "Argo-RPG-Platform/MCP"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "argo-mcp"
+    ],
+    "env": [
+      {
+        "name": "OAUTH_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "REFRESH_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ARGO_API_BASE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-14T14:41:08.311273Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

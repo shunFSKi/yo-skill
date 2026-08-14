@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/ai.d50/d50-platform",
+  "type": "mcp",
+  "name": "D50 AI — Sales, Marketing & Hiring Automation",
+  "description": "246 tools to run sales, marketing & hiring: CRM, leads, AI calling, content, recruiting & SEO.",
+  "author": "ai.d50",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://app.d50.ai/api/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://app.d50.ai/api/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-14T08:27:04.313042Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

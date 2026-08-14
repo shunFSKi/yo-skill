@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/app.octotrip/rental-cars",
+  "type": "mcp",
+  "name": "OctoTrip Rental Cars",
+  "description": "Free, no-login rental car search with real-time pricing.",
+  "author": "app.octotrip",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/octotrip/rental-cars",
+    "repo": "octotrip/rental-cars"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.octotrip.app/rental-cars/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-28T13:56:17.988893Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.JordanRO2/idamesh",
+  "type": "mcp",
+  "name": "idamesh",
+  "description": "MCP server for IDA Pro: decompiler, disassembler, and analysis tools for MCP clients.",
+  "author": "io.github.JordanRO2",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/JordanRO2/idamesh",
+    "repo": "JordanRO2/idamesh"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "idamesh"
+    ],
+    "env": [
+      {
+        "name": "IDADIR",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-09T13:37:01.197522Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

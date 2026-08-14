@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/ai.smithery/isnow890-data4library-mcp",
+  "type": "mcp",
+  "name": "isnow890-data4library-mcp",
+  "description": "책 싫어하는 제가 책에 대해 아는척하고 싶어서 만들었습니다.. 내 주변 도서관 실시간 대출 확인 읽고 싶은 책을 검색하면 주변 도서관 대출 가능 여부를 즉시 확인 굳이 도서관…",
+  "author": "ai.smithery",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/isnow890/data4library-mcp",
+    "repo": "isnow890/data4library-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://server.smithery.ai/@isnow890/data4library-mcp/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-09-29T10:45:21.467985Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

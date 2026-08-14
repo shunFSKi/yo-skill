@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.abbacusgroup/cortex",
+  "type": "mcp",
+  "name": "Cortex",
+  "description": "Persistent knowledge system with OWL-RL reasoning and 22 MCP tools. Local-first.",
+  "author": "io.github.abbacusgroup",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/abbacusgroup/Cortex",
+    "repo": "abbacusgroup/Cortex"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "abbacus-cortex"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-12T17:11:28.201578Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

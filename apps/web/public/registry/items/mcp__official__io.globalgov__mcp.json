@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.globalgov/mcp",
+  "type": "mcp",
+  "name": "GlobalGov — Government Procurement Intelligence",
+  "description": "Search 9.9M+ government contracts, tenders & grants across 200+ countries, updated daily.",
+  "author": "io.globalgov",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://freemcp.globalgov.io/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://freemcp.globalgov.io/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-22T16:54:25.244758Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

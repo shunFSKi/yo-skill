@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.lulzasaur9192/marketplace-search",
+  "type": "mcp",
+  "name": "marketplace-search",
+  "description": "22 tools: search 15+ marketplaces, verify licenses, childcare costs, FCC, GSA auctions",
+  "author": "io.github.lulzasaur9192",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/lulzasaur9192/marketplace-search-mcp",
+    "repo": "lulzasaur9192/marketplace-search-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@lulzasaur9192/marketplace-search-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-25T04:55:15.628061Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

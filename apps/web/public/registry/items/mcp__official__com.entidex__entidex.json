@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/com.entidex/entidex",
+  "type": "mcp",
+  "name": "Entidex — Entity Intelligence & AI Knowledge Correction",
+  "description": "Entity intelligence across AI surfaces. Read the verified record and submit corrections.",
+  "author": "com.entidex",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Entidex/MiloSays",
+    "repo": "Entidex/MiloSays"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://entidex.com/api/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-15T21:05:38.84127Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

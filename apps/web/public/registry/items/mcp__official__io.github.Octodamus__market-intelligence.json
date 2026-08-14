@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.Octodamus/market-intelligence",
+  "type": "mcp",
+  "name": "Octodamus Intelligence Oracle",
+  "description": "AI oracle: BTC/ETH/SOL signals, Polymarket edges, congressional trades. x402 $0.01/call on Base.",
+  "author": "io.github.Octodamus",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Octodamus/octodamus-core",
+    "repo": "Octodamus/octodamus-core"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.octodamus.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-15T20:19:56.49438Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

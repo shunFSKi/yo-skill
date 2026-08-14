@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.virtualsms-io/sms",
+  "type": "mcp",
+  "name": "sms",
+  "description": "Real physical SIMs for AI agents: SMS verification and rentals. 145+ countries, 2500+ services.",
+  "author": "io.github.virtualsms-io",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/virtualsms-io/mcp-server",
+    "repo": "virtualsms-io/mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "virtualsms-mcp"
+    ],
+    "env": [
+      {
+        "name": "VIRTUALSMS_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-18T18:58:12.520357Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

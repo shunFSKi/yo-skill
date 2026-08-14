@@ -1,0 +1,73 @@
+{
+  "id": "mcp:official/io.github.birthday-tools/edgarmcp",
+  "type": "mcp",
+  "name": "edgarmcp",
+  "description": "Clean, normalized SEC EDGAR / FRED / ETF / index data for AI agents.",
+  "author": "io.github.birthday-tools",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/birthday-tools/edgarmcp",
+    "repo": "birthday-tools/edgarmcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-edgar"
+    ],
+    "env": [
+      {
+        "name": "EDGAR_USER_AGENT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "FRED_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "OPENFIGI_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-21T10:54:52.030263Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

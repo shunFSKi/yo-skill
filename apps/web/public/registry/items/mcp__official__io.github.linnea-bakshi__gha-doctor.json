@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.linnea-bakshi/gha-doctor",
+  "type": "mcp",
+  "name": "gha-doctor",
+  "description": "Diagnose GitHub Actions CI: lint, flaky tests, wasted minutes, health score. Read-only MCP tools.",
+  "author": "io.github.linnea-bakshi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/linnea-bakshi/gha-doctor",
+    "repo": "linnea-bakshi/gha-doctor"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/linnea-bakshi/gha-doctor:0.61.0"
+    ],
+    "env": [
+      {
+        "name": "GITHUB_TOKEN",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-04T10:18:04.880456Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

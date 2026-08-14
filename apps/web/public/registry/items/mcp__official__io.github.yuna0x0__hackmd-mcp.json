@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.yuna0x0/hackmd-mcp",
+  "type": "mcp",
+  "name": "HackMD",
+  "description": "A Model Context Protocol server for integrating HackMD's note-taking platform with AI assistants.",
+  "author": "io.github.yuna0x0",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/yuna0x0/hackmd-mcp",
+    "repo": "yuna0x0/hackmd-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "hackmd-mcp"
+    ],
+    "env": [
+      {
+        "name": "HACKMD_API_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "HACKMD_API_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-11-28T22:08:03.837348Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

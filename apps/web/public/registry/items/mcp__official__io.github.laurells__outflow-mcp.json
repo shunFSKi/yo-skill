@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.laurells/outflow-mcp",
+  "type": "mcp",
+  "name": "outflow-mcp",
+  "description": "MCP server exposing an Outflow workspace's live architecture graph as context for AI coding agents",
+  "author": "io.github.laurells",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/laurells/outflow-mcp",
+    "repo": "laurells/outflow-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "outflow-mcp"
+    ],
+    "env": [
+      {
+        "name": "OUTFLOW_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OUTFLOW_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "OUTFLOW_WORKSPACE_ID",
+        "required": true,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-17T15:00:55.18078Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

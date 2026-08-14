@@ -1,0 +1,123 @@
+{
+  "id": "mcp:official/io.github.sfrangulov/minirag-mcp",
+  "type": "mcp",
+  "name": "minirag-mcp",
+  "description": "Local-first RAG MCP server: hybrid search over a folder of your own documents",
+  "author": "io.github.sfrangulov",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/sfrangulov/minirag-mcp",
+    "repo": "sfrangulov/minirag-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "minirag-mcp"
+    ],
+    "env": [
+      {
+        "name": "BASE_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BASE_DIRS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DB_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CACHE_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MODEL_NAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MAX_FILE_SIZE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CHUNK_TOKEN_BUDGET",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RAG_HYBRID_WEIGHT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RAG_GROUPING",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RAG_MAX_DISTANCE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RAG_MAX_FILES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RAG_INSTRUCTIONS_APPEND",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ALLOW_PRIVATE_URLS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-09T21:16:04.396366Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

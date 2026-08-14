@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.tinygodsdev/word-aligner",
+  "type": "mcp",
+  "name": "word-aligner",
+  "description": "Turn a phrase and its translation into a shareable word-alignment diagram.",
+  "author": "io.github.tinygodsdev",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/tinygodsdev/bitext-word-alignment",
+    "repo": "tinygodsdev/bitext-word-alignment"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://aligner.tinygods.dev/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-29T21:15:58.551055Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

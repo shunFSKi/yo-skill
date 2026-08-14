@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.msdanyg/smart-connections-mcp",
+  "type": "mcp",
+  "name": "smart-connections-mcp",
+  "description": "Local semantic search over Obsidian vaults via Smart Connections embeddings. Multi-vault, private.",
+  "author": "io.github.msdanyg",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/msdanyg/smart-connections-mcp",
+    "repo": "msdanyg/smart-connections-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "smart-connections-mcp"
+    ],
+    "env": [
+      {
+        "name": "SMART_VAULT_PATH",
+        "required": true,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-14T03:50:53.454032Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

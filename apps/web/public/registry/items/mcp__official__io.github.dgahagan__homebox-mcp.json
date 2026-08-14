@@ -1,0 +1,78 @@
+{
+  "id": "mcp:official/io.github.dgahagan/homebox-mcp",
+  "type": "mcp",
+  "name": "homebox-mcp",
+  "description": "Homebox home inventory: search, intake, warranties, attachments, locations, tags, QR labels",
+  "author": "io.github.dgahagan",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dgahagan/homebox-mcp",
+    "repo": "dgahagan/homebox-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "homebox-mcp"
+    ],
+    "env": [
+      {
+        "name": "HOMEBOX_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "HOMEBOX_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "HOMEBOX_ALIAS_FIELD",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "HOMEBOX_LABEL_DIR",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-06T02:24:57.256921Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

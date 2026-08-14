@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.ormuzdo/agentic-security-shield",
+  "type": "mcp",
+  "name": "Agentic Security Shield",
+  "description": "12-layer security configs for AI coding agents. Autonomous purchase via x402 (USDC on Base).",
+  "author": "io.github.ormuzdo",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ormuzdo/agentic-security-shield",
+    "repo": "ormuzdo/agentic-security-shield"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://agentic-security-shield-mcp-production.up.railway.app/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-19T14:47:21.453608Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

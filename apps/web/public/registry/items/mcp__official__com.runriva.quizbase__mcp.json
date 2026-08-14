@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/com.runriva.quizbase/mcp",
+  "type": "mcp",
+  "name": "QuizBase",
+  "description": "MCP server for trivia: 1.4M+ questions (EN+PL), 24 categories, 12 tools + 4 prompts, OAuth 2.1.",
+  "author": "com.runriva.quizbase",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://quizbase.runriva.com/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://quizbase.runriva.com/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-24T08:46:35.149123Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

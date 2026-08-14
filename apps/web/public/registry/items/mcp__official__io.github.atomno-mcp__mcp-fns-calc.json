@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.atomno-mcp/mcp-fns-calc",
+  "type": "mcp",
+  "name": "mcp-fns-calc",
+  "description": "Russian tax calculators (VAT, USN, NDFL) and FNS fiscal-status checks via MCP.",
+  "author": "io.github.atomno-mcp",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/atomno-mcp/mcp-fns-calc",
+    "repo": "atomno-mcp/mcp-fns-calc"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "atomno-mcp-fns-calc"
+    ],
+    "env": [
+      {
+        "name": "MCP_FNS_CALC_TOKEN",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-14T18:57:18.14835Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

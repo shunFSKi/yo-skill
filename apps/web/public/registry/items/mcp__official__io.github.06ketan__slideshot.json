@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.06ketan/slideshot",
+  "type": "mcp",
+  "name": "slideshot",
+  "description": "Convert HTML to PDF/PNG/WebP/PPTX slide carousels with 11 themes — for LinkedIn, decks, posts.",
+  "author": "io.github.06ketan",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/06ketan/slideshot",
+    "repo": "06ketan/slideshot"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "slideshot-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-01T13:33:07.797052Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

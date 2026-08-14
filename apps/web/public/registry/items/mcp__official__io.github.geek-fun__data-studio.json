@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.geek-fun/data-studio",
+  "type": "mcp",
+  "name": "Data Studio",
+  "description": "Unified MCP server for SQL and NoSQL databases, powered by dockit and sqlkit desktop apps",
+  "author": "io.github.geek-fun",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/geek-fun/data-studio-agent",
+    "repo": "geek-fun/data-studio-agent"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@geek-fun/data-studio-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-09T14:39:49.751797Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

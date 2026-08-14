@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.changethisfile/mcp",
+  "type": "mcp",
+  "name": "ChangeThisFile",
+  "description": "Convert files between 690+ formats: image, video, audio, documents, ebooks, archives. Free, no auth.",
+  "author": "com.changethisfile",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/aadilr/changethisfile-mcp",
+    "repo": "aadilr/changethisfile-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://changethisfile.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-10T22:52:59.436032Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

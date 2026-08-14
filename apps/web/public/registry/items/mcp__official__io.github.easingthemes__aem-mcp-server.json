@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.easingthemes/aem-mcp-server",
+  "type": "mcp",
+  "name": "aem-mcp-server",
+  "description": "AEM MCP server. Chat with your AEM instance for content, component, and asset operations.",
+  "author": "io.github.easingthemes",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/easingthemes/aem-mcp-server",
+    "repo": "easingthemes/aem-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "aem-mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-06T13:41:33.633887Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

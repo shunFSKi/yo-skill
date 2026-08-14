@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.NameetP/pdfmux",
+  "type": "mcp",
+  "name": "pdfmux",
+  "description": "PDF-to-Markdown extraction that audits its own output and flags any extractor's silent drops.",
+  "author": "io.github.NameetP",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/NameetP/pdfmux",
+    "repo": "NameetP/pdfmux"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "pdfmux"
+    ],
+    "env": [
+      {
+        "name": "GEMINI_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-27T17:41:55.454767Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

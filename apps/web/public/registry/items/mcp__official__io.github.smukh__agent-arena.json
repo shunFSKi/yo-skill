@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.smukh/agent-arena",
+  "type": "mcp",
+  "name": "Agent Arena Registry",
+  "description": "On-chain ERC-8004 agent registry. Search, register, and check reputation across 16 chains.",
+  "author": "io.github.smukh",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/agentarena/agent-arena",
+    "repo": "agentarena/agent-arena"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://agentarena.site/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-23T11:40:24.450379Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

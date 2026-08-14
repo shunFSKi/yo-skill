@@ -1,0 +1,73 @@
+{
+  "id": "mcp:official/io.github.cunicopia-dev/multi-account-gmail-mcp",
+  "type": "mcp",
+  "name": "Multi-Account Gmail",
+  "description": "Multi-account Gmail MCP server — read, search, draft, and label across every inbox.",
+  "author": "io.github.cunicopia-dev",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/cunicopia-dev/gmail-mcp",
+    "repo": "cunicopia-dev/gmail-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "multi-account-gmail-mcp"
+    ],
+    "env": [
+      {
+        "name": "GMAIL_MCP_CLIENT_SECRET",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GMAIL_MCP_DB",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GMAIL_MCP_OAUTH_PORT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-26T02:20:34.000379Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

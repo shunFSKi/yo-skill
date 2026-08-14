@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.ramakrishnanhulk20/patina",
+  "type": "mcp",
+  "name": "Patina",
+  "description": "Check how many years of verifiable history a person has behind accounts they already own.",
+  "author": "io.github.ramakrishnanhulk20",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ramakrishnanhulk20/Patina",
+    "repo": "ramakrishnanhulk20/Patina"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://patinadata.xyz/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T06:45:46.019379Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# Patina\n\n**Anyone can make a new account. Nobody can make an old one.**\n\nPatina reads the history in accounts a person already owns and turns it into\nportable evidence that a real human has been there for years. Built on the\n[Vana](https://vana.org) data portability protocol, where the data stays in the\nuser's own Personal Server and is read once, under a grant they can revoke.\n\nLive at **[patinadata.xyz](https://patinadata.xyz)**.\n\n---\n\n## The problem\n\nSybil resistance is unsolved and expensive. An airdrop, a quadratic funding\nround, a DAO vote or a free trial all need to know whether they are talking to a\nthousand people or to one person with a thousand wallets. The usual answers are\npoor: biometrics are invasive, KYC destroys privacy, and most behavioural\nsignals the internet relies on today can simply be bought.\n\nSomebody running an account farm can buy followers, bulk-upload posts and fill\nin a convincing profile. What they cannot buy is **a decade**.\n\n## The approach\n\nPatina scores five things, weighted by how expensive each one is in *time*\nrather than in money.\n\n| Signal | Max | What it measures |\n| --- | --- | --- |\n| **Age** | 40 | The oldest date provable across every connected source |\n| **Corroboration** | 20 | How many *independent* sources prove that date, weighted by how old each is |\n| **Depth** | 20 | Posts, videos and repositories actually made |\n| **Standing** | 10 | Others treating you as real. Weighted low: followers are buyable |\n| **Breadth** | 10 | Independent accounts corroborating each other |\n\nCorroboration replaced an earlier **Continuity** signal that counted distinct\nmonths of post history. That was the better measure and it turned out to be\nunreachable: per-item timestamps only existed on scopes the desktop app\ncollects, so on the web it scored zero for everybody and made a quarter of the\ntotal unwinnable. A score with points nobody can earn is not a strict score,\nit is a broken one.\n\nAge and corroboration are earned outright. Everything else is **gated behind\nthem**: an attacker can manufacture breadth, depth and followers in an\nafternoon, so those only count to the extent that real elapsed history backs\nthem up. A floor of 15% stops a genuinely young person being flattened to zero\nfor the crime of being nineteen.\n\nScored against representative profiles, under the weights above:\n\n| | Score |\n| --- | --- |\n| Eleven years of ordinary history across four accounts | **83** |\n| Genuinely young: three years, two accounts, real | **23** |\n| Account farm: 3,900 bought followers, 120 posts in one week | **5** |\n\nThe gap between the first and last row is the whole product. The middle row is\nthe one to keep an eye on: a real person with a short history scores low by\ndesign, and the further that sits above zero the better, because a low score is\nevidence of absence rather than an accusation.\n\n## Why this needs Vana\n\nDelete the protocol and the product stops being expressible.\n\nReading someone's Instagram or GitHub history conventionally means OAuth, which\nhands the raw data to whoever asked and keeps it indefinitely. Users refuse, and\nplatforms eventually shut it down. Vana inverts that: the data lives in the\nuser's own Personal Server, an app pays a per-read fee to see only the scopes\nthat were granted, the grant is revocable, and **another app can verify the same\nproof without the user repeating any of it**. That last property is what makes a\nportable score possible at all.\n\n## Honest limits\n\nStated on the site itself, not buried here:\n\n- **It cannot prove personhood.** It reports how much real history it can see.\n  That is evidence, not a certificate.\n- **A low score is not an accusation.** Young, private or quiet accounts score\n  low and are doing nothing wrong.\n- **Aged accounts can be bought.** That turns a free attack into an expensive\n  one whose price climbs with age. It does not make it impossible.\n\n## Running it\n\n```bash\nnpm install\ncp .env.example .env.local   # then fill in the values\nnpm run dev\n```\n\nYou will need a Vana app identity. Create or register one at\n[account.vana.org/developers](https://account.vana.org/developers), put the key\nin `.env.local`, then:\n\n```bash\nnpm run register:moksha\n```\n\nFund the app's escrow from the same page (faucet VANA on testnet, USDC.e on\nmainnet) and connect a source at\n[app.vana.org/sources](https://app.vana.org/sources) so there is something to\nread.\n\n### Commands\n\n| | |\n| --- | --- |\n| `npm run dev` | Development server |\n| `npm test` | Scoring, normalisation and store tests |\n| `npm run typecheck` | Types, against a config that ignores generated route types |\n| `npm run verify` | Typecheck, tests, and a production build into a separate dist dir |\n\n## Notes for anyone reading the code\n\n- **`src/lib/score.ts`** is the whole argument. Every weight carries a comment\n  explaining why it is what it is.\n- **`src/lib/normalize.ts`** exists because Vana's server-side collection\n  returns a different shape from the JSON Schemas published for the desktop\n  connectors: the payload arrives inside an `items[]` array with different field\n  names. Both shapes are handled, and a real captured payload is pinned in the\n  tests so an upstream change breaks a test rather than the live site.\n- **`src/app/connect/useConnect.ts`** replaces the SDK's popup helper with a\n  same-tab redirect. Popups get blocked on mobile and background tabs are\n  suspended mid-poll, which strands people at the exact moment they have\n  approved.\n- **Grants are keyed to the (user, app) pair, not to the scope.** Approving a\n  second source *replaces* the first one's scopes, so every read is persisted\n  when it happens. There is exactly one chance to read each source.\n\n## Licence\n\nMIT, see [LICENSE](LICENSE).\n",
+  "status": "curated"
+}

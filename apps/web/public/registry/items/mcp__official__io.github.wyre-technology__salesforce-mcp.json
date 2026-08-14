@@ -1,0 +1,109 @@
+{
+  "id": "mcp:official/io.github.wyre-technology/salesforce-mcp",
+  "type": "mcp",
+  "name": "Salesforce",
+  "description": "MCP server for Salesforce CRM — Accounts, Contacts, Opportunities, Leads, Cases.",
+  "author": "io.github.wyre-technology",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/wyre-technology/salesforce-mcp",
+    "repo": "wyre-technology/salesforce-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/wyre-technology/salesforce-mcp:v1.0.2"
+    ],
+    "env": [
+      {
+        "name": "AUTH_MODE",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "SALESFORCE_AUTH_FLOW",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SALESFORCE_CLIENT_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "SALESFORCE_CLIENT_SECRET",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "SALESFORCE_INSTANCE_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "SALESFORCE_USERNAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SALESFORCE_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SALESFORCE_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MCP_TRANSPORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-19T00:53:59.342059Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

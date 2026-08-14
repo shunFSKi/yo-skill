@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.MetaLift-AI/metalift",
+  "type": "mcp",
+  "name": "metalift",
+  "description": "Metalift MCP for AI agents: web search (2 credits), scrape, crawl, and map tools",
+  "author": "io.github.MetaLift-AI",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/MetaLift-AI/metalift-mcp",
+    "repo": "MetaLift-AI/metalift-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@metalift/mcp"
+    ],
+    "env": [
+      {
+        "name": "METALIFT_API_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "METALIFT_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-06T09:53:35.35616Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

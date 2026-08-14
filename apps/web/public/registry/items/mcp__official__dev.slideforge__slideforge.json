@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/dev.slideforge/slideforge",
+  "type": "mcp",
+  "name": "SlideForge",
+  "description": "Deterministic, fully editable PowerPoint from typed slide intents. 150+ layouts, brand templates.",
+  "author": "dev.slideforge",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/smartdatabrokers/slideforge-mcp",
+    "repo": "smartdatabrokers/slideforge-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "slideforge-mcp"
+    ],
+    "env": [
+      {
+        "name": "SLIDEFORGE_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T08:26:45.206468Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

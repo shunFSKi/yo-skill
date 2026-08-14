@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.ura-tools/changelogai",
+  "type": "mcp",
+  "name": "changelogai",
+  "description": "Generate changelogs and suggest semver bumps from git history",
+  "author": "io.github.ura-tools",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ura-tools/changelogai",
+    "repo": "ura-tools/changelogai"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@ura-dev/changelogai"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-28T15:58:18.136362Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

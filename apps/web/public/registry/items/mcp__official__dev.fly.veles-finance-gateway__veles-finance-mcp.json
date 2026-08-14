@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/dev.fly.veles-finance-gateway/veles-finance-mcp",
+  "type": "mcp",
+  "name": "veles-finance-mcp",
+  "description": "AI financial agent: due diligence, SEC 10-K, Kelly Criterion. Pay-per-call via x402 USDC.",
+  "author": "dev.fly.veles-finance-gateway",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers/dev.fly.veles-finance-gateway%2Fveles-finance-mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "veles-finance-mcp"
+    ],
+    "env": [
+      {
+        "name": "VELES_WALLET_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "VELES_GATEWAY_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-29T12:27:02.823026Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

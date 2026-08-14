@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.happy520ai/unified-ai-system",
+  "type": "mcp",
+  "name": "Unified AI System MCP Gateway",
+  "description": "Self-hosted MCP gateway for Codex, Cursor, and Cline with provider-free prompt enhancement.",
+  "author": "io.github.happy520ai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/happy520ai/unified-ai-system",
+    "repo": "happy520ai/unified-ai-system"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/happy520ai/unified-ai-system/mcp-server:0.4.9"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T10:10:57.717971Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

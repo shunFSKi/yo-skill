@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.giveradar/charity-registry",
+  "type": "mcp",
+  "name": "charity-registry",
+  "description": "Search, verify, and compare 8.7M+ charities from official government registries in 60+ countries.",
+  "author": "com.giveradar",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/matt-timmermans/giveradar-mcp",
+    "repo": "matt-timmermans/giveradar-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://giveradar.com/mcp/"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-12T06:27:00.233047Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

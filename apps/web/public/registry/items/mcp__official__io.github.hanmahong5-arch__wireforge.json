@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.hanmahong5-arch/wireforge",
+  "type": "mcp",
+  "name": "wireforge",
+  "description": "Read-only MCP tools for ISO 8583 and SWIFT MT/MX: parse, validate, diff, SR2026 address checks.",
+  "author": "io.github.hanmahong5-arch",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/hanmahong5-arch/wireforge-core",
+    "repo": "hanmahong5-arch/wireforge-core"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/hanmahong5-arch/wireforge-core/releases/download/v0.1.0/wireforge.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-02T10:45:09.345192Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

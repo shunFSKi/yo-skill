@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/ai.fodda/deep-research",
+  "type": "mcp",
+  "name": "Fodda Deep Research",
+  "description": "Autonomous deep research reports merging PSFK trend graphs with citable sources.",
+  "author": "ai.fodda",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/piers-fawkes/fodda-mcp",
+    "repo": "piers-fawkes/fodda-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.fodda.ai/deep-research",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-27T00:39:05.967613Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

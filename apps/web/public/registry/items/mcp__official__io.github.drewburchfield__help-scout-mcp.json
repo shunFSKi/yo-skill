@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.drewburchfield/help-scout-mcp",
+  "type": "mcp",
+  "name": "Help Scout MCP Server",
+  "description": "Search Help Scout conversations, customers, organizations, threads, and inboxes with AI assistants",
+  "author": "io.github.drewburchfield",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/drewburchfield/help-scout-mcp-server.git",
+    "repo": "drewburchfield/help-scout-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "help-scout-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "HELPSCOUT_APP_ID",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "HELPSCOUT_APP_SECRET",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "REDACT_MESSAGE_CONTENT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-25T20:28:11.178317Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

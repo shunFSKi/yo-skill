@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/com.pdfgate/mcp-server",
+  "type": "mcp",
+  "name": "mcp-server",
+  "description": "MCP server for the PDFGate API. Generate PDFs, manage documents and handle e-signatures.",
+  "author": "com.pdfgate",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/pdfgate/pdfgate-mcp-server",
+    "repo": "pdfgate/pdfgate-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@pdfgate/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "PDFGATE_API_KEY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PDFGATE_WEBHOOK_PORT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-04T00:16:18.93936Z"
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

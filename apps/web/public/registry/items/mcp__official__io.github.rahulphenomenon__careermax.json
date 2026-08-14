@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.rahulphenomenon/careermax",
+  "type": "mcp",
+  "name": "careermax",
+  "description": "All the tools you need to land your next job",
+  "author": "io.github.rahulphenomenon",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/rahulphenomenon/careermax",
+    "repo": "rahulphenomenon/careermax"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@careermax/agent-toolkit"
+    ],
+    "env": [
+      {
+        "name": "CAREERMAX_API_KEY",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-17T16:04:35.649428Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

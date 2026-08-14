@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.djautomd-lab/aipaygent",
+  "type": "mcp",
+  "name": "AiPayGent — Claude AI Tools",
+  "description": "Claude-powered AI tools: research, write, code, analyze, translate, debate, pitch, score, and more.",
+  "author": "io.github.djautomd-lab",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.aipaygent.xyz/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "aipaygent-mcp"
+    ],
+    "env": [
+      {
+        "name": "ANTHROPIC_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-02T03:58:24.380714Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

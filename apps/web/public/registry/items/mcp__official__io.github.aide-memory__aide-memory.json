@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.aide-memory/aide-memory",
+  "type": "mcp",
+  "name": "aide-memory",
+  "description": "Persistent memory layer for AI coding agents — your agent remembers what you taught it.",
+  "author": "io.github.aide-memory",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/aide-memory/aide-memory",
+    "repo": "aide-memory/aide-memory"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "aide-memory"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-22T23:21:32.550502Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

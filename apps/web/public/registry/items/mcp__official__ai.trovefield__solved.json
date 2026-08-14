@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/ai.trovefield/solved",
+  "type": "mcp",
+  "name": "SOLVED — buy work already done",
+  "description": "Search and buy verified solved artifacts instead of recomputing them.",
+  "author": "ai.trovefield",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://api.trovefield.ai/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.trovefield.ai/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-07T05:32:02.342603Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

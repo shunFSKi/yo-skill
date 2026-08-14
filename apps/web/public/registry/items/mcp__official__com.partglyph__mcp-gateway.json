@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/com.partglyph/mcp-gateway",
+  "type": "mcp",
+  "name": "Partglyph MCP Gateway",
+  "description": "Deterministic industrial replacement engine with official catalogs and expert accuracy checks.",
+  "author": "com.partglyph",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://app.partglyph.com/api-mcp/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://app.partglyph.com/api-mcp/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-04T14:29:10.307557Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

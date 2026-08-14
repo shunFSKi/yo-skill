@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.unmodeled-tyler/vessel-browser",
+  "type": "mcp",
+  "name": "Vessel Browser",
+  "description": "AI-native browser runtime for autonomous agents with human-in-the-loop supervision",
+  "author": "io.github.unmodeled-tyler",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/unmodeled-tyler/vessel-browser",
+    "repo": "unmodeled-tyler/vessel-browser"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@quanta-intellect/vessel-browser"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-18T03:30:31.701397Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

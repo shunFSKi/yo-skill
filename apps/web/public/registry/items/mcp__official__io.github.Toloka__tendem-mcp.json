@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.Toloka/tendem-mcp",
+  "type": "mcp",
+  "name": "Tendem MCP server",
+  "description": "Delegate tasks to vetted human experts - research, writing, analysis, and data work.",
+  "author": "io.github.Toloka",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Toloka/tendem-mcp",
+    "repo": "Toloka/tendem-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.tendem.ai/mcp?utm_hash=b093faed05"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-05T17:38:33.453737Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

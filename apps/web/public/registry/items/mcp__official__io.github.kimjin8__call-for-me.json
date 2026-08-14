@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.kimjin8/call-for-me",
+  "type": "mcp",
+  "name": "Call For Me",
+  "description": "Give your AI agent a phone. Place outbound calls to US businesses to ask, book, or confirm.",
+  "author": "io.github.kimjin8",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/kimjin8/calling-mcp",
+    "repo": "kimjin8/calling-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://call-for-me.fly.dev/mcp/",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-11T23:58:18.217004Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

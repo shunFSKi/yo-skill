@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/com.kekwanu/syncline-mcp-server-go",
+  "type": "mcp",
+  "name": "Syncline MCP Server (Go)",
+  "description": "Syncline MCP Server (Go) - AI-powered meeting scheduling with intelligent auto-scheduling",
+  "author": "com.kekwanu",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/KekwanuLabs/syncline",
+    "repo": "KekwanuLabs/syncline"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@kekwanulabs/syncline-mcp-server-go"
+    ],
+    "env": [
+      {
+        "name": "SYNCLINE_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-18T00:13:52.337347Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

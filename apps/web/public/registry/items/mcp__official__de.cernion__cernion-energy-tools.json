@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/de.cernion/cernion-energy-tools",
+  "type": "mcp",
+  "name": "Cernion Energy Tools MCP",
+  "description": "Energy-domain MCP tools for Cernion context, evidence and guarded process preparation",
+  "author": "de.cernion",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/energychain/cernion-energy-tools",
+    "repo": "energychain/cernion-energy-tools"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.cernion.de/api/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-08T23:25:48.229541Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

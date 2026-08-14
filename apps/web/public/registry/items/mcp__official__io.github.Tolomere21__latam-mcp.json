@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.Tolomere21/latam-mcp",
+  "type": "mcp",
+  "name": "latam-mcp",
+  "description": "Peruvian public data — SUNAT RUC, BCRP FX, SEACE tenders. Sourced from official open-data.",
+  "author": "io.github.Tolomere21",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Tolomere21/latam-mcp",
+    "repo": "Tolomere21/latam-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@latam-mcp/mcp"
+    ],
+    "env": [
+      {
+        "name": "LATAM_MCP_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "LATAM_MCP_API_BASE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-22T02:59:50.248336Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

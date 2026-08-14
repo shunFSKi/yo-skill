@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.alx1p/luma-mcp",
+  "type": "mcp",
+  "name": "Luma Events",
+  "description": "Discover events from Luma — search by category, city, distance, and keywords with calendar export",
+  "author": "io.github.alx1p",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/alx1p/luma-cal-mcp",
+    "repo": "alx1p/luma-cal-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "luma-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-23T00:04:21.265832Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

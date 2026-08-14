@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.zseta/progi",
+  "type": "mcp",
+  "name": "progi",
+  "description": "MCP-native workflow engine: teach agents your processes once, they execute them consistently.",
+  "author": "io.github.zseta",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/zseta/progi",
+    "repo": "zseta/progi"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "progi"
+    ],
+    "env": [
+      {
+        "name": "PROGI_DB_PATH",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-16T15:06:29.818787Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

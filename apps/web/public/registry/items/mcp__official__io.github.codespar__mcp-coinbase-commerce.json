@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.codespar/mcp-coinbase-commerce",
+  "type": "mcp",
+  "name": "mcp-coinbase-commerce",
+  "description": "MCP server for Coinbase Commerce — crypto merchant payments (BTC/ETH/USDC); settle crypto or fiat",
+  "author": "io.github.codespar",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/codespar/mcp-dev-latam",
+    "repo": "codespar/mcp-dev-latam"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@codespar/mcp-coinbase-commerce"
+    ],
+    "env": [
+      {
+        "name": "COINBASE_COMMERCE_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "COINBASE_COMMERCE_API_VERSION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "COINBASE_COMMERCE_WEBHOOK_SECRET",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-22T18:49:42.348923Z"
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

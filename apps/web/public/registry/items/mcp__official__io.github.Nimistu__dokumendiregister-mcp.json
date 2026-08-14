@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.Nimistu/dokumendiregister-mcp",
+  "type": "mcp",
+  "name": "dokumendiregister.ee — Estonian public-authority documents",
+  "description": "Estonian public-authority document registers: one search across all, docs linked to companies.",
+  "author": "io.github.Nimistu",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Nimistu/dokumendiregister-mcp",
+    "repo": "Nimistu/dokumendiregister-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://dokumendiregister.ee/api/dokreg-mcp/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-21T09:06:40.872917Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

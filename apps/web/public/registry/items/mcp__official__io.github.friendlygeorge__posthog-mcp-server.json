@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.friendlygeorge/posthog-mcp-server",
+  "type": "mcp",
+  "name": "posthog-mcp-server",
+  "description": "MCP server for PostHog — product analytics for AI assistants. Query events, persons, insights, da...",
+  "author": "io.github.friendlygeorge",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/friendlygeorge/posthog-mcp-server",
+    "repo": "friendlygeorge/posthog-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "posthog-mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-06T14:47:03.160567Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

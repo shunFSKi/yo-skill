@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.hshintelligence/agent-scrape",
+  "type": "mcp",
+  "name": "AgentScrape",
+  "description": "Pay-per-call web scraping for AI agents via x402 on Base USDC. Six tools, no signup.",
+  "author": "io.github.hshintelligence",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/hshintelligence/agent-scrape",
+    "repo": "hshintelligence/agent-scrape"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://agent-scrape.healingsunhaven.workers.dev/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-27T08:10:35.444852Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

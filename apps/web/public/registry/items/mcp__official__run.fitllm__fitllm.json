@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/run.fitllm/fitllm",
+  "type": "mcp",
+  "name": "FitLLM",
+  "description": "Will this LLM fit on your GPU, multi-GPU rig or Mac? Exact VRAM & KV-cache math. Read-only.",
+  "author": "run.fitllm",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/click6067-ship-it/fitllm-engine",
+    "repo": "click6067-ship-it/fitllm-engine"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://fitllm.run/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-09T13:52:31.870226Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

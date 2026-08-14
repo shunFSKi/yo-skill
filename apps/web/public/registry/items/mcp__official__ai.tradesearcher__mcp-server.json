@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/ai.tradesearcher/mcp-server",
+  "type": "mcp",
+  "name": "mcp-server",
+  "description": "Search TradeSearcher strategies and backtests from Claude Code, Cursor, Codex, and other agents.",
+  "author": "ai.tradesearcher",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/vnguyen42/tradesearcher-agent-tools",
+    "repo": "vnguyen42/tradesearcher-agent-tools"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@tradesearcher/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "TRADESEARCHER_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-23T16:53:23.760246Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

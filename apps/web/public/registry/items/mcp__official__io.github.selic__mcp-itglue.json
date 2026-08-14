@@ -1,0 +1,104 @@
+{
+  "id": "mcp:official/io.github.selic/mcp-itglue",
+  "type": "mcp",
+  "name": "IT Glue",
+  "description": "IT Glue MCP server for MSPs — documents, flexible assets, semantic vector search, RBAC, and BYOK",
+  "author": "io.github.selic",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/selic/mcp-itglue",
+    "repo": "selic/mcp-itglue"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-itglue"
+    ],
+    "env": [
+      {
+        "name": "ITGLUE_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "ITGLUE_REGION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ITGLUE_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OPENAI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "AZURE_OPENAI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "AZURE_OPENAI_ENDPOINT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "EMBEDDING_MODEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ITGLUE_ADVANCED_TOOLSET",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "VECTOR_INDEX_PATH",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-14T23:17:01.586192Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

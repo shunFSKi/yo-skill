@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.bounded-systems/bounded-tools-mcp",
+  "type": "mcp",
+  "name": "bounded-tools-mcp",
+  "description": "Read-only MCP server over bounded.tools's Sigstore-verified static API (stdio).",
+  "author": "io.github.bounded-systems",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/bounded-systems/bounded-tools-mcp",
+    "repo": "bounded-systems/bounded-tools-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@bounded-systems/bounded-tools-mcp"
+    ],
+    "env": [
+      {
+        "name": "BOUNDED_TOOLS_MCP_SIGNATURE_MODE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-29T05:20:20.820381Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

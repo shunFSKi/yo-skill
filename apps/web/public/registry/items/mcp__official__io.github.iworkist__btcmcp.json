@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.iworkist/btcmcp",
+  "type": "mcp",
+  "name": "btcmcp",
+  "description": "An MCP server that provides Bitcoin price data from Binance API",
+  "author": "io.github.iworkist",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/iworkist/btcmcp",
+    "repo": "iworkist/btcmcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "btcmcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-09-23T08:31:39.293572Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

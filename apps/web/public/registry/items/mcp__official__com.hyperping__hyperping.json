@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/com.hyperping/hyperping",
+  "type": "mcp",
+  "name": "hyperping",
+  "description": "Uptime, API and server monitoring with outages, reporting, on-call and status pages.",
+  "author": "com.hyperping",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/hyperping/mcp-server",
+    "repo": "hyperping/mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.hyperping.io/v1/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-29T05:26:12.46864Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

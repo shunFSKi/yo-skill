@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/com.pilotgentic/mcp-server",
+  "type": "mcp",
+  "name": "PilotGentic",
+  "description": "macOS desktop control for Claude: click, type, screenshot, AX tree, browser control, agentic loops.",
+  "author": "com.pilotgentic",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/1genadam/pilotgentic",
+    "repo": "1genadam/pilotgentic"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@pilotgentic/mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-10T18:56:31.078885Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

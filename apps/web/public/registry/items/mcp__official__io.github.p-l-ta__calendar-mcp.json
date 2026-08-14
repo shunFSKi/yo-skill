@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.p-l-ta/calendar-mcp",
+  "type": "mcp",
+  "name": "Calendar.app",
+  "description": "List, search, and manage calendar events via macOS Calendar.app across all configured accounts.",
+  "author": "io.github.p-l-ta",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/p-l-ta/calendar-mcp",
+    "repo": "p-l-ta/calendar-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@p-l-ta/calendar-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-08T20:52:30.354031Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

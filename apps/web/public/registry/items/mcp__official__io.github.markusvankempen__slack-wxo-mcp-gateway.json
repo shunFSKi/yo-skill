@@ -1,0 +1,89 @@
+{
+  "id": "mcp:official/io.github.markusvankempen/slack-wxo-mcp-gateway",
+  "type": "mcp",
+  "name": "Slack ↔ WxO MCP Gateway",
+  "description": "Lifts WxO Slack limits: every-message wake-up, multi-channel MCP. https://markusvankempen.github.io/",
+  "author": "io.github.markusvankempen",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/markusvankempen/slack-wxo-mcp-gateway",
+    "repo": "markusvankempen/slack-wxo-mcp-gateway"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@markusvankempen/slack-wxo-mcp-gateway"
+    ],
+    "env": [
+      {
+        "name": "SLACK_BOT_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "WXO_INSTANCE_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "WXO_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "WXO_AGENT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GATEWAY_TRANSPORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SLACK_SIGNING_SECRET",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-19T01:29:44.468862Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

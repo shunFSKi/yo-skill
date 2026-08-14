@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/ai.probitylabs/wallet-reputation",
+  "type": "mcp",
+  "name": "Probity Wallet Reputation",
+  "description": "Screen an Ethereum address or ENS name for on-chain reputation risk, sanctions, and reasoning.",
+  "author": "ai.probitylabs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.probitylabs.ai/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.probitylabs.ai/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-05T18:43:39.884122Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

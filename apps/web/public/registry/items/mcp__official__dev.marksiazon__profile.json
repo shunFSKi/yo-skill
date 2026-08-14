@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/dev.marksiazon/profile",
+  "type": "mcp",
+  "name": "profile",
+  "description": "Read-only MCP server for Mark Siazon's professional profile: projects, FAQ, proof, availability.",
+  "author": "dev.marksiazon",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://www.marksiazon.dev/api/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://www.marksiazon.dev/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-31T01:16:37.878515Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,73 @@
+{
+  "id": "mcp:official/io.github.TopoLift/topolift-mcp",
+  "type": "mcp",
+  "name": "TopoLift Negotiation",
+  "description": "Atom-grounded negotiation reasoning. Typed topology slot, inline citations, public dialect.",
+  "author": "io.github.TopoLift",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/TopoLift/topolift-mcp",
+    "repo": "TopoLift/topolift-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "topolift-mcp"
+    ],
+    "env": [
+      {
+        "name": "TOPOLIFT_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "TOPOLIFT_API_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TOPOLIFT_TIMEOUT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-11T03:28:45.537258Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

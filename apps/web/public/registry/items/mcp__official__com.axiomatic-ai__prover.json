@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.axiomatic-ai/prover",
+  "type": "mcp",
+  "name": "prover",
+  "description": "Lean 4 MCP server: compile, prove theorems, and formalize math with Mathlib.",
+  "author": "com.axiomatic-ai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Axiomatic-AI/ax-prover-base-mcp",
+    "repo": "Axiomatic-AI/ax-prover-base-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://prover.axiomatic-ai.com/mcp/"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-23T22:16:23.957805Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

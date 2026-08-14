@@ -1,0 +1,78 @@
+{
+  "id": "mcp:official/io.github.wmarceau/tiktok-creator",
+  "type": "mcp",
+  "name": "tiktok-creator",
+  "description": "TikTok automation: post videos, get analytics, manage comments",
+  "author": "io.github.wmarceau",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/MarceauSolutions/dev-sandbox",
+    "repo": "MarceauSolutions/dev-sandbox"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "tiktok-creator-mcp"
+    ],
+    "env": [
+      {
+        "name": "TIKTOK_CLIENT_KEY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TIKTOK_CLIENT_SECRET",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TIKTOK_ACCESS_TOKEN",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TIKTOK_REFRESH_TOKEN",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-09T00:43:47.379068Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

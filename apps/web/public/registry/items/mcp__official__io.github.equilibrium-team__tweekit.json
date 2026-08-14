@@ -1,0 +1,65 @@
+{
+  "id": "mcp:official/io.github.equilibrium-team/tweekit",
+  "type": "mcp",
+  "name": "TweekIT MCP Server",
+  "description": "Normalize and convert more than 400 file types via TweekIT's hosted MCP streamable HTTP endpoint.",
+  "author": "io.github.equilibrium-team",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/equilibrium-team/tweekit-mcp",
+    "repo": "equilibrium-team/tweekit-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.tweekit.io/mcp",
+    "env": [
+      {
+        "name": "ApiKey",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "ApiSecret",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-12-01T22:30:26.318306Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

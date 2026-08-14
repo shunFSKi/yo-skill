@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.aryanspv/har-forensics-mcp",
+  "type": "mcp",
+  "name": "har-forensics-mcp",
+  "description": "Tells you what leaked in a .har capture, who's on the page, and what to strip. No network calls.",
+  "author": "io.github.aryanspv",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/aryanspv/har-forensics-mcp",
+    "repo": "aryanspv/har-forensics-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "har-forensics-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-06T12:36:39.558665Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

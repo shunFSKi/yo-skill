@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.VermontForest/auctiontrace",
+  "type": "mcp",
+  "name": "AuctionTrace",
+  "description": "Historical ES Book Pressure data, matched evidence, and evaluation guidance for $5 USDC via x402.",
+  "author": "io.github.VermontForest",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://api.auctiontrace.com/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.auctiontrace.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-31T16:05:11.524173Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

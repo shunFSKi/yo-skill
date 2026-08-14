@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.conorbronsdon/op3-mcp",
+  "type": "mcp",
+  "name": "OP3 MCP Server",
+  "description": "OP3 podcast analytics: downloads, geography, app share, episode breakdowns. Read-only.",
+  "author": "io.github.conorbronsdon",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/conorbronsdon/op3-mcp",
+    "repo": "conorbronsdon/op3-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@conorbronsdon/op3-mcp"
+    ],
+    "env": [
+      {
+        "name": "OP3_API_TOKEN",
+        "required": true,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-02T03:40:04.199125Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

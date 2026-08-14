@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.piotrv1001/linkedin-decision-maker-finder",
+  "type": "mcp",
+  "name": "LinkedIn Decision Maker Finder",
+  "description": "Find decision makers at any company: name, job title and LinkedIn profile URL. No login needed.",
+  "author": "io.github.piotrv1001",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://piotrv1001--linkedin-decision-maker-finder.apify.actor/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://piotrv1001--linkedin-decision-maker-finder.apify.actor/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-26T14:02:31.51289Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

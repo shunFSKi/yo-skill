@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/dev.goodbarber/goodbarber-public-mcp",
+  "type": "mcp",
+  "name": "goodbarber-public-mcp",
+  "description": "Manage your GoodBarber eCommerce, Community, and Membership app via natural language.",
+  "author": "dev.goodbarber",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/goodbarber/goodbarber-skills",
+    "repo": "goodbarber/goodbarber-skills"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.goodbarber.dev/mcp/sse"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-01T14:43:37.04613Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

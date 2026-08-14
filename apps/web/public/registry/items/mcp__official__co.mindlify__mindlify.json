@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/co.mindlify/mindlify",
+  "type": "mcp",
+  "name": "Mindlify",
+  "description": "Turn AI conversations into visual knowledge maps. Create, connect, search, and organize thoughts.",
+  "author": "co.mindlify",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mindlify.co/api/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mindlify.co/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-02T11:39:16.468615Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

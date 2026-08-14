@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.lordbasilaiassistant-sudo/base-token-sniper",
+  "type": "mcp",
+  "name": "base-token-sniper",
+  "description": "MCP server to discover and trade new token launches on Base chain.",
+  "author": "io.github.lordbasilaiassistant-sudo",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/lordbasilaiassistant-sudo/base-token-sniper-mcp",
+    "repo": "lordbasilaiassistant-sudo/base-token-sniper-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "base-token-sniper-mcp"
+    ],
+    "env": [
+      {
+        "name": "DEPLOYER_PRIVATE_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "RPC_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-07T16:32:05.660495Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

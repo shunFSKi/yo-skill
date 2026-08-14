@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.planetabhi/figma-mcp-server",
+  "type": "mcp",
+  "name": "Figma MCP Server",
+  "description": "A local MCP server with full Figma REST API coverage.",
+  "author": "io.github.planetabhi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/planetabhi/figma-mcp-server",
+    "repo": "planetabhi/figma-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "figma-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "FIGMA_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-09T01:08:18.648646Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.theshajha/wovo",
+  "type": "mcp",
+  "name": "wovo",
+  "description": "Deploy HTML from any AI tool to a versioned, shareable library on wovo.dev; manage pages.",
+  "author": "io.github.theshajha",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/theshajha/wovo-cli",
+    "repo": "theshajha/wovo-cli"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@gowovo/wovo"
+    ],
+    "env": [
+      {
+        "name": "WOVO_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "WOVO_WORKSPACE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-01T09:00:56.386447Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

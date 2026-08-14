@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.47-ronn/remote-agents",
+  "type": "mcp",
+  "name": "remote-agents",
+  "description": "Control fleets of remote machines via AI agents: exec, files, git, fleet ops, map/reduce.",
+  "author": "io.github.47-ronn",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/47-ronn/tunshell_mcp_agents",
+    "repo": "47-ronn/tunshell_mcp_agents"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "remote-agents"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-12T11:25:07.027812Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

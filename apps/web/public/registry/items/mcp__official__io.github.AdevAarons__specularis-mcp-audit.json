@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.AdevAarons/specularis-mcp-audit",
+  "type": "mcp",
+  "name": "Specularis AI Visibility Audit",
+  "description": "Free AI visibility (GEO/AEO) audit: can ChatGPT, Claude and Perplexity find and cite your website?",
+  "author": "io.github.AdevAarons",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/AdevAarons/specularis-mcp-audit",
+    "repo": "AdevAarons/specularis-mcp-audit"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://specularis-mcp-audit-production.up.railway.app/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-03T14:42:06.263584Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

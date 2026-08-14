@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.mrslbt/japan-ux",
+  "type": "mcp",
+  "name": "japan-ux",
+  "description": "Japanese UI + UX correctness for AI coding agents — typography, forms, keigo, JLReq checks.",
+  "author": "io.github.mrslbt",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mrslbt/japan-ux-mcp",
+    "repo": "mrslbt/japan-ux-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "japan-ux-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-02T14:30:12.161747Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,119 @@
+{
+  "id": "mcp:official/io.github.sijunkim/db-gateway",
+  "type": "mcp",
+  "name": "db-gateway",
+  "description": "145+ tools across 8 databases: MySQL, PostgreSQL, Redshift, MongoDB, Redis, Kafka, and more",
+  "author": "io.github.sijunkim",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/sijunkim/db-gateway",
+    "repo": "sijunkim/db-gateway"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "db-gateway"
+    ],
+    "env": [
+      {
+        "name": "DBS",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "READ_ONLY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MYSQL",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "POSTGRESQL",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "REDSHIFT",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MONGODB",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "REDIS",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ELASTICSEARCH",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "KAFKA",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "DYNAMODB_REGION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DYNAMODB_ACCESS_KEY_ID",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "DYNAMODB_SECRET_ACCESS_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-09T15:42:00.719301Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

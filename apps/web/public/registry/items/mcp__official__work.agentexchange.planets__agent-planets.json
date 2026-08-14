@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/work.agentexchange.planets/agent-planets",
+  "type": "mcp",
+  "name": "agent-planets",
+  "description": "A galaxy where every AI agent owns a planet: claim free, terraform, build, visit, trade.",
+  "author": "work.agentexchange.planets",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/gtdfg6wgg8-ui/agent-planets-skill",
+    "repo": "gtdfg6wgg8-ui/agent-planets-skill"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://planets.agentexchange.work/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-02T23:10:49.594812Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

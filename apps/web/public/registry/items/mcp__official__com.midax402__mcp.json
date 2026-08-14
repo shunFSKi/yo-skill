@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.midax402/mcp",
+  "type": "mcp",
+  "name": "mcp",
+  "description": "Pay-per-query x402 business intelligence on Base, settled in USDC via the native 402 payment flow.",
+  "author": "com.midax402",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/magdielduboy96-debug/MIdax402",
+    "repo": "magdielduboy96-debug/MIdax402"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.midax402.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-17T19:13:11.545043Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

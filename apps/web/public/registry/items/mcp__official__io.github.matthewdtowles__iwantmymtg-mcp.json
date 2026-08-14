@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.matthewdtowles/iwantmymtg-mcp",
+  "type": "mcp",
+  "name": "iwantmymtg-mcp",
+  "description": "Query Magic: The Gathering cards, sets, and prices and manage your I Want My MTG collection.",
+  "author": "io.github.matthewdtowles",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/matthewdtowles/iwantmymtg-mcp",
+    "repo": "matthewdtowles/iwantmymtg-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "iwantmymtg-mcp"
+    ],
+    "env": [
+      {
+        "name": "IWMM_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-31T18:47:40.274143Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

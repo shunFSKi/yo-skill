@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.DigiCatalyst-Systems/dep-diff-mcp",
+  "type": "mcp",
+  "name": "dep-diff-mcp",
+  "description": "Translates a lockfile diff into a human-readable upgrade plan for npm and PyPI.",
+  "author": "io.github.DigiCatalyst-Systems",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/DigiCatalyst-Systems/dep-diff-mcp",
+    "repo": "DigiCatalyst-Systems/dep-diff-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@digicatalyst/dep-diff-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-23T19:56:44.043716Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

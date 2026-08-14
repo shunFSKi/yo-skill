@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.lxchst/weather-server-python",
+  "type": "mcp",
+  "name": "weather-server-python",
+  "description": "An MCP server that provides weather information",
+  "author": "io.github.lxchst",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/lxchst/weather-server-python",
+    "repo": "lxchst/weather-server-python"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "chst-weather"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-12-17T05:04:11.081794Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

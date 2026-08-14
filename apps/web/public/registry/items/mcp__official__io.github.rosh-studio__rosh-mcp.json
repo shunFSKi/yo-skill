@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.rosh-studio/rosh-mcp",
+  "type": "mcp",
+  "name": "rosh-mcp",
+  "description": "Create interactive web apps, games, and 3D scenes using Rosh — a plain-English language",
+  "author": "io.github.rosh-studio",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/rosh-studio/rosh-mcp",
+    "repo": "rosh-studio/rosh-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "rosh-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-15T21:06:25.188608Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

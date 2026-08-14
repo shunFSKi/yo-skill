@@ -1,0 +1,78 @@
+{
+  "id": "mcp:official/io.github.laffeyp/cascade-img",
+  "type": "mcp",
+  "name": "cascade-img",
+  "description": "LLM-operable Midjourney pipeline: 21 MCP tools to compose, generate, curate with vision, and log.",
+  "author": "io.github.laffeyp",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/laffeyp/cascade-img",
+    "repo": "laffeyp/cascade-img"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "cascade-img"
+    ],
+    "env": [
+      {
+        "name": "DISCORD_USER_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "MJ_CHANNEL_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "MJ_IMAGINE_VERSION",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "CASCADE_BRIDGE_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-16T00:47:56.516839Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

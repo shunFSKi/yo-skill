@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.JXUE0/opencut-controller",
+  "type": "mcp",
+  "name": "opencut-controller",
+  "description": "Professional MCP server for video editing automation with OpenCut.",
+  "author": "io.github.JXUE0",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/JXUE0/opencut-controller",
+    "repo": "JXUE0/opencut-controller"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "opencut-controller"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-01T19:16:58.720917Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

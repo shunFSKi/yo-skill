@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.DivoomDevelop/mcp-divoom-lan",
+  "type": "mcp",
+  "name": "Divoom LAN Watchface",
+  "description": "MCP server for Divoom LAN watchface APIs; read-before-write safe. V2 editor linked in README.",
+  "author": "io.github.DivoomDevelop",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/DivoomDevelop/mcp-divoom-lan",
+    "repo": "DivoomDevelop/mcp-divoom-lan"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-divoom-lan"
+    ],
+    "env": [
+      {
+        "name": "DIVOOM_DEVICE_HOST",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "DIVOOM_DEVICE_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DIVOOM_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-11T08:38:59.585363Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

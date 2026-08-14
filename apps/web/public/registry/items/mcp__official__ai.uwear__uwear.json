@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/ai.uwear/uwear",
+  "type": "mcp",
+  "name": "Uwear",
+  "description": "AI photoshoot studio: garments, avatars, locations, and art direction",
+  "author": "ai.uwear",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://api.uwear.ai/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.uwear.ai/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-01T14:42:35.167525Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

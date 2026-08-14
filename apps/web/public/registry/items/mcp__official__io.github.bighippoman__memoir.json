@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.bighippoman/memoir",
+  "type": "mcp",
+  "name": "memoir",
+  "description": "Structured session journals for AI agents. Persistent memory across sessions.",
+  "author": "io.github.bighippoman",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/bighippoman/memoir-mcp",
+    "repo": "bighippoman/memoir-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "memoir-mcp"
+    ],
+    "env": [
+      {
+        "name": "MEMOIR_MAX_CONTENT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MEMOIR_MAX_OUTCOME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MEMOIR_MAX_ENTRIES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MEMOIR_MAX_SESSIONS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-06T12:42:11.47273Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

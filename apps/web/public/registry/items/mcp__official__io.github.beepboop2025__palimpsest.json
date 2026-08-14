@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.beepboop2025/palimpsest",
+  "type": "mcp",
+  "name": "Palimpsest — censorship and model-eval observatory",
+  "description": "Live censorship signals, evidence-bounded machine analysis, and tamper-evident AI model evals.",
+  "author": "io.github.beepboop2025",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/beepboop2025/palimpsest",
+    "repo": "beepboop2025/palimpsest"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.seiche.info/palimpsest/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T17:02:42.667457Z"
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": false
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

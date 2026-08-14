@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.studiomeyer-io/local-memory-mcp",
+  "type": "mcp",
+  "name": "Local Memory",
+  "description": "Persistent local AI memory. SQLite + FTS5 + vector search, knowledge graph. No cloud, no API keys.",
+  "author": "io.github.studiomeyer-io",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/studiomeyer-io/local-memory-mcp",
+    "repo": "studiomeyer-io/local-memory-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@studiomeyer/local-memory-mcp"
+    ],
+    "env": [
+      {
+        "name": "MEMORY_DB_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MEMORY_EMBED_DISABLED",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MEMORY_EMBED_MODEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MEMORY_EMBED_CACHE_DIR",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-09T03:33:19.381111Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

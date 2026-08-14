@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.jupitersignup/jupitersignup",
+  "type": "mcp",
+  "name": "jupitersignup",
+  "description": "List, read, create, and edit JupiterSignup sign-up and payment forms. API key required.",
+  "author": "com.jupitersignup",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/middlefieldgs/jupitersignup",
+    "repo": "middlefieldgs/jupitersignup"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://jupitersignup.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-03T00:07:08.933799Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

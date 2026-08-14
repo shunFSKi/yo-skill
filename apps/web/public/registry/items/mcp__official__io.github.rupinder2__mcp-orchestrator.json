@@ -1,0 +1,73 @@
+{
+  "id": "mcp:official/io.github.rupinder2/mcp-orchestrator",
+  "type": "mcp",
+  "name": "mcp-orchestrator",
+  "description": "Aggregates tools from multiple MCP servers with unified BM25/regex search and deferred loading.",
+  "author": "io.github.rupinder2",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/rupinder2/mcp-orchestrator",
+    "repo": "rupinder2/mcp-orchestrator"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-orchestrator"
+    ],
+    "env": [
+      {
+        "name": "STORAGE_BACKEND",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "REDIS_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SERVER_CONFIG_PATH",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-26T01:49:55.15161Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.bzsasson/screaming-frog-mcp",
+  "type": "mcp",
+  "name": "Screaming Frog SEO Spider MCP Server",
+  "description": "Crawl websites, export SEO data, and manage crawls via Screaming Frog SEO Spider.",
+  "author": "io.github.bzsasson",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/bzsasson/screaming-frog-mcp",
+    "repo": "bzsasson/screaming-frog-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "screaming-frog-mcp"
+    ],
+    "env": [
+      {
+        "name": "SF_CLI_PATH",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-28T23:59:00.71285Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,83 @@
+{
+  "id": "mcp:official/io.github.alanzha2/observe-instrument-mcp",
+  "type": "mcp",
+  "name": "observe-instrument-mcp",
+  "description": "Add OpenTelemetry tracing to Python AI agents. Supports LangGraph, LlamaIndex, CrewAI, OpenAI SDK.",
+  "author": "io.github.alanzha2",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/alanzha2/observe-instrument-mcp.git",
+    "repo": "alanzha2/observe-instrument-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "observe-instrument-mcp"
+    ],
+    "env": [
+      {
+        "name": "ANTHROPIC_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "LLM_MODEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OPENAI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GEMINI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GROQ_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-14T00:00:12.437658Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,88 @@
+{
+  "id": "mcp:official/io.github.proscar87/oura-mcp",
+  "type": "mcp",
+  "name": "oura-mcp",
+  "description": "The Oura v2 API as an MCP server. Paginates, fixes the date range, warns when data is missing.",
+  "author": "io.github.proscar87",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/proscar87/oura-mcp",
+    "repo": "proscar87/oura-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-oura"
+    ],
+    "env": [
+      {
+        "name": "OURA_SANDBOX",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OURA_CLIENT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OURA_CLIENT_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "OURA_CREDENTIALS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OURA_PAT",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "OURA_PAT_FILE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T20:04:22.86248Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

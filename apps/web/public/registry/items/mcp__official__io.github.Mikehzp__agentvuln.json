@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.Mikehzp/agentvuln",
+  "type": "mcp",
+  "name": "Agent Security Scanner",
+  "description": "Scan AI agents for tool-calling vulnerabilities: prompt leaks, hijacking, injections, and more.",
+  "author": "io.github.Mikehzp",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers/io.github.Mikehzp%2Fagentvuln",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "agentvuln"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-08T01:50:05.868884Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

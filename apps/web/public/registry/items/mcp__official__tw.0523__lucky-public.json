@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/tw.0523/lucky-public",
+  "type": "mcp",
+  "name": "0523 Public — Taiwan Logistics & Customs",
+  "description": "Quotes Taiwan freight and import tax; looks up CCC tariffs, import rules, and oversize fees.",
+  "author": "tw.0523",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://0523.tw/mcp/public",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://0523.tw/mcp/public"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-01T08:23:37.151322Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

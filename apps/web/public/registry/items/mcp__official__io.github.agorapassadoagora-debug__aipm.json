@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.agorapassadoagora-debug/aipm",
+  "type": "mcp",
+  "name": "AI Process Manager (AIPM)",
+  "description": "Structured Windows state for AI agents: processes, windows, UI trees. No screenshots.",
+  "author": "io.github.agorapassadoagora-debug",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/aipm-engine/AIPM",
+    "repo": "aipm-engine/AIPM"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "aipm-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "AIPM_API",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-30T18:12:46.100914Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

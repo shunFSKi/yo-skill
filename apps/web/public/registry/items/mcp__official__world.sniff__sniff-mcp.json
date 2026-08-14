@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/world.sniff/sniff-mcp",
+  "type": "mcp",
+  "name": "sniff-mcp",
+  "description": "Canine genomics for agents: breed allele frequencies, AI pathogenicity + OMIA clinical disease layer",
+  "author": "world.sniff",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Sniffscore/sniff-mcp",
+    "repo": "Sniffscore/sniff-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.sniff.world/mcp/"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-02T04:39:17.804552Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

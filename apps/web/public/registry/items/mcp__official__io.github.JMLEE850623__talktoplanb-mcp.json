@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.JMLEE850623/talktoplanb-mcp",
+  "type": "mcp",
+  "name": "talktoplanb-mcp",
+  "description": "MCP server for TalkToPlanB: list rooms, read & send messages (WhatsApp alternative).",
+  "author": "io.github.JMLEE850623",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/JMLEE850623/talktoplanb-mcp",
+    "repo": "JMLEE850623/talktoplanb-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "talktoplanb-mcp"
+    ],
+    "env": [
+      {
+        "name": "TALKTOPLANB_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-07T14:00:06.178532Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

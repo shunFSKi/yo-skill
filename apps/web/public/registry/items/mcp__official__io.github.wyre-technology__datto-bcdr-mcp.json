@@ -1,0 +1,89 @@
+{
+  "id": "mcp:official/io.github.wyre-technology/datto-bcdr-mcp",
+  "type": "mcp",
+  "name": "Datto BCDR",
+  "description": "MCP server for Datto BCDR — appliances, agents, recovery points, screenshots, alerts.",
+  "author": "io.github.wyre-technology",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/wyre-technology/datto-bcdr-mcp",
+    "repo": "wyre-technology/datto-bcdr-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/wyre-technology/datto-bcdr-mcp:v1.1.3"
+    ],
+    "env": [
+      {
+        "name": "DATTO_BCDR_PUBLIC_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "DATTO_BCDR_PRIVATE_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "DATTO_BCDR_REGION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_TRANSPORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AUTH_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T17:02:55.104231Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.getmasv/masv",
+  "type": "mcp",
+  "name": "masv",
+  "description": "Provides tools to use MASV API. MASV is reliable and secure large file transfer service.",
+  "author": "io.github.getmasv",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/getmasv/masv-mcp-server",
+    "repo": "getmasv/masv-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@getmasv/masv-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "MASV_TEAM_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "MASV_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "MASV_ALLOW_DELETE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T15:10:31.339011Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.AceDataCloud/mcp-aichat",
+  "type": "mcp",
+  "name": "mcp-aichat",
+  "description": "MCP server for AI dialogue using various LLM models via AceDataCloud",
+  "author": "io.github.AceDataCloud",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/AceDataCloud/AiChatMCP",
+    "repo": "AceDataCloud/AiChatMCP"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-aichat"
+    ],
+    "env": [
+      {
+        "name": "ACEDATACLOUD_API_TOKEN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T06:53:33.321157Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

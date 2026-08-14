@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.bluepillow/hotels",
+  "type": "mcp",
+  "name": "Blue Pillow Hotels & Stays",
+  "description": "Neutral hotel & stay price comparison for AI agents: live prices from 16+ booking sites. No signup.",
+  "author": "com.bluepillow",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.b2a.bluepillow.com/",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.b2a.bluepillow.com/"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-07T15:54:05.873578Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

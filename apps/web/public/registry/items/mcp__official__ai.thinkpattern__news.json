@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/ai.thinkpattern/news",
+  "type": "mcp",
+  "name": "ThinkPattern",
+  "description": "Grounded, attributed news: what happened, which outlets reported it, and how many covered it.",
+  "author": "ai.thinkpattern",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://thinkpattern.ai/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://thinkpattern.ai/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-18T16:51:31.532065Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

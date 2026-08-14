@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.Rakesh1002/reposcout",
+  "type": "mcp",
+  "name": "reposcout",
+  "description": "Discover, enrich, and rank GitHub repos for an objective with weighted, evidence-based scoring.",
+  "author": "io.github.Rakesh1002",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Rakesh1002/reposcout",
+    "repo": "Rakesh1002/reposcout"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@rakeshroushan/reposcout"
+    ],
+    "env": [
+      {
+        "name": "GITHUB_TOKEN",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-21T17:36:53.401443Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

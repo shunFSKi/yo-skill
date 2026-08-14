@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.b0ase/path402",
+  "type": "mcp",
+  "name": "Path402 — Tokenised Web Content for AI Agents",
+  "description": "AI agents discover, acquire, and re-serve tokenised web content via the $402 protocol",
+  "author": "io.github.b0ase",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/b0ase/path402",
+    "repo": "b0ase/path402"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "path402"
+    ],
+    "env": [
+      {
+        "name": "PATH402_API_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PATH402_DEFAULT_BUDGET",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PATH402_WALLET_WIF",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-01T21:11:36.570441Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.IONIS-AI/ionis-mcp",
+  "type": "mcp",
+  "name": "ionis-mcp",
+  "description": "HF propagation analytics. 175M WSPR/RBN signatures, band openings, solar correlation.",
+  "author": "io.github.IONIS-AI",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/IONIS-AI/ionis-mcp",
+    "repo": "IONIS-AI/ionis-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "ionis-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-06T05:55:34.147671Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "mcp:official/io.github.SaravananJaichandar/world-model-mcp",
+  "type": "mcp",
+  "name": "world-model-mcp",
+  "description": "Temporal knowledge graph for codebases with constraint enforcement at the edit boundary.",
+  "author": "io.github.SaravananJaichandar",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/SaravananJaichandar/world-model-mcp",
+    "repo": "SaravananJaichandar/world-model-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "world-model-mcp"
+    ],
+    "env": [
+      {
+        "name": "WORLD_MODEL_DB_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ANTHROPIC_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "WORLD_MODEL_EXTRACTION_MODEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WORLD_MODEL_REASONING_MODEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-24T09:59:21.844003Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

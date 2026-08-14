@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.cyanheads/wikidata-mcp-server",
+  "type": "mcp",
+  "name": "wikidata-mcp-server",
+  "description": "Search and fetch Wikidata entities, execute SPARQL queries, and resolve external identifiers.",
+  "author": "io.github.cyanheads",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/cyanheads/wikidata-mcp-server",
+    "repo": "cyanheads/wikidata-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@cyanheads/wikidata-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "WIKIDATA_USER_AGENT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WIKIDATA_SPARQL_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WIKIDATA_REST_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-15T00:44:57.832925Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

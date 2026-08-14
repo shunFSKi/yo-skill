@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.qarnet/serial-mcp",
+  "type": "mcp",
+  "name": "Serial MCP",
+  "description": "MCP server for serial port communication. 25 tools, resources, prompts, and stdio/HTTP transports.",
+  "author": "io.github.qarnet",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/qarnet/serial-mcp",
+    "repo": "qarnet/serial-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/qarnet/serial-mcp/releases/download/v0.9.2/serial-mcp-x86_64-linux"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-03T23:32:14.331078Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,109 @@
+{
+  "id": "mcp:official/com.pulsemcp/monarch-money",
+  "type": "mcp",
+  "name": "monarch-money",
+  "description": "MCP server for Monarch Money — account, transaction, and budget management.",
+  "author": "com.pulsemcp",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/pulsemcp/mcp-servers",
+    "repo": "pulsemcp/mcp-servers"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "monarch-money-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "MONARCH_SESSION_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MONARCH_EMAIL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MONARCH_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MONARCH_TOTP",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MONARCH_EMAIL_OTP",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MONARCH_SESSION_PASSPHRASE",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MONARCH_STATE_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MONARCH_ENABLED_TOOL_GROUPS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MONARCH_ENABLED_TOOLS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MONARCH_DISABLED_TOOLS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-09T17:40:33.908298Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

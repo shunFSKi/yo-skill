@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.mikerawsonnz/structured-output-agent",
+  "type": "mcp",
+  "name": "structured-output-agent",
+  "description": "Turn a prompt + a field schema into validated, typed JSON (Instructor over Gemini 2.5 Flash on Verte",
+  "author": "io.github.mikerawsonnz",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mikerawsonnz/gosce-agents",
+    "repo": "mikerawsonnz/gosce-agents"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://fastmcp-instructor-72225f.getvda.ai/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-02T08:22:01.028068Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

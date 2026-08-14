@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/dev.cz-agents/isir",
+  "type": "mcp",
+  "name": "isir",
+  "description": "Czech insolvency register (ISIR) — active/historical insolvency & bankruptcy by IČO or person.",
+  "author": "dev.cz-agents",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/martinhavel/cz-agents-mcp",
+    "repo": "martinhavel/cz-agents-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@czagents/isir"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-02T11:42:26.868116Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

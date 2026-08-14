@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.AMEOBIUS/opendaw-mcp",
+  "type": "mcp",
+  "name": "openDAW MCP",
+  "description": "262 MCP tools for agent-native control of openDAW, a browser-based DAW",
+  "author": "io.github.AMEOBIUS",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/AMEOBIUS/opendaw-mcp",
+    "repo": "AMEOBIUS/opendaw-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/ameobius/opendaw-mcp:1.13.0"
+    ],
+    "env": [
+      {
+        "name": "OPENDAW_HOST_DIR",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "OPENDAW_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "OPENDAW_EXPORT_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "NODE_BIN_DIR",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-04T07:41:33.048063Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

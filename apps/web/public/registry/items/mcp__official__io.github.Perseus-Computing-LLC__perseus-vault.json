@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.Perseus-Computing-LLC/perseus-vault",
+  "type": "mcp",
+  "name": "Perseus Vault — persistent, encrypted memory for AI agents",
+  "description": "Persistent, encrypted, deterministic memory for AI agents. Local-first, 122 canonical tools.",
+  "author": "io.github.Perseus-Computing-LLC",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Perseus-Computing-LLC/perseus-vault",
+    "repo": "Perseus-Computing-LLC/perseus-vault"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/perseus-computing-llc/perseus-vault:2.23.0"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T17:09:39.191903Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

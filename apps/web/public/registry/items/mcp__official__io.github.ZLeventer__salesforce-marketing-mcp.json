@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.ZLeventer/salesforce-marketing-mcp",
+  "type": "mcp",
+  "name": "Salesforce Marketing",
+  "description": "MCP server for Salesforce — 47 tools for leads, campaigns, pipeline, attribution, and reporting.",
+  "author": "io.github.ZLeventer",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ZLeventer/salesforce-marketing-mcp",
+    "repo": "ZLeventer/salesforce-marketing-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "salesforce-marketing-mcp"
+    ],
+    "env": [
+      {
+        "name": "SF_USERNAME",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "SF_PASSWORD",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "SF_SECURITY_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "SF_LOGIN_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SF_API_VERSION",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-26T18:09:51.542838Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

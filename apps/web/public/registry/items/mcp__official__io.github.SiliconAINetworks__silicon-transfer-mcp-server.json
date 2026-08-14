@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.SiliconAINetworks/silicon-transfer-mcp-server",
+  "type": "mcp",
+  "name": "silicon-transfer-mcp-server",
+  "description": "FTP/SFTP/FTPS MCP server with transfer proofs - every upload returns a checksum verdict.",
+  "author": "io.github.SiliconAINetworks",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/SiliconAINetworks/silicon-transfer-mcp-server",
+    "repo": "SiliconAINetworks/silicon-transfer-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "silicon-transfer-mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T21:29:55.884286Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

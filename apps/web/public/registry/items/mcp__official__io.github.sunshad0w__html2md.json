@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.sunshad0w/html2md",
+  "type": "mcp",
+  "name": "HTML to Markdown MCP Server",
+  "description": "Converts HTML to Markdown with auto-summary and section extraction. Supports Playwright.",
+  "author": "io.github.sunshad0w",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/sunshad0w/html2md-mcp",
+    "repo": "sunshad0w/html2md-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "docker.io/sunshad0w/html2md-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-11-01T09:14:23.461442Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

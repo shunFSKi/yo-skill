@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.RoninForge/ai-price-index-mcp",
+  "type": "mcp",
+  "name": "AI Price Index",
+  "description": "Read-only, zero-key MCP server for point-in-time AI model API prices. Open data, CC BY 4.0.",
+  "author": "io.github.RoninForge",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/RoninForge/ai-price-index-mcp",
+    "repo": "RoninForge/ai-price-index-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ai-price-index-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-24T12:22:16.380576Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.flujo-app/mcp-sandbox-computer-vm-for-ai",
+  "type": "mcp",
+  "name": "MCP Sandbox Computer VM for AI",
+  "description": "Named Docker and Fly Machine sandbox computers with an interactive MCP App dashboard.",
+  "author": "io.github.flujo-app",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/flujo-app/mcp-sandbox-computer-vm-for-ai",
+    "repo": "flujo-app/mcp-sandbox-computer-vm-for-ai"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-sandbox-computer-vm-for-ai"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T21:04:12.010063Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

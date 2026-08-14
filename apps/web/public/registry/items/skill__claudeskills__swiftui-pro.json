@@ -1,0 +1,52 @@
+{
+  "id": "skill:claudeskills/swiftui-pro",
+  "type": "skill",
+  "name": "swiftui-pro",
+  "description": "Comprehensively reviews SwiftUI code for best practices on modern APIs, maintainability, and performance. Use when reading, writing, or reviewing SwiftUI projects.",
+  "author": "twostraws",
+  "source": {
+    "registry": "claudeskills",
+    "url": "https://github.com/twostraws/SwiftUI-Agent-Skill",
+    "repo": "twostraws/SwiftUI-Agent-Skill"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 4256,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "<p align=\"center\">\n    <img src=\"assets/logo.svg\" alt=\"SwiftUI Pro - Agent Skill for Claude Code, Codex, and Gemini\" height=\"100\" />\n</p>\n\n<h1 align=\"center\">SwiftUI Agent Skill for AI Coding Assistants</h1>\n\n<p align=\"center\">\n    <img src=\"https://img.shields.io/badge/iOS-26+-2980b9.svg\" alt=\"Designed for iOS 26 and later.\" />\n    <img src=\"https://img.shields.io/badge/swift-6.2+-8e44ad.svg\" alt=\"Designed for Swift 6.2 and later.\" />\n    <a href=\"https://twitter.com/twostraws\">\n        <img src=\"https://img.shields.io/badge/Contact-@twostraws-95a5a6.svg?style=flat\" alt=\"Twitter: @twostraws\" />\n    </a>\n</p>\n\nAn agent skill that helps AI coding assistants write smarter, simpler, and more modern SwiftUI, including guidance on API usage, design, performance, and accessibility. Covers navigation, layout, animations, state management, VoiceOver, deprecated API, and more, targeting the mistakes LLMs actually make.\n\nAlso available:\n\n- [SwiftData Pro](https://github.com/twostraws/SwiftData-Agent-Skill)\n- [Swift Concurrency Pro](https://github.com/twostraws/Swift-Concurrency-Agent-Skill)\n- [Swift Testing Pro](https://github.com/twostraws/Swift-Testing-Agent-Skill)\n\nFind more agent skills for Swift and Apple platform development at [Swift Agent Skills](https://github.com/twostraws/Swift-Agent-Skills).\n\nThe skill builds upon my existing [AGENTS.md](https://github.com/twostraws/SwiftAgents) file, meaning that you can bring years of knowledge and practical experience into your coding agent of choice in just a few minutes. It uses the [Agent Skills](https://agentskills.io/home) format, so it works smoothly with Claude Code, Codex, Gemini, Cursor, and more.\n\n\n## Installing SwiftUI Pro\n\nYou can install this skill into Claude Code, Codex, Gemini, Cursor, and more by using npx:\n\n```bash\nnpx skills add https://github.com/twostraws/swiftui-agent-skill --skill swiftui-pro\n```\n\nIf you get the error `npx: command not found`, it means you don’t currently have Node installed. You need to run this command to install Node through Homebrew:\n\n```bash\nbrew install node\n```\n\nAnd if *that* fails it usually means you need to [install Homebrew](https://brew.sh) first.\n\nWhen using `npx`, you can select exactly which agents you want to use during the installation. You can also select whether the skill should be installed just for one project, or whether it should be made available for all your projects.\n\nClaude Code users can add the SwiftUI Agent Skill marketplace then install the plugin directly through Claude, like this:\n\n```\n/plugin marketplace add twostraws/SwiftUI-Agent-Skill\n/plugin install swiftui-pro@swiftui-agent-skill\n```\n\nAlternatively, you can clone this whole repository and install it however you want.\n\nIf you’re using Xcode, watch the YouTube video on [How to Install and Use Agent Skills in Xcode](https://www.youtube.com/watch?v=nKVZBKoB6P4) for a walkthrough.\n\n\n## Using SwiftUI Pro\n\nThe skill is called SwiftUI Pro, and can be triggered in various ways. For example, in Claude Code you would use this:\n\n> /swiftui-pro\n\nAnd in Codex you would use this:\n\n> $swiftui-pro\n\nIn both cases you can provide specific instructions if you want only a partial review. For example, `/swiftui-pro Check for deprecated API` on Claude, or `$swiftui-pro Focus on accessibility` in Codex.\n\nYou can also trigger the skill using natural language:\n\n> Use the SwiftUI Pro skill to look for performance problems in this project.\n\n\n## Why Use an Agent Skill for SwiftUI?\n\nThis skill is built on thousands of hours of learning, experimenting, and building real-world SwiftUI projects. The rules contained here directly target common SwiftUI mistakes made by LLMs. They sometimes make buttons invisible to VoiceOver, they frequently use deprecated API, and they would often write code that causes surprise performance problems.\n\nYou can read more about why I created this skill in my article: [SwiftUI Agent Skill - Write better code with Claude, Codex, and other AI tools](https://www.hackingwithswift.com/articles/282/swiftui-agent-skill-claude-codex-ai).\n\n\n## Contributing\n\nI welcome all contributions, whether that's adding new checks, improving existing checks, or editing this README – everyone is welcome!\n\n- Keep your Markdown concise. There is a token cost to using skills, particularly with SKILL.md, so please respect the token budgets of users.\n- Do not repeat things that LLMs already know, because it burns tokens for no benefit. Focus on edge cases, surprises, soft deprecations, and similar.\n- All work must be licensed under the MIT license so it can benefit the most people.\n\nPlease ensure you abide by the [Code of Conduct](CODE_OF_CONDUCT.md).\n\n\n## License\n\nSwiftUI Pro was originally created by [Paul Hudson](https://twitter.com/twostraws), who writes [free Swift tutorials over at Hacking with Swift](https://www.hackingwithswift.com). It’s available under the [MIT License](LICENSE), which permits commercial use, modification, distribution, and private use.\n\n\n<p align=\"center\">\n    <a href=\"https://www.hackingwithswift.com/plus\">\n    <img src=\"https://www.hackingwithswift.com/img/hws-plus-banner@2x.jpg\" alt=\"Hacking with Swift+ logo\" style=\"max-width: 100%;\" /></a>\n</p>\n\n<p align=\"center\">&nbsp;</p>\n\n<p align=\"center\">\n    <a href=\"https://www.hackingwithswift.com\"><img src=\"https://www.hackingwithswift.com/img/hws-button@2x.png\" alt=\"Hacking with Swift logo\" width=\"66\" height=\"75\" /></a><br />\n    A Hacking with Swift Project\n</p>\n",
+  "status": "curated"
+}

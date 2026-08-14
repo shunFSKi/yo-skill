@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.kochetkov-ma/brewpage-mcp",
+  "type": "mcp",
+  "name": "BrewPage MCP",
+  "description": "Publish HTML, Markdown, KV, JSON, and files to brewpage.app from AI assistants. No signup.",
+  "author": "io.github.kochetkov-ma",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/kochetkov-ma/brewpage-openapi",
+    "repo": "kochetkov-ma/brewpage-openapi"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "brewpage-mcp"
+    ],
+    "env": [
+      {
+        "name": "BREWPAGE_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-05T19:14:56.296068Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

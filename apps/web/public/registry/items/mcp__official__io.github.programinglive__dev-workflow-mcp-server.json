@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.programinglive/dev-workflow-mcp-server",
+  "type": "mcp",
+  "name": "Dev Workflow MCP Server",
+  "description": "MCP server to enforce development workflow discipline",
+  "author": "io.github.programinglive",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/programinglive/dev-workflow-mcp-server",
+    "repo": "programinglive/dev-workflow-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@programinglive/dev-workflow-mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-11-27T17:07:12.126717Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

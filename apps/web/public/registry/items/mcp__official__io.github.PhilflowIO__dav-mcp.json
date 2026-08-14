@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.PhilflowIO/dav-mcp",
+  "type": "mcp",
+  "name": "dav-mcp",
+  "description": "AI-orchestrated calendars, contacts & tasks across any DAV platform. 26 tools, field-agnostic.",
+  "author": "io.github.PhilflowIO",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/PhilflowIO/dav-mcp",
+    "repo": "PhilflowIO/dav-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "dav-mcp"
+    ],
+    "env": [
+      {
+        "name": "DAV_BASE_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "DAV_USERNAME",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "DAV_PASSWORD",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-04T07:21:40.333548Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,89 @@
+{
+  "id": "mcp:official/io.github.darrenjrobinson/untappd",
+  "type": "mcp",
+  "name": "untappd",
+  "description": "MCP server exposing Untappd API tools for AI agents — full v4 read API coverage",
+  "author": "io.github.darrenjrobinson",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/darrenjrobinson/untappd-mcp-server",
+    "repo": "darrenjrobinson/untappd-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "untappd-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "UNTAPPD_CLIENT_ID",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "UNTAPPD_CLIENT_SECRET",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "UNTAPPD_ACCESS_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "UNTAPPD_USERNAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "UNTAPPD_REDIRECT_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "UNTAPPD_TOKEN_PATH",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-20T06:13:01.453104Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

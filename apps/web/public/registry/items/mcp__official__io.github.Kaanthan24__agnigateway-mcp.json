@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.Kaanthan24/agnigateway-mcp",
+  "type": "mcp",
+  "name": "AgniGateway Marketplace",
+  "description": "AI marketplace — flights, tours, activities, transport & more via MCP. No auth required.",
+  "author": "io.github.Kaanthan24",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Kaanthan24/agnigateway-mcp",
+    "repo": "Kaanthan24/agnigateway-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.agnigateway.com/mcp/v1/public/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-26T12:58:37.127492Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

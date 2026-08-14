@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.codespar/mcp-iniciador",
+  "type": "mcp",
+  "name": "mcp-iniciador",
+  "description": "MCP server for Iniciador — Open Finance Brasil Pix payment initiation (PISP), ICP-Brasil + DCR",
+  "author": "io.github.codespar",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/codespar/mcp-dev-latam",
+    "repo": "codespar/mcp-dev-latam"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@codespar/mcp-iniciador"
+    ],
+    "env": [
+      {
+        "name": "INICIADOR_CLIENT_ID",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "INICIADOR_CLIENT_SECRET",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "INICIADOR_API_BASE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-22T19:59:54.257214Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

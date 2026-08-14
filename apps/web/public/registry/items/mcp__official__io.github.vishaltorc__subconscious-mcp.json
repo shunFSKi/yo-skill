@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.vishaltorc/subconscious-mcp",
+  "type": "mcp",
+  "name": "Subconscious",
+  "description": "Local-first semantic memory for MCP agents. Recall, remember, forget, echo, drift, stats over stdio.",
+  "author": "io.github.vishaltorc",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/vishaltorc/subconscious-mcp",
+    "repo": "vishaltorc/subconscious-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "subconscious-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-10T13:13:03.685104Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

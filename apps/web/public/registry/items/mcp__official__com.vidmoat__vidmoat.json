@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.vidmoat/vidmoat",
+  "type": "mcp",
+  "name": "Vidmoat",
+  "description": "AI video editor: create projects, edit timelines, add captions and effects, and render videos.",
+  "author": "com.vidmoat",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://api.vidmoat.com/api/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.vidmoat.com/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-04T13:05:50.602358Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

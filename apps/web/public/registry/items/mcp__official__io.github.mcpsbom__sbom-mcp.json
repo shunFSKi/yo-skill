@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.mcpsbom/sbom-mcp",
+  "type": "mcp",
+  "name": "SBOMApp - SBOM Generator & Vulnerability Scanner",
+  "description": "Generate SBOMs, scan vulnerabilities, and analyze dependencies from local projects or Git repos.",
+  "author": "io.github.mcpsbom",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mcpsbom/sbomapp-mcp-server",
+    "repo": "mcpsbom/sbomapp-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.sbomapp.com/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-23T07:23:37.709867Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

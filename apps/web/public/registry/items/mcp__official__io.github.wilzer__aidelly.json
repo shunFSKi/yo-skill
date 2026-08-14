@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.wilzer/aidelly",
+  "type": "mcp",
+  "name": "aidelly",
+  "description": "Agent-operated social media for agencies — www.aidelly.ai. Post, approve, analyze on 11 networks.",
+  "author": "io.github.wilzer",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Aidelly/claude-plugin",
+    "repo": "Aidelly/claude-plugin"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://app.aidelly.ai/api/mcp/public-api"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-05T13:33:20.563661Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

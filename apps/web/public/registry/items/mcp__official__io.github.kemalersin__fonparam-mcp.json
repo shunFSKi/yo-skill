@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.kemalersin/fonparam-mcp",
+  "type": "mcp",
+  "name": "fonparam-mcp",
+  "description": "MCP server for FonParam API - Turkish mutual funds data",
+  "author": "io.github.kemalersin",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/kemalersin/fonparam-mcp",
+    "repo": "kemalersin/fonparam-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "fonparam-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-09-24T13:05:56.655095Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

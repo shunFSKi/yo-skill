@@ -1,0 +1,83 @@
+{
+  "id": "mcp:official/io.github.CodeLogicIncEngineering/codelogic-mcp-server",
+  "type": "mcp",
+  "name": "codelogic-mcp-server",
+  "description": "An MCP Server to utilize Codelogic's rich software dependency data in your AI programming assistant.",
+  "author": "io.github.CodeLogicIncEngineering",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/CodeLogicIncEngineering/codelogic-mcp-server",
+    "repo": "CodeLogicIncEngineering/codelogic-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "codelogic-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "CODELOGIC_SERVER_HOST",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "CODELOGIC_USERNAME",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "CODELOGIC_PASSWORD",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "CODELOGIC_WORKSPACE_NAME",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "CODELOGIC_DEBUG_MODE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-30T19:23:54.942229Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

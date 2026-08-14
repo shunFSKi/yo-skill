@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.ckalima/pipedrive-mcp-server",
+  "type": "mcp",
+  "name": "Pipedrive CRM",
+  "description": "MCP server for Pipedrive CRM. 155 tools for deals, persons, organizations, activities, and more.",
+  "author": "io.github.ckalima",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ckalima/pipedrive-mcp-server",
+    "repo": "ckalima/pipedrive-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@ckalima/pipedrive-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "PIPEDRIVE_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "PIPEDRIVE_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PIPEDRIVE_ENABLE_DESTRUCTIVE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PIPEDRIVE_IMAGE_BASE_DIR",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-22T16:53:43.890558Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.kaitoInfra/twitterapi-io-mcp-server",
+  "type": "mcp",
+  "name": "twitterapi-io-mcp-server",
+  "description": "Official MCP server for twitterapi.io — Twitter/X data (tweets, users, followers, trends).",
+  "author": "io.github.kaitoInfra",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/kaitoInfra/twitterapi-io-mcp-server",
+    "repo": "kaitoInfra/twitterapi-io-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@kaitoinfra/twitterapi-io-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "TWITTERAPI_IO_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-23T11:59:30.349415Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

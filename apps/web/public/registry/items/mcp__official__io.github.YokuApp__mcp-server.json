@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.YokuApp/mcp-server",
+  "type": "mcp",
+  "name": "mcp-server",
+  "description": "Yoku is a platform that provides structured, real-time brand identity and company data.",
+  "author": "io.github.YokuApp",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/YokuApp/mcp-server",
+    "repo": "YokuApp/mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@yokuapp/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "YOKU_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "YOKU_API_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "YOKU_CDN_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "YOKU_REQUEST_TIMEOUT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-27T09:06:57.73179Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

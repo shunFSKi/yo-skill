@@ -1,0 +1,109 @@
+{
+  "id": "mcp:official/io.github.aartiq/servicenow-mcp",
+  "type": "mcp",
+  "name": "ServiceNow MCP Server",
+  "description": "400+ ServiceNow tools across all modules — ITSM, CMDB, HRSD, CSM, SecOps, and more.",
+  "author": "io.github.aartiq",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/aartiq/servicenow-mcp",
+    "repo": "aartiq/servicenow-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@aartiq/servicenow-mcp"
+    ],
+    "env": [
+      {
+        "name": "SERVICENOW_INSTANCE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SERVICENOW_AUTH_METHOD",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SERVICENOW_BASIC_USERNAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SERVICENOW_BASIC_PASSWORD",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WRITE_ENABLED",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SCRIPTING_ENABLED",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CMDB_WRITE_ENABLED",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "NOW_ASSIST_ENABLED",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ATF_ENABLED",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_TOOL_PACKAGE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-01T17:20:42.187136Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

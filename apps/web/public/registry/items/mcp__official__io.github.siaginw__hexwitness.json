@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.siaginw/hexwitness",
+  "type": "mcp",
+  "name": "HexWitness",
+  "description": "Durable, build-scoped reverse-engineering evidence memory and query tools for AI agents.",
+  "author": "io.github.siaginw",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/siaginw/HexWitness",
+    "repo": "siaginw/HexWitness"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "hexwitness"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T05:38:53.670388Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

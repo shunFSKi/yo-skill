@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.dinesh-nalla-se/playwright-mcp",
+  "type": "mcp",
+  "name": "playwright-mcp",
+  "description": "Playwright Tools for MCP",
+  "author": "io.github.dinesh-nalla-se",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dinesh-nalla-se/playwright-mcp",
+    "repo": "dinesh-nalla-se/playwright-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@dinesh-nalla-se/playwright-mcp"
+    ],
+    "env": [
+      {
+        "name": "YOUR_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-11-17T10:25:36.916523Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

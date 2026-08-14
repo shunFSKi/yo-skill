@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.LovRanRan/mcp-test-runner",
+  "type": "mcp",
+  "name": "MCP Test Runner",
+  "description": "Local test execution and coverage summaries for onboarding agents.",
+  "author": "io.github.LovRanRan",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/LovRanRan/mcp-test-runner",
+    "repo": "LovRanRan/mcp-test-runner"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "lovranran-mcp-test-runner"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-25T16:15:00.938545Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

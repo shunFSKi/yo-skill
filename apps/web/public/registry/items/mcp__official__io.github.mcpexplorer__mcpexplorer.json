@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.mcpexplorer/mcpexplorer",
+  "type": "mcp",
+  "name": "MCPExplorer",
+  "description": "Search, vet & assemble MCP servers from your agent: verified tools, risk labels, and trust scores.",
+  "author": "io.github.mcpexplorer",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mcpexplorer/mcp",
+    "repo": "mcpexplorer/mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcpexplorer.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-07T11:37:23.92665Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

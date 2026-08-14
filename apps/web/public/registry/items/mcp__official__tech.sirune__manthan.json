@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/tech.sirune/manthan",
+  "type": "mcp",
+  "name": "manthan",
+  "description": "List and create Manthan concept-card decks from an AI agent — no AI quota spent for imports.",
+  "author": "tech.sirune",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://api.sirune.tech/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.sirune.tech/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-30T23:56:55.769944Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

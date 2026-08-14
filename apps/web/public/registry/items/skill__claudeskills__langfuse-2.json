@@ -1,0 +1,52 @@
+{
+  "id": "skill:claudeskills/langfuse-2",
+  "type": "skill",
+  "name": "langfuse",
+  "description": "Interact with Langfuse and access its documentation. Use when needing to (1) query or modify Langfuse data programmatically via the CLI — traces, prompts, datasets, scores, sessions, and any other API resource, (2) look up Langfuse documentation, concepts, integration guides, or SDK usage, or (3) understand how any Langfuse feature works. This skill covers CLI-based API access (via npx) and multiple documentation retrieval methods.",
+  "author": "langfuse",
+  "source": {
+    "registry": "claudeskills",
+    "url": "https://github.com/langfuse/skills",
+    "repo": "langfuse/skills"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 130,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "<img width=\"2400\" height=\"600\" alt=\"hero-b\" src=\"https://github.com/user-attachments/assets/c177a82d-334b-495c-81cb-9df69c521123\" />\n\n# Langfuse Skills\n\n[Agent Skills](https://github.com/anthropics/skills) that teach AI coding assistants (Claude Code, Cursor, etc.) how to work with [Langfuse](https://langfuse.com) — the open-source LLM engineering platform for tracing, prompt management, and evaluation.\n\n## Skills\n\n| Skill                                                           | Description                                                                                        |\n| --------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |\n| [langfuse](./skills/langfuse)                                   | Main skill to work with Langfuse. Query and manage traces, prompts, datasets, and scores via the Langfuse API; look up documentation; do things with best practices in mind. |\n\n## Installation\n\n### Cursor Plugin\n\nInstall as a [Cursor plugin](https://cursor.com/docs/plugins):\n\n```\n/add-plugin langfuse\n```\n\n### skills CLI\n\nInstall via the [skills CLI](https://github.com/anthropics/skills):\n\n```bash\nnpx skills add langfuse/skills --skill \"langfuse\"\n```\n\n### Manual symlink\n\nClone this repo and symlink the skill into your agent's skills directory:\n\n```bash\ngit clone https://github.com/langfuse/skills.git /path/to/langfuse-skills\nln -s /path/to/langfuse-skills/skills/langfuse /path/to/skills-directory/langfuse\n```\n\n## Prerequisites\n\nYou need a Langfuse account ([cloud](https://cloud.langfuse.com) or [self-hosted](https://langfuse.com/docs/deployment/self-host)) and API keys:\n\n```bash\nexport LANGFUSE_PUBLIC_KEY=pk-lf-...\nexport LANGFUSE_SECRET_KEY=sk-lf-...\nexport LANGFUSE_BASE_URL=https://cloud.langfuse.com  # or https://us.cloud.langfuse.com, or self-hosted URL\n```\n\nAPI keys are found in your Langfuse project under **Settings > API Keys**.\n\n## Usage\n\nOnce installed, the agent will automatically use these skills when relevant — for example:\n\n- Setting up Langfuse tracing in a project\n- Setting up CI/CD experiment gates with `langfuse/experiment-action`\n- Auditing existing instrumentation\n- Preparing an application and Langfuse project for the v4 platform migration\n- Migrating prompts to Langfuse prompt management\n- Querying traces, prompts, or datasets via the API\n- Looking up Langfuse docs, SDK usage, or integration guides\n\n## Feedback & Requests\n\nSomething not working as expected, or want a new skill? [Start a discussion](https://github.com/langfuse/skills/discussions/new?category=ideas-improvements).\n",
+  "status": "curated"
+}

@@ -1,0 +1,94 @@
+{
+  "id": "mcp:official/io.github.wyre-technology/scalepad-mcp",
+  "type": "mcp",
+  "name": "ScalePad",
+  "description": "MCP server for ScalePad — Core, Lifecycle Manager, ControlMap, Backup Radar, and Quoter.",
+  "author": "io.github.wyre-technology",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/wyre-technology/scalepad-mcp",
+    "repo": "wyre-technology/scalepad-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/wyre-technology/scalepad-mcp:v1.0.4"
+    ],
+    "env": [
+      {
+        "name": "SCALEPAD_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "SCALEPAD_REGION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "QUOTER_CLIENT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "QUOTER_CLIENT_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MCP_TRANSPORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AUTH_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T00:28:26.340675Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

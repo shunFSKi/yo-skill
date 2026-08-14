@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.akoskomuves/appstoreconnect-mcp",
+  "type": "mcp",
+  "name": "appstoreconnect-mcp",
+  "description": "App Store Connect for MCP clients: PPP pricing, subscriptions, TestFlight, reviews, reports & more",
+  "author": "io.github.akoskomuves",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/akoskomuves/appstoreconnect-mcp",
+    "repo": "akoskomuves/appstoreconnect-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@akoskomuves/appstoreconnect-mcp"
+    ],
+    "env": [
+      {
+        "name": "ASC_ISSUER_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "ASC_KEY_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "ASC_PRIVATE_KEY_PATH",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "ASC_VENDOR_NUMBER",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-17T15:09:22.880564Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

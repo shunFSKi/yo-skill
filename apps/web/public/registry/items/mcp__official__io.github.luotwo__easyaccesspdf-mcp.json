@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.luotwo/easyaccesspdf-mcp",
+  "type": "mcp",
+  "name": "EasyAccessPDF",
+  "description": "PDF accessibility checks (veraPDF PDF/UA-1), auto-fix and Markdown conversion. EU-hosted.",
+  "author": "io.github.luotwo",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/luotwo/easyaccesspdf-mcp",
+    "repo": "luotwo/easyaccesspdf-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://easyaccesspdf.com/wp-json/easy/v1/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-22T02:32:27.296479Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

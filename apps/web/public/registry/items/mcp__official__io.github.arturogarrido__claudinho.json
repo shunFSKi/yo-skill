@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.arturogarrido/claudinho",
+  "type": "mcp",
+  "name": "claudinho",
+  "description": "Live 2026 World Cup scores, fixtures & standings for your AI agent. No keys. Unofficial fan project.",
+  "author": "io.github.arturogarrido",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/arturogarrido/claudinho",
+    "repo": "arturogarrido/claudinho"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@claudinho/mcp"
+    ],
+    "env": [
+      {
+        "name": "CLAUDINHO_LANG",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CLAUDINHO_TZ",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CLAUDINHO_FLAVOR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CLAUDINHO_MARKETS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-03T07:41:58.029148Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

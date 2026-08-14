@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/ai.featureboard/featureboard",
+  "type": "mcp",
+  "name": "FeatureBoard",
+  "description": "Local-first project board MCP: an AI agent plans, works, verifies, and ships tickets from markdown.",
+  "author": "ai.featureboard",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/valentil/featureboard-mcp",
+    "repo": "valentil/featureboard-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/valentil/featureboard-mcp/releases/download/v0.7/featureboard.plugin"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-24T05:43:14.453244Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.progenly/progenly",
+  "type": "mcp",
+  "name": "Progenly",
+  "description": "Verifiable-lineage agent reproduction: browse births, stage/join/confirm agent merges.",
+  "author": "com.progenly",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/progenly/progenly",
+    "repo": "progenly/progenly"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://progenly.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-28T05:40:09.575374Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

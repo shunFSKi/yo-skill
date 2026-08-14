@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.rijul170/sophos-central-mcp",
+  "type": "mcp",
+  "name": "sophos-central-mcp",
+  "description": "MCP server for Sophos Central — endpoint security, XDR/MDR, and MSSP multi-tenant ops",
+  "author": "io.github.rijul170",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/rijul170/sophos-central-mcp",
+    "repo": "rijul170/sophos-central-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@rijul170/sophos-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-14T01:58:35.257821Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

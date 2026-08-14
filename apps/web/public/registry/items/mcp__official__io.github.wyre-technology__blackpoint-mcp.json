@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.wyre-technology/blackpoint-mcp",
+  "type": "mcp",
+  "name": "Blackpoint Cyber",
+  "description": "MCP server for Blackpoint Cyber MDR — alerts, threats, and operations.",
+  "author": "io.github.wyre-technology",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/wyre-technology/blackpoint-mcp",
+    "repo": "wyre-technology/blackpoint-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/wyre-technology/blackpoint-mcp:v1.1.11"
+    ],
+    "env": [
+      {
+        "name": "BLACKPOINT_API_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "BLACKPOINT_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_TRANSPORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AUTH_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-11T12:55:51.739957Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

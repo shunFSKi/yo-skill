@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.brandu-mos/konquest-meta-ads-mcp",
+  "type": "mcp",
+  "name": "KonQuest Meta Ads MCP",
+  "description": "Supervised Meta Ads operating system for Claude Code with 57 campaign management tools.",
+  "author": "io.github.brandu-mos",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/brandu-mos/konquest-meta-ads-mcp",
+    "repo": "brandu-mos/konquest-meta-ads-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "konquest-meta-ads-mcp"
+    ],
+    "env": [
+      {
+        "name": "META_ACCESS_TOKEN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-28T07:18:23.48619Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

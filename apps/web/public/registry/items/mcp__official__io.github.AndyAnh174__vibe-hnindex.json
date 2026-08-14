@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.AndyAnh174/vibe-hnindex",
+  "type": "mcp",
+  "name": "vibe-hnindex",
+  "description": "Index source code into a local knowledge base, search with keyword + semantic + hybrid modes.",
+  "author": "io.github.AndyAnh174",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/AndyAnh174/vibe-hnindex",
+    "repo": "AndyAnh174/vibe-hnindex"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "vibe-hnindex"
+    ],
+    "env": [
+      {
+        "name": "OLLAMA_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OLLAMA_MODEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "QDRANT_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "STORAGE_PATH",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-05T20:57:17.940012Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

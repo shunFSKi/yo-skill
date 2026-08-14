@@ -1,0 +1,93 @@
+{
+  "id": "mcp:official/io.github.imatza-rh/mcp-zuul",
+  "type": "mcp",
+  "name": "mcp-zuul",
+  "description": "Zuul CI — build failure analysis, log search, pipeline status, and job configuration",
+  "author": "io.github.imatza-rh",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/imatza-rh/mcp-zuul",
+    "repo": "imatza-rh/mcp-zuul"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-zuul"
+    ],
+    "env": [
+      {
+        "name": "ZUUL_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ZUUL_DEFAULT_TENANT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ZUUL_AUTH_TOKEN",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ZUUL_USE_KERBEROS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_TRANSPORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ZUUL_ENABLED_TOOLS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ZUUL_DISABLED_TOOLS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-31T19:44:01.086587Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

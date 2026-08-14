@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/com.nyx-intelligence/val",
+  "type": "mcp",
+  "name": "val",
+  "description": "QA agent for vibecoded apps. Real browser checks, your AI fixes them. Ship to green.",
+  "author": "com.nyx-intelligence",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Wakizara/val-action",
+    "repo": "Wakizara/val-action"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@nyx-intelligence/val-mcp"
+    ],
+    "env": [
+      {
+        "name": "VAL_LICENSE_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-29T05:39:50.227601Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

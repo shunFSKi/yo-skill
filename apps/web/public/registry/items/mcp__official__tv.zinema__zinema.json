@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/tv.zinema/zinema",
+  "type": "mcp",
+  "name": "zinema",
+  "description": "Turn movie/TV recommendations into playable trailer pages: permanent, free, every title plays.",
+  "author": "tv.zinema",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://zinema.tv/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://zinema.tv/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-31T11:59:59.80789Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

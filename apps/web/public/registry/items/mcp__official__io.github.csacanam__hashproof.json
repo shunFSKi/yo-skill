@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.csacanam/hashproof",
+  "type": "mcp",
+  "name": "hashproof",
+  "description": "Issue verifiable credentials from AI agents for $0.10 via x402. On-chain on Celo, IPFS-pinned.",
+  "author": "io.github.csacanam",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/csacanam/hashproof",
+    "repo": "csacanam/hashproof"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "hashproof-mcp"
+    ],
+    "env": [
+      {
+        "name": "HASHPROOF_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "HASHPROOF_WALLET_PRIVATE_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "HASHPROOF_X402_NETWORK",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-15T07:21:36.247146Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

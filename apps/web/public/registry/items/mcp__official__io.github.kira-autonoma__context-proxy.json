@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.kira-autonoma/context-proxy",
+  "type": "mcp",
+  "name": "context-proxy",
+  "description": "MCP proxy that lazy-loads tool schemas to cut context token overhead by 6-7x",
+  "author": "io.github.kira-autonoma",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/kira-autonoma/mcp-context-proxy",
+    "repo": "kira-autonoma/mcp-context-proxy"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-lazy-proxy"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-18T01:46:49.878712Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.ramaris-app/mcp-server",
+  "type": "mcp",
+  "name": "mcp-server",
+  "description": "On-chain wallet analytics and trading strategies on Base for AI assistants",
+  "author": "io.github.ramaris-app",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ramaris-app/mcp-server",
+    "repo": "ramaris-app/mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@ramaris/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "RAMARIS_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-15T07:20:33.318297Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

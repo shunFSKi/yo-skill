@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.surisoft-io/capi-core",
+  "type": "mcp",
+  "name": "CAPI Gateway",
+  "description": "Apache Camel API Gateway with REST-to-MCP bridging for LLM agents.",
+  "author": "io.github.surisoft-io",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/surisoft-io/capi-core",
+    "repo": "surisoft-io/capi-core"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "docker.io/surisoft/capi-core:1.417.5"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-03T12:14:33.866291Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.mdefrance/autocarver",
+  "type": "mcp",
+  "name": "autocarver",
+  "description": "Qualify dataset columns and process them against a target with AutoCarver, fully on your machine.",
+  "author": "io.github.mdefrance",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mdefrance/AutoCarver",
+    "repo": "mdefrance/AutoCarver"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "autocarver"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T14:11:01.495837Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

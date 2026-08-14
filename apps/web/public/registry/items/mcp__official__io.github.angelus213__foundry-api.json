@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.angelus213/foundry-api",
+  "type": "mcp",
+  "name": "Foundry/API",
+  "description": "Bounded tools for rendering, extraction, RAG, enrichment, local discovery and review analysis.",
+  "author": "io.github.angelus213",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/angelus213/foundry-api-workflows",
+    "repo": "angelus213/foundry-api-workflows"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://prodapi.live/mcp",
+    "env": [
+      {
+        "name": "X-API-Key",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-22T12:52:56.876271Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

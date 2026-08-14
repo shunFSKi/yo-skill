@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.JonathanRReed/apple-messages-mcp",
+  "type": "mcp",
+  "name": "Apple Messages",
+  "description": "Read Messages history on macOS and send or reply through Messages.app.",
+  "author": "io.github.JonathanRReed",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/JonathanRReed/Apple-MCPs",
+    "repo": "JonathanRReed/Apple-MCPs"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "apple-messages-mcp"
+    ],
+    "env": [
+      {
+        "name": "APPLE_MESSAGES_MCP_SAFETY_MODE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-05T18:22:23.230167Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.monoxide-xen/microcap-mcp",
+  "type": "mcp",
+  "name": "microcap-mcp",
+  "description": "Simulate, generate and draw analog circuits in Micro-Cap 12: SPICE analyses, sweeps and schematics",
+  "author": "io.github.monoxide-xen",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/monoxide-xen/microcap-mcp",
+    "repo": "monoxide-xen/microcap-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "microcap-mcp"
+    ],
+    "env": [
+      {
+        "name": "MICROCAP_HOME",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-26T21:34:35.032514Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

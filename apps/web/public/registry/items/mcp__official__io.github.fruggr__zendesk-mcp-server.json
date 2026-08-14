@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.fruggr/zendesk-mcp-server",
+  "type": "mcp",
+  "name": "zendesk-mcp-server",
+  "description": "Draft, translate and update Help Center articles and manage Zendesk tickets from your AI assistant.",
+  "author": "io.github.fruggr",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/fruggr/zendesk-mcp-server",
+    "repo": "fruggr/zendesk-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@fruggr/zendesk-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "ZENDESK_SUBDOMAIN",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T22:12:14.831458Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

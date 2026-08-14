@@ -1,0 +1,78 @@
+{
+  "id": "mcp:official/io.github.zackpeters93/ugs-mcp",
+  "type": "mcp",
+  "name": "ugs-mcp",
+  "description": "CNC machine control via Universal G-code Sender. Jog, home, run files with hardware safety tokens.",
+  "author": "io.github.zackpeters93",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/zackpeters93/ugs-mcp",
+    "repo": "zackpeters93/ugs-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "ugs-mcp"
+    ],
+    "env": [
+      {
+        "name": "UGS_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "UGS_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MACROS_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RAPID_SPEED_MM_MIN",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-05T21:13:01.583982Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

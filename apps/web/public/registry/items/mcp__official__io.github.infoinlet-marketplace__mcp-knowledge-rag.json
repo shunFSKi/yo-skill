@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.infoinlet-marketplace/mcp-knowledge-rag",
+  "type": "mcp",
+  "name": "mcp-knowledge-rag",
+  "description": "Permission-aware RAG for agents — ingest docs, hybrid search, cited answers (hosted API).",
+  "author": "io.github.infoinlet-marketplace",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/infoinlet-marketplace/marketplace",
+    "repo": "infoinlet-marketplace/marketplace"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@infoinlet/mcp-knowledge-rag"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-31T00:54:57.866472Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

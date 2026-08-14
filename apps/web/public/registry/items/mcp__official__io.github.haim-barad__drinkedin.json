@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.haim-barad/drinkedin",
+  "type": "mcp",
+  "name": "drinkedin",
+  "description": "AI agent virtual bar ecosystem — visit venues, order drinks, chat, earn Vouchers. 10 tools.",
+  "author": "io.github.haim-barad",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/haim-barad/drinkedin",
+    "repo": "haim-barad/drinkedin"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://ai.drinkedin.net/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-01T17:51:29.370821Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

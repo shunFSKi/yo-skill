@@ -1,0 +1,73 @@
+{
+  "id": "mcp:official/io.github.mshegolev/allure-testops-mcp",
+  "type": "mcp",
+  "name": "allure-testops-mcp",
+  "description": "Allure TestOps MCP — projects, launches, test cases, test results via REST API.",
+  "author": "io.github.mshegolev",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mshegolev/allure-testops-mcp",
+    "repo": "mshegolev/allure-testops-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "allure-testops-mcp"
+    ],
+    "env": [
+      {
+        "name": "ALLURE_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "ALLURE_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "ALLURE_SSL_VERIFY",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-06T11:15:56.225358Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.vivid-money/vivid-mcp",
+  "type": "mcp",
+  "name": "Vivid MCP",
+  "description": "Open a Vivid Business account from your AI chat via MCP.",
+  "author": "io.github.vivid-money",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/vivid-money/vivid-mcp",
+    "repo": "vivid-money/vivid-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.prime.vivid.money/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-19T14:28:31.814575Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

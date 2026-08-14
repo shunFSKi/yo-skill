@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.myrakrusemark/memento-protocol",
+  "type": "mcp",
+  "name": "memento-protocol",
+  "description": "Persistent memory for AI agents. Store what matters, recall by meaning, skip the rest.",
+  "author": "io.github.myrakrusemark",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/myrakrusemark/memento-protocol",
+    "repo": "myrakrusemark/memento-protocol"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "memento-mcp"
+    ],
+    "env": [
+      {
+        "name": "MEMENTO_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "MEMENTO_API_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "MEMENTO_WORKSPACE",
+        "required": true,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-18T16:19:52.708139Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

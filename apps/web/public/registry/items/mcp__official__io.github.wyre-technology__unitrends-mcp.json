@@ -1,0 +1,94 @@
+{
+  "id": "mcp:official/io.github.wyre-technology/unitrends-mcp",
+  "type": "mcp",
+  "name": "Unitrends Backup",
+  "description": "MCP server for Unitrends Backup — appliances, jobs, recovery points, restores, alerts.",
+  "author": "io.github.wyre-technology",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/wyre-technology/unitrends-mcp",
+    "repo": "wyre-technology/unitrends-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/wyre-technology/unitrends-mcp:v1.1.2"
+    ],
+    "env": [
+      {
+        "name": "UNITRENDS_BASE_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "UNITRENDS_USERNAME",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "UNITRENDS_PASSWORD",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "UNITRENDS_VERIFY_TLS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_TRANSPORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AUTH_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T00:28:25.523686Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

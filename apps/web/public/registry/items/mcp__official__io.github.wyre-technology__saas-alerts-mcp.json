@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.wyre-technology/saas-alerts-mcp",
+  "type": "mcp",
+  "name": "SaaS Alerts",
+  "description": "MCP server for Kaseya SaaS Alerts — SaaS security monitoring for M365 & Google Workspace.",
+  "author": "io.github.wyre-technology",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/wyre-technology/saas-alerts-mcp",
+    "repo": "wyre-technology/saas-alerts-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/wyre-technology/saas-alerts-mcp:v1.2.2"
+    ],
+    "env": [
+      {
+        "name": "SAAS_ALERTS_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "MCP_TRANSPORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AUTH_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T00:28:24.858154Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

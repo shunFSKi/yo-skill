@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.dburks-svg/poliety",
+  "type": "mcp",
+  "name": "The Poliety",
+  "description": "AI news for agents: editions, change feeds, integrity proofs, and governed events with evidence.",
+  "author": "io.github.dburks-svg",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dburks-svg/poliety",
+    "repo": "dburks-svg/poliety"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "poliety-mcp"
+    ],
+    "env": [
+      {
+        "name": "POLIETY_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T05:53:08.540913Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

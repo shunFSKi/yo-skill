@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/bid.scope/claims",
+  "type": "mcp",
+  "name": "Scope (Claims) - Preview",
+  "description": "Insurance claims-side vendor procurement (IMEs, IA, surveillance). Preview - V2 launches Q3 2026.",
+  "author": "bid.scope",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/scope-bid/scope-mcp",
+    "repo": "scope-bid/scope-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@scope-bid/scope-claims-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-30T23:03:59.15897Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

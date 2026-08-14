@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.Shuangshuang007/workopia",
+  "type": "mcp",
+  "name": "workopia",
+  "description": "Workopia - free MCP for global job search, PDF resume builder, and AI career advice.",
+  "author": "io.github.Shuangshuang007",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/workopia/workopia-mcp",
+    "repo": "workopia/workopia-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@shuang_workopia/workopia-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-15T12:44:45.904541Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

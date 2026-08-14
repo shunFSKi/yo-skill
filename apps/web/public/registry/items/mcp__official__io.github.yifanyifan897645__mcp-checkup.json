@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.yifanyifan897645/mcp-checkup",
+  "type": "mcp",
+  "name": "mcp-checkup",
+  "description": "Analyze your MCP setup: token costs, grades, duplicates, and optimization tips",
+  "author": "io.github.yifanyifan897645",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/yifanyifan897645/mcp-checkup",
+    "repo": "yifanyifan897645/mcp-checkup"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-checkup"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-30T10:26:54.162692Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

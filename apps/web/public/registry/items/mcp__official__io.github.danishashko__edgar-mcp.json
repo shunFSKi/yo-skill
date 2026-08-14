@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.danishashko/edgar-mcp",
+  "type": "mcp",
+  "name": "SEC EDGAR",
+  "description": "SEC EDGAR filings (10-K, 10-Q, 8-K), XBRL financials, and full-text filing search. No API key.",
+  "author": "io.github.danishashko",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/danishashko/edgar-mcp",
+    "repo": "danishashko/edgar-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "edgar-mcp"
+    ],
+    "env": [
+      {
+        "name": "SEC_USER_AGENT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-14T15:42:15.721919Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

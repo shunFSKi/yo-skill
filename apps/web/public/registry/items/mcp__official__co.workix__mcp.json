@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/co.workix/mcp",
+  "type": "mcp",
+  "name": "Workix",
+  "description": "Remote jobs, freelance gigs, vacancies. 24 boards: Upwork, Freelancer, RemoteOK, hh.ru, Kwork.",
+  "author": "co.workix",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/facetoplace/Workix",
+    "repo": "facetoplace/Workix"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@workix/mcp"
+    ],
+    "env": [
+      {
+        "name": "WORKIX_API",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WORKIX_AGENT_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T23:44:36.461016Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

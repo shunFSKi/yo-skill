@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.tickadoo/tickadoo-mcp",
+  "type": "mcp",
+  "name": "tickadoo-mcp",
+  "description": "Search and book theatre, attractions, tours across 681 cities. 13,090+ products.",
+  "author": "io.github.tickadoo",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/tickadoo/tickadoo-mcp",
+    "repo": "tickadoo/tickadoo-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.tickadoo.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-28T07:15:41.12794Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

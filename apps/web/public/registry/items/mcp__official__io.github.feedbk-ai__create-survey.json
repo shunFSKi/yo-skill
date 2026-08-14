@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.feedbk-ai/create-survey",
+  "type": "mcp",
+  "name": "create-survey",
+  "description": "Create AI surveys with dynamic follow-up probing directly from your AI assistant.",
+  "author": "io.github.feedbk-ai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/feedbk-ai/feedbk-mcp-server",
+    "repo": "feedbk-ai/feedbk-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.feedbk.ai/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-27T14:42:23.639059Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

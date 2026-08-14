@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.ashmitrrr/dsa-tracker-mcp-server",
+  "type": "mcp",
+  "name": "dsa-tracker-mcp-server",
+  "description": "Track DSA/LeetCode practice with spaced repetition, ships with NeetCode 150.",
+  "author": "io.github.ashmitrrr",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ashmitrrr/dsa-tracker-mcp-server",
+    "repo": "ashmitrrr/dsa-tracker-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "dsa-tracker-mcp"
+    ],
+    "env": [
+      {
+        "name": "DSA_TRACKER_DB",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DSA_TRACKER_PROBLEMS_FILE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-14T02:41:19.3322Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

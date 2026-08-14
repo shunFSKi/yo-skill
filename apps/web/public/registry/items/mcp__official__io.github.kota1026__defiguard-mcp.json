@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.kota1026/defiguard-mcp",
+  "type": "mcp",
+  "name": "defiguard-mcp",
+  "description": "DeFiGuard MCP Server - DeFi protocol risk analysis tools for AI coding agents. Analyze token co...",
+  "author": "io.github.kota1026",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/kota1026/quantum-shield",
+    "repo": "kota1026/quantum-shield"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "defiguard-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-27T14:25:00.087455Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

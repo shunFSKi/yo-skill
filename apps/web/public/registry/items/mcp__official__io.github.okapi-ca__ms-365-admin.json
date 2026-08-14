@@ -1,0 +1,99 @@
+{
+  "id": "mcp:official/io.github.okapi-ca/ms-365-admin",
+  "type": "mcp",
+  "name": "Microsoft 365 Admin",
+  "description": "Microsoft 365 administration via Graph API application permissions (read-only by default).",
+  "author": "io.github.okapi-ca",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/okapi-ca/ms-365-admin-mcp-server",
+    "repo": "okapi-ca/ms-365-admin-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@okapi-ca/ms-365-admin-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "MS365_ADMIN_MCP_TENANT_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "MS365_ADMIN_MCP_CLIENT_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "MS365_ADMIN_MCP_CLIENT_SECRET",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "MS365_ADMIN_MCP_KEYVAULT_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MS365_ADMIN_MCP_CLOUD_TYPE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MS365_ADMIN_MCP_MAX_TOP",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "READ_ONLY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ENABLED_TOOLS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-21T17:43:06.345122Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

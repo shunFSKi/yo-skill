@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.cloudforgetech6-ctrl/cloudforge",
+  "type": "mcp",
+  "name": "cloudforge",
+  "description": "Visualise diagrams, generate Terraform HCL, and manage Azure/AWS/GCP infrastructure with AI.",
+  "author": "io.github.cloudforgetech6-ctrl",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/cloudforgetech6-ctrl/mcp_server",
+    "repo": "cloudforgetech6-ctrl/mcp_server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "cloudforge-mcp"
+    ],
+    "env": [
+      {
+        "name": "CLOUDFORGE_TOKEN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-04T00:45:11.187795Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

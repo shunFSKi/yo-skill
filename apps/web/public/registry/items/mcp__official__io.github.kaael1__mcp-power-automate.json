@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.kaael1/mcp-power-automate",
+  "type": "mcp",
+  "name": "mcp-power-automate",
+  "description": "Local MCP for Power Automate with browser-backed auth, target locking, review diff, and rollback.",
+  "author": "io.github.kaael1",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/kaael1/mcp-power-automate",
+    "repo": "kaael1/mcp-power-automate"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@kaael1/mcp-power-automate"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-02T17:56:37.153901Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.kobuta23/cabin-flights",
+  "type": "mcp",
+  "name": "cabin-flights",
+  "description": "Search and book real flights with USDC on Base. 500+ airlines, crypto-native payments.",
+  "author": "io.github.kobuta23",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/yolo-maxi/cabin",
+    "repo": "yolo-maxi/cabin"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "cabin-flights"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-06T18:24:02.893893Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.UI5/mcp-server",
+  "type": "mcp",
+  "name": "mcp-server",
+  "description": "MCP server for SAPUI5/OpenUI5 development",
+  "author": "io.github.UI5",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/UI5/mcp-server",
+    "repo": "UI5/mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@ui5/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "UI5_MCP_SERVER_ALLOWED_DOMAINS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "UI5_MCP_SERVER_RESPONSE_NO_STRUCTURED_CONTENT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "UI5_MCP_SERVER_RESPONSE_NO_RESOURCES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "UI5_LOG_LVL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "UI5_DATA_DIR",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T09:15:48.818722Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

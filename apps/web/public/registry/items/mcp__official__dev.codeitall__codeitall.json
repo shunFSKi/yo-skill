@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/dev.codeitall/codeitall",
+  "type": "mcp",
+  "name": "codeitall",
+  "description": "Behavioral oracle for Rust crate APIs: runtime behavior, yank/advisory, deprecation, sig search",
+  "author": "dev.codeitall",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/codeitalldev/codeitall",
+    "repo": "codeitalldev/codeitall"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.codeitall.dev/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-27T01:49:39.573819Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.zoom/zoom-meetings",
+  "type": "mcp",
+  "name": "zoom-meetings",
+  "description": "Zoom Meetings server for meeting search, recordings, transcripts, summaries, and meeting assets.",
+  "author": "io.github.zoom",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/zoom/mcp-registry",
+    "repo": "zoom/mcp-registry"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.zoom.us/mcp/meeting/streamable"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-08T10:35:05.136773Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

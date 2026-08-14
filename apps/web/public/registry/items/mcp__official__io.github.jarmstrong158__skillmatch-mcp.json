@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.jarmstrong158/skillmatch-mcp",
+  "type": "mcp",
+  "name": "skillmatch-mcp",
+  "description": "Job search and ranking pipeline via MCP for Claude Desktop.",
+  "author": "io.github.jarmstrong158",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/jarmstrong158/skillmatch-mcp",
+    "repo": "jarmstrong158/skillmatch-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "skillmatch-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-02T13:41:52.163726Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

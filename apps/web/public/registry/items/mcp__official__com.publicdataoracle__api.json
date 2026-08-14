@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/com.publicdataoracle/api",
+  "type": "mcp",
+  "name": "PublicData Oracle",
+  "description": "Public data API with ML enrichment — SEC EDGAR, FRED, NOAA, EPA, USGS. 404 endpoints.",
+  "author": "com.publicdataoracle",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Mljessop/SensorAnalytics",
+    "repo": "Mljessop/SensorAnalytics"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://www.publicdataoracle.com/api/v1/data/query",
+    "env": [
+      {
+        "name": "X-API-Key",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-04T23:09:15.662081Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

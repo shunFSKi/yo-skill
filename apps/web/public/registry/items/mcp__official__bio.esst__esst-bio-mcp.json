@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/bio.esst/esst-bio-mcp",
+  "type": "mcp",
+  "name": "esst-bio-mcp",
+  "description": "An MCP server that provides access to the Online Shops in the esst.bio network",
+  "author": "bio.esst",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://esst.bio/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://esst.bio/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-17T13:09:28.776416Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

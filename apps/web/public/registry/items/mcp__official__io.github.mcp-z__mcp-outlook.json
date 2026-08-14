@@ -1,0 +1,109 @@
+{
+  "id": "mcp:official/io.github.mcp-z/mcp-outlook",
+  "type": "mcp",
+  "name": "Outlook",
+  "description": "Outlook integration with OAuth, message search, batch operations, and calendar management",
+  "author": "io.github.mcp-z",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers/io.github.mcp-z%2Fmcp-outlook",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@mcp-z/mcp-outlook"
+    ],
+    "env": [
+      {
+        "name": "MS_CLIENT_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "MS_TENANT_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "MS_CLIENT_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "AUTH_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "HEADLESS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "REDIRECT_URI",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RESOURCE_STORE_URI",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-01-10T14:22:19.253826Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.writerslogic/scrivener-mcp",
+  "type": "mcp",
+  "name": "scrivener-mcp",
+  "description": "MCP server for Scrivener: read, write, analyze, and search your manuscripts with AI assistants.",
+  "author": "io.github.writerslogic",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/writerslogic/scrivener-mcp",
+    "repo": "writerslogic/scrivener-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "scrivener-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-25T19:59:56.949805Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

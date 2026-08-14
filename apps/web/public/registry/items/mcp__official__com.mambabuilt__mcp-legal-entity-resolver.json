@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/com.mambabuilt/mcp-legal-entity-resolver",
+  "type": "mcp",
+  "name": "mcp-legal-entity-resolver",
+  "description": "Resolve a company domain to its registered legal entity, company number, LEI and VAT number.",
+  "author": "com.mambabuilt",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mambalabsdev/mcp-legal-entity-resolver",
+    "repo": "mambalabsdev/mcp-legal-entity-resolver"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@mambalabsdev/mcp-legal-entity-resolver"
+    ],
+    "env": [
+      {
+        "name": "APIFY_TOKEN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-11T11:59:07.774216Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.ciinkwia/twitter-signal-mcp",
+  "type": "mcp",
+  "name": "twitter-signal-mcp",
+  "description": "Live X/Twitter search and AI trend digests. No Twitter API key — pay per call in USDC via x402.",
+  "author": "io.github.ciinkwia",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ciinkwia/twitter-signal-mcp",
+    "repo": "ciinkwia/twitter-signal-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "twitter-signal-mcp"
+    ],
+    "env": [
+      {
+        "name": "CDP_API_KEY_ID",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "CDP_API_KEY_SECRET",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "CDP_WALLET_SECRET",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "X402_MAX_PRICE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CDP_ACCOUNT_NAME",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T03:08:11.323975Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

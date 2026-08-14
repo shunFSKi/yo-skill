@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.NIKX-Tech/sentor-mcp",
+  "type": "mcp",
+  "name": "Sentor",
+  "description": "Score sentiment toward specific entities in text. Cluster documents and name topics.",
+  "author": "io.github.NIKX-Tech",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/NIKX-Tech/sentor-mcp",
+    "repo": "NIKX-Tech/sentor-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "sentor-mcp"
+    ],
+    "env": [
+      {
+        "name": "SENTOR_API_KEY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SENTOR_BASE_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-22T16:04:47.174632Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

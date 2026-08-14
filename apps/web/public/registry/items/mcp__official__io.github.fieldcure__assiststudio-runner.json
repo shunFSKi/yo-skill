@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.fieldcure/assiststudio-runner",
+  "type": "mcp",
+  "name": "assiststudio-runner",
+  "description": "Windows-only headless LLM task automation engine with scheduling via Windows Task Scheduler.",
+  "author": "io.github.fieldcure",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/fieldcure/fieldcure-assiststudio-runner",
+    "repo": "fieldcure/fieldcure-assiststudio-runner"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "FieldCure.AssistStudio.Runner"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-25T09:29:16.45977Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

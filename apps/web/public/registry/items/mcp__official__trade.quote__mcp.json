@@ -1,0 +1,65 @@
+{
+  "id": "mcp:official/trade.quote/mcp",
+  "type": "mcp",
+  "name": "Quote.Trade MCP Adapter",
+  "description": "Quote.Trade MCP: login, deposit address, market data, orders, and withdraws.",
+  "author": "trade.quote",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://quote.trade/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://quote.trade/mcp",
+    "env": [
+      {
+        "name": "X-MBX-APIKEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "X-Quote-Trade-API-Secret",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-06T15:06:54.012689Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

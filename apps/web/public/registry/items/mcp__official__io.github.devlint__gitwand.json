@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.devlint/gitwand",
+  "type": "mcp",
+  "name": "gitwand",
+  "description": "Auto-resolves Git merge conflicts so agents only touch the complex hunks.",
+  "author": "io.github.devlint",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/devlint/GitWand",
+    "repo": "devlint/GitWand"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@gitwand/mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T13:15:13.482808Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

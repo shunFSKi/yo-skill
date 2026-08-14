@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.akomyagin/aimcpgate",
+  "type": "mcp",
+  "name": "aimcpgate",
+  "description": "MCP gateway/proxy: multiplexes tool calls across upstream MCP servers into one catalog.",
+  "author": "io.github.akomyagin",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/akomyagin/aiMCPGate",
+    "repo": "akomyagin/aiMCPGate"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/akomyagin/aimcpgate:0.4.0"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-29T05:41:29.937004Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

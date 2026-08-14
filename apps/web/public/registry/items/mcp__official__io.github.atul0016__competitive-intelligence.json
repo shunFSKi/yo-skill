@@ -1,0 +1,73 @@
+{
+  "id": "mcp:official/io.github.atul0016/competitive-intelligence",
+  "type": "mcp",
+  "name": "Competitive Intelligence",
+  "description": "Competitive pricing, ads, SEO moves, launches, reviews, and daily market briefs.",
+  "author": "io.github.atul0016",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers/io.github.atul0016%2Fcompetitive-intelligence",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "competitive-intelligence-mcp"
+    ],
+    "env": [
+      {
+        "name": "EARNALL_MCP_LICENSE_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "EARNALL_MCP_ACTIVATION_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "EARNALL_MCP_LICENSE_API",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-14T02:43:29.561753Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

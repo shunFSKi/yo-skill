@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.markswendsen-code/delta",
+  "type": "mcp",
+  "name": "delta",
+  "description": "MCP server for Delta Airlines - search flights, check status, manage trips",
+  "author": "io.github.markswendsen-code",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/markswendsen-code/mcp-delta",
+    "repo": "markswendsen-code/mcp-delta"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@striderlabs/mcp-delta"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-15T00:02:21.089595Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

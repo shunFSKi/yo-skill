@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.arslan2012/qpost-mcp",
+  "type": "mcp",
+  "name": "qpost-mcp",
+  "description": "MCP server for QPost — lets AI agents publish video and image posts to YouTube, TikTok, Instagram.",
+  "author": "io.github.arslan2012",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/arslan2012/qpost-mcp",
+    "repo": "arslan2012/qpost-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "qpost-mcp"
+    ],
+    "env": [
+      {
+        "name": "QPOST_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "QPOST_BASE_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-03T06:02:09.725008Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

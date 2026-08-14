@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.kevynf/akbridge",
+  "type": "mcp",
+  "name": "AKBridge",
+  "description": "Search and call AKShare financial data interfaces through three routed MCP tools",
+  "author": "io.github.kevynf",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/kevynf/akbridge",
+    "repo": "kevynf/akbridge"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "akbridge"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-09T01:38:07.550791Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

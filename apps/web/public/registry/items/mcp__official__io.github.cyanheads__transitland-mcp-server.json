@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.cyanheads/transitland-mcp-server",
+  "type": "mcp",
+  "name": "transitland-mcp-server",
+  "description": "Global transit via Transitland v2 — operators, GTFS/GTFS-RT/GBFS feeds, routes, stops, departures.",
+  "author": "io.github.cyanheads",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/cyanheads/transitland-mcp-server",
+    "repo": "cyanheads/transitland-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@cyanheads/transitland-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "TRANSITLAND_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "TRANSITLAND_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-14T08:59:49.059852Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/app.wishpool/dominican-republic-invoice-mcp",
+  "type": "mcp",
+  "name": "Dominican Republic Invoices (DGII e-CF facturacion electronica)",
+  "description": "Dominican Republic DGII e-CF: AI agents authenticate and submit electronic invoices, stateless BYO.",
+  "author": "app.wishpool",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/junter1989k-ai/dominican-republic-invoice-mcp",
+    "repo": "junter1989k-ai/dominican-republic-invoice-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://inv-do.wishpool.app/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-10T09:45:33.428942Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.AIWerk/mcp-server-wise",
+  "type": "mcp",
+  "name": "mcp-server-wise",
+  "description": "Wise Personal API: profiles, balances, multi-currency rates, transfers, recipients (read-only).",
+  "author": "io.github.AIWerk",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/AIWerk/mcp-server-wise",
+    "repo": "AIWerk/mcp-server-wise"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@aiwerk/mcp-server-wise"
+    ],
+    "env": [
+      {
+        "name": "WISE_API_TOKEN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-24T00:24:29.127594Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

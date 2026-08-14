@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.KevinRabun/FedRAMP20xMCP",
+  "type": "mcp",
+  "name": "FedRAMP 20x Requirements",
+  "description": "An MCP server that provides access to FedRAMP 20x security requirements and controls.",
+  "author": "io.github.KevinRabun",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/KevinRabun/FedRAMP20xMCP",
+    "repo": "KevinRabun/FedRAMP20xMCP"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "fedramp-20x-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-13T20:03:05.364998Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

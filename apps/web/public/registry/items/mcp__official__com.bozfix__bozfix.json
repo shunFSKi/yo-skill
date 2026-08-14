@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.bozfix/bozfix",
+  "type": "mcp",
+  "name": "bozfix",
+  "description": "Find verified electricians in Antalya, Turkey. Prices from real jobs, confirm-first requests.",
+  "author": "com.bozfix",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://bozfix.com/api/mcp.php",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://bozfix.com/api/mcp.php"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-07T13:01:34.946073Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

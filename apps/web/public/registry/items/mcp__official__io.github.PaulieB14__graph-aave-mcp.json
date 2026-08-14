@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.PaulieB14/graph-aave-mcp",
+  "type": "mcp",
+  "name": "graph-aave-mcp",
+  "description": "AAVE V2/V3 lending & governance MCP — 7 chains via The Graph subgraphs",
+  "author": "io.github.PaulieB14",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/PaulieB14/graph-aave-mcp",
+    "repo": "PaulieB14/graph-aave-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "graph-aave-mcp"
+    ],
+    "env": [
+      {
+        "name": "GRAPH_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-04T00:50:56.840782Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

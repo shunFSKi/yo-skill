@@ -1,0 +1,78 @@
+{
+  "id": "mcp:official/io.github.Labs64/netlicensing-mcp",
+  "type": "mcp",
+  "name": "NetLicensing MCP Server",
+  "description": "Labs64 NetLicensing MCP server for AI-driven software license lifecycle management.",
+  "author": "io.github.Labs64",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers/io.github.Labs64%2Fnetlicensing-mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "netlicensing-mcp"
+    ],
+    "env": [
+      {
+        "name": "NETLICENSING_API_KEY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "NETLICENSING_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_TRANSPORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_VERBOSE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-24T10:08:01.665176Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

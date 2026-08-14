@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.andrew-sondgeroth/zipexplore-mcp",
+  "type": "mcp",
+  "name": "zipexplore-mcp",
+  "description": "US ZIP code intelligence: demographics, weather, tax, crime, housing, voting, and more.",
+  "author": "io.github.andrew-sondgeroth",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.zipexplore.com/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.zipexplore.com/mcp",
+    "env": [
+      {
+        "name": "x-api-key",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-29T14:50:08.080483Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.bsrishi/drivara",
+  "type": "mcp",
+  "name": "Drivara",
+  "description": "Read-only access to your Drivara fleet — jobs, drivers, vehicles, fuel, profit & analytics.",
+  "author": "io.github.bsrishi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/bsrishi/drivara-mcp",
+    "repo": "bsrishi/drivara-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://app.drivara.in/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-28T07:04:01.878561Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

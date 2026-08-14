@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.johnzfitch/pyghidra-lite",
+  "type": "mcp",
+  "name": "pyghidra-lite",
+  "description": "Token-efficient Ghidra RE: decompile, xrefs, Swift/ObjC, ELF/Mach-O, async analysis",
+  "author": "io.github.johnzfitch",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/johnzfitch/pyghidra-lite",
+    "repo": "johnzfitch/pyghidra-lite"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "pyghidra-lite"
+    ],
+    "env": [
+      {
+        "name": "GHIDRA_INSTALL_DIR",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-02T08:51:27.555474Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

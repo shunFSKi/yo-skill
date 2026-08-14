@@ -1,0 +1,98 @@
+{
+  "id": "mcp:official/io.github.AntVsl/oura-mcp",
+  "type": "mcp",
+  "name": "Oura Ring",
+  "description": "Sleep, readiness, HRV, resting heart rate, activity and stress from your Oura Ring",
+  "author": "io.github.AntVsl",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/AntVsl/oura_mcp",
+    "repo": "AntVsl/oura_mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "my-oura-mcp"
+    ],
+    "env": [
+      {
+        "name": "OURA_CLIENT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OURA_CLIENT_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "OURA_REDIRECT_URI",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OURA_API_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OURA_TZ",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OURA_TOKEN_STORE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OURA_PUBLIC_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OURA_OAUTH_ALLOWED_REDIRECT_ORIGINS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-02T19:39:15.141889Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

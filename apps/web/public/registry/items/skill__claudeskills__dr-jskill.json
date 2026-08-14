@@ -1,0 +1,52 @@
+{
+  "id": "skill:claudeskills/dr-jskill",
+  "type": "skill",
+  "name": "dr-jskill",
+  "description": "Creates Java + Spring Boot projects: Web applications, full-stack apps with Vue.js or Angular or React or vanilla JS, PostgreSQL, REST APIs, and Docker. Use when creating Spring Boot projects, setting up Java microservices, or building enterprise applications with the Spring Framework.",
+  "author": "jdubois",
+  "source": {
+    "registry": "claudeskills",
+    "url": "https://github.com/jdubois/dr-jskill",
+    "repo": "jdubois/dr-jskill"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 188,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "# Dr JSkill\n\n<table>\n  <tr>\n    <td>\n      <p><strong>An Agent Skill for creating Spring Boot applications following Julien Dubois' best practices.</strong></p>\n      <p>Generate Spring Boot 4.x projects with Java 25, PostgreSQL, Docker support, and your choice of front-end framework (Vue.js, React, Angular, or Vanilla JS).</p>\n      <p>Dr JSkill is an agent skill: it is meant to work with tools like GitHub Copliot CLI or Claude Code.\n      </p>\n    </td>\n    <td align=\"right\" valign=\"middle\" width=\"340\">\n      <img src=\"./dr-jskill-small.png\" alt=\"Dr JSkill logo\" width=\"320\" />\n    </td>\n  </tr>\n</table>\n\n## Video Introduction\n\n<a href=\"https://youtu.be/Z8tWJ0NTy08\">\n  <img src=\"https://img.youtube.com/vi/Z8tWJ0NTy08/hqdefault.jpg\" alt=\"Dr JSkill Video\" width=\"480\" />\n</a>\n\n## What This Skill Provides\n\n- **Automated project generation** from https://start.spring.io with the latest available Spring Boot version\n- **Docker-ready** applications with standard and native image builds\n- **Multiple front-end options**: Vue.js (default), React, Angular, or Vanilla JS\n- **Production-ready** configurations with PostgreSQL, REST APIs, and monitoring\n\n## Comparison with JHipster\n\n[JHipster](https://jhipster.tech) is an awesome Spring Boot application generator, also created by Julien Dubois.\n\nDr JSkill builds on the JHipster experience:\n\n- It generates applications that should be similar to what JHipster creates\n- It is closer to Julien Dubois' tastes, as JHipster is ultimately the work of hundreds of people\n- Dr JSkill is an AI agent: it is not deterministic, it is slower and can cost some money to execute. But it is easier to tune, more versatile, and can update projects easily.\n\nAt the moment, Dr JSkill is an experiment. If it is successful, it might join the JHipster organization.\n\n## Workshop\n\nA full hands-on workshop — **GitHub Copilot CLI + Java, using Dr JSkill** — walks you through generating, extending, testing, and deploying a real Spring Boot + Vue application: **[workshop/README.md](workshop/README.md)**.\n\n## Documentation\n\nFor complete documentation, usage instructions, and best practices, see **[SKILL.md](SKILL.md)**.\n\nAdditional references:\n- [Project Setup & Dotfiles](references/PROJECT-SETUP.md)\n- [Front-end Development Guides](references/) (Vue.js, React, Angular, Vanilla JS)\n- [Database Best Practices](references/DATABASE.md)\n- [Docker Deployment](references/DOCKER.md)\n- [Testing Guide](references/TEST.md)\n- [Azure Deployment](references/AZURE.md)\n- **Versions manifest:** `versions.json` (read by `scripts/lib/versions.mjs`). Update this file first when bumping any tool/library version.\n\n## Using This Skill with AI Assistants\n\nThis is an [Agent Skill](https://agentskills.io) that can be used with AI coding assistants that support the Agent Skills specification.\n\n**Recommended model:** Dr JSkill works best with **GPT-5.5**.\n\n### Fork or clone this repository\n\nIn order to use this skill, and modify it to your needs, you can fork this repository on GitHub, or simply clone it to your local machine.\n\n#### Forking on GitHub\n\n**Using the GitHub website:**\n1. Navigate to the repository on GitHub\n2. Click the \"Fork\" button in the top-right corner\n3. Select your account as the destination\n4. Clone your fork:\n   ```bash\n   git clone https://github.com/YOUR_USERNAME/dr-jskill.git\n   ```\n\n**Using the GitHub CLI:**\n1. Install the [GitHub CLI](https://cli.github.com/) if you haven't already\n2. Fork and clone in one command:\n   ```bash\n   gh repo fork jdubois/dr-jskill --clone\n   ```\n   This will fork the repository to your GitHub account and clone it to your local machine.\n\n#### Just cloning (without forking)\n\nIf you only want to use the skill locally without maintaining your own fork:\n```bash\ngit clone https://github.com/jdubois/dr-jskill.git\n```\n\n### GitHub Copilot CLI\n\nConfigure skills for GitHub Copilot CLI by placing them in the skills directory:\n\n1. Create the skills directory if it doesn't exist:\n   ```bash\n   mkdir -p ~/.github-copilot/skills\n   ```\n\n2. Clone or copy this skill to the skills directory:\n   ```bash\n   git clone <repository-url> ~/.github-copilot/skills/dr-jskill\n   # Or copy: cp -r /path/to/dr-jskill ~/.github-copilot/skills/\n   ```\n\n3. Use GitHub Copilot CLI as usual - the skill will be automatically loaded:\n   ```bash\n   gh copilot suggest \"create an application using the dr-jskill\"\n   ```\n\nThe skill will be available for all `gh copilot` commands.\n\n### GitHub Copilot (VS Code)\n\n1. Open VS Code Settings (`Cmd+,` on macOS or `Ctrl+,` on Windows/Linux)\n2. Search for `github.copilot.chat.codeGeneration.instructions`\n3. Click \"Edit in settings.json\"\n4. Add a skill entry:\n   ```json\n   {\n     \"github.copilot.chat.codeGeneration.instructions\": [\n       {\n         \"file\": \"/absolute/path/to/dr-jskill/SKILL.md\"\n       }\n     ]\n   }\n   ```\n5. Restart VS Code for changes to take effect\n\nAlternatively, you can enable skills globally by placing them in a specific directory:\n- macOS/Linux: `~/.github-copilot/skills/`\n- Windows: `%USERPROFILE%\\.github-copilot\\skills\\`\n\n### Claude Code / Windsurf (VS Code)\n\nSkills are automatically discovered from configured skill directories.\n\n1. Clone or copy this skill to a directory on your system:\n   ```bash\n   git clone <repository-url> ~/skills/dr-jskill\n   ```\n\n2. Configure the skills directory in VS Code Settings:\n   - Open Settings (`Cmd+,` or `Ctrl+,`)\n   - Search for \"skills\" or look for your assistant's skill configuration\n   - Add the path to your skills directory: `~/skills/`\n\n3. Restart VS Code\n\nClaude Code will automatically discover all skills in the configured directory and load them when relevant to your task.\n\n### Other Compatible Assistants\n\nThis skill follows the [Agent Skills specification](https://agentskills.io/specification) and works with any compatible AI assistant. Refer to your assistant's documentation for configuration instructions.\n\n## Requirements\n\n- Node.js 24.x and npm 11.x\n- Java 25\n- Docker (for containerized deployments)\n\n## License\n\nThis project is licensed under the Apache License 2.0.\n\nSee [LICENSE](LICENSE) file for details.\n",
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.paradoxsyn/rivemcp",
+  "type": "mcp",
+  "name": "rivemcp",
+  "description": "MCP server for creating and editing Rive (.riv) animation files. 139 tools for AI-driven animation.",
+  "author": "io.github.paradoxsyn",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/paradoxsyn/rivemcp-releases",
+    "repo": "paradoxsyn/rivemcp-releases"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "rivemcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-21T01:54:08.628974Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

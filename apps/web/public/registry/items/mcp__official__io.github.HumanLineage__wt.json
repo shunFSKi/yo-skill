@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.HumanLineage/wt",
+  "type": "mcp",
+  "name": "wt",
+  "description": "Human Lineage MCP server — search and query the public genealogical graph of all humanity",
+  "author": "io.github.HumanLineage",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/HumanLineage/WT",
+    "repo": "HumanLineage/WT"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://humanlineage.org/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-05T10:46:31.998104Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

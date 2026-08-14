@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.checkmycontractorquote/contractor-quote-check",
+  "type": "mcp",
+  "name": "contractor-quote-check",
+  "description": "Check contractor quotes for red flags and pricing risks. Free scan, paid reports, RFP tools.",
+  "author": "com.checkmycontractorquote",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://checkmycontractorquote.com/contractorquote-mcp/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://checkmycontractorquote.com/contractorquote-mcp/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T11:56:23.106464Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

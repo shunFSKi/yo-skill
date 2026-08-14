@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.SmartMobileHouse/regon-mcp",
+  "type": "mcp",
+  "name": "REGON (Polish business register)",
+  "description": "Look up Polish businesses in the GUS REGON register (BIR1) by NIP, REGON, or KRS.",
+  "author": "io.github.SmartMobileHouse",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/SmartMobileHouse/regon-mcp",
+    "repo": "SmartMobileHouse/regon-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "regon-mcp"
+    ],
+    "env": [
+      {
+        "name": "REGON_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "REGON_ENV",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T10:44:57.39489Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

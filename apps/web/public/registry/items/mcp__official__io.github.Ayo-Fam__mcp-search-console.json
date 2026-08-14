@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.Ayo-Fam/mcp-search-console",
+  "type": "mcp",
+  "name": "MCP Search Console",
+  "description": "Multi-account Google Search Console MCP: analytics, URL inspection, sitemaps across named accounts.",
+  "author": "io.github.Ayo-Fam",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/apexradius/mcp-search-console",
+    "repo": "apexradius/mcp-search-console"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-search-console-multi"
+    ],
+    "env": [
+      {
+        "name": "GSC_ACCOUNTS_CONFIG",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GSC_ALLOW_DESTRUCTIVE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-30T07:02:04.819946Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.BourbonDog/amicus",
+  "type": "mcp",
+  "name": "Amicus",
+  "description": "Multi-model LLM Council and parallel AI window for Claude Code. Fork any model, fold results back.",
+  "author": "io.github.BourbonDog",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/BourbonDog/amicus",
+    "repo": "BourbonDog/amicus"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "amicus"
+    ],
+    "env": [
+      {
+        "name": "OPENROUTER_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "AMICUS_SKIP_POSTINSTALL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T03:55:36.735763Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

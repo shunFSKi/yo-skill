@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.Jemplayer82/mcp-switchboard",
+  "type": "mcp",
+  "name": "Switchboard",
+  "description": "Self-hosted MCP message bus: agents DM each other, broadcast to channels, and track presence.",
+  "author": "io.github.Jemplayer82",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Jemplayer82/mcp-switchboard",
+    "repo": "Jemplayer82/mcp-switchboard"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/jemplayer82/mcp-switchboard:latest"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-03T23:50:19.000681Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

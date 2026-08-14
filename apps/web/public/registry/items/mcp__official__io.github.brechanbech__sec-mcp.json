@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.brechanbech/sec-mcp",
+  "type": "mcp",
+  "name": "SEC EDGAR",
+  "description": "MCP server for SEC EDGAR data — company filings, financial concepts, and company info",
+  "author": "io.github.brechanbech",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/brechanbech/sec-mcp",
+    "repo": "brechanbech/sec-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "sec-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-21T02:31:04.774605Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

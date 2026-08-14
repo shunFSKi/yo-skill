@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.notifuturo/vouch",
+  "type": "mcp",
+  "name": "vouch",
+  "description": "Check if a counterparty is safe to pay: trust/risk score for AI agents. Scam/phishing screen.",
+  "author": "io.github.notifuturo",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/notifuturo/vouch",
+    "repo": "notifuturo/vouch"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://vouch.futuronoti.workers.dev/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-22T14:51:56.533431Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.nice-one-code/NOC.McpServer",
+  "type": "mcp",
+  "name": "NOC.McpServer",
+  "description": "MCP server exposing NiceOneCode's JSON-to-C# converter as an AI-callable tool.",
+  "author": "io.github.nice-one-code",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/nice-one-code/NOC.McpServer",
+    "repo": "nice-one-code/NOC"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "NOC.McpServer"
+    ],
+    "env": [
+      {
+        "name": "NOC_USERID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "NOC_PASSWORD",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-07T06:47:37.314749Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

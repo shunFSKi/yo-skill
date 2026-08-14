@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/sh.alchemylab.artistally/conventions",
+  "type": "mcp",
+  "name": "ArtistAlly",
+  "description": "Free fan-convention data for AI agents: dates, registration windows & table costs, US & Canada",
+  "author": "sh.alchemylab.artistally",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/system-alchemist/artistally-mcp",
+    "repo": "system-alchemist/artistally-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://artistally.alchemylab.sh/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-08T17:30:16.122525Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

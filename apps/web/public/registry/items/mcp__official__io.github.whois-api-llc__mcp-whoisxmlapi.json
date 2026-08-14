@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.whois-api-llc/mcp-whoisxmlapi",
+  "type": "mcp",
+  "name": "mcp-whoisxmlapi",
+  "description": "32 WHOIS, DNS, IP, threat intelligence, email, and bulk tools for AI agents via WhoisXML API.",
+  "author": "io.github.whois-api-llc",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/whois-api-llc/wxa-mcp-server",
+    "repo": "whois-api-llc/wxa-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@whoisxmlapidotcom/mcp-whoisxmlapi"
+    ],
+    "env": [
+      {
+        "name": "WHOISXMLAPI_TOKEN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-07T18:07:22.020949Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

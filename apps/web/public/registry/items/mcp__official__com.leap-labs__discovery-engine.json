@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/com.leap-labs/discovery-engine",
+  "type": "mcp",
+  "name": "Disco",
+  "description": "Find novel, statistically validated patterns in tabular data — hypothesis-free.",
+  "author": "com.leap-labs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/leap-laboratories/discovery-engine",
+    "repo": "leap-laboratories/discovery-engine"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://disco.leap-labs.com/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-08T18:39:02.561538Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.trust-agent/trustagent-mcp",
+  "type": "mcp",
+  "name": "TrustAgent — counterparty verification",
+  "description": "Is this address safe to pay? OFAC sanctions, ERC-8004 reputation, contract analysis.",
+  "author": "io.trust-agent",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/MichalStachnik/trust-agent",
+    "repo": "MichalStachnik/trust-agent"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "trustagent-mcp"
+    ],
+    "env": [
+      {
+        "name": "TRUSTAGENT_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TRUSTAGENT_WALLET_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "TRUSTAGENT_MAX_PER_CALL_USD",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TRUSTAGENT_MAX_SESSION_USD",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-28T16:12:46.937322Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

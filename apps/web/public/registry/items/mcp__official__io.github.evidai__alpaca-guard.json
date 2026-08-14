@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.evidai/alpaca-guard",
+  "type": "mcp",
+  "name": "alpaca-guard",
+  "description": "Alpaca trading API with hard daily USD cap guard. Paper trading default; live opt-in.",
+  "author": "io.github.evidai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/evidai/agent-payment-mcp",
+    "repo": "evidai/agent-payment-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "alpaca-guard-mcp"
+    ],
+    "env": [
+      {
+        "name": "ALPACA_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ALPACA_SECRET_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-16T15:41:22.279495Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

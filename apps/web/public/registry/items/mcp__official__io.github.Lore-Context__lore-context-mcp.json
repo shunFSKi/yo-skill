@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.Lore-Context/lore-context-mcp",
+  "type": "mcp",
+  "name": "Lore Context",
+  "description": "Governed AI-agent memory, Evidence Ledger traces, evals, and portable context tools.",
+  "author": "io.github.Lore-Context",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Lore-Context/lore-context",
+    "repo": "Lore-Context/lore-context"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@lore-context/server"
+    ],
+    "env": [
+      {
+        "name": "LORE_API_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "LORE_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "LORE_MCP_TRANSPORT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-29T16:23:19.42298Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

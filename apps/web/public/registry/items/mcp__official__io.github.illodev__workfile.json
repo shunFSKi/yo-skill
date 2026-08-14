@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.illodev/workfile",
+  "type": "mcp",
+  "name": "Workfile",
+  "description": "Repository-native protocol and local MCP server for Work, Docs, History and durable project Memory.",
+  "author": "io.github.illodev",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/illodev/workfile",
+    "repo": "illodev/workfile"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@illodev/workfile"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-08T00:16:51.742257Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

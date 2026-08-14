@@ -1,0 +1,78 @@
+{
+  "id": "mcp:official/io.github.mlorentedev/hive-vault",
+  "type": "mcp",
+  "name": "Hive Vault",
+  "description": "On-demand Obsidian vault access for AI coding assistants — 17 tools, 5 resources, 4 prompts.",
+  "author": "io.github.mlorentedev",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mlorentedev/hive",
+    "repo": "mlorentedev/hive"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "hive-vault"
+    ],
+    "env": [
+      {
+        "name": "VAULT_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "HIVE_OLLAMA_ENDPOINT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OPENROUTER_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "HIVE_VAULT_SCOPES",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-16T02:32:36.394293Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

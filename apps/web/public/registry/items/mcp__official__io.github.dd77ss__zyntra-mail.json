@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.dd77ss/zyntra-mail",
+  "type": "mcp",
+  "name": "Zyntra - Temp e-mails MCP",
+  "description": "Disposable inboxes for AI agents: create, wait for delivery, and extract email content or links.",
+  "author": "io.github.dd77ss",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.zyntra.app/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.zyntra.app/mcp",
+    "env": [
+      {
+        "name": "X-API-Key",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-28T14:21:03.115941Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

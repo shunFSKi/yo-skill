@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.pdeloulay/flik-mcp",
+  "type": "mcp",
+  "name": "Flik",
+  "description": "Flik - Agentic Product Delivery Platform. Visit flik.nomadis.com for more information.",
+  "author": "io.github.pdeloulay",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/pdeloulay/flik-mcp",
+    "repo": "pdeloulay/flik-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/pdeloulay/flik-mcp/releases/download/v0.3.15/flik-mcp.mcpb"
+    ],
+    "env": [
+      {
+        "name": "FLIK_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "FLIK_API_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "FLIK_PROJECT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "FLIK_ORG",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-15T02:05:06.42607Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

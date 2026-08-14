@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.stockandawe/writing-clinic",
+  "type": "mcp",
+  "name": "Writing Clinic",
+  "description": "Free MCP tool: paste your writing, get a one-line diagnosis and a tightened rewrite.",
+  "author": "io.github.stockandawe",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/stockandawe/make-your-point",
+    "repo": "stockandawe/make-your-point"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "make-your-point-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-23T21:54:13.575621Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.GordonHal/transaction-coordinator",
+  "type": "mcp",
+  "name": "transaction-coordinator",
+  "description": "AI transaction coordinator + legal-matters platform for real estate and law firms.",
+  "author": "io.github.GordonHal",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/GordonHal/primacoda-mcp",
+    "repo": "GordonHal/primacoda-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://primacoda.halinc.tech/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-22T19:10:02.451418Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,94 @@
+{
+  "id": "mcp:official/io.github.yBookoff/thebrain",
+  "type": "mcp",
+  "name": "thebrain",
+  "description": "MCP server for TheBrain 15: search by meaning, graph traversal and batch writes over the local API",
+  "author": "io.github.yBookoff",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/yBookoff/thebrain-mcp",
+    "repo": "yBookoff/thebrain-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "thebrain-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "THEBRAIN_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "THEBRAIN_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "THEBRAIN_DATA_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "THEBRAIN_ALLOW_DESTRUCTIVE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "THEBRAIN_EMBEDDING_MODEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "THEBRAIN_EMBEDDING_DTYPE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "THEBRAIN_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T13:15:57.300851Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

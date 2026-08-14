@@ -1,0 +1,78 @@
+{
+  "id": "mcp:official/io.github.asklokesh/azure-mcp-server",
+  "type": "mcp",
+  "name": "Azure",
+  "description": "MCP server for Azure API integration",
+  "author": "io.github.asklokesh",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/asklokesh/azure-mcp-server",
+    "repo": "asklokesh/azure-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "azure-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "AZURE_SUBSCRIPTION_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "AZURE_CLIENT_ID",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "AZURE_CLIENT_SECRET",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "AZURE_TENANT_ID",
+        "required": true,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-12-31T01:21:42.865484Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

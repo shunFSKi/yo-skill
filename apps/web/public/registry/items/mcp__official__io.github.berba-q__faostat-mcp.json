@@ -1,0 +1,73 @@
+{
+  "id": "mcp:official/io.github.berba-q/faostat-mcp",
+  "type": "mcp",
+  "name": "FAOSTAT MCP",
+  "description": "FAOSTAT data for 245 countries: crops, trade, food security, and emissions via 21 MCP tools.",
+  "author": "io.github.berba-q",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/berba-q/faostat-mcp",
+    "repo": "berba-q/faostat-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "faostat-mcp"
+    ],
+    "env": [
+      {
+        "name": "FAOSTAT_API_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "FAOSTAT_USERNAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "FAOSTAT_PASSWORD",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-13T20:03:01.389367Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

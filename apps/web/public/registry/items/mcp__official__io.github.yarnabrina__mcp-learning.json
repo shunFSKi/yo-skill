@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.yarnabrina/mcp-learning",
+  "type": "mcp",
+  "name": "Learning Model Context Protocol",
+  "description": "MCP server that can perform basic arithmetic operations and parse/evaluate arithmetic expressions.",
+  "author": "io.github.yarnabrina",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/yarnabrina/learn-model-context-protocol",
+    "repo": "yarnabrina/learn-model-context-protocol"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-learning"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-11-09T08:22:31.297416Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

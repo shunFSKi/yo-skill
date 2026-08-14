@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/ai.nocturnus/logic-server",
+  "type": "mcp",
+  "name": "logic-server",
+  "description": "Agent reasoning, memory, and token-optimized context for AI applications.",
+  "author": "ai.nocturnus",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Auctalis/nocturnusai",
+    "repo": "Auctalis/nocturnusai"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "nocturnusai-mcp"
+    ],
+    "env": [
+      {
+        "name": "NOCTURNUSAI_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "NOCTURNUSAI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "NOCTURNUSAI_DATABASE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "NOCTURNUSAI_TENANT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-16T01:50:31.889198Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

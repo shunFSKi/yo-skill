@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/ai.licensy/mcp-server",
+  "type": "mcp",
+  "name": "Licensy",
+  "description": "Real-time U.S. medical license verification across all 50 states + DC.",
+  "author": "ai.licensy",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/licensyai/LicensyAI-MCP",
+    "repo": "licensyai/LicensyAI-MCP"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.licensy.ai/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-28T00:25:40.697917Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

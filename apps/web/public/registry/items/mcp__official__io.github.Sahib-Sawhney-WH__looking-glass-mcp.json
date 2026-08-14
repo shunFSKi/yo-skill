@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.Sahib-Sawhney-WH/looking-glass-mcp",
+  "type": "mcp",
+  "name": "looking-glass-mcp",
+  "description": "AI-native browser for agents. 71 tools with self-healing, semantic extraction, vault CLI.",
+  "author": "io.github.Sahib-Sawhney-WH",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Sahib-Sawhney-WH/LookingGlass",
+    "repo": "Sahib-Sawhney-WH/LookingGlass"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "looking-glass-mcp"
+    ],
+    "env": [
+      {
+        "name": "BROWSER_HEADLESS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BROWSER_SECURITY_PROFILE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "VAULT_ENCRYPTION_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-30T15:01:45.066292Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

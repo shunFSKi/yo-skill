@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.sumup/mcp",
+  "type": "mcp",
+  "name": "SumUp MCP Server",
+  "description": "Tools to explore SumUp accounts, payments, customers, and payouts.",
+  "author": "io.github.sumup",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/sumup/sumup-agent-toolkit",
+    "repo": "sumup/sumup-agent-toolkit"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@sumup/mcp"
+    ],
+    "env": [
+      {
+        "name": "SUMUP_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-11-02T09:23:34.97206Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

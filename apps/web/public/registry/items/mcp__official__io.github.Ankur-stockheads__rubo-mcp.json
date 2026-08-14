@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.Ankur-stockheads/rubo-mcp",
+  "type": "mcp",
+  "name": "UK Break Clause Analyzer",
+  "description": "Assess UK lease tenant break clauses with grounded citations and a measured hallucination rate.",
+  "author": "io.github.Ankur-stockheads",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Ankur-stockheads/rubo-mcp",
+    "repo": "Ankur-stockheads/rubo-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "uk-break-clause-analyzer-mcp"
+    ],
+    "env": [
+      {
+        "name": "ANTHROPIC_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-28T03:48:27.787635Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

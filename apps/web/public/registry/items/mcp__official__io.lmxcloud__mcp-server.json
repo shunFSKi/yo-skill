@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.lmxcloud/mcp-server",
+  "type": "mcp",
+  "name": "LMX Cloud LLM Inference",
+  "description": "OpenAI-compatible LLM MCP (7 tools); chat via balance key or x402 USDC on Base",
+  "author": "io.lmxcloud",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.lmxcloud.io/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.lmxcloud.io/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-14T19:33:59.059075Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

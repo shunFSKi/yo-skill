@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.ardev-lab/star-trajectory",
+  "type": "mcp",
+  "name": "star-trajectory",
+  "description": "Transparent rule-based GitHub star-trajectory classifier + calibrated 100-star/48h projection",
+  "author": "io.github.ardev-lab",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ardev-lab/star-trajectory",
+    "repo": "ardev-lab/star-trajectory"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "star-trajectory"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-28T10:34:16.264958Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

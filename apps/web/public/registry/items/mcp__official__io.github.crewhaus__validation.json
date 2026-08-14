@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.crewhaus/validation",
+  "type": "mcp",
+  "name": "validation",
+  "description": "AI startup idea validation by a specialized 9-agent crew.",
+  "author": "io.github.crewhaus",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/crewhaus/crewhaus-mcp-server",
+    "repo": "crewhaus/crewhaus-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "crewhaus-mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-02T17:46:33.557554Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

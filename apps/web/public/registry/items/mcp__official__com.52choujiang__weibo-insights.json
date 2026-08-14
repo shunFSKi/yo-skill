@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/com.52choujiang/weibo-insights",
+  "type": "mcp",
+  "name": "SocialDataX 微博 Weibo MCP",
+  "description": "Weibo hot search, post search/details, comments/replies, users, posts, transcript.",
+  "author": "com.52choujiang",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://mcp.52choujiang.com/weibo/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.52choujiang.com/weibo/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-22T08:36:45.446402Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

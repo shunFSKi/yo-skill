@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.spranab/saga-mcp",
+  "type": "mcp",
+  "name": "saga-mcp",
+  "description": "Jira-like project tracker for AI agents with SQLite, full task hierarchy, and dashboard",
+  "author": "io.github.spranab",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/spranab/saga-mcp",
+    "repo": "spranab/saga-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "saga-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-27T06:02:22.90033Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

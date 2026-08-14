@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.ashokva/kaka-mcp-server",
+  "type": "mcp",
+  "name": "kaka-mcp-server",
+  "description": "KAKA, an ancient amnesiac crow from klaash.club. Get a live introduction or his response log.",
+  "author": "io.github.ashokva",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ashokva/kaka-mcp-server",
+    "repo": "ashokva/kaka-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://kaka-mcp-server-production.up.railway.app/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-25T14:11:01.819412Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

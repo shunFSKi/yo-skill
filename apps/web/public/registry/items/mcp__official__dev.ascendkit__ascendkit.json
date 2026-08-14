@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/dev.ascendkit/ascendkit",
+  "type": "mcp",
+  "name": "ascendkit",
+  "description": "Auth, email, journeys, surveys, webhooks, and analytics for SaaS in one project, one API key.",
+  "author": "dev.ascendkit",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers/dev.ascendkit%2Fascendkit",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@ascendkit/cli"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-19T15:55:11.311202Z"
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

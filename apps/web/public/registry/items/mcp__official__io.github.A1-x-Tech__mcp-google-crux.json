@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.A1-x-Tech/mcp-google-crux",
+  "type": "mcp",
+  "name": "Google CrUX MCP",
+  "description": "Real-user Core Web Vitals from the Chrome UX Report (CrUX) API for any origin or URL.",
+  "author": "io.github.A1-x-Tech",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/A1-x-Tech/mcp-google-crux",
+    "repo": "A1-x-Tech/mcp-google-crux"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-google-crux"
+    ],
+    "env": [
+      {
+        "name": "CRUX_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "CRUX_API_BASE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CRUX_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CRUX_MAX_RETRIES",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-11T16:59:00.28037Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

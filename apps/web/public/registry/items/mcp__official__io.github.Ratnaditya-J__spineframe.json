@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.Ratnaditya-J/spineframe",
+  "type": "mcp",
+  "name": "SpineFrame",
+  "description": "Governance runtime for AI agents with signed provenance, compliance audits, and OSINT.",
+  "author": "io.github.Ratnaditya-J",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Ratnaditya-J/spineframe",
+    "repo": "Ratnaditya-J/spineframe"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "spineframe"
+    ],
+    "env": [
+      {
+        "name": "SPINEFRAME_RUNS_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SPINEFRAME_CONFIG",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-19T01:50:55.157909Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

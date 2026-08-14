@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.futuremultihousing-dev/connectivity-index",
+  "type": "mcp",
+  "name": "Connectivity Index",
+  "description": "Machine-readable FCC pre-diligence corpus for multifamily broadband infrastructure scenarios.",
+  "author": "io.github.futuremultihousing-dev",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/futuremultihousing-dev/connectivity-index",
+    "repo": "futuremultihousing-dev/connectivity-index"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://connectivity-index-mcp-cloudflare.futuremultihousing.workers.dev",
+    "env": [
+      {
+        "name": "x-api-key",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-13T21:20:48.647245Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

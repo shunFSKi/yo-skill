@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.dave1362/rca-mcp-connector",
+  "type": "mcp",
+  "name": "RCA-MCP",
+  "description": "Causal root-cause analysis MCP server -- 56 tools across graphs, RCA models, PyRCA.",
+  "author": "io.github.dave1362",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dave1362/rca-mcp-connector",
+    "repo": "dave1362/rca-mcp-connector"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "rca-mcp-connector"
+    ],
+    "env": [
+      {
+        "name": "RCA_MCP_API_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RCA_MCP_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-23T22:40:33.859229Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

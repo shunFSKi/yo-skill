@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.eliottreich/taskbounty-check",
+  "type": "mcp",
+  "name": "taskbounty-check",
+  "description": "Local GitHub Actions/CI maintenance check (action pinning, token perms). Not a full security audit.",
+  "author": "io.github.eliottreich",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/eliottreich/taskbounty-check",
+    "repo": "eliottreich/taskbounty-check"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "taskbounty-check"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-21T13:38:31.846783Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/ai.spideriq/leads",
+  "type": "mcp",
+  "name": "leads",
+  "description": "SpiderIQ Leads: lead-gen MCP (jobs, campaigns, IDAP, Maps, People, Verify, company intel, spiderPR)",
+  "author": "ai.spideriq",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/SpiderIQ/SpiderIQ",
+    "repo": "SpiderIQ/SpiderIQ"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@spideriq/mcp-leads"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-26T13:43:59.895598Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.adlai88/simmer-mcp",
+  "type": "mcp",
+  "name": "Simmer",
+  "description": "Trade prediction markets with AI agents — skill discovery, autoresearch, and execution.",
+  "author": "io.github.adlai88",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/SpartanLabsXyz/simmer-sdk",
+    "repo": "SpartanLabsXyz/simmer-sdk"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "simmer-mcp"
+    ],
+    "env": [
+      {
+        "name": "SIMMER_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SIMMER_MCP_ALLOW_LIVE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-24T11:09:29.562794Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.alvinjchoi/gtasks-mcp",
+  "type": "mcp",
+  "name": "gtasks-mcp",
+  "description": "Manage Google Tasks via MCP: list, search, create, update, move, and clear tasks.",
+  "author": "io.github.alvinjchoi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/alvinjchoi/gtasks-mcp",
+    "repo": "alvinjchoi/gtasks-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@alvincrave/gtasks-mcp"
+    ],
+    "env": [
+      {
+        "name": "GOOGLE_CLIENT_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "GOOGLE_CLIENT_SECRET",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "GOOGLE_REFRESH_TOKEN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-19T04:41:01.955415Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

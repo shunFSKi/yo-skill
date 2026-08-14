@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.larsbaunwall/unlinked",
+  "type": "mcp",
+  "name": "unlinked",
+  "description": "MCP server that brings your LinkedIn professional profile and experience into your context.",
+  "author": "io.github.larsbaunwall",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/larsbaunwall/unlinked",
+    "repo": "larsbaunwall/unlinked"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@larsbaunwall/unlinked"
+    ],
+    "env": [
+      {
+        "name": "LINKEDIN_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "LINKEDIN_API_VERSION",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-10T20:15:10.169598Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.spendict/spendict",
+  "type": "mcp",
+  "name": "spendict",
+  "description": "A performance marketer's run/fix/kill verdict for AI agents — ad creative, campaigns, targeting.",
+  "author": "com.spendict",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dinosaur24/spendict-mcp",
+    "repo": "dinosaur24/spendict-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://www.spendict.com/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-11T22:22:09.984218Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

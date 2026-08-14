@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.bruchris/canvas-lms-mcp",
+  "type": "mcp",
+  "name": "canvas-lms-mcp",
+  "description": "TypeScript MCP server for Canvas LMS — 163 tools across 41 domains.",
+  "author": "io.github.bruchris",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/bruchris/canvas-lms-mcp",
+    "repo": "bruchris/canvas-lms-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "canvas-lms-mcp"
+    ],
+    "env": [
+      {
+        "name": "CANVAS_API_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "CANVAS_BASE_URL",
+        "required": true,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-07T10:53:16.036704Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

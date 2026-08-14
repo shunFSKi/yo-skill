@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.deepwired/mcp-jira-scoped",
+  "type": "mcp",
+  "name": "mcp-jira-scoped",
+  "description": "Jira MCP server with scoped API tokens via api.atlassian.com gateway",
+  "author": "io.github.deepwired",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/deepwired/mcp-jira",
+    "repo": "deepwired/mcp-jira"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-jira-scoped"
+    ],
+    "env": [
+      {
+        "name": "JIRA_INSTANCE",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "JIRA_USER_EMAIL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "JIRA_API_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "JIRA_SCOPES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "JIRA_CLOUD_ID",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-28T19:14:40.486799Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

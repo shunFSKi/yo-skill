@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.MaxMLang/cxg-census-mcp",
+  "type": "mcp",
+  "name": "cxg-census-mcp",
+  "description": "MCP server for the CZ CELLxGENE Census. Single-cell, ontology-aware. Community, unaffiliated.",
+  "author": "io.github.MaxMLang",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/MaxMLang/cxg-census-mcp",
+    "repo": "MaxMLang/cxg-census-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "cxg-census-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-22T10:13:36.174802Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.MAG-Cie/mcp-microsoft-todo",
+  "type": "mcp",
+  "name": "mcp-microsoft-todo",
+  "description": "MCP server for Microsoft To Do via Microsoft Graph. MSAL device code flow, no client secret needed.",
+  "author": "io.github.MAG-Cie",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/MAG-Cie/mcp-microsoft-todo",
+    "repo": "MAG-Cie/mcp-microsoft-todo"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@mag-cie/mcp-microsoft-todo"
+    ],
+    "env": [
+      {
+        "name": "MS_CLIENT_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "MS_TENANT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-05T10:25:23.705558Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

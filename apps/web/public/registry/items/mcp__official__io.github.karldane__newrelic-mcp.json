@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.karldane/newrelic-mcp",
+  "type": "mcp",
+  "name": "New Relic MCP",
+  "description": "New Relic MCP server with 55 tools for APM, alerts, dashboards, synthetics, workflows, and more.",
+  "author": "io.github.karldane",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/karldane/newrelic-mcp",
+    "repo": "karldane/newrelic-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/karldane/newrelic-mcp/releases/download/v1.0.1/newrelic-mcp-linux-amd64.mcpb"
+    ],
+    "env": [
+      {
+        "name": "NEWRELIC_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "NEWRELIC_REGION",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-20T15:00:21.762043Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

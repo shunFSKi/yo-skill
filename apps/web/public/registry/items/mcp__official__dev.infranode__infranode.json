@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/dev.infranode/infranode",
+  "type": "mcp",
+  "name": "InfraNode",
+  "description": "Keyless open data for 84 German cities: 12 lean read-only MCP tools covering 67 data types.",
+  "author": "dev.infranode",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/street1983nk/infranode",
+    "repo": "street1983nk/infranode"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.infranode.dev/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-06T08:06:38.302121Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

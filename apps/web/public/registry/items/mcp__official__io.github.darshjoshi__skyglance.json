@@ -1,0 +1,73 @@
+{
+  "id": "mcp:official/io.github.darshjoshi/skyglance",
+  "type": "mcp",
+  "name": "SkyGlance — What's Flying Above You",
+  "description": "What's flying above you: live aircraft, identity, routes, and your own sighting history.",
+  "author": "io.github.darshjoshi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/darshjoshi/skyglance-mcp",
+    "repo": "darshjoshi/skyglance-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "skyglance"
+    ],
+    "env": [
+      {
+        "name": "SKYGLANCE_HOME_LAT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SKYGLANCE_HOME_LON",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SKYGLANCE_POLL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-02T08:06:29.897086Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

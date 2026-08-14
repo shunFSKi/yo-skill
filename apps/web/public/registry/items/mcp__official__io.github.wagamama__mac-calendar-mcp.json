@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.wagamama/mac-calendar-mcp",
+  "type": "mcp",
+  "name": "Mac Calendar MCP",
+  "description": "Read-only Mac Calendar MCP server with indexed archive search.",
+  "author": "io.github.wagamama",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/wagamama/apple-app-mcp",
+    "repo": "wagamama/apple-app-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mac-calendar-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-15T10:12:54.254551Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/studio.agoria/registry",
+  "type": "mcp",
+  "name": "Agoria",
+  "description": "Search local businesses and book, order, quote or message any of them from one connection.",
+  "author": "studio.agoria",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mohamedalmorsy/agoria",
+    "repo": "mohamedalmorsy/agoria"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://agoria.studio/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-06T23:29:29.347559Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

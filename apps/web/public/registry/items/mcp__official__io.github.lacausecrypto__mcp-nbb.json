@@ -1,0 +1,73 @@
+{
+  "id": "mcp:official/io.github.lacausecrypto/mcp-nbb",
+  "type": "mcp",
+  "name": "mcp-nbb",
+  "description": "MCP server for the National Bank of Belgium SDMX statistical API (221 dataflows).",
+  "author": "io.github.lacausecrypto",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/lacausecrypto/mcp-nbb",
+    "repo": "lacausecrypto/mcp-nbb"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-nbb"
+    ],
+    "env": [
+      {
+        "name": "NBB_LOG_LEVEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "NBB_LOG_FORMAT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "NBB_HTTP_CACHE_ENABLED",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-12T17:49:10.657285Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

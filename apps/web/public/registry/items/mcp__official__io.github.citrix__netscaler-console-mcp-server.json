@@ -1,0 +1,94 @@
+{
+  "id": "mcp:official/io.github.citrix/netscaler-console-mcp-server",
+  "type": "mcp",
+  "name": "NetScaler Console MCP Server",
+  "description": "MCP server providing AI assistants the ability to interact with NetScaler environments",
+  "author": "io.github.citrix",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers/io.github.citrix%2Fnetscaler-console-mcp-server",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "docker.io/netscaler/netscaler-console-mcp-server:1.0.3"
+    ],
+    "env": [
+      {
+        "name": "CC_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "CLIENT_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "CLIENT_SECRET",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "MCP_NS_OAUTH_ISSUER",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "MCP_NS_JWKS_URI",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "SSL_CERT_PATH",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "SSL_KEY_PATH",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-02T10:34:20.060234Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

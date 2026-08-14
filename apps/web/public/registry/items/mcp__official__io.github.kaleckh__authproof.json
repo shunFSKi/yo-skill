@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.kaleckh/authproof",
+  "type": "mcp",
+  "name": "AuthProof",
+  "description": "Signed, non-replayable API auth. Agents self-register and sign requests with ERC-8128.",
+  "author": "io.github.kaleckh",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/kaleckh/AgentAuth",
+    "repo": "kaleckh/AgentAuth"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@authproof/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "AUTHPROOF_SERVER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AGENT_PRIVATE_KEY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AUTHPROOF_CHAIN_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AUTHPROOF_RPC_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-23T00:10:39.78217Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

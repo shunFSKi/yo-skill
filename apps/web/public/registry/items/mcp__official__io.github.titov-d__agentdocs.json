@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.titov-d/agentdocs",
+  "type": "mcp",
+  "name": "agentdocs",
+  "description": "Fresh, source-verified docs for building MCP servers and Claude agents, for AI coding agents.",
+  "author": "io.github.titov-d",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/titov-d/mcp-agentdocs",
+    "repo": "titov-d/mcp-agentdocs"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-agentdocs"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-12T00:59:51.92889Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

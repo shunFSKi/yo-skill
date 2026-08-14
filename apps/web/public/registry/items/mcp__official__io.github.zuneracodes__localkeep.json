@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.zuneracodes/localkeep",
+  "type": "mcp",
+  "name": "LocalKeep",
+  "description": "Local chronological memory banks you control; Claude recalls them via MCP.",
+  "author": "io.github.zuneracodes",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/zuneracodes/localkeep",
+    "repo": "zuneracodes/localkeep"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "localkeep"
+    ],
+    "env": [
+      {
+        "name": "LOCALKEEP_DATA_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LOCALKEEP_DB_PATH",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T04:53:30.686907Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# LocalKeep\n\nLocalKeep is for anyone who wants a chronological memory layer for chatbots where *they* directly control *what* the model remembers about them. Instead of forcing you to rely on a black-box cloud memory that the model invents around you that you can't even edit, LocalKeep lets you curate titled, dated, editable memory banks directly on your own machine where you write the entries and manage them locally via a localhost Hub UI. When a conversation requires your prior context, Claude queries your local data through a secure, native Model Context Protocol (MCP) connector.\n\n\n## Why use LocalKeep\n\nAI Chat apps are great at *sounding* like they remember you, but struggle at recalling the **exact** thing you care about — *what* happened, on *which* date, about *whom*? Consumer memory features tend to lack the capacity for true temporal reasoning, flattening your history into a soft, generic vibe summary instead of understanding that Event A triggered Event B three months ago, causing its reasoning to fail when you need something specific: a life event, a research arc, a decision you logged months ago. Worse yet, consumer AI memory is a black box: you don't get to decide **what** the model chooses to remember about you, **how** it interprets your life, or **when** it invents context around you.\n\n**LocalKeep** fixes both structural flaws at once by replacing fragile, model-invented timelines with a rigid, chronological source of **your** truth, all while giving *you* absolute editorial control. You decide exactly *what* the AI is allowed to know about you. You write the entries, you anchor the dates, and you keep them local on your own machine. Claude simply acts as the lookup engine via MCP when a conversation requires your prior context. \nLocalKeep bridges the gap between structured personal logging and intelligent AI retrieval, ensuring your context is curated by **you**—not hallucinated by an LLM.\n\n**Who it’s for**\n\n- Anyone frustrated that chat memory can’t reliably fetch dated facts or understand timelines\n- People who already maintain meticulous personal diaries, work logs, or research archives. Instead of settling for a generic chat-app paraphrase, you get to inject your *exact* words and historical data into the prompt as an unyielding source of truth.\n- Users who trust Claude for its reasoning capability, but demand that their foundational context database remains stored locally under their own roof. (Note: Querying memories via MCP still sends the *retrieved text fragments* to Anthropic during the session).\n\n**What it is (and isn’t)**\n\n- **Is:** A lightweight customizable local Hub UI to manage your dated memory banks, paired with an MCP server that Claude Desktop can call.\n- **Isn’t:** A standalone chat application, a cloud-hosted memory API, or a background utility that silently scrapes your personal conversations.\n\n## The Aesthetic Philosophy \n\nThe Hub UI intentionally adopts a retro, Windows 95/MS Paint-inspired homage with customizable features to ensure LocalKeep feels like a deeply **personal tool** rather than an impersonal, rigid dashboard. By putting adjustable interface elements right at your fingertips, the UI signals that you are entering an intimate, offline workshop for your mind—a space you can shape and reconfigure to feel entirely like your own.\n\n## Install\n\n```bash\npip install localkeep\n# or: uv tool install localkeep\n```\n\nThen:\n\n```bash\nlocalkeep-hub          # http://127.0.0.1:8000\n```\n\nIn Claude Desktop, register the MCP server (`claude_desktop_config.json`):\n\n```json\n{\n  \"mcpServers\": {\n    \"localkeep\": {\n      \"command\": \"localkeep-mcp\",\n      \"args\": []\n    }\n  }\n}\n```\n\nIf the GUI can’t find `localkeep-mcp` on your `PATH`, use the absolute path from `which localkeep-mcp` (the Hub’s Connect panel copies this for you).\n\nMemories default to `~/.localkeep/localkeep.db` when installed via pip. Override with `LOCALKEEP_DATA_DIR` or `LOCALKEEP_DB_PATH`.\n\n### Auto-use LocalKeep (important)\n\nClaude will not reliably call MCP tools unless you also set **Personal preferences**:\n\n1. Claude Desktop → **Settings** → **Profile** → **Personal preferences**\n2. Paste the LocalKeep instructions (Hub → Connect → **Copy instructions**, or see [`src/localkeep/assets/claude-personal-preferences.txt`](src/localkeep/assets/claude-personal-preferences.txt))\n3. **Quit Claude completely** and reopen\n4. When LocalKeep asks to run a tool, click **Always approve**\n\n## Develop from source\n\n```bash\ngit clone https://github.com/zuneracodes/localkeep\ncd localkeep\nuv sync --group dev\nuv run localkeep-hub                     # http://127.0.0.1:8000\n# optional live reload:\nLOCALKEEP_HUB_RELOAD=1 uv run localkeep-hub\n```\n\nFrom a source checkout, the DB lives in `data/localkeep.db` (gitignored).\n\n## Tests\n\nThese smoke-check the Hub, retrieval, and MCP tools so a fresh install still stores and recalls dated memories the way a real user would.\n\n```bash\nuv sync --group dev\nuv run pytest\n```\n\nTests start from an **empty DB** and create memories through Hub form POSTs (same path as a new user).\n\n## Privacy\n\n**Storage is local.** Banks and memories live in your chosen DB path (`~/.localkeep/` for pip installs, or `data/localkeep.db` in a checkout). There is no LocalKeep cloud and nothing is auto-scraped from chat. Theme colors stay in browser `localStorage`. Refreshing the Hub page or restarting `localkeep-hub` does **not** delete your banks — only removing the database file does.\n\n**Recall goes through Claude.** The Hub and database stay on your machine, but when Claude calls a LocalKeep MCP tool, the matching memories are returned into that chat and Anthropic processes them like any other tool result. LocalKeep isn’t shipping your whole DB upstream — only what that lookup returns for the question at hand.\n\n## Contributing\n\nBug reports and pull requests are welcome via [GitHub Issues](https://github.com/zuneracodes/localkeep/issues). Please run `uv run pytest` before opening a PR.\n\n## License\n\nMIT — see [LICENSE](LICENSE).\n",
+  "status": "curated"
+}

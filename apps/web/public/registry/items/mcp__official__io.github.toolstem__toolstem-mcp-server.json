@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.toolstem/toolstem-mcp-server",
+  "type": "mcp",
+  "name": "toolstem-mcp-server",
+  "description": "Financial intelligence MCP for AI agents — DCF, ratios, comparisons. Pre-computed signals.",
+  "author": "io.github.toolstem",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/toolstem/toolstem-mcp-server",
+    "repo": "toolstem/toolstem-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "toolstem-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "FMP_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-16T03:35:45.856068Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

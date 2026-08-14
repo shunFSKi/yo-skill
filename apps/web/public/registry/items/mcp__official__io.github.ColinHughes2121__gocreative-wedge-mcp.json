@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.ColinHughes2121/gocreative-wedge-mcp",
+  "type": "mcp",
+  "name": "gocreative-wedge-mcp",
+  "description": "OFAC/PEP sanctions screening, KYB, company & people enrichment tools for AI agents. Free demos.",
+  "author": "io.github.ColinHughes2121",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ColinHughes2121/gocreative-mcp",
+    "repo": "ColinHughes2121/gocreative-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "gocreative-wedge-mcp"
+    ],
+    "env": [
+      {
+        "name": "GOCREATIVE_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-01T23:19:33.326621Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.polterguy/magic",
+  "type": "mcp",
+  "name": "Magic Cloud",
+  "description": "Self-hosted low-code platform (Docker); its MCP endpoint runs on your own instance, not via npx.",
+  "author": "io.github.polterguy",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/polterguy/magic",
+    "repo": "polterguy/magic"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "docker.io/servergardens/magic-aio:v23.2.7"
+    ],
+    "env": [
+      {
+        "name": "magic_host",
+        "required": true,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T08:45:05.408071Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.abundanceapis/abundance-apis",
+  "type": "mcp",
+  "name": "abundance-apis",
+  "description": "Try 26 utility REST APIs keylessly: NAICS classification, IP geo, email validation, currency.",
+  "author": "com.abundanceapis",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://abundanceapis.com/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://abundanceapis.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-07T17:55:20.700794Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

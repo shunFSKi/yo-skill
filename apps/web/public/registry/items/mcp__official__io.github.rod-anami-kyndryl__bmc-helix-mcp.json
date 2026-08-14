@@ -1,0 +1,114 @@
+{
+  "id": "mcp:official/io.github.rod-anami-kyndryl/bmc-helix-mcp",
+  "type": "mcp",
+  "name": "bmc-helix-mcp",
+  "description": "A MCP Server for BMC Helix ITSM API.",
+  "author": "io.github.rod-anami-kyndryl",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/rod-anami-kyndryl/bmc-helix-mcp",
+    "repo": "rod-anami-kyndryl/bmc-helix-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "bmc-helix-mcp"
+    ],
+    "env": [
+      {
+        "name": "HELIX_API_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "HELIX_TOKEN_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "HELIX_USERID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "HELIX_PASSWORD",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "HELIX_CERT_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_AUTH_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MCP_TLS_ENABLED",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_TLS_KEY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_TLS_CERT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_TLS_CA",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-15T18:02:12.650789Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

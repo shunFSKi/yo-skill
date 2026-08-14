@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/com.cymetica/event-trader-mcp",
+  "type": "mcp",
+  "name": "EventTrader MCP",
+  "description": "AI prediction market trading — real-time data, CLOB exchange, 30+ tools",
+  "author": "com.cymetica",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/eventtrader/event-trader-mcp",
+    "repo": "eventtrader/event-trader-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/eventtrader/event-trader-mcp/releases/download/v1.0.0/event-trader-mcp.mcpb"
+    ],
+    "env": [
+      {
+        "name": "EVENT_TRADER_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "EVENT_TRADER_API_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-02T22:00:04.983008Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

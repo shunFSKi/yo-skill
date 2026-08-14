@@ -1,0 +1,139 @@
+{
+  "id": "mcp:official/io.github.amansingh63/dbhub-analytics",
+  "type": "mcp",
+  "name": "DBHub Analytics",
+  "description": "MCP server for Databricks, BigQuery, PostgreSQL, MySQL, SQL Server, SQLite, MariaDB",
+  "author": "io.github.amansingh63",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/amansingh63/dbhub-analytics",
+    "repo": "amansingh63/dbhub-analytics"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "dbhub-analytics"
+    ],
+    "env": [
+      {
+        "name": "DSN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "DB_TYPE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DB_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DB_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DB_USER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DB_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "DB_NAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TRANSPORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SSH_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SSH_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SSH_USER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SSH_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SSH_KEY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SSH_PASSPHRASE",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-02T18:58:43.246124Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.nirholas/pumpfun-claims-bot",
+  "type": "mcp",
+  "name": "PumpFun Claims Bot",
+  "description": "MCP server for PumpFun on-chain intelligence — tokens, claims, holders, and bundles.",
+  "author": "io.github.nirholas",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/nirholas/pumpfun-claims-bot",
+    "repo": "nirholas/pumpfun-claims-bot"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "pumpfun-claims-bot"
+    ],
+    "env": [
+      {
+        "name": "GITHUB_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SOLANA_RPC_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-19T10:29:30.337273Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

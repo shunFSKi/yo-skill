@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/ai.theaggregate/the-aggregate",
+  "type": "mcp",
+  "name": "The Aggregate — LLM benchmark aggregate",
+  "description": "Fused LLM rankings: one IRT/Elo scale across ~5,000 public benchmark leaderboards, updated daily.",
+  "author": "ai.theaggregate",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://theaggregate.ai/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://theaggregate.ai/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-25T18:25:18.84469Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

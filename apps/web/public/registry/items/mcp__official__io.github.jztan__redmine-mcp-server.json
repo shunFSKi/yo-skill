@@ -1,0 +1,118 @@
+{
+  "id": "mcp:official/io.github.jztan/redmine-mcp-server",
+  "type": "mcp",
+  "name": "redmine-mcp-server",
+  "description": "MCP server that lets AI assistants manage Redmine issues, projects, wikis, and time tracking",
+  "author": "io.github.jztan",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/jztan/redmine-mcp-server",
+    "repo": "jztan/redmine-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "redmine-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "REDMINE_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "REDMINE_USERNAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "REDMINE_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "REDMINE_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SERVER_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SERVER_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PUBLIC_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PUBLIC_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ATTACHMENTS_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AUTO_CLEANUP_ENABLED",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CLEANUP_INTERVAL_MINUTES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ATTACHMENT_EXPIRES_MINUTES",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-08T03:21:27.823651Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

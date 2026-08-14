@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/dev.eqbuilder/marz-greta-lock-network",
+  "type": "mcp",
+  "name": "marz-greta-lock-network",
+  "description": "Human-likeness scoring of AI text vs 28 profiles; sub-ms scoring, ~150ms API; free + x402 paid tier",
+  "author": "dev.eqbuilder",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://eqbuilder.dev/api/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://eqbuilder.dev/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-03T14:44:55.822207Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

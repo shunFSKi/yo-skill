@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.ykarapazar/word-mcp-live",
+  "type": "mcp",
+  "name": "Word MCP Live",
+  "description": "Live Microsoft Word editing via MCP — tracked changes, undo, comments, 40+ tools",
+  "author": "io.github.ykarapazar",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ykarapazar/word-mcp-live",
+    "repo": "ykarapazar/word-mcp-live"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "word-mcp-live"
+    ],
+    "env": [
+      {
+        "name": "MCP_AUTHOR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_AUTHOR_INITIALS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-23T14:15:21.274401Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

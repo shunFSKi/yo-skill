@@ -1,0 +1,73 @@
+{
+  "id": "mcp:official/io.github.MRNAQA/sourceweave-web-search",
+  "type": "mcp",
+  "name": "SourceWeave Web Search",
+  "description": "Fully local MCP server and CLI for web research",
+  "author": "io.github.MRNAQA",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/MRNAQA/sourceweave-web-search",
+    "repo": "MRNAQA/sourceweave-web-search"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "sourceweave-web-search"
+    ],
+    "env": [
+      {
+        "name": "SOURCEWEAVE_SEARCH_SEARXNG_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SOURCEWEAVE_SEARCH_CRAWL4AI_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SOURCEWEAVE_SEARCH_CACHE_REDIS_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-23T10:45:47.73017Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

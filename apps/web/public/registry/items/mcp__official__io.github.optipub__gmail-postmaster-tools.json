@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.optipub/gmail-postmaster-tools",
+  "type": "mcp",
+  "name": "Gmail Postmaster Tools",
+  "description": "Gmail Postmaster Tools v2 — domains, traffic metrics, and compliance via your own Google OAuth.",
+  "author": "io.github.optipub",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/optipub/gmail-postmaster-tools-mcp",
+    "repo": "optipub/gmail-postmaster-tools-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/optipub/gmail-postmaster-tools-mcp/releases/download/v1.0.1/gmail-postmaster-tools.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-22T21:04:09.192777Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

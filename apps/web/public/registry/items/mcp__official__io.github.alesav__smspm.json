@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.alesav/smspm",
+  "type": "mcp",
+  "name": "SMSPM MCP Server",
+  "description": "Send SMS via the SMSPM API from any MCP client.",
+  "author": "io.github.alesav",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/alesav/smspm-mcp",
+    "repo": "alesav/smspm-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "smspm-mcp"
+    ],
+    "env": [
+      {
+        "name": "SMSPM_HASH",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "SMSPM_TOKEN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-11T13:52:55.284363Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

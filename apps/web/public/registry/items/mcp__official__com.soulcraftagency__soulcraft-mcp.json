@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/com.soulcraftagency/soulcraft-mcp",
+  "type": "mcp",
+  "name": "soulcraft-mcp",
+  "description": "Analyze any company's identity. Get a Soul Score, dimension scores, a soul.md, and recommendations.",
+  "author": "com.soulcraftagency",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/iamevandrake/soulcraft-agents",
+    "repo": "iamevandrake/soulcraft-agents"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "soulcraft-mcp"
+    ],
+    "env": [
+      {
+        "name": "SOUL_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-27T03:30:54.688906Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

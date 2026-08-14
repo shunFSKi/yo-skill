@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.Kirchlive/github-inside-claude-code",
+  "type": "mcp",
+  "name": "GitHub Inside Claude Code",
+  "description": "Normalized GitHub-CLI bridge for Claude Code — 89 ops, 6 families incl. federation sources",
+  "author": "io.github.Kirchlive",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Kirchlive/github-inside-claude-code",
+    "repo": "Kirchlive/github-inside-claude-code"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "github-inside-claude-code"
+    ],
+    "env": [
+      {
+        "name": "TAVILY_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "BRAVE_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-18T10:12:08.567261Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

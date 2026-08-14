@@ -1,0 +1,89 @@
+{
+  "id": "mcp:official/io.github.G0Osey99/awesome-mineflayer-mcp",
+  "type": "mcp",
+  "name": "Awesome Mineflayer MCP",
+  "description": "Control a Mineflayer Minecraft bot with 120+ MCP tools: move, mine, craft, fight, build, and see.",
+  "author": "io.github.G0Osey99",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/G0Osey99/awesome-mineflayer-mcp",
+    "repo": "G0Osey99/awesome-mineflayer-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "awesome-mineflayer-mcp"
+    ],
+    "env": [
+      {
+        "name": "MCP_DEFAULT_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_DEFAULT_USERNAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_DEFAULT_AUTH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_DISABLE_GROUPS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_READ_ONLY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_ALLOWED_HOSTS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-29T01:22:27.502889Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

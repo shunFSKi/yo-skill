@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.glean/mcp",
+  "type": "mcp",
+  "name": "Glean Remote MCP Server",
+  "description": "Remote MCP Server that securely connects Glean Enterprise Knowledge with your IDE, LLM, or agents.",
+  "author": "com.glean",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/gleanwork/remote-mcp-server",
+    "repo": "gleanwork/remote-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://{baseUrl}/mcp/{server-name}"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-17T16:55:29.125623Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

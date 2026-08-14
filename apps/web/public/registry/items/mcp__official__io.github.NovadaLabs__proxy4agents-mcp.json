@@ -1,0 +1,114 @@
+{
+  "id": "mcp:official/io.github.NovadaLabs/proxy4agents-mcp",
+  "type": "mcp",
+  "name": "proxy4agents-mcp",
+  "description": "Residential proxy MCP for AI agents — geo-targeting, sticky sessions, anti-bot bypass.",
+  "author": "io.github.NovadaLabs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/NovadaLabs/proxy4agent",
+    "repo": "NovadaLabs/proxy4agent"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "bestproxy4agents-mcp"
+    ],
+    "env": [
+      {
+        "name": "NOVADA_PROXY_USER",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "NOVADA_PROXY_PASS",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "NOVADA_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "NOVADA_BROWSER_WS",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "BRIGHTDATA_USER",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "BRIGHTDATA_PASS",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SMARTPROXY_USER",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SMARTPROXY_PASS",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "OXYLABS_USER",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "OXYLABS_PASS",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PROXY_URL",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-10T14:37:21.155495Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

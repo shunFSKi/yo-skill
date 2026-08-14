@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.AgentSafe-AI/tooltrust-scanner",
+  "type": "mcp",
+  "name": "ToolTrust Scanner",
+  "description": "Scans MCP servers for prompt injection, data exfiltration, and privilege escalation.",
+  "author": "io.github.AgentSafe-AI",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/AgentSafe-AI/tooltrust-scanner",
+    "repo": "AgentSafe-AI/tooltrust-scanner"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "tooltrust-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-31T04:40:11.108991Z"
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

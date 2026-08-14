@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.SolvoHQ/dependency-migration-mcp",
+  "type": "mcp",
+  "name": "dependency-migration-mcp",
+  "description": "Through-the-upgrade dependency-migration briefs for LLM coding agents.",
+  "author": "io.github.SolvoHQ",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/SolvoHQ/dependency-migration-mcp",
+    "repo": "SolvoHQ/dependency-migration-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/SolvoHQ/dependency-migration-mcp/releases/download/v0.1.2/dependency-migration-mcp-0.1.2.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-16T18:02:02.088165Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "mcp:official/io.github.detailobsessed/unblu",
+  "type": "mcp",
+  "name": "unblu",
+  "description": "Operate Unblu deployments: health checks, conversation ops, and 300+ API endpoints",
+  "author": "io.github.detailobsessed",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/detailobsessed/unblu-mcp",
+    "repo": "detailobsessed/unblu-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "unblu-mcp"
+    ],
+    "env": [
+      {
+        "name": "UNBLU_BASE_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "UNBLU_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "UNBLU_USERNAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "UNBLU_PASSWORD",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-05T22:29:49.883356Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

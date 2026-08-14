@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.ausdata/asic-mcp",
+  "type": "mcp",
+  "name": "asic-mcp",
+  "description": "Query ASIC registers in plain English — advisers, licensees, banned persons, liquidators.",
+  "author": "io.ausdata",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Bigred97/asic-mcp",
+    "repo": "Bigred97/asic-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "asic-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-20T22:40:34.205563Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

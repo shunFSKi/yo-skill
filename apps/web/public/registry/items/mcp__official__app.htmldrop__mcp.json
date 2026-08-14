@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/app.htmldrop/mcp",
+  "type": "mcp",
+  "name": "mcp",
+  "description": "Publish HTML or Markdown from any MCP client to a live, shareable URL on htmldrop.app.",
+  "author": "app.htmldrop",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://htmldrop.app/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@htmldrop.app/mcp"
+    ],
+    "env": [
+      {
+        "name": "HTMLDROP_API_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "HTMLDROP_API_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-31T23:44:00.922848Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

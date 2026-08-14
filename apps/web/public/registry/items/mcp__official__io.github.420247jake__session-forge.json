@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.420247jake/session-forge",
+  "type": "mcp",
+  "name": "Session Forge",
+  "description": "Persistent memory and session intelligence for AI coding assistants. Zero config.",
+  "author": "io.github.420247jake",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/420247jake/session-forge",
+    "repo": "420247jake/session-forge"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "session-forge"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-09T04:36:54.428472Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

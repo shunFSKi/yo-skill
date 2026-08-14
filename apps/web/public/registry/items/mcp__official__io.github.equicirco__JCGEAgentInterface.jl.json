@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.equicirco/JCGEAgentInterface.jl",
+  "type": "mcp",
+  "name": "JCGE Agent Interface",
+  "description": "MCP server for JCGE discovery, modeling guidance, solving, validation, and equation rendering.",
+  "author": "io.github.equicirco",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/equicirco/JCGEAgentInterface.jl",
+    "repo": "equicirco/JCGEAgentInterface"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/equicirco/jcge-agentinterface-mcp:0.1.1"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-27T21:13:12.059823Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

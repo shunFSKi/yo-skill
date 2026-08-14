@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.The-Pixel-Boys/shield-kya",
+  "type": "mcp",
+  "name": "shield-kya",
+  "description": "KYA MCP gate: evaluate, ingest, request approval. Sole PEP is Shield.",
+  "author": "io.github.The-Pixel-Boys",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/The-Pixel-Boys/shield-kya",
+    "repo": "The-Pixel-Boys/shield-kya"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@shield-agent/kya"
+    ],
+    "env": [
+      {
+        "name": "KYA_BASE_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "KYA_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "KYA_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "KYA_AGENT_ID",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T10:43:14.830042Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

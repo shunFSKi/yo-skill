@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.FieldmodeLLC/scrapecheck",
+  "type": "mcp",
+  "name": "scrapecheck",
+  "description": "Verify scraped data against the live source page. Signed verdicts, $0.01 via x402.",
+  "author": "io.github.FieldmodeLLC",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/FieldmodeLLC/scrapecheck-mcp",
+    "repo": "FieldmodeLLC/scrapecheck-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://scrapecheck-mcp.fly.dev/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-01T18:20:20.826337Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

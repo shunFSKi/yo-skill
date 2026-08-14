@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.claritybriefs/mcp",
+  "type": "mcp",
+  "name": "mcp",
+  "description": "Free cross-lingual news briefings for AI agents across 89 languages. Read-only, hosted.",
+  "author": "com.claritybriefs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Volkanyalc/claritybriefs-mcp-connector",
+    "repo": "Volkanyalc/claritybriefs-mcp-connector"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://claritybriefs.com/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-22T18:51:21.778045Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

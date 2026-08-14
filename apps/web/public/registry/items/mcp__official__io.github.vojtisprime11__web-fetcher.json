@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.vojtisprime11/web-fetcher",
+  "type": "mcp",
+  "name": "web-fetcher",
+  "description": "Turns any web page into clean Markdown, page metadata and classified links for LLMs.",
+  "author": "io.github.vojtisprime11",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/vojtisprime11/mcp-server-web-fetcher",
+    "repo": "vojtisprime11/mcp-server-web-fetcher"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-server-web-fetcher"
+    ],
+    "env": [
+      {
+        "name": "WEB_FETCHER_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WEB_FETCHER_MAX_BYTES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WEB_FETCHER_USER_AGENT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WEB_FETCHER_ALLOW_PRIVATE_HOSTS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WEB_FETCHER_RESPECT_ROBOTS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-30T18:59:29.97613Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

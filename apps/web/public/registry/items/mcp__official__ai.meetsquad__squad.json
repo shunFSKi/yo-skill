@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/ai.meetsquad/squad",
+  "type": "mcp",
+  "name": "Squad",
+  "description": "Decision intelligence for product teams. Turn scattered feedback into signal you can act on.",
+  "author": "ai.meetsquad",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/the-basilisk-ai/squad-mcp",
+    "repo": "the-basilisk-ai/squad-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.meetsquad.ai/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-07T08:51:16.750367Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

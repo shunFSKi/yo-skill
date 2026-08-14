@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.gibsonai/mcp",
+  "type": "mcp",
+  "name": "mcp",
+  "description": "GibsonAI MCP server: manage your databases with natural language",
+  "author": "com.gibsonai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/gibsonai/mcp",
+    "repo": "gibsonai/mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.gibsonai.com/"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-09-22T18:43:05.221834Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

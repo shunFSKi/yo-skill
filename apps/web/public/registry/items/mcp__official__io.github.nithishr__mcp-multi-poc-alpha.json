@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.nithishr/mcp-multi-poc-alpha",
+  "type": "mcp",
+  "name": "mcp-multi-poc-alpha",
+  "description": "PoC alpha server - base install, subcommand selection from a shared PyPI package.",
+  "author": "io.github.nithishr",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/nithishr/mcp-registry-poc",
+    "repo": "nithishr/mcp-registry-poc"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-multi-poc"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-31T17:27:17.389417Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

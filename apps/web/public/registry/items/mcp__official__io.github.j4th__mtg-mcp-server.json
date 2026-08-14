@@ -1,0 +1,123 @@
+{
+  "id": "mcp:official/io.github.j4th/mtg-mcp-server",
+  "type": "mcp",
+  "name": "MTG MCP Server",
+  "description": "Magic: The Gathering card search, combo lookup, draft analytics, and Commander tools.",
+  "author": "io.github.j4th",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/j4th/mtg-mcp-server",
+    "repo": "j4th/mtg-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mtg-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "MTG_MCP_TRANSPORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MTG_MCP_HTTP_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MTG_MCP_LOG_LEVEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MTG_MCP_ENABLE_17LANDS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MTG_MCP_ENABLE_EDHREC",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MTG_MCP_ENABLE_BULK_DATA",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MTG_MCP_SCRYFALL_RATE_LIMIT_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MTG_MCP_BULK_DATA_REFRESH_HOURS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MTG_MCP_ENABLE_RULES",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MTG_MCP_DISABLE_CACHE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MTG_MCP_ENABLE_MOXFIELD",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MTG_MCP_ENABLE_SPICERACK",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MTG_MCP_ENABLE_MTGGOLDFISH",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-04T05:28:24.496267Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,104 @@
+{
+  "id": "mcp:official/io.github.fieldcure/essentials",
+  "type": "mcp",
+  "name": "essentials",
+  "description": "Essential MCP server: HTTP, web search, downloads, Wolfram|Alpha, shell, JS, file I/O, memory.",
+  "author": "io.github.fieldcure",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/fieldcure/fieldcure-mcp-essentials",
+    "repo": "fieldcure/fieldcure-mcp-essentials"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "FieldCure.Mcp.Essentials"
+    ],
+    "env": [
+      {
+        "name": "ESSENTIALS_SEARCH_ENGINE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ESSENTIALS_SEARCH_API_KEY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SERPER_API_KEY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SERPAPI_API_KEY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "TAVILY_API_KEY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WOLFRAM_APPID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ESSENTIALS_MEMORY_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ESSENTIALS_DOWNLOAD_DIRECTORY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ESSENTIALS_SETTINGS_PATH",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-25T09:34:02.543854Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

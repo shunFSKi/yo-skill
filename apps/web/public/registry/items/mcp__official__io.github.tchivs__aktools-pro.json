@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.tchivs/aktools-pro",
+  "type": "mcp",
+  "name": "AkTools Pro MCP Server",
+  "description": "🚀 AkTools Pro: 增强型金融 MCP 服务器。内置策略回测、模拟盘管理及实时异动监控。",
+  "author": "io.github.tchivs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/tchivs/mcp-aktools",
+    "repo": "tchivs/mcp-aktools"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "aktools-pro"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-01-29T08:32:46.734275Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

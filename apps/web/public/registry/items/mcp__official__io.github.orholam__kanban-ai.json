@@ -1,0 +1,70 @@
+{
+  "id": "mcp:official/io.github.orholam/kanban-ai",
+  "type": "mcp",
+  "name": "Kanban AI",
+  "description": "Remote MCP for Kanban AI boards—manage projects, tasks, and comments from AI tools.",
+  "author": "io.github.orholam",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/orholam/kanban_ai",
+    "repo": "orholam/kanban_ai"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://kanbanai.dev/api/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "X-Supabase-Access-Token",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "X-MCP-API-Key",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-10T02:24:50.026006Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

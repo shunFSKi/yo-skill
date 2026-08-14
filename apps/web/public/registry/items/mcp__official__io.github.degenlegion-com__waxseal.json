@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.degenlegion-com/waxseal",
+  "type": "mcp",
+  "name": "waxseal",
+  "description": "Ed25519 identity for AI agents. Verify seals, sign documents, gate actions with approvals.",
+  "author": "io.github.degenlegion-com",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/degenlegion-com/waxseal-sdk",
+    "repo": "degenlegion-com/waxseal-sdk"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@waxseal/mcp"
+    ],
+    "env": [
+      {
+        "name": "WAXSEAL_PRIVATE_KEY_PEM",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-28T13:45:54.368222Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

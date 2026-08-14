@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/dev.astrocal/mcp-server",
+  "type": "mcp",
+  "name": "Astrocal",
+  "description": "AI-native scheduling: check availability, book meetings, cancel and reschedule via MCP",
+  "author": "dev.astrocal",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/astrocal-dev/mcp-server",
+    "repo": "astrocal-dev/mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@astrocal/mcp-server"
+    ],
+    "env": [
+      {
+        "name": "ASTROCAL_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "ASTROCAL_API_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ASTROCAL_DEFAULT_EVENT_TYPE_ID",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-24T21:31:29.698149Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

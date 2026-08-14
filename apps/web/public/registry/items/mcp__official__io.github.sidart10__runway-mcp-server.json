@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.sidart10/runway-mcp-server",
+  "type": "mcp",
+  "name": "Runway AI Video Generation",
+  "description": "AI video generation with Gen-4, Veo 3, and Aleph editing. Text-to-video, image-to-video, 4K upscale",
+  "author": "io.github.sidart10",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/sidart10/runway-mcp-server",
+    "repo": "sidart10/runway-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "runway-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "RUNWAY_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-11-11T23:16:56.459044Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

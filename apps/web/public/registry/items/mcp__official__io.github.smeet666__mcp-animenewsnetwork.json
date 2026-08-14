@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.smeet666/mcp-animenewsnetwork",
+  "type": "mcp",
+  "name": "mcp-animenewsnetwork",
+  "description": "Search the Anime News Network encyclopedia and read its news wire. No API key.",
+  "author": "io.github.smeet666",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/smeet666/mcp-animenewsnetwork",
+    "repo": "smeet666/mcp-animenewsnetwork"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-animenewsnetwork"
+    ],
+    "env": [
+      {
+        "name": "ANN_USER_AGENT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ANN_MIN_INTERVAL_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ANN_LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-09T18:44:48.504137Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.ariroffe72/zmanim-mcp-server",
+  "type": "mcp",
+  "name": "Zmanim MCP Server",
+  "description": "MCP server providing Jewish prayer times (zmanim) calculations for any location worldwide.",
+  "author": "io.github.ariroffe72",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ariroffe72/zmanim-mcp-server.git",
+    "repo": "ariroffe72/zmanim-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "zmanim-mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-31T20:04:43.003433Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

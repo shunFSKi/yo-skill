@@ -1,0 +1,65 @@
+{
+  "id": "mcp:official/io.github.JosejuX/rapidapi-metadata-extractor",
+  "type": "mcp",
+  "name": "Web Metadata, OpenGraph & Contact Extractor",
+  "description": "Turns any URL into SEO metadata, contacts, tech stack, and AI-ready Markdown, in one call.",
+  "author": "io.github.JosejuX",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/JosejuX/rapidapi-metadata-extractor",
+    "repo": "JosejuX/rapidapi-metadata-extractor"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.rapidapi.com",
+    "env": [
+      {
+        "name": "x-api-host",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "x-api-key",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-11T12:26:02.981353Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

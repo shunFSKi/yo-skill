@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.x-monk/mcp-webgate",
+  "type": "mcp",
+  "name": "mcp-webgate",
+  "description": "Web search that doesn't wreck your AI's memory.",
+  "author": "io.github.x-monk",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/x-monk/mcp-webgate",
+    "repo": "x-monk/mcp-webgate"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-webgate"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-01T21:07:29.936043Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

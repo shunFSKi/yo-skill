@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.sercanmetalore/bin-lookup-mcp",
+  "type": "mcp",
+  "name": "bin-lookup-mcp",
+  "description": "BIN/IIN sorgulama MCP sunucusu: kart markası, tür, ihraç eden banka ve ülke bilgisi. Üç katmanlı…",
+  "author": "io.github.sercanmetalore",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/sercanmetalore/API-MCP",
+    "repo": "sercanmetalore/API-MCP"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.boykaf.com/bin-lookup/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-11T17:22:12.138887Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/ai.sentfrom/mcp",
+  "type": "mcp",
+  "name": "mcp",
+  "description": "Email for AI agents: inboxes, send/reply/forward, search, threads, webhooks — 21 SentFromAI tools.",
+  "author": "ai.sentfrom",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/samuelar2/sentfromai-mcp",
+    "repo": "samuelar2/sentfromai-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "sentfromai-mcp"
+    ],
+    "env": [
+      {
+        "name": "SENTFROMAI_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "SENTFROMAI_BASE_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T18:56:33.911728Z"
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

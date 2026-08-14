@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.oswarld/technical",
+  "type": "mcp",
+  "name": "technical",
+  "description": "Technical analysis (RSI, MA, signal score) for 9,400+ global stocks, by ticker or name.",
+  "author": "io.github.oswarld",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://www.bullbear.ninja/api/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://www.bullbear.ninja/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-28T09:52:48.343623Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

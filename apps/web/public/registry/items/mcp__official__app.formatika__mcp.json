@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/app.formatika/mcp",
+  "type": "mcp",
+  "name": "mcp",
+  "description": "Convert, compress, resize and trim images, audio, video and PDFs from local paths.",
+  "author": "app.formatika",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/formatika-app/mcp",
+    "repo": "formatika-app/mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@formatika/mcp"
+    ],
+    "env": [
+      {
+        "name": "FORMATIKA_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "FORMATIKA_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T22:14:00.584411Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": "# @formatika/mcp\n\nConvert, resize, compress, crop and rotate files straight from your agent, using\n[formatika.app](https://formatika.app).\n\nYour agent gets the tools; the files stay on your machine until a job needs them\nand come back as soon as it is done.\n\n## Use it\n\nNo installation and no account needed to start:\n\n```bash\nnpx @formatika/mcp\n```\n\n### Claude Code\n\n```bash\nclaude mcp add formatika -- npx -y @formatika/mcp\n```\n\n### Claude Desktop, Cursor and other clients\n\nAdd this to the MCP servers section of the client configuration:\n\n```json\n{\n  \"mcpServers\": {\n    \"formatika\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@formatika/mcp\"]\n    }\n  }\n}\n```\n\nOn Windows, Claude Desktop launches the server without a shell and cannot find\n`npx` directly. Use this instead:\n\n```json\n{\n  \"mcpServers\": {\n    \"formatika\": {\n      \"command\": \"cmd\",\n      \"args\": [\"/c\", \"npx\", \"-y\", \"@formatika/mcp\"]\n    }\n  }\n}\n```\n\nFully restart the client after editing the configuration.\n\n## Then just ask\n\n> Compress every photo in ./screenshots and put the results in ./web\n\n> Convert all the HEIC files in this folder to JPEG\n\n> Make a square 512×512 avatar out of portrait.png\n\n## Tools\n\nThe tool list comes from the service at start-up, so it never lags behind what\nformatika can actually do — this README does not have to be updated for a new\ntool to appear in your agent.\n\nToday that is images, audio, video, PDF, archives, subtitles and tables: over\nthirty tools. The current list, with what each one does, is at\n[formatika.app/mcp](https://formatika.app/mcp).\n\nEvery tool takes `paths` — one or more files — and an optional `outputDir`.\nResults are written next to the source file unless you say otherwise, and\n**existing files are never overwritten**: a name that is taken gets a number.\n\n## Limits and keys\n\nWithout a key you get a daily allowance, which is enough for occasional work.\nFor volume, create a key at [formatika.app/account](https://formatika.app/account)\nand pass it in:\n\n```json\n{\n  \"mcpServers\": {\n    \"formatika\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@formatika/mcp\"],\n      \"env\": { \"FORMATIKA_API_KEY\": \"fk_...\" }\n    }\n  }\n}\n```\n\n`FORMATIKA_URL` points the server somewhere else — useful if you run formatika\nyourself.\n\n## Privacy\n\nFiles are processed and deleted: two hours without an account, twenty-four hours\nwith one. They are not looked at, not shared and not used to train anything.\nSee the [privacy policy](https://formatika.app/legal/privacy).\n\n## License\n\nMIT\n\n---\n\n## About this repository\n\nThis is a read-only mirror of the `packages/mcp` directory of the formatika\nmonorepo, published so that the package has a public home: catalogues link to\nit, and people who read code before installing it can do so.\n\nPull requests here cannot be merged — the next sync would overwrite them.\nIssues, however, are read and welcome: bugs, missing tools, awkward APIs.\n\nMirrored from commit `e06be38`.\n",
+  "status": "curated"
+}

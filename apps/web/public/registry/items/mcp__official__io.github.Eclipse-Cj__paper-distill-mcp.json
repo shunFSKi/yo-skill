@@ -1,0 +1,93 @@
+{
+  "id": "mcp:official/io.github.Eclipse-Cj/paper-distill-mcp",
+  "type": "mcp",
+  "name": "Paper Distill MCP",
+  "description": "Academic paper search across 11 sources with AI curation, ranked push, Zotero and Obsidian support.",
+  "author": "io.github.Eclipse-Cj",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Eclipse-Cj/paper-distill-mcp",
+    "repo": "Eclipse-Cj/paper-distill-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "paper-distill-mcp"
+    ],
+    "env": [
+      {
+        "name": "OPENALEX_EMAIL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CORE_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "TELEGRAM_BOT_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "TELEGRAM_CHAT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DISCORD_WEBHOOK_URL",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ZOTERO_LIBRARY_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ZOTERO_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-19T16:30:10.807942Z"
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

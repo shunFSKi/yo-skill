@@ -1,0 +1,52 @@
+{
+  "id": "skill:claudeskills/text-to-lottie",
+  "type": "skill",
+  "name": "text-to-lottie",
+  "description": "Create, edit, or fix Lottie/Bodymovin JSON animations for the local Skia Skottie player. Use for text-to-Lottie, SVG/logo/type animation, loaders/icons, state feedback, UI microinteractions, lower thirds, diagrams, data/stat/chart animations, product promos, scene/camera motion, visual effects, scene edits, slots/controls, and Skottie debugging.",
+  "author": "diffusionstudio",
+  "source": {
+    "registry": "claudeskills",
+    "url": "https://github.com/diffusionstudio/lottie",
+    "repo": "diffusionstudio/lottie"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1968,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": "<p align=\"center\">\n  <img src=\"assets/header.gif\" alt=\"Text to Lottie\" width=\"100%\" />\n</p>\n\n[![](https://img.shields.io/discord/1115673443141156924?style=flat&logo=discord&logoColor=white&color=5865F2)](https://discord.com/invite/zPQJrNGuFB)\n[![](https://img.shields.io/badge/Follow%20for-Updates-black?logo=x&logoColor=white)](https://x.com/diffusionhq)\n[![](https://img.shields.io/badge/Combinator-F24-orange?logo=ycombinator&logoColor=white)](https://www.ycombinator.com/companies/diffusion-studio)\n\n[English](README.md) | [繁體中文](README.zh-TW.md)\n\n**Text-to-lottie** is an open-source framework for generating production ready Lottie animations with claude code/codex or any other coding agent supporting skills.\n\n## Created with Text-to-Lottie\n<table>\n  <tr>\n    <td>\n      <img src=\"assets/demo-1.gif\" width=\"350\" />\n    </td>\n    <td>\n      <img src=\"assets/demo-2.gif\" width=\"350\" />\n    </td>\n  </tr>\n</table>\n\n## Quick Start \nInstall the skill:\n```bash\nnpx skills add diffusionstudio/lottie\n```\nThen ask your coding agent to generate a Lottie animation using `text-to-lottie`.\n\nExample prompt:\n> Create a Lottie animation from the SVG path in https://github.com/JaceThings/SF-Hello/blob/main/SVG/hello-en.svg. Reveal the path with an animation that follows the natural path direction. Apply a premium apple themed gradient to the path. Use ease-in-out timing, a transparent background, and preserve the original SVG geometry.\n\nThe agent sets up the workspace and the included player, where each animation lives as a scene inside a project. Scenes load automatically from `public/projects/<project>/<scene>/lottie.json` and live-update in the player as the agent edits them — so you can inspect, scrub, and refine the generated Lottie in real time.\n\n## Prompt guide\n\n### 1. Ground the model\nProvide SVGs, real-world data, or screenshots whenever possible. Results are significantly better when the animation is based on concrete assets.\n\n### 2. Use motion design terminology\nDescribe timing and movement using motion design language like ease-in, ease-out, and ease-in-out.\n\n### 3. Think like a camera operator\nProfessional motion graphics often rely on camera movement. Include camera pushes, pans, zooms, and rig-like motion in your prompt.\n\n### 4. Request the controls you need\nBy default, outputs usually only expose a background color control. If you want to customize other properties, explicitly ask the agent to create controls for them.\n\n### 5. Specify FPS and duration\nIf your animation requires a specific frame rate or length, include the desired FPS and total frame count in the prompt.\n\n\n## Using the Generated Animation\n\nGenerated animations can be used directly as Lottie JSON files or imported into After Effects for further refinement.\n\n### Web / vanilla HTML\n```html\n<script src=\"https://unpkg.com/lottie-web/build/player/lottie.min.js\"></script>\n\n<div id=\"anim\"></div>\n\n<script>\n  lottie.loadAnimation({\n    container: document.getElementById(\"anim\"),\n    renderer: \"svg\",\n    loop: true,\n    autoplay: true,\n    path: \"/animations/my-animation.json\"\n  });\n</script>\n```\n\n### React Native\n\nUse [React Native Skia](https://shopify.github.io/react-native-skia/docs/skottie/) to render Lottie animations via its Skottie module. It supports iOS, Android, and web, and lets you customize animation properties, assets, and typographies at runtime.\n\n```tsx\nimport { Skia, Canvas, Skottie, useClock } from \"@shopify/react-native-skia\";\nimport { useDerivedValue } from \"react-native-reanimated\";\n\nconst animation = Skia.Skottie.Make(JSON.stringify(require(\"./animation.json\")));\n\nexport default function Loader() {\n  const clock = useClock();\n  const frame = useDerivedValue(\n    () => ((clock.value / 1000) % animation.duration()) * animation.fps()\n  );\n  return (\n    <Canvas style={{ width: 200, height: 200 }}>\n      <Skottie animation={animation} frame={frame} />\n    </Canvas>\n  );\n}\n```\n\n### iOS Swift\n```swift\nimport Lottie\n\nlet animationView = LottieAnimationView(name: \"animation\")\nanimationView.frame = view.bounds\nanimationView.contentMode = .scaleAspectFit\nanimationView.loopMode = .loop\nview.addSubview(animationView)\nanimationView.play()\n```\n\n### Android Kotlin\n```kotlin\nval view = findViewById<LottieAnimationView>(R.id.animationView)\nview.setAnimation(R.raw.animation)\nview.loop(true)\nview.playAnimation()\n```\n\n### Flutter\n```yaml\ndependencies:\n  lottie: ^1.0.0\n```\n\n```dart\nimport 'package:lottie/lottie.dart';\n\nLottie.asset('assets/animation.json')\n```\n",
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.kioie/tiny-go-mcp",
+  "type": "mcp",
+  "name": "Tiny Go MCP Server",
+  "description": "Demo stdio MCP server (tools, resource, prompt) for tinymcp tests—not production use.",
+  "author": "io.github.kioie",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/kioie/tiny-go-mcp-server",
+    "repo": "kioie/tiny-go-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/kioie/tiny-go-mcp:1.1.2"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-22T19:46:52.189405Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

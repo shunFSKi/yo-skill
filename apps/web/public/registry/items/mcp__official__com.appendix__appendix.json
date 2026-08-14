@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.appendix/appendix",
+  "type": "mcp",
+  "name": "Appendix",
+  "description": "Physician-reviewed medical opinions and prescriptions for AI agents.",
+  "author": "com.appendix",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/appendixhealth/mcp-server",
+    "repo": "appendixhealth/mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.appendix.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-02T14:51:59.867949Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

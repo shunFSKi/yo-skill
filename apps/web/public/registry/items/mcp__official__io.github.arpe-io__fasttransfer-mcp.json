@@ -1,0 +1,78 @@
+{
+  "id": "mcp:official/io.github.arpe-io/fasttransfer-mcp",
+  "type": "mcp",
+  "name": "fasttransfer-mcp",
+  "description": "MCP server for FastTransfer — high-performance parallel data transfer between databases",
+  "author": "io.github.arpe-io",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/arpe-io/fasttransfer-mcp",
+    "repo": "arpe-io/fasttransfer-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "fasttransfer-mcp"
+    ],
+    "env": [
+      {
+        "name": "FASTTRANSFER_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "FASTTRANSFER_TIMEOUT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "FASTTRANSFER_LOG_DIR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-16T14:41:35.884897Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

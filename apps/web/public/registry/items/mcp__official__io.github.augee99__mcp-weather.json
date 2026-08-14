@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.augee99/mcp-weather",
+  "type": "mcp",
+  "name": "mcp-weather",
+  "description": "An MCP server that provides [describe what your server does]",
+  "author": "io.github.augee99",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/augee99/mcp-weather",
+    "repo": "augee99/mcp-weather"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-weather-augee99"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-09-12T13:24:44.527457Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

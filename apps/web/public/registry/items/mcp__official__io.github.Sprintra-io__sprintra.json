@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.Sprintra-io/sprintra",
+  "type": "mcp",
+  "name": "Sprintra",
+  "description": "The project brain for AI coding agents — memory, decisions, sprints, knowledge base via MCP.",
+  "author": "io.github.Sprintra-io",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Sprintra-io/sprintra-mcp",
+    "repo": "Sprintra-io/sprintra-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@sprintra/mcp"
+    ],
+    "env": [
+      {
+        "name": "VIBEPILOT_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SUPABASE_DATABASE_URL",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GEMINI_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-03T21:08:42.156591Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

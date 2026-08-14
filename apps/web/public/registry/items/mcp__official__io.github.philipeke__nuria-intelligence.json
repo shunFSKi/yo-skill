@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.philipeke/nuria-intelligence",
+  "type": "mcp",
+  "name": "nuria-intelligence",
+  "description": "Nuria Islamic app: source-cited Islamic guidance, in scholarly review; sensitive Qs go to a human.",
+  "author": "io.github.philipeke",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/philipeke/nuria-intelligence",
+    "repo": "philipeke/nuria-intelligence"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.nuria.one/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-15T21:16:09.199478Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

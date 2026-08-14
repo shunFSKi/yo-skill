@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.ura-tools/agentrace",
+  "type": "mcp",
+  "name": "agentrace",
+  "description": "Structured observability for AI agents. Trace steps, decisions, and errors. MCP server + CLI viewer.",
+  "author": "io.github.ura-tools",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers/io.github.ura-tools%2Fagentrace",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@ura-dev/agentrace"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-28T19:27:06.601517Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

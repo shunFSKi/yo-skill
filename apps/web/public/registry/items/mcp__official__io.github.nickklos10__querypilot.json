@@ -1,0 +1,88 @@
+{
+  "id": "mcp:official/io.github.nickklos10/querypilot",
+  "type": "mcp",
+  "name": "QueryPilot",
+  "description": "Safe SQL gateway for AI agents: SELECT-only validation, access policies, masking, audit trail, evals",
+  "author": "io.github.nickklos10",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/nickklos10/QueryPilot",
+    "repo": "nickklos10/QueryPilot"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "querypilot"
+    ],
+    "env": [
+      {
+        "name": "QUERYPILOT_DATABASE_URL",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "QUERYPILOT_DIALECT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "QUERYPILOT_MAX_ROWS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "QUERYPILOT_TIMEOUT_SECONDS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "QUERYPILOT_ACCESS_POLICY_JSON",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "QUERYPILOT_MCP_TRANSPORT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-11T17:57:41.247728Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

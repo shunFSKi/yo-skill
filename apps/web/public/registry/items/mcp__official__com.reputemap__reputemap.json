@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/com.reputemap/reputemap",
+  "type": "mcp",
+  "name": "ReputeMap",
+  "description": "Read and filter your Google Business Profile reviews, get stats, and send review requests.",
+  "author": "com.reputemap",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/reputemap/mcp",
+    "repo": "reputemap/mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@reputemap/mcp"
+    ],
+    "env": [
+      {
+        "name": "REPUTEMAP_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-02T16:56:43.364202Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

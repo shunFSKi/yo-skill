@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.favcrm/favcrm",
+  "type": "mcp",
+  "name": "FavCRM",
+  "description": "Agentic CRM for service businesses — bookings, customers, WhatsApp, loyalty, invoicing.",
+  "author": "io.favcrm",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/favcrm/mcp",
+    "repo": "favcrm/mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.favcrm.io/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-08T02:14:20.464132Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

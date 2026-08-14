@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.DavidFuchs/mcp-uptime-kuma",
+  "type": "mcp",
+  "name": "mcp-uptime-kuma",
+  "description": "A Model Context Protocol (MCP) server for Uptime Kuma version 2.",
+  "author": "io.github.DavidFuchs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/DavidFuchs/mcp-uptime-kuma",
+    "repo": "DavidFuchs/mcp-uptime-kuma"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@davidfuchs/mcp-uptime-kuma"
+    ],
+    "env": [
+      {
+        "name": "UPTIME_KUMA_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "UPTIME_KUMA_USERNAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "UPTIME_KUMA_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "UPTIME_KUMA_2FA_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "UPTIME_KUMA_JWT_TOKEN",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-02T20:02:18.564931Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.vbhjckfd/timetable-api-node",
+  "type": "mcp",
+  "name": "Lviv Public Transport",
+  "description": "Lviv public transport MCP: stops, timetables, routes, and live vehicle positions. No API key.",
+  "author": "io.github.vbhjckfd",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/vbhjckfd/timetable-api-node",
+    "repo": "vbhjckfd/timetable-api-node"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.lad.lviv.ua/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-22T19:26:50.574577Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

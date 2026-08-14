@@ -1,0 +1,99 @@
+{
+  "id": "mcp:official/io.github.andrijdavid/vinted-mcp",
+  "type": "mcp",
+  "name": "vinted-mcp",
+  "description": "MCP Server for Vinted that allows to search items, compare prices, and analyze sellers.",
+  "author": "io.github.andrijdavid",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/andrijdavid/vinted-mcp",
+    "repo": "andrijdavid/vinted-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@andrijdavid/vinted-mcp"
+    ],
+    "env": [
+      {
+        "name": "VINTED_AUTH_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "VINTED_AUTH_COOKIES",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "VINTED_AUTH_CSRF_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "VINTED_AUTH_ACCESS_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "VINTED_PROXY_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "VINTED_MAX_CONCURRENCY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "VINTED_REQUEST_DELAY_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "VINTED_MAX_RETRIES",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-05T09:21:24.406435Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

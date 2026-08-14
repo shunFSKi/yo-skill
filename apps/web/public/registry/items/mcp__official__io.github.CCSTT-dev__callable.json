@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.CCSTT-dev/callable",
+  "type": "mcp",
+  "name": "callable",
+  "description": "API for AI agents to delegate tasks to real humans.",
+  "author": "io.github.CCSTT-dev",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/CCSTT-dev/callable-task-deck",
+    "repo": "CCSTT-dev/callable-task-deck"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://getcallable.dev/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-16T12:33:03.796713Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/com.getcurrentoffer/mcp",
+  "type": "mcp",
+  "name": "GetCurrentOffer",
+  "description": "Search live credit card merchant offers across Amex, Chase, Citi, PayPal, Rakuten, Capital One.",
+  "author": "com.getcurrentoffer",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/stanley17112000/getcurrentoffer-mcp",
+    "repo": "stanley17112000/getcurrentoffer-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://getcurrentoffer.com/api/mcp",
+    "env": [
+      {
+        "name": "X-API-Key",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-11T22:17:11.726423Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

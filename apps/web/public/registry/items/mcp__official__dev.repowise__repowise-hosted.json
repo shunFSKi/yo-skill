@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/dev.repowise/repowise-hosted",
+  "type": "mcp",
+  "name": "Repowise (Hosted)",
+  "description": "Hosted codebase intelligence for repos indexed on repowise.dev — no local indexing needed.",
+  "author": "dev.repowise",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://api.repowise.dev/mcp/{owner}/{repo}",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.repowise.dev/mcp/{owner}/{repo}",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-07T11:11:29.655441Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

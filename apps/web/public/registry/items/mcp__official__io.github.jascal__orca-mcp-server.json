@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.jascal/orca-mcp-server",
+  "type": "mcp",
+  "name": "Orca MCP Server",
+  "description": "Go from natural language to verified finite state machines — topology bugs caught before code runs.",
+  "author": "io.github.jascal",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/jascal/orca-lang",
+    "repo": "jascal/orca-lang"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@orcalang/orca-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "ANTHROPIC_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ORCA_PROVIDER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ORCA_MODEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-03T02:36:27.218364Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

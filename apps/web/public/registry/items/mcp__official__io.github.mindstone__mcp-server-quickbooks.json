@@ -1,0 +1,94 @@
+{
+  "id": "mcp:official/io.github.mindstone/mcp-server-quickbooks",
+  "type": "mcp",
+  "name": "QuickBooks Online",
+  "description": "QuickBooks Online MCP server: invoices, bills, customers, vendors, employees, and accounts",
+  "author": "io.github.mindstone",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mindstone/mcp-servers",
+    "repo": "mindstone/mcp-servers"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@mindstone/mcp-server-quickbooks"
+    ],
+    "env": [
+      {
+        "name": "QUICKBOOKS_CLIENT_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "QUICKBOOKS_CLIENT_SECRET",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "QUICKBOOKS_REFRESH_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "QUICKBOOKS_REALM_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "QUICKBOOKS_ENVIRONMENT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_HOST_BRIDGE_STATE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MINDSTONE_REBEL_BRIDGE_STATE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T11:06:11.102751Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

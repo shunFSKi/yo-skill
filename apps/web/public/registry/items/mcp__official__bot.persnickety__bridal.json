@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/bot.persnickety/bridal",
+  "type": "mcp",
+  "name": "Persnickety Try-On Index",
+  "description": "Find source-checked US boutiques with plus-size bridal samples physically available to try on.",
+  "author": "bot.persnickety",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://persnickety.bot/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://persnickety.bot/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-20T22:31:34.978761Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

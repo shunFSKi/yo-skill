@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.zalez/perplexity-agent-mcp",
+  "type": "mcp",
+  "name": "Perplexity Agent",
+  "description": "Multi-step web research with citations via Perplexity's Agent API. Standard library only.",
+  "author": "io.github.zalez",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/zalez/perplexity-agent-mcp",
+    "repo": "zalez/perplexity-agent-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "perplexity-agent-mcp"
+    ],
+    "env": [
+      {
+        "name": "PERPLEXITY_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "PERPLEXITY_AGENT_WAIT_SECONDS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-02T10:49:19.419907Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.prufa-dev/prufa-mcp",
+  "type": "mcp",
+  "name": "prufa-mcp",
+  "description": "The full Prufa QA agent over MCP: audits, flows, monitors, gremlin chaos, discovery.",
+  "author": "io.github.prufa-dev",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/prufa-dev/prufa-mcp",
+    "repo": "prufa-dev/prufa-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "prufa-mcp"
+    ],
+    "env": [
+      {
+        "name": "PRUFA_API_TOKEN",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-01T21:11:20.46686Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

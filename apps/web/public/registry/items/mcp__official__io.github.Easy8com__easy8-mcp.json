@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.Easy8com/easy8-mcp",
+  "type": "mcp",
+  "name": "Easy8",
+  "description": "Connect AI assistants to Easy8 — read and update projects, issues, and comments.",
+  "author": "io.github.Easy8com",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Easy8com/easy8-mcp",
+    "repo": "Easy8com/easy8-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://{easy8_host}/mcp",
+    "env": [
+      {
+        "name": "X-Redmine-API-Key",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-11T20:30:33.720179Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

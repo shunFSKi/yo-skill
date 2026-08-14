@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.agentlux/agentlux",
+  "type": "mcp",
+  "name": "AgentLux",
+  "description": "Hosted AgentLux MCP server for marketplace, identity, creator, services, and social flows.",
+  "author": "io.github.agentlux",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/agentlux/agentlux-mcp",
+    "repo": "agentlux/agentlux-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.agentlux.ai/v1/mcp/jsonrpc"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-17T16:05:10.743859Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

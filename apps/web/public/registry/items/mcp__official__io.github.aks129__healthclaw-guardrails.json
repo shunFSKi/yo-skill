@@ -1,0 +1,65 @@
+{
+  "id": "mcp:official/io.github.aks129/healthclaw-guardrails",
+  "type": "mcp",
+  "name": "healthclaw-guardrails",
+  "description": "Guardrailed FHIR access for AI agents: PHI redaction, audit trail, step-up auth, tenant isolation",
+  "author": "io.github.aks129",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/aks129/HealthClawGuardrails",
+    "repo": "aks129/HealthClawGuardrails"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp-server-production-5112.up.railway.app/mcp",
+    "env": [
+      {
+        "name": "X-Tenant-Id",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "X-Step-Up-Token",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-04T19:23:39.832181Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

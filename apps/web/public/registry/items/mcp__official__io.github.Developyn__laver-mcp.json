@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.Developyn/laver-mcp",
+  "type": "mcp",
+  "name": "laver-mcp",
+  "description": "Kanban boards, sprints, tickets and a team wiki, with versioned writes for concurrent agents.",
+  "author": "io.github.Developyn",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Developyn/laver-mcp",
+    "repo": "Developyn/laver-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@laver/mcp"
+    ],
+    "env": [
+      {
+        "name": "LAVER_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "LAVER_API_KEY_FILE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LAVER_API_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T03:17:33.07957Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": "# @laver/mcp\n\nAn MCP server for [Laver](https://laver.app). Gives an agent tools to read and\ndrive kanban boards, tickets and the workspace wiki.\n\nEvery tool is a thin call to the same public REST API the web app uses. There is\nno local state, no cache, and no second implementation of anything — if Laver\nrefuses a write, the refusal comes back verbatim, because an agent can act on\n\"409, re-read and retry\" and cannot act on \"something went wrong\".\n\n## Setup\n\nCreate a workspace-scoped API key in Laver under **Admin → API keys**. It acts\nas the person who created it, so it can do exactly what they can do and nothing\nmore, and it can be revoked without touching their account.\n\n```json\n{\n  \"mcpServers\": {\n    \"laver\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@laver/mcp\"],\n      \"env\": { \"LAVER_API_KEY\": \"your key here\" }\n    }\n  }\n}\n```\n\n`LAVER_API_URL` overrides the API host; it defaults to `https://api.laver.app`.\n`LAVER_API_KEY_FILE` is an alternative to `LAVER_API_KEY`: a path to either a\nfile containing nothing but the key, or a `.env`-style file with a\n`LAVER_API_KEY=…` line among others (an assignment line wins; quotes and an\n`export` prefix are both fine). That is how the `.mcp.json` in this repo\nregisters the server without a secret in a tracked file.\n\nA file with neither — no assignment line, and more than one token in it — yields\n**no key at all**, and you get the \"key is not set\" error. It used to send the\nwhole file as the token, which is fine for a file holding one secret and is a\nleak for anything else.\n\n`LAVER_API_URL` must be `https`, except for `localhost`.\n\n### Working in this repo\n\n`.mcp.json` at the repo root registers this server for anyone who opens the\nproject, reading the key from the gitignored `.env`. Nothing to export.\n\nIt runs the **published** package, `npx -y @laver/mcp`, rather than the\n`mcp/server.js` beside it. That is deliberate: pointing it at the local file\nmeant everyone here ran the one code path no user takes, and that is precisely\nhow 0.1.0 shipped with an entry point that never connected its transport when\nstarted through `bin` — which is the only way a real client starts it. Running\nwhat we publish means we meet what users meet.\n\n**If you are editing this server**, that same choice will fool you: your changes\ndo nothing until they are published. Point the client at the working copy while\nyou work on it —\n\n```json\n{ \"command\": \"node\", \"args\": [\"mcp/server.js\"] }\n```\n\n— and put it back before you commit. `npm run check` and\n`frontend/tests/check-mcp-bin-entrypoint.mjs` both run against the working copy\nregardless, so the tests never depend on a publish.\n\n**A client only connects to MCP servers at startup.** `claude mcp add` while a\nsession is already running does not retrofit the tools into that session — the\ntool list was built before the server existed. Start a new session (or\nreconnect from the client's MCP panel) and the tools appear.\n\n## Tools\n\n**Reading**\n\n| Tool                  | What it gives you                                                                 |\n| --------------------- | --------------------------------------------------------------------------------- |\n| `list_workspaces`     | Where to start when you have no uuids                                             |\n| `list_boards`         | The boards in a workspace                                                         |\n| `get_board`           | A board with its status columns, labels, members and tickets                      |\n| `list_tickets`        | Tickets on a board, filterable, paged — `updated_since` is how you follow a board |\n| `get_ticket`          | One ticket in full, **including its `version`**                                   |\n| `get_ticket_comments` | Comments and activity history                                                     |\n| `search`              | Boards, tickets, wiki pages and comments across a whole workspace at once         |\n\nTo follow a board, call `list_tickets` again with `updated_since` set to the\n`server_time` the previous call returned; you get back the tickets that changed\nand nothing else. There is no tool for the server-sent event stream at\n`GET /boards/:uuid/events` — a tool call is one request and one answer, and a\nstream that never ends is neither.\n\n**Asking for less.** A tool result is charged against the model's context, and\nthree of these calls are the ones you cannot route around: a `status_uuid` or a\n`label_uuid` comes from `get_board`, and a `page_uuid` comes from\n`get_wiki_tree`. On a busy board they were 154 kB, 119 kB and 180 kB. Each now\ntakes a parameter that narrows the reply, and every one of them is opt-in — a\ncall that passes none of them is unchanged.\n\n| Call                                        | Gives you                                      | Measured        |\n| ------------------------------------------- | ---------------------------------------------- | --------------- |\n| `get_board(include_tasks: false)`           | the structure alone — statuses, labels, fields | 155 kB → 17 kB  |\n| `get_wiki_tree(depth: 1)`                   | the top level, nothing nested under it         | 119 kB → 1.8 kB |\n| `get_wiki_tree(parent_page_uuid: …)`        | one page and everything beneath it             | 119 kB → 9.8 kB |\n| `list_tickets(include_descriptions: false)` | titles and uuids without the bodies            | 167 kB → 45 kB  |\n\nReach for `get_board(include_tasks: false)` whenever you called it for a uuid\nrather than for the tickets, and `list_tickets` when you want the tickets —\nthat one takes `status` and `limit` as well.\n\n**Writing**\n\n| Tool                | Notes                                                                                                                          |\n| ------------------- | ------------------------------------------------------------------------------------------------------------------------------ |\n| `create_ticket`     | `status` takes the column name, or pass `status_uuid`; markdown in `description` is parsed                                     |\n| `update_ticket`     | Needs `version`; markdown in `description` is parsed; `custom_fields` is keyed by field uuid and **replaces** the whole object |\n| `move_ticket`       | Needs `version`, and a column — neither column is a 400                                                                        |\n| `comment_on_ticket` | Markdown in `body` is parsed; no `version`, so it cannot 409                                                                   |\n| `archive_ticket`    | To the trash — **recoverable** for 30 days                                                                                     |\n| `delete_ticket`     | Destroys one already in the trash — **permanent**                                                                              |\n| `create_board`      | Optionally from a template — `crm` or `sales-leads`                                                                            |\n| `link_tickets`      | \"this before that\" — direction is `blocks` or `blocked_by`                                                                     |\n| `unlink_tickets`    | From either end, and removes **every** kind of link on the pair                                                                |\n\n**Attachments**\n\n| Tool                       | Notes                                                                        |\n| -------------------------- | ---------------------------------------------------------------------------- |\n| `list_ticket_attachments`  | Name, type, size and uuid — never the bytes                                  |\n| `get_ticket_attachment`    | Text inline, an image as an image block, anything else via `save_to`         |\n| `upload_ticket_attachment` | `file_path` for a file on disk, or `text` + `filename` for something written |\n| `delete_ticket_attachment` | To the trash for 30 days; there is no restore tool                           |\n\n`get_ticket` reports `attachment_total`, so you know whether listing is worth a\nround trip.\n\nBinary content crosses the tool boundary by **not** crossing it. A tool result\nis text, Laver allows 25 MB per file, and 25 MB of base64 is roughly nine\nmillion tokens — so only text, CSV and images under 4 MB come back inline, and\neverything else needs `save_to`, which writes the file to a path on the machine\nrunning this server (normally the agent's own, since the client starts it as a\nsubprocess). Uploads go the same way round: `file_path` reads from that machine\nand costs no context.\n\nAn image comes back as an MCP image block rather than as text, which is the only\nform a model can actually look at — that is the whole point of the tool, since\nthe screenshot somebody attached is usually the specification.\n\n**Wiki**\n\n`list_wikis`, `search_wiki`, `get_wiki_tree`, `get_wiki_page`,\n`get_wiki_page_version`, `append_wiki_page`, `create_wiki_page` — which\ntakes the body as markdown and nests under `parent_page_uuid` — and\n`restore_wiki`.\n\nArchiving a wiki (done in the browser; there is no tool here for it) takes it\nand every page under it out of `list_wikis` entirely. `list_wikis` takes\n`archived: true` to see those instead — the only place an archived\n`wiki_uuid` is visible at all — and `restore_wiki` is the only thing here\nthat does something with one: it un-archives the wiki, and every page under\nit, in one call.\n\n`get_wiki_page_version` is how you read something that was overwritten. It is a\nread: the page does not move. There is deliberately no tool to put an old\nversion back, for the same reason there is none to edit a page.\n\nCreate and append only: there is no tool to edit or delete a page. Wiki pages sit behind a\nlive collaborative editor, so an overwrite from here would destroy whatever\nsomebody had open. Until that has a real conflict story the server can add to a\nwiki and cannot damage one.\n\nThe markdown goes through the same parser ticket descriptions do. Headings,\nlists, tables, code blocks, blockquotes, rules and links survive; so does an\n`![alt](https://…)` image, as a reference to that URL — there is no tool here to\nupload an attachment, so the URL has to be public already. Raw HTML is kept as\nliteral text rather than interpreted.\n\n**Automations**\n\n| Tool                | Notes                                                 |\n| ------------------- | ----------------------------------------------------- |\n| `list_automations`  | The rules on a board, each with its `version`         |\n| `create_automation` | Owner or admin only — and see below before calling it |\n\nAn automation rule is a trigger, optional conditions and up to twenty actions,\nstored against a board. Two things about them are worth knowing before an agent\ntouches either tool:\n\n- **A rule created here is live immediately.** It fires on its trigger within a\n  couple of seconds. Do not create one speculatively to see what it would do:\n  there is no run-history tool here, so you would not see what happened.\n- **A rule is a standing grant.** It runs as the user this key acts as, every\n  time it is triggered, for as long as it exists — not once, like every other\n  write in this server. Revoking the key does not stop it; disabling or deleting\n  the rule does.\n\n## Not covered\n\nThe REST API is larger than this server, and the difference is deliberate rather\nthan accidental — `mcp/route-coverage.js` lists every backend route with either\nthe tool that calls it or the reason it has none, and `npm run check` fails if a\nroute appears that is in neither. That is what keeps this section true: it went\nstale before, silently, which is how the server spent its whole life unable to\nread a ticket's attachments while every check stayed green.\n\n**Not yet** — wanted, not built:\n\n- **Notifications.** The biggest gap. An agent cannot see that it was mentioned\n  or assigned, so the only way to find work aimed at it is to poll every board.\n- **Subtasks.** Readable now, not writable. `get_ticket` used to \n\n…",
+  "status": "curated"
+}

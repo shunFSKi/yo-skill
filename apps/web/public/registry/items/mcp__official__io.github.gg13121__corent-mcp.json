@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.gg13121/corent-mcp",
+  "type": "mcp",
+  "name": "Corent",
+  "description": "Generate images and videos via the Corent API — auto model routing with provider fallback.",
+  "author": "io.github.gg13121",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/gg13121/corent-mcp",
+    "repo": "gg13121/corent-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "corent-mcp"
+    ],
+    "env": [
+      {
+        "name": "CORENT_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-18T15:11:11.847117Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

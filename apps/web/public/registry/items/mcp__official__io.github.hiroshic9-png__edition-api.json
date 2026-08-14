@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.hiroshic9-png/edition-api",
+  "type": "mcp",
+  "name": "edition-api",
+  "description": "Japan business regulations, compliance, travel, protocols, memory — 10 knowledge domains, 23 tools.",
+  "author": "io.github.hiroshic9-png",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/hiroshic9-png/edition-api",
+    "repo": "hiroshic9-png/edition-api"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "edition-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "EDITION_API_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "EDITION_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-09T14:59:42.870334Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

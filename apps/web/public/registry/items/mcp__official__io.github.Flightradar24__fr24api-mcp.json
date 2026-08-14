@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.Flightradar24/fr24api-mcp",
+  "type": "mcp",
+  "name": "fr24api-mcp",
+  "description": "MCP server providing access to the Flightradar24 API for real-time and historical flight data",
+  "author": "io.github.Flightradar24",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Flightradar24/fr24api-mcp",
+    "repo": "Flightradar24/fr24api-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@flightradar24/fr24api-mcp"
+    ],
+    "env": [
+      {
+        "name": "FR24_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-09-09T11:42:51.309275Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

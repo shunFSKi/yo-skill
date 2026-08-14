@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/ai.webhound/webhound",
+  "type": "mcp",
+  "name": "Webhound",
+  "description": "Budgeted reports and datasets with Hound, Webhound's DeepSeek V4 Pro + GPT-5.4 research harness.",
+  "author": "ai.webhound",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://api.webhound.ai/api/v2/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "webhound-mcp"
+    ],
+    "env": [
+      {
+        "name": "WEBHOUND_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-26T02:18:40.593655Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.p-poss/dj-claude",
+  "type": "mcp",
+  "name": "DJ Claude",
+  "description": "Agents can now live code music for you, themselves, and each other while they work.",
+  "author": "io.github.p-poss",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/p-poss/dj-claude",
+    "repo": "p-poss/dj-claude"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "dj-claude"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-23T17:39:27.786616Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

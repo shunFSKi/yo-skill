@@ -1,0 +1,94 @@
+{
+  "id": "mcp:official/io.github.ruvnet/claude-flow",
+  "type": "mcp",
+  "name": "claude-flow",
+  "description": "AI orchestration with hive-mind swarms, neural networks, and 87 MCP tools for enterprise dev.",
+  "author": "io.github.ruvnet",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ruvnet/claude-flow",
+    "repo": "ruvnet/claude-flow"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "claude-flow"
+    ],
+    "env": [
+      {
+        "name": "ANTHROPIC_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "CLAUDE_FLOW_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CLAUDE_FLOW_MEMORY_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CLAUDE_FLOW_MAX_AGENTS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CLAUDE_FLOW_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GITHUB_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "FLOW_NEXUS_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-09-10T16:59:34.218266Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.Screed369/autoza-ireland",
+  "type": "mcp",
+  "name": "autoza-ireland",
+  "description": "Irish used-car market MCP: search listings, stats, dealers & model guides via autoza.ie.",
+  "author": "io.github.Screed369",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Screed369/autoza-ie",
+    "repo": "Screed369/autoza-ie"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@autoza/mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-08T07:30:25.752778Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

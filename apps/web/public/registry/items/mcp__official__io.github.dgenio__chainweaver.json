@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.dgenio/chainweaver",
+  "type": "mcp",
+  "name": "ChainWeaver",
+  "description": "Expose deterministic ChainWeaver flows as MCP tools without LLM calls between steps.",
+  "author": "io.github.dgenio",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dgenio/ChainWeaver",
+    "repo": "dgenio/ChainWeaver"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "chainweaver"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-08T08:31:56.617793Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

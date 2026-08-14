@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.takiguchi-yu/google-workspace-mcp-server",
+  "type": "mcp",
+  "name": "google-workspace-mcp-server",
+  "description": "An MCP server for Google Workspaces.",
+  "author": "io.github.takiguchi-yu",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/takiguchi-yu/google-workspace-mcp-server",
+    "repo": "takiguchi-yu/google-workspace-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@takiguchi-yu/google-workspace-mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-07T17:05:52.971067Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.dragnoir/shopify-theme-inspector",
+  "type": "mcp",
+  "name": "shopify-theme-inspector",
+  "description": "Profile Shopify Liquid performance, find slow theme code, and explain fixes in plain language.",
+  "author": "io.github.dragnoir",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dragnoir/Shopify-Theme-Inspector-MCP",
+    "repo": "dragnoir/Shopify-Theme-Inspector-MCP"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "shopify-theme-inspector-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-14T17:56:26.938486Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

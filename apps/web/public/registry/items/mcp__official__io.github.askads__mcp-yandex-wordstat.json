@@ -1,0 +1,89 @@
+{
+  "id": "mcp:official/io.github.askads/mcp-yandex-wordstat",
+  "type": "mcp",
+  "name": "Yandex Wordstat MCP",
+  "description": "MCP server for Yandex Wordstat API: top & related queries, demand dynamics and regions.",
+  "author": "io.github.askads",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/askads/mcp-yandex-wordstat",
+    "repo": "askads/mcp-yandex-wordstat"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-yandex-wordstat"
+    ],
+    "env": [
+      {
+        "name": "WORDSTAT_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "WORDSTAT_FOLDER_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "WORDSTAT_LANG",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WORDSTAT_API_BASE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WORDSTAT_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "WORDSTAT_MAX_RETRIES",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T23:22:16.579129Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

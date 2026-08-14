@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.projecttron/numproof",
+  "type": "mcp",
+  "name": "NumProof",
+  "description": "Deterministic signed verification of numeric & financial claims for AI agents & spreadsheets.",
+  "author": "io.github.projecttron",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/projecttron/numproof",
+    "repo": "projecttron/numproof"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "numproof"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-26T20:13:22.947411Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

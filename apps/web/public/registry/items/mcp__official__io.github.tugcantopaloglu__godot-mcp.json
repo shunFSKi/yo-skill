@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.tugcantopaloglu/godot-mcp",
+  "type": "mcp",
+  "name": "Godot MCP",
+  "description": "MCP server for full Godot 4.x engine control with 165 tools for AI-driven game development",
+  "author": "io.github.tugcantopaloglu",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/tugcantopaloglu/godot-mcp",
+    "repo": "tugcantopaloglu/godot-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@tugcantopaloglu/godot-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-07T11:00:24.29461Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.AIops-tools/xcpng-aiops",
+  "type": "mcp",
+  "name": "XCP-ng AIops",
+  "description": "Governed XCP-ng ops via Xen Orchestra — 29 MCP tools with audit, budget, undo guards.",
+  "author": "io.github.AIops-tools",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/AIops-tools/XCPng-AIops",
+    "repo": "AIops-tools/XCPng-AIops"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "xcpng-aiops"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T06:51:00.522381Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

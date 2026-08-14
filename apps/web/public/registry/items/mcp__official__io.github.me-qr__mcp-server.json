@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.me-qr/mcp-server",
+  "type": "mcp",
+  "name": "ME-QR MCP Server",
+  "description": "Create and manage QR codes on me-qr.com from AI clients like Claude and ChatGPT.",
+  "author": "io.github.me-qr",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/me-qr/me-qr-mcp-server",
+    "repo": "me-qr/me-qr-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.me-qr.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-30T10:30:42.695594Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

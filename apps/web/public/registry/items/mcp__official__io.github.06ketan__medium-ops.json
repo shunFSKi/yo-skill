@@ -1,0 +1,98 @@
+{
+  "id": "mcp:official/io.github.06ketan/medium-ops",
+  "type": "mcp",
+  "name": "medium-ops",
+  "description": "Medium CLI + 23-tool MCP server. Your IDE drafts replies. No API keys.",
+  "author": "io.github.06ketan",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/06ketan/medium-ops",
+    "repo": "06ketan/medium-ops"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "medium-ops"
+    ],
+    "env": [
+      {
+        "name": "MEDIUM_INTEGRATION_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MEDIUM_SID",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MEDIUM_UID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MEDIUM_XSRF",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MEDIUM_CF_CLEARANCE",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MEDIUM_USERNAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MEDIUM_OPS_MCP_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MEDIUM_OPS_LLM_CMD",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-03T06:02:58.252062Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

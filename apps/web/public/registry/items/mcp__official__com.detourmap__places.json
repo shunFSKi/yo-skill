@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.detourmap/places",
+  "type": "mcp",
+  "name": "places",
+  "description": "Places worth a detour, from Wikidata: search, nearby lookup, fame rankings, stats. No key, CC0.",
+  "author": "com.detourmap",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://detourmap.com/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://detourmap.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-29T18:40:12.957121Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

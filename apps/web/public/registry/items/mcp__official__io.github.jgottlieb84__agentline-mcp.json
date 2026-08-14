@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.jgottlieb84/agentline-mcp",
+  "type": "mcp",
+  "name": "Agentline",
+  "description": "Phone numbers, SMS, 2FA capture, voice calls, and email for AI agents.",
+  "author": "io.github.jgottlieb84",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers/io.github.jgottlieb84%2Fagentline-mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "agentline-mcp"
+    ],
+    "env": [
+      {
+        "name": "AGENTLINE_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "AGENTLINE_BASE_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-21T17:58:59.687802Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

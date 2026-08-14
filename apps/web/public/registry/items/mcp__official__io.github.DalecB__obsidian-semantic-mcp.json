@@ -1,0 +1,99 @@
+{
+  "id": "mcp:official/io.github.DalecB/obsidian-semantic-mcp",
+  "type": "mcp",
+  "name": "Obsidian Semantic Search",
+  "description": "Read-only semantic search MCP server for Obsidian vaults using local Ollama embeddings.",
+  "author": "io.github.DalecB",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/DalecB/obsidian-semantic-mcp",
+    "repo": "DalecB/obsidian-semantic-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@dalecb/obsidian-semantic-mcp"
+    ],
+    "env": [
+      {
+        "name": "OBSIDIAN_VAULT_ROOT",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "OBSIDIAN_SEMANTIC_MCP_HOME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OBSIDIAN_EMBED_MODEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OLLAMA_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OBSIDIAN_SEMANTIC_STARTUP_INDEX",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OBSIDIAN_SEMANTIC_ALLOW_SENSITIVE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OBSIDIAN_SEMANTIC_EXCLUDE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "OBSIDIAN_SEMANTIC_SENSITIVE_PATHS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-03T14:00:52.945157Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

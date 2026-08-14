@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/tv.ai/aitv",
+  "type": "mcp",
+  "name": "AI.TV MCP Server",
+  "description": "Remote MCP server for AI.TV creators — delegate account operations to your AI agent over MCP.",
+  "author": "tv.ai",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/web3tv/api-symfony",
+    "repo": "web3tv/api-symfony"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.ai.tv/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-24T12:34:30.905087Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

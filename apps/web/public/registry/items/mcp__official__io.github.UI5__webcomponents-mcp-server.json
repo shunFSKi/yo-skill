@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.UI5/webcomponents-mcp-server",
+  "type": "mcp",
+  "name": "webcomponents-mcp-server",
+  "description": "MCP server for UI5 Web Components development assistance",
+  "author": "io.github.UI5",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/UI5/webcomponents-mcp-server",
+    "repo": "UI5/webcomponents-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@ui5/webcomponents-mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-06T11:48:25.89677Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

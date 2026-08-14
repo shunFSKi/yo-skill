@@ -1,0 +1,94 @@
+{
+  "id": "mcp:official/io.github.tolboy/telegram-mcp-tdlib",
+  "type": "mcp",
+  "name": "Telegram MCP Server",
+  "description": "Local-first TDLib Telegram MCP server with 110 tools, account isolation and production guardrails.",
+  "author": "io.github.tolboy",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/tolboy/telegram-mcp-tdlib",
+    "repo": "tolboy/telegram-mcp-tdlib"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/tolboy/telegram-mcp-tdlib:1.15.0-stdio"
+    ],
+    "env": [
+      {
+        "name": "TDLIB_API_ID",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "TDLIB_API_HASH",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "TDLIB_PHONE_NUMBER",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "TDLIB_AUTH_CODE",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "TDLIB_2FA_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MCP_READ_ONLY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_TOOL_PROFILE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-06T12:09:01.349855Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

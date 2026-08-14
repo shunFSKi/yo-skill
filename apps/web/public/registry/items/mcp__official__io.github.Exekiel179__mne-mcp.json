@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.Exekiel179/mne-mcp",
+  "type": "mcp",
+  "name": "MNE-MCP",
+  "description": "MNE-Python neurophysiology analysis (EEG, MEG, sEEG, ECoG, fNIRS) via the Model Context Protocol",
+  "author": "io.github.Exekiel179",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Exekiel179/MNE-MCP",
+    "repo": "Exekiel179/MNE-MCP"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mne-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-05T08:15:08.332989Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

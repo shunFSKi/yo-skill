@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/ai.smithery/blbl147-xhs-mcp",
+  "type": "mcp",
+  "name": "blbl147-xhs-mcp",
+  "description": "搜索笔记、浏览首页推荐、查看笔记内容与评论，并发表你的评论。直接在工作流中与小红书内容互动，高效跟进话题。",
+  "author": "ai.smithery",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/blbl147/xhs-mcp",
+    "repo": "blbl147/xhs-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://server.smithery.ai/@blbl147/xhs-mcp/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-09-15T03:34:24.676763Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

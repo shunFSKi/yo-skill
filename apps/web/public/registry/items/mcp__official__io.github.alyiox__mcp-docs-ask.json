@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.alyiox/mcp-docs-ask",
+  "type": "mcp",
+  "name": "Docs Ask (local docs RAG)",
+  "description": "Local RAG MCP for markdown documentation. Retrieval only; host synthesizes answers.",
+  "author": "io.github.alyiox",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/alyiox/mcp-docs-ask",
+    "repo": "alyiox/mcp-docs-ask"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-docs-ask"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T07:21:34.371425Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": "# mcp-docs-ask\n\n[![CI](https://github.com/alyiox/mcp-docs-ask/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/alyiox/mcp-docs-ask/actions/workflows/ci.yml)\n[![PyPI](https://img.shields.io/pypi/v/mcp-docs-ask.svg)](https://pypi.org/project/mcp-docs-ask/)\n[![Python 3.13+](https://img.shields.io/badge/python-3.13%2B-blue.svg)](https://www.python.org/downloads/)\n[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)\n\n<!-- mcp-name: io.github.alyiox/mcp-docs-ask -->\n\nLocal RAG MCP for documentation. Point `source` at any markdown repository\n(local path or git URL).\n\nThe server does **retrieval only** (no answer LLM). `ask_docs` returns grounded\npassages and citations; the MCP host (Cursor / Claude) synthesizes the answer.\n\n## Features\n\n- `ask_docs` retrieval with configurable path-based layer filters\n- `list_docs` discovery for configured docs collections and layer filters\n- `reindex` rebuilds the local vector index; for git URL sources it also fetches updates\n\n## Requirements\n\n- Python 3.13+\n- [`uv`](https://docs.astral.sh/uv/)\n- `git` on PATH (only if `source` is a git URL)\n- Git credentials on the machine when `source` is a **private** git URL\n  (`gh auth login`, HTTPS credential helper, or SSH). No tokens in config.\n- First run downloads the embedding model weights once (sentence-transformers)\n\n## Quick start\n\n```bash\ngit clone git@github.com:alyiox/mcp-docs-ask.git\ncd mcp-docs-ask\nuv sync\nmkdir -p ~/.config/mcp-docs-ask\ncp config.example.json ~/.config/mcp-docs-ask/config.json\n# Prefer a local checkout while developing:\n#   set docs.<id>.source to your docs repo path\nnpx -y @modelcontextprotocol/inspector uv run mcp-docs-ask\n```\n\n## Configuration\n\nConfig path: `~/.config/mcp-docs-ask/config.json`\n\n> **Windows:** `%USERPROFILE%\\.config\\mcp-docs-ask\\config.json`\n\n```json\n{\n  \"docs\": {\n    \"product\": {\n      \"source\": \"https://github.com/example/docs.git\",\n      \"desc\": \"Product guides and API reference\",\n      \"ref\": \"main\",\n      \"include\": [\"**/*.md\"],\n      \"exclude\": [\"archive/**\"],\n      \"layers\": {\n        \"guides\": {\n          \"desc\": \"How-to and onboarding guides\",\n          \"include\": [\"docs/guides/**\"]\n        },\n        \"api\": {\n          \"desc\": \"HTTP API reference\",\n          \"include\": [\"docs/api/**\"]\n        }\n      },\n      \"embedding_model\": \"sentence-transformers/all-MiniLM-L6-v2\"\n    },\n    \"team-notes\": {\n      \"source\": \"/path/to/docs\",\n      \"desc\": \"Internal team notes (local path; ref unused)\",\n      \"include\": [\"**/*.md\"],\n      \"exclude\": [\"archive/**\"]\n    }\n  },\n  \"default\": {\n    \"docs\": \"product\",\n    \"embedding_model\": \"sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2\",\n    \"top_k\": 8,\n    \"chunk_max_chars\": 1500\n  }\n}\n```\n\n`product` is a git URL (`ref` applies). `team-notes` is a filesystem path (`ref` unused).\nOptional `desc` on each docs collection and layer helps agents pick the right target.\n\n`embedding_model`, `top_k`, and `chunk_max_chars` resolve as:\n`docs.<id>.X` → `default.X` → built-in. Omit per-docs keys to inherit.\n\n**Embedding model recommendation**\n\nAny Hugging Face id loadable by `sentence-transformers` works. Pick by language mix:\n\n| Docs / queries | Recommended `embedding_model` |\n|---|---|\n| **English-only** (built-in when omitted) | `sentence-transformers/all-MiniLM-L6-v2` |\n| **Chinese-only** | `BAAI/bge-small-zh-v1.5` |\n| **Multilingual** (~50 langs) | `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2` |\n\nChanging `embedding_model` requires a `reindex` (the on-disk index stores the model name).\n\n| Field | Description |\n|---|---|\n| `docs.<id>.source` | Docs **repo root**: local path or git URL |\n| `docs.<id>.desc` | Short description for discovery (`list_docs`) |\n| `docs.<id>.ref` | Branch / tag / SHA for git URL sources only (default `main`; ignored for local paths) |\n| `docs.<id>.include` | Globs relative to repo root (default `**/*.md`) |\n| `docs.<id>.exclude` | Globs to skip |\n| `docs.<id>.layers.<name>.include` | Path globs for that layer (first match wins) |\n| `docs.<id>.layers.<name>.desc` | Short layer description for discovery |\n| `docs.<id>.embedding_model` | Optional override (see recommendation above) |\n| `docs.<id>.top_k` | Optional override for default retrieval count |\n| `docs.<id>.chunk_max_chars` | Optional override for max body chars per heading chunk |\n| `default.docs` | Default docs collection id |\n| `default.embedding_model` | Default sentence-transformers model id |\n| `default.top_k` | Default retrieval count |\n| `default.chunk_max_chars` | Default max body chars per heading chunk |\n\n**Layers** partition indexed files by path glob. First match wins. Names are\ncase-insensitive; `all` is reserved (cannot be configured as a layer name).\n\n| `ask_docs` `layer` | Meaning |\n|---|---|\n| `all` (default) | Every indexed chunk (named layers and paths outside them) |\n| `<named>` | Only chunks whose path matched that named layer’s `include` globs |\n\nPaths that match no named-layer glob are still indexed and only appear under\n`layer=all`. Omit `layers` (or set `\"layers\": {}`) for flat repos — use\n`layer=all`.\n\nCache layout:\n\n- Repos (git URL): `~/.cache/mcp-docs-ask/repos/<docs-id>/`\n- Indexes: `~/.cache/mcp-docs-ask/indexes/<docs-id>/`\n\n## Tools\n\n| Tool | Description |\n|---|---|\n| `list_docs` | List configured docs collections and their layer filters |\n| `ask_docs` | Retrieve grounded passages + citations (`layer`: `all` or a named layer) |\n| `reindex` | Sync git source (if URL) and rebuild the vector index |\n\n`list_docs` returns a `default` block with the same keys as the config `default`\nblock (`docs`, `embedding_model`, `top_k`, `chunk_max_chars`), plus a `docs` list\nwhere each entry carries its resolved values and a `default` flag.\n`layer_filters` is `all` plus named layer ids — see **Layers** above.\n\n## MCP host examples\n\n### Cursor\n\nAdd to `.cursor/mcp.json`:\n\n```json\n{\n  \"mcpServers\": {\n    \"docs-ask\": {\n      \"command\": \"uvx\",\n      \"args\": [\"mcp-docs-ask\"]\n    }\n  }\n}\n```\n\n### Claude Code\n\nAdd to your Claude Code MCP config:\n\n```json\n{\n  \"mcpServers\": {\n    \"docs-ask\": {\n      \"command\": \"uvx\",\n      \"args\": [\"mcp-docs-ask\"]\n    }\n  }\n}\n```\n\n### Codex\n\n```toml\n[mcp_servers.docs-ask]\ncommand = \"uvx\"\nargs = [\"mcp-docs-ask\"]\n```\n\n### OpenCode\n\n```json\n{\n  \"$schema\": \"https://opencode.ai/config.json\",\n  \"mcp\": {\n    \"docs-ask\": {\n      \"type\": \"local\",\n      \"enabled\": true,\n      \"command\": [\"uvx\", \"mcp-docs-ask\"]\n    }\n  }\n}\n```\n\n### GitHub Copilot\n\n```json\n{\n  \"inputs\": [],\n  \"servers\": {\n    \"docs-ask\": {\n      \"type\": \"stdio\",\n      \"command\": \"uvx\",\n      \"args\": [\"mcp-docs-ask\"]\n    }\n  }\n}\n```\n\n## Development\n\n```bash\nuv sync\nuv run ruff check src/ tests/\nuv run ruff format --check src/ tests/\nuv run pyright\nuv run pytest\n```\n\n## Notes\n\n- **Local path:** `ask_docs` rebuilds the index automatically when file mtimes/sizes\n  change (fingerprint check). You do not need `reindex` after editing local docs.\n- **Git URL:** `ask_docs` never fetches. Call `reindex` to `git fetch` the configured\n  `ref` and rebuild.\n- Changing `embedding_model` invalidates the on-disk index (rebuild on next use /\n  `reindex`).\n",
+  "status": "curated"
+}

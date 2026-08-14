@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.spranab/brainstorm-mcp",
+  "type": "mcp",
+  "name": "brainstorm-mcp",
+  "description": "Multi-model AI brainstorming debates with code review and quick perspectives",
+  "author": "io.github.spranab",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/spranab/brainstorm-mcp",
+    "repo": "spranab/brainstorm-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "brainstorm-mcp"
+    ],
+    "env": [
+      {
+        "name": "OPENAI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GEMINI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "DEEPSEEK_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-27T05:37:26.073496Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

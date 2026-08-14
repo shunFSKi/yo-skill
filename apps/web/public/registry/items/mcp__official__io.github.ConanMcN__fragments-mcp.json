@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.ConanMcN/fragments-mcp",
+  "type": "mcp",
+  "name": "fragments-mcp",
+  "description": "Design system MCP with 9 tools for component discovery, rendering, and a11y auditing",
+  "author": "io.github.ConanMcN",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ConanMcN/fragments",
+    "repo": "ConanMcN/fragments"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@fragments-sdk/mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-11T20:35:42.092471Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

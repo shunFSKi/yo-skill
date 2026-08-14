@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.joinwell52-AI/fcop",
+  "type": "mcp",
+  "name": "fcop",
+  "description": "FCoP 3.2.5 MCP server: 45 tools (tier:L1/L2/L3) for file-based multi-agent coordination.",
+  "author": "io.github.joinwell52-AI",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/joinwell52-AI/FCoP",
+    "repo": "joinwell52-AI/FCoP"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "fcop-mcp"
+    ],
+    "env": [
+      {
+        "name": "FCOP_PROJECT_DIR",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-30T09:38:09.498338Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

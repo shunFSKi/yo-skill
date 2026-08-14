@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.tylerscomic-lab/mcp-schema-audit-mcp",
+  "type": "mcp",
+  "name": "MCP Schema Audit",
+  "description": "Audits MCP tool definitions for patterns that make models call tools wrong or mis-fill args.",
+  "author": "io.github.tylerscomic-lab",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/tylerscomic-lab/mcp-schema-audit-mcp",
+    "repo": "tylerscomic-lab/mcp-schema-audit-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp-schema-audit-mcp.mcpize.run/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-25T16:46:43.871381Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

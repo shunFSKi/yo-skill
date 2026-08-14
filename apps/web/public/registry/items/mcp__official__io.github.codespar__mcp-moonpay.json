@@ -1,0 +1,89 @@
+{
+  "id": "mcp:official/io.github.codespar/mcp-moonpay",
+  "type": "mcp",
+  "name": "mcp-moonpay",
+  "description": "MCP server for MoonPay — fiat-to-crypto on/off-ramp, 100+ assets; Pix for Brazil onramp",
+  "author": "io.github.codespar",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/codespar/mcp-dev-latam",
+    "repo": "codespar/mcp-dev-latam"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@codespar/mcp-moonpay"
+    ],
+    "env": [
+      {
+        "name": "MOONPAY_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "MOONPAY_PUBLISHABLE_KEY",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MOONPAY_SECRET_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MOONPAY_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MOONPAY_BUY_WIDGET_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MOONPAY_SELL_WIDGET_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-22T18:49:49.694165Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

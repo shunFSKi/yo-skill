@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.tathagat22/plumb-mcp",
+  "type": "mcp",
+  "name": "plumb-mcp",
+  "description": "Two-way Figma MCP: extract + verify design-to-code, or generate on-brand Figma pages from a prompt.",
+  "author": "io.github.tathagat22",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/tathagat22/plumb-mcp",
+    "repo": "tathagat22/plumb-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "plumb-mcp"
+    ],
+    "env": [
+      {
+        "name": "FIGMA_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PLUMB_SESSION_NAME",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-03T22:32:47.354443Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.MrRefactoring/atlassian-dc-mcp-bitbucket",
+  "type": "mcp",
+  "name": "atlassian-dc-mcp-bitbucket",
+  "description": "MCP server for Atlassian Bitbucket Data Center - interact with repositories and code",
+  "author": "io.github.MrRefactoring",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/MrRefactoring/atlassian-dc-mcp",
+    "repo": "MrRefactoring/atlassian-dc-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "bitbucket-datacenter-mcp"
+    ],
+    "env": [
+      {
+        "name": "ATLASSIAN_DC_MCP_CONFIG_FILE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BITBUCKET_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BITBUCKET_API_BASE_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BITBUCKET_API_TOKEN",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-01T12:57:14.036335Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

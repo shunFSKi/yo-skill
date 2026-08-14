@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/org.memoryapi/econ",
+  "type": "mcp",
+  "name": "US Macroeconomic Data",
+  "description": "US macroeconomic data: inflation, jobs, GDP, energy, and Treasury yields",
+  "author": "org.memoryapi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://econ.memoryapi.org/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://econ.memoryapi.org/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-11T23:22:37.09413Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.Shawn5cents/agentskin",
+  "type": "mcp",
+  "name": "agentskin",
+  "description": "The Semantic Layer for AI Agents. Prunes noisy API data by 70%+ for token-efficient reasoning.",
+  "author": "io.github.Shawn5cents",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Shawn5cents/agentskin",
+    "repo": "Shawn5cents/agentskin"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "agentskin"
+    ],
+    "env": [
+      {
+        "name": "BRAVE_SEARCH_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "SERPER_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "TAVILY_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "APILAYER_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-13T02:19:45.981264Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

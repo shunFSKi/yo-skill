@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.psyb0t/audiolla",
+  "type": "mcp",
+  "name": "Audiolla",
+  "description": "Self-hosted MCP server: audio stems, mastering, MIR analysis, DSP, MIDI, speech tools.",
+  "author": "io.github.psyb0t",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/psyb0t/docker-audiolla",
+    "repo": "psyb0t/docker-audiolla"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "docker.io/psyb0t/audiolla:v1.1.7"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-01T20:33:26.445402Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

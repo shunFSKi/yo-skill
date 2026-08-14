@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/app.potto/potto-japan",
+  "type": "mcp",
+  "name": "potto-japan",
+  "description": "Authoritative JLPT-graded Japanese dataset (kanji, vocab, grammar, history) via MCP and REST.",
+  "author": "app.potto",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://potto.app/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://potto.app/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-06T02:36:35.277112Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

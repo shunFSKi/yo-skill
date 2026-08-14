@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.onelogin/onelogin-mcp",
+  "type": "mcp",
+  "name": "onelogin-mcp",
+  "description": "MCP server for OneLogin API - manage users, apps, roles, and authentication",
+  "author": "io.github.onelogin",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/onelogin/onelogin-mcp",
+    "repo": "onelogin/onelogin-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@onelogin/onelogin-mcp"
+    ],
+    "env": [
+      {
+        "name": "ONELOGIN_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "ONELOGIN_CLIENT_ID",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "ONELOGIN_CLIENT_SECRET",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-23T14:53:56.545687Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.davidmosiah/apple-health-mcp",
+  "type": "mcp",
+  "name": "apple-health-mcp",
+  "description": "Unofficial local-first MCP server for Apple Health export data.",
+  "author": "io.github.davidmosiah",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/davidmosiah/apple-health-mcp",
+    "repo": "davidmosiah/apple-health-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "apple-health-mcp-unofficial"
+    ],
+    "env": [
+      {
+        "name": "APPLE_HEALTH_EXPORT_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "APPLE_HEALTH_TIMEZONE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "APPLE_HEALTH_PRIVACY_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "APPLE_HEALTH_WATCH_PATH",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-29T18:26:05.877312Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

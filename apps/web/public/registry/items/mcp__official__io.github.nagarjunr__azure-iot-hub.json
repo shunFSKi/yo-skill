@@ -1,0 +1,73 @@
+{
+  "id": "mcp:official/io.github.nagarjunr/azure-iot-hub",
+  "type": "mcp",
+  "name": "Azure IoT Hub",
+  "description": "MCP server for Azure IoT Hub: device registry, twins, methods, jobs, messaging.",
+  "author": "io.github.nagarjunr",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/nagarjunr/iot-mcp-servers",
+    "repo": "nagarjunr/iot-mcp-servers"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "azure-iot-hub-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "AZURE_IOT_HUB_CONNECTION_STRING",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "AZURE_IOT_HUB_AMQP_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AZURE_IOT_HUB_AMQP_USE_TLS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-24T18:53:36.914018Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

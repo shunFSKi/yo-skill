@@ -1,0 +1,129 @@
+{
+  "id": "mcp:official/io.github.zereight/gitlab-mcp",
+  "type": "mcp",
+  "name": "gitlab-mcp",
+  "description": "GitLab MCP server for projects, merge requests, issues, pipelines, wiki, releases, and more.",
+  "author": "io.github.zereight",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/zereight/gitlab-mcp",
+    "repo": "zereight/gitlab-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@zereight/mcp-gitlab"
+    ],
+    "env": [
+      {
+        "name": "GITLAB_PERSONAL_ACCESS_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "GITLAB_JOB_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GITLAB_AUTH_COOKIE_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GITLAB_API_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GITLAB_ALLOWED_PROJECT_IDS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GITLAB_READ_ONLY_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "USE_GITLAB_WIKI",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GITLAB_TOOLSETS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GITLAB_TOOLS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GITLAB_DENIED_TOOLS_REGEX",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GITLAB_TOOL_POLICY_APPROVE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GITLAB_TOOL_POLICY_HIDDEN",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "NODE_TLS_REJECT_UNAUTHORIZED",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GITLAB_CA_CERT_PATH",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-02T14:33:16.767215Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

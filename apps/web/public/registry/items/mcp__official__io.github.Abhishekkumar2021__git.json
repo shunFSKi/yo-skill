@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.Abhishekkumar2021/git",
+  "type": "mcp",
+  "name": "Git",
+  "description": "Local Git via MCP: status, log, diff, file history, branches, and gated stage/commit. Pure-JS.",
+  "author": "io.github.Abhishekkumar2021",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Abhishekkumar2021/mcp-suite",
+    "repo": "Abhishekkumar2021/mcp-suite"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@abhishekmcp/git"
+    ],
+    "env": [
+      {
+        "name": "GIT_ROOTS",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "GIT_WRITABLE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-28T21:50:35.929973Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.fkom13/gencodedoc",
+  "type": "mcp",
+  "name": "gencodedoc",
+  "description": "Versioning de code et génération de documentation intelligents. Supporte CLI, API REST, et MCP.",
+  "author": "io.github.fkom13",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/fkom13/gencodedoc",
+    "repo": "fkom13/gencodedoc"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "gencodedoc"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-11-15T07:03:37.651233Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

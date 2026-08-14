@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.jamesmontemagno/ohmyposh-configurator",
+  "type": "mcp",
+  "name": "Oh My Posh Configurator",
+  "description": "MCP server for creating, validating, and exporting Oh My Posh terminal prompt configurations.",
+  "author": "io.github.jamesmontemagno",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/jamesmontemagno/ohmyposh-configurator",
+    "repo": "jamesmontemagno/ohmyposh-configurator"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ohmyposh-configurator"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-03T23:00:25.435978Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

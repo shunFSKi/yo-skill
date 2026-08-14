@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.koshak01/tidex6-mcp-local",
+  "type": "mcp",
+  "name": "tidex6 — private payments on Solana",
+  "description": "Private USDC/USDT payments on Solana: hidden amounts, unlinkable, optional auditor.",
+  "author": "io.github.koshak01",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/koshak01/tidex6",
+    "repo": "koshak01/tidex6"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "tidex6-mcp-local"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-05T21:34:30.656694Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

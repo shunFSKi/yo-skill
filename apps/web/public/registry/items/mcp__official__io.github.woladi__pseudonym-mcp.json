@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.woladi/pseudonym-mcp",
+  "type": "mcp",
+  "name": "pseudonym-mcp",
+  "description": "Pseudonymizes sensitive data before it reaches cloud LLMs and restores it on the way back.",
+  "author": "io.github.woladi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/woladi/pseudonym-mcp.git",
+    "repo": "woladi/pseudonym-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "pseudonym-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-12T01:43:56.608423Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

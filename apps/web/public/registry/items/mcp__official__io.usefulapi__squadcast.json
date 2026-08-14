@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.usefulapi/squadcast",
+  "type": "mcp",
+  "name": "squadcast",
+  "description": "Read incidents, services, teams, on-call schedules; acknowledge, resolve and note incidents.",
+  "author": "io.usefulapi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/m190/usefulapi-mcp",
+    "repo": "m190/usefulapi-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://squadcast.usefulapi.io/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-19T09:07:30.584251Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

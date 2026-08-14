@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.cartoonitunes/inlay",
+  "type": "mcp",
+  "name": "Inlay",
+  "description": "Make any website discoverable by AI agents via MCP, llms.txt, and structured data.",
+  "author": "io.github.cartoonitunes",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/cartoonitunes/inlay-skills",
+    "repo": "cartoonitunes/inlay-skills"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://inlay.dev/api/mcp/{site_key}"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-18T01:33:08.250855Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

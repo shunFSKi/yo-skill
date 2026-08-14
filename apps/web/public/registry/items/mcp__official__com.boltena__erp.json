@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/com.boltena/erp",
+  "type": "mcp",
+  "name": "볼테나 ERP (Boltena ERP)",
+  "description": "중소 제조기업용 ERP 조회 전용 MCP 서버(재고·매출·채권·수주/발주·회계). 쓰기 도구 없음.",
+  "author": "com.boltena",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://app.boltena.com/api/ext/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://app.boltena.com/api/ext/mcp",
+    "env": [
+      {
+        "name": "x-api-key",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-09T23:26:47.108645Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.douglac/banco-mcp",
+  "type": "mcp",
+  "name": "Banco MCP",
+  "description": "Brazilian Open Finance MCP — 30+ banks (Itaú, Nubank, etc.) to Claude/Cursor. Read-only.",
+  "author": "io.github.douglac",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/douglac/banco-mcp",
+    "repo": "douglac/banco-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.mcp.ai/banco"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-14T21:38:45.062534Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

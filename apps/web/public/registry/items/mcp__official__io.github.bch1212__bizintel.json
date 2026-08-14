@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/io.github.bch1212/bizintel",
+  "type": "mcp",
+  "name": "bizintel",
+  "description": "Local business intel for AI agents: audits, lead scoring, tech stack, prospecting.",
+  "author": "io.github.bch1212",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/bch1212/mcp-bizintel",
+    "repo": "bch1212/mcp-bizintel"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp-bizintel-production.up.railway.app/mcp",
+    "env": [
+      {
+        "name": "X-API-Key",
+        "required": true,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-09T15:59:58.978261Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.MIt9/comfy-ui-builder",
+  "type": "mcp",
+  "name": "ComfyUI Builder",
+  "description": "ComfyUI MCP server: knowledge base, workflow builder, real-time execution, models, plugins.",
+  "author": "io.github.MIt9",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/MIt9/mcp-comfy-ui-builder",
+    "repo": "MIt9/mcp-comfy-ui-builder"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-comfy-ui-builder"
+    ],
+    "env": [
+      {
+        "name": "COMFYUI_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "COMFYUI_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "COMFYUI_KNOWLEDGE_DIR",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-03T18:08:29.281594Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

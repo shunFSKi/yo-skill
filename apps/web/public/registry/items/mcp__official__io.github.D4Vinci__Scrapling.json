@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.D4Vinci/Scrapling",
+  "type": "mcp",
+  "name": "Scrapling MCP Server",
+  "description": "Web scraping with stealth HTTP, real browsers, and Cloudflare bypass. CSS selectors supported.",
+  "author": "io.github.D4Vinci",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/D4Vinci/Scrapling",
+    "repo": "D4Vinci/Scrapling"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "scrapling"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-10T22:34:51.070065Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

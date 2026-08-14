@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.aiurion/agentic-3d-printing",
+  "type": "mcp",
+  "name": "AIURION Agentic 3D Printing — San Francisco",
+  "description": "Quote, purchase, and track custom 3D prints from AIURION in San Francisco.",
+  "author": "com.aiurion",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://aiurion.com/api/agent/v1/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://aiurion.com/api/agent/v1/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T02:12:14.220309Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

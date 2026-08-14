@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.dxtra/dxtra-radio",
+  "type": "mcp",
+  "name": "dxtra Radio — Frequency Database",
+  "description": "Radio frequency database: FM, AM, shortwave, TV, ham, weather, emergency alerts. 15+ countries.",
+  "author": "com.dxtra",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://dxtra.com/mcp/sse",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://dxtra.com/mcp/sse"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-30T16:43:47.246864Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

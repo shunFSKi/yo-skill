@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.mcp-dir/bling-mcp",
+  "type": "mcp",
+  "name": "Bling",
+  "description": "Bling ERP (SMB and e-commerce management, by Locaweb) via the official v3 API, sales orders, product",
+  "author": "io.github.mcp-dir",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mcp-dir/bling-mcp",
+    "repo": "mcp-dir/bling-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.mcp.ai/p_bling"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-12T18:58:00.027059Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

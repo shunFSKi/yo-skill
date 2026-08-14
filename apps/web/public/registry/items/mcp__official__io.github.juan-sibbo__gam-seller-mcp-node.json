@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.juan-sibbo/gam-seller-mcp-node",
+  "type": "mcp",
+  "name": "gam-seller-mcp-node",
+  "description": "Governed, read-only MCP server exposing Google Ad Manager inventory discovery to buyer agents",
+  "author": "io.github.juan-sibbo",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/juan-sibbo/gam-seller-mcp-node",
+    "repo": "juan-sibbo/gam-seller-mcp-node"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "gam-seller-mcp-node"
+    ],
+    "env": [
+      {
+        "name": "MCP_CONFIG_DIR",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-05T09:47:15.862784Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

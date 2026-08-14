@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/org.ghurt/ghurt",
+  "type": "mcp",
+  "name": "ghurt",
+  "description": "Query Garmin, Oura & Whoop sleep, HRV, recovery & training load from Claude or ChatGPT.",
+  "author": "org.ghurt",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://ghurt.org/v1/mcp?key={api_key}",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://ghurt.org/v1/mcp?key={api_key}"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-13T15:17:02.494593Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

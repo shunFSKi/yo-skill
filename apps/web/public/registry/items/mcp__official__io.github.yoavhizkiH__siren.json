@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.yoavhizkiH/siren",
+  "type": "mcp",
+  "name": "siren",
+  "description": "MCP server for Siren diagramming — teach AI models to create beautiful diagrams with Siren syntax",
+  "author": "io.github.yoavhizkiH",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/yoavhizkiH/siren",
+    "repo": "yoavhizkiH/siren"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "siren-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-19T10:48:25.540398Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

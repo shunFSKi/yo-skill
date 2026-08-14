@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.Reachpad/reachpad-mcp",
+  "type": "mcp",
+  "name": "reachpad-mcp",
+  "description": "Persistent cloud development environments that coding agents create, run and test software in.",
+  "author": "io.github.Reachpad",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Reachpad/reachpad-mcp",
+    "repo": "Reachpad/reachpad-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@reachpad/mcp"
+    ],
+    "env": [
+      {
+        "name": "REACHPAD_ENDPOINT",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "REACHPAD_IDENTITY_CREDENTIAL",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-12T04:18:32.383496Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

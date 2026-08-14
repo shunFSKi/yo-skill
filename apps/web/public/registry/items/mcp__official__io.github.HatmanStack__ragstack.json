@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.HatmanStack/ragstack",
+  "type": "mcp",
+  "name": "ragstack",
+  "description": "Search, chat, upload, and scrape a serverless RAGStack knowledge base on AWS.",
+  "author": "io.github.HatmanStack",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/HatmanStack/RAGStack-Lambda",
+    "repo": "HatmanStack/RAGStack-Lambda"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "ragstack-mcp"
+    ],
+    "env": [
+      {
+        "name": "RAGSTACK_GRAPHQL_ENDPOINT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RAGSTACK_API_KEY",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-06T20:00:44.57456Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

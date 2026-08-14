@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/com.mcpbundles/uk-police",
+  "type": "mcp",
+  "name": "UK Police MCP Server from MCPBundles",
+  "description": "Access street-level crime reports, stop and search data, and outcomes across UK police forces",
+  "author": "com.mcpbundles",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/thinkchainai/mcpbundles",
+    "repo": "thinkchainai/mcpbundles"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/thinkchainai/mcpbundles/releases/download/uk-police-v1.0.0+build.10138a49/uk-police.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-11T18:00:18.308067Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

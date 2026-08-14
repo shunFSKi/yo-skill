@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/network.tenzro/tenzro-ethereum",
+  "type": "mcp",
+  "name": "Tenzro Ethereum MCP",
+  "description": "Ethereum MCP: Chainlink feeds, gas, ERC-20, ENS, ABI, contract calls, ERC-8004, EAS.",
+  "author": "network.tenzro",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/tenzro/tenzro-network",
+    "repo": "tenzro/tenzro-network"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://ethereum-mcp.tenzro.network/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-02T04:16:47.917523Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

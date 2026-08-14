@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.cgseyhan/architectos",
+  "type": "mcp",
+  "name": "architectos",
+  "description": "ArchitectOS - AI-Native Repository Intelligence & Architecture Operating System.",
+  "author": "io.github.cgseyhan",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/cgseyhan/architectos",
+    "repo": "cgseyhan/architectos"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "architectos"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-26T12:37:16.10916Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

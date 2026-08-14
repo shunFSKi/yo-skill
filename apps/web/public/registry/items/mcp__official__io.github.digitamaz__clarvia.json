@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.digitamaz/clarvia",
+  "type": "mcp",
+  "name": "clarvia",
+  "description": "AI agent tool discovery and scoring. Search 15,400+ MCP servers, APIs, and CLIs.",
+  "author": "io.github.digitamaz",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/clarvia-project/scanner.git",
+    "repo": "clarvia-project/scanner"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "clarvia-mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-28T03:46:28.189846Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

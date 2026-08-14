@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.cmdenney/logicnodes-mcp",
+  "type": "mcp",
+  "name": "logicnodes-mcp",
+  "description": "Remote MCP for LogicNodes: Signed PII-Shield flagship + payable x402 agent tools on Base.",
+  "author": "io.github.cmdenney",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/cmdenney/logicnodes-mcp-bridge",
+    "repo": "cmdenney/logicnodes-mcp-bridge"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://logicnodes.io/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-19T18:41:29.490164Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

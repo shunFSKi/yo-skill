@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/ai.matih/mcp",
+  "type": "mcp",
+  "name": "mcp",
+  "description": "The grounded data layer for any LLM: governed SQL, metrics, lineage and catalog over your data.",
+  "author": "ai.matih",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/matih-labs/matih-mcp",
+    "repo": "matih-labs/matih-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@matihlabs/mcp"
+    ],
+    "env": [
+      {
+        "name": "MATIH_MCP_TOKEN",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-06T18:41:28.871763Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

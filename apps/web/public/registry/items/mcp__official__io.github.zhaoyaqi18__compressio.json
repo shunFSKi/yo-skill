@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.zhaoyaqi18/compressio",
+  "type": "mcp",
+  "name": "CompressIO — Image Compression for AI",
+  "description": "Compress images to target sizes (80%+ smaller). Tools: compress_image, convert_image, optimize_image",
+  "author": "io.github.zhaoyaqi18",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://api.compressio.cc/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.compressio.cc/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-09T13:53:39.650436Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

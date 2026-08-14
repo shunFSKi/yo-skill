@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.ralfbecher/orionbelt-semantic-layer",
+  "type": "mcp",
+  "name": "orionbelt-semantic-layer",
+  "description": "API-first semantic layer MCP server compiling YAML models into dialect-specific SQL",
+  "author": "io.github.ralfbecher",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ralfbecher/orionbelt-semantic-layer",
+    "repo": "ralfbecher/orionbelt-semantic-layer"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "orionbelt-semantic-layer"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-19T23:39:12.633789Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

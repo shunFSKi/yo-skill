@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.vpatser1/data-aggregator-mcp",
+  "type": "mcp",
+  "name": "data-aggregator-mcp",
+  "description": "Unified data server: stocks, crypto, news, weather, web scraping, FX rates in one MCP",
+  "author": "io.github.vpatser1",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers/io.github.vpatser1%2Fdata-aggregator-mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "data-aggregator-mcp"
+    ],
+    "env": [
+      {
+        "name": "LICENSE_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-04T07:35:35.854609Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

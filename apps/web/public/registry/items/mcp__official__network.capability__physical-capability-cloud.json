@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/network.capability/physical-capability-cloud",
+  "type": "mcp",
+  "name": "Physical Capability Cloud",
+  "description": "Discover, hire, and verify real-world physical capability through MCP.",
+  "author": "network.capability",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/LamaSu/physical-capability-cloud",
+    "repo": "LamaSu/physical-capability-cloud"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://capability.network/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-13T22:13:19.77255Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

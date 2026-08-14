@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.onetrueclaude-creator/mcp-contradiction-check",
+  "type": "mcp",
+  "name": "mcp-contradiction-check",
+  "description": "Find where your notes disagree — contradiction detection for markdown vaults.",
+  "author": "io.github.onetrueclaude-creator",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/onetrueclaude-creator/mcp-contradiction-check",
+    "repo": "onetrueclaude-creator/mcp-contradiction-check"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "mcp-contradiction-check"
+    ],
+    "env": [
+      {
+        "name": "CONTRADICTION_CHECK_LICENSE",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-04-18T13:55:37.481497Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

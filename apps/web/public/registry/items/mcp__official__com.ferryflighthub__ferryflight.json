@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.ferryflighthub/ferryflight",
+  "type": "mcp",
+  "name": "FerryFlight",
+  "description": "Ferry-flight price estimates + aircraft, airport, FAA-registry, route & live-flight data.",
+  "author": "com.ferryflighthub",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://www.ferryflighthub.com/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://www.ferryflighthub.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-20T06:41:20.5364Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

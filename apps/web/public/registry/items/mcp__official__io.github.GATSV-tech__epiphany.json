@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.GATSV-tech/epiphany",
+  "type": "mcp",
+  "name": "epiphany",
+  "description": "One private, local memory your AI tools share. Cross-model, on-device, never lose a session.",
+  "author": "io.github.GATSV-tech",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/GATSV-tech/epiphany",
+    "repo": "GATSV-tech/epiphany"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "epiphany-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-01T02:06:44.513151Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

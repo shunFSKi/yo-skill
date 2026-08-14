@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/tech.geckovision/surf",
+  "type": "mcp",
+  "name": "surf",
+  "description": "Point Gecko at an OpenAPI spec; get first-call-correct, auth-hidden agent tools.",
+  "author": "tech.geckovision",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/GeckoVision/gecko-surf",
+    "repo": "GeckoVision/gecko-surf"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "gecko-surf"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-03T06:21:18.450367Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

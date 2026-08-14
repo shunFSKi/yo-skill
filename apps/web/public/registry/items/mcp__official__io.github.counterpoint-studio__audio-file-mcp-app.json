@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.counterpoint-studio/audio-file-mcp-app",
+  "type": "mcp",
+  "name": "Audio File MCP App",
+  "description": "Inspect local audio files — playback, metadata, loudness, spectrogram.",
+  "author": "io.github.counterpoint-studio",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/counterpoint-studio/audio-file-mcp-app",
+    "repo": "counterpoint-studio/audio-file-mcp-app"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@counterpoint-studio/audio-file-mcp-app"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-10T19:25:18.466788Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

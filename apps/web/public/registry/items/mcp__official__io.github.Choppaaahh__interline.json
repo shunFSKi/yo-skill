@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.Choppaaahh/interline",
+  "type": "mcp",
+  "name": "interline",
+  "description": "Neutral, non-custodial MCP payment router: discover rails, then pay across them.",
+  "author": "io.github.Choppaaahh",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Choppaaahh/interline-routes",
+    "repo": "Choppaaahh/interline-routes"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "interline"
+    ],
+    "env": [
+      {
+        "name": "APV0_BUYER_PRIVATE_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "APV0_NETWORK",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-23T19:58:39.161285Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,73 @@
+{
+  "id": "mcp:official/io.github.Patdolitse/piia-engram",
+  "type": "mcp",
+  "name": "Piia Engram",
+  "description": "Local-first AI identity for MCP coding tools. Lessons, decisions, and context you control.",
+  "author": "io.github.Patdolitse",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Patdolitse/piia-engram",
+    "repo": "Patdolitse/piia-engram"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "piia-engram"
+    ],
+    "env": [
+      {
+        "name": "ENGRAM_MCP_STARTUP_SYNC",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ENGRAM_TOOLS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PYTHONIOENCODING",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-06T10:37:05.892176Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

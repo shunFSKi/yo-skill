@@ -1,0 +1,94 @@
+{
+  "id": "mcp:official/io.github.iancollins27/mailsnail",
+  "type": "mcp",
+  "name": "mailsnail",
+  "description": "Send USPS letters, postcards & certified mail from any agent. No signup; pay-per-piece via Stripe.",
+  "author": "io.github.iancollins27",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/iancollins27/mailsnail",
+    "repo": "iancollins27/mailsnail"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mailsnail"
+    ],
+    "env": [
+      {
+        "name": "MAIL_PROVIDER",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "MAIL_API_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CLICK2MAIL_USERNAME",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CLICK2MAIL_PASSWORD",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "LOB_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MAIL_MCP_ALLOW_LIVE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MAIL_MCP_SPEND_CAP_USD",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-15T17:30:08.609852Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

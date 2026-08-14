@@ -1,0 +1,78 @@
+{
+  "id": "mcp:official/io.github.YummyTastyCode/colab-drive-mcp",
+  "type": "mcp",
+  "name": "Colab Drive MCP",
+  "description": "Synchronize Colab notebook files through Google Drive without executing notebook code.",
+  "author": "io.github.YummyTastyCode",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/YummyTastyCode/colab-drive-mcp",
+    "repo": "YummyTastyCode/colab-drive-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "colab-drive-mcp"
+    ],
+    "env": [
+      {
+        "name": "COLAB_MCP_ROOT",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "COLAB_MCP_DRIVE_ACCESS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "COLAB_MCP_GOOGLE_CREDENTIALS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "COLAB_MCP_GOOGLE_TOKEN",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-08T17:31:35.113441Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

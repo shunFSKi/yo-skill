@@ -1,0 +1,60 @@
+{
+  "id": "mcp:official/com.pdfinvoiceapi/render",
+  "type": "mcp",
+  "name": "PDFInvoiceAPI",
+  "description": "Turn HTML or templates into branded invoice & document PDFs from your agent. One call, no install.",
+  "author": "com.pdfinvoiceapi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://pdfinvoiceapi.com/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://pdfinvoiceapi.com/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-29T13:03:03.919682Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

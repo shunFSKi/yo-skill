@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.dominiclachance/neurakeep",
+  "type": "mcp",
+  "name": "neurakeep",
+  "description": "Local-first, source-cited memory for AI agents with proposal review, failure memory, and MCP tools.",
+  "author": "io.github.dominiclachance",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dominiclachance/neurakeep",
+    "repo": "dominiclachance/neurakeep"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "neurakeep"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-08T23:42:21.572847Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.github.oscardvs/anamnesis",
+  "type": "mcp",
+  "name": "Anamnesis",
+  "description": "Cross-machine, file-first memory for Claude Code: markdown + SQLite FTS5, synced with git",
+  "author": "io.github.oscardvs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/oscardvs/anamnesis",
+    "repo": "oscardvs/anamnesis"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "anamnesis-memory"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-05T09:47:28.497379Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

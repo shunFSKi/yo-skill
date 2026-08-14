@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.cars-data/car-specs-api",
+  "type": "mcp",
+  "name": "cars-data.com — Car Specs API",
+  "description": "Search, compare & filter 102,191 European car variants — 180 specs, 19 languages, EV data.",
+  "author": "com.cars-data",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mariusmmmmm/car-specs-api",
+    "repo": "mariusmmmmm/car-specs-api"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.cars-data.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-27T15:40:26.434675Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

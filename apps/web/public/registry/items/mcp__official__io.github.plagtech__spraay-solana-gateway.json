@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.plagtech/spraay-solana-gateway",
+  "type": "mcp",
+  "name": "spraay-solana-gateway",
+  "description": "Batch send SOL or any SPL token to 1000+ wallets via x402. AI agent payments on Solana.",
+  "author": "io.github.plagtech",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/plagtech/spraay-solana-gateway",
+    "repo": "plagtech/spraay-solana-gateway"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://gateway-solana.spraay.app/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-02-28T01:56:53.989013Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

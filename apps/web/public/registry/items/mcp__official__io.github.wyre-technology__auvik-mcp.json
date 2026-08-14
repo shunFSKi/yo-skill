@@ -1,0 +1,89 @@
+{
+  "id": "mcp:official/io.github.wyre-technology/auvik-mcp",
+  "type": "mcp",
+  "name": "Auvik",
+  "description": "MCP server for the Auvik network monitoring API — devices, alerts, statistics, billing.",
+  "author": "io.github.wyre-technology",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/wyre-technology/auvik-mcp",
+    "repo": "wyre-technology/auvik-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/wyre-technology/auvik-mcp:v1.4.2"
+    ],
+    "env": [
+      {
+        "name": "AUVIK_USERNAME",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "AUVIK_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "AUVIK_REGION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MCP_TRANSPORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "AUTH_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-07T01:54:43.6065Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,239 @@
+{
+  "id": "mcp:official/io.github.mfukushim/map-traveler-mcp",
+  "type": "mcp",
+  "name": "map-traveler-mcp",
+  "description": "Virtual traveler library for MCP",
+  "author": "io.github.mfukushim",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mfukushim/map-traveler-mcp",
+    "repo": "mfukushim/map-traveler-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@mfukushim/map-traveler-mcp"
+    ],
+    "env": [
+      {
+        "name": "MT_GOOGLE_MAP_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MT_GEMINI_IMAGE_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MT_MAX_RETRY_GEMINI",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MT_AVATAR_IMAGE_URI",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MT_MAP_API_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MT_TIME_SCALE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MT_SQLITE_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MT_TURSO_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MT_TURSO_TOKEN",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MT_REMBG_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MT_REMBG_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MT_REMBG_WO_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MT_PIXAI_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MT_SD_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MT_PIXAI_MODEL_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MT_COMFY_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MT_COMFY_WORKFLOW_T2I",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MT_COMFY_WORKFLOW_I2I",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MT_COMFY_PARAMS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MT_FIXED_MODEL_PROMPT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MT_BODY_AREA_RATIO",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MT_BODY_HW_RATIO",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MT_BODY_WINDOW_RATIO_W",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MT_BODY_WINDOW_RATIO_H",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MT_BS_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MT_BS_PASS",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "MT_BS_HANDLE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MT_FILTER_TOOLS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MT_MOVE_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MT_IMAGE_WIDTH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MT_NO_IMAGE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MT_NO_AVATAR",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MT_FEED_TAG",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MT_MAX_SESSIONS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MT_SESSION_TTL_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MT_SERVICE_TTL_MS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-09-11T12:17:16.50839Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "mcp:official/io.ausdata/aihw-mcp",
+  "type": "mcp",
+  "name": "aihw-mcp",
+  "description": "Query the AIHW in plain English — mortality, cancer, health spend, hospital wait times.",
+  "author": "io.ausdata",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Bigred97/aihw-mcp",
+    "repo": "Bigred97/aihw-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "aihw-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-20T22:40:33.499592Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

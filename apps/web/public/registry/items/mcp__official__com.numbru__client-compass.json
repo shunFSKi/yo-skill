@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.numbru/client-compass",
+  "type": "mcp",
+  "name": "client-compass",
+  "description": "Behavioral intelligence for client-facing professionals. Know who you're walking into.",
+  "author": "com.numbru",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/marcus160365/numbru-mcp-server",
+    "repo": "marcus160365/numbru-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://numbru-mcp-server.numbru.workers.dev"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-22T14:39:35.508066Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

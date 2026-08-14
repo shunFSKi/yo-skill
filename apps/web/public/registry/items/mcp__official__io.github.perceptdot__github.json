@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.perceptdot/github",
+  "type": "mcp",
+  "name": "Perceptdot GitHub",
+  "description": "AI agent vision for GitHub repository monitoring — with ROI measurement.",
+  "author": "io.github.perceptdot",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers/io.github.perceptdot%2Fgithub",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@perceptdot/github"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-01T06:26:11.387781Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

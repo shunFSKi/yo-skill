@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/za.co.simcloud/simcloud",
+  "type": "mcp",
+  "name": "SIMcloud",
+  "description": "South African MCP server for airtime, data, SMS, VAS, electricity, balance, and network lookup.",
+  "author": "za.co.simcloud",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ErikThiart/simcloud",
+    "repo": "ErikThiart/simcloud"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://simcloud.co.za/api/mcp.php"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-16T21:52:48.665053Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

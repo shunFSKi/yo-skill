@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.suprsend/cli",
+  "type": "mcp",
+  "name": "SuprSend",
+  "description": "Manage SuprSend entities — workflows, templates, users, objects, tenants — from your AI assistant.",
+  "author": "io.github.suprsend",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/suprsend/cli",
+    "repo": "suprsend/cli"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "suprsend"
+    ],
+    "env": [
+      {
+        "name": "SUPRSEND_SERVICE_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "SUPRSEND_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SUPRSEND_MGMNT_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-10T05:16:29.298653Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

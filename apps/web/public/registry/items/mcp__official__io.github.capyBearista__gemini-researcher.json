@@ -1,0 +1,99 @@
+{
+  "id": "mcp:official/io.github.capyBearista/gemini-researcher",
+  "type": "mcp",
+  "name": "gemini-researcher",
+  "description": "Stateless MCP server that proxies research queries to Gemini CLI, reducing agent context/model usage",
+  "author": "io.github.capyBearista",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/capyBearista/gemini-researcher",
+    "repo": "capyBearista/gemini-researcher"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "gemini-researcher"
+    ],
+    "env": [
+      {
+        "name": "GEMINI_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "PROJECT_ROOT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RESPONSE_CHUNK_SIZE_KB",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "CACHE_TTL_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "DEBUG",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GOOGLE_APPLICATION_CREDENTIALS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GOOGLE_CLOUD_PROJECT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "VERTEX_AI_PROJECT",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-01-26T08:42:27.90453Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

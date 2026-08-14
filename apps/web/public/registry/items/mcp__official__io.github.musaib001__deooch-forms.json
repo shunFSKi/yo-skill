@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.musaib001/deooch-forms",
+  "type": "mcp",
+  "name": "Deooch Forms",
+  "description": "Create forms, manage submissions, and export responses from your MCP client.",
+  "author": "io.github.musaib001",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/musaib001/deooch-forms",
+    "repo": "musaib001/deooch-forms"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://forms.deooch.com/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-20T17:09:06.856824Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

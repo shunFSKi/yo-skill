@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.github.BlazingCDN/blazingcdn-mcp",
+  "type": "mcp",
+  "name": "blazingcdn-mcp",
+  "description": "Manage BlazingCDN from AI agents: CDN zones, cache, metrics, domains, cloud storage and video CDN",
+  "author": "io.github.BlazingCDN",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/BlazingCDN/BlazingCDN-MCP",
+    "repo": "BlazingCDN/BlazingCDN-MCP"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@blazingcdn/mcp"
+    ],
+    "env": [
+      {
+        "name": "BLAZINGCDN_API_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "BLAZINGCDN_ALLOW_WRITE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BLAZINGCDN_ALLOW_DELETE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-13T10:41:41.039636Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

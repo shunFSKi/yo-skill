@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.luzomi/grandline-mcp",
+  "type": "mcp",
+  "name": "grandline-mcp",
+  "description": "Empirical maritime distances from real AIS tracks: 4 route variants, port lookup, bulk matrix",
+  "author": "io.github.luzomi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/luzomi/luzomi",
+    "repo": "luzomi/luzomi"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "grandline-mcp"
+    ],
+    "env": [
+      {
+        "name": "GRANDLINE_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GRANDLINE_API_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-11T05:15:01.869403Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

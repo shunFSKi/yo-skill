@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.srotzin/hive-mcp-depin",
+  "type": "mcp",
+  "name": "Hive DePIN",
+  "description": "MCP server: DePIN reward routing, capacity verification, settlement reports · Hive Civilization",
+  "author": "io.github.srotzin",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/srotzin/hive-mcp-depin",
+    "repo": "srotzin/hive-mcp-depin"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://hive-mcp-gateway.onrender.com/depin/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-04T01:29:31.790297Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

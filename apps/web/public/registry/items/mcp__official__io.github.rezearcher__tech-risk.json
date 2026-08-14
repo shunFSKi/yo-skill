@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.rezearcher/tech-risk",
+  "type": "mcp",
+  "name": "tech-risk",
+  "description": "x402 MCP for agents: crypto prices, funding, DeFi yields, Polymarket, Base RPC + MCP security.",
+  "author": "io.github.rezearcher",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://x402-data-api.sigrunner.workers.dev/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://x402-data-api.sigrunner.workers.dev/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-17T01:00:14.054917Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.Terobyte/librarian",
+  "type": "mcp",
+  "name": "Librarian",
+  "description": "Deterministic ebook-to-markdown pipeline with MCP tools to browse, search, and read your books.",
+  "author": "io.github.Terobyte",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Terobyte/librarian-cli",
+    "repo": "Terobyte/librarian-cli"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "librarian-cli"
+    ],
+    "env": [
+      {
+        "name": "LIB_HOME",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-08T16:58:39.643742Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

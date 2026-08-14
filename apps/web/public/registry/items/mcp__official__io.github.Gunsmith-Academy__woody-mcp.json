@@ -1,0 +1,63 @@
+{
+  "id": "mcp:official/io.github.Gunsmith-Academy/woody-mcp",
+  "type": "mcp",
+  "name": "woody-mcp",
+  "description": "Woody, the AI firearms expert. Verified specs, legal lookups, and knowledge base.",
+  "author": "io.github.Gunsmith-Academy",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Gunsmith-Academy/woody-mcp",
+    "repo": "Gunsmith-Academy/woody-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "woody-mcp"
+    ],
+    "env": [
+      {
+        "name": "WOODY_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-13T02:23:37.290596Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

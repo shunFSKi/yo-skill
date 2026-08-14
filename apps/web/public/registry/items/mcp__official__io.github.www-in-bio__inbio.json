@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.www-in-bio/inbio",
+  "type": "mcp",
+  "name": "inbio",
+  "description": "Official in.bio MCP server: shorten URLs, styled QR codes, and click analytics. No API key needed.",
+  "author": "io.github.www-in-bio",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/getinbio/inbio-mcp",
+    "repo": "getinbio/inbio-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.in.bio/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-23T16:15:59.236377Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,99 @@
+{
+  "id": "mcp:official/ai.gency/gency-mcp",
+  "type": "mcp",
+  "name": "gency-mcp",
+  "description": "Gency AI product image generation - MCP server for Claude, Codex, Cursor, VS Code",
+  "author": "ai.gency",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/studiolab-dev/gency-mcp",
+    "repo": "studiolab-dev/gency-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@gency-ai/gency-mcp"
+    ],
+    "env": [
+      {
+        "name": "GENCY_API_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GENCY_OAUTH_CLIENT_ID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GENCY_OAUTH_CLIENT_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GENCY_OAUTH_API_BASE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GENCY_OAUTH_SCOPE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GENCY_MCP_ALLOWED_CLIENT_IDS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GENCY_MCP_UPLOAD_SECRET",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "GENCY_MCP_OAUTH_RESOURCE",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-30T05:27:57.913035Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,108 @@
+{
+  "id": "mcp:official/io.github.RekklesNA/proxmox-mcp-plus",
+  "type": "mcp",
+  "name": "ProxmoxMCP-Plus",
+  "description": "Proxmox VE MCP server for VMs, LXCs, snapshots, backups, storage, and cluster operations.",
+  "author": "io.github.RekklesNA",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/RekklesNA/ProxmoxMCP-Plus",
+    "repo": "RekklesNA/ProxmoxMCP-Plus"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "proxmox-mcp-plus"
+    ],
+    "env": [
+      {
+        "name": "PROXMOX_MCP_CONFIG",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PROXMOX_HOST",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "PROXMOX_USER",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "PROXMOX_TOKEN_NAME",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "PROXMOX_TOKEN_VALUE",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "PROXMOX_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PROXMOX_VERIFY_SSL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PROXMOX_DEV_MODE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PROXMOX_SERVICE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "LOG_LEVEL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-11T13:31:51.821697Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

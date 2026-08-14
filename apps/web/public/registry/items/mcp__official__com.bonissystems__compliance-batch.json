@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/com.bonissystems/compliance-batch",
+  "type": "mcp",
+  "name": "Compliance Batch Alignment",
+  "description": "Check whether a NAICS code aligns with a vertical: a routing-for-review signal, not a determination.",
+  "author": "com.bonissystems",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://bonissystems.com/api/knox/agents/compliance-batch/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://bonissystems.com/api/knox/agents/compliance-batch/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-24T15:13:54.230033Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.pipeworx-io/oeis",
+  "type": "mcp",
+  "name": "Oeis",
+  "description": "OEIS (On-Line Encyclopedia of Integer Sequences) MCP.",
+  "author": "io.github.pipeworx-io",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/pipeworx-io/mcp-oeis",
+    "repo": "pipeworx-io/mcp-oeis"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://gateway.pipeworx.io/oeis/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-08T04:36:04.983026Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.rubato103/nl-openapi-mcp",
+  "type": "mcp",
+  "name": "nl-openapi-mcp",
+  "description": "National Library of Korea Seoji OpenAPI search via REST API and local metadata harvesting",
+  "author": "io.github.rubato103",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/rubato103/nl-openapi-mcp",
+    "repo": "rubato103/nl-openapi-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/rubato103/nl-openapi-mcp/releases/download/v0.1.0/nl-openapi-mcp.mcpb"
+    ],
+    "env": [
+      {
+        "name": "NL_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-30T04:41:47.714152Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

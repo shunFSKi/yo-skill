@@ -1,0 +1,69 @@
+{
+  "id": "mcp:official/io.github.ex3lite/mcp-rzd-tickets",
+  "type": "mcp",
+  "name": "RZD Tickets MCP",
+  "description": "Read-only MCP server for RZD trains, cars, seats, adjacent pairs and car photos.",
+  "author": "io.github.ex3lite",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ex3lite/mcp_rzd_tickets",
+    "repo": "ex3lite/mcp_rzd_tickets"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-rzd-tickets"
+    ],
+    "env": [
+      {
+        "name": "RZD_TIMEOUT_MS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "RZD_PROXY_URL",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-02T08:45:48.163019Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

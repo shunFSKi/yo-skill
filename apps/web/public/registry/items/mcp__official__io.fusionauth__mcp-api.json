@@ -1,0 +1,74 @@
+{
+  "id": "mcp:official/io.fusionauth/mcp-api",
+  "type": "mcp",
+  "name": "mcp-api",
+  "description": "Preview release of FusionAuth API MCP server",
+  "author": "io.fusionauth",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/FusionAuth/fusionauth-mcp-api",
+    "repo": "FusionAuth/fusionauth-mcp-api"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@fusionauth/mcp-api"
+    ],
+    "env": [
+      {
+        "name": "API_KEY_APIKEYAUTH",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "API_BASE_URL",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "USE_TOOLS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-11-21T21:06:11.121292Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

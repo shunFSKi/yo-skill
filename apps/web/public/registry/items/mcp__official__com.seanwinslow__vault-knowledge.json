@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/com.seanwinslow/vault-knowledge",
+  "type": "mcp",
+  "name": "vault-knowledge",
+  "description": "Read-only MCP over a vault's typed knowledge graph: concept search, contradictions, article fetch.",
+  "author": "com.seanwinslow",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/seanwinslow28/sw-mcp-vault-knowledge",
+    "repo": "seanwinslow28/sw-mcp-vault-knowledge"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@swins/vault-knowledge-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-30T19:04:33.056854Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

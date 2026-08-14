@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.conorbronsdon/gws-mcp-server",
+  "type": "mcp",
+  "name": "Google Workspace MCP Server",
+  "description": "Google Workspace as 39 curated MCP tools: Gmail, Calendar, Drive, Sheets, Docs, and Tasks.",
+  "author": "io.github.conorbronsdon",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/conorbronsdon/gws-mcp-server",
+    "repo": "conorbronsdon/gws-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "gws-mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-02T03:39:56.177172Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

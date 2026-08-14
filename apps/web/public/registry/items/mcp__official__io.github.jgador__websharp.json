@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.jgador/websharp",
+  "type": "mcp",
+  "name": "websharp",
+  "description": "Search the web and extract article text for LLMs.",
+  "author": "io.github.jgador",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/jgador/websharp",
+    "repo": "jgador/websharp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "docker.io/jessegador/websharp-mcp:v0.99.0-rc2"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2025-09-22T09:09:05.052334Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

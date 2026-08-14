@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.HectorGuerilla/review-mcp",
+  "type": "mcp",
+  "name": "review-mcp",
+  "description": "Multi-model code review: a panel of models + detectors return a pass/fail verdict. Paid via x402.",
+  "author": "io.github.HectorGuerilla",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://review-mcp-production.up.railway.app/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://review-mcp-production.up.railway.app/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-01T21:20:05.010818Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

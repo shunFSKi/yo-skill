@@ -1,0 +1,84 @@
+{
+  "id": "mcp:official/io.github.Alexendros/proton-mail-mcp",
+  "type": "mcp",
+  "name": "proton-mail-mcp",
+  "description": "Proton Mail MCP via Bridge (IMAP/SMTP) · 13 tools · dual transport stdio + HTTP.",
+  "author": "io.github.Alexendros",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Alexendros/proton-mail-mcp",
+    "repo": "Alexendros/proton-mail-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@alexendros/proton-mail-mcp"
+    ],
+    "env": [
+      {
+        "name": "PROTON_BRIDGE_HOST",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PROTON_IMAP_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PROTON_SMTP_PORT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "PROTON_USERNAME",
+        "required": true,
+        "secret": false
+      },
+      {
+        "name": "PROTON_PASSWORD",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-02T01:26:35.965192Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

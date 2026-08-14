@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.nerdydata/mcp",
+  "type": "mcp",
+  "name": "mcp",
+  "description": "Search websites by source code, technology stack, analyze domains, and download lead lists.",
+  "author": "io.github.nerdydata",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/nerdydata/nerdydata",
+    "repo": "nerdydata/nerdydata"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@nerdydata/mcp"
+    ],
+    "env": [
+      {
+        "name": "NERDYDATA_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-08T06:01:29.527292Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

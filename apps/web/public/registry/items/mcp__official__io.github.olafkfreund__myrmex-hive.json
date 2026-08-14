@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.olafkfreund/myrmex-hive",
+  "type": "mcp",
+  "name": "Myrmex Hive",
+  "description": "Zero-inbound-port MCP gateway for managing distributed edge servers over reverse SSH tunnels",
+  "author": "io.github.olafkfreund",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/olafkfreund/myrmex-hive",
+    "repo": "olafkfreund/myrmex-hive"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "ghcr.io/olafkfreund/myrmex-gateway:1.0.3"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-15T11:20:59.565668Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

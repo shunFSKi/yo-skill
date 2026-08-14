@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.gregario/3dprint-oracle",
+  "type": "mcp",
+  "name": "3dprint-oracle",
+  "description": "3D printing filament and materials knowledge MCP server",
+  "author": "io.github.gregario",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/gregario/3dprint-oracle",
+    "repo": "gregario/3dprint-oracle"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "3dprint-oracle"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-03-16T12:00:22.327218Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

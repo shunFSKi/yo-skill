@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.VladimirWrites/nestegg-calculators",
+  "type": "mcp",
+  "name": "nestegg-calculators",
+  "description": "90+ pure finance calculators: loans, investing, bonds, options, tax. Stateless, stores nothing.",
+  "author": "io.github.VladimirWrites",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/VladimirWrites/nestegg.money",
+    "repo": "VladimirWrites/nestegg"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://nestegg.money/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-02T22:50:38.425443Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

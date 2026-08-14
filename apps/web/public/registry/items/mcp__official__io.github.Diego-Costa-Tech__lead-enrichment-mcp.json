@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/io.github.Diego-Costa-Tech/lead-enrichment-mcp",
+  "type": "mcp",
+  "name": "B2B Lead Enrichment",
+  "description": "Remote MCP server to enrich company profiles with structured B2B data and confidence scores.",
+  "author": "io.github.Diego-Costa-Tech",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Diego-Costa-Tech/lead-enrichment-mcp",
+    "repo": "Diego-Costa-Tech/lead-enrichment-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://lead-enrichment-mcp.agent-infra.workers.dev/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-17T01:47:00.053929Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "mcp:official/io.github.bch1212/queryshield",
+  "type": "mcp",
+  "name": "queryshield",
+  "description": "Secure SQL proxy for AI agents — NL→SQL, AST safety, per-agent RLS, audit log.",
+  "author": "io.github.bch1212",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/bch1212/queryshield",
+    "repo": "bch1212/queryshield"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "queryshield-mcp"
+    ],
+    "env": [
+      {
+        "name": "QUERYSHIELD_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "QUERYSHIELD_BASE_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-05-04T16:14:37.263645Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

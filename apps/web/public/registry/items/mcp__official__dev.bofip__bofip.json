@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/dev.bofip/bofip",
+  "type": "mcp",
+  "name": "BOFiP — Doctrine fiscale française",
+  "description": "Doctrine fiscale française (BOFiP) : recherche, veille et graphe doctrinal. Etalab 2.0.",
+  "author": "dev.bofip",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/alexandreCyber/bofip",
+    "repo": "alexandreCyber/bofip"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.bofip.dev/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-02T11:01:10.593385Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

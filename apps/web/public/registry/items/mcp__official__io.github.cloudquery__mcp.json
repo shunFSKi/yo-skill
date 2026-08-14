@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.cloudquery/mcp",
+  "type": "mcp",
+  "name": "mcp",
+  "description": "CloudQuery MCP server for asset inventory data. Supports CLI, PostgreSQL, and Platform modes.",
+  "author": "io.github.cloudquery",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers/io.github.cloudquery%2Fmcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/cloudquery/mcp-releases/releases/download/v1.9.0/cq-platform-mcp_1.9.0_darwin_arm64.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-06-16T19:45:55.035385Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

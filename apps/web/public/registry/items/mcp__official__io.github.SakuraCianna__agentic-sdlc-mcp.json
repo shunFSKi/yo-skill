@@ -1,0 +1,79 @@
+{
+  "id": "mcp:official/io.github.SakuraCianna/agentic-sdlc-mcp",
+  "type": "mcp",
+  "name": "Agentic SDLC MCP",
+  "description": "Agentic SDLC governance and security controls for AI coding agents working with GitHub.",
+  "author": "io.github.SakuraCianna",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/SakuraCianna/agentic-sdlc-mcp",
+    "repo": "SakuraCianna/agentic-sdlc-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "agentic-sdlc-mcp"
+    ],
+    "env": [
+      {
+        "name": "GITHUB_TOKEN",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "GITHUB_OWNER",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "GITHUB_REPO",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SDLC_DEFAULT_BRANCH",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-28T04:18:39.395179Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

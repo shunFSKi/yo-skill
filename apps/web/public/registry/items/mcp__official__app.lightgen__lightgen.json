@@ -1,0 +1,53 @@
+{
+  "id": "mcp:official/app.lightgen/lightgen",
+  "type": "mcp",
+  "name": "lightgen",
+  "description": "Generate and edit images and create short videos inside Claude. Prepaid credits, no subscription.",
+  "author": "app.lightgen",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://lightgen.app/mcp",
+    "repo": null
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://lightgen.app/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-07-11T12:04:00.365999Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

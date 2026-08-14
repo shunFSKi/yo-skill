@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.jananadiw/codex-tldraw-mcp",
+  "type": "mcp",
+  "name": "codex-tldraw-mcp",
+  "description": "A Codex stdio MCP server that generates repo-local tldraw diagrams and detects code graph drift.",
+  "author": "io.github.jananadiw",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/jananadiw/codex-tldraw-mcp",
+    "repo": "jananadiw/codex-tldraw-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "codex-tldraw-mcp"
+    ],
+    "env": [
+      {
+        "name": "TLDRAW_MCP_ALLOWED_ROOTS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-05T16:48:31.133731Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}
