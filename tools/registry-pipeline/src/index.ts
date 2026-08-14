@@ -110,7 +110,23 @@ async function main(): Promise<void> {
   }
   console.log(`扫描完成：block ${blocked} 条`);
 
-  const curated = all
+  // 大小写不敏感去重：上游改名会留下仅大小写不同的双条目（MCP 官方 Registry 实测 4 对，
+  // 如 io.github.Zuga-luga/Zugabot → zugabot），safeId 文件名只差大小写，
+  // Windows/macOS 大小写不敏感文件系统放不下两份。留 pushed_at 新的，平手留 id 排序靠前的
+  const byLowerId = new Map<string, RegistryItem>();
+  for (const item of all) {
+    const key = item.id.toLowerCase();
+    const prev = byLowerId.get(key);
+    const t = item.quality.pushed_at ?? "";
+    const p = prev?.quality.pushed_at ?? "";
+    if (!prev || t > p || (t === p && item.id < prev.id)) {
+      byLowerId.set(key, item);
+    }
+  }
+  const dropped = all.length - byLowerId.size;
+  if (dropped > 0) console.log(`大小写重复去重：丢弃 ${dropped} 条`);
+
+  const curated = [...byLowerId.values()]
     .filter((i) => i.status === "curated")
     .sort((a, b) => (a.id < b.id ? -1 : 1)); // 确定性排序，保幂等
 
