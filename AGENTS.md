@@ -26,7 +26,7 @@ skill-manager/
 ├── DESIGN.md                        # 视觉设计系统（从 7 屏原型归纳：色彩 / 字体 / 组件约定）
 ├── package.json / pnpm-workspace.yaml / tsconfig.base.json  # pnpm monorepo 根（Node 22+ / pnpm 10+）
 ├── apps/
-│   └── web/                         # 官网 Web 应用 @yo-skill/web（Next.js 15 App Router + React 18 + Tailwind + next-themes；落地页 + /api/waitlist + /market 真实数据市场（209 条 SSG，详情页含源仓库 README）+ account 占位；视觉「纸上墨字 + 一笔翡翠」，详见本目录 README）
+│   └── web/                         # 官网 Web 应用 @yo-skill/web（Next.js 15 App Router + React 18 + Tailwind + next-themes；落地页 + /api/waitlist + /market 真实数据市场（4 万+ 条：服务端过滤 URL 即状态 + 详情页头部 200 SSG/长尾 ISR，含源仓库 README）+ account 占位；视觉「纸上墨字 + 一笔翡翠」，详见本目录 README）
 ├── packages/
 │   └── ui-kit/                      # 共享 UI 原语骨架（TS，与未来的 apps/desktop 复用）
 ├── tools/

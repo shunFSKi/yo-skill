@@ -9,7 +9,7 @@ yo-skill 官网 / Web 应用 —— Next.js 15 (App Router) 全栈，承载官�
 ```bash
 pnpm install
 pnpm dev             # 启动 web，打开 http://localhost:3000
-pnpm build           # 生产构建（含市场 200+ SSG 详情页）
+pnpm build           # 生产构建（市场详情页头部 200 条 SSG 预渲染，长尾按需 ISR）
 pnpm lint            # ESLint
 pnpm typecheck       # 全 workspace TS 检查
 pnpm fetch:registry  # 重跑市场数据管线，刷新 public/registry/*.json
@@ -29,8 +29,8 @@ src/
 │   ├── layout.tsx          # 字体(next/font) + 主题(next-themes) + 全局 WaitlistDialog
 │   ├── page.tsx            # 官网落地页（9 区块）
 │   ├── globals.css         # 纸上墨字 + 一笔翡翠设计系统（CSS 变量 + 组件类）
-│   ├── market/             # 市场发现页（分段/分类/搜索/排序，客户端岛 + Suspense）
-│   │   └── item/[id]/      # 条目详情 SSG（generateStaticParams 全量预渲染）
+│   ├── market/             # 市场发现页（4 万+ 条：服务端过滤，URL 即状态——分段/分类/分词搜索/排序/分页全走 searchParams，客户端岛只渲染当前页 48 条并回写 URL；见 lib/market-query.ts）
+│   │   └── item/[id]/      # 条目详情：头部 200 条 SSG 预渲染 + 长尾按需 ISR（1d）
 │   ├── account/            # Phase 3 会员占位
 │   └── api/waitlist/       # 等待列表（Phase 1 仅日志，Phase 2 接 DB）
 ├── components/
@@ -43,10 +43,11 @@ src/
 ```
 
 市场数据来自 `tools/registry-pipeline`（根目录 `pnpm fetch:registry`）：从公开接口
-（claudeskills.info + MCP 官方 Registry）拉真实条目元数据，过 5 条静态扫描规则 +
+（claudeskills.info 全量 + MCP 官方 Registry 全分页 + GitHub 代码搜索采集 SKILL.md）
+拉真实条目元数据，过 5 条静态扫描规则 +
 场景分类打标，并按 repo 去重抓取源仓库 README（raw.githubusercontent.com，
 截断 12KB，抓不到不显示），落盘 `public/registry/`（`index.json` + `items/*.json` +
-`meta.json`）。页面构建期直接读 JSON，全站 SSG，不需要运行时数据库；重跑管线即更新，
+`meta.json`）。页面构建期/请求期直接读 JSON（进程内缓存），不需要运行时数据库；重跑管线即更新，
 真部署时用 GitHub Actions 定时跑即可。徽章只说「已扫描」不说「安全」，被拦条目不出库。
 README 用 react-markdown + `skipHtml` 渲染（丢弃原始 HTML，无注入面）。
 定时同步工作流与数据仓库（GitHub 主 + Gitee 镜像）接入步骤见
