@@ -34,11 +34,13 @@ export interface RegistryItem {
   description: string;
   author: string;
   source: {
-    registry: "claudeskills" | "mcp-official";
+    registry: "claudeskills" | "mcp-official" | "github-search";
     /** 权威来源链接（人类可读） */
     url: string;
     /** github owner/repo，可审计 */
     repo: string | null;
+    /** github-search 来源：SKILL.md 在仓库内的路径 */
+    path?: string | null;
   };
   license: string | null;
   install: InstallRecipe | null;

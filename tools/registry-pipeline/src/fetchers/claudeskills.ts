@@ -1,7 +1,7 @@
 /**
- * claudeskills.info 拉取器：人工精选 Skill（featured=1）
+ * claudeskills.info 拉取器：全量 Skill（按源仓库去重后的 repo 级条目）
  * 公开免 key JSON API，CORS *，limit 上限 100，offset 分页。
- * 只拉元数据；安装回源（配方纪律）。
+ * 只拉元数据；安装回源（配方纪律）。featured 标记仍随条目保留。
  */
 
 import type { RegistryItem } from "../schema.ts";
@@ -55,7 +55,7 @@ export async function fetchClaudeSkills(): Promise<RegistryItem[]> {
   const all: RegistryItem[] = [];
   let offset = 0;
   for (;;) {
-    const url = `${API}?type=skill&featured=1&limit=100&offset=${offset}&sort=stars`;
+    const url = `${API}?type=skill&limit=100&offset=${offset}&sort=stars`;
     const res = await fetch(url);
     if (!res.ok) throw new Error(`claudeskills HTTP ${res.status}`);
     const data = (await res.json()) as CsSearchResponse;

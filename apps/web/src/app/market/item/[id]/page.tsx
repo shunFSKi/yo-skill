@@ -25,10 +25,20 @@ interface Props {
   params: Promise<{ id: string }>;
 }
 
-/** 全量 SSG：路由参数即 safeId（不编码 : /，避开段路由转义坑） */
+/** 头部条目预渲染 + 长尾按需 ISR：全量上万条，全量 SSG 构建会爆 */
+export const revalidate = 86400;
+export const dynamicParams = true;
+
+/** 路由参数即 safeId（不编码 : /，避开段路由转义坑）；只预渲染头部 200 条 */
 export async function generateStaticParams() {
   const items = await getRegistryIndex();
-  return items.map((i) => ({ id: safeId(i.id) }));
+  return [...items]
+    .sort((a, b) => {
+      if (a.featured !== b.featured) return a.featured ? -1 : 1;
+      return (b.stars ?? -1) - (a.stars ?? -1);
+    })
+    .slice(0, 200)
+    .map((i) => ({ id: safeId(i.id) }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -52,6 +62,7 @@ function formatDate(iso: string | null): string | null {
 const REGISTRY_LABEL: Record<RegistryItem["source"]["registry"], string> = {
   claudeskills: "claudeskills.info",
   "mcp-official": "MCP 官方 Registry",
+  "github-search": "GitHub 公开仓库",
 };
 
 export default async function MarketItemPage({ params }: Props) {

@@ -8,9 +8,10 @@
 
 | 来源 | 内容 | 接口 |
 | ---- | ---- | ---- |
-| claudeskills.info | 人工精选 Skill（featured） | 免 key JSON API |
-| MCP 官方 Registry | MCP server（active + 最新版去重） | 免 key JSON API |
-| GitHub 源仓库 | 根 README（按 repo 去重，截断 12KB） | raw.githubusercontent.com |
+| claudeskills.info | Skill 全量（按源仓库去重的 repo 级条目） | 免 key JSON API |
+| MCP 官方 Registry | MCP server 全量（active + 最新版去重，全分页） | 免 key JSON API |
+| GitHub 代码搜索 | 全量 SKILL.md 采集（size 分片绕 1000 上限，解析 frontmatter；需 `GITHUB_TOKEN`/`REGISTRY_TOKEN`，上限 `GITHUB_HARVEST_MAX` 默认 25000） | search/code API |
+| GitHub 源仓库 | 根 README（按 repo 去重，截断 12KB；分层：featured + stars 前 500 + MCP 新近 300） | raw.githubusercontent.com |
 
 ## 用法
 
@@ -52,12 +53,13 @@ items/*.json  # 每条完整档案（安装配方 / env / 扫描明细 / README�
 
 接入 Gitee 国内镜像：
 
-> 镜像仓已建：**Gitee `shunFSKi/yo-skill-registry`**（开源）。走 Gitee 官方「仓库镜像」功能单向 Pull GitHub 数据仓，**不由工作流推送**。
+> 镜像仓已建：**Gitee `shunFSKi/yo-skill-registry`**（开源）。走 Gitee 官方「仓库镜像」功能单向 Pull GitHub 数据仓，**不由工作流推送**。自动同步已配通（2026-08-14）：GitHub 数据仓 push → webhook → Gitee 自动拉取。
 
 1. Gitee 建同名公开仓库（不初始化 README/.gitignore）
 2. 仓库 → 管理 → 仓库镜像管理 → 添加镜像：方向 **Pull**，镜像仓库选 GitHub 数据仓，私人令牌填 GitHub PAT（classic，勾 `repo` + `admin:repo_hook`）
-3. 已知坑：webhook 自动配置会报「webhook生成失败」（Gitee 侧问题，2026-08-14 实测），取消勾选「自动从 GitHub 同步仓库」即可建成；后果是 GitHub 有新提交后 Gitee 不会立即自动跟，在镜像管理页点「更新」手动同步即可（数据每天最多更新两次，可接受；也可按页面提示手动配 webhook 换即时同步）
-4. 前提：Gitee 账号需已绑定手机号 + GitHub 第三方账号（账号设置里可查）
+3. 已知坑：勾选「自动从 GitHub 同步仓库」会报「webhook生成失败」（Gitee 侧问题，2026-08-14 实测），先取消勾选把镜像建成，再按下一条手动配 webhook
+4. **手动配 webhook 实现自动同步**（官方文档做法，已验证）：Gitee 生成私人令牌（scope 勾 `projects`，user_info 强制附带；过期时间留空 = 永不过期）→ GitHub 数据仓 Settings → Webhooks 加 `https://gitee.com/api/v5/repos/shunFSKi/yo-skill-registry/remote_mirror/pull?access_token=<Gitee令牌>`，事件选 Just the push event。创建后 ping 返回 201 即通；之后 GitHub 有新 push，Gitee 分钟内自动跟（最短同步间隔 5 分钟）
+5. 前提：Gitee 账号需已绑定手机号 + GitHub 第三方账号（账号设置里可查）
 
 下游读取地址（**GitHub 系对应海外，Gitee 对应国内**）：
 

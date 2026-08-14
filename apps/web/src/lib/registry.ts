@@ -37,9 +37,11 @@ export interface RegistryItem {
   description: string;
   author: string;
   source: {
-    registry: "claudeskills" | "mcp-official";
+    registry: "claudeskills" | "mcp-official" | "github-search";
     url: string;
     repo: string | null;
+    /** github-search 来源：SKILL.md 在仓库内的路径 */
+    path?: string | null;
   };
   license: string | null;
   install: {

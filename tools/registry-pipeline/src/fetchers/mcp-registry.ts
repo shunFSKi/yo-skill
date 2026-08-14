@@ -1,16 +1,12 @@
 /**
- * 官方 MCP Registry 拉取器：/v0/servers 免认证，cursor 分页。
- * 注意：同一 server 多版本返回，按 isLatest 去重；
- * MVP 过滤 = 有 packages 或 remotes（装得了）+ 有 repository（可审计）。
+ * 官方 MCP Registry 拉取器：/v0/servers 免认证，cursor 分页，全量拉取。
+ * 同一 server 多版本返回，按 isLatest + active 去重过滤；
+ * 入选门槛 = 有 packages 或 remotes（装得了）；repository 缺失也保留（不可审计但不影响安装）。
  */
 
 import type { RegistryItem, EnvVar, InstallRecipe } from "../schema.ts";
 
 const API = "https://registry.modelcontextprotocol.io/v0/servers";
-/** 原始页拉取上限（每页 100），防止 preview 数据膨胀失控 */
-const MAX_PAGES = 15;
-/** 过滤后入选上限 */
-const KEEP = 150;
 
 interface McpEnv {
   name: string;
@@ -98,8 +94,9 @@ function buildInstall(s: McpServer): InstallRecipe | null {
 function normalize(entry: McpEntry): RegistryItem | null {
   const s = entry.server;
   const install = buildInstall(s);
-  if (!install || !s.repository?.url) return null;
+  if (!install) return null;
 
+  const repo = repoFromUrl(s.repository?.url);
   const namespace = s.name.split("/")[0] ?? "unknown";
   return {
     id: `mcp:official/${s.name}`,
@@ -109,8 +106,11 @@ function normalize(entry: McpEntry): RegistryItem | null {
     author: namespace,
     source: {
       registry: "mcp-official",
-      url: s.repository.url,
-      repo: repoFromUrl(s.repository.url),
+      url:
+        s.repository?.url ??
+        s.remotes?.find((r) => r.url)?.url ??
+        `https://registry.modelcontextprotocol.io/v0/servers/${encodeURIComponent(s.name)}`,
+      repo,
     },
     license: null,
     install,
@@ -130,7 +130,7 @@ function normalize(entry: McpEntry): RegistryItem | null {
 export async function fetchMcpRegistry(): Promise<RegistryItem[]> {
   const latest = new Map<string, McpEntry>();
   let cursor: string | undefined;
-  for (let page = 0; page < MAX_PAGES; page++) {
+  for (let page = 0; ; page++) {
     const url = cursor
       ? `${API}?limit=100&cursor=${encodeURIComponent(cursor)}`
       : `${API}?limit=100`;
@@ -144,7 +144,9 @@ export async function fetchMcpRegistry(): Promise<RegistryItem[]> {
       if (official?.status && official.status !== "active") continue;
       latest.set(entry.server.name, entry);
     }
-    console.log(`  mcp-registry: page ${page + 1}, latest 累计 ${latest.size}`);
+    if (page % 20 === 0 || !data.metadata?.nextCursor) {
+      console.log(`  mcp-registry: page ${page + 1}, latest 累计 ${latest.size}`);
+    }
     cursor = data.metadata?.nextCursor;
     if (!cursor || data.servers.length === 0) break;
   }
@@ -153,7 +155,6 @@ export async function fetchMcpRegistry(): Promise<RegistryItem[]> {
   for (const entry of latest.values()) {
     const item = normalize(entry);
     if (item) out.push(item);
-    if (out.length >= KEEP) break;
   }
   return out;
 }

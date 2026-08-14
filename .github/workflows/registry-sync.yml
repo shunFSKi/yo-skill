@@ -37,6 +37,9 @@ jobs:
 
       - name: 跑管线刷新 apps/web/public/registry
         run: pnpm fetch:registry
+        env:
+          # GitHub 全量采集用（代码搜索 API 必须登录）；未配置则自动跳过该源
+          GITHUB_TOKEN: ${{ secrets.REGISTRY_TOKEN }}
 
       - name: 有变化才提交本仓库
         run: |

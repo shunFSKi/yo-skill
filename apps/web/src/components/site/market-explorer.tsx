@@ -16,6 +16,9 @@ import { cn } from "@/lib/utils";
 
 const CATEGORIES: Category[] = ["写作", "编程", "设计", "办公", "生活"];
 
+/** 每页卡片数：全量上万条，整墙渲染会卡，分页切片 */
+const PAGE_SIZE = 48;
+
 type Sort = "reco" | "stars";
 
 function formatStars(n: number): string {
@@ -51,6 +54,12 @@ export function MarketExplorer({ items }: { items: IndexItem[] }) {
   const [sort, setSort] = useState<Sort>(
     params.get("sort") === "stars" ? "stars" : "reco",
   );
+  const [page, setPage] = useState(1);
+
+  /* 过滤/排序一变回第一页 */
+  useEffect(() => {
+    setPage(1);
+  }, [type, cat, q, sort]);
 
   /* 状态 → URL（可分享）。首次挂载不 replace，避免无谓历史记录。 */
   const mounted = useRef(false);
@@ -104,6 +113,12 @@ export function MarketExplorer({ items }: { items: IndexItem[] }) {
   }, [items, type, cat, q, sort]);
 
   const totalOfType = type === "skill" ? counts.skill : counts.mcp;
+  const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+  const safePage = Math.min(page, totalPages);
+  const paged = filtered.slice(
+    (safePage - 1) * PAGE_SIZE,
+    safePage * PAGE_SIZE,
+  );
 
   return (
     <div>
@@ -202,14 +217,42 @@ export function MarketExplorer({ items }: { items: IndexItem[] }) {
       </p>
 
       {/* 卡片墙 */}
-      {filtered.length > 0 ? (
-        <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {filtered.map((item) => (
-            <li key={item.id}>
-              <ItemCard item={item} />
-            </li>
-          ))}
-        </ul>
+      {paged.length > 0 ? (
+        <>
+          <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {paged.map((item) => (
+              <li key={item.id}>
+                <ItemCard item={item} />
+              </li>
+            ))}
+          </ul>
+          {totalPages > 1 && (
+            <nav
+              className="mt-8 flex items-center justify-center gap-4"
+              aria-label="分页"
+            >
+              <button
+                type="button"
+                disabled={safePage <= 1}
+                onClick={() => setPage(safePage - 1)}
+                className="yo-btn yo-btn--ghost disabled:cursor-not-allowed disabled:opacity-40"
+              >
+                上一页
+              </button>
+              <span className="text-sm text-ink-muted">
+                第 {safePage} / {totalPages} 页
+              </span>
+              <button
+                type="button"
+                disabled={safePage >= totalPages}
+                onClick={() => setPage(safePage + 1)}
+                className="yo-btn yo-btn--ghost disabled:cursor-not-allowed disabled:opacity-40"
+              >
+                下一页
+              </button>
+            </nav>
+          )}
+        </>
       ) : (
         <div className="mt-4 rounded-card border border-dashed border-rule-strong py-20 text-center">
           <p className="text-lg font-semibold">没有找到</p>

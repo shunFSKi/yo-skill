@@ -30,7 +30,7 @@ skill-manager/
 ├── packages/
 │   └── ui-kit/                      # 共享 UI 原语骨架（TS，与未来的 apps/desktop 复用）
 ├── tools/
-│   └── registry-pipeline/           # 市场数据管线 @yo-skill/registry-pipeline（Node 22 直跑 TS：拉 claudeskills.info + MCP 官方 Registry 真实元数据 + 源仓库 README → 5 条静态扫描 + 场景分类 → 落盘 apps/web/public/registry/*.json；根目录 pnpm fetch:registry 重跑即更新；fetch 走环境变量代理；幂等——数据无变化不落盘；定时同步工作流在 .github/workflows/registry-sync.yml；数据仓已建：GitHub `shunFSKi/yo-skill-registry` 海外主仓 + Gitee 同名仓国内镜像〔走 Gitee 官方镜像功能 Pull，非工作流推送〕，接入细节见该目录 README）
+│   └── registry-pipeline/           # 市场数据管线 @yo-skill/registry-pipeline（Node 22 直跑 TS：全量口径——claudeskills 全量 + MCP 官方 Registry 全分页 + GitHub 代码搜索采集全量 SKILL.md〔需 token，size 分片〕 → 5 条静态扫描 + 场景分类 → README 分层抓〔featured + stars 前 500 + MCP 新近 300〕 → 落盘 apps/web/public/registry/*.json；根目录 pnpm fetch:registry 重跑即更新；fetch 走环境变量代理；幂等——按 id 排序后逐字节比对，无变化不落盘；定时同步工作流在 .github/workflows/registry-sync.yml；数据仓已建：GitHub `shunFSKi/yo-skill-registry` 海外主仓 + Gitee 同名仓国内镜像〔走 Gitee 官方镜像功能 Pull，自动同步靠手动配的 webhook〕，接入细节见该目录 README）
 ├── prototype/                       # 桌面端 UI 设计稿（纯静态 HTML/CSS，仅供视觉参考、非产品代码，双击 index.html 进入）
 │   ├── README.md                    # 原型说明 + 7 屏清单（先读这个）
 │   ├── yo.css                       # 共享设计系统（E 墨极调色层 + 深色模式，变量已语义化 --accent/--warn；尾部 .ob-* 向导组件）
