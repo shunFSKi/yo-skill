@@ -29,19 +29,6 @@ export const assistants: Assistant[] = [
   { name: "Replit", logo: "/logos/replit.svg" },
 ];
 
-export type Stat = {
-  value: string;
-  label: string;
-};
-
-/** 数据条：全部为真实事实，宁小不假 */
-export const stats: Stat[] = [
-  { value: "15", label: "主流 Agent，首版全支持" },
-  { value: "8 项", label: "安全扫描，条条都过" },
-  { value: "6 类", label: "冲突检测，提前打招呼" },
-  { value: "2 大", label: "桌面平台：macOS · Windows" },
-];
-
 export type Pain = {
   title: string;
   detail: string;

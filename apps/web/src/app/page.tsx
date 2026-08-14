@@ -11,14 +11,18 @@ import {
 } from "@/components/site/sections";
 import { Footer } from "@/components/site/footer";
 import { ScrollReveal } from "@/components/site/scroll-reveal";
+import { getRegistryMeta } from "@/lib/registry";
 
-export default function HomePage() {
+export default async function HomePage() {
+  const meta = await getRegistryMeta();
+  const marketTotal = meta.counts.skill + meta.counts.mcp;
+
   return (
     <>
       <Nav />
       <main>
         <Hero />
-        <DataBand />
+        <DataBand marketTotal={marketTotal} />
         <PainPoints />
         <Features />
         <SyncFlow />

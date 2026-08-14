@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 
 import { Nav } from "@/components/site/nav";
 import { Footer } from "@/components/site/footer";
 import { MarketExplorer } from "@/components/site/market-explorer";
-import { getRegistryIndex, getRegistryMeta } from "@/lib/registry";
+import {
+  PAGE_SIZE,
+  parseMarketState,
+  type MarketSearchParams,
+} from "@/lib/market-query";
+import { getRegistryMeta, queryRegistry } from "@/lib/registry";
 
 export const metadata: Metadata = {
   title: "Skill 与 MCP 市场",
@@ -13,12 +17,18 @@ export const metadata: Metadata = {
 };
 
 /**
- * 市场发现页：数据来自 registry 管线产物（构建期读 JSON，SSG）。
- * 过滤交互全在客户端岛 MarketExplorer（useSearchParams 需 Suspense 包裹）。
+ * 市场发现页：数据来自 registry 管线产物（构建期读 JSON）。
+ * 过滤/搜索/分页全部在服务端（URL 即状态，可分享、SEO 可索引），
+ * 客户端岛 MarketExplorer 只渲染当前页并回写 URL。
  */
-export default async function MarketPage() {
-  const [items, meta] = await Promise.all([
-    getRegistryIndex(),
+export default async function MarketPage({
+  searchParams,
+}: {
+  searchParams: Promise<MarketSearchParams>;
+}) {
+  const state = parseMarketState(await searchParams);
+  const [result, meta] = await Promise.all([
+    queryRegistry({ ...state, pageSize: PAGE_SIZE }),
     getRegistryMeta(),
   ]);
   const updated = meta.generated_at.slice(0, 10);
@@ -40,9 +50,7 @@ export default async function MarketPage() {
         </header>
 
         <div className="mt-10">
-          <Suspense>
-            <MarketExplorer items={items} />
-          </Suspense>
+          <MarketExplorer state={state} result={result} />
         </div>
       </main>
       <Footer />

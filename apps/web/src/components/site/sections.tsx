@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import {
   AlertTriangle,
   Check,
@@ -15,26 +17,51 @@ import {
   faqs,
   pains,
   restorePoints,
-  stats,
   type Pain,
 } from "@/lib/site-data";
 import { WaitlistButton } from "./waitlist-button";
 import { MergeDemo } from "./live-demos";
 import { Stroke } from "./stroke";
 
-/* ── 数据条（全部真实事实） ─────────────────── */
-export function DataBand() {
+/* ── 数据条（全部真实事实，市场条目数由首页读 meta 注入） ── */
+export function DataBand({ marketTotal }: { marketTotal: number }) {
+  const cells: { value: string; label: string; href?: string }[] = [
+    { value: "15", label: "主流 Agent，首版全支持" },
+    {
+      value: marketTotal.toLocaleString("zh-CN"),
+      label: "Skill 与 MCP，每日同步",
+      href: "/market",
+    },
+    { value: "5 项", label: "静态扫描，条条都过" },
+    { value: "6 类", label: "冲突检测，提前打招呼" },
+  ];
   return (
     <section className="border-y border-line bg-paper-deep">
       <div className="yo-container grid grid-cols-2 gap-y-6 py-8 sm:grid-cols-4">
-        {stats.map((s) => (
-          <div key={s.label} className="reveal text-center">
-            <div className="yo-num text-3xl text-jade-ink sm:text-[2rem]">
-              {s.value}
+        {cells.map((s) => {
+          const inner = (
+            <>
+              <div className="yo-num text-3xl text-jade-ink sm:text-[2rem]">
+                {s.value}
+              </div>
+              <div className="mt-1 text-sm text-ink-muted">{s.label}</div>
+            </>
+          );
+          return (
+            <div key={s.label} className="reveal text-center">
+              {s.href ? (
+                <Link
+                  href={s.href}
+                  className="block transition-opacity hover:opacity-70"
+                >
+                  {inner}
+                </Link>
+              ) : (
+                inner
+              )}
             </div>
-            <div className="mt-1 text-sm text-ink-muted">{s.label}</div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
@@ -195,7 +222,8 @@ export function Features() {
           >
             <CellHead icon={ShieldCheck} title="每条都过安全扫描" />
             <p className="mt-3 text-[0.95rem] leading-relaxed text-ink-soft">
-              八项安全扫描加 sha256 校验，动过手脚的，拦在门外。
+              五项静态扫描：注入、敏感路径、外部渗出、危险执行、配置风险。
+              有猫腻的，拦在门外。
             </p>
           </div>
 

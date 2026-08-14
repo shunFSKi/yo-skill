@@ -96,3 +96,87 @@ export async function getRegistryItem(
     return null;
   }
 }
+
+/* ── 市场页服务端过滤 ─────────────────────────
+ * 全量 4 万+ 条、index.json 13MB：绝不能整包发给客户端。
+ * 进程内只解析一次，预计算小写搜索串，每次请求毫秒级过滤出当前页。 */
+
+export type MarketSort = "reco" | "stars";
+
+export interface MarketQuery {
+  type: ItemType;
+  cat: Category | null;
+  /** 搜索词：按空白分词，全部命中（AND）才算匹配 */
+  q: string;
+  sort: MarketSort;
+  page: number;
+  pageSize: number;
+}
+
+export interface MarketResult {
+  /** 当前页条目 */
+  items: IndexItem[];
+  /** 过滤后总数（未分页） */
+  total: number;
+  totalPages: number;
+  /** 夹紧后的当前页 */
+  page: number;
+  counts: { skill: number; mcp: number };
+  /** 当前类型下的分类计数 */
+  catCounts: Partial<Record<Category, number>>;
+}
+
+interface CachedIndex {
+  items: IndexItem[];
+  haystack: string[];
+}
+
+let indexCache: Promise<CachedIndex> | null = null;
+
+function loadIndex(): Promise<CachedIndex> {
+  indexCache ??= getRegistryIndex().then((items) => ({
+    items,
+    haystack: items.map((i) => `${i.name}\n${i.description}`.toLowerCase()),
+  }));
+  return indexCache;
+}
+
+export async function queryRegistry(q: MarketQuery): Promise<MarketResult> {
+  const { items, haystack } = await loadIndex();
+
+  const counts = { skill: 0, mcp: 0 };
+  const catCounts: Partial<Record<Category, number>> = {};
+  const tokens = q.q.trim().toLowerCase().split(/\s+/).filter(Boolean);
+
+  const matched: IndexItem[] = [];
+  for (let i = 0; i < items.length; i++) {
+    const item = items[i];
+    counts[item.type] += 1;
+    if (item.type !== q.type) continue;
+    if (item.category) {
+      catCounts[item.category] = (catCounts[item.category] ?? 0) + 1;
+    }
+    if (q.cat && item.category !== q.cat) continue;
+    if (tokens.some((t) => !haystack[i].includes(t))) continue;
+    matched.push(item);
+  }
+
+  const byStars = (a: IndexItem, b: IndexItem) => (b.stars ?? -1) - (a.stars ?? -1);
+  const byName = (a: IndexItem, b: IndexItem) => a.name.localeCompare(b.name);
+  matched.sort((a, b) => {
+    if (q.sort === "reco" && a.featured !== b.featured) return a.featured ? -1 : 1;
+    return byStars(a, b) || byName(a, b);
+  });
+
+  const totalPages = Math.max(1, Math.ceil(matched.length / q.pageSize));
+  const page = Math.min(Math.max(1, q.page), totalPages);
+
+  return {
+    items: matched.slice((page - 1) * q.pageSize, page * q.pageSize),
+    total: matched.length,
+    totalPages,
+    page,
+    counts,
+    catCounts,
+  };
+}
