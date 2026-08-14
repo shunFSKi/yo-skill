@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/forqstudio/flash/hello",
+  "type": "skill",
+  "name": "hello",
+  "description": "Greet the user with a friendly message",
+  "author": "forqstudio",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/forqstudio/flash/blob/HEAD/plugins/flash-dev/skills/hello/SKILL.md",
+    "repo": "forqstudio/flash",
+    "path": "plugins/flash-dev/skills/hello/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

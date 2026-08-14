@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/meghal86/stacksignal/fake-typosquat-86cb20fe",
+  "type": "skill",
+  "name": "fake-typosquat",
+  "description": "HTTP client utility",
+  "author": "meghal86",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/meghal86/stacksignal/blob/HEAD/.agents/skills/skill-guard/tests/fake-typosquat/SKILL.md",
+    "repo": "meghal86/stacksignal",
+    "path": ".agents/skills/skill-guard/tests/fake-typosquat/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

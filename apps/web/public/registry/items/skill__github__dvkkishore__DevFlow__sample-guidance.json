@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/dvkkishore/DevFlow/sample-guidance",
+  "type": "skill",
+  "name": "sample-guidance",
+  "description": "Provides a tiny workflow used to verify progressive Agent Skill loading.",
+  "author": "dvkkishore",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/dvkkishore/DevFlow/blob/HEAD/tests/fixtures/skill_workspace/.github/skills/sample-guidance/SKILL.md",
+    "repo": "dvkkishore/DevFlow",
+    "path": "tests/fixtures/skill_workspace/.github/skills/sample-guidance/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

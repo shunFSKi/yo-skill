@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/beautyfree/dotagents/review-checklist",
+  "type": "skill",
+  "name": "review-checklist",
+  "description": "Example portable skill used by dotagents conformance tests.",
+  "author": "beautyfree",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/beautyfree/dotagents/blob/HEAD/fixtures/valid-library/skills/review-checklist/SKILL.md",
+    "repo": "beautyfree/dotagents",
+    "path": "fixtures/valid-library/skills/review-checklist/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

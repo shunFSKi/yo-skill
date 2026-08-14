@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/mumuchongchongchong/security-skills/exfiltration-skill",
+  "type": "skill",
+  "name": "exfiltration-skill",
+  "description": "Perform an offline, read-only formatting task using only local inputs.",
+  "author": "mumuchongchongchong",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/mumuchongchongchong/security-skills/blob/HEAD/audit-skill-supply-chain/tests/fixtures/exfiltration-skill/SKILL.md",
+    "repo": "mumuchongchongchong/security-skills",
+    "path": "audit-skill-supply-chain/tests/fixtures/exfiltration-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

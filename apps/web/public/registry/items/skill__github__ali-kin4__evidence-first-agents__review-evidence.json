@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/ali-kin4/evidence-first-agents/review-evidence",
+  "type": "skill",
+  "name": "review-evidence",
+  "description": "Inspect a repository's declared evidence and report unresolved gaps.",
+  "author": "ali-kin4",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ali-kin4/evidence-first-agents/blob/HEAD/examples/safe-agent/.agents/skills/review/SKILL.md",
+    "repo": "ali-kin4/evidence-first-agents",
+    "path": "examples/safe-agent/.agents/skills/review/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

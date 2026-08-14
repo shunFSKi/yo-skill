@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/paraseva/swarpius/result-fetch",
+  "type": "skill",
+  "name": "result-fetch",
+  "description": "Retrieve cached items by result_handle (format: res_NNNNN) from the search_history section. Only use handles listed in search_history.",
+  "author": "paraseva",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/paraseva/swarpius/blob/HEAD/agent/skills/result-fetch/SKILL.md",
+    "repo": "paraseva/swarpius",
+    "path": "agent/skills/result-fetch/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

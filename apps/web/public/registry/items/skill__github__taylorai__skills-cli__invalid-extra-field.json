@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/taylorai/skills-cli/invalid-extra-field",
+  "type": "skill",
+  "name": "invalid-extra-field",
+  "description": "Skill with extra field.",
+  "author": "taylorai",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/taylorai/skills-cli/blob/HEAD/tests/fixtures/invalid-extra-field/SKILL.md",
+    "repo": "taylorai/skills-cli",
+    "path": "tests/fixtures/invalid-extra-field/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

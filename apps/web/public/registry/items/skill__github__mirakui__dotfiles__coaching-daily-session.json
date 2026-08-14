@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/mirakui/dotfiles/coaching-daily-session",
+  "type": "skill",
+  "name": "coaching-daily-session",
+  "description": "run coach-start-daily-session skill",
+  "author": "mirakui",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/mirakui/dotfiles/blob/HEAD/claude/scheduled-tasks/coaching-daily-session/SKILL.md",
+    "repo": "mirakui/dotfiles",
+    "path": "claude/scheduled-tasks/coaching-daily-session/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

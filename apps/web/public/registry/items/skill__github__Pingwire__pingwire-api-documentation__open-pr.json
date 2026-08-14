@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/Pingwire/pingwire-api-documentation/open-pr",
+  "type": "skill",
+  "name": "open-pr",
+  "description": "Use this skill to open a PR for the task you have implemented.",
+  "author": "Pingwire",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Pingwire/pingwire-api-documentation/blob/HEAD/.claude/skills/open-pr/SKILL.md",
+    "repo": "Pingwire/pingwire-api-documentation",
+    "path": ".claude/skills/open-pr/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

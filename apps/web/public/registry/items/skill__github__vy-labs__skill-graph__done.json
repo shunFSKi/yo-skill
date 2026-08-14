@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/vy-labs/skill-graph/done",
+  "type": "skill",
+  "name": "done",
+  "description": "Final step. Use only after verify has passed (the \"verified\" marker exists). Read only.",
+  "author": "vy-labs",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/vy-labs/skill-graph/blob/HEAD/e2e/fixtures/skills/done/SKILL.md",
+    "repo": "vy-labs/skill-graph",
+    "path": "e2e/fixtures/skills/done/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

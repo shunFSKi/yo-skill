@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/fabis94/universal-ai-config/shared-skill",
+  "type": "skill",
+  "name": "shared-skill",
+  "description": "A skill from the shared templates dir",
+  "author": "fabis94",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/fabis94/universal-ai-config/blob/HEAD/tests/fixtures/additional-dirs-project/shared-templates/skills/shared-skill/SKILL.md",
+    "repo": "fabis94/universal-ai-config",
+    "path": "tests/fixtures/additional-dirs-project/shared-templates/skills/shared-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

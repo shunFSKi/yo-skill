@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/caohaotiantian/agent-skills-eval/vuln-skill",
+  "type": "skill",
+  "name": "vuln-skill",
+  "description": "A vulnerable test skill",
+  "author": "caohaotiantian",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/caohaotiantian/agent-skills-eval/blob/HEAD/tests/fixtures/vuln-skill/SKILL.md",
+    "repo": "caohaotiantian/agent-skills-eval",
+    "path": "tests/fixtures/vuln-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

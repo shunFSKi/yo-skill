@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/alifarooq-zk/agent-library-cli/domain-review",
+  "type": "skill",
+  "name": "domain-review",
+  "description": "Reviews product-specific domain logic and terminology. Use when checking product behavior or naming.",
+  "author": "alifarooq-zk",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/alifarooq-zk/agent-library-cli/blob/HEAD/tests/fixtures/projects/p6-local/.agent-library/product/skills/domain-review/SKILL.md",
+    "repo": "alifarooq-zk/agent-library-cli",
+    "path": "tests/fixtures/projects/p6-local/.agent-library/product/skills/domain-review/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

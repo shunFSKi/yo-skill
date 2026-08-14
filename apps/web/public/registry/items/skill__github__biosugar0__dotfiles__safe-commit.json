@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/biosugar0/dotfiles/safe-commit",
+  "type": "skill",
+  "name": "safe-commit",
+  "description": "Use when: コミット、commit、変更をまとめる、コミットメッセージを書く、push前。",
+  "author": "biosugar0",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/biosugar0/dotfiles/blob/HEAD/dot_config/claude/skills/safe-commit/SKILL.md",
+    "repo": "biosugar0/dotfiles",
+    "path": "dot_config/claude/skills/safe-commit/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

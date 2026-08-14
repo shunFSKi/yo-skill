@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/Undertone0809/rudder/evidence-research",
+  "type": "skill",
+  "name": "Evidence Research",
+  "description": "Gather and cite evidence before reaching a conclusion.",
+  "author": "Undertone0809",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Undertone0809/rudder/blob/HEAD/tests/e2e/fixtures/codex-plugin-research/skills/evidence/SKILL.md",
+    "repo": "Undertone0809/rudder",
+    "path": "tests/e2e/fixtures/codex-plugin-research/skills/evidence/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

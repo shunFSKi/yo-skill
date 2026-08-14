@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/syht1602/base_codex/plan-tree",
+  "type": "skill",
+  "name": "plan-tree",
+  "description": "Manage nested checklist plans with statuses, dependencies, and resumable execution.",
+  "author": "syht1602",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/syht1602/base_codex/blob/HEAD/template/.agents/skills/plan-tree/SKILL.md",
+    "repo": "syht1602/base_codex",
+    "path": "template/.agents/skills/plan-tree/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

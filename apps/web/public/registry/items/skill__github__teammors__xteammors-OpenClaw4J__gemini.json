@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/teammors/xteammors-OpenClaw4J/gemini",
+  "type": "skill",
+  "name": "gemini",
+  "description": "Google Gemini CLI 问答。需安装 gemini CLI。",
+  "author": "teammors",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/teammors/xteammors-OpenClaw4J/blob/HEAD/skills/gemini/SKILL.md",
+    "repo": "teammors/xteammors-OpenClaw4J",
+    "path": "skills/gemini/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

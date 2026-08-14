@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/ai4mgreenly/metaspot/rules",
+  "type": "skill",
+  "name": "rules",
+  "description": "Critical project rules and constraints",
+  "author": "ai4mgreenly",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ai4mgreenly/metaspot/blob/HEAD/.claude/library/rules/SKILL.md",
+    "repo": "ai4mgreenly/metaspot",
+    "path": ".claude/library/rules/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

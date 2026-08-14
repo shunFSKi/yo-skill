@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/neeltom92/agent-plugin-marketplace/hello1",
+  "type": "skill",
+  "name": "hello1",
+  "description": "Use when the user says hello or asks the plugin to introduce itself. Demo skill from hello-plugin1.",
+  "author": "neeltom92",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/neeltom92/agent-plugin-marketplace/blob/HEAD/plugins/hello-plugin1/skills/hello1/SKILL.md",
+    "repo": "neeltom92/agent-plugin-marketplace",
+    "path": "plugins/hello-plugin1/skills/hello1/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

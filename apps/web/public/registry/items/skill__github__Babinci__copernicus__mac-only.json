@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/Babinci/copernicus/mac-only",
+  "type": "skill",
+  "name": "Mac Only",
+  "description": "Use when automating Finder with AppleScript.",
+  "author": "Babinci",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Babinci/copernicus/blob/HEAD/record-replay-linux/tests/fixtures/skills/platform-macos/SKILL.md",
+    "repo": "Babinci/copernicus",
+    "path": "record-replay-linux/tests/fixtures/skills/platform-macos/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

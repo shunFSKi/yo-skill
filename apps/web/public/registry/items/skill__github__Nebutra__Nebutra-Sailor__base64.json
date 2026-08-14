@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/Nebutra/Nebutra-Sailor/base64",
+  "type": "skill",
+  "name": "base64",
+  "description": "UTF-8 text Base64 encode/decode",
+  "author": "Nebutra",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Nebutra/Nebutra-Sailor/blob/HEAD/packages/ai/forge-runtime/skills/base64/SKILL.md",
+    "repo": "Nebutra/Nebutra-Sailor",
+    "path": "packages/ai/forge-runtime/skills/base64/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

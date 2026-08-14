@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/gitwalter/antigravity-agent-factory/tdd",
+  "type": "skill",
+  "name": "tdd",
+  "description": "Test-driven development skill",
+  "author": "gitwalter",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/gitwalter/antigravity-agent-factory/blob/HEAD/tests/fixtures/existing_repo_partial/.cursor/skills/tdd/SKILL.md",
+    "repo": "gitwalter/antigravity-agent-factory",
+    "path": "tests/fixtures/existing_repo_partial/.cursor/skills/tdd/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

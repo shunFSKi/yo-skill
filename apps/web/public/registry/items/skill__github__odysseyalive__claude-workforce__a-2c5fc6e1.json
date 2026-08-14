@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/odysseyalive/claude-workforce/a-2c5fc6e1",
+  "type": "skill",
+  "name": "a",
+  "description": "Fixture. Names one script that does not resolve.",
+  "author": "odysseyalive",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/odysseyalive/claude-workforce/blob/HEAD/fixtures/scripts/ratchet-escaped-pipe/.claude/skills/a/SKILL.md",
+    "repo": "odysseyalive/claude-workforce",
+    "path": "fixtures/scripts/ratchet-escaped-pipe/.claude/skills/a/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

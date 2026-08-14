@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/majiayu000/claude-skill-registry-data/template-skill-d7d5c1d8",
+  "type": "skill",
+  "name": "template-skill",
+  "description": "A template for creating new skills. Use when initializing a new skill to ensure proper structure and metadata.",
+  "author": "majiayu000",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/majiayu000/claude-skill-registry-data/blob/HEAD/skills/template-skill-nickcrew-claude-cortex/SKILL.md",
+    "repo": "majiayu000/claude-skill-registry-data",
+    "path": "skills/template-skill-nickcrew-claude-cortex/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

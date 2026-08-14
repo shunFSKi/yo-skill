@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/wk42worldworld/cybercode/verify",
+  "type": "skill",
+  "name": "verify",
+  "description": "Verify a code change does what it should by running the app.",
+  "author": "wk42worldworld",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/wk42worldworld/cybercode/blob/HEAD/src/skills/bundled/verify/SKILL.md",
+    "repo": "wk42worldworld/cybercode",
+    "path": "src/skills/bundled/verify/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

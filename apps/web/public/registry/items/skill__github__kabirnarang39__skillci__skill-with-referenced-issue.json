@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/kabirnarang39/skillci/skill-with-referenced-issue",
+  "type": "skill",
+  "name": "skill-with-referenced-issue",
+  "description": "Has a clean SKILL.md but an unsafe referenced script.",
+  "author": "kabirnarang39",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/kabirnarang39/skillci/blob/HEAD/editors/vscode/test-fixtures/skill-with-referenced-issue/SKILL.md",
+    "repo": "kabirnarang39/skillci",
+    "path": "editors/vscode/test-fixtures/skill-with-referenced-issue/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

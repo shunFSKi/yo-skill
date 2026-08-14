@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/fornevercollective/grok-repo-template/browse-page",
+  "type": "skill",
+  "name": "browse-page",
+  "description": "Fetch and parse web pages for RAG ingestion",
+  "author": "fornevercollective",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/fornevercollective/grok-repo-template/blob/HEAD/.grok/skills/browse-page/SKILL.md",
+    "repo": "fornevercollective/grok-repo-template",
+    "path": ".grok/skills/browse-page/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

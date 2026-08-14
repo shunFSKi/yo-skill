@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/ctxr-dev/kit/orphan-overlay-skill",
+  "type": "skill",
+  "name": "orphan-overlay-skill",
+  "description": "Skill with an overlay file not registered in the index.",
+  "author": "ctxr-dev",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ctxr-dev/kit/blob/HEAD/tests/fixtures/skill/orphan-overlay/SKILL.md",
+    "repo": "ctxr-dev/kit",
+    "path": "tests/fixtures/skill/orphan-overlay/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

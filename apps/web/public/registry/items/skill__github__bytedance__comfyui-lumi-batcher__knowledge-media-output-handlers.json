@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/bytedance/comfyui-lumi-batcher/knowledge-media-output-handlers",
+  "type": "skill",
+  "name": "knowledge-media-output-handlers",
+  "description": "多媒体输出处理。导航时机：添加图片/视频/音频/文本输出处理逻辑。",
+  "author": "bytedance",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/bytedance/comfyui-lumi-batcher/blob/HEAD/.trae/knowledges/result-processing/media-output-handlers/SKILL.md",
+    "repo": "bytedance/comfyui-lumi-batcher",
+    "path": ".trae/knowledges/result-processing/media-output-handlers/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

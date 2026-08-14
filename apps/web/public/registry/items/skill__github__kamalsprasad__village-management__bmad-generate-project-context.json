@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/kamalsprasad/village-management/bmad-generate-project-context",
+  "type": "skill",
+  "name": "bmad-generate-project-context",
+  "description": "Create project-context.md with AI rules. Use when the user says \"generate project context\" or \"create project context\"",
+  "author": "kamalsprasad",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/kamalsprasad/village-management/blob/HEAD/.devin/skills/bmad-generate-project-context/SKILL.md",
+    "repo": "kamalsprasad/village-management",
+    "path": ".devin/skills/bmad-generate-project-context/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

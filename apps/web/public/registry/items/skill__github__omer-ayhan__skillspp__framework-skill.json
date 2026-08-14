@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/omer-ayhan/skillspp/framework-skill",
+  "type": "skill",
+  "name": "framework-skill",
+  "description": "Framework skill fixture",
+  "author": "omer-ayhan",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/omer-ayhan/skillspp/blob/HEAD/apps/skillspp-cli/tests/fixtures/source-root-deps/skills/framework-skill/SKILL.md",
+    "repo": "omer-ayhan/skillspp",
+    "path": "apps/skillspp-cli/tests/fixtures/source-root-deps/skills/framework-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

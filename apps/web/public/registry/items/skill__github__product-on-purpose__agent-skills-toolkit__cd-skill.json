@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/product-on-purpose/agent-skills-toolkit/cd-skill",
+  "type": "skill",
+  "name": "cd-skill",
+  "description": "Does a thing with data. Use when the user asks to process or transform a dataset.",
+  "author": "product-on-purpose",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/product-on-purpose/agent-skills-toolkit/blob/HEAD/tests/fixtures/anti/command-no-description/skills/cd-skill/SKILL.md",
+    "repo": "product-on-purpose/agent-skills-toolkit",
+    "path": "tests/fixtures/anti/command-no-description/skills/cd-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

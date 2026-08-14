@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/hidao80/ai-agent-plugins/commit-msg",
+  "type": "skill",
+  "name": "commit-msg",
+  "description": "Propose concise commit messages.",
+  "author": "hidao80",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/hidao80/ai-agent-plugins/blob/HEAD/skills/commit-msg/SKILL.md",
+    "repo": "hidao80/ai-agent-plugins",
+    "path": "skills/commit-msg/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

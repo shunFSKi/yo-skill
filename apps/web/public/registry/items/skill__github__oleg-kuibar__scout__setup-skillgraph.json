@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/oleg-kuibar/scout/setup-skillgraph",
+  "type": "skill",
+  "name": "setup-skillgraph",
+  "description": "Legacy compatibility alias for Scout install.",
+  "author": "oleg-kuibar",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/oleg-kuibar/scout/blob/HEAD/skills/core/setup-skillgraph/SKILL.md",
+    "repo": "oleg-kuibar/scout",
+    "path": "skills/core/setup-skillgraph/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

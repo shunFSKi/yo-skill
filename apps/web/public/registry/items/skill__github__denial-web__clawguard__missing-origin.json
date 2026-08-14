@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/denial-web/clawguard/missing-origin",
+  "type": "skill",
+  "name": "missing-origin",
+  "description": "Lock entry without local origin metadata.",
+  "author": "denial-web",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/denial-web/clawguard/blob/HEAD/examples/clawhub-workspace/skills/missing-origin/SKILL.md",
+    "repo": "denial-web/clawguard",
+    "path": "examples/clawhub-workspace/skills/missing-origin/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

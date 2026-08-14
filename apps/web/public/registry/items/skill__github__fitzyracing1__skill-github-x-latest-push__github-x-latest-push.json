@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/fitzyracing1/skill-github-x-latest-push/github-x-latest-push",
+  "type": "skill",
+  "name": "github-x-latest-push",
+  "description": "Show the latest GitHub push or commit from the authenticated user together with any related posts on X.",
+  "author": "fitzyracing1",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/fitzyracing1/skill-github-x-latest-push/blob/HEAD/SKILL.md",
+    "repo": "fitzyracing1/skill-github-x-latest-push",
+    "path": "SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

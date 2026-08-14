@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/AvihaiShai/Hypertrophy-Toolbox-v3/claude-skills-build-css-skill-md",
+  "type": "skill",
+  "name": "claude-skills-build-css-skill-md",
+  "description": "Build the Bootstrap-customized CSS bundle from scss/custom-bootstrap.scss.",
+  "author": "AvihaiShai",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/AvihaiShai/Hypertrophy-Toolbox-v3/blob/HEAD/.claude/skills/build-css/SKILL.md",
+    "repo": "AvihaiShai/Hypertrophy-Toolbox-v3",
+    "path": ".claude/skills/build-css/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

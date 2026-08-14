@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/GrandpaNiuu/Script-Hub-Grandpaniu/example-skill",
+  "type": "skill",
+  "name": "example-skill",
+  "description": "Example skill manifest for adapter discovery.",
+  "author": "GrandpaNiuu",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/GrandpaNiuu/Script-Hub-Grandpaniu/blob/HEAD/examples/skill/SKILL.md",
+    "repo": "GrandpaNiuu/Script-Hub-Grandpaniu",
+    "path": "examples/skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

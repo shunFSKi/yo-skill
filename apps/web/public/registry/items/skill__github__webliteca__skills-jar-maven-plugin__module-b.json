@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/webliteca/skills-jar-maven-plugin/module-b",
+  "type": "skill",
+  "name": "module-b",
+  "description": "Skill for module B in the multi-module integration test project to verify multi-module packaging.",
+  "author": "webliteca",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/webliteca/skills-jar-maven-plugin/blob/HEAD/src/it/package-multi-module/module-b/skills/module-b/SKILL.md",
+    "repo": "webliteca/skills-jar-maven-plugin",
+    "path": "src/it/package-multi-module/module-b/skills/module-b/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

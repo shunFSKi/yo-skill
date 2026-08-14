@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/DanielStormApps/claude-code-skills/next-phase",
+  "type": "skill",
+  "name": "/next-phase",
+  "description": "reply with next phase steps",
+  "author": "DanielStormApps",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/DanielStormApps/claude-code-skills/blob/HEAD/skills/next-phase/SKILL.md",
+    "repo": "DanielStormApps/claude-code-skills",
+    "path": "skills/next-phase/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

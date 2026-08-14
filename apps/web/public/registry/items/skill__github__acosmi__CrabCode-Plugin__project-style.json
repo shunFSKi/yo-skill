@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/acosmi/CrabCode-Plugin/project-style",
+  "type": "skill",
+  "name": "project-style",
+  "description": "Capture local project conventions.",
+  "author": "acosmi",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/acosmi/CrabCode-Plugin/blob/HEAD/tests/fixtures/existing-crabcode-skills/.crabcode/skills/project-style/SKILL.md",
+    "repo": "acosmi/CrabCode-Plugin",
+    "path": "tests/fixtures/existing-crabcode-skills/.crabcode/skills/project-style/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

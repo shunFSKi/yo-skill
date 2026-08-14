@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/ils15/pantheon-opencode/file-prompts",
+  "type": "skill",
+  "name": "File Prompts",
+  "description": "Load prompts from external files with path expansion.",
+  "author": "ils15",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ils15/pantheon-opencode/blob/HEAD/.opencode/skills/file-prompts/SKILL.md",
+    "repo": "ils15/pantheon-opencode",
+    "path": ".opencode/skills/file-prompts/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

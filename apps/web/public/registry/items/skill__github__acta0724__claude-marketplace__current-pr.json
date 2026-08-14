@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/acta0724/claude-marketplace/current-pr",
+  "type": "skill",
+  "name": "current-pr",
+  "description": "現在のPRを引き継ぎます。\nTrigger: assign, take over, current pr",
+  "author": "acta0724",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/acta0724/claude-marketplace/blob/HEAD/wf/skills/current-pr/SKILL.md",
+    "repo": "acta0724/claude-marketplace",
+    "path": "wf/skills/current-pr/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/7ShIkI3/Decepticon-x-DarkTriad/reporting-example",
+  "type": "skill",
+  "name": "reporting-example",
+  "description": "A reporting skill, exempt from the attribution rule via path inference.",
+  "author": "7ShIkI3",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/7ShIkI3/Decepticon-x-DarkTriad/blob/HEAD/packages/decepticon/tests/unit/skill_audit/fixtures/reporting_skill.md",
+    "repo": "7ShIkI3/Decepticon-x-DarkTriad",
+    "path": "packages/decepticon/tests/unit/skill_audit/fixtures/reporting_skill.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/ganesh210799/BMAD/bmad-edit-prd-c2c05c11",
+  "type": "skill",
+  "name": "bmad-edit-prd",
+  "description": "Edit an existing PRD. Use when the user says \"edit this PRD\".",
+  "author": "ganesh210799",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ganesh210799/BMAD/blob/HEAD/.kiro/skills/bmad-edit-prd/SKILL.md",
+    "repo": "ganesh210799/BMAD",
+    "path": ".kiro/skills/bmad-edit-prd/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

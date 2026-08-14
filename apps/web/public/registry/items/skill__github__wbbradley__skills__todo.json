@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/wbbradley/skills/todo",
+  "type": "skill",
+  "name": "todo",
+  "description": "Research and add a new task (or phase) to the front of the PLAN.md queue.",
+  "author": "wbbradley",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/wbbradley/skills/blob/HEAD/todo/SKILL.md",
+    "repo": "wbbradley/skills",
+    "path": "todo/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

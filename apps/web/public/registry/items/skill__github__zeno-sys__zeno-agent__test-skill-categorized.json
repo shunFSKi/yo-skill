@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/zeno-sys/zeno-agent/test-skill-categorized",
+  "type": "skill",
+  "name": "test_skill_categorized",
+  "description": "Same shape as test_skill, nested under a category folder.",
+  "author": "zeno-sys",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/zeno-sys/zeno-agent/blob/HEAD/skills/examples/test_skill_categorized/SKILL.md",
+    "repo": "zeno-sys/zeno-agent",
+    "path": "skills/examples/test_skill_categorized/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/DekodeInteraktiv/project-base/example-skill",
+  "type": "skill",
+  "name": "example-skill",
+  "description": "Describe what this skill does in one sentence.",
+  "author": "DekodeInteraktiv",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/DekodeInteraktiv/project-base/blob/HEAD/.github/skills/example-skill/SKILL.md",
+    "repo": "DekodeInteraktiv/project-base",
+    "path": ".github/skills/example-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

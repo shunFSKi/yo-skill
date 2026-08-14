@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/donaldgifford/claudelint/cmd-claudelint-testdata-fixture-claude-skills-no-name-skill-md",
+  "type": "skill",
+  "name": "cmd-claudelint-testdata-fixture-claude-skills-no-name-skill-md",
+  "description": "A skill that forgot to include name. The description is long enough to satisfy the trigger-clarity rule since we need at least a few sentences describing the skill's activation pattern.",
+  "author": "donaldgifford",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/donaldgifford/claudelint/blob/HEAD/cmd/claudelint/testdata/fixture/.claude/skills/no-name/SKILL.md",
+    "repo": "donaldgifford/claudelint",
+    "path": "cmd/claudelint/testdata/fixture/.claude/skills/no-name/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

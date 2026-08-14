@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/hassan-mohiddin/freeflow/answer-question",
+  "type": "skill",
+  "name": "answer-question",
+  "description": "Answer direct user questions before proposing workflow action.",
+  "author": "hassan-mohiddin",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/hassan-mohiddin/freeflow/blob/HEAD/deprecated/skill-tooling-pre-rewrite/skill-eval/evaluate-skill/fixtures/draft-only/skills/answer-question/SKILL.md",
+    "repo": "hassan-mohiddin/freeflow",
+    "path": "deprecated/skill-tooling-pre-rewrite/skill-eval/evaluate-skill/fixtures/draft-only/skills/answer-question/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

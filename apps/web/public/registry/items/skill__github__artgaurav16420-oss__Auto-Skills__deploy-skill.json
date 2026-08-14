@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/artgaurav16420-oss/Auto-Skills/deploy-skill",
+  "type": "skill",
+  "name": "deploy-skill",
+  "description": "Deploy applications to production, configure CI/CD pipelines, and manage releases",
+  "author": "artgaurav16420-oss",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/artgaurav16420-oss/Auto-Skills/blob/HEAD/data/benchmark-skills/deploy-skill/SKILL.md",
+    "repo": "artgaurav16420-oss/Auto-Skills",
+    "path": "data/benchmark-skills/deploy-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/JoTalbot/AIOS/security-port-scanner",
+  "type": "skill",
+  "name": "security-port-scanner",
+  "description": "Real logic implementation",
+  "author": "JoTalbot",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/JoTalbot/AIOS/blob/HEAD/skills/core/security-port-scanner/SKILL.md",
+    "repo": "JoTalbot/AIOS",
+    "path": "skills/core/security-port-scanner/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

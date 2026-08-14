@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/ibuildthecloud/discobox/agents-skills-ci-skill-md",
+  "type": "skill",
+  "name": "agents-skills-ci-skill-md",
+  "description": "Run pnpm run ci and resolve all issues",
+  "author": "ibuildthecloud",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ibuildthecloud/discobox/blob/HEAD/.agents/skills/ci/SKILL.md",
+    "repo": "ibuildthecloud/discobox",
+    "path": ".agents/skills/ci/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

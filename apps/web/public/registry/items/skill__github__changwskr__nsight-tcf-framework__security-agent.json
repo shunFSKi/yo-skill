@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/changwskr/nsight-tcf-framework/security-agent",
+  "type": "skill",
+  "name": "security-agent",
+  "description": "Secret/SAST Evidence for HG-70 (S80-VERIFY).",
+  "author": "changwskr",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/changwskr/nsight-tcf-framework/blob/HEAD/tcf-harness-자동코딩/skills/security-agent/SKILL.md",
+    "repo": "changwskr/nsight-tcf-framework",
+    "path": "tcf-harness-자동코딩/skills/security-agent/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

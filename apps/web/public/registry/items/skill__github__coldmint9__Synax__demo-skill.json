@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/coldmint9/Synax/demo-skill",
+  "type": "skill",
+  "name": "demo-skill",
+  "description": "Demo skill for parser tests",
+  "author": "coldmint9",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/coldmint9/Synax/blob/HEAD/api/services/skills/__tests__/fixtures/sample-skill/SKILL.md",
+    "repo": "coldmint9/Synax",
+    "path": "api/services/skills/__tests__/fixtures/sample-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

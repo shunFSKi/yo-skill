@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/Tetra-Research/jig/test-skill",
+  "type": "skill",
+  "name": "test-skill",
+  "description": "A test skill for the eval harness test fixtures.",
+  "author": "Tetra-Research",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Tetra-Research/jig/blob/HEAD/eval/harness/test-fixtures/valid-scenario/codebase/.claude/skills/test-skill/SKILL.md",
+    "repo": "Tetra-Research/jig",
+    "path": "eval/harness/test-fixtures/valid-scenario/codebase/.claude/skills/test-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": false
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

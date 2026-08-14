@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/amitray007/ccstack/plugin-skill",
+  "type": "skill",
+  "name": "plugin-skill",
+  "description": "A skill provided by a plugin — not reachable by skillOverrides (skills.md §9.1).",
+  "author": "amitray007",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/amitray007/ccstack/blob/HEAD/fixtures/golden-tree/plugin-cache/demo-plugin/1.0.0/skills/plugin-skill/SKILL.md",
+    "repo": "amitray007/ccstack",
+    "path": "fixtures/golden-tree/plugin-cache/demo-plugin/1.0.0/skills/plugin-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

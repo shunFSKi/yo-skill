@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/talkops-ai/aws-orchestrator-agent/s3-module-generator",
+  "type": "skill",
+  "name": "s3-module-generator",
+  "description": "terraform s3 bucket object storage lifecycle encryption aws_s3_bucket",
+  "author": "talkops-ai",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/talkops-ai/aws-orchestrator-agent/blob/HEAD/evals/files/SKILL.md",
+    "repo": "talkops-ai/aws-orchestrator-agent",
+    "path": "evals/files/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

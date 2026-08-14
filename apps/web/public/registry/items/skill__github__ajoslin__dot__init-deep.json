@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/ajoslin/dot/init-deep",
+  "type": "skill",
+  "name": "init-deep",
+  "description": "Generate hierarchical AGENTS.md knowledge base with deep analysis.",
+  "author": "ajoslin",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ajoslin/dot/blob/HEAD/config/opencode/skills/init-deep/SKILL.md",
+    "repo": "ajoslin/dot",
+    "path": "config/opencode/skills/init-deep/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

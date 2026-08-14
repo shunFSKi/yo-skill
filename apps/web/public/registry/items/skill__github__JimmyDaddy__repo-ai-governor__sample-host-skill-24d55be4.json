@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/JimmyDaddy/repo-ai-governor/sample-host-skill-24d55be4",
+  "type": "skill",
+  "name": "sample-host-skill",
+  "description": "Sample host skill used by ACP clean-room verification.",
+  "author": "JimmyDaddy",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/JimmyDaddy/repo-ai-governor/blob/HEAD/.repo-ai-governor/generated/acp/acp-cleanroom-verification.provenance/github-copilot/packaged-distribution/link/generated/hosts/github-copilot-cli-plugin/skills/sample-host-skill/SKILL.md",
+    "repo": "JimmyDaddy/repo-ai-governor",
+    "path": ".repo-ai-governor/generated/acp/acp-cleanroom-verification.provenance/github-copilot/packaged-distribution/link/generated/hosts/github-copilot-cli-plugin/skills/sample-host-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/Revazashvili/ai-search-in-legal-documents/claude-skills-stop-services-skill-md",
+  "type": "skill",
+  "name": "claude-skills-stop-services-skill-md",
+  "description": "Stop backend, frontend, and postgres",
+  "author": "Revazashvili",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Revazashvili/ai-search-in-legal-documents/blob/HEAD/.claude/skills/stop-services/skill.md",
+    "repo": "Revazashvili/ai-search-in-legal-documents",
+    "path": ".claude/skills/stop-services/skill.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/a1627418541/-/template-skill-6e6c4631",
+  "type": "skill",
+  "name": "template-skill",
+  "description": "Replace with description of the skill and when Claude should use it.",
+  "author": "a1627418541",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/a1627418541/-/blob/HEAD/.zencoder/skills/template-skill/SKILL.md",
+    "repo": "a1627418541/-",
+    "path": ".zencoder/skills/template-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

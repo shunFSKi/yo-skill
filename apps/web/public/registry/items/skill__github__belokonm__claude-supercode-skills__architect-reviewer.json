@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/belokonm/claude-supercode-skills/architect-reviewer",
+  "type": "skill",
+  "name": "architect-reviewer",
+  "description": "Use when user needs system design validation, architectural pattern assessment, or technology stack evaluation.",
+  "author": "belokonm",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/belokonm/claude-supercode-skills/blob/HEAD/architect-reviewer-skill/SKILL.md",
+    "repo": "belokonm/claude-supercode-skills",
+    "path": "architect-reviewer-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

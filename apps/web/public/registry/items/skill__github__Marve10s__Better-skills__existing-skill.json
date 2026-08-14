@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/Marve10s/Better-skills/existing-skill",
+  "type": "skill",
+  "name": "Existing Skill",
+  "description": "A pre-existing skill in .claude/skills",
+  "author": "Marve10s",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Marve10s/Better-skills/blob/HEAD/tests/fixtures/claude-skills/existing-skill/SKILL.md",
+    "repo": "Marve10s/Better-skills",
+    "path": "tests/fixtures/claude-skills/existing-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

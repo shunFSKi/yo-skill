@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/reformlab/ReformLab/bmad-bmm-fix-ci",
+  "type": "skill",
+  "name": "bmad-bmm-fix-ci",
+  "description": "Diagnose and fix GitHub CI failures locally. Use when the user says 'fix ci' or 'fix ci failures'.",
+  "author": "reformlab",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/reformlab/ReformLab/blob/HEAD/.claude/skills/bmad-bmm-fix-ci/SKILL.md",
+    "repo": "reformlab/ReformLab",
+    "path": ".claude/skills/bmad-bmm-fix-ci/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/MoeenNehzati/famulus/guide",
+  "type": "skill",
+  "name": "guide",
+  "description": "Compact instruction-only migration fixture.",
+  "author": "MoeenNehzati",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/MoeenNehzati/famulus/blob/HEAD/tests/fixtures/nested_module_migration/valid/skills/guide/SKILL.md",
+    "repo": "MoeenNehzati/famulus",
+    "path": "tests/fixtures/nested_module_migration/valid/skills/guide/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

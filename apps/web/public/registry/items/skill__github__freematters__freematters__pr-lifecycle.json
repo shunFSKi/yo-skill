@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/freematters/freematters/pr-lifecycle",
+  "type": "skill",
+  "name": "pr-lifecycle",
+  "description": "Monitor a PR/MR until it is merged or closed.",
+  "author": "freematters",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/freematters/freematters/blob/HEAD/packages/freeflow/workflows/pr-lifecycle/SKILL.md",
+    "repo": "freematters/freematters",
+    "path": "packages/freeflow/workflows/pr-lifecycle/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

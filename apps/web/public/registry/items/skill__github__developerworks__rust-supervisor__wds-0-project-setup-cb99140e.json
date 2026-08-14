@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/developerworks/rust-supervisor/wds-0-project-setup-cb99140e",
+  "type": "skill",
+  "name": "wds-0-project-setup",
+  "description": "Project onboarding - determine project type, complexity, tech stack, and route to correct phase",
+  "author": "developerworks",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/developerworks/rust-supervisor/blob/HEAD/.agents/skills/wds-0-project-setup/SKILL.md",
+    "repo": "developerworks/rust-supervisor",
+    "path": ".agents/skills/wds-0-project-setup/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

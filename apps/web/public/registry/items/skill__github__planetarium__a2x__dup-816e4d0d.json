@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/planetarium/a2x/dup-816e4d0d",
+  "type": "skill",
+  "name": "dup",
+  "description": "Fixture A with a duplicate name - used to verify the loader detects duplicates.",
+  "author": "planetarium",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/planetarium/a2x/blob/HEAD/packages/a2x/src/__tests__/fixtures/skills/duplicate-name-a/SKILL.md",
+    "repo": "planetarium/a2x",
+    "path": "packages/a2x/src/__tests__/fixtures/skills/duplicate-name-a/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

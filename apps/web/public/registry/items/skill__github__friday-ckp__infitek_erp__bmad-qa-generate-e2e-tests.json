@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/friday-ckp/infitek_erp/bmad-qa-generate-e2e-tests",
+  "type": "skill",
+  "name": "bmad-qa-generate-e2e-tests",
+  "description": "Generate end to end automated tests for existing features. Use when the user says \"create qa automated tests for [feature]\"",
+  "author": "friday-ckp",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/friday-ckp/infitek_erp/blob/HEAD/_bmad/bmm/4-implementation/bmad-qa-generate-e2e-tests/SKILL.md.bak",
+    "repo": "friday-ckp/infitek_erp",
+    "path": "_bmad/bmm/4-implementation/bmad-qa-generate-e2e-tests/SKILL.md.bak"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/icdev-ai/icdev/icdev-worktree-768c48bb",
+  "type": "skill",
+  "name": "icdev-worktree",
+  "description": "Create and manage isolated git worktrees for parallel ICDEV™ task execution. Use when invoking /icdev-worktree.",
+  "author": "icdev-ai",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/icdev-ai/icdev/blob/HEAD/.agents/skills/icdev-worktree/SKILL.md",
+    "repo": "icdev-ai/icdev",
+    "path": ".agents/skills/icdev-worktree/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

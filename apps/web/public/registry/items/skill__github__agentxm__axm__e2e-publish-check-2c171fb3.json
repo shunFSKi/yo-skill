@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/agentxm/axm/e2e-publish-check-2c171fb3",
+  "type": "skill",
+  "name": "e2e-publish-check",
+  "description": "A new skill",
+  "author": "agentxm",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/agentxm/axm/blob/HEAD/.axm/extensions/@local-dev-user/skills/e2e-publish-check/src/SKILL.md",
+    "repo": "agentxm/axm",
+    "path": ".axm/extensions/@local-dev-user/skills/e2e-publish-check/src/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

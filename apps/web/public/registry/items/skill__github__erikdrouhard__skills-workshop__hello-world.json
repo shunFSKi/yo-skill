@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/erikdrouhard/skills-workshop/hello-world",
+  "type": "skill",
+  "name": "hello-world",
+  "description": "this skill responds with \"HELLO WORLD!\" when the user first says hi or hello",
+  "author": "erikdrouhard",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/erikdrouhard/skills-workshop/blob/HEAD/.claude/skills/hello-world/SKILL.md",
+    "repo": "erikdrouhard/skills-workshop",
+    "path": ".claude/skills/hello-world/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/KarimJebara/Curator/folded-desc",
+  "type": "skill",
+  "name": "folded-desc",
+  "description": "This description uses a folded block scalar. Lines should be joined with spaces. TRIGGER when: user asks for X.",
+  "author": "KarimJebara",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/KarimJebara/Curator/blob/HEAD/tests/fixtures/yaml-edge-cases/folded-desc/SKILL.md",
+    "repo": "KarimJebara/Curator",
+    "path": "tests/fixtures/yaml-edge-cases/folded-desc/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

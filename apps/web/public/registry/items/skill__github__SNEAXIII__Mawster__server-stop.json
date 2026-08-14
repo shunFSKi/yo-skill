@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/SNEAXIII/Mawster/server-stop",
+  "type": "skill",
+  "name": "server-stop",
+  "description": "Use when stopping all running servers — stops both dev and test environments.",
+  "author": "SNEAXIII",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/SNEAXIII/Mawster/blob/HEAD/.claude/skills/server-stop/SKILL.md",
+    "repo": "SNEAXIII/Mawster",
+    "path": ".claude/skills/server-stop/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/snyk/agent-scan/test-skill-0c706d76",
+  "type": "skill",
+  "name": "test-skill",
+  "description": "This is a test that everythings is correct",
+  "author": "snyk",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/snyk/agent-scan/blob/HEAD/tests/mcp_servers/.test-client/skills/test-skill/SKILL.md",
+    "repo": "snyk/agent-scan",
+    "path": "tests/mcp_servers/.test-client/skills/test-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

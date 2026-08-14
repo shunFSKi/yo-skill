@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/0xzgbot/forge-nps-v01/hermes-home-skills-github-skill-md",
+  "type": "skill",
+  "name": "hermes-home-skills-github-skill-md",
+  "description": "GitHub workflow skills for managing repositories, pull requests, code reviews, issues, and CI/CD pipelines using the gh CLI and git via terminal.",
+  "author": "0xzgbot",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/0xzgbot/forge-nps-v01/blob/HEAD/hermes_home/skills/github/SKILL.md",
+    "repo": "0xzgbot/forge-nps-v01",
+    "path": "hermes_home/skills/github/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

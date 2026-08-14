@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/zakelfassi/skills-driven-development/cli-test-fixtures-invalid-missing-name-skill-md",
+  "type": "skill",
+  "name": "cli-test-fixtures-invalid-missing-name-skill-md",
+  "description": "A skill that is missing the required name field. Use when testing validator error detection.",
+  "author": "zakelfassi",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/zakelfassi/skills-driven-development/blob/HEAD/cli/test/fixtures/invalid/missing-name/SKILL.md",
+    "repo": "zakelfassi/skills-driven-development",
+    "path": "cli/test/fixtures/invalid/missing-name/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/nahyeongjin1/nomad-pilot/claude-skills-adr-skill-md",
+  "type": "skill",
+  "name": "claude-skills-adr-skill-md",
+  "description": "ADR(의사결정 로그) 참조. 새 설계 결정, 기술 선택, 기존 결정과의 충돌 확인, 태스크 계획 수립 시 사용.",
+  "author": "nahyeongjin1",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/nahyeongjin1/nomad-pilot/blob/HEAD/.claude/skills/adr/SKILL.md",
+    "repo": "nahyeongjin1/nomad-pilot",
+    "path": ".claude/skills/adr/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

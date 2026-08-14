@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/AI-Coding-Shield/ai-coding-shield/cloud-scanner",
+  "type": "skill",
+  "name": "Cloud Scanner",
+  "description": "Scanning cloud environment for leaks",
+  "author": "AI-Coding-Shield",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/AI-Coding-Shield/ai-coding-shield/blob/HEAD/tests/fixtures/integration/skills/cloud_scanner/SKILL.md",
+    "repo": "AI-Coding-Shield/ai-coding-shield",
+    "path": "tests/fixtures/integration/skills/cloud_scanner/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/metric-space-ai/claude-workjet/workjet",
+  "type": "skill",
+  "name": "workjet",
+  "description": "Legacy-Hinweis für frühere Workjet-Installationen.",
+  "author": "metric-space-ai",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/metric-space-ai/claude-workjet/blob/HEAD/skills/workjet/SKILL.md",
+    "repo": "metric-space-ai/claude-workjet",
+    "path": "skills/workjet/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

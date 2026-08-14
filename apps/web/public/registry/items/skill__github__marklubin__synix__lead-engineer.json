@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/marklubin/synix/lead-engineer",
+  "type": "skill",
+  "name": "lead-engineer",
+  "description": "The lead engineer that approves designs and delegates works",
+  "author": "marklubin",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/marklubin/synix/blob/HEAD/.agents/skills/lead-engineer/SKILL.md",
+    "repo": "marklubin/synix",
+    "path": ".agents/skills/lead-engineer/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

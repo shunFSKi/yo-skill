@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/saucam/anyagent/reviewer",
+  "type": "skill",
+  "name": "reviewer",
+  "description": "Use for code review focused on correctness, regressions, security, and missing tests.",
+  "author": "saucam",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/saucam/anyagent/blob/HEAD/examples/claude-source/.claude/skills/reviewer/SKILL.md",
+    "repo": "saucam/anyagent",
+    "path": "examples/claude-source/.claude/skills/reviewer/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

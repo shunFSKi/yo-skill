@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/kitaekatt/plugins-kit/present-skill",
+  "type": "skill",
+  "name": "present-skill",
+  "description": "Use when testing the golden corpus reference-resolution path. Do NOT use for real work; fixture only.",
+  "author": "kitaekatt",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/kitaekatt/plugins-kit/blob/HEAD/tests/skills-kit/golden_corpus/fixtures/references/.claude/skills/present-skill/SKILL.md",
+    "repo": "kitaekatt/plugins-kit",
+    "path": "tests/skills-kit/golden_corpus/fixtures/references/.claude/skills/present-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

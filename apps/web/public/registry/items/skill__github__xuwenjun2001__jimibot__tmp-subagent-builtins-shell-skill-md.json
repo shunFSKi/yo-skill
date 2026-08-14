@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/xuwenjun2001/jimibot/tmp-subagent-builtins-shell-skill-md",
+  "type": "skill",
+  "name": "tmp-subagent-builtins-shell-skill-md",
+  "description": "Use shell commands for workspace inspection.",
+  "author": "xuwenjun2001",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/xuwenjun2001/jimibot/blob/HEAD/tmp/subagent-builtins/shell/SKILL.md",
+    "repo": "xuwenjun2001/jimibot",
+    "path": "tmp/subagent-builtins/shell/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

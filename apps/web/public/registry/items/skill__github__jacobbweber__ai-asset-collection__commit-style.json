@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/jacobbweber/ai-asset-collection/commit-style",
+  "type": "skill",
+  "name": "Commit Style",
+  "description": "House commit message rules",
+  "author": "jacobbweber",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/jacobbweber/ai-asset-collection/blob/HEAD/skills/commit-style/SKILL.md",
+    "repo": "jacobbweber/ai-asset-collection",
+    "path": "skills/commit-style/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/curie-eng/curie/greeter",
+  "type": "skill",
+  "name": "greeter",
+  "description": "Greets a user by name in a friendly, concise sentence.",
+  "author": "curie-eng",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/curie-eng/curie/blob/HEAD/packages/plugin-format/tests/fixtures/valid_bundle/skills/greeter/SKILL.md",
+    "repo": "curie-eng/curie",
+    "path": "packages/plugin-format/tests/fixtures/valid_bundle/skills/greeter/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

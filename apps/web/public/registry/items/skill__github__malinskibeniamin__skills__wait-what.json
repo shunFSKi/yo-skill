@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/malinskibeniamin/skills/wait-what",
+  "type": "skill",
+  "name": "wait-what",
+  "description": "Stop. That last message did not land -- re-pitch it.",
+  "author": "malinskibeniamin",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/malinskibeniamin/skills/blob/HEAD/codex-skills/wait-what/SKILL.md",
+    "repo": "malinskibeniamin/skills",
+    "path": "codex-skills/wait-what/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

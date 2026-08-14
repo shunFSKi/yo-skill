@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/victusfate/boomerang/claude-skills-prune-skill-md",
+  "type": "skill",
+  "name": "claude-skills-prune-skill-md",
+  "description": "Run all quality lenses (validate, simplify), aggregate findings into a design doc, then drive the full feature chain (PRD → TDD → PR) to fix them systematically.",
+  "author": "victusfate",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/victusfate/boomerang/blob/HEAD/.claude/skills/prune/SKILL.md",
+    "repo": "victusfate/boomerang",
+    "path": ".claude/skills/prune/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

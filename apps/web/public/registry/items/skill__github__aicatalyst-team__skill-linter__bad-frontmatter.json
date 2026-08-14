@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/aicatalyst-team/skill-linter/bad-frontmatter",
+  "type": "skill",
+  "name": "bad-frontmatter",
+  "description": "",
+  "author": "aicatalyst-team",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/aicatalyst-team/skill-linter/blob/HEAD/tests/fixtures/invalid/bad-frontmatter/SKILL.md",
+    "repo": "aicatalyst-team/skill-linter",
+    "path": "tests/fixtures/invalid/bad-frontmatter/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/webdevtodayjason/subctl-rust/test-skill-beta",
+  "type": "skill",
+  "name": "test-skill-beta",
+  "description": "A test skill for the autoload integration test (beta)",
+  "author": "webdevtodayjason",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/webdevtodayjason/subctl-rust/blob/HEAD/crates/evy-thinking/tests/fixture_skills/test-skill-beta/SKILL.md",
+    "repo": "webdevtodayjason/subctl-rust",
+    "path": "crates/evy-thinking/tests/fixture_skills/test-skill-beta/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/witchwasin/Axiom-PMO/pmo-quality-release-4425a2db",
+  "type": "skill",
+  "name": "pmo-quality-release",
+  "description": "Valid fixture skill description.",
+  "author": "witchwasin",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/witchwasin/Axiom-PMO/blob/HEAD/tests/doctor-fixtures/skill-without-frontmatter/skills/pmo-quality-release/SKILL.md",
+    "repo": "witchwasin/Axiom-PMO",
+    "path": "tests/doctor-fixtures/skill-without-frontmatter/skills/pmo-quality-release/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/nbsp1221/skillpin/python-refactor",
+  "type": "skill",
+  "name": "python-refactor",
+  "description": "Refactors Python modules for maintainability.",
+  "author": "nbsp1221",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/nbsp1221/skillpin/blob/HEAD/test/fixtures/skills/search-library/python-refactor/SKILL.md",
+    "repo": "nbsp1221/skillpin",
+    "path": "test/fixtures/skills/search-library/python-refactor/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

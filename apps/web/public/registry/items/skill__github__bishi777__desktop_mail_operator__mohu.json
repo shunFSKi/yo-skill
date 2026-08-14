@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/bishi777/desktop_mail_operator/mohu",
+  "type": "skill",
+  "name": "mohu",
+  "description": "もふもふと言う",
+  "author": "bishi777",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/bishi777/desktop_mail_operator/blob/HEAD/.claude/skills/mohu/SKILL.md",
+    "repo": "bishi777/desktop_mail_operator",
+    "path": ".claude/skills/mohu/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

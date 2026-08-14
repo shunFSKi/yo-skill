@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/alecsg77/alecsg77-portal/bmad-advanced-elicitation",
+  "type": "skill",
+  "name": "bmad-advanced-elicitation",
+  "description": "Push the LLM to reconsider, refine, and improve its recent output.",
+  "author": "alecsg77",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/alecsg77/alecsg77-portal/blob/HEAD/_bmad/core/skills/bmad-advanced-elicitation/SKILL.md",
+    "repo": "alecsg77/alecsg77-portal",
+    "path": "_bmad/core/skills/bmad-advanced-elicitation/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

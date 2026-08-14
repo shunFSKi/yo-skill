@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/muratovv/ai-hats/exp-marker",
+  "type": "skill",
+  "name": "exp-marker",
+  "description": "Carries this sandbox agent's marker word. Load to learn the marker.",
+  "author": "muratovv",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/muratovv/ai-hats/blob/HEAD/experiments/smoke/arms/b/skills/exp-marker/SKILL.md",
+    "repo": "muratovv/ai-hats",
+    "path": "experiments/smoke/arms/b/skills/exp-marker/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

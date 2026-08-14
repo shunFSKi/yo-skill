@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/constructorfabric/insight-front/cypilot-pr-status",
+  "type": "skill",
+  "name": "cypilot-pr-status",
+  "description": "Generate status reports for GitHub PRs with severity assessment and resolved-comment audit",
+  "author": "constructorfabric",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/constructorfabric/insight-front/blob/HEAD/.agents/skills/cypilot-pr-status/SKILL.md",
+    "repo": "constructorfabric/insight-front",
+    "path": ".agents/skills/cypilot-pr-status/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

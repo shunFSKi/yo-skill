@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/iot-book/How-Agent/qa",
+  "type": "skill",
+  "name": "qa",
+  "description": "answer concise",
+  "author": "iot-book",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/iot-book/How-Agent/blob/HEAD/minimal_agents/examples/chapter-5/agent/skills_demo/qa/SKILL.md",
+    "repo": "iot-book/How-Agent",
+    "path": "minimal_agents/examples/chapter-5/agent/skills_demo/qa/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

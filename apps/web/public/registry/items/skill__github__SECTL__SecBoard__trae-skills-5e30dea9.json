@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/SECTL/SecBoard/trae-skills-5e30dea9",
+  "type": "skill",
+  "name": "依赖包",
+  "description": "分析依赖结构，分析代码库，执行命令",
+  "author": "SECTL",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/SECTL/SecBoard/blob/HEAD/.trae/skills/依赖包/SKILL.md",
+    "repo": "SECTL/SecBoard",
+    "path": ".trae/skills/依赖包/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

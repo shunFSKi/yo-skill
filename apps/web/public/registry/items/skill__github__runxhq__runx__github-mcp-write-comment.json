@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/runxhq/runx/github-mcp-write-comment",
+  "type": "skill",
+  "name": "github-mcp-write-comment",
+  "description": "Write a deterministic GitHub issue comment through the fixture MCP server.",
+  "author": "runxhq",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/runxhq/runx/blob/HEAD/examples/github-mcp-hero/write-comment/SKILL.md",
+    "repo": "runxhq/runx",
+    "path": "examples/github-mcp-hero/write-comment/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

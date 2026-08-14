@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/Pubx-ai/skills/planner",
+  "type": "skill",
+  "name": "planner",
+  "description": "Turn a completed requirements document into a detailed, sequential implementation plan. Alias for the create-plan skill.",
+  "author": "Pubx-ai",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Pubx-ai/skills/blob/HEAD/skills/dev/planner/SKILL.md",
+    "repo": "Pubx-ai/skills",
+    "path": "skills/dev/planner/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

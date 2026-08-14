@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/pproenca/dot-skills/invalid-name-a0557140",
+  "type": "skill",
+  "name": "invalid--name",
+  "description": "This skill has consecutive hyphens in the name which should fail validation.",
+  "author": "pproenca",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/pproenca/dot-skills/blob/HEAD/tests/fixtures/invalid-name-consecutive-hyphens/SKILL.md.fixture",
+    "repo": "pproenca/dot-skills",
+    "path": "tests/fixtures/invalid-name-consecutive-hyphens/SKILL.md.fixture"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

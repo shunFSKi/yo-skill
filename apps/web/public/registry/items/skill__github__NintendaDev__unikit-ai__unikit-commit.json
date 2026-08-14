@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/NintendaDev/unikit-ai/unikit-commit",
+  "type": "skill",
+  "name": "unikit-commit",
+  "description": "Custom commit skill replacing the base unikit-commit",
+  "author": "NintendaDev",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/NintendaDev/unikit-ai/blob/HEAD/examples/extensions/unikit-ext-replace/skills/custom-commit/SKILL.md",
+    "repo": "NintendaDev/unikit-ai",
+    "path": "examples/extensions/unikit-ext-replace/skills/custom-commit/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

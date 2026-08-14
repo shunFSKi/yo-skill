@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/EndoTheDev/OClaw/test-skill",
+  "type": "skill",
+  "name": "Test Skill",
+  "description": "A test skill for unit testing",
+  "author": "EndoTheDev",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/EndoTheDev/OClaw/blob/HEAD/tests/fixtures/skills/test_skill/SKILL.md",
+    "repo": "EndoTheDev/OClaw",
+    "path": "tests/fixtures/skills/test_skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

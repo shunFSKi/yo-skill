@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/ajasdascas/educore/obsidian-second-brain",
+  "type": "skill",
+  "name": "obsidian-second-brain",
+  "description": "Skill migrada globalmente desde configuración de Claude.",
+  "author": "ajasdascas",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ajasdascas/educore/blob/HEAD/.claude/skills/obsidian-second-brain/SKILL.md",
+    "repo": "ajasdascas/educore",
+    "path": ".claude/skills/obsidian-second-brain/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

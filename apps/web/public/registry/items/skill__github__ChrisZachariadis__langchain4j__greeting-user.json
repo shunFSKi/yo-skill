@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/ChrisZachariadis/langchain4j/greeting-user",
+  "type": "skill",
+  "name": "greeting-user",
+  "description": "Explains how to properly greet the user",
+  "author": "ChrisZachariadis",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ChrisZachariadis/langchain4j/blob/HEAD/langchain4j-skills/src/test/resources/skills/greeting-user/SKILL.md",
+    "repo": "ChrisZachariadis/langchain4j",
+    "path": "langchain4j-skills/src/test/resources/skills/greeting-user/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

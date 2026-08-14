@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/FrauH0lle/mevedel/review",
+  "type": "skill",
+  "name": "review",
+  "description": "Review code changes against a target and return prioritized findings",
+  "author": "FrauH0lle",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/FrauH0lle/mevedel/blob/HEAD/skills/review/SKILL.md",
+    "repo": "FrauH0lle/mevedel",
+    "path": "skills/review/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

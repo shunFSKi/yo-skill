@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/rrg92/powershai/echo-with-script",
+  "type": "skill",
+  "name": "echo-with-script",
+  "description": "Skill that ships a simple script resource.",
+  "author": "rrg92",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/rrg92/powershai/blob/HEAD/tests/pester/001-core/fixtures/skills/echo-with-script/SKILL.md",
+    "repo": "rrg92/powershai",
+    "path": "tests/pester/001-core/fixtures/skills/echo-with-script/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/wookat/agentmove/singular-root",
+  "type": "skill",
+  "name": "singular-root",
+  "description": "Lives in the singular skill/ directory opencode also scans.",
+  "author": "wookat",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/wookat/agentmove/blob/HEAD/packages/agentmove/test/fixtures/opencode-home/.config/opencode/skill/singular-root/SKILL.md",
+    "repo": "wookat/agentmove",
+    "path": "packages/agentmove/test/fixtures/opencode-home/.config/opencode/skill/singular-root/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

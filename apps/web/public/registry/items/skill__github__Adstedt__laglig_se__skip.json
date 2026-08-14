@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/Adstedt/laglig_se/skip",
+  "type": "skill",
+  "name": "_skip",
+  "description": "A _-prefixed directory — the loader must skip it.",
+  "author": "Adstedt",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Adstedt/laglig_se/blob/HEAD/tests/fixtures/skills/_skip/SKILL.md",
+    "repo": "Adstedt/laglig_se",
+    "path": "tests/fixtures/skills/_skip/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

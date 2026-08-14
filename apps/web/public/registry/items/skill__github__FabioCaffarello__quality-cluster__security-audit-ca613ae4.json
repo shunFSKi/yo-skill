@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/FabioCaffarello/quality-cluster/security-audit-ca613ae4",
+  "type": "skill",
+  "name": "Security Audit",
+  "description": "Security review checklist for code and infrastructure",
+  "author": "FabioCaffarello",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/FabioCaffarello/quality-cluster/blob/HEAD/.codex/skills/security-audit/SKILL.md",
+    "repo": "FabioCaffarello/quality-cluster",
+    "path": ".codex/skills/security-audit/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

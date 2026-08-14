@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/fazt/dotfiles/fxbuild",
+  "type": "skill",
+  "name": "fxbuild",
+  "description": "Check the build, to fix errors and linting errors",
+  "author": "fazt",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/fazt/dotfiles/blob/HEAD/claude/skills/fxbuild/SKILL.md",
+    "repo": "fazt/dotfiles",
+    "path": "claude/skills/fxbuild/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

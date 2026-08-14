@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/clawperator/clawperator/com-test-agent-skill-result",
+  "type": "skill",
+  "name": "com.test.agent-skill-result",
+  "description": "Emit framed SkillResult payloads for an agent-driven fixture.",
+  "author": "clawperator",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/clawperator/clawperator/blob/HEAD/apps/node/src/test/fixtures/skills/com.test.agent-skill-result/SKILL.md",
+    "repo": "clawperator/clawperator",
+    "path": "apps/node/src/test/fixtures/skills/com.test.agent-skill-result/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/jayterry/Dual-agent/build-analysis-payload",
+  "type": "skill",
+  "name": "build_analysis_payload",
+  "description": "建立分析 payload（urls、missing_evidence）",
+  "author": "jayterry",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/jayterry/Dual-agent/blob/HEAD/dual_agent/dai/skills/build_analysis_payload/SKILL.md",
+    "repo": "jayterry/Dual-agent",
+    "path": "dual_agent/dai/skills/build_analysis_payload/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

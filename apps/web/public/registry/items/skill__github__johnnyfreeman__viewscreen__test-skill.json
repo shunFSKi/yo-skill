@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/johnnyfreeman/viewscreen/test-skill",
+  "type": "skill",
+  "name": "test-skill",
+  "description": "A simple test skill that says hello",
+  "author": "johnnyfreeman",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/johnnyfreeman/viewscreen/blob/HEAD/.claude/skills/test-skill/SKILL.md",
+    "repo": "johnnyfreeman/viewscreen",
+    "path": ".claude/skills/test-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

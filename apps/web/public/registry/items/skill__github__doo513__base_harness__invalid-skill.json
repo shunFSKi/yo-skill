@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/doo513/base_harness/invalid-skill",
+  "type": "skill",
+  "name": "invalid-skill",
+  "description": "",
+  "author": "doo513",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/doo513/base_harness/blob/HEAD/tests/fixtures/invalid-skill/SKILL.md",
+    "repo": "doo513/base_harness",
+    "path": "tests/fixtures/invalid-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

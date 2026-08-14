@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/asshat1981ar/AutoDev/test-strategy",
+  "type": "skill",
+  "name": "test-strategy",
+  "description": "Choose efficient layered verification for a change.",
+  "author": "asshat1981ar",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/asshat1981ar/AutoDev/blob/HEAD/.cline/skills/test-strategy/SKILL.md",
+    "repo": "asshat1981ar/AutoDev",
+    "path": ".cline/skills/test-strategy/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

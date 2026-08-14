@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/TallyCampus/TallyCampus/bmad-correct-course-50c9b484",
+  "type": "skill",
+  "name": "bmad-correct-course",
+  "description": "Manage significant changes during sprint execution. Use when the user says \"correct course\" or \"propose sprint change\"",
+  "author": "TallyCampus",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/TallyCampus/TallyCampus/blob/HEAD/.pi/skills/bmad-correct-course/SKILL.md",
+    "repo": "TallyCampus/TallyCampus",
+    "path": ".pi/skills/bmad-correct-course/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

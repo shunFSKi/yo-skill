@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/sheshisheri-hi/token-optimizer/output-control",
+  "type": "skill",
+  "name": "output-control",
+  "description": "Terse Copilot output. Code only unless asked.",
+  "author": "sheshisheri-hi",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/sheshisheri-hi/token-optimizer/blob/HEAD/templates/cursor/skills/output-control/SKILL.md",
+    "repo": "sheshisheri-hi/token-optimizer",
+    "path": "templates/cursor/skills/output-control/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

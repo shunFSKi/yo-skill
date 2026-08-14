@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/runehub-ai/rune-hub/webhook-trigger",
+  "type": "skill",
+  "name": "webhook-trigger",
+  "description": "Receive incoming data via HTTP webhook.",
+  "author": "runehub-ai",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/runehub-ai/rune-hub/blob/HEAD/skills/webhook-trigger/SKILL.md",
+    "repo": "runehub-ai/rune-hub",
+    "path": "skills/webhook-trigger/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

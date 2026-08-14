@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/Dpbm/openclaw-setup/hello-world",
+  "type": "skill",
+  "name": "hello_world",
+  "description": "A simple skill that says hello.",
+  "author": "Dpbm",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Dpbm/openclaw-setup/blob/HEAD/claw/workspace/skills/hello-world/SKILL.md",
+    "repo": "Dpbm/openclaw-setup",
+    "path": "claw/workspace/skills/hello-world/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

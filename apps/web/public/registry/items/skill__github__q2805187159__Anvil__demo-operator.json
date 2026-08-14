@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/q2805187159/Anvil/demo-operator",
+  "type": "skill",
+  "name": "demo-operator",
+  "description": "Use this sample skill to verify plugin-provided skill roots.",
+  "author": "q2805187159",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/q2805187159/Anvil/blob/HEAD/examples/plugins/demo-operator-plugin/skills/demo-operator/SKILL.md",
+    "repo": "q2805187159/Anvil",
+    "path": "examples/plugins/demo-operator-plugin/skills/demo-operator/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

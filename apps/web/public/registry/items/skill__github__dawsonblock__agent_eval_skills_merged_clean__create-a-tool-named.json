@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/dawsonblock/agent_eval_skills_merged_clean/create-a-tool-named",
+  "type": "skill",
+  "name": "create-a-tool-named",
+  "description": "Convert local PDF text streams into Markdown bullet points.",
+  "author": "dawsonblock",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/dawsonblock/agent_eval_skills_merged_clean/blob/HEAD/ToolForge/skills/create-a-tool-named/SKILL.md",
+    "repo": "dawsonblock/agent_eval_skills_merged_clean",
+    "path": "ToolForge/skills/create-a-tool-named/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

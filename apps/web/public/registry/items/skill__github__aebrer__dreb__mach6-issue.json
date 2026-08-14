@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/aebrer/dreb/mach6-issue",
+  "type": "skill",
+  "name": "mach6-issue",
+  "description": "User override of the built-in mach6-issue skill for testing.",
+  "author": "aebrer",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/aebrer/dreb/blob/HEAD/packages/coding-agent/test/fixtures/skills/builtin-override/SKILL.md",
+    "repo": "aebrer/dreb",
+    "path": "packages/coding-agent/test/fixtures/skills/builtin-override/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

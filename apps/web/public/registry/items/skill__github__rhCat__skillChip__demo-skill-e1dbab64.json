@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/rhCat/skillChip/demo-skill-e1dbab64",
+  "type": "skill",
+  "name": "demo-skill",
+  "description": "A demo skill used as a test fixture for the validate perk. Use when checking that quick_validate.py accepts a well-formed SKILL.md.",
+  "author": "rhCat",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/rhCat/skillChip/blob/HEAD/openai/skill-creator/perks/validate/test/fixture/SKILL.md",
+    "repo": "rhCat/skillChip",
+    "path": "openai/skill-creator/perks/validate/test/fixture/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

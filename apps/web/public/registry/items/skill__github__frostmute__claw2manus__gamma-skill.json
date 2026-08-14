@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/frostmute/claw2manus/gamma-skill",
+  "type": "skill",
+  "name": "gamma-skill",
+  "description": "Yet another skill, sharing an author with alpha-skill",
+  "author": "frostmute",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/frostmute/claw2manus/blob/HEAD/tests/fixtures/integration_repo/author-a/another-one/SKILL.md",
+    "repo": "frostmute/claw2manus",
+    "path": "tests/fixtures/integration_repo/author-a/another-one/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

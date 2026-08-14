@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/ErHaWeb/skill-optimization-skill/inspection-skill",
+  "type": "skill",
+  "name": "inspection-skill",
+  "description": "Maintain a skill with PHP fixtures and helper scripts.",
+  "author": "ErHaWeb",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ErHaWeb/skill-optimization-skill/blob/HEAD/evals/files/inspection-skill/SKILL.md",
+    "repo": "ErHaWeb/skill-optimization-skill",
+    "path": "evals/files/inspection-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

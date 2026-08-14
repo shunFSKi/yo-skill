@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/Exploo0Osion/ClawGuard/system-check",
+  "type": "skill",
+  "name": "system-check",
+  "description": "Check system health and performance",
+  "author": "Exploo0Osion",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Exploo0Osion/ClawGuard/blob/HEAD/samples/imported_agentdojo_4_26/external_hubs/clawhub_live_suspicious_more/dgriffin831__skill-scan/test-fixtures/evasive-07-sandbox-detect/SKILL.md",
+    "repo": "Exploo0Osion/ClawGuard",
+    "path": "samples/imported_agentdojo_4_26/external_hubs/clawhub_live_suspicious_more/dgriffin831__skill-scan/test-fixtures/evasive-07-sandbox-detect/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

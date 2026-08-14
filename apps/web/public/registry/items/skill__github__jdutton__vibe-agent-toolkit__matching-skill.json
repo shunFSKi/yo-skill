@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/jdutton/vibe-agent-toolkit/matching-skill",
+  "type": "skill",
+  "name": "matching-skill",
+  "description": "A skill-claude-plugin fixture whose SKILL.md frontmatter name matches plugin.json name. Used to exercise the matching branch of the name cross-check.",
+  "author": "jdutton",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/jdutton/vibe-agent-toolkit/blob/HEAD/packages/agent-skills/test/fixtures/packaging-shapes/skill-claude-plugin-matching/SKILL.md",
+    "repo": "jdutton/vibe-agent-toolkit",
+    "path": "packages/agent-skills/test/fixtures/packaging-shapes/skill-claude-plugin-matching/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

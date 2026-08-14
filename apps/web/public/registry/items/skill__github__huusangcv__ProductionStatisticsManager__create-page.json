@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/huusangcv/ProductionStatisticsManager/create-page",
+  "type": "skill",
+  "name": "create-page",
+  "description": "Use when you need to create a new page",
+  "author": "huusangcv",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/huusangcv/ProductionStatisticsManager/blob/HEAD/.trae/skills/create-page/SKILL.md",
+    "repo": "huusangcv/ProductionStatisticsManager",
+    "path": ".trae/skills/create-page/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

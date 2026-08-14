@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/sunflower312/Layered-Memory/layered-memory",
+  "type": "skill",
+  "name": "layered-memory",
+  "description": "Use when continuing long-running or recurring tasks and you need to recover facts, decisions, and archived progress.",
+  "author": "sunflower312",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/sunflower312/Layered-Memory/blob/HEAD/plugins/layered-memory/tests/fixtures/mock-skills/layered-memory/SKILL.md",
+    "repo": "sunflower312/Layered-Memory",
+    "path": "plugins/layered-memory/tests/fixtures/mock-skills/layered-memory/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/wolfiesch/ompconf/screenshot-studio",
+  "type": "skill",
+  "name": "screenshot-studio",
+  "description": "Capture polished terminal screenshots from sanitized demo fixtures.",
+  "author": "wolfiesch",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/wolfiesch/ompconf/blob/HEAD/demo/fixtures/home/.omp/agent/skills/screenshot-studio/SKILL.md",
+    "repo": "wolfiesch/ompconf",
+    "path": "demo/fixtures/home/.omp/agent/skills/screenshot-studio/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/sampleXbro/agentsmesh/debugging-d6410f44",
+  "type": "skill",
+  "name": "debugging",
+  "description": "Debugging",
+  "author": "sampleXbro",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/sampleXbro/agentsmesh/blob/HEAD/tests/e2e/fixtures/copilot-project/.github/skills/debugging/SKILL.md",
+    "repo": "sampleXbro/agentsmesh",
+    "path": "tests/e2e/fixtures/copilot-project/.github/skills/debugging/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

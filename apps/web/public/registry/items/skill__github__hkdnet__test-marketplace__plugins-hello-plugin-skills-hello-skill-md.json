@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/hkdnet/test-marketplace/plugins-hello-plugin-skills-hello-skill-md",
+  "type": "skill",
+  "name": "plugins-hello-plugin-skills-hello-skill-md",
+  "description": "A dummy skill to verify the plugin is installed and invocable.",
+  "author": "hkdnet",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/hkdnet/test-marketplace/blob/HEAD/plugins/hello-plugin/skills/hello/SKILL.md",
+    "repo": "hkdnet/test-marketplace",
+    "path": "plugins/hello-plugin/skills/hello/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

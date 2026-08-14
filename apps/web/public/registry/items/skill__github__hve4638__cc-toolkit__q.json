@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/hve4638/cc-toolkit/q",
+  "type": "skill",
+  "name": "q",
+  "description": "[quick] 이번 턴 동안 sonnet 모델로 처리",
+  "author": "hve4638",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/hve4638/cc-toolkit/blob/HEAD/core/skills/q/SKILL.md",
+    "repo": "hve4638/cc-toolkit",
+    "path": "core/skills/q/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

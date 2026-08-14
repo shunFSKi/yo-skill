@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/PDP-Connect/pdpp/demo-codex-skill",
+  "type": "skill",
+  "name": "Demo Codex Skill",
+  "description": "Synthetic Codex skill fixture for source-inventory tests",
+  "author": "PDP-Connect",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/PDP-Connect/pdpp/blob/HEAD/packages/polyfill-connectors/fixtures/codex/source-home/deviceA/codex-home/skills/demo-skill/SKILL.md",
+    "repo": "PDP-Connect/pdpp",
+    "path": "packages/polyfill-connectors/fixtures/codex/source-home/deviceA/codex-home/skills/demo-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

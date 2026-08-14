@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/billyweisberg/paa-platform/fractal-core-handoff-common",
+  "type": "skill",
+  "name": "fractal-core-handoff-common",
+  "description": "Shared packet schemas and queue conventions for repo-local PAA installs.",
+  "author": "billyweisberg",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/billyweisberg/paa-platform/blob/HEAD/project-packs/fractal-core/skills/fractal-core-handoff-common/SKILL.md",
+    "repo": "billyweisberg/paa-platform",
+    "path": "project-packs/fractal-core/skills/fractal-core-handoff-common/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

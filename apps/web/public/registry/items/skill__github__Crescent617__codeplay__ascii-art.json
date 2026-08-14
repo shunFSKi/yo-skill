@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/Crescent617/codeplay/ascii-art",
+  "type": "skill",
+  "name": "ascii-art",
+  "description": "Generate ASCII art from text.",
+  "author": "Crescent617",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Crescent617/codeplay/blob/HEAD/.claude/skills/ascii-art/SKILL.md",
+    "repo": "Crescent617/codeplay",
+    "path": ".claude/skills/ascii-art/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

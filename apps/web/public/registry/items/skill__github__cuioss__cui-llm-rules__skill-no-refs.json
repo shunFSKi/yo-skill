@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/cuioss/cui-llm-rules/skill-no-refs",
+  "type": "skill",
+  "name": "skill-no-refs",
+  "description": "Skill without references directory",
+  "author": "cuioss",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/cuioss/cui-llm-rules/blob/HEAD/test/pm-plugin-development/plugin-maintain/fixtures/knowledge/skill-no-references/SKILL.md",
+    "repo": "cuioss/cui-llm-rules",
+    "path": "test/pm-plugin-development/plugin-maintain/fixtures/knowledge/skill-no-references/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

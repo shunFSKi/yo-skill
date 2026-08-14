@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/chancetop-com/core-ai/wrong-name-here",
+  "type": "skill",
+  "name": "wrong-name-here",
+  "description": "This skill has a name that does not match directory",
+  "author": "chancetop-com",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/chancetop-com/core-ai/blob/HEAD/core-ai/src/test/resources/skills/invalid-name/SKILL.md",
+    "repo": "chancetop-com/core-ai",
+    "path": "core-ai/src/test/resources/skills/invalid-name/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

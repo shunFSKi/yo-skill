@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/Toasterson/agent-plugin-ts/good",
+  "type": "skill",
+  "name": "good",
+  "description": "A perfectly valid skill. Use when testing conformance suites.",
+  "author": "Toasterson",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Toasterson/agent-plugin-ts/blob/HEAD/fixtures/cases/skill-invalid/plugin/skills/good/SKILL.md",
+    "repo": "Toasterson/agent-plugin-ts",
+    "path": "fixtures/cases/skill-invalid/plugin/skills/good/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

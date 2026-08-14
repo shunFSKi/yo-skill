@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/matthiaskloft/claude-skills/lit-status",
+  "type": "skill",
+  "name": "lit-status",
+  "description": "Read-only pipeline status.",
+  "author": "matthiaskloft",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/matthiaskloft/claude-skills/blob/HEAD/scientific-literature/skills/lit-status/SKILL.md",
+    "repo": "matthiaskloft/claude-skills",
+    "path": "scientific-literature/skills/lit-status/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

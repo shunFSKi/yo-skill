@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/TimQuelch/aws-config-dump/run-checks",
+  "type": "skill",
+  "name": "run-checks",
+  "description": "Run nix flake check to verify all checks pass (clippy, tests, fmt, audit, deny)",
+  "author": "TimQuelch",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/TimQuelch/aws-config-dump/blob/HEAD/.claude/skills/run-checks/SKILL.md",
+    "repo": "TimQuelch/aws-config-dump",
+    "path": ".claude/skills/run-checks/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

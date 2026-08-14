@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/DatNH2K1/synapse-agents/synapse-product-suite-69e994e6",
+  "type": "skill",
+  "name": "synapse-product-suite",
+  "description": "Validate a PRD against standards. Use when the user says \"validate this PRD\" or \"run PRD validation\"",
+  "author": "DatNH2K1",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/DatNH2K1/synapse-agents/blob/HEAD/synapse-plugin/.agents/skills/synapse-design-suite/references/product-suite/references/validate-prd/SKILL.md",
+    "repo": "DatNH2K1/synapse-agents",
+    "path": "synapse-plugin/.agents/skills/synapse-design-suite/references/product-suite/references/validate-prd/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

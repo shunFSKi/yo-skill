@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/phuryn/agentlift/tag-skill",
+  "type": "skill",
+  "name": "tag-skill",
+  "description": "Replace <placeholder> with the value the user gives you.",
+  "author": "phuryn",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/phuryn/agentlift/blob/HEAD/tests/fixtures/bad-skill/.managed-agents/x/skills/tag-skill/SKILL.md",
+    "repo": "phuryn/agentlift",
+    "path": "tests/fixtures/bad-skill/.managed-agents/x/skills/tag-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

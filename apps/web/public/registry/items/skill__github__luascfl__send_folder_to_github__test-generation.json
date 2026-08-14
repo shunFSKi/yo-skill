@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/luascfl/send_folder_to_github/test-generation",
+  "type": "skill",
+  "name": "Test Generation",
+  "description": "Generate comprehensive test cases for code",
+  "author": "luascfl",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/luascfl/send_folder_to_github/blob/HEAD/.context/skills/test-generation/SKILL.md",
+    "repo": "luascfl/send_folder_to_github",
+    "path": ".context/skills/test-generation/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

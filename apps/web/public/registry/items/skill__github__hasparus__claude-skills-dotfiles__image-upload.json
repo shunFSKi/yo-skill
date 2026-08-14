@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/hasparus/claude-skills-dotfiles/image-upload",
+  "type": "skill",
+  "name": "image-upload",
+  "description": "Upload images to file hosting. Use for PR screenshots.",
+  "author": "hasparus",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/hasparus/claude-skills-dotfiles/blob/HEAD/image-upload/SKILL.md",
+    "repo": "hasparus/claude-skills-dotfiles",
+    "path": "image-upload/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

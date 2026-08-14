@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/MykolaPinchuk/TML-bench/wrap-up",
+  "type": "skill",
+  "name": "wrap-up",
+  "description": "Alias of handoff (update HANDOFF/REPO_MAP, rotate logs, safe handoff commit).",
+  "author": "MykolaPinchuk",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/MykolaPinchuk/TML-bench/blob/HEAD/.codex/skills/wrap-up/SKILL.md",
+    "repo": "MykolaPinchuk/TML-bench",
+    "path": ".codex/skills/wrap-up/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

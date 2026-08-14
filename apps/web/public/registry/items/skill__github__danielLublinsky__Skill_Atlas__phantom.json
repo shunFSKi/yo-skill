@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/danielLublinsky/Skill_Atlas/phantom",
+  "type": "skill",
+  "name": "phantom",
+  "description": "Marketplace catalogue entry for a plugin that was never installed. Must never be discovered.",
+  "author": "danielLublinsky",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/danielLublinsky/Skill_Atlas/blob/HEAD/tests/fixtures/fakehome/plugins/marketplaces/fake-mp/plugins/phantom/skills/phantom/SKILL.md",
+    "repo": "danielLublinsky/Skill_Atlas",
+    "path": "tests/fixtures/fakehome/plugins/marketplaces/fake-mp/plugins/phantom/skills/phantom/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/AvaTar-ArTs/.Agent-skills/git-ai-assistant",
+  "type": "skill",
+  "name": "git-ai-assistant",
+  "description": "Use when working with Git AI integration, attribution tracking, checkpoint creation, or AI vs human contribution analysis",
+  "author": "AvaTar-ArTs",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/AvaTar-ArTs/.Agent-skills/blob/HEAD/skills/git-ai-assistant/SKILL.md",
+    "repo": "AvaTar-ArTs/.Agent-skills",
+    "path": "skills/git-ai-assistant/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

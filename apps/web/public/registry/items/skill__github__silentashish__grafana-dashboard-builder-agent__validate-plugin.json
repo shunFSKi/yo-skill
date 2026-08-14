@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/silentashish/grafana-dashboard-builder-agent/validate-plugin",
+  "type": "skill",
+  "name": "validate-plugin",
+  "description": "validate a Grafana plugin using the official Grafana plugin validator",
+  "author": "silentashish",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/silentashish/grafana-dashboard-builder-agent/blob/HEAD/agent-grafana-plugin/.codex/skills/validate-plugin/SKILL.md",
+    "repo": "silentashish/grafana-dashboard-builder-agent",
+    "path": "agent-grafana-plugin/.codex/skills/validate-plugin/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

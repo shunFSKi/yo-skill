@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/lstan44/agentctl/shared-skill-52a4e72e",
+  "type": "skill",
+  "name": "shared-skill",
+  "description": "A fixture skill shared across targets.",
+  "author": "lstan44",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/lstan44/agentctl/blob/HEAD/test/fixtures/home/.codex/skills/shared-skill/SKILL.md",
+    "repo": "lstan44/agentctl",
+    "path": "test/fixtures/home/.codex/skills/shared-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

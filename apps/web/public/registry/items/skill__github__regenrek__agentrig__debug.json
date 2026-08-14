@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/regenrek/agentrig/debug",
+  "type": "skill",
+  "name": "debug",
+  "description": "Traces failures from observed symptoms to the first incorrect state transition.",
+  "author": "regenrek",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/regenrek/agentrig/blob/HEAD/packages/sdk/tests/fixtures/dots-like/skills/debug/SKILL.md",
+    "repo": "regenrek/agentrig",
+    "path": "packages/sdk/tests/fixtures/dots-like/skills/debug/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

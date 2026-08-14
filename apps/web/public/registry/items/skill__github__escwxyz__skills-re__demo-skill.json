@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/escwxyz/skills-re/demo-skill",
+  "type": "skill",
+  "name": "demo-skill",
+  "description": "Demonstrates a minimal Skills.re sandbox eval fixture.",
+  "author": "escwxyz",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/escwxyz/skills-re/blob/HEAD/apps/server/src/skill-eval-sandbox/fixtures/demo-skill/SKILL.md",
+    "repo": "escwxyz/skills-re",
+    "path": "apps/server/src/skill-eval-sandbox/fixtures/demo-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": false
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

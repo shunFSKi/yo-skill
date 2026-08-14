@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/LighghtEeloo/sirno/sirno-actualizer",
+  "type": "skill",
+  "name": "sirno-actualizer",
+  "description": "Actualize lake entries into repository material when the governing design entry is known.",
+  "author": "LighghtEeloo",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/LighghtEeloo/sirno/blob/HEAD/.agents/skills/sirno-actualizer/SKILL.md",
+    "repo": "LighghtEeloo/sirno",
+    "path": ".agents/skills/sirno-actualizer/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

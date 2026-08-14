@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/sgskills/aibp/block-scalar-skill",
+  "type": "skill",
+  "name": "block-scalar-skill",
+  "description": "当用户要优化 Skill 时使用。\nTrigger: optimize a Skill.",
+  "author": "sgskills",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/sgskills/aibp/blob/HEAD/skills/sg-skill-optimizer/tests/fixtures/07-block-scalar/skill/SKILL.md",
+    "repo": "sgskills/aibp",
+    "path": "skills/sg-skill-optimizer/tests/fixtures/07-block-scalar/skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

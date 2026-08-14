@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/dhanesh/repo2skill/bijection-undoc",
+  "type": "skill",
+  "name": "bijection-undoc",
+  "description": "Skill with a template placeholder not documented in PARAMETERS.md.",
+  "author": "dhanesh",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/dhanesh/repo2skill/blob/HEAD/tests/fixtures/vs-bijection-undoc/SKILL.md",
+    "repo": "dhanesh/repo2skill",
+    "path": "tests/fixtures/vs-bijection-undoc/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

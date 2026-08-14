@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/wolfqing/ccdiet/project-only-64689b30",
+  "type": "skill",
+  "name": "project-only",
+  "description": "A project skill that must only match this project's transcripts.",
+  "author": "wolfqing",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/wolfqing/ccdiet/blob/HEAD/test/fixtures/proj/.claude/skills/project-only/SKILL.md",
+    "repo": "wolfqing/ccdiet",
+    "path": "test/fixtures/proj/.claude/skills/project-only/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

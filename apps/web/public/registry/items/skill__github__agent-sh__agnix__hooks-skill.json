@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/agent-sh/agnix/hooks-skill",
+  "type": "skill",
+  "name": "hooks-skill",
+  "description": "Use when testing hooks validation",
+  "author": "agent-sh",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/agent-sh/agnix/blob/HEAD/tests/fixtures/invalid/skills/invalid-hooks/SKILL.md",
+    "repo": "agent-sh/agnix",
+    "path": "tests/fixtures/invalid/skills/invalid-hooks/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

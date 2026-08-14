@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/karimStekelenburg/dotclaude/template-plugins-starter-plugin-name-skills-starter-plugin-name-",
+  "type": "skill",
+  "name": "template-plugins-starter-plugin-name-skills-starter-plugin-name-",
+  "description": "Example skill from {{ starter_plugin_name }} plugin",
+  "author": "karimStekelenburg",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/karimStekelenburg/dotclaude/blob/HEAD/template/plugins/{{starter_plugin_name}}/skills/{{starter_plugin_name}}/SKILL.md.jinja",
+    "repo": "karimStekelenburg/dotclaude",
+    "path": "template/plugins/{{starter_plugin_name}}/skills/{{starter_plugin_name}}/SKILL.md.jinja"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

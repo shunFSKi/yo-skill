@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/nick-orton/vybz/valid-skill",
+  "type": "skill",
+  "name": "valid-skill",
+  "description": "A compliant skill for testing resource discovery.",
+  "author": "nick-orton",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/nick-orton/vybz/blob/HEAD/tests/fixtures/skills_v2/valid-skill/SKILL.md",
+    "repo": "nick-orton/vybz",
+    "path": "tests/fixtures/skills_v2/valid-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

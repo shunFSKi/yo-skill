@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/lameen-k/cdxm/cdxm-marketplace-test",
+  "type": "skill",
+  "name": "cdxm-marketplace-test",
+  "description": "Confirm that the CDXM test plugin is installed and available.",
+  "author": "lameen-k",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/lameen-k/cdxm/blob/HEAD/plugins/cdxm-test-plugin/skills/cdxm-marketplace-test/SKILL.md",
+    "repo": "lameen-k/cdxm",
+    "path": "plugins/cdxm-test-plugin/skills/cdxm-marketplace-test/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

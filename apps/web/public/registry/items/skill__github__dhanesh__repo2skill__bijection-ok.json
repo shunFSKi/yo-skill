@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/dhanesh/repo2skill/bijection-ok",
+  "type": "skill",
+  "name": "bijection-ok",
+  "description": "Skill with perfectly matched template placeholders and PARAMETERS.md entries.",
+  "author": "dhanesh",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/dhanesh/repo2skill/blob/HEAD/tests/fixtures/vs-bijection-ok/SKILL.md",
+    "repo": "dhanesh/repo2skill",
+    "path": "tests/fixtures/vs-bijection-ok/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

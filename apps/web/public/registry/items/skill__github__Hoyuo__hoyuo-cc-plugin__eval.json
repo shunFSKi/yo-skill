@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/Hoyuo/hoyuo-cc-plugin/eval",
+  "type": "skill",
+  "name": "eval",
+  "description": "하네스 실행 결과 평가 — 실행 결과를 분석하고 피드백을 생성한다.",
+  "author": "Hoyuo",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Hoyuo/hoyuo-cc-plugin/blob/HEAD/harness-engineering/skills/eval/SKILL.md",
+    "repo": "Hoyuo/hoyuo-cc-plugin",
+    "path": "harness-engineering/skills/eval/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": false
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

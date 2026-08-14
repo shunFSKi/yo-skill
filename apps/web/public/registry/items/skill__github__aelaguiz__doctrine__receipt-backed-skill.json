@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/aelaguiz/doctrine/receipt-backed-skill",
+  "type": "skill",
+  "name": "receipt-backed-skill",
+  "description": "Emit a source receipt beside the skill.",
+  "author": "aelaguiz",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/aelaguiz/doctrine/blob/HEAD/examples/147_skill_package_source_receipt/build_ref/SKILL.md",
+    "repo": "aelaguiz/doctrine",
+    "path": "examples/147_skill_package_source_receipt/build_ref/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

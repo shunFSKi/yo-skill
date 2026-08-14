@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/ch040602/skill-vaccine/benign-api-summary",
+  "type": "skill",
+  "name": "benign-api-summary",
+  "description": "Helps maintainers transform user-selected local project text into safer review artifacts.",
+  "author": "ch040602",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ch040602/skill-vaccine/blob/HEAD/tests/fixtures/benchmark_expansion/benign_api_summary/SKILL.md",
+    "repo": "ch040602/skill-vaccine",
+    "path": "tests/fixtures/benchmark_expansion/benign_api_summary/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

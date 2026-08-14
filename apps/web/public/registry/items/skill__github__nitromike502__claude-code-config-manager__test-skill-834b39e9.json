@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/nitromike502/claude-code-config-manager/test-skill-834b39e9",
+  "type": "skill",
+  "name": "test-skill",
+  "description": "Test skill for copy testing",
+  "author": "nitromike502",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/nitromike502/claude-code-config-manager/blob/HEAD/tests/fixtures/user/.claude/skills/test-skill/SKILL.md",
+    "repo": "nitromike502/claude-code-config-manager",
+    "path": "tests/fixtures/user/.claude/skills/test-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

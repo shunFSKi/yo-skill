@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/reddb-io/red-skills/wildcard-tools",
+  "type": "skill",
+  "name": "wildcard-tools",
+  "description": "Use when testing wildcard tool grants.",
+  "author": "reddb-io",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/reddb-io/red-skills/blob/HEAD/scripts/fixtures/skill-frontmatter/violating/plugins/demo/skills/wildcard-tools/SKILL.md",
+    "repo": "reddb-io/red-skills",
+    "path": "scripts/fixtures/skill-frontmatter/violating/plugins/demo/skills/wildcard-tools/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

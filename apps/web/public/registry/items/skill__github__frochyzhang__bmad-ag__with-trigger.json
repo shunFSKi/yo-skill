@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/frochyzhang/bmad-ag/with-trigger",
+  "type": "skill",
+  "name": "with-trigger",
+  "description": "Generates a thing and writes it to disk. Use when the user asks to scaffold a thing.",
+  "author": "frochyzhang",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/frochyzhang/bmad-ag/blob/HEAD/test/fixtures/validate-skills/with-trigger/SKILL.md",
+    "repo": "frochyzhang/bmad-ag",
+    "path": "test/fixtures/validate-skills/with-trigger/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

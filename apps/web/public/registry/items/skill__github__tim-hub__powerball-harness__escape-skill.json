@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/tim-hub/powerball-harness/escape-skill",
+  "type": "skill",
+  "name": "escape-skill",
+  "description": "",
+  "author": "tim-hub",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/tim-hub/powerball-harness/blob/HEAD/tests/fixtures/skills/zz-review-escape/SKILL.md",
+    "repo": "tim-hub/powerball-harness",
+    "path": "tests/fixtures/skills/zz-review-escape/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

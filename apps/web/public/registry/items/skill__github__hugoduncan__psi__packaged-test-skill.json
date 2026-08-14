@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/hugoduncan/psi/packaged-test-skill",
+  "type": "skill",
+  "name": "packaged-test-skill",
+  "description": "Packaged built-in test fixture",
+  "author": "hugoduncan",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/hugoduncan/psi/blob/HEAD/components/prompt-assets/test/psi/test-built-in-skills/packaged-test-skill/SKILL.md",
+    "repo": "hugoduncan/psi",
+    "path": "components/prompt-assets/test/psi/test-built-in-skills/packaged-test-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

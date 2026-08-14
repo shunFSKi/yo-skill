@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/Aditya8369/Focus-Forge-Agent/focus-coach",
+  "type": "skill",
+  "name": "focus-coach",
+  "description": "Forces user into deep work",
+  "author": "Aditya8369",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Aditya8369/Focus-Forge-Agent/blob/HEAD/skills/focus-coach/SKILL.md",
+    "repo": "Aditya8369/Focus-Forge-Agent",
+    "path": "skills/focus-coach/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

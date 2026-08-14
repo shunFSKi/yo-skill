@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/Pratiyush/skill-sdk/bom-skill",
+  "type": "skill",
+  "name": "bom-skill",
+  "description": "A skill with UTF-8 BOM. Use when testing BOM stripping.",
+  "author": "Pratiyush",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Pratiyush/skill-sdk/blob/HEAD/packages/core/tests/fixtures/bom-skill/SKILL.md",
+    "repo": "Pratiyush/skill-sdk",
+    "path": "packages/core/tests/fixtures/bom-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

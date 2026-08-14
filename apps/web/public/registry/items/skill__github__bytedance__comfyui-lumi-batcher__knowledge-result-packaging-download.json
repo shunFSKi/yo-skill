@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/bytedance/comfyui-lumi-batcher/knowledge-result-packaging-download",
+  "type": "skill",
+  "name": "knowledge-result-packaging-download",
+  "description": "结果打包与下载。导航时机：修改压缩包生成、断点续传、Service Worker下载逻辑。",
+  "author": "bytedance",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/bytedance/comfyui-lumi-batcher/blob/HEAD/.trae/knowledges/result-processing/result-packaging-download/SKILL.md",
+    "repo": "bytedance/comfyui-lumi-batcher",
+    "path": ".trae/knowledges/result-processing/result-packaging-download/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/ilysenko/codex-desktop-linux/instruction-only",
+  "type": "skill",
+  "name": "Instruction Only",
+  "description": "Use when answering with reusable written instructions.",
+  "author": "ilysenko",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ilysenko/codex-desktop-linux/blob/HEAD/record-replay-linux/tests/fixtures/skills/instruction-only/SKILL.md",
+    "repo": "ilysenko/codex-desktop-linux",
+    "path": "record-replay-linux/tests/fixtures/skills/instruction-only/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

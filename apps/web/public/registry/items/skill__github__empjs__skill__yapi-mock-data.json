@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/empjs/skill/yapi-mock-data",
+  "type": "skill",
+  "name": "yapi-mock-data",
+  "description": "从 YApi 定义生成 Mock 数据与类型",
+  "author": "empjs",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/empjs/skill/blob/HEAD/skills/yapi-mock-data/SKILL.md",
+    "repo": "empjs/skill",
+    "path": "skills/yapi-mock-data/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

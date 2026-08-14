@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/gtbuchanan/tooling/non-sequential-ids",
+  "type": "skill",
+  "name": "non-sequential-ids",
+  "description": "Fixture whose evals.json ids are not sequential.",
+  "author": "gtbuchanan",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/gtbuchanan/tooling/blob/HEAD/packages/eslint-plugin-agent-skills/test/fixtures/evals-schema/non-sequential-ids/SKILL.md",
+    "repo": "gtbuchanan/tooling",
+    "path": "packages/eslint-plugin-agent-skills/test/fixtures/evals-schema/non-sequential-ids/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

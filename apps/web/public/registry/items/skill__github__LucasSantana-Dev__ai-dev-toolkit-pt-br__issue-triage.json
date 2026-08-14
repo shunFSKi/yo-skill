@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/LucasSantana-Dev/ai-dev-toolkit-pt-br/issue-triage",
+  "type": "skill",
+  "name": "issue-triage",
+  "description": "Classificar issues, identificar duplicatas, pedir contexto ausente e destacar primeiro o que merece atenção do mantenedor.",
+  "author": "LucasSantana-Dev",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/LucasSantana-Dev/ai-dev-toolkit-pt-br/blob/HEAD/companies/open-source-maintainer/skills/issue-triage/SKILL.md",
+    "repo": "LucasSantana-Dev/ai-dev-toolkit-pt-br",
+    "path": "companies/open-source-maintainer/skills/issue-triage/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

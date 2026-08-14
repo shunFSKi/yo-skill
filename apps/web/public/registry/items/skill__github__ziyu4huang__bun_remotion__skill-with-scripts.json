@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/ziyu4huang/bun_remotion/skill-with-scripts",
+  "type": "skill",
+  "name": "skill-with-scripts",
+  "description": "A skill with extra frontmatter fields",
+  "author": "ziyu4huang",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ziyu4huang/bun_remotion/blob/HEAD/bun_app/bun_pi_agent/src/skills/__tests__/fixtures/skill-with-scripts/SKILL.md",
+    "repo": "ziyu4huang/bun_remotion",
+    "path": "bun_app/bun_pi_agent/src/skills/__tests__/fixtures/skill-with-scripts/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

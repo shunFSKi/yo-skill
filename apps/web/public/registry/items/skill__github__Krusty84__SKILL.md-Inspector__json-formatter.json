@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/Krusty84/SKILL.md-Inspector/json-formatter",
+  "type": "skill",
+  "name": "json-formatter",
+  "description": "",
+  "author": "Krusty84",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Krusty84/SKILL.md-Inspector/blob/HEAD/demo_skills/skills/json-formatter/SKILL.md",
+    "repo": "Krusty84/SKILL.md-Inspector",
+    "path": "demo_skills/skills/json-formatter/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

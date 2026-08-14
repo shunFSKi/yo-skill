@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/abhay-codes07/Building-my-own-Tiny-OpenClaw/web-search",
+  "type": "skill",
+  "name": "web_search",
+  "description": "Search the web using DuckDuckGo and return a list of relevant results (title, URL, snippet). Use this when the user wants to find information without loading a specific URL.",
+  "author": "abhay-codes07",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/abhay-codes07/Building-my-own-Tiny-OpenClaw/blob/HEAD/skills/web_search/SKILL.md",
+    "repo": "abhay-codes07/Building-my-own-Tiny-OpenClaw",
+    "path": "skills/web_search/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/himself65/skill-lint/claude-name",
+  "type": "skill",
+  "name": "claude-name",
+  "description": "A skill whose name contains the reserved word 'claude'.",
+  "author": "himself65",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/himself65/skill-lint/blob/HEAD/test/fixtures/claude-name/SKILL.md",
+    "repo": "himself65/skill-lint",
+    "path": "test/fixtures/claude-name/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

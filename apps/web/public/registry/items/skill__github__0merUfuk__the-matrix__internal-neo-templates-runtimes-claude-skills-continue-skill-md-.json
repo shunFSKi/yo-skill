@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/0merUfuk/the-matrix/internal-neo-templates-runtimes-claude-skills-continue-skill-md-",
+  "type": "skill",
+  "name": "internal-neo-templates-runtimes-claude-skills-continue-skill-md-",
+  "description": "Continue a previous session — read context, pick up where you left off",
+  "author": "0merUfuk",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/0merUfuk/the-matrix/blob/HEAD/internal/neo/templates/runtimes/claude/skills/continue/SKILL.md.tmpl",
+    "repo": "0merUfuk/the-matrix",
+    "path": "internal/neo/templates/runtimes/claude/skills/continue/SKILL.md.tmpl"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/Daliagents-com/agentsge-1/test-skill-b66fa73f",
+  "type": "skill",
+  "name": "Test Skill",
+  "description": "A test skill from a marketplace plugin",
+  "author": "Daliagents-com",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Daliagents-com/agentsge-1/blob/HEAD/.tmp/apm-memory-accum/tests/fixtures/mock-marketplace-plugin/skills/test-skill/SKILL.md",
+    "repo": "Daliagents-com/agentsge-1",
+    "path": ".tmp/apm-memory-accum/tests/fixtures/mock-marketplace-plugin/skills/test-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/jesse-black/docgarden/skill-beacon",
+  "type": "skill",
+  "name": "Skill Beacon",
+  "description": "skillbeacon metadata for scoped skill discovery.",
+  "author": "jesse-black",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/jesse-black/docgarden/blob/HEAD/tests/discovery-repo/.agents/skills/skillbeacon/SKILL.md",
+    "repo": "jesse-black/docgarden",
+    "path": "tests/discovery-repo/.agents/skills/skillbeacon/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

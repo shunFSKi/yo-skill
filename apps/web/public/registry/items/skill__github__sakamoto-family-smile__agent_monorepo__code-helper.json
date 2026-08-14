@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/sakamoto-family-smile/agent_monorepo/code-helper",
+  "type": "skill",
+  "name": "code-helper",
+  "description": "Code review and assistance skill",
+  "author": "sakamoto-family-smile",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/sakamoto-family-smile/agent_monorepo/blob/HEAD/agent-system-2/skills/code-helper/skill.md",
+    "repo": "sakamoto-family-smile/agent_monorepo",
+    "path": "agent-system-2/skills/code-helper/skill.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

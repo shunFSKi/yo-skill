@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/Ta0ing/claude-code_evil/src-skills-bundled-verify-skill-md",
+  "type": "skill",
+  "name": "src-skills-bundled-verify-skill-md",
+  "description": "Verify a code change by running the app and checking the user-facing outcome.",
+  "author": "Ta0ing",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Ta0ing/claude-code_evil/blob/HEAD/src/skills/bundled/verify/SKILL.md",
+    "repo": "Ta0ing/claude-code_evil",
+    "path": "src/skills/bundled/verify/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

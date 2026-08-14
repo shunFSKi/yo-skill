@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/murphy0730/maestro/fork-order",
+  "type": "skill",
+  "name": "fork-order",
+  "description": "Inspect an order in an isolated child context.",
+  "author": "murphy0730",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/murphy0730/maestro/blob/HEAD/maestro/tests/runtime/fixtures/skills/fork/SKILL.md",
+    "repo": "murphy0730/maestro",
+    "path": "maestro/tests/runtime/fixtures/skills/fork/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/dangSonw/AOI_APP/generated-vn",
+  "type": "skill",
+  "name": "generated-vn",
+  "description": "Sử dụng kỹ năng này để áp dụng các kỹ năng lập trình",
+  "author": "dangSonw",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/dangSonw/AOI_APP/blob/HEAD/.agents/skills/generated/SKILL.md.vn",
+    "repo": "dangSonw/AOI_APP",
+    "path": ".agents/skills/generated/SKILL.md.vn"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

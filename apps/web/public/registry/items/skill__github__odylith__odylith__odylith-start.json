@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/odylith/odylith/odylith-start",
+  "type": "skill",
+  "name": "odylith-start",
+  "description": "Run the repo-local Odylith startup contract first, before context/search fan out.",
+  "author": "odylith",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/odylith/odylith/blob/HEAD/.claude/skills/odylith-start/SKILL.md",
+    "repo": "odylith/odylith",
+    "path": ".claude/skills/odylith-start/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

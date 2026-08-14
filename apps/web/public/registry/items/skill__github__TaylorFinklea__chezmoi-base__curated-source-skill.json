@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/TaylorFinklea/chezmoi-base/curated-source-skill",
+  "type": "skill",
+  "name": "curated-source-skill",
+  "description": "Marketplace source alone must not be treated as an installed plugin.",
+  "author": "TaylorFinklea",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/TaylorFinklea/chezmoi-base/blob/HEAD/tests/fixtures/runtime-audit/current-codex-marketplaces/home/.codex/.tmp/plugins/plugins/build-ios-apps/skills/curated-source-skill/SKILL.md",
+    "repo": "TaylorFinklea/chezmoi-base",
+    "path": "tests/fixtures/runtime-audit/current-codex-marketplaces/home/.codex/.tmp/plugins/plugins/build-ios-apps/skills/curated-source-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

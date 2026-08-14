@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/i2y/jet/poet",
+  "type": "skill",
+  "name": "poet",
+  "description": "Write a short rhyming couplet about a given topic.",
+  "author": "i2y",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/i2y/jet/blob/HEAD/examples/skills/poet/SKILL.md",
+    "repo": "i2y/jet",
+    "path": "examples/skills/poet/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

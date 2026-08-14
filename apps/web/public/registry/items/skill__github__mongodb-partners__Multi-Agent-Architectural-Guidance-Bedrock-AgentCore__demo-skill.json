@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/mongodb-partners/Multi-Agent-Architectural-Guidance-Bedrock-AgentCore/demo-skill",
+  "type": "skill",
+  "name": "demo-skill",
+  "description": "Test fixture skill for HTTP tools unit tests",
+  "author": "mongodb-partners",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/mongodb-partners/Multi-Agent-Architectural-Guidance-Bedrock-AgentCore/blob/HEAD/api/tests/fixtures/config/skills/demo-skill/SKILL.md",
+    "repo": "mongodb-partners/Multi-Agent-Architectural-Guidance-Bedrock-AgentCore",
+    "path": "api/tests/fixtures/config/skills/demo-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/jaysunmah/test-url-plugin/url-demo",
+  "type": "skill",
+  "name": "url-demo",
+  "description": "Demo skill for the test-url-plugin repo (url marketplace source).",
+  "author": "jaysunmah",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/jaysunmah/test-url-plugin/blob/HEAD/skills/url-demo/SKILL.md",
+    "repo": "jaysunmah/test-url-plugin",
+    "path": "skills/url-demo/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

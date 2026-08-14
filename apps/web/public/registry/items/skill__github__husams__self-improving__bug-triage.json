@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/husams/self-improving/bug-triage",
+  "type": "skill",
+  "name": "bug-triage",
+  "description": "Use when asked to triage a bug report, classify its severity, or recommend a priority.",
+  "author": "husams",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/husams/self-improving/blob/HEAD/experiments/bug-triage/skill/SKILL.md",
+    "repo": "husams/self-improving",
+    "path": "experiments/bug-triage/skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

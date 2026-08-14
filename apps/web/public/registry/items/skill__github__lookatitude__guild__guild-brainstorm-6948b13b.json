@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/lookatitude/guild/guild-brainstorm-6948b13b",
+  "type": "skill",
+  "name": "guild-brainstorm",
+  "description": "Brainstorming skill with improved trigger accuracy. TRIGGER for brainstorm / ideate requests.",
+  "author": "lookatitude",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/lookatitude/guild/blob/HEAD/scripts/fixtures/skill-v2/SKILL.md",
+    "repo": "lookatitude/guild",
+    "path": "scripts/fixtures/skill-v2/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

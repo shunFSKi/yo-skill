@@ -15,12 +15,12 @@
     "command": "npx",
     "args": [
       "-y",
-      "ghcr.io/ynishi/mse:0.25.0"
+      "ghcr.io/ynishi/mse:0.26.0"
     ]
   },
   "quality": {
     "stars": null,
-    "pushed_at": "2026-08-10T03:45:26.109598Z"
+    "pushed_at": "2026-08-14T08:50:32.892215Z"
   },
   "security": {
     "score": 100,
@@ -52,6 +52,6 @@
     "category": null,
     "featured": false
   },
-  "readme": null,
+  "readme": "# mlua-swarm\n\nA long-running swarm engine host that compiles `flow.ir` Blueprints and\ndispatches their agent steps to workers. A Blueprint declares a `flow`\n(step / seq / branch / loop / fanout / try / assign nodes) plus the\n`agents` it references; the engine resolves each agent to a backend\n(in-process Lua, a Rust function, a child process, or an interactive\nOperator) and drives the flow while recording task state.\n\n## Install\n\n```bash\ncargo install mlua-swarm-cli\n```\n\nThis installs the `mse` binary with two subcommands:\n\n```bash\nmse serve   # HTTP + WS server (tasks, Blueprint store, WS Operator sessions)\nmse mcp     # MCP adapter over stdio, for AI agents (Claude Code etc.)\n```\n\nOne-shot Blueprint execution is available through the `swarm_run` MCP tool\n(exposed by `mse mcp`), which runs through the canonical\n`TaskApplication.handle` / `TaskLaunchService::launch` path.\n\nMCP client config:\n\n```json\n{ \"command\": \"mse\", \"args\": [\"mcp\"] }\n```\n\n#### Docker (no Rust toolchain required)\n\nAlso listed on the [MCP Registry](https://registry.modelcontextprotocol.io)\nas `io.github.ynishi/mlua-swarm`:\n\n```json\n{\n  \"mcpServers\": {\n    \"mlua-swarm\": {\n      \"command\": \"docker\",\n      \"args\": [\n        \"run\", \"-i\", \"--rm\",\n        \"ghcr.io/ynishi/mse:latest\",\n        \"mcp\"\n      ]\n    }\n  }\n}\n```\n\n## Documentation\n\nDocumentation is served from the code itself:\n\n- **API / architecture** — rustdoc on [docs.rs](https://docs.rs/mlua-swarm)\n  (the crate root doc is the architecture overview).\n- **Guides / samples / schema** — bundled MCP resources under `mse://`,\n  served by `mse mcp` and always version-matched to the binary:\n  `mse://guides/getting-started`, `mse://guides/bp-lifecycle` (the\n  develop → trial-run → operate workflow map),\n  `mse://guides/blueprint-authoring`, `mse://guides/mcp-tool-reference`,\n  `mse://blueprints/samples/*`, and the live Blueprint JSON Schema at\n  `mse://api/blueprint-schema` (also available as the `bp_schema` tool).\n\n## Workspace crates\n\n| crate | role |\n|---|---|\n| `mlua-swarm` | engine core (workspace root package) |\n| `mlua-swarm-schema` | Blueprint schema types |\n| `mlua-swarm-server` | HTTP + WS server library |\n| `mlua-swarm-cli` | the `mse` binary |\n\n## License\n\nLicensed under either of [Apache License 2.0](LICENSE-APACHE) or\n[MIT License](LICENSE-MIT) at your option.\n",
   "status": "curated"
 }

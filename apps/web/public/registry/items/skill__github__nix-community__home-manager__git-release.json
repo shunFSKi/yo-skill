@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/nix-community/home-manager/git-release",
+  "type": "skill",
+  "name": "git-release",
+  "description": "Create consistent releases and changelogs",
+  "author": "nix-community",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/nix-community/home-manager/blob/HEAD/tests/modules/programs/opencode/skills-bulk/git-release/SKILL.md",
+    "repo": "nix-community/home-manager",
+    "path": "tests/modules/programs/opencode/skills-bulk/git-release/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

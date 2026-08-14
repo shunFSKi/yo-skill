@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/vorburger/aifiles/git-repositories",
+  "type": "skill",
+  "name": "git-repositories",
+  "description": "List of key Git repositories used in this project.",
+  "author": "vorburger",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/vorburger/aifiles/blob/HEAD/skills/git-repositories/SKILL.md",
+    "repo": "vorburger/aifiles",
+    "path": "skills/git-repositories/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

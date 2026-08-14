@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/jeffersonjhunt/code-monkeys/math-fibonacci",
+  "type": "skill",
+  "name": "math-fibonacci",
+  "description": "Create a fibonacci sequence, as a list, as ascii art to display the divine proportions, etc...",
+  "author": "jeffersonjhunt",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/jeffersonjhunt/code-monkeys/blob/HEAD/007/skills/math-fibonacci/SKILL.md",
+    "repo": "jeffersonjhunt/code-monkeys",
+    "path": "007/skills/math-fibonacci/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/ObjectiveAI/arcanum/test-skills-lab-two-unnamed-skill-md",
+  "type": "skill",
+  "name": "test-skills-lab-two-unnamed-skill-md",
+  "description": "Has frontmatter but no name, so it must not be listed",
+  "author": "ObjectiveAI",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ObjectiveAI/arcanum/blob/HEAD/test-skills/lab-two/unnamed/SKILL.md",
+    "repo": "ObjectiveAI/arcanum",
+    "path": "test-skills/lab-two/unnamed/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

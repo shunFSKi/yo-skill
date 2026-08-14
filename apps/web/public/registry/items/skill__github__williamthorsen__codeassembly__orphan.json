@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/williamthorsen/codeassembly/orphan",
+  "type": "skill",
+  "name": "orphan",
+  "description": "Fixture skill no collection claims and no standalone record covers.",
+  "author": "williamthorsen",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/williamthorsen/codeassembly/blob/HEAD/packages/agents/content/__tests__/fixtures/collection-dispositions/uncovered/skills/orphan/SKILL.md",
+    "repo": "williamthorsen/codeassembly",
+    "path": "packages/agents/content/__tests__/fixtures/collection-dispositions/uncovered/skills/orphan/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

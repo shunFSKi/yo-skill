@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/baphled/dotopencode/tdd-workflow",
+  "type": "skill",
+  "name": "tdd-workflow",
+  "description": "DEPRECATED - Use bdd-workflow instead",
+  "author": "baphled",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/baphled/dotopencode/blob/HEAD/skills/tdd-workflow/SKILL.md",
+    "repo": "baphled/dotopencode",
+    "path": "skills/tdd-workflow/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/skill-mill/agent-skill-porter/standard-skill",
+  "type": "skill",
+  "name": "standard-skill",
+  "description": "A standard test skill for Gemini",
+  "author": "skill-mill",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/skill-mill/agent-skill-porter/blob/HEAD/tests/fixtures/gemini-skills/standard-skill/SKILL.md",
+    "repo": "skill-mill/agent-skill-porter",
+    "path": "tests/fixtures/gemini-skills/standard-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

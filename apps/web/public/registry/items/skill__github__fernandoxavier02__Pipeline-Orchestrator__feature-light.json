@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/fernandoxavier02/Pipeline-Orchestrator/feature-light",
+  "type": "skill",
+  "name": "feature-light",
+  "description": "Minimal frontmatter — no sequence_lock, no gates_at, no sentinel_checkpoints.",
+  "author": "fernandoxavier02",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/fernandoxavier02/Pipeline-Orchestrator/blob/HEAD/.claude/hooks/__tests__/fixtures/skills/feature-light-no-contract/SKILL.md",
+    "repo": "fernandoxavier02/Pipeline-Orchestrator",
+    "path": ".claude/hooks/__tests__/fixtures/skills/feature-light-no-contract/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

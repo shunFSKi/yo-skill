@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/flowleap-ai/flowleap-plugins/shared-skill-963bf907",
+  "type": "skill",
+  "name": "shared-skill",
+  "description": "A second skill with the same name as one in plugin 'alpha' — the validator must reject this collision.",
+  "author": "flowleap-ai",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/flowleap-ai/flowleap-plugins/blob/HEAD/test/fixtures/invalid-duplicate-skill-name/plugins/beta/skills/shared-skill/SKILL.md",
+    "repo": "flowleap-ai/flowleap-plugins",
+    "path": "test/fixtures/invalid-duplicate-skill-name/plugins/beta/skills/shared-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/zhupanov/agent-lint/demo-6c61c315",
+  "type": "skill",
+  "name": "demo",
+  "description": "Use when validating unfinished-work clean skills",
+  "author": "zhupanov",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/zhupanov/agent-lint/blob/HEAD/tests/fixtures/conformance/repositories/todo-marker-plugin-clean/skills/demo/SKILL.md",
+    "repo": "zhupanov/agent-lint",
+    "path": "tests/fixtures/conformance/repositories/todo-marker-plugin-clean/skills/demo/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

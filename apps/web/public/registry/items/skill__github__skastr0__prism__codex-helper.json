@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/skastr0/prism/codex-helper",
+  "type": "skill",
+  "name": "codex-helper",
+  "description": "Codex-only QA helper skill",
+  "author": "skastr0",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/skastr0/prism/blob/HEAD/examples/prism-harness-qa/harness/codex-cli/skills/codex-helper/SKILL.md",
+    "repo": "skastr0/prism",
+    "path": "examples/prism-harness-qa/harness/codex-cli/skills/codex-helper/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

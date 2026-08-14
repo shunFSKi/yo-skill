@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/AK47are/dotfiles/dot",
+  "type": "skill",
+  "name": "dot",
+  "description": "Commit dotfiles (bare repo) via skill://commit with custom git command.",
+  "author": "AK47are",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/AK47are/dotfiles/blob/HEAD/.omp/agent/skills/dot/SKILL.md",
+    "repo": "AK47are/dotfiles",
+    "path": ".omp/agent/skills/dot/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

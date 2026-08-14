@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/azxav/2brain-techawards/email-triage",
+  "type": "skill",
+  "name": "email-triage",
+  "description": "",
+  "author": "azxav",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/azxav/2brain-techawards/blob/HEAD/test/fixtures/openclaw-compact-resolver/skills/email-triage/SKILL.md",
+    "repo": "azxav/2brain-techawards",
+    "path": "test/fixtures/openclaw-compact-resolver/skills/email-triage/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

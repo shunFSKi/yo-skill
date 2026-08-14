@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/adhenawer/claude-setups/pr-review",
+  "type": "skill",
+  "name": "pr-review",
+  "description": "Review a pull request methodically.",
+  "author": "adhenawer",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/adhenawer/claude-setups/blob/HEAD/tests/fixtures/fake-claude-home/skills/pr-review/SKILL.md",
+    "repo": "adhenawer/claude-setups",
+    "path": "tests/fixtures/fake-claude-home/skills/pr-review/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

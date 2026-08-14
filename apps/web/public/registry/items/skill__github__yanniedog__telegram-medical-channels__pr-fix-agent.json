@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/yanniedog/telegram-medical-channels/pr-fix-agent",
+  "type": "skill",
+  "name": "pr-fix-agent",
+  "description": "Babysit one open PR - CI, bot wait, synthesis, thread closure per WORKFLOW.md.",
+  "author": "yanniedog",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/yanniedog/telegram-medical-channels/blob/HEAD/.cursor/skills/pr-fix-agent/SKILL.md",
+    "repo": "yanniedog/telegram-medical-channels",
+    "path": ".cursor/skills/pr-fix-agent/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

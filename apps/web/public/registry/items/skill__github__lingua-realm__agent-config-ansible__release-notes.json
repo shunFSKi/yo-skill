@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/lingua-realm/agent-config-ansible/release-notes",
+  "type": "skill",
+  "name": "release-notes",
+  "description": "Generate concise release notes from repository changes",
+  "author": "lingua-realm",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/lingua-realm/agent-config-ansible/blob/HEAD/roles/managed_agent_skills/molecule/default/files/skill-source/skills/release-notes/SKILL.md",
+    "repo": "lingua-realm/agent-config-ansible",
+    "path": "roles/managed_agent_skills/molecule/default/files/skill-source/skills/release-notes/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

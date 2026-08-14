@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/s-aws/vllm-agent-gateway/example-batch-skill",
+  "type": "skill",
+  "name": "example-batch-skill",
+  "description": "Example batch skill for Phase 29 validation coverage.",
+  "author": "s-aws",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/s-aws/vllm-agent-gateway/blob/HEAD/tests/fixtures/skill_batches/phase29_valid/.qwen/skills/example-batch-skill/SKILL.md",
+    "repo": "s-aws/vllm-agent-gateway",
+    "path": "tests/fixtures/skill_batches/phase29_valid/.qwen/skills/example-batch-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/YeomanYe/node-scripts/flow-cron",
+  "type": "skill",
+  "name": "flow-cron",
+  "description": "[explicit-only · 显式点名才触发,无自动路由] 长跑任务定时续作业编排。 本 skill 不自动触发。**不要根据场景关键词自动触发。**",
+  "author": "YeomanYe",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/YeomanYe/node-scripts/blob/HEAD/__tests__/skill-doctor/fixtures/no-auto-trigger/flow-cron/SKILL.md",
+    "repo": "YeomanYe/node-scripts",
+    "path": "__tests__/skill-doctor/fixtures/no-auto-trigger/flow-cron/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

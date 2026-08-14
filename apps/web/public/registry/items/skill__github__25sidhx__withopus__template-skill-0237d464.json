@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/25sidhx/withopus/template-skill-0237d464",
+  "type": "skill",
+  "name": "template-skill",
+  "description": "Replace with description of the skill and when Claude should use it.",
+  "author": "25sidhx",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/25sidhx/withopus/blob/HEAD/antigravity-skills/antigravity-skills-main/template/SKILL.md",
+    "repo": "25sidhx/withopus",
+    "path": "antigravity-skills/antigravity-skills-main/template/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

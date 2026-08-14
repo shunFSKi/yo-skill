@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/pwl1987/flow-kit/register-commands",
+  "type": "skill",
+  "name": "register-commands",
+  "description": "注册斜杠命令",
+  "author": "pwl1987",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/pwl1987/flow-kit/blob/HEAD/flow-kit/skills/register-commands/SKILL.md",
+    "repo": "pwl1987/flow-kit",
+    "path": "flow-kit/skills/register-commands/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/tjmustard/OIN-SMILES/claude-commands-hyper-create-skill-md",
+  "type": "skill",
+  "name": "claude-commands-hyper-create-skill-md",
+  "description": "Convert an agentic prompt or Gemini Gem into a new structured skill for the framework",
+  "author": "tjmustard",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/tjmustard/OIN-SMILES/blob/HEAD/.claude/commands/hyper-create-skill.md",
+    "repo": "tjmustard/OIN-SMILES",
+    "path": ".claude/commands/hyper-create-skill.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

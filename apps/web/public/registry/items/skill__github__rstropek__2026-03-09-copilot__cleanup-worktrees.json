@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/rstropek/2026-03-09-copilot/cleanup-worktrees",
+  "type": "skill",
+  "name": "cleanup-worktrees",
+  "description": "Clean up all Git worktrees",
+  "author": "rstropek",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/rstropek/2026-03-09-copilot/blob/HEAD/superfan/.claude/skills/cleanup-worktrees/SKILL.md",
+    "repo": "rstropek/2026-03-09-copilot",
+    "path": "superfan/.claude/skills/cleanup-worktrees/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

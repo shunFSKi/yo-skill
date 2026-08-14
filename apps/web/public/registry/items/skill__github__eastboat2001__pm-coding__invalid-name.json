@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/eastboat2001/pm-coding/invalid-name",
+  "type": "skill",
+  "name": "Invalid_Name",
+  "description": "A skill with invalid characters in the name.",
+  "author": "eastboat2001",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/eastboat2001/pm-coding/blob/HEAD/pi-mono-0.73.0/packages/coding-agent/test/fixtures/skills/invalid-name-chars/SKILL.md",
+    "repo": "eastboat2001/pm-coding",
+    "path": "pi-mono-0.73.0/packages/coding-agent/test/fixtures/skills/invalid-name-chars/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

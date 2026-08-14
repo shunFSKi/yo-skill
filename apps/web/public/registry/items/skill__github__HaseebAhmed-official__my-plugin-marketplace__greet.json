@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/HaseebAhmed-official/my-plugin-marketplace/greet",
+  "type": "skill",
+  "name": "greet",
+  "description": "Greet the user by name",
+  "author": "HaseebAhmed-official",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/HaseebAhmed-official/my-plugin-marketplace/blob/HEAD/my-first-plugin/skills/greet/SKILL.md",
+    "repo": "HaseebAhmed-official/my-plugin-marketplace",
+    "path": "my-first-plugin/skills/greet/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

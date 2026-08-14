@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/pea-sys/2026-0121-AgenticCoding/ping-skill",
+  "type": "skill",
+  "name": "ping-skill",
+  "description": "pingと言われたときに使います",
+  "author": "pea-sys",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/pea-sys/2026-0121-AgenticCoding/blob/HEAD/.github/skills/ping/SKILL.md",
+    "repo": "pea-sys/2026-0121-AgenticCoding",
+    "path": ".github/skills/ping/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

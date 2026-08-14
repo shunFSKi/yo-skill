@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/ngocsangyem/MeowKit/mk-sample-skill",
+  "type": "skill",
+  "name": "mk:sample-skill",
+  "description": "Sample skill for fixture purposes — small enough to land below noise floor.",
+  "author": "ngocsangyem",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ngocsangyem/MeowKit/blob/HEAD/packages/mewkit/tests/fixtures/context-audit/.claude/skills/sample-skill/SKILL.md",
+    "repo": "ngocsangyem/MeowKit",
+    "path": "packages/mewkit/tests/fixtures/context-audit/.claude/skills/sample-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/evanmormmm/deepseek-harness-desktop/user-only-skill",
+  "type": "skill",
+  "name": "user-only-skill",
+  "description": "Prove model-disabled skills stay outside the model catalog.",
+  "author": "evanmormmm",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/evanmormmm/deepseek-harness-desktop/blob/HEAD/examples/acp-agent/tests/snapshots/skill-load/workspace/.dsh/skills/user-only-skill/SKILL.md",
+    "repo": "evanmormmm/deepseek-harness-desktop",
+    "path": "examples/acp-agent/tests/snapshots/skill-load/workspace/.dsh/skills/user-only-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

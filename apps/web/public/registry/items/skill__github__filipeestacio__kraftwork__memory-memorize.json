@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/filipeestacio/kraftwork/memory-memorize",
+  "type": "skill",
+  "name": "memory-memorize",
+  "description": "Store a learning as a markdown file in workspace",
+  "author": "filipeestacio",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/filipeestacio/kraftwork/blob/HEAD/kraftwork/providers/local/skills/memory-memorize/SKILL.md",
+    "repo": "filipeestacio/kraftwork",
+    "path": "kraftwork/providers/local/skills/memory-memorize/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

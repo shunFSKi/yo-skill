@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/jimrothstein/dotfiles/random",
+  "type": "skill",
+  "name": "random",
+  "description": "Use this skill to generates a random integer 0-99",
+  "author": "jimrothstein",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/jimrothstein/dotfiles/blob/HEAD/opencode/skills/random/SKILL.md",
+    "repo": "jimrothstein/dotfiles",
+    "path": "opencode/skills/random/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

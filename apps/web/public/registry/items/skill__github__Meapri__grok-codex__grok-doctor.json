@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/Meapri/grok-codex/grok-doctor",
+  "type": "skill",
+  "name": "grok-doctor",
+  "description": "Diagnose Grok Codex consent, API key, and MCP readiness.",
+  "author": "Meapri",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Meapri/grok-codex/blob/HEAD/skills/grok-doctor/SKILL.md",
+    "repo": "Meapri/grok-codex",
+    "path": "skills/grok-doctor/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

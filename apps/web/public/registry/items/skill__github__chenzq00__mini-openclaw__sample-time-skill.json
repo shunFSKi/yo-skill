@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/chenzq00/mini-openclaw/sample-time-skill",
+  "type": "skill",
+  "name": "sample-time-skill",
+  "description": "Suggests using the now tool for time questions",
+  "author": "chenzq00",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/chenzq00/mini-openclaw/blob/HEAD/skills/sample-time-skill/SKILL.md",
+    "repo": "chenzq00/mini-openclaw",
+    "path": "skills/sample-time-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

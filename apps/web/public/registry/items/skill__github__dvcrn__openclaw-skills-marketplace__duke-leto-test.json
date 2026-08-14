@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/dvcrn/openclaw-skills-marketplace/duke-leto-test",
+  "type": "skill",
+  "name": "duke-leto-test",
+  "description": "Test skill to verify ClawHub publishing works correctly.",
+  "author": "dvcrn",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/dvcrn/openclaw-skills-marketplace/blob/HEAD/plugins/jdrhyne--duke-leto-test/skills/duke-leto-test/SKILL.md",
+    "repo": "dvcrn/openclaw-skills-marketplace",
+    "path": "plugins/jdrhyne--duke-leto-test/skills/duke-leto-test/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/archibate/archibate-skills/anti-compat",
+  "type": "skill",
+  "name": "anti-compat",
+  "description": "...",
+  "author": "archibate",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/archibate/archibate-skills/blob/HEAD/old-skills/redundant-skills/anti-compat/SKILL.md",
+    "repo": "archibate/archibate-skills",
+    "path": "old-skills/redundant-skills/anti-compat/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

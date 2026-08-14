@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/indigoai-us/hq-core/handoff",
+  "type": "skill",
+  "name": "handoff",
+  "description": "Preserve session state for a follow-up agent (parity fixture).",
+  "author": "indigoai-us",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/indigoai-us/hq-core/blob/HEAD/core/scripts/tests/fixtures/agent-session/skills/handoff/SKILL.md",
+    "repo": "indigoai-us/hq-core",
+    "path": "core/scripts/tests/fixtures/agent-session/skills/handoff/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

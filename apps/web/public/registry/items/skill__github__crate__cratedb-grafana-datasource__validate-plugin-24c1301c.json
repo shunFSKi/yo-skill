@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/crate/cratedb-grafana-datasource/validate-plugin-24c1301c",
+  "type": "skill",
+  "name": "validate-plugin",
+  "description": "Package dist/ and run the Grafana catalog plugin-validator on the CrateDB plugin",
+  "author": "crate",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/crate/cratedb-grafana-datasource/blob/HEAD/.claude/skills/validate-plugin/SKILL.md",
+    "repo": "crate/cratedb-grafana-datasource",
+    "path": ".claude/skills/validate-plugin/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

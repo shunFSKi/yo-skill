@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/anubhavg-icpl/vibe/template-skill-6579ae9e",
+  "type": "skill",
+  "name": "template-skill",
+  "description": "Replace with description of the skill and when Claude should use it. Use when you need help with template skill.",
+  "author": "anubhavg-icpl",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/anubhavg-icpl/vibe/blob/HEAD/skills/composio-template-skill/SKILL.md",
+    "repo": "anubhavg-icpl/vibe",
+    "path": "skills/composio-template-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

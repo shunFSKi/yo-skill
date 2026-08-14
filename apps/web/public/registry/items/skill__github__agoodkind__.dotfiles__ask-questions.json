@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/agoodkind/.dotfiles/ask-questions",
+  "type": "skill",
+  "name": "ask-questions",
+  "description": "Use when a decision, assumption, classification, caveat, issue, ambiguity, or missing input may be relevant to the current workstream.",
+  "author": "agoodkind",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/agoodkind/.dotfiles/blob/HEAD/corpus/skills/ask-questions/SKILL.md.tmpl",
+    "repo": "agoodkind/.dotfiles",
+    "path": "corpus/skills/ask-questions/SKILL.md.tmpl"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

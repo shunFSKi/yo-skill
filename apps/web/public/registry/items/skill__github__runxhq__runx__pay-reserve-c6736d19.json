@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/runxhq/runx/pay-reserve-c6736d19",
+  "type": "skill",
+  "name": "pay-reserve",
+  "description": "Deterministically reserve the x402 paid echo fixture spend.",
+  "author": "runxhq",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/runxhq/runx/blob/HEAD/fixtures/skills/x402-pay-paid-echo-reserve/SKILL.md",
+    "repo": "runxhq/runx",
+    "path": "fixtures/skills/x402-pay-paid-echo-reserve/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

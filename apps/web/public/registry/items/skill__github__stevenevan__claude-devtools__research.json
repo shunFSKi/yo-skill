@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/stevenevan/claude-devtools/research",
+  "type": "skill",
+  "name": "research",
+  "description": "Gather sources and write a bounded report.",
+  "author": "stevenevan",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/stevenevan/claude-devtools/blob/HEAD/src-tauri/tests/fixtures/codex-inventory/skills/research/SKILL.md",
+    "repo": "stevenevan/claude-devtools",
+    "path": "src-tauri/tests/fixtures/codex-inventory/skills/research/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

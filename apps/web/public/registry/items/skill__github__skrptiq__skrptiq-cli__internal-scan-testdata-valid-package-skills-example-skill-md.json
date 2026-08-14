@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/skrptiq/skrptiq-cli/internal-scan-testdata-valid-package-skills-example-skill-md",
+  "type": "skill",
+  "name": "internal-scan-testdata-valid-package-skills-example-skill-md",
+  "description": "A valid test skill",
+  "author": "skrptiq",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/skrptiq/skrptiq-cli/blob/HEAD/internal/scan/testdata/valid-package/skills/example-skill.md",
+    "repo": "skrptiq/skrptiq-cli",
+    "path": "internal/scan/testdata/valid-package/skills/example-skill.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

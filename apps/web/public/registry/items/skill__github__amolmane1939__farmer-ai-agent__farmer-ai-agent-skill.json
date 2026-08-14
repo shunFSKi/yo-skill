@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/amolmane1939/farmer-ai-agent/farmer-ai-agent-skill",
+  "type": "skill",
+  "name": "Farmer AI Agent Skill",
+  "description": "Skill metadata for the Farmer AI assistant",
+  "author": "amolmane1939",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/amolmane1939/farmer-ai-agent/blob/HEAD/SKILL.md",
+    "repo": "amolmane1939/farmer-ai-agent",
+    "path": "SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

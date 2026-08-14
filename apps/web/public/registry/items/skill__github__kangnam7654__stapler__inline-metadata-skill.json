@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/kangnam7654/stapler/inline-metadata-skill",
+  "type": "skill",
+  "name": "Inline Metadata Skill",
+  "description": "",
+  "author": "kangnam7654",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/kangnam7654/stapler/blob/HEAD/native/skills-scanner/tests/fixtures/ws_inline_yaml/SKILL.md",
+    "repo": "kangnam7654/stapler",
+    "path": "native/skills-scanner/tests/fixtures/ws_inline_yaml/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

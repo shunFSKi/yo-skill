@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/nklisch/pi-extensions/core-local",
+  "type": "skill",
+  "name": "core-local",
+  "description": "Packed E2E skill 1.0.0.",
+  "author": "nklisch",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/nklisch/pi-extensions/blob/HEAD/packages/pi-plugins/test/e2e/fixtures/marketplace/plugins/core-local/skills/core-local/SKILL.md",
+    "repo": "nklisch/pi-extensions",
+    "path": "packages/pi-plugins/test/e2e/fixtures/marketplace/plugins/core-local/skills/core-local/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

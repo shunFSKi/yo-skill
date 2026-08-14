@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/thoughtspot/thoughtspot-agent-skills/ts-convert-from-badformat",
+  "type": "skill",
+  "name": "ts-convert-from-badformat",
+  "description": "Fixture — conversion skill with no coverage-matrix.md.",
+  "author": "thoughtspot",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/thoughtspot/thoughtspot-agent-skills/blob/HEAD/tools/validate/tests/fixtures/bad_coverage_matrix/agents/cli/ts-convert-from-badformat/SKILL.md",
+    "repo": "thoughtspot/thoughtspot-agent-skills",
+    "path": "tools/validate/tests/fixtures/bad_coverage_matrix/agents/cli/ts-convert-from-badformat/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

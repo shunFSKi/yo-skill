@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/raffertyuy/repo-of-repos/update-all-md-docs",
+  "type": "skill",
+  "name": "update-all-md-docs",
+  "description": "Review and update all markdown docs in the repo-of-repos (excluding cloned repos)",
+  "author": "raffertyuy",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/raffertyuy/repo-of-repos/blob/HEAD/.claude/skills/update-all-md-docs/SKILL.md",
+    "repo": "raffertyuy/repo-of-repos",
+    "path": ".claude/skills/update-all-md-docs/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

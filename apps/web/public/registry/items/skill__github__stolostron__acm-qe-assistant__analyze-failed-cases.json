@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/stolostron/acm-qe-assistant/analyze-failed-cases",
+  "type": "skill",
+  "name": "analyze-failed-cases",
+  "description": "Analyze the Jenkins URL # and fix the automation issues:",
+  "author": "stolostron",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/stolostron/acm-qe-assistant/blob/HEAD/.claude/skills/analyze-failed-cases/SKILL.md",
+    "repo": "stolostron/acm-qe-assistant",
+    "path": ".claude/skills/analyze-failed-cases/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

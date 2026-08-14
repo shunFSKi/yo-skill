@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/pablof7z/awesome-agents/gh-pages-publisher",
+  "type": "skill",
+  "name": "gh-pages-publisher",
+  "description": "Publishes static review artifacts to GitHub Pages.",
+  "author": "pablof7z",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/pablof7z/awesome-agents/blob/HEAD/test/fixtures/profile-source/agents/triage-agent/skills/gh-pages-publisher/SKILL.md",
+    "repo": "pablof7z/awesome-agents",
+    "path": "test/fixtures/profile-source/agents/triage-agent/skills/gh-pages-publisher/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

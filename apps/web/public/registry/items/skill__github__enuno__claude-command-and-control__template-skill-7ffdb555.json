@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/enuno/claude-command-and-control/template-skill-7ffdb555",
+  "type": "skill",
+  "name": "template-skill",
+  "description": "Replace with description of the skill and when Claude should use it.",
+  "author": "enuno",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/enuno/claude-command-and-control/blob/HEAD/skills-templates/template-skill/SKILL.md",
+    "repo": "enuno/claude-command-and-control",
+    "path": "skills-templates/template-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

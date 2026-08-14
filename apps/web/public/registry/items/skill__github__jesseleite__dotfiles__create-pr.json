@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/jesseleite/dotfiles/create-pr",
+  "type": "skill",
+  "name": "create-pr",
+  "description": "When asked to \"push a PR\" or \"create a PR\", always push and create a draft PR on github",
+  "author": "jesseleite",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/jesseleite/dotfiles/blob/HEAD/agents/skills/create-pr/SKILL.md",
+    "repo": "jesseleite/dotfiles",
+    "path": "agents/skills/create-pr/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

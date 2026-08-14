@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/hassan-mohiddin/freeflow/review-pr-16947636",
+  "type": "skill",
+  "name": "review-pr",
+  "description": "Use when reviewing a pull request or local diff before merge.",
+  "author": "hassan-mohiddin",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/hassan-mohiddin/freeflow/blob/HEAD/deprecated/skill-evals-v1/fixtures/tiny-skill-dev-app/skills/review-pr/SKILL.md",
+    "repo": "hassan-mohiddin/freeflow",
+    "path": "deprecated/skill-evals-v1/fixtures/tiny-skill-dev-app/skills/review-pr/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

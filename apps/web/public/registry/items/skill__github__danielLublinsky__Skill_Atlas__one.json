@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/danielLublinsky/Skill_Atlas/one",
+  "type": "skill",
+  "name": "one",
+  "description": "Stale cached copy. If this node appears, discovery walked a non-installed version.",
+  "author": "danielLublinsky",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/danielLublinsky/Skill_Atlas/blob/HEAD/tests/fixtures/fakehome/plugins/cache/fake-mp/alpha/0.9.0/skills/eng/one/SKILL.md",
+    "repo": "danielLublinsky/Skill_Atlas",
+    "path": "tests/fixtures/fakehome/plugins/cache/fake-mp/alpha/0.9.0/skills/eng/one/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

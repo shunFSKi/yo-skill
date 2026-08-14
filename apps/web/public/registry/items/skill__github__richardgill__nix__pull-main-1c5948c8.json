@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/richardgill/nix/pull-main-1c5948c8",
+  "type": "skill",
+  "name": "pull-main",
+  "description": "Pull main branch and handle merge conflicts",
+  "author": "richardgill",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/richardgill/nix/blob/HEAD/built/ai-agents/pi/skills/pull-main/SKILL.md",
+    "repo": "richardgill/nix",
+    "path": "built/ai-agents/pi/skills/pull-main/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

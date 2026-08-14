@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/limit5/OmniSight-Productizer/skill-hd-parse",
+  "type": "skill",
+  "name": "SKILL_HD_PARSE",
+  "description": "[HD.1] Parse an EDA file into HDIR.",
+  "author": "limit5",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/limit5/OmniSight-Productizer/blob/HEAD/omnisight/agents/skills/hd-parse/SKILL.md",
+    "repo": "limit5/OmniSight-Productizer",
+    "path": "omnisight/agents/skills/hd-parse/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

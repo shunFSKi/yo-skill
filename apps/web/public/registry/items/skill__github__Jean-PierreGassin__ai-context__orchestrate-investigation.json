@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/Jean-PierreGassin/ai-context/orchestrate-investigation",
+  "type": "skill",
+  "name": "orchestrate-investigation",
+  "description": "Use when asked to investigate, perform research, find a root-cause, or assist in planning.",
+  "author": "Jean-PierreGassin",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Jean-PierreGassin/ai-context/blob/HEAD/resources/payload/.claude/skills/orchestrate-investigation/SKILL.md",
+    "repo": "Jean-PierreGassin/ai-context",
+    "path": "resources/payload/.claude/skills/orchestrate-investigation/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

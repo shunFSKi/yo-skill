@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/wddxh/ShortVideoDirector/simple-leaf",
+  "type": "skill",
+  "name": "simple-leaf",
+  "description": "A simple leaf skill fixture",
+  "author": "wddxh",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/wddxh/ShortVideoDirector/blob/HEAD/.opencode/tests/fixtures/skills/simple-leaf/SKILL.md",
+    "repo": "wddxh/ShortVideoDirector",
+    "path": ".opencode/tests/fixtures/skills/simple-leaf/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

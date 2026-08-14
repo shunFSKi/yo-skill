@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/crisweber2600/bmad.lens.src/expressplan",
+  "type": "skill",
+  "name": "expressplan",
+  "description": "Express planning workflow — all artifacts in a single session, no PRs. Use when starting the expressplan phase.",
+  "author": "crisweber2600",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/crisweber2600/bmad.lens.src/blob/HEAD/_bmad/lens-work/workflows/router/expressplan/SKILL.md",
+    "repo": "crisweber2600/bmad.lens.src",
+    "path": "_bmad/lens-work/workflows/router/expressplan/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/NoDeskAI/nodeskclaw/resource-profile",
+  "type": "skill",
+  "name": "resource-profile",
+  "description": "Verifies resource recommendation metadata",
+  "author": "NoDeskAI",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/NoDeskAI/nodeskclaw/blob/HEAD/nodeskclaw-backend/tests/fixtures/agent_bundles/p3_resource_profile_agent/skills/resourceful/SKILL.md",
+    "repo": "NoDeskAI/nodeskclaw",
+    "path": "nodeskclaw-backend/tests/fixtures/agent_bundles/p3_resource_profile_agent/skills/resourceful/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/unify-js/vitepress-mermaid/git-commit-message",
+  "type": "skill",
+  "name": "git-commit-message",
+  "description": "提交暂存区代码到 git 仓库",
+  "author": "unify-js",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/unify-js/vitepress-mermaid/blob/HEAD/.agents/skills/git-commit-message/SKILL.md",
+    "repo": "unify-js/vitepress-mermaid",
+    "path": ".agents/skills/git-commit-message/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/vh2224/forge-executor/dynamic-resources",
+  "type": "skill",
+  "name": "dynamic-resources",
+  "description": "Example skill loaded from resources_discover",
+  "author": "vh2224",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/vh2224/forge-executor/blob/HEAD/packages/pi-coding-agent/examples/extensions/dynamic-resources/SKILL.md",
+    "repo": "vh2224/forge-executor",
+    "path": "packages/pi-coding-agent/examples/extensions/dynamic-resources/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

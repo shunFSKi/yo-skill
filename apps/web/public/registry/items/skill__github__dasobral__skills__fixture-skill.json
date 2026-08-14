@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/dasobral/skills/fixture-skill",
+  "type": "skill",
+  "name": "fixture-skill",
+  "description": "Fixture skill used to prove trust inventory coverage.",
+  "author": "dasobral",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/dasobral/skills/blob/HEAD/tools/skills-export/tests/fixtures/workflows/agent-security/repository/.cursor/skills/fixture-skill/SKILL.md",
+    "repo": "dasobral/skills",
+    "path": "tools/skills-export/tests/fixtures/workflows/agent-security/repository/.cursor/skills/fixture-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

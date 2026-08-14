@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/AlmogBaku/aos/bad-cap-sorted",
+  "type": "skill",
+  "name": "bad-cap-sorted",
+  "description": "Ships an id that already carries its prefix. Use when checking prefix-redundant.",
+  "author": "AlmogBaku",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/AlmogBaku/aos/blob/HEAD/tools/lint/selftest/fixture/capabilities/name-cap/skills/bad-cap-sorted/SKILL.md",
+    "repo": "AlmogBaku/aos",
+    "path": "tools/lint/selftest/fixture/capabilities/name-cap/skills/bad-cap-sorted/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/Flow-Research/harnessy-v2/fixture-skill",
+  "type": "skill",
+  "name": "fixture-skill",
+  "description": "Fixture skill used by CI to verify project-local Harnessy skill registration.",
+  "author": "Flow-Research",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Flow-Research/harnessy-v2/blob/HEAD/packages/capability-harnessy-v1-full/resources/source/tests/fixtures/harness-smoke/local-skill/.agents/skills/fixture-skill/SKILL.md",
+    "repo": "Flow-Research/harnessy-v2",
+    "path": "packages/capability-harnessy-v1-full/resources/source/tests/fixtures/harness-smoke/local-skill/.agents/skills/fixture-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

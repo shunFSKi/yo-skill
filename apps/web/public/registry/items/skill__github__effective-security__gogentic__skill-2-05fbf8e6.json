@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/effective-security/gogentic/skill-2-05fbf8e6",
+  "type": "skill",
+  "name": "skill-2",
+  "description": "Not useful skill. Only for agent Bar",
+  "author": "effective-security",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/effective-security/gogentic/blob/HEAD/pkg/llmfactory/testdata/skills/skill-2/SKILL.md",
+    "repo": "effective-security/gogentic",
+    "path": "pkg/llmfactory/testdata/skills/skill-2/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

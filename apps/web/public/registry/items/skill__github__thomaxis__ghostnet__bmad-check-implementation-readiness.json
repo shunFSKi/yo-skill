@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/thomaxis/ghostnet/bmad-check-implementation-readiness",
+  "type": "skill",
+  "name": "bmad-check-implementation-readiness",
+  "description": "Validate PRD, UX, Architecture and Epics specs are complete. Use when the user says \"check implementation readiness\".",
+  "author": "thomaxis",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/thomaxis/ghostnet/blob/HEAD/.crush/skills/bmad-check-implementation-readiness/SKILL.md",
+    "repo": "thomaxis/ghostnet",
+    "path": ".crush/skills/bmad-check-implementation-readiness/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

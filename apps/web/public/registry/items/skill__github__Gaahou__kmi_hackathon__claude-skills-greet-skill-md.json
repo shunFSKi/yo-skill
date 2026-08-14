@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/Gaahou/kmi_hackathon/claude-skills-greet-skill-md",
+  "type": "skill",
+  "name": "claude-skills-greet-skill-md",
+  "description": "Greet the user warmly",
+  "author": "Gaahou",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Gaahou/kmi_hackathon/blob/HEAD/.claude/skills/greet/SKILL.md",
+    "repo": "Gaahou/kmi_hackathon",
+    "path": ".claude/skills/greet/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/wormholecowboy/.dotfiles/one",
+  "type": "skill",
+  "name": "one",
+  "description": "Give me steps one at a time",
+  "author": "wormholecowboy",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/wormholecowboy/.dotfiles/blob/HEAD/claude/.claude/skills/one/SKILL.md",
+    "repo": "wormholecowboy/.dotfiles",
+    "path": "claude/.claude/skills/one/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

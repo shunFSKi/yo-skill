@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.makosdDavid/package-risk",
+  "type": "mcp",
+  "name": "package-risk",
+  "description": "Package risk checks: maintenance, licence, advisories. Paid per call in USDC, no signup.",
+  "author": "io.github.makosdDavid",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/makosdDavid/package-risk-mcp",
+    "repo": "makosdDavid/package-risk-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@makosdav/package-risk-mcp"
+    ],
+    "env": [
+      {
+        "name": "EVM_PRIVATE_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T08:16:08.778004Z"
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# package-risk MCP connector\n\nMCP tools for checking a package's maintenance status, licence, and security\nadvisories before you depend on it - `package_risk`, `package_licence`,\n`package_advisories`. Paid per call in USDC on Base mainnet via [x402](https://x402.org).\n\n**No subscription, no API key.** You pay from your own wallet, per call, only\nfor what you use.\n\n## What this is (and isn't)\n\nThis is a thin client. The actual service is a stateless HTTP API at\n`x402-package-risk.x402-package-risk.workers.dev`. This connector never sees,\nholds, or forwards anyone else's funds - it only ever spends the wallet key\n**you** configure below, and only when **you** call one of its tools.\n\n## Setup\n\nYou need an EVM wallet with a small amount of USDC on **Base mainnet**\n(calls cost $0.005-$0.01 each). Never use a wallet holding significant funds\nfor an automated agent key - keep this one funded lightly.\n\nAdd to your MCP client config (Claude Desktop, Claude Code, Cursor, etc.):\n\n```json\n{\n  \"mcpServers\": {\n    \"package-risk\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@makosdav/package-risk-mcp\"],\n      \"env\": {\n        \"EVM_PRIVATE_KEY\": \"0xyour-private-key-here\"\n      }\n    }\n  }\n}\n```\n\n## Tools\n\n| Tool | Price | What it returns |\n|---|---|---|\n| `package_risk` | $0.01 | Full verdict: maintenance, licence, advisories, deprecation |\n| `package_licence` | $0.005 | Licence expression and closed-source safety |\n| `package_advisories` | $0.005 | Open OSV advisories for the resolved version |\n\nAll three take `system` (npm/pypi/go/maven/cargo/nuget), `name`, and an\noptional `version`.\n\n## How payment works\n\n1. Your agent calls a tool.\n2. This connector requests the resource; the server replies `402 Payment Required`.\n3. `@x402/fetch` builds and signs a payment authorisation with your key.\n4. The request retries with payment attached; the server verifies via Coinbase\n   CDP, returns the result, and settles on-chain.\n\nNo approval prompt happens here beyond what your MCP client itself asks for -\nif you want per-call confirmation, configure that in your agent framework, not\nhere.\n",
+  "status": "curated"
+}

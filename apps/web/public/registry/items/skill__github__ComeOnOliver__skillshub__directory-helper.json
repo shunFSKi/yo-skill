@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/ComeOnOliver/skillshub/directory-helper",
+  "type": "skill",
+  "name": "directory-helper",
+  "description": "Use when validating name-directory matching",
+  "author": "ComeOnOliver",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ComeOnOliver/skillshub/blob/HEAD/skills/agent-sh/agnix/name-directory-mismatch/SKILL.md",
+    "repo": "ComeOnOliver/skillshub",
+    "path": "skills/agent-sh/agnix/name-directory-mismatch/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

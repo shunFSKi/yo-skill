@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/xuangu-fang/Govern-Skill-Evo/learned-seed",
+  "type": "skill",
+  "name": "learned-seed",
+  "description": "作为从 No Skill 执行轨迹中生成航空客服候选 Skill 的基础结构，规则由离线学习流程写入。",
+  "author": "xuangu-fang",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/xuangu-fang/Govern-Skill-Evo/blob/HEAD/skills/learned_seed/SKILL.md",
+    "repo": "xuangu-fang/Govern-Skill-Evo",
+    "path": "skills/learned_seed/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

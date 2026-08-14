@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/Ich-mag-dich/Fmkorea-Preview-3/stack-set",
+  "type": "skill",
+  "name": "stack-set",
+  "description": "Auto-detect project tech stack and generate stack-specific references for domain skills",
+  "author": "Ich-mag-dich",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Ich-mag-dich/Fmkorea-Preview-3/blob/HEAD/.codex/skills/stack-set/SKILL.md",
+    "repo": "Ich-mag-dich/Fmkorea-Preview-3",
+    "path": ".codex/skills/stack-set/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/VeigaPunk/benxshitter/agent-pip",
+  "type": "skill",
+  "name": "agent-pip",
+  "description": "Run and inspect the Agent Pip multi-panel tmux dashboard.",
+  "author": "VeigaPunk",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/VeigaPunk/benxshitter/blob/HEAD/marketplace/plugins/agent-pip/skills/agent-pip/SKILL.md",
+    "repo": "VeigaPunk/benxshitter",
+    "path": "marketplace/plugins/agent-pip/skills/agent-pip/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/microsoft-foundry/foundry-samples/escalation",
+  "type": "skill",
+  "name": "escalation",
+  "description": "Escalate to a human agent. Use when the customer is frustrated or asks for a person.",
+  "author": "microsoft-foundry",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/microsoft-foundry/foundry-samples/blob/HEAD/samples/python/hosted-agents/bring-your-own/responses/optimization-customer-support/src/optimization-customer-support-python-responses/skills/escalation/SKILL.md",
+    "repo": "microsoft-foundry/foundry-samples",
+    "path": "samples/python/hosted-agents/bring-your-own/responses/optimization-customer-support/src/optimization-customer-support-python-responses/skills/escalation/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

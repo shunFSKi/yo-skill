@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/Opus-Aether-AI/legion-core/plugin-with-skill",
+  "type": "skill",
+  "name": "plugin-with-skill",
+  "description": "Test plugin with a single top-level SKILL.md.",
+  "author": "Opus-Aether-AI",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Opus-Aether-AI/legion-core/blob/HEAD/tests/fixtures/plugins/plugin-with-skill/SKILL.md",
+    "repo": "Opus-Aether-AI/legion-core",
+    "path": "tests/fixtures/plugins/plugin-with-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

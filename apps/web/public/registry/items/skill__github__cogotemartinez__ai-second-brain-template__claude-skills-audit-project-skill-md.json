@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/cogotemartinez/ai-second-brain-template/claude-skills-audit-project-skill-md",
+  "type": "skill",
+  "name": "claude-skills-audit-project-skill-md",
+  "description": "MOVED: This skill has been renamed to /audit-brain",
+  "author": "cogotemartinez",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/cogotemartinez/ai-second-brain-template/blob/HEAD/.claude/skills/audit-project/SKILL.md",
+    "repo": "cogotemartinez/ai-second-brain-template",
+    "path": ".claude/skills/audit-project/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

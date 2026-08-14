@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/jtsang4/efficient-coding/report-review",
+  "type": "skill",
+  "name": "report-review",
+  "description": "按听众测试清单审阅已有汇报稿并引导补足。",
+  "author": "jtsang4",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/jtsang4/efficient-coding/blob/HEAD/skills/report-review/SKILL.md",
+    "repo": "jtsang4/efficient-coding",
+    "path": "skills/report-review/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

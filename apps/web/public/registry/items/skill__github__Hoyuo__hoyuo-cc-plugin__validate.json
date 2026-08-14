@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/Hoyuo/hoyuo-cc-plugin/validate",
+  "type": "skill",
+  "name": "validate",
+  "description": "하네스 검증 — 구축된 하네스의 구조와 동작을 검증한다.",
+  "author": "Hoyuo",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Hoyuo/hoyuo-cc-plugin/blob/HEAD/harness-engineering/skills/validate/SKILL.md",
+    "repo": "Hoyuo/hoyuo-cc-plugin",
+    "path": "harness-engineering/skills/validate/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

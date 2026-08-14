@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/Starchild-ai-agent/community-skills/1977-orderly-trading-orders-skill",
+  "type": "skill",
+  "name": "@1977/orderly-trading-orders-skill",
+  "description": "Helps place trades on orderly",
+  "author": "Starchild-ai-agent",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Starchild-ai-agent/community-skills/blob/HEAD/1977/orderly-trading-orders-skill/SKILL.md",
+    "repo": "Starchild-ai-agent/community-skills",
+    "path": "1977/orderly-trading-orders-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

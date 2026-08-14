@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/swarmclawai/agent-skills-lint/another-skill",
+  "type": "skill",
+  "name": "another-skill",
+  "description": "A second valid skill used to verify collision detection across a directory. Agents match on the description text.",
+  "author": "swarmclawai",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/swarmclawai/agent-skills-lint/blob/HEAD/tests/fixtures/valid/another-skill.md",
+    "repo": "swarmclawai/agent-skills-lint",
+    "path": "tests/fixtures/valid/another-skill.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

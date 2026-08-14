@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/ongridio/ongrid/buried-skill",
+  "type": "skill",
+  "name": "buried_skill",
+  "description": "A skill nested several directories deep, to verify recursive walk.",
+  "author": "ongridio",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ongridio/ongrid/blob/HEAD/internal/manager/biz/aiops/chatruntime/testdata/skill_registry/multi/nested/deeper/buried_skill/SKILL.md",
+    "repo": "ongridio/ongrid",
+    "path": "internal/manager/biz/aiops/chatruntime/testdata/skill_registry/multi/nested/deeper/buried_skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

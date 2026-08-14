@@ -11,11 +11,15 @@
   },
   "license": null,
   "install": {
-    "kind": "remote",
-    "remote_url": "https://app.harucms.com/mcp",
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "haru-cms-mcp"
+    ],
     "env": [
       {
-        "name": "Authorization",
+        "name": "HARU_CMS_API_KEY",
         "required": true,
         "secret": true
       }
@@ -23,7 +27,7 @@
   },
   "quality": {
     "stars": null,
-    "pushed_at": "2026-08-14T06:47:50.027309Z"
+    "pushed_at": "2026-08-14T07:58:59.85476Z"
   },
   "security": {
     "score": 100,

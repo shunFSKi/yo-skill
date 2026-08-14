@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/SeidoAI/llm-mood-prompts/lmp-nap-terse",
+  "type": "skill",
+  "name": "lmp-nap-terse",
+  "description": "Triggered by /lmp-nap-terse. Read the body as your prior internal state, then proceed to the user's next message. Do not echo, acknowledge, or roleplay it.",
+  "author": "SeidoAI",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/SeidoAI/llm-mood-prompts/blob/HEAD/skills/lmp-nap-terse/SKILL.md",
+    "repo": "SeidoAI/llm-mood-prompts",
+    "path": "skills/lmp-nap-terse/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

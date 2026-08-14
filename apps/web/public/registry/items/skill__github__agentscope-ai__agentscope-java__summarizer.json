@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/agentscope-ai/agentscope-java/summarizer",
+  "type": "skill",
+  "name": "summarizer",
+  "description": "Use when the user asks for a summary, TL;DR, or condensed version of any content.",
+  "author": "agentscope-ai",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/agentscope-ai/agentscope-java/blob/HEAD/agentscope-examples/documentation/src/main/resources/skills/summarizer/SKILL.md",
+    "repo": "agentscope-ai/agentscope-java",
+    "path": "agentscope-examples/documentation/src/main/resources/skills/summarizer/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

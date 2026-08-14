@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/lf8r/bin/reread",
+  "type": "skill",
+  "name": "reread",
+  "description": "I modified some files by hand, so please reread any files you need to look at. Do not use your cached versions of these files. for the next question which I will now give you.",
+  "author": "lf8r",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/lf8r/bin/blob/HEAD/codex/reread/SKILL.md",
+    "repo": "lf8r/bin",
+    "path": "codex/reread/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

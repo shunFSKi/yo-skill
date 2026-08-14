@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/skill-commons/skill-commons/old-name",
+  "type": "skill",
+  "name": "old-name",
+  "description": "Synthetic input whose frontmatter name disagrees with its directory identity.",
+  "author": "skill-commons",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/skill-commons/skill-commons/blob/HEAD/warehouse/git-first-monorepo-v0.5/tests/fixtures/name-mismatch/SKILL.md",
+    "repo": "skill-commons/skill-commons",
+    "path": "warehouse/git-first-monorepo-v0.5/tests/fixtures/name-mismatch/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/conn-castle/agent-layer/beta-3dac3683",
+  "type": "skill",
+  "name": "beta",
+  "description": "Second command does something useful for testing wrap lines in codex skills.",
+  "author": "conn-castle",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/conn-castle/agent-layer/blob/HEAD/internal/sync/testdata/fixture-repo/expected/.agents/skills/beta/SKILL.md",
+    "repo": "conn-castle/agent-layer",
+    "path": "internal/sync/testdata/fixture-repo/expected/.agents/skills/beta/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

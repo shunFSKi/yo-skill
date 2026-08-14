@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/xiongxianfei/rigorloop/missing-resource-map",
+  "type": "skill",
+  "name": "missing-resource-map",
+  "description": "Use when validating that packaged resources require explicit load conditions.",
+  "author": "xiongxianfei",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/xiongxianfei/rigorloop/blob/HEAD/tests/fixtures/skills/published-design/missing-resource-map/SKILL.md",
+    "repo": "xiongxianfei/rigorloop",
+    "path": "tests/fixtures/skills/published-design/missing-resource-map/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/cm-ailab-cc-plugins/marketplace/plugin-name-2263f90d",
+  "type": "skill",
+  "name": "__PLUGIN_NAME__",
+  "description": "__DESCRIPTION__",
+  "author": "cm-ailab-cc-plugins",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/cm-ailab-cc-plugins/marketplace/blob/HEAD/templates/mixed/skills/__PLUGIN_NAME__/SKILL.md",
+    "repo": "cm-ailab-cc-plugins/marketplace",
+    "path": "templates/mixed/skills/__PLUGIN_NAME__/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/zokis/skillforge-zokis/valid",
+  "type": "skill",
+  "name": "valid",
+  "description": "Use when testing the lint script with a valid skill - this is a fixture",
+  "author": "zokis",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/zokis/skillforge-zokis/blob/HEAD/tests/fixtures/valid/SKILL.md",
+    "repo": "zokis/skillforge-zokis",
+    "path": "tests/fixtures/valid/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

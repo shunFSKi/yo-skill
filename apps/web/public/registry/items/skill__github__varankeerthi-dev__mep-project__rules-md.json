@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/varankeerthi-dev/mep-project/rules-md",
+  "type": "skill",
+  "name": "rules-md",
+  "description": "rules to follow",
+  "author": "varankeerthi-dev",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/varankeerthi-dev/mep-project/blob/HEAD/.agents/skills/rules-md/SKILL.md",
+    "repo": "varankeerthi-dev/mep-project",
+    "path": ".agents/skills/rules-md/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

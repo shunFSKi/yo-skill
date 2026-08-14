@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/wutsi/kokibot/weather-global",
+  "type": "skill",
+  "name": "weather-global",
+  "description": "Global weather skill available to all agents",
+  "author": "wutsi",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/wutsi/kokibot/blob/HEAD/src/test/resources/home/multi-agent/config/skills/weather-global/SKILL.md",
+    "repo": "wutsi/kokibot",
+    "path": "src/test/resources/home/multi-agent/config/skills/weather-global/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

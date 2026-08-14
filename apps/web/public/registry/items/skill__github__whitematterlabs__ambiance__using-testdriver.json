@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/whitematterlabs/ambiance/using-testdriver",
+  "type": "skill",
+  "name": "using-testdriver",
+  "description": "Test driver-bound skill.",
+  "author": "whitematterlabs",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/whitematterlabs/ambiance/blob/HEAD/tests/fixtures/paiman/testdriver/SKILL.md",
+    "repo": "whitematterlabs/ambiance",
+    "path": "tests/fixtures/paiman/testdriver/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

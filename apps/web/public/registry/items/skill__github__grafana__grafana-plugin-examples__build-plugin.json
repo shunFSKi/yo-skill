@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/grafana/grafana-plugin-examples/build-plugin",
+  "type": "skill",
+  "name": "build-plugin",
+  "description": "build a Grafana plugin using the standard build process (frontend and backend if applicable)",
+  "author": "grafana",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/grafana/grafana-plugin-examples/blob/HEAD/examples/app-basic/.codex/skills/build-plugin/SKILL.md",
+    "repo": "grafana/grafana-plugin-examples",
+    "path": "examples/app-basic/.codex/skills/build-plugin/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

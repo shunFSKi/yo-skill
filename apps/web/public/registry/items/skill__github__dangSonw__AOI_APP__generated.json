@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/dangSonw/AOI_APP/generated",
+  "type": "skill",
+  "name": "generated",
+  "description": "Use this skill to possesses coding skills",
+  "author": "dangSonw",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/dangSonw/AOI_APP/blob/HEAD/.agents/skills/generated/SKILL.md",
+    "repo": "dangSonw/AOI_APP",
+    "path": ".agents/skills/generated/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

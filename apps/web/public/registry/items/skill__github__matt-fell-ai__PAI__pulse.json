@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/matt-fell-ai/PAI/pulse",
+  "type": "skill",
+  "name": "Pulse",
+  "description": "A PAI modular skill for pulse. USE WHEN you need pulse capabilities.",
+  "author": "matt-fell-ai",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/matt-fell-ai/PAI/blob/HEAD/skills/Pulse/SKILL.md",
+    "repo": "matt-fell-ai/PAI",
+    "path": "skills/Pulse/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

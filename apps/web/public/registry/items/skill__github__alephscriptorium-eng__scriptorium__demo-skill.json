@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/alephscriptorium-eng/scriptorium/demo-skill",
+  "type": "skill",
+  "name": "demo-skill",
+  "description": "Skill sintético de materialización para la fixture tick-cero. Demuestra whitelist .claude/skills/ (no es residuo IDE).",
+  "author": "alephscriptorium-eng",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/alephscriptorium-eng/scriptorium/blob/HEAD/.claude/skills/estacion-viva/examples/fixture-tick-cero/.claude/skills/demo-skill/SKILL.md",
+    "repo": "alephscriptorium-eng/scriptorium",
+    "path": ".claude/skills/estacion-viva/examples/fixture-tick-cero/.claude/skills/demo-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

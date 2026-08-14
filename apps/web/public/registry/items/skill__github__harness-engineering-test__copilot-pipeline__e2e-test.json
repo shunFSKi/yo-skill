@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/harness-engineering-test/copilot-pipeline/e2e-test",
+  "type": "skill",
+  "name": "e2e-test",
+  "description": "E2Eテストの作成と実行を支援するスキル",
+  "author": "harness-engineering-test",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/harness-engineering-test/copilot-pipeline/blob/HEAD/.github/skills/e2e-test/SKILL.md",
+    "repo": "harness-engineering-test/copilot-pipeline",
+    "path": ".github/skills/e2e-test/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

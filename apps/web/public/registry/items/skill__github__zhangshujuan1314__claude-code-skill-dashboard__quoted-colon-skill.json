@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/zhangshujuan1314/claude-code-skill-dashboard/quoted-colon-skill",
+  "type": "skill",
+  "name": "quoted-colon-skill",
+  "description": "Use when user says: review this PR, or: check my code",
+  "author": "zhangshujuan1314",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/zhangshujuan1314/claude-code-skill-dashboard/blob/HEAD/fixtures/quoted-colon/SKILL.md",
+    "repo": "zhangshujuan1314/claude-code-skill-dashboard",
+    "path": "fixtures/quoted-colon/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

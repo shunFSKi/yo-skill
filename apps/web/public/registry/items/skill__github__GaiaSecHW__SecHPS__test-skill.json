@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/GaiaSecHW/SecHPS/test-skill",
+  "type": "skill",
+  "name": "test-skill",
+  "description": "A simple test skill for verification",
+  "author": "GaiaSecHW",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/GaiaSecHW/SecHPS/blob/HEAD/codeswarm/shared/skills_registry/test-skill/latest/SKILL.md",
+    "repo": "GaiaSecHW/SecHPS",
+    "path": "codeswarm/shared/skills_registry/test-skill/latest/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

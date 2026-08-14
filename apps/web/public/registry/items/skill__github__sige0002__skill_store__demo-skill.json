@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/sige0002/skill_store/demo-skill",
+  "type": "skill",
+  "name": "demo-skill",
+  "description": "Demo skill used by structure validation tests. Use when testing.",
+  "author": "sige0002",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/sige0002/skill_store/blob/HEAD/agents-config/agent-guidance-architect/evals/fixtures/good-repo/.agents/skills/demo-skill/SKILL.md",
+    "repo": "sige0002/skill_store",
+    "path": "agents-config/agent-guidance-architect/evals/fixtures/good-repo/.agents/skills/demo-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

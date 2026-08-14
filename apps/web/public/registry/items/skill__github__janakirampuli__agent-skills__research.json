@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/janakirampuli/agent-skills/research",
+  "type": "skill",
+  "name": "research",
+  "description": "Use this skill to research a topic before making decisions.",
+  "author": "janakirampuli",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/janakirampuli/agent-skills/blob/HEAD/skills/research/SKILL.md",
+    "repo": "janakirampuli/agent-skills",
+    "path": "skills/research/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/EigenTom/DR-DCI/unknown-field",
+  "type": "skill",
+  "name": "unknown-field",
+  "description": "A skill with an unknown frontmatter field.",
+  "author": "EigenTom",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/EigenTom/DR-DCI/blob/HEAD/pi-mono/packages/coding-agent/test/fixtures/skills/unknown-field/SKILL.md",
+    "repo": "EigenTom/DR-DCI",
+    "path": "pi-mono/packages/coding-agent/test/fixtures/skills/unknown-field/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

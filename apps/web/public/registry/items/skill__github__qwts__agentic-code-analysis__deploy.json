@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/qwts/agentic-code-analysis/deploy",
+  "type": "skill",
+  "name": "deploy",
+  "description": "Deploy the service safely. Use when releasing.",
+  "author": "qwts",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/qwts/agentic-code-analysis/blob/HEAD/tests/fixtures/instruction-corpus/claude/repo/.claude/skills/deploy/SKILL.md",
+    "repo": "qwts/agentic-code-analysis",
+    "path": "tests/fixtures/instruction-corpus/claude/repo/.claude/skills/deploy/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

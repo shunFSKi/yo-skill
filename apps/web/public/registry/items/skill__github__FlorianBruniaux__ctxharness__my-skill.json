@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/FlorianBruniaux/ctxharness/my-skill",
+  "type": "skill",
+  "name": "my-skill",
+  "description": "Entry point skill file",
+  "author": "FlorianBruniaux",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/FlorianBruniaux/ctxharness/blob/HEAD/packages/core/src/__tests__/fixtures/root-nested-skills/.claude/skills/my-skill/skill.md",
+    "repo": "FlorianBruniaux/ctxharness",
+    "path": "packages/core/src/__tests__/fixtures/root-nested-skills/.claude/skills/my-skill/skill.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

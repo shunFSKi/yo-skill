@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/clodoaldoperito-droid/ARQUITETURA_JARVIS/unilever-guacu",
+  "type": "skill",
+  "name": "unilever-guacu",
+  "description": "OBSERVAR O DÓSSEI E ACESSAR ARQUIVO PTCAS",
+  "author": "clodoaldoperito-droid",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/clodoaldoperito-droid/ARQUITETURA_JARVIS/blob/HEAD/agent_skills/unilever-guacu/SKILL.md",
+    "repo": "clodoaldoperito-droid/ARQUITETURA_JARVIS",
+    "path": "agent_skills/unilever-guacu/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/Miosa-osa/osa-framework/support-triage",
+  "type": "skill",
+  "name": "support-triage",
+  "description": "Use when turning raw support context into a precise triage note.",
+  "author": "Miosa-osa",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Miosa-osa/osa-framework/blob/HEAD/examples/clinic-ops-agent/agent/skills/support-triage/SKILL.md",
+    "repo": "Miosa-osa/osa-framework",
+    "path": "examples/clinic-ops-agent/agent/skills/support-triage/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

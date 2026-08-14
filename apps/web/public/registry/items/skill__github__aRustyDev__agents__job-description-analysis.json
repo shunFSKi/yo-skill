@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/aRustyDev/agents/job-description-analysis",
+  "type": "skill",
+  "name": "job-description-analysis",
+  "description": "Analyze job descriptions to extract key requirements, responsibilities, and qualification signals",
+  "author": "aRustyDev",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/aRustyDev/agents/blob/HEAD/content/plugins/job-hunting/skills/job-description-analysis/SKILL.md",
+    "repo": "aRustyDev/agents",
+    "path": "content/plugins/job-hunting/skills/job-description-analysis/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

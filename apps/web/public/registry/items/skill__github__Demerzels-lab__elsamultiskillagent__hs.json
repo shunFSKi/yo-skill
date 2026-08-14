@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/Demerzels-lab/elsamultiskillagent/hs",
+  "type": "skill",
+  "name": "hs",
+  "description": "ACTIVATE THIS SKILL FOR ANY SHELL COMMAND OR FILE READ.",
+  "author": "Demerzels-lab",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Demerzels-lab/elsamultiskillagent/blob/HEAD/public/skills/frmoretto/hs/SKILL.md",
+    "repo": "Demerzels-lab/elsamultiskillagent",
+    "path": "public/skills/frmoretto/hs/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

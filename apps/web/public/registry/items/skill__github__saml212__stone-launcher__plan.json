@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/saml212/stone-launcher/plan",
+  "type": "skill",
+  "name": "plan",
+  "description": "Manage calendar, scheduling, and goals. Use for planning requests.",
+  "author": "saml212",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/saml212/stone-launcher/blob/HEAD/agent/skills/plan/SKILL.md",
+    "repo": "saml212/stone-launcher",
+    "path": "agent/skills/plan/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

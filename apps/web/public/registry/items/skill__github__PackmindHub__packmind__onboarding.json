@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/PackmindHub/packmind/onboarding",
+  "type": "skill",
+  "name": "onboarding",
+  "description": "Get a new joiner productive in their first week.",
+  "author": "PackmindHub",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/PackmindHub/packmind/blob/HEAD/apps/e2e-tests/src/fixtures/skills/onboarding/SKILL.md",
+    "repo": "PackmindHub/packmind",
+    "path": "apps/e2e-tests/src/fixtures/skills/onboarding/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

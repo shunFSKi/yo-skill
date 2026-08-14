@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/inkwonjung-colosseum/plugins/api-design-logistics",
+  "type": "skill",
+  "name": "api-design-logistics",
+  "description": "Use when 물류 API.",
+  "author": "inkwonjung-colosseum",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/inkwonjung-colosseum/plugins/blob/HEAD/logistics-kit/skills/api-design-logistics/SKILL.md",
+    "repo": "inkwonjung-colosseum/plugins",
+    "path": "logistics-kit/skills/api-design-logistics/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/pixelsmill/chess-outpost/gds-validate-gdd",
+  "type": "skill",
+  "name": "gds-validate-gdd",
+  "description": "Validate a GDD against standards. Use when the user says \"validate this GDD\" or \"run GDD validation\".",
+  "author": "pixelsmill",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/pixelsmill/chess-outpost/blob/HEAD/.claude/skills/gds-validate-gdd/SKILL.md",
+    "repo": "pixelsmill/chess-outpost",
+    "path": ".claude/skills/gds-validate-gdd/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

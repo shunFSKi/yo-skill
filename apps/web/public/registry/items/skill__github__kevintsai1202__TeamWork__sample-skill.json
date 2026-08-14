@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/kevintsai1202/TeamWork/sample-skill",
+  "type": "skill",
+  "name": "sample-skill",
+  "description": "Sample Skill",
+  "author": "kevintsai1202",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/kevintsai1202/TeamWork/blob/HEAD/gateway/src/test/resources/agents/skills/sample-skill.md",
+    "repo": "kevintsai1202/TeamWork",
+    "path": "gateway/src/test/resources/agents/skills/sample-skill.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

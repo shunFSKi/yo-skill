@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/roxblnfk/zed-skills/hidden-catalog",
+  "type": "skill",
+  "name": "hidden-catalog",
+  "description": "Catalog layout two levels deep",
+  "author": "roxblnfk",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/roxblnfk/zed-skills/blob/HEAD/crates/skills-cli/tests/fixtures/sandbox/vendor/nested/skills-tree/skills/php/hidden-catalog/SKILL.md",
+    "repo": "roxblnfk/zed-skills",
+    "path": "crates/skills-cli/tests/fixtures/sandbox/vendor/nested/skills-tree/skills/php/hidden-catalog/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

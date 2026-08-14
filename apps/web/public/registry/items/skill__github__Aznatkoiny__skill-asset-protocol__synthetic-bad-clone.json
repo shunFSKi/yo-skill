@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/Aznatkoiny/skill-asset-protocol/synthetic-bad-clone",
+  "type": "skill",
+  "name": "synthetic-bad-clone",
+  "description": "A deliberately insensitive baseline for the evaluator.",
+  "author": "Aznatkoiny",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Aznatkoiny/skill-asset-protocol/blob/HEAD/spikes/clone-economics/fixtures/bad-clone/SKILL.md",
+    "repo": "Aznatkoiny/skill-asset-protocol",
+    "path": "spikes/clone-economics/fixtures/bad-clone/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/luojisama/nonebot-plugin-personification/image-gen",
+  "type": "skill",
+  "name": "image_gen",
+  "description": "按用户明确要求生成图片并发送给聊天。",
+  "author": "luojisama",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/luojisama/nonebot-plugin-personification/blob/HEAD/nonebot_plugin_personification/skills/skillpacks/image_gen/SKILL.md",
+    "repo": "luojisama/nonebot-plugin-personification",
+    "path": "nonebot_plugin_personification/skills/skillpacks/image_gen/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

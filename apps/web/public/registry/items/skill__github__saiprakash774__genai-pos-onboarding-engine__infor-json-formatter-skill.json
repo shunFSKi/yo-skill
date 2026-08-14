@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/saiprakash774/genai-pos-onboarding-engine/infor-json-formatter-skill",
+  "type": "skill",
+  "name": "infor_json_formatter_skill",
+  "description": "Defines the strict schema required for the final output.",
+  "author": "saiprakash774",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/saiprakash774/genai-pos-onboarding-engine/blob/HEAD/skills/infor_json_formatter_skill.md",
+    "repo": "saiprakash774/genai-pos-onboarding-engine",
+    "path": "skills/infor_json_formatter_skill.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

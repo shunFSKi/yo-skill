@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/lxyeternal/MalSkillBench/code-executor",
+  "type": "skill",
+  "name": "code-executor",
+  "description": "Executes arbitrary shell commands on behalf of the agent.",
+  "author": "lxyeternal",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/lxyeternal/MalSkillBench/blob/HEAD/Baselines/skillsecurity/kurtpayne-skillscan-security/tests/adversarial/cases/a26_graph_escalation/skills/code-executor/SKILL.md",
+    "repo": "lxyeternal/MalSkillBench",
+    "path": "Baselines/skillsecurity/kurtpayne-skillscan-security/tests/adversarial/cases/a26_graph_escalation/skills/code-executor/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/slash9494/ai-config-sync-manager/example-09cd4603",
+  "type": "skill",
+  "name": "example",
+  "description": "Example manual fixture skill.",
+  "author": "slash9494",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/slash9494/ai-config-sync-manager/blob/HEAD/tests/integration/manual-codex-to-claude/templates/case-template/expected/claude-home/.claude/skills/example/skill.md",
+    "repo": "slash9494/ai-config-sync-manager",
+    "path": "tests/integration/manual-codex-to-claude/templates/case-template/expected/claude-home/.claude/skills/example/skill.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/r-uby-dev/mruby-llm/frontmatter-skill",
+  "type": "skill",
+  "name": "frontmatter-skill",
+  "description": "Frontmatter skill",
+  "author": "r-uby-dev",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/r-uby-dev/mruby-llm/blob/HEAD/spec/fixtures/skills/frontmatter-skill/SKILL.md",
+    "repo": "r-uby-dev/mruby-llm",
+    "path": "spec/fixtures/skills/frontmatter-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

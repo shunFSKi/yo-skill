@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/manhquydev/flow-skill/flow",
+  "type": "skill",
+  "name": "flow",
+  "description": "Mini-skill fixture for installer unit + integration tests. Not a real skill.",
+  "author": "manhquydev",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/manhquydev/flow-skill/blob/HEAD/npm-wrapper/test/fixtures/mini-skill/SKILL.md",
+    "repo": "manhquydev/flow-skill",
+    "path": "npm-wrapper/test/fixtures/mini-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

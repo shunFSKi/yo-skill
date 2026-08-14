@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/rhyumiranda/canopy/yolo",
+  "type": "skill",
+  "name": "yolo",
+  "description": "Switch Canopy to autonomous yolo mode. Use when the user wants the orchestrator to auto-fix and avoid asking for routine decisions.",
+  "author": "rhyumiranda",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/rhyumiranda/canopy/blob/HEAD/skills/yolo/SKILL.md",
+    "repo": "rhyumiranda/canopy",
+    "path": "skills/yolo/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

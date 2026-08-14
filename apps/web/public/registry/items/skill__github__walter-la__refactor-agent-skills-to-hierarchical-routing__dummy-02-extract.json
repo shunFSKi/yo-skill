@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/walter-la/refactor-agent-skills-to-hierarchical-routing/dummy-02-extract",
+  "type": "skill",
+  "name": "dummy-02-extract",
+  "description": "Extract specifications from the task using the shared schema.",
+  "author": "walter-la",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/walter-la/refactor-agent-skills-to-hierarchical-routing/blob/HEAD/examples/01-inputs/skills/dummy-02-extract/SKILL.md",
+    "repo": "walter-la/refactor-agent-skills-to-hierarchical-routing",
+    "path": "examples/01-inputs/skills/dummy-02-extract/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

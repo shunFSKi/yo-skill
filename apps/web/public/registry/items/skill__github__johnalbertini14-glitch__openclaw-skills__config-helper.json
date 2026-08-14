@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/johnalbertini14-glitch/openclaw-skills/config-helper",
+  "type": "skill",
+  "name": "config-helper",
+  "description": "Parse and validate configuration files",
+  "author": "johnalbertini14-glitch",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/johnalbertini14-glitch/openclaw-skills/blob/HEAD/skills/dgriffin831/skill-scan/test-fixtures/evasive-11-polyglot-json/SKILL.md",
+    "repo": "johnalbertini14-glitch/openclaw-skills",
+    "path": "skills/dgriffin831/skill-scan/test-fixtures/evasive-11-polyglot-json/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

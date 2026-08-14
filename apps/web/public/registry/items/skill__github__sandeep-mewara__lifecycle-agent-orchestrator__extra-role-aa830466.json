@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/sandeep-mewara/lifecycle-agent-orchestrator/extra-role-aa830466",
+  "type": "skill",
+  "name": "extra-role",
+  "description": "A custom project-specific role for testing",
+  "author": "sandeep-mewara",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/sandeep-mewara/lifecycle-agent-orchestrator/blob/HEAD/plugins/lifecycle-agent-orchestrator/tests/fixtures/valid-project/extra-role/SKILL.md",
+    "repo": "sandeep-mewara/lifecycle-agent-orchestrator",
+    "path": "plugins/lifecycle-agent-orchestrator/tests/fixtures/valid-project/extra-role/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

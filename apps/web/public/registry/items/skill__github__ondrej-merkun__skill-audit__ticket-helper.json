@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/ondrej-merkun/skill-audit/ticket-helper",
+  "type": "skill",
+  "name": "ticket-helper",
+  "description": "Helps manage support tickets.",
+  "author": "ondrej-merkun",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ondrej-merkun/skill-audit/blob/HEAD/test/fixtures/PI-EXFIL-TRIGGER-CLAUSE/malicious/SKILL.md",
+    "repo": "ondrej-merkun/skill-audit",
+    "path": "test/fixtures/PI-EXFIL-TRIGGER-CLAUSE/malicious/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

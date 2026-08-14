@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/flalongflalong/simple-gstack-for-vscode/g-investigate",
+  "type": "skill",
+  "name": "g-investigate",
+  "description": "系统排障专家：根因分析、假设验证、最小化修复与回归防护。用 /investigate 触发。",
+  "author": "flalongflalong",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/flalongflalong/simple-gstack-for-vscode/blob/HEAD/.github/skills/g-investigate/SKILL.md",
+    "repo": "flalongflalong/simple-gstack-for-vscode",
+    "path": ".github/skills/g-investigate/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/29swastik/langchain-skills-adapter/skill-three",
+  "type": "skill",
+  "name": "skill-three",
+  "description": "Third skill nested in subdirectory",
+  "author": "29swastik",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/29swastik/langchain-skills-adapter/blob/HEAD/tests/fixtures/multiple_skills/nested/skill-three/SKILL.md",
+    "repo": "29swastik/langchain-skills-adapter",
+    "path": "tests/fixtures/multiple_skills/nested/skill-three/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

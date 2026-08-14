@@ -1,0 +1,53 @@
+{
+  "id": "skill:github/jimCresswell/jimcresswell.net/deslop-391feb77",
+  "type": "skill",
+  "name": "deslop",
+  "description": "Remove AI-generated code slop and clean up code style",
+  "author": "jimCresswell",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/jimCresswell/jimcresswell.net/blob/HEAD/.cursor/skills/deslop/SKILL.md",
+    "repo": "jimCresswell/jimcresswell.net",
+    "path": ".cursor/skills/deslop/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}
