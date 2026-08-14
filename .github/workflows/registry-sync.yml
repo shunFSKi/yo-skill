@@ -56,7 +56,15 @@ jobs:
           git config user.email "yo-skill-bot@users.noreply.github.com"
           git add apps/web/public/registry
           git commit -s -m "chore(registry): 定时刷新市场数据"
-          git push
+          # 管线要跑约 2 小时，期间人工推送会抢占 main（2026-08-14 实测撞车：
+          # 数据 commit 已生成但 push 被 fetch first 拒绝，后续数据仓/Gitee 步全部跳过）。
+          # 推送前先 rebase 到最新 main，冲突概率极低（人工改动几乎不碰 registry 目录）。
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push && exit 0
+            echo "push 失败，第 $i 次重试"
+            sleep 5
+          done
+          exit 1
 
       - name: 检出数据仓库（未配置则跳过）
         if: vars.REGISTRY_REPO != ''
