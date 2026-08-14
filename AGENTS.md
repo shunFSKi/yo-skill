@@ -10,8 +10,9 @@
 
 **当前状态：调研文档仓库 + 桌面端静态 UI 原型（`prototype/`，双击即开）+ 官网 Web 应用（`apps/web`，Next.js 15，已可 `pnpm dev` 跑起来，含真实数据的 Skill 与 MCP 市场）。**
 
+- 工作区仓库已开源：**GitHub `shunFSKi/yo-skill`**（2026-08-14 上线，即本仓库；市场数据仓 `shunFSKi/yo-skill-registry` 为海外主仓 + Gitee 同名国内镜像）
 - 已有代码：`apps/web`（官网落地页 + 等待列表 API + `/market` 市场，pnpm workspace）、`packages/ui-kit`（共享 UI 骨架）与 `tools/registry-pipeline`（市场数据管线，Node TS）；桌面端（Tauri/Rust）尚未动工
-- 没有测试、没有 CI/CD、没有部署流程
+- 没有测试、没有部署流程；CI 仅一条 registry 数据定时同步工作流（`.github/workflows/registry-sync.yml`，每天两次跑管线并推数据仓）
 - 主体内容仍是 **Markdown 调研报告**（中文撰写）+ 产品设计定稿 V2 + 桌面端 7 屏 HTML 原型
 
 因此：根目录的 `pnpm dev / build / lint / typecheck` 只作用于 `@yo-skill/web`；桌面端若开始编码，应先与用户确认（调研结论建议 Tauri + Cargo workspace，见下文"已冻结的技术决策"）。
@@ -112,14 +113,14 @@ skill-manager/
 - 存储：**单一 Rust crate（`vault`）**——`rusqlite`（features: `bundled` + `backup` + `hooks`）+ **SQLCipher**（本地整库 AES-256 加密）+ Argon2id 派生密钥（连接时 `PRAGMA key`）。**排除官方 `tauri-plugin-sql`**（底层 sqlx 不支持 SQLite 加密）。云端 E2E 加密 vault 只存密文不变。`vault` crate 只服务 desktop（详见 `storage_architecture.md`）
 - Skill 收拢/分发机制（2026-08-12 用户确认）：**vault 中央库恒定单一事实源，用户选的是分发方式**——模式 A「所有助手共用一份」（**默认**：实体放 `~/.agents/skills/` 行业标准位，Codex/Gemini/OpenCode/Kimi/Copilot/Replit 零分发直接生效；不认的助手自动搭桥——macOS symlink / Windows junction（免管理员），失败降级 copy）/ 模式 B「每个助手单独放一份」（Cursor【文件监听不吃目录软链】、云同步盘、权限受限环境兜底，更新/卸载回写所有副本）；每个 skill 记账（模式 + 每助手入口类型），**更新不得静默改模式**（vercel skills #1199 教训）；界面话术不出现 symlink/junction/copy（竞品依据与 6 条工程纪律详见 `mavis-deep-research/20260812_115055_skill_storage_strategy/` §五）
 - 平台优先级：macOS 第一 / Windows 第二；**MVP 不做 Linux**（2026-08-12 用户改定：WebKitGTK 不稳定 + 空应用内存反超 Electron，Linux 是 Tauri 最弱平台，砍掉省跨平台测试负担；后续按社区需求再评估）；MVP **不做移动端**
-- Agent 支持面：**主流 Agent 全支持**（2026-08-12 用户改定，原"MVP 只支持 Claude Code + Codex"已推翻；原型演示 15 个：Claude Code / Codex / Gemini CLI / Cursor / Windsurf / GitHub Copilot / Kimi Code / Cline / Roo Code / Continue / Aider / Trae / Qwen Code / OpenCode / Replit，品牌色瓷砖 + 真实 logo），不做团队版、暂不开源
+- Agent 支持面：**主流 Agent 全支持**（2026-08-12 用户改定，原"MVP 只支持 Claude Code + Codex"已推翻；原型演示 15 个：Claude Code / Codex / Gemini CLI / Cursor / Windsurf / GitHub Copilot / Kimi Code / Cline / Roo Code / Continue / Aider / Trae / Qwen Code / OpenCode / Replit，品牌色瓷砖 + 真实 logo），不做团队版；桌面端产品代码暂不开源（本调研工作区仓库与数据仓已开源，均不含产品代码）
 - 核心差异化：GUI + 云同步、6 维度冲突检测（同名 / 描述相似 / 调用链 / 优先级 / port / 语义）、Skill 对比推荐、MCP 一站式管理
 - 值得从 Cindy 抄的工程纪律：工具二进制按平台分发（独立 update 脚本 + pinned version + sha256 校验 + postinstall 钩子）、device-link 配对 UX、project-context 的全局/项目双层抽象、telemetry 集中在一个 `analytics/` 目录且默认 no-op
 
 **明确的"不要做"清单（MVP 阶段）**
 - ❌ 不做移动端
 - ❌ 不做团队版
-- ❌ 不开源（先闭源跑 3 个月）
+- ❌ 桌面端产品不开源（先闭源跑 3 个月；调研工作区 `shunFSKi/yo-skill` 与数据仓 `shunFSKi/yo-skill-registry` 已开源，二者不含产品代码）
 - ❌ 不重提已否决的命名（清单见 `yo-skill_brand_brief.md` 附录 A）
 
 ## 四、文档编写约定

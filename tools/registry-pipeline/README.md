@@ -46,7 +46,9 @@ items/*.json  # 每条完整档案（安装配方 / env / 扫描明细 / README�
 2. 本仓库 Settings → Secrets and variables → Actions：
    - Variables 加 `REGISTRY_REPO` = `shunFSKi/yo-skill-registry`
    - Secrets 加 `REGISTRY_TOKEN` = 对数据仓有写权限的 PAT（Fine-grained，只授该仓 Contents: Read and write）
-3. 下次定时/手动触发即自动同步推送
+3. 下次定时/手动触发即自动同步推送（2026-08-14 已端到端验证跑通）
+
+> 踩坑存档：同步用 `rsync -a --delete` 必须 `--exclude='.git'`——否则数据仓的 `.git` 被删，后续 git 命令上溯到主仓，会把整个 registry-data/ 提交进主仓（2026-08-14 实战事故，工作流里已有排除 + origin 守卫）。
 
 接入 Gitee 国内镜像：
 
