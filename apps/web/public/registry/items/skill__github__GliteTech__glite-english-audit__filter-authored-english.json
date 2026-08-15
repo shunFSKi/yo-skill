@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/GliteTech/glite-english-audit/filter-authored-english",
+  "type": "skill",
+  "name": "filter-authored-english",
+  "description": "Judge, utterance by utterance, which spans of one session the learner actually wrote, and answer each utterance by its index with those spans copied verbatim; the driver rebuilds the session file from the answers. Use during step c of an audit run, one agent per session file, after deduplication and before mistakes are found.",
+  "author": "GliteTech",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/GliteTech/glite-english-audit/blob/HEAD/.claude/skills/filter-authored-english/SKILL.md",
+    "repo": "GliteTech/glite-english-audit",
+    "path": ".claude/skills/filter-authored-english/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-14T01:22:23Z",
+    "score": 45,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

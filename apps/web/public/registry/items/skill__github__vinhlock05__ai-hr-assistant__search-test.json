@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/vinhlock05/ai-hr-assistant/search-test",
+  "type": "skill",
+  "name": "search-test",
+  "description": "Test natural language candidate search directly from the CLI. Use when debugging agent routing or verifying search results.",
+  "author": "vinhlock05",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/vinhlock05/ai-hr-assistant/blob/HEAD/.claude/skills/search-test/SKILL.md",
+    "repo": "vinhlock05/ai-hr-assistant",
+    "path": ".claude/skills/search-test/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

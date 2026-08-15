@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/tacticaledge/connectory-skills/check-code",
+  "type": "skill",
+  "name": "check-code",
+  "description": "Vet a code snippet or single file against Connectory org policy via MCP check_code. Use when the user says check code, /check-code, or after editing one file.",
+  "author": "tacticaledge",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/tacticaledge/connectory-skills/blob/HEAD/skills/connectory/check-code/SKILL.md",
+    "repo": "tacticaledge/connectory-skills",
+    "path": "skills/connectory/check-code/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-07-09T14:51:57Z",
+    "score": 43,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

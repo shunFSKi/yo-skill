@@ -1,0 +1,57 @@
+{
+  "id": "mcp:official/io.github.orieg/yaml-workflow",
+  "type": "mcp",
+  "name": "YAML Workflow",
+  "description": "Expose declarative YAML-defined workflows as MCP tools over stdio",
+  "author": "io.github.orieg",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/orieg/yaml-workflow",
+    "repo": "orieg/yaml-workflow"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "yaml-workflow"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-15T06:33:00.725118Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# YAML Workflow\n\n<!-- mcp-name: io.github.orieg/yaml-workflow -->\n\n[![PyPI version](https://img.shields.io/pypi/v/yaml-workflow.svg)](https://pypi.org/project/yaml-workflow/)\n[![Python versions](https://img.shields.io/pypi/pyversions/yaml-workflow.svg)](https://pypi.org/project/yaml-workflow/)\n[![CI](https://github.com/orieg/yaml-workflow/actions/workflows/ci.yml/badge.svg)](https://github.com/orieg/yaml-workflow/actions/workflows/ci.yml)\n[![codecov](https://codecov.io/gh/orieg/yaml-workflow/graph/badge.svg)](https://codecov.io/gh/orieg/yaml-workflow)\n[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)\n\nA lightweight workflow engine for CI/CD pipelines, data processing, and DevOps automation. Define reproducible, version-controlled workflows in YAML — run them locally, in CI, or on any machine with Python installed.\n\n## Why yaml-workflow?\n\nMost workflow tools require servers, databases, and complex infrastructure. **yaml-workflow** takes a GitOps approach — workflows are plain YAML files, version-controlled alongside your code:\n\n| | yaml-workflow | Airflow / Prefect / Dagster |\n|---|---|---|\n| **Setup** | `pip install yaml-workflow` | Server, database, scheduler, workers |\n| **Configuration** | Plain YAML files | Python DAGs + infrastructure config |\n| **Dependencies** | 2 (PyYAML, Jinja2) | 50+ packages, Docker, PostgreSQL |\n| **Use case** | Local automation, scripts, CI/CD, data pipelines | Enterprise orchestration at scale |\n| **Learning curve** | Minutes | Hours to days |\n| **State** | File-based, resumable | Database-backed |\n\n**Choose yaml-workflow when you need:**\n- Simple task automation without infrastructure overhead\n- Reproducible pipelines defined in version-controlled YAML\n- Batch processing with parallel execution\n- State persistence and workflow resume after failures\n- A lightweight alternative to shell scripts with better error handling\n- GitOps-friendly pipelines that live in your repo alongside the code\n- A single tool that runs the same pipeline locally and in CI\n\n## Features\n\n- YAML-driven workflow definition with Jinja2 templating\n- Multiple task types: shell, Python, file, template, HTTP, batch\n- Workflow composition via `imports` — reuse steps across workflows\n- Plugin system via entry points — `pip install yaml-workflow-myplugin`\n- Watch mode — `--watch` to re-run on file changes\n- Dry-run mode to preview without executing\n- Workflow visualization (ASCII branching DAG and Mermaid)\n- Parallel execution with configurable worker pools\n- State persistence and resume capability\n- Retry mechanisms with configurable strategies\n- Namespaced variables (`args`, `env`, `steps`, `batch`)\n- Flow control with custom step sequences and conditions\n- Extensible task system via `@register_task` decorator\n- Parallel step execution via `depends_on` — run independent steps concurrently\n- Secrets validation — fail fast if required environment variables are missing\n- Structured output (`--format json`) for CI integration and scripting\n- MCP server — expose workflows as AI agent tools (`pip install yaml-workflow[mcp]`)\n- Web dashboard — monitor runs and trigger workflows (`pip install yaml-workflow[serve]`)\n- GitHub Action — run workflows in CI with `uses: orieg/yaml-workflow@v0.9.3`\n\n## Use Cases\n\n- **CI/CD pipelines** — multi-step build, test, deploy workflows in YAML\n- **Data processing** — batch ETL pipelines with retry and resume on failure\n- **DevOps automation** — infrastructure tasks with secrets management and notifications\n- **AI/LLM pipelines** — orchestrate API calls with auth, retry, and batch processing\n- **Local automation** — replace shell scripts with reproducible, parameterized workflows\n\n## Quick Start\n\n```bash\n# Install (isolated CLI — recommended)\npipx install yaml-workflow            # Core CLI\npipx install 'yaml-workflow[all]'     # + web dashboard + MCP server\n\n# Or with pip\npip install yaml-workflow\n\n# Initialize example workflows\nyaml-workflow init\n\n# Run a workflow with parameters\nyaml-workflow run workflows/hello_world.yaml name=Alice\n```\n\n**Example workflow** (`hello_world.yaml`):\n\n```yaml\nname: Hello World\ndescription: A simple greeting workflow\n\nparams:\n  name:\n    type: string\n    default: World\n\nsteps:\n  - name: create_greeting\n    task: template\n    inputs:\n      template: \"Hello, {{ args.name }}!\"\n      output_file: greeting.txt\n\n  - name: show_greeting\n    task: shell\n    inputs:\n      command: cat greeting.txt\n```\n\n### Visualize workflows\n\n```bash\nyaml-workflow visualize workflows/data_pipeline.yaml\n```\n\n```\n  Workflow: Data Pipeline\n\n  ┌─────────────────┐\n  │  detect_format  │\n  │   python_code   │\n  └─────────────────┘\n           │\n           ▼\n  ┌────────────────┐  ┌────────────────┐  ┌────────────────┐  ┌────────────────┐\n  │  process_json  │  │  process_csv   │  │  process_xml   │  │ handle_unknown │\n  │     shell      │  │     shell      │  │     shell      │  │     shell      │\n  └────────────────┘  └────────────────┘  └────────────────┘  └────────────────┘\n           │\n           ▼\n  ┌─────────────────┐\n  │ generate_report │\n  │   python_code   │\n  └─────────────────┘\n```\n\nAdjacent conditional steps are automatically grouped as branches. Use `--format mermaid` to export for docs or GitHub rendering.\n\n### Dry-run mode\n\nPreview what a workflow would do without executing anything:\n\n```bash\nyaml-workflow run workflows/hello_world.yaml name=Alice --dry-run\n```\n\n```\n[DRY-RUN] Workflow: Hello World\n[DRY-RUN] Steps: 2 to execute\n\n  [DRY-RUN] Step 'create_greeting' — task: template — WOULD EXECUTE\n    template: Hello, Alice!\n    output_file: greeting.txt\n  [DRY-RUN] Step 'show_greeting' — task: shell — WOULD EXECUTE\n    command: cat greeting.txt\n\n[DRY-RUN] Complete. 2 step(s) would execute, 0 would be skipped.\n[DRY-RUN] No files were written. No tasks were executed.\n```\n\n### Workflow composition\n\nReuse steps across workflows with `imports`:\n\n```yaml\n# main.yaml\nimports:\n  - ./shared/logging_steps.yaml\n  - ./shared/common_params.yaml\n\nsteps:\n  - name: my_step\n    task: shell\n    inputs:\n      command: echo \"runs after imported steps\"\n```\n\nImported steps are prepended. Imported params provide defaults that the main workflow can override. Supports transitive imports with circular detection.\n\n### Parallel Steps\n\nRun independent steps concurrently with `depends_on`:\n\n```yaml\nsteps:\n  - name: fetch_api\n    task: http.request\n    inputs: {url: \"https://api.example.com/data\"}\n\n  - name: fetch_db\n    task: python_code\n    inputs:\n      code: \"result = query_database()\"\n\n  - name: merge\n    task: python_code\n    depends_on: [fetch_api, fetch_db]\n    inputs:\n      code: |\n        api_data = steps[\"fetch_api\"][\"result\"]\n        db_data = steps[\"fetch_db\"][\"result\"]\n        result = {\"merged\": True}\n```\n\n### Watch mode\n\nAutomatically re-run on file changes during development:\n\n```bash\nyaml-workflow run workflows/hello_world.yaml name=Alice --watch\n```\n\nMonitors the workflow file and all imported files. Press `Ctrl+C` to stop.\n\n### GitHub Actions\n\nRun workflows in CI with the [yaml-workflow action](https://github.com/marketplace/actions/yaml-workflow):\n\n```yaml\n- name: Run pipeline\n  uses: orieg/yaml-workflow@v0.9.3\n  id: pipeline\n  with:\n    workflow: workflows/deploy.yaml\n    params: |\n      env=production\n      version=1.2.0\n    format: json\n\n- name: Use results\n  run: echo '${{ steps.pipeline.outputs.result }}'\n```\n\n### Docker & Kubernetes\n\nRun anywhere without installing Python:\n\n```bash\n# Run a workflow in Docker\ndocker run --rm -v $(pwd)/workflows:/app/workflows \\\n  ghcr.io/orieg/yaml-workflow run /app/workflows/pipeline.yaml\n\n# Start the web dashboard\ndocker run -p 8080:8080 -v $(pwd)/workflows:/app/workflows \\\n  ghcr.io/orieg/yaml-workflow\n```\n\nDeploy on Kubernetes with the Helm chart:\n\n```bash\nhelm install my-workflows ./helm/yaml-workflow \\\n  --set-file workflows.files.pipeline\\\\.yaml=workflows/pipeline.yaml\n```\n\nCompatible with ArgoCD (GitOps) and Argo Workflows. See the [Kubernetes guide](https://orieg.github.io/yaml-workflow/guide/kubernetes/).\n\n### More commands\n\n```bash\n# List available workflows\nyaml-workflow list\n\n# Validate a workflow (with JSON output for CI)\nyaml-workflow validate workflows/hello_world.yaml --format json\n\n# Resume a failed workflow\nyaml-workflow run workflows/hello_world.yaml --resume\n\n# Structured output for scripting\nyaml-workflow run workflows/pipeline.yaml --format json --output results.json\n```\n\n## Documentation\n\nFull documentation is available at **[orieg.github.io/yaml-workflow](https://orieg.github.io/yaml-workflow/)**.\n\n- [Getting Started](https://orieg.github.io/yaml-workflow/guide/getting-started/) - Installation and first workflow\n- [Task Types](https://orieg.github.io/yaml-workflow/guide/tasks/basic-tasks/) - Shell, Python, file, template, and batch tasks\n- [Workflow Structure](https://orieg.github.io/yaml-workflow/workflow-structure/) - YAML configuration reference\n- [Templating](https://orieg.github.io/yaml-workflow/guide/templating/) - Jinja2 variable substitution\n- [State Management](https://orieg.github.io/yaml-workflow/state/) - Persistence and resume\n- [Task Development](https://orieg.github.io/yaml-workflow/guide/task-development/) - Creating custom tasks\n- [API Reference](https://orieg.github.io/yaml-workflow/reference/) - Full API documentation\n\n## Contributing\n\nContributions are welcome! See the [Contributing Guide](https://orieg.github.io/yaml-workflow/contributing/development/) for development setup and guidelines.\n\n## License\n\nThis project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.\n",
+  "status": "curated"
+}

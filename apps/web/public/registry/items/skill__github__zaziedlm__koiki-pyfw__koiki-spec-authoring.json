@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/zaziedlm/koiki-pyfw/koiki-spec-authoring",
+  "type": "skill",
+  "name": "koiki-spec-authoring",
+  "description": "Write or edit OpenSpec artifacts in this repository — capability specs, change proposals, delta specs, and loop records — using the Japanese 【SHALL】 notation this repository requires. Overrides the English SHALL prose the built-in openspec-* skills produce.",
+  "author": "zaziedlm",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/zaziedlm/koiki-pyfw/blob/HEAD/.claude/skills/koiki-spec-authoring/SKILL.md",
+    "repo": "zaziedlm/koiki-pyfw",
+    "path": ".claude/skills/koiki-spec-authoring/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-09T21:05:32Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

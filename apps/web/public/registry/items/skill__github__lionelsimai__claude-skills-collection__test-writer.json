@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/lionelsimai/claude-skills-collection/test-writer",
+  "type": "skill",
+  "name": "test-writer",
+  "description": "Generate unit tests, integration tests, and test plans.\nTRIGGERS - Use when user wants tests, test cases, testing strategy, or test coverage.",
+  "author": "lionelsimai",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/lionelsimai/claude-skills-collection/blob/HEAD/skills/test-writer/SKILL.md",
+    "repo": "lionelsimai/claude-skills-collection",
+    "path": "skills/test-writer/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 22,
+    "pushed_at": "2026-02-08T07:55:57Z",
+    "score": 42,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 22
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/zzycxz/rooster/weather-query",
+  "type": "skill",
+  "name": "weather-query",
+  "description": "智能天气与生活指数分析。并发查询多源天气状况，为用户出行提供地衣级穿衣与防晒建议。",
+  "author": "zzycxz",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/zzycxz/rooster/blob/HEAD/skills/weather-query/SKILL.md",
+    "repo": "zzycxz/rooster",
+    "path": "skills/weather-query/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

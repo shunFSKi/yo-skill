@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/claude-code-expert/carve-harness/changelog",
+  "type": "skill",
+  "name": "changelog",
+  "description": "되돌릴 수 없는 결정(ADR)과 그 근거를 시간순으로 specs/DECISIONS.md에 append-only 기록한다. 아키텍처·의존성·API 계약 변경 시 사용. 주의 — 이건 결정 로그이지 릴리스 버전 이력이 아니다(VERSION·CHANGELOG.md 갱신은 version-changelog 스킬).",
+  "author": "claude-code-expert",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/claude-code-expert/carve-harness/blob/HEAD/.claude/skills/changelog/SKILL.md",
+    "repo": "claude-code-expert/carve-harness",
+    "path": ".claude/skills/changelog/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 10,
+    "pushed_at": "2026-08-06T08:48:40Z",
+    "score": 54
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

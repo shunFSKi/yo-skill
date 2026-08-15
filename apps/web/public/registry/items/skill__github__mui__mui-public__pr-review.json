@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/mui/mui-public/pr-review",
+  "type": "skill",
+  "name": "pr-review",
+  "description": "Review the current diff for regressions, correctness bugs, tests, simplifications, and docs issues, scaling depth to a low/medium/high/xhigh/max effort level. Use when the user asks to review changes, review a diff/branch/PR, or runs /pr-review. Pass --comment to post a top-level PR comment, --comment inline for inline PR comments, or --fix to apply findings.",
+  "author": "mui",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/mui/mui-public/blob/HEAD/.claude/skills/pr-review/SKILL.md",
+    "repo": "mui/mui-public",
+    "path": ".claude/skills/pr-review/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 106,
+    "pushed_at": "2026-08-15T12:14:29Z",
+    "score": 73,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 106
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": "# MUI Public\n\nMono-repository for the MUI organization with code that can be public.\\\nSee https://github.com/mui/mui-private for code that needs to be private.\n\n## Documentation\n\nYou can [read the Infra documentation here](./docs/README.md).\n\n## Applications\n\n### Frontend Public\n\n- URL: [frontend-public.mui.com](https://frontend-public.mui.com/)\n- Source: `/apps/code-infra-dashboard/`\n- Hosting: https://dashboard.render.com/web/srv-d5fq2j0gjchc73e9st5g\n- [Docs](./apps/code-infra-dashboard/#readme)\n\n### MUI Internal\n\n- URL: [mui-internal.netlify.app](https://mui-internal.netlify.app)\n- Source: `/docs/`\n- Hosting: https://app.netlify.com/projects/mui-internal/overview\n- [Docs](./docs/#readme)\n- Website for MUI internal packages, e.g. hosts docs-infra.\n  This is equivalent to https://backoffice.mui.com/ but for public logic.\n\n## Packages\n\n### [docs-infra](./packages/docs-infra/)\n\n- Source: `/packages/docs-infra/`\n- [Docs](./packages/docs-infra/README.md)\n\n### [code-infra](./packages/code-infra/)\n\n- Source: `/packages/code-infra/`\n- [Docs](./packages/code-infra/README.md)\n\n## Agent skills\n\nThis repo ships agent skills under [`skills/`](./skills/) (e.g. `mui-triage`). Install them into a repo's agent skills directory with the [`skills`](https://github.com/vercel-labs/skills) CLI:\n\n```bash\nnpx skills add mui/mui-public --skill mui-triage\n```\n\nNotes:\n\n- Omit `--skill <name>` to install every skill this repo ships.\n- Add `-g` to install into the global agent directory, or `--copy` where symlinks aren't supported (e.g. Windows). When a coding agent is detected, the install runs non-interactively.\n\nTo refresh installed skills later (`npx skills add` copies the content into your repo):\n\n```bash\nnpx skills update\n```\n\n## Versioning\n\nSteps:\n\n1. Checkout latest master\n1. Run `pnpm release:prepare`\n1. Run `pnpm release:version`\n1. Open PR with the changes\n\n## Publishing\n\nSteps:\n\n1. Merge versioning PR\n1. Checkout release commit on master\n1. Run `pnpm release:prepare`\n1. Run `pnpm release:publish`\n",
+  "status": "curated"
+}

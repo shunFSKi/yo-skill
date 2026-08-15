@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/amanm02/PersonalDealIntelligence/memory-maintenance",
+  "type": "skill",
+  "name": "memory-maintenance",
+  "description": "Use when updating durable repository memory or cleaning stale memory entries.",
+  "author": "amanm02",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/amanm02/PersonalDealIntelligence/blob/HEAD/.agents/skills/memory-maintenance/SKILL.md",
+    "repo": "amanm02/PersonalDealIntelligence",
+    "path": ".agents/skills/memory-maintenance/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-07-12T18:53:20Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

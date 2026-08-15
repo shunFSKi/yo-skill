@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/X0x888/oh-my-claude/ulw-off",
+  "type": "skill",
+  "name": "ulw-off",
+  "description": "Deactivate ultrawork mode for the addressed session. Clears its workflow and enforcement state without affecting concurrent Claude sessions.",
+  "author": "X0x888",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/X0x888/oh-my-claude/blob/HEAD/bundle/dot-claude/skills/ulw-off/SKILL.md",
+    "repo": "X0x888/oh-my-claude",
+    "path": "bundle/dot-claude/skills/ulw-off/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 3,
+    "pushed_at": "2026-07-21T23:52:59Z",
+    "score": 50,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 3
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

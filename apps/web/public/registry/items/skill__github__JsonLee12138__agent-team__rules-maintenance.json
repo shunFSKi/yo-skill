@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/JsonLee12138/agent-team/rules-maintenance",
+  "type": "skill",
+  "name": "rules-maintenance",
+  "description": "Rule refresh skill for syncing built-in rule templates and generated rule artifacts. Use when the user asks to sync rules or fix rule drift.",
+  "author": "JsonLee12138",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/JsonLee12138/agent-team/blob/HEAD/skills/rules-maintenance/SKILL.md",
+    "repo": "JsonLee12138/agent-team",
+    "path": "skills/rules-maintenance/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 30,
+    "pushed_at": "2026-03-30T02:24:45Z",
+    "score": 48
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

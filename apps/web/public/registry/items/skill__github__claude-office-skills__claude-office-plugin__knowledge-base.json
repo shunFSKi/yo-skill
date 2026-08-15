@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/claude-office-skills/claude-office-plugin/knowledge-base",
+  "type": "skill",
+  "name": "knowledge-base",
+  "description": "企业知识库检索 — 公司规范、流程、制度查询",
+  "author": "claude-office-skills",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/claude-office-skills/claude-office-plugin/blob/HEAD/skills/connectors/knowledge-base/SKILL.md",
+    "repo": "claude-office-skills/claude-office-plugin",
+    "path": "skills/connectors/knowledge-base/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 8,
+    "pushed_at": "2026-03-17T05:40:58Z",
+    "score": 38,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 8
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/jsturtevant/copilot-codeact-plugin/codeact-install-hyperlight",
+  "type": "skill",
+  "name": "codeact-install-hyperlight",
+  "description": "Switch codeact to the Hyperlight backend (micro-VM sandbox via WebAssembly,\nstronger isolation). Use when user wants to switch to hyperlight, needs\nfull Python support, or stronger sandbox isolation.",
+  "author": "jsturtevant",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/jsturtevant/copilot-codeact-plugin/blob/HEAD/plugins/codeact/skills/codeact-install-hyperlight/SKILL.md",
+    "repo": "jsturtevant/copilot-codeact-plugin",
+    "path": "plugins/codeact/skills/codeact-install-hyperlight/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 38,
+    "pushed_at": "2026-05-01T00:23:20Z",
+    "score": 49,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 38
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

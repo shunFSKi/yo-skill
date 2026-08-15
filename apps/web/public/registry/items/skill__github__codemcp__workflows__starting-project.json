@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/codemcp/workflows/starting-project",
+  "type": "skill",
+  "name": "starting-project",
+  "description": "How to set-up the skeleton of a new application",
+  "author": "codemcp",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/codemcp/workflows/blob/HEAD/resources/skills/starting-project/SKILL.md",
+    "repo": "codemcp/workflows",
+    "path": "resources/skills/starting-project/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 78,
+    "pushed_at": "2026-07-06T23:30:29Z",
+    "score": 64,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 78
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# Agentic Workflows\n\nfka. \"Responsible Vibe MCP\"\n\nVibe coding is dead. Agentic Engineering is on the rise. Workflows have been here forever.\n\n[![Tests](https://github.com/codemcp/workflows/actions/workflows/pr.yml/badge.svg)](https://github.com/codemcp/workflows/actions/workflows/pr.yml)\n[![Release](https://github.com/codemcp/workflows/actions/workflows/release.yml/badge.svg)](https://github.com/codemcp/workflows/actions/workflows/release.yml)\n[![npm version](https://badge.fury.io/js/@codemcp%2Fworkflows.svg)](https://badge.fury.io/js/@codemcp%2Fworkflows)\n\nTransform any AI coding agent into a structured development partner with battle-tested engineering workflows.\n\n## ⚡ Quick Start\n\n```bash\n# Setup your coding agent (config mode is the default)\nnpx @codemcp/workflows setup kiro  # or claude, gemini, opencode, copilot\n\n# Or use skills (agentskills.io format) for on-demand loading\nnpx @codemcp/workflows setup claude --mode skill  # or gemini, opencode, copilot, kiro\n```\n\nHead over to a new empty dir and ask your agent: _\"Build a UNO-like card game\"_ – and instantly experience how your agent doesn't just shoot, but starts engineering – with YOU in the driver seat!\n\n## 🎬 See It In Action\n\n<div style=\"position: relative; display: inline-block; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.15);\">\n  <a href=\"https://agentic-rpl.netlify.app/conversation?url=https://github.com/codemcp/workflows/tree/demo-todo-greenfield/examples/greenfield-todo\" target=\"_blank\">\n    <img src=\"packages/docs/images/placeholder-demo-greenfield.png\" alt=\"Interactive demo showing Responsible Vibe MCP in action\" style=\"width: 100%; max-width: 600px; height: auto; display: block;\">\n    <div style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.7); border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;\">\n      <div style=\"width: 0; height: 0; border-left: 25px solid white; border-top: 15px solid transparent; border-bottom: 15px solid transparent; margin-left: 5px;\"></div>\n    </div>\n  </a>\n</div>\n\n## What You Get\n\n✅ **Multiple battle-tested workflows** (classical [V-model \"waterfall\"](https://en.wikipedia.org/wiki/V-model), [Anthropic's EPCC](https://www.anthropic.com/engineering/claude-code-best-practices), [Test-Driven-Development](https://en.wikipedia.org/wiki/Test-driven_development), Reproduction-based bugfix, and many more)\n\n✅ **Context-aware process guidance**: Your agent will take notes and plan tasks which survive context compression and even sessions.\n\n✅ **Project memory across conversations** and branches\n\n✅ **Automatic documentation** and decision tracking\n\n✅ **Multi-agent collaboration** with specialized roles (business-analyst, architect, developer)\n\n## Universal MCP Support\n\nWorks in any agent that supports the Model-Context-Protocol. Whenever a new IDE or Terminal UI rises: You don't need to change the way you work.\n\n## How It's Different\n\nThere are zillions of \"game changer next gen IDEs\" out there, each claiming they will revolutionalize how software is going to be created.\n\nIn the end, they all just manipulate context of a transformer based LLM – it's all [just noodle soup](https://mrsimpson.github.io/slides-context-is-all-you-need/22). And they are fast at changing what's going to be part of the context, and it's even getting accelerated by parallel agents.\n\nThe problem: **The faster agents become, the harder it is to engineer**. I strongly believe that software engineering is a **creative process** which majorly happens inside the engineers brain.\n\nResponsible-Vibe-MCP helps to **fill the conversation context with contents from YOUR brain** – instead of relying the agent will have understood what you should have thought about.\n\nAnd since may developers tend to through structured processing off the cliff once they think they start coding, the workflows server will maintain **proactive process guidance** - your AI knows what to do next in each development phase, follow proven engineering methodologies, and maintain long-term project context.\n\n## How It Works\n\nCheck the 📖 **[Complete Documentation →](https://codemcp.github.io/workflows/user/how-it-works.html)**\n\nThere is also a recorded session on [\"how to tame your stubborn software agent\"](https://www.youtube.com/watch?v=qKTdqmlnXMg) as part of the video podcast [Software-Architektur.tv](https://software-architektur.tv/) (German, auto-translated subtitles are okay-ish) which gives a more detailed insight into the basic ideas and how it's supposed to work.\n\n## ⚠️ Experimental: Multi-Agent Collaboration (Crowd Workflows)\n\nEnable teams of specialized AI agents to collaborate on development tasks with [crowd-mcp](https://github.com/mrsimpson/crowd-mcp):\n\n- 👥 **Team-based development**: Business-analyst, architect, and developer agents work together\n- 🔄 **Structured handoffs**: Clear responsibility transfers between agents\n- 💬 **Built-in collaboration**: Agents consult each other via messaging\n- 📋 **Specialized workflows**: sdd-feature-crowd, sdd-bugfix-crowd, sdd-greenfield-crowd\n\n**Quick Start:**\n\n```bash\n# Copy pre-configured agent definitions\nnpx @codemcp/workflows@latest agents copy\n\n# List available agent configurations\nnpx @codemcp/workflows@latest agents list\n```\n\nSee **[Crowd MCP Integration Guide →](packages/docs/user/crowd-mcp-integration.md)** for setup and usage.\n\n---\n\n**[Open Source](LICENSE.md)** | **[Issues](https://github.com/codemcp/workflows/issues)**\n",
+  "status": "curated"
+}

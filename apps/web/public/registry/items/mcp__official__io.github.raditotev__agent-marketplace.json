@@ -1,0 +1,54 @@
+{
+  "id": "mcp:official/io.github.raditotev/agent-marketplace",
+  "type": "mcp",
+  "name": "AgentMarketplace",
+  "description": "MCP Server for an Agent Task Marketplace",
+  "author": "io.github.raditotev",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/raditotev/agent-marketplace",
+    "repo": "raditotev/agent-marketplace"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://agent-marketplace.radi.pro/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-15T12:37:41.245744Z",
+    "score": 42
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

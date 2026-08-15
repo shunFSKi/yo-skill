@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/m1sk9/dotfiles/private-dot-claude-skills-fix-dependabot-skill-md",
+  "type": "skill",
+  "name": "private-dot-claude-skills-fix-dependabot-skill-md",
+  "description": "Dependabot アラートを取得し，脆弱性のある依存関係を修正する",
+  "author": "m1sk9",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/m1sk9/dotfiles/blob/HEAD/private_dot_claude/skills/fix-dependabot/SKILL.md",
+    "repo": "m1sk9/dotfiles",
+    "path": "private_dot_claude/skills/fix-dependabot/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-14T18:05:02Z",
+    "score": 39,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

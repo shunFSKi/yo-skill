@@ -17,7 +17,7 @@
   "quality": {
     "stars": null,
     "pushed_at": "2026-08-14T18:03:48.586052Z",
-    "score": 52
+    "score": 42
   },
   "security": {
     "score": 100,
@@ -49,6 +49,6 @@
     "category": null,
     "featured": false
   },
-  "readme": "# POSTFACT\n\n**Did the call actually happen?**\n\nPOSTFACT is a tiny ambiguous-outcome resolver for autonomous software. Use it after a side-effecting API/tool action fails ambiguously and **before retrying**.\n\nProduction: `https://postfact-api-production.up.railway.app`\n\nIt is intentionally strict:\n\n- `DONE` only when affirmative evidence establishes completion.\n- `NOT_DONE` only when affirmative evidence establishes non-execution.\n- `UNKNOWN` whenever evidence is insufficient. `UNKNOWN` is the safe default.\n\nPOSTFACT does not execute the underlying action, move money, or pretend a timeout means failure.\n\n## REST\n\nProduction endpoint: `POST https://postfact-api-production.up.railway.app/v1/resolve`\n\nInput accepts method/status/failure, side-effect and idempotency context, durable references, and optional affirmative evidence. Output is `state`, `retry_safe`, `confidence`, `evidence`, and `next`.\n\n## MCP\n\nRemote endpoint: `POST https://postfact-api-production.up.railway.app/mcp`\n\nTool: `resolve_outcome`\n\nThe tool description explicitly tells agents to invoke POSTFACT after an ambiguous side-effect failure and before retry.\n\n## Middleware-shaped contract\n\n```js\nconst outcome = await postfact.resolve(failureContext)\nif (outcome.state === 'DONE') return completed\nif (outcome.state === 'NOT_DONE' && outcome.retry_safe) return retry()\nreturn verifyOrHold()\n```\n\nFuture SDKs can wrap retry middleware without changing the wire contract.\n\n## POSTFACT + RECOVER\n\nPOSTFACT answers **what can we establish happened?** RECOVER answers **what is the safest next action?** A future retry stack can call POSTFACT first, then RECOVER when the outcome remains uncertain.\n\n## Safe discovery and demo\n\n- Health: `GET https://postfact-api-production.up.railway.app/health`\n- Demo: `GET https://postfact-api-production.up.railway.app/demo`\n- Activity: `GET https://postfact-api-production.up.railway.app/activity`\n- Machine-readable activity: `GET https://postfact-api-production.up.railway.app/activity.json`\n\n`GET /demo` is deliberately excluded from real-use analytics.\n\n## Real-use scoreboard\n\n`GET /activity` shows the permanent FIRST 10 TRUE STRANGERS scoreboard. `GET /activity.json` exposes its machine-readable summary. Demo/internal traffic is excluded. Production persistent storage is mounted at `/data`.\n\n## Run\n\n```bash\nnpm test\nnpm start\n```\n\nDefault port: `8080`.\n",
+  "readme": null,
   "status": "curated"
 }

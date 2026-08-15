@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/BrennonTWilliams/little-loops/ll-manage-release",
+  "type": "skill",
+  "name": "ll-manage-release",
+  "description": "Manage releases - create git tags, generate changelogs, and manage GitHub releases.\nIntegrates with Issue Management to include completed issues in release notes.\n\nTrigger keywords: \"manage release\", \"create release\", \"new release\", \"tag release\", \"publish release\", \"make release\", \"bump version\"",
+  "author": "BrennonTWilliams",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/BrennonTWilliams/little-loops/blob/HEAD/skills/ll-manage-release/SKILL.md",
+    "repo": "BrennonTWilliams/little-loops",
+    "path": "skills/ll-manage-release/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 6,
+    "pushed_at": "2026-08-10T02:12:17Z",
+    "score": 53
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

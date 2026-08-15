@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/laoelaos/AIMedicalSys/generic-deliberation-prep-harness",
+  "type": "skill",
+  "name": "generic-deliberation-prep-harness",
+  "description": "审议式流程的前置准备。任何审议式流程执行前必须先调用本技能。",
+  "author": "laoelaos",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/laoelaos/AIMedicalSys/blob/HEAD/.opencode/skills/generic-deliberation-prep-harness/SKILL.md",
+    "repo": "laoelaos/AIMedicalSys",
+    "path": ".opencode/skills/generic-deliberation-prep-harness/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-07-04T07:31:53Z",
+    "score": 37,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/magrathean-uk/auditex/app-readonly-escalation",
+  "type": "skill",
+  "name": "app-readonly-escalation",
+  "description": "Use when a delegated Microsoft 365 audit is blocked and you need to justify a customer-local read-only app registration as a second pass.",
+  "author": "magrathean-uk",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/magrathean-uk/auditex/blob/HEAD/skills/app-readonly-escalation/SKILL.md",
+    "repo": "magrathean-uk/auditex",
+    "path": "skills/app-readonly-escalation/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-07-12T19:25:44Z",
+    "score": 43,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

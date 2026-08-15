@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/phel-lang/phel-lang/agnostic-ai-skills-fix-skill-md",
+  "type": "skill",
+  "name": "agnostic-ai-skills-fix-skill-md",
+  "description": "Auto-fix all code quality issues with rector, cs-fixer, and phpstan",
+  "author": "phel-lang",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/phel-lang/phel-lang/blob/HEAD/.agnostic-ai/skills/fix/SKILL.md",
+    "repo": "phel-lang/phel-lang",
+    "path": ".agnostic-ai/skills/fix/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 521,
+    "pushed_at": "2026-08-15T10:55:44Z",
+    "score": 76,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 521
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "<p align=\"center\">\n  <img src=\"logo_readme.svg\" width=\"350\" alt=\"Phel logo\"/>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://github.com/phel-lang/phel-lang/actions/workflows/tests.yml\">\n    <img src=\"https://github.com/phel-lang/phel-lang/actions/workflows/tests.yml/badge.svg\" alt=\"Tests\">\n  </a>\n  <a href=\"https://github.com/phel-lang/phel-lang/actions/workflows/quality.yml\">\n    <img src=\"https://github.com/phel-lang/phel-lang/actions/workflows/quality.yml/badge.svg\" alt=\"Quality\">\n  </a>\n  <a href=\"https://github.com/phel-lang/phel-lang/blob/main/phpstan.neon\">\n    <img src=\"https://img.shields.io/badge/PHPStan-level%209-brightgreen\" alt=\"PHPStan level 9\">\n  </a>\n  <a href=\"https://github.com/phel-lang/phel-lang/blob/main/psalm.xml\">\n    <img src=\"https://img.shields.io/badge/Psalm-level%201-brightgreen\" alt=\"Psalm level 1\">\n  </a>\n  <a href=\"https://shepherd.dev/github/phel-lang/phel-lang\">\n    <img src=\"https://shepherd.dev/github/phel-lang/phel-lang/coverage.svg\" alt=\"Psalm Type-coverage Status\">\n  </a>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://packagist.org/packages/phel-lang/phel-lang\">\n    <img src=\"https://img.shields.io/packagist/v/phel-lang/phel-lang\" alt=\"Packagist Version\">\n  </a>\n  <a href=\"https://packagist.org/packages/phel-lang/phel-lang/stats\">\n    <img src=\"https://img.shields.io/packagist/dt/phel-lang/phel-lang\" alt=\"Packagist Downloads\">\n  </a>\n  <a href=\"https://packagist.org/packages/phel-lang/phel-lang\">\n    <img src=\"https://img.shields.io/packagist/php-v/phel-lang/phel-lang\" alt=\"PHP Version Required\">\n  </a>\n  <a href=\"https://github.com/phel-lang/phel-lang/blob/main/LICENSE\">\n    <img src=\"https://img.shields.io/github/license/phel-lang/phel-lang\" alt=\"License\">\n  </a>\n  <a href=\"https://deepwiki.com/phel-lang/phel-lang\">\n    <img src=\"https://deepwiki.com/badge.svg\" alt=\"Ask DeepWiki\">\n  </a>\n</p>\n\n---\n\nLisp for PHP, macros, persistent data structures, REPL.\n\n## Requirements\n\nPHP **8.4** or newer. Linux and macOS are supported: the full compiler, core and PHAR\nsuites run on both in CI, and a failure on either blocks a release. Windows is best\neffort, running a reduced suite. What a version number promises, and for how long, is\nin the [stability policy](docs/stability.md).\n\n## Get Started\n\n```sh\ncomposer require phel-lang/phel-lang\n```\n\n**1. Open a REPL**\n\n```sh\n./vendor/bin/phel repl\n```\n\n```clojure\nphel:1:> (->> [1 2 3 4 5] (filter odd?) (map #(* % %)) (reduce +))\n35\nphel:2:> (defn greet [name] (str \"Hello, \" name \"!\"))\n| user/greet\nphel:3:> (greet \"Phel\")\n| \"Hello, Phel!\"\n```\n\n**2. Scaffold a project**\n\n```sh\n./vendor/bin/phel init         # add `--minimal` for a single-file layout\n```\n\nCreates `phel-config.php`, `src/main.phel`, `tests/main_test.phel`. With\n`--minimal` the two sources sit at the project root instead. Then:\n\n```sh\n./vendor/bin/phel run src/main.phel        # run\n./vendor/bin/phel test                     # tests\n./vendor/bin/phel build                    # compile to PHP\n./vendor/bin/phel config                   # inspect the merged config\n```\n\n**3. Eval inline or via stdin**\n\n```sh\n./vendor/bin/phel eval '(+ 1 2)'           # prints 3\necho '(println \"hi\")' | ./vendor/bin/phel eval -\n./vendor/bin/phel eval - < script.phel\n```\n\n**4. Enable shell completion (optional)**\n\n`./vendor/bin/phel completion` dumps a tab-completion script for `bash`, `zsh`, or `fish`. It completes commands, their options, and dynamic values (function names for `doc`, project namespaces for `run`/`test`).\n\n```sh\n# bash — restart your shell afterwards\n./vendor/bin/phel completion bash | sudo tee /etc/bash_completion.d/phel\n\n# zsh — write into a directory on your $fpath\n./vendor/bin/phel completion zsh > \"${fpath[1]}/_phel\"\n\n# fish\n./vendor/bin/phel completion fish > ~/.config/fish/completions/phel.fish\n```\n\nThe zsh script starts with `#compdef phel`, so completion only triggers for a binary named `phel` on your `$PATH`. If you call `./vendor/bin/phel` (or `./bin/phel` in a dev checkout), symlink a global `phel` first, e.g. on macOS + Homebrew:\n\n```sh\nphel completion zsh > \"$(brew --prefix)/share/zsh/site-functions/_phel\"\nln -sf \"$PWD/bin/phel\" \"$(brew --prefix)/bin/phel\"   # global `phel` so #compdef matches\nrm -f ~/.zcompdump*                                  # force compinit to rebuild\n# then open a new shell\n```\n\n> Prefer a project template? [`web-skeleton`](https://github.com/phel-lang/web-skeleton) or [`cli-skeleton`](https://github.com/phel-lang/cli-skeleton): click **Use this template** for a one-click start.\n\n<details>\n<summary><b>More examples →</b></summary>\n\n<table>\n<tr>\n<td width=\"50%\" valign=\"top\">\n\n**Data pipeline**\n\n```clojure\n(def users\n  [{:name \"Ada\" :age 36}\n   {:name \"Bob\" :age 17}\n   {:name \"Cam\" :age 41}])\n\n(->> users\n     (filter #(>= (:age %) 18))\n     (map :name)\n     sort)\n;; => [\"Ada\" \"Cam\"]\n```\n\n</td>\n<td width=\"50%\" valign=\"top\">\n\n**HTTP response**\n\n```clojure\n(ns app (:require phel.http :as h))\n\n(def req (h/request-from-globals))\n\n(h/emit-response\n  (h/response-from-map\n    {:status 200\n     :headers {\"Content-Type\" \"text/plain\"}\n     :body (str \"Hello \" (:uri req))}))\n```\n\n</td>\n</tr>\n<tr>\n<td valign=\"top\">\n\n**Macros**\n\n```clojure\n(defmacro unless [pred & body]\n  `(if (not ~pred)\n     (do ~@body)))\n\n(unless (zero? 1)\n  (println \"not zero\"))\n;; => not zero\n\n(unless false (println \"ok\"))\n;; => ok\n```\n\n</td>\n<td valign=\"top\">\n\n**PHP interop**\n\n```clojure\n(ns app)\n\n(def now (new DateTime))\n(.format now \"Y-m-d\")\n;; => \"2026-04-20\"\n\n(def epoch (new DateTime \"1970-01-01\"))\n(.-days (.diff now epoch))\n;; => 20564\n```\n\n</td>\n</tr>\n</table>\n</details>\n\n## Documentation\n\n- [Getting Started](https://phel-lang.org/documentation/getting-started/): install, REPL, first script (5 min)\n- [CLI Reference & DX Guide](docs/cli-reference.md): every command, the dev loop, compile vs eval vs run vs build\n- [phel-lang.org](https://phel-lang.org/documentation/): full documentation, tutorials, exercises, blog\n- [Contributor docs](docs/README.md): repository internals, agent tooling, project layout\n- [Architecture decisions](docs/adr/README.md): why the repository is shaped the way it is\n- [Packagist](https://packagist.org/packages/phel-lang/phel-lang)\n- [CONTRIBUTING.md](.github/CONTRIBUTING.md): setup and workflow\n- [AGENTS.md](AGENTS.md): architecture and review expectations\n\n## AI Coding Agents\n\nSkill files for Claude Code, Cursor, Codex, Gemini, Copilot, Aider: [resources/agents/](resources/agents/README.md)\n\n```sh\n./vendor/bin/phel agent-install [platform]   # install skill file for one agent (claude, cursor, ...)\n./vendor/bin/phel agent-install --auto       # only agents detected in this project\n./vendor/bin/phel agent-install --all        # every supported platform\n```\n\n### Repo-level AI tooling\n\nClaude Code (`.claude/`) and Codex (`.codex/`, `.agents/`, `AGENTS.md`) configs generate from a single source tree under [.agnostic-ai/](.agnostic-ai/) via [agnostic-ai](https://github.com/Chemaclass/agnostic-ai). Those directories are gitignored; run `sync` after cloning to materialize them. Add more targets (Gemini, Cursor, ...) by appending to `targets:` in `agnostic-ai.yaml`.\n\n```sh\nbrew install Chemaclass/tap/agnostic-ai   # or: go install github.com/chemaclass/agnostic-ai/cmd/agnostic-ai@latest\nagnostic-ai sync                          # regenerate per-tool configs\n```\n\nEdit specs under `.agnostic-ai/{rules,agents,skills,hooks,scripts,overlays}/`, then `agnostic-ai sync` again. A CI gate runs `sync --check` on every PR to block drift between the source and the (gitignored) emitted files.\n",
+  "status": "curated"
+}

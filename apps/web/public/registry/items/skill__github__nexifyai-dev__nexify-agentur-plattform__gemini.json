@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/nexifyai-dev/nexify-agentur-plattform/gemini",
+  "type": "skill",
+  "name": "gemini",
+  "description": "Use when the user asks to run Gemini CLI for code review, plan review, or big context (>200k) processing. Ideal for comprehensive analysis requiring large context windows. Uses Gemini 3 Pro by default for state-of-the-art reasoning and coding.",
+  "author": "nexifyai-dev",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/nexifyai-dev/nexify-agentur-plattform/blob/HEAD/fabrik/nexify-ai/skills/davila7/claude-code-templates/gemini/SKILL.md",
+    "repo": "nexifyai-dev/nexify-agentur-plattform",
+    "path": "fabrik/nexify-ai/skills/davila7/claude-code-templates/gemini/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-14T00:35:57Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

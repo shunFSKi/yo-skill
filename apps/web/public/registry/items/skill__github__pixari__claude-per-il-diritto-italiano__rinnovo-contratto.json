@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/pixari/claude-per-il-diritto-italiano/rinnovo-contratto",
+  "type": "skill",
+  "name": "rinnovo-contratto",
+  "description": "Analisi rinnovo tacito / scadenza contratto, preavviso, rinegoziazione. EN renewal-tracker. Nessuna consulenza legale.",
+  "author": "pixari",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/pixari/claude-per-il-diritto-italiano/blob/HEAD/diritto-civile/skills/rinnovo-contratto/SKILL.md",
+    "repo": "pixari/claude-per-il-diritto-italiano",
+    "path": "diritto-civile/skills/rinnovo-contratto/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 6,
+    "pushed_at": "2026-06-03T08:57:43Z",
+    "score": 48
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/NickGuAI/Herd/engineering-review",
+  "type": "skill",
+  "name": "engineering-review",
+  "description": "Review code, architecture, plans, or pull requests for correctness, risk, missing tests, and maintainability.",
+  "author": "NickGuAI",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/NickGuAI/Herd/blob/HEAD/agent-skills/herd-starter/engineering-review/SKILL.md",
+    "repo": "NickGuAI/Herd",
+    "path": "agent-skills/herd-starter/engineering-review/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 16,
+    "pushed_at": "2026-08-11T23:22:21Z",
+    "score": 56
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

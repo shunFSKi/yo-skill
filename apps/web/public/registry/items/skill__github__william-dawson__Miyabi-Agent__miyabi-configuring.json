@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/william-dawson/Miyabi-Agent/miyabi-configuring",
+  "type": "skill",
+  "name": "miyabi-configuring",
+  "description": "Configure Miyabi Agent on a Miyabi login node. Use for setup or localhost transport failures.",
+  "author": "william-dawson",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/william-dawson/Miyabi-Agent/blob/HEAD/plugins/miyabi/skills/miyabi-configuring/SKILL.md",
+    "repo": "william-dawson/Miyabi-Agent",
+    "path": "plugins/miyabi/skills/miyabi-configuring/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

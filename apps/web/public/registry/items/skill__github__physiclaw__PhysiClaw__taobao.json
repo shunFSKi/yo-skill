@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/physiclaw/PhysiClaw/taobao",
+  "type": "skill",
+  "name": "taobao",
+  "description": "Shop on the 淘宝 (Taobao) app. Use whenever the user wants to buy, order, or price something on 淘宝 / Taobao / 淘宝闪购, or names the Taobao app.",
+  "author": "physiclaw",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/physiclaw/PhysiClaw/blob/HEAD/skills/taobao/SKILL.md",
+    "repo": "physiclaw/PhysiClaw",
+    "path": "skills/taobao/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 348,
+    "pushed_at": "2026-08-13T06:15:09Z",
+    "score": 78,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 348
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# PhysiClaw\n\n**An AI agent that physically operates a phone — the way you do.**\n\n[English docs](https://docs.physiclaw.ai/en/) · [Demo video](https://youtu.be/YJ1O6gW0KVw)\n\n[中文文档](https://docs.physiclaw.ai/zh/) · [演示视频](https://b23.tv/jnegfgC)\n\nPhysiClaw watches a phone's screen with a camera and taps it with a stylus,\nworking the phone the way a person would. No APIs, no OAuth, no ADB cables,\nnothing installed on the phone — just unlock it, set it on the desk, and let\nthe agent work.\n\nIt's built for the everyday errands that pile up — ordering takeout, shopping\nfor groceries, booking a ride, paying a bill, replying to a message. Anything\nyou can do by hand on your phone, PhysiClaw can do for you.\n\n## Why a physical body?\n\nThe apps that run your daily life are closed off: most expose no public API,\nand simulated input — desktop automation or Android's ADB — leaves software\nfingerprints that anti-bot systems flag. So PhysiClaw treats the screen itself\nas the API: a camera reads it, a stylus performs the gestures. To the phone\nit's indistinguishable from a real finger — nothing to detect — and it reaches\nvirtually any app reliably.\n\nThe trade-off is speed: a few seconds per action, in exchange for universality\nand reliability.\n\n## How it works\n\nPhysiClaw has its own dedicated phone running its own WhatsApp account.\nAdd it as a contact and chat with it like a real person — tell it what you need\nin plain language:\n\n```text\nOrder a latte on DoorDash.\nWhat's the weather tomorrow?\nBuy milk and eggs on Instacart.\n```\n\nIts runtime loops continuously, waking the agent when a scheduled task is due\nor the screen lights up with a new message. The agent unlocks the phone, reads\nyour message, and does the task — pausing for confirmation when it matters,\nlike a payment — then replies with the result, saves its memory, and exits\nuntil it's next woken.\n\n## Getting started\n\nYou'll need the PhysiClaw hardware — the arm, stylus, and camera — plus an\n**iPhone** for it to operate.\n\nThe `physiclaw` CLI runs on macOS, Windows, and Linux:\n\n```bash\n# Install the CLI (uv + Python 3.12 + physiclaw)\ncurl -fsSL https://physiclaw.ai/install.sh | bash\n# Windows: iwr -useb https://physiclaw.ai/install.ps1 | iex\n\nphysiclaw models key <provider>        # add your LLM API key\nphysiclaw models use <provider/model>  # pick the model the agent runs on\nphysiclaw doctor                       # check your environment\nphysiclaw                              # start the server — opens the hardware-setup wizard, then runs the agent\n```\n\n## License\n\n[MIT](LICENSE) — both the CAD-as-code hardware and the agent software.\n",
+  "status": "curated"
+}

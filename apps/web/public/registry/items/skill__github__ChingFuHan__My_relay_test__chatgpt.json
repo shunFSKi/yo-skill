@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/ChingFuHan/My_relay_test/chatgpt",
+  "type": "skill",
+  "name": "chatgpt",
+  "description": "Relay the user's request to the web ChatGPT via GPT Relay and return its answer verbatim. Use when the user invokes /chatgpt or explicitly asks to send a task to the web ChatGPT.",
+  "author": "ChingFuHan",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ChingFuHan/My_relay_test/blob/HEAD/codex/skills/chatgpt/SKILL.md",
+    "repo": "ChingFuHan/My_relay_test",
+    "path": "codex/skills/chatgpt/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-28T19:37:43Z",
+    "score": 40,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

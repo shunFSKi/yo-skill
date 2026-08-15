@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/dlewissandy/teaparty/remove-hook",
+  "type": "skill",
+  "name": "remove-hook",
+  "description": "Remove a hook entry from .claude/settings.json or .claude/settings.local.json.",
+  "author": "dlewissandy",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/dlewissandy/teaparty/blob/HEAD/.teaparty/management/skills/remove-hook/SKILL.md",
+    "repo": "dlewissandy/teaparty",
+    "path": ".teaparty/management/skills/remove-hook/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-17T18:01:04Z",
+    "score": 42
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

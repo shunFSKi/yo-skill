@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/dvcrn/openclaw-skills-marketplace/glab-version",
+  "type": "skill",
+  "name": "glab-version",
+  "description": "Display glab CLI version information and build details. Use when checking installed glab version or troubleshooting installation issues. Triggers on version, glab version, check version, CLI version.",
+  "author": "dvcrn",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/dvcrn/openclaw-skills-marketplace/blob/HEAD/plugins/vince-winkintel--gitlab-cli-skills/skills/gitlab-cli-skills/glab-version/SKILL.md",
+    "repo": "dvcrn/openclaw-skills-marketplace",
+    "path": "plugins/vince-winkintel--gitlab-cli-skills/skills/gitlab-cli-skills/glab-version/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 32,
+    "pushed_at": "2026-06-12T21:33:13Z",
+    "score": 54
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

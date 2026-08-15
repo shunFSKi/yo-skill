@@ -1,0 +1,65 @@
+{
+  "id": "mcp:official/com.decionis/mcp",
+  "type": "mcp",
+  "name": "mcp",
+  "description": "Fail-closed policy gate for AI agent actions, with local evaluation and native pre-tool hooks.",
+  "author": "com.decionis",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/decionis/agent-safe-pipeline",
+    "repo": "decionis/agent-safe-pipeline"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@decionis/mcp"
+    ],
+    "env": [
+      {
+        "name": "DECIONIS_POLICY_PATH",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-15T09:28:53.453163Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# Agent-Safe Pipeline\n\n[![Continuous integration](https://github.com/decionis/agent-safe-pipeline/actions/workflows/deploy.yml/badge.svg?branch=master)](https://github.com/decionis/agent-safe-pipeline/actions/workflows/deploy.yml)\n[![CodeQL](https://github.com/decionis/agent-safe-pipeline/actions/workflows/codeql.yml/badge.svg?branch=master)](https://github.com/decionis/agent-safe-pipeline/actions/workflows/codeql.yml)\n[![Secret scanning](https://github.com/decionis/agent-safe-pipeline/actions/workflows/secrets.yml/badge.svg?branch=master)](https://github.com/decionis/agent-safe-pipeline/actions/workflows/secrets.yml)\n[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/decionis/agent-safe-pipeline/badge)](https://scorecard.dev/viewer/?uri=github.com/decionis/agent-safe-pipeline)\n[![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](./LICENSE)\n\n**Let agents propose. Let policy decide.**\n\nAgent-Safe Pipeline is a reference architecture for executing AI-agent actions through an independent authorization boundary.\n\nThis repository is a library and runnable reference implementation, not a hosted authorization service or a substitute for provider-side identity, least privilege, network isolation, and incident response. Its safety claims apply only when the documented trust boundary is preserved.\n\n```text\nAgent -> immutable intent -> Decionis -> ALLOW / ESCALATE / BLOCK -> SafeExecutor -> API\n                                      |\n                                      +-> Presence -> verified human approval -> Decionis re-evaluation\n```\n\nAgents can reason, plan, and propose actions. They must not determine whether their own actions are authorized, possess downstream privileged credentials, or choose which trusted handler runs.\n\n## Five-minute demo\n\nRequirements: Node.js 20 or later and pnpm 9.\n\n```bash\ngit clone https://github.com/decionis/agent-safe-pipeline.git\ncd agent-safe-pipeline\npnpm install --frozen-lockfile\npnpm --filter @decionis/agent-safe-example-basic demo\n```\n\nThe demos use an explicitly non-production fixture authority. A production integration uses `DecionisGate` and `DecionisGrantVerifier` with server-side credentials.\n\n```ts\nconst captured = intentCapture.capture(agentProposal, trustedContext);\nconst decision = await gate.evaluate(captured);\nconst result = await executor.run(captured, decision);\n```\n\nThe executor accepts a captured intent and a decision. It does not accept an arbitrary callback from the agent. A sealed `ActionRegistry` maps action names to trusted handlers and validates parameters before consuming a single-use grant.\n\n## Repository map\n\n- [`packages/pipeline`](./packages/pipeline) — `IntentCapture`, `DecionisGate`, Presence coordination, and `SafeExecutor`.\n- [`examples/basic-agent`](./examples/basic-agent) — the smallest BLOCK flow.\n- [`examples/shopify-refund-agent`](./examples/shopify-refund-agent) — amount-based ALLOW / ESCALATE / BLOCK.\n- [`examples/github-deploy-agent`](./examples/github-deploy-agent) — environment and force-push controls.\n- [`examples/mcp-tool-gate`](./examples/mcp-tool-gate) — a real stdio MCP server with a governed tool.\n- [`ARCHITECTURE.md`](./ARCHITECTURE.md) and [`THREAT-MODEL.md`](./THREAT-MODEL.md) — trust boundary and abuse analysis.\n- [`conformance/agent-safe-intent-v1.json`](./conformance/agent-safe-intent-v1.json) — portable canonical-hash test vector.\n- [`FIXTURE-PROVENANCE.md`](./FIXTURE-PROVENANCE.md) — origin and permitted use of every fixture family.\n\n## Production invariants\n\n1. Agent input contains only the proposed action, target, and parameters. Tenant, actor, downstream target, and credentials come from trusted runtime configuration.\n2. The exact canonical intent is hashed and expires quickly.\n3. Decionis independently decides. Network errors, malformed responses, missing grants, or binding mismatches fail closed.\n4. Presence proves a human approved that exact intent; Presence never directly authorizes execution. Decionis verifies the receipt and re-evaluates policy.\n5. The grant is bound to the intent, decision, audience, and expiry and is consumed atomically before the handler runs.\n6. Downstream credentials exist only behind the trusted executor.\n\nSee [`docs/trust-boundary.md`](./docs/trust-boundary.md) before integrating a real downstream API.\n\n## Public-repository policy\n\nThis is intended to be the public, canonical reference implementation. It should not be mirrored: mirrors create contract and security-fix drift. Public content belongs here—architecture, package source, synthetic policies, and runnable examples. Production policy bundles, customer data, credentials, internal infrastructure, and private incident material do not.\n\nDecionis remains the authoritative decision service, Presence remains the human-verification service, and their server internals can evolve independently behind versioned contracts.\n\n## Status\n\nThe workspace package is versioned `0.1.0` but is not claimed as published until the registry release workflow succeeds. Install it from this workspace today. The canonical repository URL was verified on 2026-08-14; availability of future package releases is intentionally not fabricated in these docs.\n\n## Development\n\n```bash\npnpm install --frozen-lockfile\npnpm verify\n```\n\n`pnpm verify` enforces formatting, Markdown lint, dependency-license policy, types, tests, and coverage thresholds of 90% for lines/functions/statements and 85% for branches. Installation activates the repository's `simple-git-hooks` pre-commit guardrails.\n\nApache-2.0 licensed. See [`LICENSE`](./LICENSE), [`TRADEMARKS.md`](./TRADEMARKS.md), [`SECURITY.md`](./SECURITY.md), and [`CONTRIBUTING.md`](./CONTRIBUTING.md). Report suspected vulnerabilities through [GitHub's private advisory form](https://github.com/decionis/agent-safe-pipeline/security/advisories/new), not a public issue.\n",
+  "status": "curated"
+}

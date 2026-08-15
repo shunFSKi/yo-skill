@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/brewnetdev/claude-code-ppt/commit",
+  "type": "skill",
+  "name": "commit",
+  "description": "Conventional Commit 메시지 생성. 스테이지된 변경을 분석해 type(scope): subject 형식의 커밋 메시지를 만든다. \"커밋\", \"커밋 메시지\", \"commit\" 요청에 사용.",
+  "author": "brewnetdev",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/brewnetdev/claude-code-ppt/blob/HEAD/.claude/skills/commit/SKILL.md.bak",
+    "repo": "brewnetdev/claude-code-ppt",
+    "path": ".claude/skills/commit/SKILL.md.bak"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-30T22:58:34Z",
+    "score": 45,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

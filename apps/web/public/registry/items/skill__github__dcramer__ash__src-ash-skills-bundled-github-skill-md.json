@@ -17,7 +17,7 @@
   "quality": {
     "stars": 62,
     "pushed_at": "2026-03-06T22:36:22Z",
-    "score": 58,
+    "score": 48,
     "star_history": [
       {
         "d": "2026-08-15",
@@ -55,6 +55,6 @@
     "category": "编程",
     "featured": false
   },
-  "readme": "# Ash\n\nA personal assistant agent with customizable personality, memory, and sandboxed tool execution.\n\n## Features\n\n- **Customizable Personality**: Define your assistant's behavior via SOUL.md\n- **Sessions**: JSONL-based conversation history\n- **Memory**: SQLite-backed semantic search for extracted facts\n- **Multi-LLM Support**: Anthropic Claude and OpenAI\n- **Telegram Integration**: Chat with your assistant via Telegram\n- **Sandboxed Tools**: Execute bash commands in Docker containers\n- **Web Search**: Built-in Brave Search integration\n\n## Documentation\n\nFull documentation at **https://dcramer.github.io/ash/**\n\n## Development\n\n```bash\nmake setup  # Install deps + dotagents + prek hooks\n```\n\n| Command | Purpose |\n|---------|---------|\n| `make lint` | Run ruff linting and formatting |\n| `make typecheck` | Run ty type checker |\n| `make test` | Run pytest |\n| `make check` | Run all hooks |\n\n### Evals\n\nBehavior evaluations use LLM-as-judge to test agent responses. They require `ANTHROPIC_API_KEY`:\n\n```bash\nuv run pytest evals/ -m eval -v\n```\n\nEval cases live in `evals/cases/*.yaml`. See `evals/types.py` for the schema.\n\n## Claude Code\n\nThis project is built with [Claude Code](https://claude.com/code). Agent instructions live in `CLAUDE.md`.\n\nInstall required plugins:\n\n```bash\nclaude plugin add getsentry/sentry-skills\nclaude plugin add anthropics/code-simplifier\n```\n\n**Skills from [getsentry/sentry-skills](https://github.com/getsentry/sentry-skills)**:\n\n| Skill | Purpose |\n|-------|---------|\n| `/commit` | Create commits with proper attribution |\n| `/create-pr` | Open pull requests |\n| `/find-bugs` | Audit local changes before merging |\n| `/deslop` | Remove AI-generated code slop |\n\n**From [anthropics/code-simplifier](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-simplifier)**:\n\n| Agent | Purpose |\n|-------|---------|\n| `code-simplifier` | Reduce code complexity and remove over-engineering |\n\n**Project-specific skills** (in `.claude/skills/`):\n\n| Skill | Purpose |\n|-------|---------|\n| `/write-spec <feature>` | Create/update a feature spec |\n| `/verify-spec <feature>` | Verify implementation matches spec |\n| `/create-migration` | Database schema changes |\n| `/create-skill <name>` | Create Ash skills in workspace |\n\n## License\n\nMIT\n",
+  "readme": null,
   "status": "curated"
 }

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/oozoofrog/FrogTray/swiftnest-logging-rules",
+  "type": "skill",
+  "name": "swiftnest-logging-rules",
+  "description": "Apply this skill whenever diagnostic logs or telemetry-related code is added or changed.",
+  "author": "oozoofrog",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/oozoofrog/FrogTray/blob/HEAD/.agents/skills/swiftnest-logging-rules/SKILL.md",
+    "repo": "oozoofrog/FrogTray",
+    "path": ".agents/skills/swiftnest-logging-rules/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-13T15:09:14Z",
+    "score": 42,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

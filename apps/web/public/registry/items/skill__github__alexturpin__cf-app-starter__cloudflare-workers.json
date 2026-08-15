@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/alexturpin/cf-app-starter/cloudflare-workers",
+  "type": "skill",
+  "name": "cloudflare-workers",
+  "description": "Cloudflare infrastructure, env vars and deployment guidance.",
+  "author": "alexturpin",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/alexturpin/cf-app-starter/blob/HEAD/.opencode/skills/cloudflare-workers/skill.md",
+    "repo": "alexturpin/cf-app-starter",
+    "path": ".opencode/skills/cloudflare-workers/skill.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-01-25T22:47:07Z",
+    "score": 27
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/iAladdin/gstack-codex/setup-browser-cookies",
+  "type": "skill",
+  "name": "setup-browser-cookies",
+  "description": "Import login cookies from a local Chromium-based browser into the persistent QA browser. Use when authenticated pages block QA, the user wants to test a logged-in flow, or local/staging auth needs to be reused safely.",
+  "author": "iAladdin",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/iAladdin/gstack-codex/blob/HEAD/setup-browser-cookies/SKILL.md",
+    "repo": "iAladdin/gstack-codex",
+    "path": "setup-browser-cookies/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-03-20T02:01:46Z",
+    "score": 35
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

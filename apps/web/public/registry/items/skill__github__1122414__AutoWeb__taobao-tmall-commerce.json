@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/1122414/AutoWeb/taobao-tmall-commerce",
+  "type": "skill",
+  "name": "taobao-tmall-commerce",
+  "description": "在淘宝或天猫搜索商品并区分广告、直播、店铺和规格弹层。任务涉及 taobao.com、tmall.com、官方旗舰店、规格选择或购物车预览时使用。",
+  "author": "1122414",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/1122414/AutoWeb/blob/HEAD/agent_skills/taobao-tmall-commerce/SKILL.md",
+    "repo": "1122414/AutoWeb",
+    "path": "agent_skills/taobao-tmall-commerce/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 4,
+    "pushed_at": "2026-08-02T16:00:29Z",
+    "score": 48
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

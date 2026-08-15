@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/RyouLmusic/paw-cp/hello-manual",
+  "type": "skill",
+  "name": "hello-manual",
+  "description": "手动触发的问候 skill，使用 /hello 命令。",
+  "author": "RyouLmusic",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/RyouLmusic/paw-cp/blob/HEAD/.paw/skills/hello-manual/SKILL.md",
+    "repo": "RyouLmusic/paw-cp",
+    "path": ".paw/skills/hello-manual/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-03T03:43:51Z",
+    "score": 34
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

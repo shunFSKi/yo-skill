@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/virtuanalytica/virtualpc/economic-analyst",
+  "type": "skill",
+  "name": "economic-analyst",
+  "description": "Quantify cost, latency, throughput, token budget, or compute tradeoffs before designing a change.",
+  "author": "virtuanalytica",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/virtuanalytica/virtualpc/blob/HEAD/.claude/skills/economic-analyst/SKILL.md",
+    "repo": "virtuanalytica/virtualpc",
+    "path": ".claude/skills/economic-analyst/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

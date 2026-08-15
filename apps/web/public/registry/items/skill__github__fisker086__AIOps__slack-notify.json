@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/fisker086/AIOps/slack-notify",
+  "type": "skill",
+  "name": "slack-notify",
+  "description": "Send messages to Slack channels via webhook or API",
+  "author": "fisker086",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/fisker086/AIOps/blob/HEAD/skills/slack_notify/SKILL.md",
+    "repo": "fisker086/AIOps",
+    "path": "skills/slack_notify/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 19,
+    "pushed_at": "2026-06-17T02:32:22Z",
+    "score": 49,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 19
+      }
+    ]
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

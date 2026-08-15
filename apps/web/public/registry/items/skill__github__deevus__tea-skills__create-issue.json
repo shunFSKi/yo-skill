@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/deevus/tea-skills/create-issue",
+  "type": "skill",
+  "name": "create-issue",
+  "description": "Create Gitea/Forgejo issues — interactive or with flags for title, description, labels, assignees, milestone, and deadline.",
+  "author": "deevus",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/deevus/tea-skills/blob/HEAD/skills/create-issue/SKILL.md",
+    "repo": "deevus/tea-skills",
+    "path": "skills/create-issue/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 5,
+    "pushed_at": "2026-05-30T01:21:47Z",
+    "score": 47,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 5
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

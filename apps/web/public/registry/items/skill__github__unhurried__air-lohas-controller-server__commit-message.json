@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/unhurried/air-lohas-controller-server/commit-message",
+  "type": "skill",
+  "name": "commit-message",
+  "description": "Formatting rules for git commit messages in this repo. Use whenever creating a git commit (git commit) in this project, so the message format doesn't need to be specified each time.",
+  "author": "unhurried",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/unhurried/air-lohas-controller-server/blob/HEAD/.claude/skills/commit-message/SKILL.md",
+    "repo": "unhurried/air-lohas-controller-server",
+    "path": ".claude/skills/commit-message/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

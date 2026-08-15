@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/aws-samples/sample-kiro-cli-prompts-for-product-teams/product-ai-framing",
+  "type": "skill",
+  "name": "product-ai-framing",
+  "description": "Use when framing an AI/ML product as a machine learning problem — problem type, input/output schemas, evaluation metrics, data strategy. Triggers on \"AI framing\", \"ML problem framing\", \"frame the model\". AI/ML products only; runs between Deep Research and PRFAQ.",
+  "author": "aws-samples",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/aws-samples/sample-kiro-cli-prompts-for-product-teams/blob/HEAD/.claude/skills/product-ai-framing/SKILL.md",
+    "repo": "aws-samples/sample-kiro-cli-prompts-for-product-teams",
+    "path": ".claude/skills/product-ai-framing/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 40,
+    "pushed_at": "2026-07-21T18:46:12Z",
+    "score": 60,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 40
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

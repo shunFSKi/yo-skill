@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/Willmo103/kb-web/pre-commit-checks",
+  "type": "skill",
+  "name": "pre-commit-checks",
+  "description": "Runs pre-commit validation (uv sync, pytest suite, ruff lint checks, and build.py pipeline) for kb-web.",
+  "author": "Willmo103",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Willmo103/kb-web/blob/HEAD/.agent/skills/pre-commit-checks/SKILL.md",
+    "repo": "Willmo103/kb-web",
+    "path": ".agent/skills/pre-commit-checks/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-15T04:02:11Z",
+    "score": 48,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

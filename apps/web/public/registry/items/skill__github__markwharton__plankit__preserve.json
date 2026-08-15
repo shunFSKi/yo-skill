@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/markwharton/plankit/preserve",
+  "type": "skill",
+  "name": "preserve",
+  "description": "Preserve the most recently approved plan to docs/plans/",
+  "author": "markwharton",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/markwharton/plankit/blob/HEAD/internal/setup/skills/preserve/SKILL.md",
+    "repo": "markwharton/plankit",
+    "path": "internal/setup/skills/preserve/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 12,
+    "pushed_at": "2026-08-14T09:22:16Z",
+    "score": 52,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 12
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

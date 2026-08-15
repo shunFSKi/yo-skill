@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/nemethk/claudeenv-demo-profiles/go-review",
+  "type": "skill",
+  "name": "go-review",
+  "description": "Review Go code for idiomatic style, error handling, and common pitfalls before opening a PR.",
+  "author": "nemethk",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/nemethk/claudeenv-demo-profiles/blob/HEAD/claude-project/golang/skills/go-review/SKILL.md",
+    "repo": "nemethk/claudeenv-demo-profiles",
+    "path": "claude-project/golang/skills/go-review/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-06T18:10:42Z",
+    "score": 37,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

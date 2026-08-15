@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Poorgramer-Zack/opencode-smol/smol-build",
+  "type": "skill",
+  "name": "smol-build",
+  "description": "Execute the next pending atomic task from the latest plan in .smol/plans/, using strict TDD. Use after /smol-plan when stepping through tasks one at a time.",
+  "author": "Poorgramer-Zack",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Poorgramer-Zack/opencode-smol/blob/HEAD/skills/smol-build/SKILL.md",
+    "repo": "Poorgramer-Zack/opencode-smol",
+    "path": "skills/smol-build/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 3,
+    "pushed_at": "2026-04-28T10:21:39Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/wilddogjp/openbpx/bpx-dump",
+  "type": "skill",
+  "name": "bpx-dump",
+  "description": "BPX `dump` command skill. Dump package summary/name/import/export tables in structured formats.",
+  "author": "wilddogjp",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/wilddogjp/openbpx/blob/HEAD/plugins/openbpx/skills/bpx-dump/SKILL.md",
+    "repo": "wilddogjp/openbpx",
+    "path": "plugins/openbpx/skills/bpx-dump/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 99,
+    "pushed_at": "2026-06-19T17:54:42Z",
+    "score": 65,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 99
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# OpenBPX: Blueprint Toolkit for Unreal Engine (`bpx`)\n\n<p align=\"center\">\n    <picture>\n        <source media=\"(prefers-color-scheme: light)\" srcset=\"docs/assets/openbpx-logo-dark.png\">\n        <img src=\"docs/assets/openbpx-logo-light.png\" alt=\"OpenBPX logo\" width=\"500\">\n    </picture>\n</p>\n\n[![Test](https://github.com/wilddogjp/openbpx/actions/workflows/test.yml/badge.svg)](https://github.com/wilddogjp/openbpx/actions/workflows/test.yml)\n[![Release](https://img.shields.io/github/v/release/wilddogjp/openbpx)](https://github.com/wilddogjp/openbpx/releases)\n[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)\n[![Go](https://img.shields.io/badge/go-1.21+-00ADD8.svg)](https://go.dev/)\n\n**A safety-first CLI for reading and editing Unreal package assets (`.uasset`, `.umap`) without launching Unreal Editor.**\n\n`BPX` is designed for automation and scripting workflows where binary safety matters: unknown bytes are preserved, no-op round-trip stays byte-identical, and unsupported/high-risk operations fail explicitly.\n\nBPX runs on **Windows**, **macOS**, and **Linux**.\n\n```bash\n# Windows\nwinget install --id WilddogJP.OpenBPX --exact\n\n# Debian / Ubuntu (WSL)\ncurl -fsSL https://raw.githubusercontent.com/wilddogjp/openbpx/main/scripts/install-bpx-from-release.sh | bash\n\n# macOS\nHOMEBREW_DEVELOPER=1 brew install --formula https://raw.githubusercontent.com/wilddogjp/openbpx/main/packaging/homebrew/openbpx.rb\n```\n\n> [!IMPORTANT]\n> This project is under active development. Expect breaking changes as we march toward v1.0.\n\n## Contents\n\n- [Quick Start](#quick-start)\n- [Why OpenBPX?](#why-openbpx)\n- [Install](#install)\n- [Legacy Agent Skills](#legacy-agent-skills)\n- [Safety and Security Model](#safety-and-security-model)\n- [Supported Scope](#supported-scope)\n- [How It Works](#how-it-works)\n- [Documentation](#documentation)\n- [Contributing](#contributing)\n- [Changelog](#changelog)\n- [License](#license)\n- [About Wild Dog](#about-wild-dog)\n\n## Quick Start\n\n```bash\n# Show help and version\nbpx --help\nbpx version\n\n# Inspect an asset\nbpx info ./Sample.uasset\nbpx validate ./Sample.uasset --binary-equality\n\n# Read properties\nbpx prop list ./Sample.uasset --export 1 --format json\n\n# Safe write flow example\nbpx prop set ./Sample.uasset --export 1 --path \"MyValue\" --value '123' --dry-run\nbpx prop set ./Sample.uasset --export 1 --path \"MyValue\" --value '123' --backup\n```\n\n## Why OpenBPX?\n\n**For humans**: inspect package metadata, exports/imports, properties, DataTables, and Blueprint data from a single CLI.\n\n**For automation and AI agents**: use structured output (`json`/`toml`) and deterministic safety-first write flows (`--dry-run`, `--backup`, `validate`).\n\n### Project Status\n\n- Phase: **Alpha**\n- Supported UE window: **UE 5.0 to UE 5.7** (`FileVersionUE5=1000..1018`)\n- Supported platforms: **Windows / macOS / Linux** (`amd64`, `arm64`)\n- Core principles: **unknown-byte preservation**, **round-trip fidelity**, **safety-first editing**, **UE behavior-grounded implementation**\n\n## Install\n\n### Agent Plugins\n\nBPX plugins include bundled `bpx` binaries for Linux, macOS, and Windows (`amd64`/`arm64`), so a separate CLI install is optional for agent use.\n\n#### Codex\n\nAdd OpenBPX as a Git marketplace, then install the `openbpx` plugin from that marketplace.\n\nIn the Codex app:\n\n1. Open **Plugins** and choose **Add marketplace**.\n2. Set **Source** to `wilddogjp/openbpx`.\n3. Set **Git ref** to `main`.\n4. Leave **Sparse path** empty.\n5. Open the added **OpenBPX** marketplace and install `openbpx`.\n\nDo not search for `openbpx` in the default official catalog; it is provided by the added OpenBPX marketplace.\n\nCLI equivalent:\n\n```bash\ncodex plugin marketplace add wilddogjp/openbpx --ref main\ncodex plugin add openbpx@openbpx\n```\n\nIf you added the marketplace before the `plugins/openbpx` layout was introduced, refresh it before reinstalling:\n\n```bash\ncodex plugin marketplace upgrade openbpx\ncodex plugin add openbpx@openbpx\n```\n\n#### Claude Code\n\nLocal repository use:\n\n```bash\nclaude plugin marketplace add .\nclaude plugin install openbpx@openbpx\n```\n\n### CLI\n\n```bash\n# Windows\nwinget install --id WilddogJP.OpenBPX --exact\n\n# Debian / Ubuntu (one-command installer with checksum verification) / WSL\ncurl -fsSL https://raw.githubusercontent.com/wilddogjp/openbpx/main/scripts/install-bpx-from-release.sh | bash\n\n# macOS (Homebrew formula hosted in this repository)\n# Homebrew blocks URL/path formula install by default, so enable developer mode for this command.\nHOMEBREW_DEVELOPER=1 brew install --formula https://raw.githubusercontent.com/wilddogjp/openbpx/main/packaging/homebrew/openbpx.rb\n```\n\nOfficial release artifacts are published on [GitHub Releases](https://github.com/wilddogjp/openbpx/releases).\n\n### Build Locally\n\n```bash\ngit clone https://github.com/wilddogjp/openbpx.git\ncd openbpx\ngo build ./cmd/bpx\n```\n\n## Legacy Agent Skills\n\n```bash\nbpx generate-skills --output-dir .codex/skills\nbpx generate-skills --output-dir .claude/skills\n```\n\nUse this older direct `SKILL.md` workflow only when plugin installation is unavailable.\n\n## Safety and Security Model\n\n- Preserve bytes that BPX does not interpret.\n- Keep `read -> no edit -> write` byte-identical.\n- Reject unsupported UE versions outside `1000..1018`.\n- Fail explicitly for unsupported/high-risk structural rewrites.\n- Treat all input assets as untrusted binary input.\n\nSee [SECURITY.md](SECURITY.md) for vulnerability reporting and response policy.\n\n## Supported Scope\n\n| Item | Current Support |\n|---|---|\n| UE version window | `FileVersionUE5=1000..1018` (UE 5.0 to 5.7) |\n| Asset files | `.uasset`, `.umap` |\n| Read/inspect commands | Implemented (see [docs/commands.md](docs/commands.md)) |\n| Scoped update commands | Implemented (safety-constrained) |\n| WidgetBlueprint workflow | Template init, rootless parent-class rewrites, read/add/remove/write for the current supported widget class/property set; broader move/clone and richer styling remain out of scope |\n| High-risk structural rewrites | Partially blocked by design |\n\n## How It Works\n\n1. Parse package data into a binary-safe model.\n2. Decode known structures while retaining unknown/raw regions.\n3. Apply deterministic, scoped edits only to the intended region.\n4. Re-serialize with offset/size updates and validation checks.\n\n## Documentation\n\n- [Command Specification](docs/commands.md)\n- [Test Plan and Fixture Specification](docs/test-fixtures.md)\n- [Distribution Build Guide](docs/build-distribution.md)\n- [Widget Init Template Proposal](docs/dev/widget-init-template-proposal.md)\n- [Widget Init Template Proposal (Japanese)](docs/dev/widget-init-template-proposal.ja.md)\n- [Disassembly Script Extraction Notes](docs/disasm-script-extraction.md)\n- [Package Manager Publish Guide](docs/dev/package-manager-publish.md)\n\n## Contributing\n\nContributions are welcome.\n\n- Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a PR.\n- Use [ISSUE.md](ISSUE.md) when filing bug reports or feature requests.\n- For large features, open an Issue first to align design and scope.\n- For CLI contract changes, update [docs/commands.md](docs/commands.md) in the same PR.\n\n## Changelog\n\nRelease history is tracked in [CHANGELOG.md](CHANGELOG.md).\n\n## License\n\nApache License 2.0. See [LICENSE](LICENSE).\n\n## About Wild Dog\n\n<img src=\"docs/assets/wilddog-logo-full-white.webp\" alt=\"Wild Dog logo\" width=\"220\" />\n\nBPX is created and maintained by [Wild Dog, Inc. (株式会社ワイルドドッグ)](https://wilddog.jp), an indie game development studio based in Japan, operated by a team of 20 members. Our mission is to deliver player-first games where fun always comes first.\n",
+  "status": "curated"
+}

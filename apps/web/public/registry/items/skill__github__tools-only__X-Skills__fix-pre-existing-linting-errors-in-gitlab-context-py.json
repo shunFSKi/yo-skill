@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/tools-only/X-Skills/fix-pre-existing-linting-errors-in-gitlab-context-py",
+  "type": "skill",
+  "name": "Fix pre-existing linting errors in gitlab_context.py",
+  "description": "plugins/gitlab-skill/skills/gitlab-skill/scripts/gitlab_context.py has 3 linting errors: PLC0415 x2 (deferred imports inside functions) and S607 (partial executable path in subprocess). Fix: move imports to top-level, use shutil.which() for glab path resolution. Same pattern was applied in fetch_gitlab_mr.py migration.",
+  "author": "tools-only",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/tools-only/X-Skills/blob/HEAD/development/2510-p2-fix-pre-existing-linting-errors-in-gitlabcontextpy_5fd8a333/skill.md",
+    "repo": "tools-only/X-Skills",
+    "path": "development/2510-p2-fix-pre-existing-linting-errors-in-gitlabcontextpy_5fd8a333/skill.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 7,
+    "pushed_at": "2026-05-16T18:12:55Z",
+    "score": 43
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/posva/erudita/erudita-docs",
+  "type": "skill",
+  "name": "erudita-docs",
+  "description": "Fetch and install llms.txt documentation using the erudita CLI. Use when a user asks to download, cache, or install documentation for packages, or to update erudita.json and .erudita links.",
+  "author": "posva",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/posva/erudita/blob/HEAD/skills/erudita-docs/SKILL.md",
+    "repo": "posva/erudita",
+    "path": "skills/erudita-docs/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 16,
+    "pushed_at": "2026-02-04T15:22:04Z",
+    "score": 41,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 16
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/lbb00/ai-brain/fix-until-green",
+  "type": "skill",
+  "name": "fix-until-green",
+  "description": "Run the full test suite repeatedly until all tests pass, fixing bugs autonomously. Use when the user asks to fix failing tests or run tests until green.",
+  "author": "lbb00",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/lbb00/ai-brain/blob/HEAD/skills/fix-until-green/SKILL.md",
+    "repo": "lbb00/ai-brain",
+    "path": "skills/fix-until-green/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-03-13T12:55:51Z",
+    "score": 35,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

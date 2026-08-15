@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/ianlancaster/cognitive-agent-template/deep-sleep",
+  "type": "skill",
+  "name": "deep-sleep",
+  "description": "DEEP session consolidation — full memory audit with scouts, belief evidence, template sync, summary backfill. Use when the user invokes deep-sleep, or at a session end where ~5 standard sleeps have accumulated, a meditation is adjacent, or a major arc boundary is closing. Subsumes /sleep — never run both.",
+  "author": "ianlancaster",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ianlancaster/cognitive-agent-template/blob/HEAD/.agents/skills/deep-sleep/SKILL.md",
+    "repo": "ianlancaster/cognitive-agent-template",
+    "path": ".agents/skills/deep-sleep/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-10T22:10:26Z",
+    "score": 45,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

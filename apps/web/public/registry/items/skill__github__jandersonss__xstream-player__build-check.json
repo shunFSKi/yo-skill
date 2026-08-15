@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/jandersonss/xstream-player/build-check",
+  "type": "skill",
+  "name": "build-check",
+  "description": "Valida mudanças rodando lint e o build completo (legacy + next). Use antes de commitar ou quando o usuário pedir para verificar se o projeto compila.",
+  "author": "jandersonss",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/jandersonss/xstream-player/blob/HEAD/.claude/skills/build-check/SKILL.md",
+    "repo": "jandersonss/xstream-player",
+    "path": ".claude/skills/build-check/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 11,
+    "pushed_at": "2026-08-11T00:37:44Z",
+    "score": 55,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 11
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

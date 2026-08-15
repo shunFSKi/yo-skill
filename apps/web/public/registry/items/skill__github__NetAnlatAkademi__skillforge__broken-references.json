@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/NetAnlatAkademi/skillforge/broken-references",
+  "type": "skill",
+  "name": "broken-references",
+  "description": "Use this skill as a fixture when testing that SkillForge reports references to files that do not exist.",
+  "author": "NetAnlatAkademi",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/NetAnlatAkademi/skillforge/blob/HEAD/samples/broken-references/SKILL.md",
+    "repo": "NetAnlatAkademi/skillforge",
+    "path": "samples/broken-references/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 3,
+    "pushed_at": "2026-08-10T07:22:01Z",
+    "score": 50,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 3
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

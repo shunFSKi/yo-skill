@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/ain3sh/.agents/paperclip",
+  "type": "skill",
+  "name": "paperclip",
+  "description": "Search and read full-text biomedical papers, regulatory documents, and clinical trials with the paperclip CLI. Run `paperclip skill` to load the full documentation before using it.",
+  "author": "ain3sh",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ain3sh/.agents/blob/HEAD/skills/paperclip/SKILL.md",
+    "repo": "ain3sh/.agents",
+    "path": "skills/paperclip/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 12,
+    "pushed_at": "2026-08-15T01:41:09Z",
+    "score": 55,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 12
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

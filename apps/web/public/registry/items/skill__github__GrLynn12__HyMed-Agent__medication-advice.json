@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/GrLynn12/HyMed-Agent/medication-advice",
+  "type": "skill",
+  "name": "medication_advice",
+  "description": "处理药品选择、外用药、禁忌、副作用、剂量和药物冲突",
+  "author": "GrLynn12",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/GrLynn12/HyMed-Agent/blob/HEAD/medical_rag/skills/medication_advice/SKILL.md",
+    "repo": "GrLynn12/HyMed-Agent",
+    "path": "medical_rag/skills/medication_advice/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-12T15:32:10Z",
+    "score": 34
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

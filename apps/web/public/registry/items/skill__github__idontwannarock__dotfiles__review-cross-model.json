@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/idontwannarock/dotfiles/review-cross-model",
+  "type": "skill",
+  "name": "review-cross-model",
+  "description": "Use after a code review when the findings should be challenged by a different model — 跨模型 review, 「找另一個模型挑戰」, 「second opinion」, or as the adversarial leg of the Large dev-workflow review gate. Dispatches an agent of a different kind into its own herdr pane, hands it only the branch and repo path so it gathers its own evidence, then has both sides refute each other exactly once. Read-only on both sides; requires HERDR_ENV=1 and degrades loudly when herdr or a counterpart agent is unavailable.",
+  "author": "idontwannarock",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/idontwannarock/dotfiles/blob/HEAD/home/dot_codex/skills/review-cross-model/SKILL.md.tmpl",
+    "repo": "idontwannarock/dotfiles",
+    "path": "home/dot_codex/skills/review-cross-model/SKILL.md.tmpl"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-14T08:48:27Z",
+    "score": 48,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

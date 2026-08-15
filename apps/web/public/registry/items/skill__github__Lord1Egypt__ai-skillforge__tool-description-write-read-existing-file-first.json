@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Lord1Egypt/ai-skillforge/tool-description-write-read-existing-file-first",
+  "type": "skill",
+  "name": "Tool Description: Write (read existing file first)",
+  "description": "Tool description for Write in environments where existing files must be read before overwrite",
+  "author": "Lord1Egypt",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Lord1Egypt/ai-skillforge/blob/HEAD/js/skills/gemini/tool-description-write-read-existing-file-first/SKILL.md",
+    "repo": "Lord1Egypt/ai-skillforge",
+    "path": "js/skills/gemini/tool-description-write-read-existing-file-first/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-06-05T02:16:24Z",
+    "score": 41
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

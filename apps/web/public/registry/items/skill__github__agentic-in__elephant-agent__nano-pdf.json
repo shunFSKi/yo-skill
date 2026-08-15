@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/agentic-in/elephant-agent/nano-pdf",
+  "type": "skill",
+  "name": "Nano PDF",
+  "description": "Extract, inspect, and summarize PDFs quickly with lightweight tooling before escalating to heavier OCR or layout workflows.",
+  "author": "agentic-in",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/agentic-in/elephant-agent/blob/HEAD/packages/skills/builtin_packages/productivity/nano-pdf/SKILL.md",
+    "repo": "agentic-in/elephant-agent",
+    "path": "packages/skills/builtin_packages/productivity/nano-pdf/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 578,
+    "pushed_at": "2026-06-01T02:33:06Z",
+    "score": 75,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 578
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": "<p align=\"center\">\n  <img src=\"apps/site/static/assets/resources/readme-1.png\" alt=\"Elephant Agent follows a personal path with people, places, risks, rhythms, decisions, and a Personal Model\" width=\"920\" />\n</p>\n\n<div align=\"center\">\n  <h1>Elephant Agent</h1>\n  <p>\n    <strong>Do more without thinking less.</strong><br />\n    A Mother Elephant that grows to understand you, then helps shape the paths you are trying to move.\n  </p>\n  <p>\n    <a href=\"https://elephant.agentic-in.ai/\">Website</a>\n    ·\n    <a href=\"https://elephant.agentic-in.ai/blog/personal-ai-you-create/\">Blog</a>\n    ·\n    <a href=\"https://elephant.agentic-in.ai/paper/\">Paper</a>\n  </p>\n</div>\n\n\n## What It Is\n\nElephant Agent starts from the person, not the task.\n\nThe mother elephant grows a correctable **Personal Model** of who you are, what\nsurrounds you, what is alive right now, and what your path has taught you. That\nunderstanding keeps deepening through interaction, correction, and gentle\nquestions.\n\nOnce Elephant Agent understands enough, it can help design living **Paths**:\nwork, health, habits, learning, relationships, recovery, research, code, and any\nother long-running direction you want to move. It can break a Path into Steps,\nbring in baby elephants when useful, and return to you at Checkpoints where your\njudgment matters.\n\n## Personal Agent Levels\n\n<p align=\"center\">\n  <img src=\"apps/site/static/assets/brand/agent-levels-positioning.png\" alt=\"Four levels of personal AI with Elephant Agent positioned at L4\" width=\"920\" />\n</p>\n\n<table>\n  <tr>\n    <td width=\"25%\">\n      <strong>L1</strong>\n      <br />\n      <strong>Executes tasks.</strong>\n      <br />\n      <sub>Claude Code, Cursor, Devin, and Codex-style agents make execution cheaper and faster.</sub>\n    </td>\n    <td width=\"25%\">\n      <strong>L2</strong>\n      <br />\n      <strong>Carries context.</strong>\n      <br />\n      <sub><a href=\"https://openclaw.ai/\">OpenClaw</a> publicly emphasizes local agents, persistent memory, full system access, skills, plugins, and integrations.</sub>\n    </td>\n    <td width=\"25%\">\n      <strong>L3</strong>\n      <br />\n      <strong>Improves procedures.</strong>\n      <br />\n      <sub><a href=\"https://hermes-ai.net/\">Hermes Agent</a> publicly positions itself around a self-improving learning loop, skill creation, recall, and user modeling.</sub>\n    </td>\n    <td width=\"25%\">\n      <strong>L4</strong>\n      <br />\n      <strong>Grows with the person.</strong>\n      <br />\n      <sub>Elephant Agent's product position: Mother understands the person, shapes Paths, and keeps judgment, evidence, questions, and learning close to the person.</sub>\n    </td>\n  </tr>\n</table>\n\n## Personal Model\n\n- **Identity** — who you are, your values, boundaries, decision style, and stable preferences.\n- **World** — the people, projects, tools, places, and relationships around you.\n- **Pulse** — what is alive right now: focus, pressure, constraints, energy, and priorities.\n- **Journey** — what your path has taught: lessons, failures, recovery patterns, and long-running growth.\n\n<p align=\"center\">\n  <img src=\"apps/site/static/assets/resources/readme-2.png\" alt=\"The four Personal Model lenses: Identity, World, Pulse, and Journey\" width=\"68%\" />\n</p>\n\nThe goal is not to remember everything. The goal is to understand what matters,\nshow why it matters, let you change it, and turn that understanding into better\nPaths over time.\n\n## macOS Desktop App\n\nThe macOS app is the recommended product surface. Chat / Wake is where you talk\nto Mother; Paths are where long-running life and work arcs become visible; the\nrest of the app keeps the Personal Model, Herd, skills, messaging, calendar,\nusage, and advanced runtime settings inspectable instead of hidden behind a chat\nbox.\n\n<p align=\"center\">\n  <img src=\"apps/site/static/assets/screenshots/macos-home.jpg\" alt=\"Elephant Agent macOS Home screen with the Personal Model map, current context, and next useful question\" width=\"920\" />\n  <br />\n  <sub><strong>Home</strong> — start from what Mother understands before shaping the next Path.</sub>\n</p>\n\n<table>\n  <tr>\n    <td width=\"50%\">\n      <img src=\"apps/site/static/assets/screenshots/macos-onboarding-language.jpg\" alt=\"Elephant Agent onboarding language screen\" />\n      <br />\n      <strong>Preferences</strong>\n      <br />\n      <sub>Choose language, boundaries, model posture, and curiosity effort.</sub>\n    </td>\n    <td width=\"50%\">\n      <img src=\"apps/site/static/assets/screenshots/macos-wake.jpg\" alt=\"Elephant Agent Wake chat surface\" />\n      <br />\n      <strong>Chat / Wake</strong>\n      <br />\n      <sub>Return to Mother and the same path, not a blank prompt.</sub>\n    </td>\n  </tr>\n  <tr>\n    <td width=\"50%\">\n      <img src=\"apps/site/static/assets/screenshots/macos-personal-model.jpg\" alt=\"Elephant Agent Personal Model map\" />\n      <br />\n      <strong>Personal Model</strong>\n      <br />\n      <sub>Inspect the understanding that shapes future Paths.</sub>\n    </td>\n    <td width=\"50%\">\n      <img src=\"apps/site/static/assets/screenshots/macos-providers.jpg\" alt=\"Elephant Agent model provider settings\" />\n      <br />\n      <strong>Providers</strong>\n      <br />\n      <sub>Use local or hosted models as advanced posture, not the product center.</sub>\n    </td>\n  </tr>\n  <tr>\n    <td width=\"50%\">\n      <img src=\"apps/site/static/assets/screenshots/macos-skills.jpg\" alt=\"Elephant Agent skills screen\" />\n      <br />\n      <strong>Skills</strong>\n      <br />\n      <sub>See which skills help Mother and the Herd move a Path.</sub>\n    </td>\n    <td width=\"50%\">\n      <img src=\"apps/site/static/assets/screenshots/macos-tools.jpg\" alt=\"Elephant Agent tools screen\" />\n      <br />\n      <strong>Tools</strong>\n      <br />\n      <sub>Keep browser, filesystem, MCP, and operator actions explicit.</sub>\n    </td>\n  </tr>\n  <tr>\n    <td width=\"50%\">\n      <img src=\"apps/site/static/assets/screenshots/macos-herd.jpg\" alt=\"Elephant Agent herd screen\" />\n      <br />\n      <strong>Herd</strong>\n      <br />\n      <sub>Coordinate Mother and baby elephants under one understanding.</sub>\n    </td>\n    <td width=\"50%\">\n      <img src=\"apps/site/static/assets/screenshots/macos-messaging.jpg\" alt=\"Elephant Agent messaging integrations\" />\n      <br />\n      <strong>Messaging</strong>\n      <br />\n      <sub>Connect WeChat, Feishu, Discord, DingDing, or WeCom when you want it.</sub>\n    </td>\n  </tr>\n  <tr>\n    <td width=\"50%\">\n      <img src=\"apps/site/static/assets/screenshots/macos-calendar.jpg\" alt=\"Elephant Agent calendar and reminders\" />\n      <br />\n      <strong>Calendar</strong>\n      <br />\n      <sub>Keep routines, reminders, and long-running Paths visible.</sub>\n    </td>\n    <td width=\"50%\">\n      <img src=\"apps/site/static/assets/screenshots/macos-usage.jpg\" alt=\"Elephant Agent token usage screen\" />\n      <br />\n      <strong>Usage</strong>\n      <br />\n      <sub>Inspect local token flow and runtime events instead of treating cost as a black box.</sub>\n    </td>\n  </tr>\n</table>\n\n## Quickstart\n\nElephant Agent has two supported product shapes.\n\n### 1. macOS desktop app (recommended)\n\nUse this path for the full local desktop workspace: Chat / Wake, Paths, Personal\nModel, Herd, skills, messaging, calendar, usage, and settings in one native app.\n\n1. Download the latest macOS build from [GitHub Releases](https://github.com/agentic-in/elephant-agent/releases/latest).\n2. Open `Elephant Agent.app`.\n3. Create your first elephant, choose a provider, and set curiosity effort.\n4. Return through Chat / Wake when you want Mother to continue the same path.\n\n### 2. CLI + Dashboard (Linux / Cloud)\n\nUse this path for Linux, cloud machines, SSH workflows, and terminal-first\noperators. The CLI is the daily terminal surface; the Dashboard is the visual\ninspection surface for Personal Model, evidence, jobs, skills, and runtime\nstate.\n\n<table>\n  <tr>\n    <td width=\"50%\">\n      <img src=\"apps/site/static/assets/screenshots/cli-wake.jpg\" alt=\"Elephant Agent CLI wake session\" />\n      <br />\n      <strong>CLI</strong>\n    </td>\n    <td width=\"50%\">\n      <img src=\"apps/site/static/assets/screenshots/dashboard-personal-model.jpg\" alt=\"Elephant Agent Dashboard Personal Model map\" />\n      <br />\n      <strong>Dashboard</strong>\n    </td>\n  </tr>\n</table>\n\nInstall:\n\n```bash\ncurl -fsSL https://elephant.agentic-in.ai/install.sh | bash\n```\n\nFirst run:\n\n```bash\nelephant init        # choose identity, provider, and curiosity effort\nelephant status      # check provider and local runtime readiness\nelephant wake        # enter the chat TUI\nelephant dashboard   # open Personal Model, questions, evidence, and runtime state\n```\n\nFor remote or cloud use, `elephant dashboard --no-open` prints the local URL so\nyou can attach through your preferred tunnel or browser setup.\n\n## Read More\n\nREADME and the homepage stay product-first. The deeper system story lives here:\n\n- [Read the docs →](https://elephant.agentic-in.ai/docs/)\n- [Read the paper →](https://elephant.agentic-in.ai/paper/)\n- [Read the blog →](https://elephant.agentic-in.ai/blog/personal-ai-you-create/)\n\n## Contributors\n\n<p align=\"center\">\n  <img src=\"docs/paper/assets/agentic-intelligence-lab-lockup.png\" alt=\"Agentic Intelligence Lab\" width=\"320\" />\n</p>\n\n<p align=\"center\">\n  <bold>\n    Agentic Intelligence Lab\n  </bold>\n</p>\n",
+  "status": "curated"
+}

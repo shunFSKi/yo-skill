@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/forge-town/skills/check-component-consistency",
+  "type": "skill",
+  "name": "check-component-consistency",
+  "description": "Use when 需要检测多个同类型组件（如 Button、Page）的代码实现一致性，交叉对比 Props、事件、样式、hooks 等实现层面差异，确保代码模式统一。触发词：检查组件一致性、对比组件实现、组件模式审计。",
+  "author": "forge-town",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/forge-town/skills/blob/HEAD/skills/check-component-consistency/SKILL.md",
+    "repo": "forge-town/skills",
+    "path": "skills/check-component-consistency/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 7,
+    "pushed_at": "2026-05-30T07:16:44Z",
+    "score": 48
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

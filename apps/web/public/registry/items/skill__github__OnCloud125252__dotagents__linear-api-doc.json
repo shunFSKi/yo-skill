@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/OnCloud125252/dotagents/linear-api-doc",
+  "type": "skill",
+  "name": "linear-api-doc",
+  "description": "Generate a frontend-oriented API guide document on Linear for a given issue.\nAnalyzes git diff and source code to identify API changes, then creates a\ncomprehensive document with types, endpoints, examples, validation rules,\nand error handling attached to the Linear issue.",
+  "author": "OnCloud125252",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/OnCloud125252/dotagents/blob/HEAD/skills/linear-api-doc/SKILL.md",
+    "repo": "OnCloud125252/dotagents",
+    "path": "skills/linear-api-doc/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-07-28T15:20:39Z",
+    "score": 48,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

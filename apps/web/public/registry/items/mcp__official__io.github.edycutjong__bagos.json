@@ -1,0 +1,115 @@
+{
+  "id": "mcp:official/io.github.edycutjong/bagos",
+  "type": "mcp",
+  "name": "BagOS",
+  "description": "MCP server for Bags on Solana: token analytics, trade quotes, and gated write operations.",
+  "author": "io.github.edycutjong",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/edycutjong/bagos",
+    "repo": "edycutjong/bagos"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "bagos-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "BAGS_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "BAGS_NETWORK",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "SOLANA_RPC_URL",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "BAGS_KEYPAIR_PATH",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BAGS_MAX_SOL_PER_TX",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BAGS_MAX_SOL_PER_SESSION",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BAGS_ALLOW_UNCONFIRMED",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BOS_TOKEN_MINT",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BOS_REQUIRED_BALANCE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "BAGS_ALLOW_UNCAPPED_TOKEN_SWAPS",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "USE_MOCK_DATA",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-15T09:24:24.01261Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": "<div align=\"center\">\n  <img src=\"docs/icon-animated.svg\" alt=\"BagOS Icon\" width=\"144\">\n  <h1>BagOS 🚦</h1>\n  <p><em>Every AI-initiated Solana spend: gated, capped, confirmed on chain.</em></p>\n  <img src=\"docs/readme-hero-animated.svg\"\n       alt=\"BagOS — gates every AI-initiated Solana spend: the amber-held swap turns green only when its confirmed signature lands on chain\"\n       width=\"100%\">\n\n  <p>\n    The first call to a write tool <strong>signs nothing</strong> — it answers with a preview and a\n    single-use token. Hard cap <strong>0.1 SOL/tx</strong>, 337 tests at 100% coverage, and a live-run\n    receipt you can reproduce with <code>npm run demo</code>.\n  </p>\n\n  <br/>\n\n  [![Live Site](https://img.shields.io/badge/🌐_bagos.edycu-.dev-0ea5e9?style=for-the-badge)](https://bagos.edycu.dev)\n  [![Run Receipts](https://img.shields.io/badge/📊_Run-Receipts-06b6d4?style=for-the-badge)](DEMO.md)\n  [![Security Policy](https://img.shields.io/badge/🔐_Security-Policy-ef4444?style=for-the-badge)](.github/SECURITY.md)\n  [![Changelog](https://img.shields.io/badge/📋_Change-log-8b5cf6?style=for-the-badge)](CHANGELOG.md)\n\n  <br/>\n\n  ![MCP](https://img.shields.io/badge/MCP-stdio_+_HTTP-000000?style=flat)\n  ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)\n  ![Solana](https://img.shields.io/badge/Solana-9945FF?style=flat&logo=solana&logoColor=white)\n  ![Jest](https://img.shields.io/badge/Jest-100%25_coverage-C21325?style=flat&logo=jest&logoColor=white)\n  [![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)\n  [![CI/CD](https://github.com/edycutjong/BagOS/actions/workflows/ci.yml/badge.svg)](https://github.com/edycutjong/BagOS/actions/workflows/ci.yml)\n  [![Publish](https://github.com/edycutjong/BagOS/actions/workflows/publish.yml/badge.svg)](https://github.com/edycutjong/BagOS/actions/workflows/publish.yml)\n  [![CodeQL](https://github.com/edycutjong/BagOS/actions/workflows/codeql.yml/badge.svg)](https://github.com/edycutjong/BagOS/actions/workflows/codeql.yml)\n  [![npm](https://img.shields.io/npm/v/bagos-mcp-server?color=CB3837&logo=npm)](https://www.npmjs.com/package/bagos-mcp-server)\n  [![MCP registry](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fregistry.modelcontextprotocol.io%2Fv0%2Fservers%3Fsearch%3Dbagos%26version%3Dlatest&query=%24.servers%5B0%5D.server.version&prefix=v&label=MCP%20registry&color=000000)](https://registry.modelcontextprotocol.io/?q=bagos)\n  [![Release](https://img.shields.io/github/v/release/edycutjong/BagOS?color=8b5cf6&logo=github&label=release)](https://github.com/edycutjong/BagOS/releases/latest)\n\n</div>\n\n---\n\n> **v2.0.0 corrects a serious defect.** In 1.x the write tools built\n> transactions, discarded them, and reported success — nothing was ever signed\n> or submitted. If you used 1.x and believed a trade or claim executed, it did\n> not. See [CHANGELOG.md](CHANGELOG.md).\n>\n> **2.0.0 is live on npm** and is what `npx bagos-mcp-server` installs. It ships with\n> [npm provenance](https://registry.npmjs.org/-/npm/v1/attestations/bagos-mcp-server@2.0.0) —\n> the tarball is cryptographically attested to this repository and the commit that built it.\n> If you are still on 1.x, upgrade.\n\n---\n\n## 💡 The Problem & Solution\n\n### The Problem\n\nAn MCP server that can move money gives an AI assistant a signing key. The assistant\ndecides, and the transaction is already on chain by the time a human reads about it.\nNothing in the protocol makes the model pause, and nothing bounds what a single\nmisunderstood instruction can spend.\n\n### The Solution\n\nBagOS lets an AI assistant read Bags/Solana token data and — with explicit\nconfirmation — execute swaps and claim creator fees from your wallet. Writes are off\nunless you configure them, they are mainnet-only, and the first call to a write tool\nsigns nothing: it returns a preview and a single-use token that only authorizes the\nexact arguments it was issued for.\n\n---\n\n## 🏗️ Architecture & Tech Stack\n\nEvery write goes through this:\n\n```\ntoken gate → spend caps → confirmation → simulate → sign → send → confirm\n```\n\n| Tool | Type | What it does |\n|---|---|---|\n| `bags_heartbeat` | read | Server status and wallet reachability |\n| `bags_get_token_analytics` | read | Lifetime fee data for a token mint |\n| `bags_get_creators` | read | Top token creators by lifetime fees |\n| `bags_get_trade_quote` | read | Price quote for a swap. Does not trade. |\n| `bags_get_claimable_fees` | read | Fees currently claimable by your wallet |\n| `bags_get_partner_stats` | read | Partner config claim statistics |\n| `bags_get_token_claim_stats` | read | Per-creator claim totals — the royalty roster with amounts claimed |\n| `bags_get_token_claim_events` | read | The claim audit trail for a token, paginated |\n| `bags_get_token_creators` | read | Who shares a token's fees, and in what proportion |\n| `bags_resolve_launch_wallet` | read | Social handle (twitter/tiktok/kick/github) → fee-share wallet |\n| `bags_authenticate` | read | Verify wallet ownership via Ed25519 signature |\n| `bags_prepare_token_metadata` | gated | Creates token info + metadata. **Does not launch a token.** |\n| `bags_execute_trade` | **write** | Swap tokens. Signs and submits. |\n| `bags_claim_fees` | **write** | Claim creator/LP fees. Signs and submits. |\n\n`bags_prepare_token_metadata` reserves a mint and uploads metadata. Completing a\nlaunch also requires a Meteora fee-share config, whose fee-claimer split has to\nbe your decision — so this server does not implement that step rather than\nguessing at it. Finish the launch at [bags.fm](https://bags.fm).\n\n---\n\n## 🔐 Write Tools & Spend Controls\n\nWrites are off unless you configure them, and they are mainnet-only.\n\n**Bags has no devnet deployment.** Its API endpoint and its Meteora/fee-share\nprogram IDs are all mainnet. This server nonetheless defaults to **devnet**, so\nan unconfigured install cannot spend real money. Calling a write tool on devnet\nreturns an explanation, not a cryptic program error.\n\nThe first call to a write tool **signs nothing**. It returns a preview and a\nsingle-use token:\n\n```\n⚠️  CONFIRMATION REQUIRED — nothing has been signed or sent.\n\nAction:  Swap 0.05 of So1111…1112\n         for       EkJuyY…dBAGS\n         expect    4823917722 (min 4679199990)\n         slippage  3%\n         network   🔴 MAINNET — real funds\n\nSpend:   0.05 SOL\nCaps:    0.1 SOL/tx · 0/1 SOL used this session\n\nTo execute, call bags_execute_trade again with the identical arguments plus:\n  confirm: \"kR3nT9xQm2vP\"\n```\n\nThe token is a fingerprint of the tool name plus the exact arguments, so one\nissued for a 0.01 SOL swap cannot authorize a 10 SOL one. It expires in five\nminutes and is consumed on every outcome, so it cannot be replayed.\n\nOn success you get a real signature and explorer link — never a success message\nfor a transaction that did not land.\n\nSet `BAGS_ALLOW_UNCONFIRMED=true` to skip the preview. Spend caps still apply.\n\n**The caps only bind on SOL.** A swap whose input is some other token cannot be\nvalued in SOL, so no cap can limit it. Those swaps are refused by default; set\n`BAGS_ALLOW_UNCAPPED_TOKEN_SWAPS=true` to permit them, and the preview will say\nplainly that the trade is uncapped.\n\n---\n\n## 📊 Engineering Rigor\n\n337 tests. The bypass tests around the spend caps and the confirmation step are\nload-bearing; treat a change there as a security change. They are mutation-\nchecked: removing the cap guard, the confirmation check, the decimals lookup,\nor the spend recorder each makes the suite fail.\n\n| Layer | Status | Details |\n|---|---|---|\n| **Real default path** | ✅ | No kill-switch flag in any documented command. `USE_MOCK_DATA` defaults **off**; when on, it affects only the `bags_get_claimable_fees` tool, stamping `⚠️ [MOCK DATA ENABLED]` on that tool's own response. The other 13 tools ignore it. Live-run receipts in [DEMO.md](DEMO.md) |\n| Code quality | ✅ | ESLint + `tsc --noEmit`, both clean |\n| Unit testing | ✅ | Jest, 337 tests / 17 suites, **100%** statements · branches · functions · lines, enforced |\n| High-signal tests | ✅ | Mutation-checked cap/confirmation bypass tests · a leak-channel regression test (the API key used to be echoed into tool output) · network-mismatch refusal |\n| Security | ✅ | CodeQL SAST · Dependabot SCA · gitleaks over full history (`fetch-depth: 0`) · secret scanning + push protection on · `npm audit` in CI as a **ratchet** — see below |\n| Dependency debt | ⚠️ | **6 advisories, 0 critical** — down from 90. Everything patchable was cleared with version-scoped `overrides` (see [`package.json`](package.json)). The 6 that remain are **one** root cause, `bigint-buffer` [GHSA-3gc7-fjrx-p6mg](https://github.com/advisories/GHSA-3gc7-fjrx-p6mg), counted once at each level of the chain it travels up to `@bagsfm/bags-sdk`. No patched `bigint-buffer` exists — 1.1.5 is the installed version, the latest version, and vulnerable. CI blocks any critical and any increase over [`.audit-baseline.json`](.audit-baseline.json). **Note:** npm honours `overrides` only in a root project, so these protect this repo and CI, not consumers of the published package. |\n| CI | ✅ | 4 stages (Quality → Security ∥ Test → Build) with `cancel-in-progress` concurrency; Node 22 + 24 matrix; packaged-artifact and entrypoint checks |\n| CD | ✅ | Release → tarball audit → `npm publish --provenance` → deprecate the superseded version. A second workflow submits `server.json` to the MCP registry via OIDC. Both gated on the full CI suite. **1.0.0 is not yet deprecated** — 2.0.0 predates that step, so it needs one manual run of `deprecate.yml`. |\n| On-chain proof | ⚠️ | `npm run proof:devnet` exists and lands a real devnet transaction, but the public faucet was dry on 2026-08-15 — no signature captured yet. See [DEMO.md](DEMO.md) |\n| Community standards | ✅ | Code of Conduct · Contributing · Security policy · issue + PR templates |\n\nE2E browser tests and Lighthouse budgets are deliberately absent: this is a stdio/HTTP MCP\nserver with no web UI, so both would measure nothing. The equivalent end-to-end coverage is\n`npm run demo`, which drives all read tools over real MCP JSON-RPC against the live API.\n\n---\n\n## 🚀 Getting Started\n\n### Prerequisites\n\nYou need a Bags API key from [dev.bags.fm](https://dev.bags.fm). That alone\nenables the read-only tools. For trading and fee claims you also need a Solana\nkeypair file and the gating token — see\n[Write Tools & Spend Controls](#-write-tools--spend-controls).\n\n### Installation\n\n```bash\nnpx bagos-mcp-server\n```\n\n**Claude Desktop** — `~/Library/Application Support/Claude/claude_desktop_config.json`\n(macOS) or `%APPDATA%\\Claude\\claude_desktop_config.json` (Windows):\n\n```json\n{\n  \"mcpServers\": {\n    \"bagos\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"bagos-mcp-server\"],\n      \"env\": {\n        \"BAGS_API_KEY\": \"your-key-here\"\n      }\n    }\n  }\n}\n```\n\n**Claude Code**:\n\n```bash\nclaude mcp add bagos --env BAGS_API_KEY=your-key-here -- npx -y bagos-mcp-server\n```\n\nRestart the client, then ask it: *\"check the bagos heartbeat\"*. The server\nprints a configuration report to stderr on startup; if something is missing it\ntells you which variable and why.\n\nTo enable writes:\n\n```json\n{\n  \"mcpServers\": {\n    \"bagos\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"bagos-mcp-server\"],\n      \"env\": {\n        \"BAGS_API_KEY\": \"your-key-here\",\n        \"BAGS_NETWORK\": \"mainnet\",\n        \"BAGS_KEYPAIR_PATH\": \"~/.config/bags/keypair.json\",\n        \"BOS_TOKEN_MINT\": \"EkJuyYyD3to61CHVPJn6wHb7xANxvqApnVJ4o2SdBAGS\",\n        \"BAGS_MAX_SOL_PER_TX\": \"0.1\",\n        \"BAGS_MAX_SOL_PER_SESSION\": \"1.0\"\n      }\n    }\n  }\n}\n```\n\n### Configuration\n\n| Variable | Required | Default | Notes |\n|---|---|---|---|\n| `BAGS_API_KEY` | yes | — | From [dev.bags.fm](https://dev.bags.fm) |\n| `BAGS_NETWORK` | no | `devnet` | `devnet` or `mainnet`. Writes need mainnet. |\n| `SOLANA_RPC_URL` | no | public cluster RPC | Must agree with `BAGS_NETWORK` or the server refuses to start |\n| `BAGS_KEYPAIR_PATH` | writes only | `~/.config/bags/keypair.json` | JSON byte-array keypair file |\n| `BOS_TOKEN_MINT` | writes only | — | Gating token mint |\n| `BOS_REQUIRED_BALANCE` | no | `10000` | Minimum gating-token balance |\n| `BAGS_MAX_SOL_PER_TX` | no | `0.1` | Per-transaction spend cap |\n| `BAGS_MAX_SOL_PER_SESSION` | no | `1.0` | Per-process spend cap |\n| `BAGS_ALLOW_UNCONFIRMED` | no | `false` | Skip the confirmation step |\n| `BAGS_ALLOW_UNCAPPED_TOKEN_SWAPS` | no | `false` | Permit swaps whose input is not SOL. The caps are SOL-denominated and **cannot limit these**. |\n\n---\n\n## 🧪 Testing & CI\n\n```bash\nnpm ci\nnpm run ci            # lint + typecheck + tests with coverage\nnpm run dev           # stdio server with watch\nnpm run inspector     # MCP Inspector against the built server\nnpm run proof:devnet  # land a real devnet transaction through the write path\n```\n\n`proof:devnet` generates a throwaway keypair, funds it from the devnet faucet,\nand pushes a transfer through the same simulate/sign/send/confirm path the write\ntools use — then re-fetches the signature from the chain instead of trusting the\nfunction's return value. Use it to verify the execution layer end to end.\n\n---\n\n## 📽️ Demo Materials\n\n- **[DEMO.md](DEMO.md)** — receipts from a real run against the live Bags mainnet API:\n  7 scenarios, 8 steps, per-step latency, plus the network-mismatch guard and the token\n  gate caught refusing a write.\n- **[docs/examples.md](docs/examples.md)** — prompts you can type at your assistant and\n  what each should do.\n\n---\n\n## 🛡️ Security\n\nRead [SECURITY.md](.github/SECURITY.md) before pointing a funded wallet at this.\n\nSummary: your private key is read from disk, used to sign, and never logged,\nnever sent anywhere, and never placed in an error message. Tool errors return\na message only — no stack traces — with key-shaped strings redacted. The startup\nreport strips credentials from the RPC URL. If the RPC endpoint's cluster\ndisagrees with `BAGS_NETWORK`, the server refuses to start rather than sign\nmainnet transactions under a devnet banner.\n\nThe same rule now covers the **Bags API key**: `bags_authenticate` writes it to\n`~/.config/bags/credentials.json` and echoes only a four-character tail. It used\nto print the key in full, which published a live credential into the assistant's\ncontext and every transcript downstream of it. If you ran `bags_authenticate` on\na version before this change, rotate that key at [dev.bags.fm](https://dev.bags.fm).\n\nReport vulnerabilities via\n[GitHub security advisories](https://github.com/edycutjong/BagOS/security/advisories/new).\n\n---\n\n## 📄 License\n\nMIT — see [LICENSE](LICENSE).\n",
+  "status": "curated"
+}

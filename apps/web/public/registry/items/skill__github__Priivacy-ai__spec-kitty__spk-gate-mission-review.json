@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/Priivacy-ai/spec-kitty/spk-gate-mission-review",
+  "type": "skill",
+  "name": "spk-gate-mission-review",
+  "description": "Run post-merge Spec Kitty mission review for spec-to-code fidelity, FR coverage, drift, risk, and final verdict.",
+  "author": "Priivacy-ai",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Priivacy-ai/spec-kitty/blob/HEAD/src/doctrine/skills/spk-gate-mission-review/SKILL.md",
+    "repo": "Priivacy-ai/spec-kitty",
+    "path": "src/doctrine/skills/spk-gate-mission-review/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1511,
+    "pushed_at": "2026-08-14T23:37:50Z",
+    "score": 84,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1511
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "<div align=\"center\">\n    <img src=\"https://github.com/Priivacy-ai/spec-kitty/raw/main/docs/assets/logo_small.webp\" alt=\"Spec Kitty logo\"/>\n    <h1>Spec Kitty</h1>\n    <p><strong>Spec-driven development for AI coding agents, multi-agent workflows, and governed software factories.</strong></p>\n</div>\n\nSpec Kitty is an open-source CLI for turning product intent into a repo-native AI coding workflow:\n\n```text\nspec -> plan -> tasks -> next -> review -> accept -> merge\n```\n\nUse it to build a governed software factory around Claude Code, Codex, Cursor, Gemini, GitHub Copilot, Windsurf, OpenCode, and other AI coding agents. Spec Kitty keeps specs, plans, work packages, acceptance criteria, review state, and merge decisions in your repository, then gives agents isolated git worktrees so implementation can happen in parallel without branch chaos.\n\n[![PyPI version](https://img.shields.io/pypi/v/spec-kitty-cli?style=flat-square&logo=pypi)](https://pypi.org/project/spec-kitty-cli/)\n[![License: MIT](https://img.shields.io/badge/license-MIT-yellow?style=flat-square)](LICENSE)\n[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue?style=flat-square)](https://www.python.org/downloads/)\n\n## Bright Software Factory, Not a Black Box\n\nSpec Kitty is for teams building software factories: repeatable inputs, clear work-package boundaries, isolated execution, visible progress, and review gates. It can support dark software factories and autonomous coding experiments, but it is deliberately not a lights-out black box by default. Humans define intent, architecture, and acceptance criteria; agents implement inside traceable worktrees; reviewers accept, reject, or merge with an audit trail.\n\nThe goal is not more prompt text. The goal is a durable operating system for agentic coding where the repository remains the source of truth.\n\n## Is It For You?\n\nUse Spec Kitty when:\n\n- AI coding sessions are losing requirements, decisions, or acceptance criteria.\n- You want specs, plans, tasks, reviews, and merge state stored in Git.\n- Multiple agents or developers need clear work-package boundaries.\n- You are running parallel Claude Code, Codex, Cursor, Copilot, Gemini, or Windsurf work and need git worktree isolation.\n- You are moving from vibe coding to a repeatable spec-driven development workflow.\n- You want a local workflow first, with optional hosted tracker and sync integrations later.\n\nIt is probably overkill for one-off edits, tiny scripts, or teams that do not use Git.\n\n## What It Provides\n\n| Need | Spec Kitty provides |\n| --- | --- |\n| Start from intent | Guided `specify`, `plan`, and `tasks` workflows |\n| Keep agents aligned | Repository-native mission artifacts under `kitty-specs/` |\n| Split implementation | Work packages with lifecycle lanes such as `planned`, `in_progress`, `for_review`, `approved`, and `done` |\n| Run agents in parallel | Isolated git worktrees under `.worktrees/` |\n| Keep quality visible | Review, accept, merge, and retrospective gates |\n| See progress | Optional local kanban dashboard with `spec-kitty dashboard` |\n| Integrate agents | Slash commands or skills for Claude Code, Codex, Cursor, Gemini, Copilot, Windsurf, OpenCode, and more |\n| Learn from missions | Every completed mission generates a retrospective by default. Tune via `.kittify/config.yaml#retrospective` or charter; see [how-to](docs/guides/how-to/governance/use-retrospective-learning.md). |\n\n## Common Use Cases\n\n- Replace ad hoc vibe coding with spec-driven development.\n- Turn GitHub issues, product requirements, or bug reports into executable work packages.\n- Coordinate multiple AI coding agents without losing context between sessions.\n- Keep architecture decisions, constraints, and acceptance criteria close to the code.\n- Build a governed software factory that can scale toward more autonomy without hiding review, test, or merge decisions.\n\n## Governance layer\n\nSpec Kitty keeps runtime governance in the repo instead of treating it as\nagent-only prompt text. The trail model in [docs/architecture/trail-model.md](docs/architecture/trail-model.md)\ndescribes how `spec-kitty dispatch \"<request>\"` maps operator intent to\nruntime behavior, while\n[docs/architecture/host-surface-parity.md](docs/architecture/host-surface-parity.md) tracks parity across\nCLI, slash-command, and hosted surfaces.\n\nThe primary standalone governance command is:\n\n- `spec-kitty dispatch \"<request>\"` - loads governance context, opens an Op record, and returns the context the agent must use before doing the work\n\n## Quick Start\n\nInstall the CLI:\n\n```bash\npipx install spec-kitty-cli\n```\n\n`pipx` is the preferred installer for the CLI because it keeps Spec Kitty in its\nown virtual environment and avoids the `externally-managed-environment` errors\ncommon on modern Linux distributions.\n\nOther supported install methods:\n\n```bash\nuv tool install spec-kitty-cli\n# or, inside an activated virtual environment\npython -m pip install spec-kitty-cli\n```\n\nCreate or initialize a project:\n\n```bash\nspec-kitty init my-project --ai claude\ncd my-project\nspec-kitty verify-setup\n```\n\nReplace `claude` with your agent key when needed. Common choices include `codex`, `cursor`, `gemini`, `copilot`, `opencode`, `qwen`, `windsurf`, `kiro`, `vibe`, `pi`, and `letta`. See [Supported Agents](docs/api/supported-agents.md) for the current list.\n\nOpen your AI coding agent in the project and run the core workflow:\n\n```text\n/spec-kitty.charter\n/spec-kitty.specify Build a small task list app.\n/spec-kitty.plan\n/spec-kitty.tasks\n```\n\nThen let the runtime choose the next action until the mission is ready:\n\n```bash\nspec-kitty next --agent claude --mission <mission-slug>\n```\n\nReview, accept, merge, and close the loop:\n\n```text\n/spec-kitty.review\n/spec-kitty.accept\n/spec-kitty.merge --push\n```\n\nAfter merge, run `/spec-kitty-mission-review`. The mission's\n`retrospective.yaml` is authored during the runtime terminus (HiC prompt or\nautonomous facilitator), not by `merge`. Once it exists, use\n`spec-kitty retrospect summary` for the cross-mission view and\n`spec-kitty agent retrospect synthesize --mission <mission-slug>` to apply any\nstaged proposals (dry-run by default — pass `--apply` to mutate).\n\nFor the full walkthrough, see [Your First Mission](docs/guides/tutorials/your-first-mission.md).\n\n## Everyday Commands\n\n| Command | Purpose |\n| --- | --- |\n| `spec-kitty init . --ai <agent>` | Add Spec Kitty to the current repo |\n| `spec-kitty verify-setup` | Check local installation and project wiring |\n| `spec-kitty dashboard` | Open the local mission dashboard |\n| `spec-kitty next --agent <agent> --mission <slug>` | Ask Spec Kitty what the agent should do next |\n| `spec-kitty upgrade` | Update an existing project after upgrading the CLI |\n| `spec-kitty --help` | Show available commands |\n\n## Documentation\n\nStart here:\n\n- [Getting Started](docs/guides/tutorials/getting-started.md)\n- [Your First Mission](docs/guides/tutorials/your-first-mission.md)\n- [Orchestrator Quickstart](docs/guides/tutorials/orchestrator-quickstart.md)\n- [CLI Command Reference](docs/api/cli-commands.md)\n- [Slash Commands](docs/api/slash-commands.md)\n- [Supported Agents](docs/api/supported-agents.md)\n- [Dashboard Guide](docs/guides/how-to/monitoring/use-dashboard.md)\n- [Install and Upgrade](docs/guides/how-to/installation/install-and-upgrade.md)\n\nDeeper topics:\n\n- [Spec-Driven Development](docs/architecture/spec-driven-development.md)\n- [Mission System](docs/architecture/mission-system.md)\n- [Git Worktrees](docs/architecture/git-worktrees.md)\n- [Multi-Agent Orchestration](docs/architecture/multi-agent-orchestration.md)\n- [External Orchestrator Runbook](docs/guides/how-to/collaboration/run-external-orchestrator.md)\n- [Hosted Sync Workspaces](docs/guides/how-to/collaboration/sync-workspaces.md)\n\nHosted auth, sync, and tracker flows remain opt-in. For setup details, see\n[Hosted Sync Workspaces](docs/guides/how-to/collaboration/sync-workspaces.md), [Internal\nHosted-Readiness](docs/operations/internal-hosted-readiness.md), and\n[Launch-Readiness Behavior](docs/architecture/launch-readiness-future.md).\n\n## FAQ\n\n### Is Spec Kitty for dark software factories?\n\nSpec Kitty can be used as part of a dark software factory or autonomous coding pipeline, but its default model is governed and human-in-loop. It keeps specs, work packages, agent actions, review decisions, and merge state visible in the repository.\n\n### Which AI coding agents does Spec Kitty support?\n\nSpec Kitty supports common AI coding agents and coding harnesses including Claude Code, Codex, Cursor, Gemini, GitHub Copilot, OpenCode, Qwen, Windsurf, Kiro, Vibe, Pi, and Letta. See [Supported Agents](docs/api/supported-agents.md).\n\n### How is Spec Kitty different from prompt templates or Spec Kit?\n\nSpec Kitty is inspired by spec-driven development workflows, but adds repo-native mission state, work-package lanes, git worktree isolation, a local dashboard, governance commands, and an explicit `next -> review -> accept -> merge` runtime loop.\n\n### Does Spec Kitty require a SaaS service?\n\nNo. Spec Kitty is local-first and stores its core artifacts in your repo. Hosted tracker and sync integrations are optional.\n\n## Development\n\n```bash\ngit clone https://github.com/Priivacy-ai/spec-kitty.git\ncd spec-kitty\npip install -e \".[test]\"\n```\n\nWhen testing templates from a source checkout:\n\n```bash\nexport SPEC_KITTY_TEMPLATE_ROOT=\"$(pwd)\"\nspec-kitty init my-project --ai claude\n```\n\nSee the [Contributing guide](docs/development/contributing.md) for contribution guidelines.\n\n## Identity-Boundary CI Gate\n\nThe `drift-detector` required check protects the shared identity-boundary\ncontract across Spec Kitty repos. Contributor and admin details live in\n[Identity-Boundary CI Gate](docs/operations/identity-boundary-ci-gate.md).\n\n## Support\n\n- Open a [GitHub issue](https://github.com/Priivacy-ai/spec-kitty/issues/new) for bugs, feature requests, or questions.\n- See the [changelog](docs/changelog/CHANGELOG.md) for release notes.\n- See [CONTRIBUTORS.md](CONTRIBUTORS.md) and the [GitHub contributors graph](https://github.com/Priivacy-ai/spec-kitty/graphs/contributors) for contributor credits.\n\n## License\n\nSpec Kitty is released under the [MIT License](LICENSE).\n",
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/unityeagleai/gemma-skills/gemini-search",
+  "type": "skill",
+  "name": "gemini-search",
+  "description": "Search the web using Gemini AI with Google Search grounding. Returns a summarized, up-to-date answer with cited sources. Ask anything — news, facts, research, current events.",
+  "author": "unityeagleai",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/unityeagleai/gemma-skills/blob/HEAD/gemini-search/SKILL.md",
+    "repo": "unityeagleai/gemma-skills",
+    "path": "gemini-search/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

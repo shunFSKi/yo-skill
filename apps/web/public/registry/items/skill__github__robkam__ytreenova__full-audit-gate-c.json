@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/robkam/ytreenova/full-audit-gate-c",
+  "type": "skill",
+  "name": "full-audit-gate-c",
+  "description": "Run ytnova C quality gate for feature-sized changes using build, static analysis, valgrind, and pytest per docs/AUDIT.md.",
+  "author": "robkam",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/robkam/ytreenova/blob/HEAD/.ai/skills/full-audit-gate-c/SKILL.md",
+    "repo": "robkam/ytreenova",
+    "path": ".ai/skills/full-audit-gate-c/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 13,
+    "pushed_at": "2026-08-15T15:34:09Z",
+    "score": 55,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 13
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

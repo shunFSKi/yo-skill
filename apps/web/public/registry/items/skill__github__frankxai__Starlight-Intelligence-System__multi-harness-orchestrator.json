@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/frankxai/Starlight-Intelligence-System/multi-harness-orchestrator",
+  "type": "skill",
+  "name": "multi-harness-orchestrator",
+  "description": "Automatically detect tasks suited for delegation to other agent harnesses (Claude Code as canonical, agy/antigravity, gemini, cursor, etc.). Leverage shared .claude catalog (skills, commands, agents, hooks, junctions for agy). Embody Frank DNA. Output exact delegation commands (e.g. claude -p \"injected rules + task\" --cwd ...). Auto-utilize by shelling harness CLIs with full context from rules/catalog. Combine with repo-mastery for ecosystem tasks. Suggest/lead by choosing best harness or running in parallel. Grok .grok personal excellence seeds only (core to others).",
+  "author": "frankxai",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/frankxai/Starlight-Intelligence-System/blob/HEAD/.grok/skills/multi-harness-orchestrator/SKILL.md",
+    "repo": "frankxai/Starlight-Intelligence-System",
+    "path": ".grok/skills/multi-harness-orchestrator/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 6,
+    "pushed_at": "2026-08-15T14:29:59Z",
+    "score": 53,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 6
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

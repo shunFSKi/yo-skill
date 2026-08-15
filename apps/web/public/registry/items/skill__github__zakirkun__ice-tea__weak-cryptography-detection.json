@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/zakirkun/ice-tea/weak-cryptography-detection",
+  "type": "skill",
+  "name": "Weak Cryptography Detection",
+  "description": "Detects use of weak or deprecated cryptographic algorithms",
+  "author": "zakirkun",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/zakirkun/ice-tea/blob/HEAD/skills/crypto/weak-hash/SKILL.md",
+    "repo": "zakirkun/ice-tea",
+    "path": "skills/crypto/weak-hash/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 38,
+    "pushed_at": "2026-03-19T05:43:58Z",
+    "score": 46
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

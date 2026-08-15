@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/LIDR-academy/AI4Devs-LTI-extended/meta-prompt",
+  "type": "skill",
+  "name": "meta-prompt",
+  "description": "Rewrite prompts using prompt-engineering best practices for precise and complete results.",
+  "author": "LIDR-academy",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/LIDR-academy/AI4Devs-LTI-extended/blob/HEAD/ai-specs/skills/meta-prompt/SKILL.md",
+    "repo": "LIDR-academy/AI4Devs-LTI-extended",
+    "path": "ai-specs/skills/meta-prompt/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 273,
+    "pushed_at": "2026-06-09T15:09:53Z",
+    "score": 69,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 273
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# LTI (Leadership. Technology. Impact) - ATS System\n\n## 📋 Overview\n\nThe LTI ATS (Applicant Tracking System) is a modern, full-stack recruitment management platform designed to streamline the entire hiring process. This system enables organizations to efficiently manage candidates, track applications, organize interviews, and make data-driven hiring decisions.\n\n### 🎯 Purpose\n\nThe LTI ATS addresses critical challenges in modern recruitment by providing:\n\n- **Centralized Candidate Management**: Comprehensive candidate profiles with education, work experience, and document storage\n- **Structured Interview Processes**: Customizable interview flows with multiple stages and evaluation criteria\n- **Application Tracking**: End-to-end visibility of candidate progress through hiring pipelines\n- **Collaborative Decision Making**: Multi-stakeholder interview coordination and evaluation tools\n- **Data-Driven Insights**: Analytics and reporting for recruitment process optimization\n\n### 🏗️ Architecture\n\nThe system follows **Domain-Driven Design (DDD)** principles with a clean, layered architecture:\n\n```\n┌─────────────────────────────────────────────────────────────┐\n│                    Presentation Layer                       │\n│  ┌─────────────────────┐    ┌─────────────────────────────┐│\n│  │   React Frontend    │    │   Express.js Controllers    ││\n│  │   (TypeScript)      │    │      (REST API)             ││\n│  └─────────────────────┘    └─────────────────────────────┘│\n└─────────────────────────────────────────────────────────────┘\n┌─────────────────────────────────────────────────────────────┐\n│                   Application Layer                         │\n│  ┌─────────────────────────────────────────────────────────┐│\n│  │              Services & Use Cases                       ││\n│  │    (candidateService, positionService, etc.)            ││\n│  └─────────────────────────────────────────────────────────┘│\n└─────────────────────────────────────────────────────────────┘\n┌─────────────────────────────────────────────────────────────┐\n│                     Domain Layer                            │\n│  ┌─────────────────────────────────────────────────────────┐│\n│  │  Domain Models & Business Logic                         ││\n│  │  (Candidate, Position, Application, Interview)          ││\n│  └─────────────────────────────────────────────────────────┘│\n└─────────────────────────────────────────────────────────────┘\n┌─────────────────────────────────────────────────────────────┐\n│                  Infrastructure Layer                       │\n│  ┌─────────────────────┐    ┌─────────────────────────────┐│\n│  │   PostgreSQL        │    │      Prisma ORM             ││\n│  │   (Database)        │    │    (Data Access)            ││\n│  └─────────────────────┘    └─────────────────────────────┘│\n└─────────────────────────────────────────────────────────────┘\n```\n\n## 🛠️ Technologies\n\n### Backend\n- **Node.js** with **TypeScript** - Server-side runtime and type safety\n- **Express.js** - Web framework for REST API\n- **Prisma ORM** - Type-safe database client and migrations\n- **PostgreSQL** - Primary database for data persistence\n- **Jest** - Unit and integration testing framework\n- **Serverless Framework** - Cloud deployment capabilities\n\n### Frontend\n- **React 18** with **TypeScript** - Modern UI framework with type safety\n- **React Bootstrap** - UI component library\n- **React Router DOM** - Client-side routing\n- **React Beautiful DnD** - Drag and drop functionality for Kanban boards\n- **React DatePicker** - Date selection components\n\n### DevOps & Testing\n- **Docker** - Containerization for PostgreSQL database\n- **Cypress** - End-to-end testing framework\n- **ESLint** & **Prettier** - Code linting and formatting\n\n## 📁 Folder Structure\n\n```\nAI4Devs-LTI/\n├── 📁 backend/                      # Backend application\n│   ├── 📁 src/\n│   │   ├── 📁 presentation/         # Controllers & Routes\n│   │   │   ├── 📁 controllers/      # REST API controllers\n│   │   │   └── 📁 __tests__/        # Controller tests\n│   │   ├── 📁 application/          # Application services\n│   │   │   ├── 📁 services/         # Business logic services\n│   │   │   └── validator.ts         # Input validation\n│   │   ├── 📁 domain/               # Domain layer\n│   │   │   ├── 📁 models/           # Domain entities\n│   │   │   └── 📁 repositories/     # Repository interfaces\n│   │   ├── 📁 infrastructure/       # Infrastructure layer\n│   │   └── 📁 routes/               # API route definitions\n│   ├── 📁 prisma/                   # Database schema & migrations\n│   │   ├── schema.prisma            # Database schema definition\n│   │   ├── 📁 migrations/           # Database migration files\n│   │   └── seed.ts                  # Database seeding script\n│   ├── package.json                 # Backend dependencies\n│   ├── tsconfig.json               # TypeScript configuration\n│   └── jest.config.js              # Jest testing configuration\n│\n├── 📁 frontend/                     # React frontend application\n│   ├── 📁 src/\n│   │   ├── 📁 components/           # React components\n│   │   ├── 📁 services/            # API service layers\n│   │   ├── 📁 pages/               # Page components\n│   │   └── App.js                  # Main application component\n│   ├── 📁 cypress/                 # E2E testing\n│   │   └── 📁 e2e/                 # Cypress test specs\n│   ├── package.json                # Frontend dependencies\n│   └── tsconfig.json              # TypeScript configuration\n│\n├── 📁 documentation/               # Project documentation\n│   ├── DataModel.md               # Data model and entity documentation\n│   └── api-spec.yml               # OpenAPI specification\n│\n├── 📁 memory-bank/                # Project context & documentation\n│   ├── projectbrief.md           # Project overview\n│   ├── productContext.md         # Business context\n│   └── systemPatterns.md         # Architecture patterns\n│\n├── docker-compose.yml             # PostgreSQL containerization\n├── package.json                   # Root project configuration\n└── README.md                      # This file\n```\n\n## 🚀 Setup & Testing\n\nFor detailed setup instructions, environment configuration, and testing guidelines, see the [Development Guide](docs/development_guide.md).\n\n## 📊 Database Schema\n\nThe system uses the following main entities:\n\n- **Candidates**: Personal information, education, work experience\n- **Companies**: Organizations posting positions\n- **Positions**: Job openings with requirements and descriptions\n- **Applications**: Candidate applications to specific positions\n- **Interview Flows**: Configurable interview process stages\n- **Interviews**: Individual interview sessions and results\n\nFor detailed schema information, entity relationships, and the complete data model documentation, see [`docs/data-model.md`](docs/data-model.md).\n\n## 🔗 API Documentation\n\nThe REST API follows OpenAPI 3.0 specification. Key endpoints include:\n\n- `GET /candidates` - List candidates with filtering and pagination\n- `POST /candidates` - Create new candidate\n- `GET /candidates/{id}` - Get candidate details\n- `GET /positions` - List available positions\n- `POST /positions` - Create new position\n- `PUT /candidates/{id}` - Update candidate interview stage\n\nFull API documentation is available in [`docs/api-spec.yml`](docs/api-spec.yml).\n\n## 🤝 Contributing\n\n1. Follow the established coding patterns and architecture\n2. Write tests for new features\n3. Update specs documentation for any changes (API, Data model...)\n4. Use TypeScript for type safety\n5. Follow the domain-driven design principles\n\n## 📄 License\n\nThis project is licensed under the ISC License.\n\n## 📞 Support\n\nFor questions or support, please contact the LTI Development Team. \n",
+  "status": "curated"
+}

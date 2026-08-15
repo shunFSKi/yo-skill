@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/oaknational/oak-open-curriculum-ecosystem/oak-retrospective",
+  "type": "skill",
+  "name": "oak-retrospective",
+  "description": "Run a deep post-mortem on a completed arc — a merged PR series, a finished lane, a resolved incident, a long review series — producing a durable record with a causal stack, a counterfactual test, honest credit, and proposals that each carry a warrant and a falsifier, routed through the PDR-130 lanes. Use at owner word after a significant arc closes, or when an arc's cost or shape surprised everyone and the estate should learn from the trajectory, not just the outcome.",
+  "author": "oaknational",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/oaknational/oak-open-curriculum-ecosystem/blob/HEAD/.agents/skills/oak-retrospective/SKILL.md",
+    "repo": "oaknational/oak-open-curriculum-ecosystem",
+    "path": ".agents/skills/oak-retrospective/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 7,
+    "pushed_at": "2026-08-14T16:11:12Z",
+    "score": 53
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

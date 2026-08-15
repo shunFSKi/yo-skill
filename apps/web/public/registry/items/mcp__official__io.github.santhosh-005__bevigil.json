@@ -1,0 +1,65 @@
+{
+  "id": "mcp:official/io.github.santhosh-005/bevigil",
+  "type": "mcp",
+  "name": "BeVigil OSINT",
+  "description": "Discover mobile app attack surfaces via BeVigil OSINT — hosts, subdomains, URLs, and more.",
+  "author": "io.github.santhosh-005",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/santhosh-005/bevigil-mcp-server",
+    "repo": "santhosh-005/bevigil-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "bevigil-mcp-server"
+    ],
+    "env": [
+      {
+        "name": "BEVIGIL_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-15T14:13:10.848308Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# BeVigil MCP Server\n\n[![npm](https://img.shields.io/npm/v/bevigil-mcp-server)](https://www.npmjs.com/package/bevigil-mcp-server)\n[![CI](https://github.com/santhosh-005/bevigil-mcp-server/actions/workflows/ci.yml/badge.svg)](https://github.com/santhosh-005/bevigil-mcp-server/actions/workflows/ci.yml)\n[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)\n\n**Map a company's mobile attack surface from your AI assistant.**\n\nBeVigil has scanned millions of Android apps and extracted the infrastructure hiding\ninside them — backend hosts, staging subdomains, S3 buckets, API paths, and query\nparameters that never appear in DNS or search engines. This server puts that data\nbehind seven MCP tools, so you can ask for it in plain language instead of\nstitching together `curl` calls.\n\nBuilt for **bug bounty hunters**, **pentesters**, **red teamers**, and **appsec\nengineers** doing recon.\n\n> Tested with Claude Code, Claude Desktop, Codex, Cursor, and VS Code.\n\n---\n\n## Quick start (2 minutes)\n\n### 1. Get a free API key\n\nSign up at **[bevigil.com/osint-api](https://bevigil.com/osint-api)**. Free accounts\nget 25 credits, or 200 if you register with a work email. One lookup = one credit.\n\n### 2. Add the server\n\nNo clone, no build — `npx` fetches and runs it.\n\n<details open>\n<summary><b>Claude Code</b></summary>\n\n```bash\nclaude mcp add bevigil -e BEVIGIL_API_KEY=your_key_here -- npx -y bevigil-mcp-server\n```\n\nCheck it registered with `claude mcp list`.\n</details>\n\n<details>\n<summary><b>Claude Desktop</b></summary>\n\nEdit `claude_desktop_config.json` (Settings → Developer → Edit Config):\n\n```json\n{\n  \"mcpServers\": {\n    \"bevigil\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"bevigil-mcp-server\"],\n      \"env\": { \"BEVIGIL_API_KEY\": \"your_key_here\" }\n    }\n  }\n}\n```\n\nRestart Claude Desktop.\n</details>\n\n<details>\n<summary><b>Codex</b></summary>\n\n```bash\ncodex mcp add bevigil --env BEVIGIL_API_KEY=your_key_here -- npx -y bevigil-mcp-server\n```\n\nCheck it registered with `codex mcp list`.\n</details>\n\n<details>\n<summary><b>Cursor</b></summary>\n\nAdd to `~/.cursor/mcp.json` (global) or `.cursor/mcp.json` (project):\n\n```json\n{\n  \"mcpServers\": {\n    \"bevigil\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"bevigil-mcp-server\"],\n      \"env\": { \"BEVIGIL_API_KEY\": \"your_key_here\" }\n    }\n  }\n}\n```\n</details>\n\n<details>\n<summary><b>VS Code (Copilot)</b></summary>\n\nAdd to your VS Code MCP settings:\n\n```json\n{\n  \"mcp\": {\n    \"servers\": {\n      \"bevigil\": {\n        \"command\": \"npx\",\n        \"args\": [\"-y\", \"bevigil-mcp-server\"],\n        \"env\": { \"BEVIGIL_API_KEY\": \"your_key_here\" }\n      }\n    }\n  }\n}\n```\n</details>\n\n### 3. Ask your first question\n\n> **Investigate com.whatsapp with BeVigil and summarise the infrastructure it exposes.**\n\nYou should get back something like this — real hostnames pulled out of the app's code:\n\n```\n# Investigation Report: com.whatsapp\nSource: BeVigil OSINT API\n\n## Hosts / Domains (155 found)\n• osaka.nyc3.cdn.digitaloceanspaces.com\n• s3.getstickerpack.com\n• logger.instagram.com\n• dev503.prn2.facebook.com\n...\n```\n\nThat's it — you're doing OSINT from the chat window.\n\n---\n\n## What you can ask\n\n**Recon a company's mobile footprint**\n> Which Android apps talk to `api.acme.com`? Then pull the hosts out of each one.\n\n**Find staging and internal endpoints**\n> Get subdomains for `acme.com` from BeVigil and flag anything that looks like\n> dev, staging, or internal.\n\n**Hunt for exposed storage**\n> What S3 buckets does `com.acme.mobile` reference?\n\n**Build a target-specific fuzzing wordlist**\n> Pull the BeVigil wordlist for `com.acme.mobile` and save the API paths to\n> `paths.txt`.\n\n**Pivot from a single domain**\n> Find apps referencing `acme.com`, then investigate the three most interesting\n> ones and tell me which backends they share.\n\nThe last one is where an agent earns its keep — that's a dozen API calls and a\ncorrelation pass that you'd otherwise do by hand.\n\n---\n\n## Tools\n\n| Tool | Input | Returns |\n|---|---|---|\n| `bevigil_get_hosts` | package ID | Hostnames found in an app's code |\n| `bevigil_get_subdomains` | domain | Subdomains seen across indexed apps |\n| `bevigil_get_urls` | domain | Full URLs referenced by apps |\n| `bevigil_get_s3_buckets` | package ID | S3 buckets referenced in an app |\n| `bevigil_get_app_packages` | hostname | Reverse lookup — apps using that host |\n| `bevigil_get_wordlist` | package ID | Paths, endpoints, and params for fuzzing |\n| `bevigil_investigate_app` | package ID | Hosts + S3 + params + wordlist in one report |\n\n### Pagination\n\nEvery list-returning tool takes optional `limit` and `offset` (default 100, max\n500). When results are truncated the response says so and gives the exact offset\nto continue from:\n\n```\nHosts for com.whatsapp (155 found)\nSource: BeVigil OSINT (package: com.whatsapp)\nShowing 1-100 of 155.\nFor the next page, call this tool again with offset=100.\n```\n\n### Credits\n\nResponses are **not cached**. Every tool call — including each extra page — is one\nAPI request and one credit. `bevigil_investigate_app` makes four calls per run, so\nit costs four. When credits run out you get a clear message rather than a silent\nempty result.\n\n### Apps that aren't indexed yet\n\nBeVigil only answers for apps it has already scanned. If a package isn't in the\nindex, the tools tell you how to fix that:\n\n```\n\"com.acme.mobile\" is not in BeVigil's index, so there is no data to return.\n\nTo add it, upload the APK at https://bevigil.com/scanApp. BeVigil scans the app\nand indexes the assets it finds, after which this tool will return them.\n```\n\nThis is deliberately distinguished from \"app is indexed but has no S3 buckets\" —\nonly the first case is something you can act on.\n\n---\n\n## Configuration reference\n\n### API key\n\nPreferred: set it in your MCP client config (as shown in the quick start), which\npasses it to the server as an environment variable. For shell use:\n\n```bash\nexport BEVIGIL_API_KEY=your_api_key_here\n```\n\nA `.env` file in the **package root** also works. Note that it's resolved relative\nto the installed package rather than your working directory, since MCP clients\nlaunch servers from arbitrary places. Real environment variables always win over\n`.env`, and `.env` is gitignored — never commit it.\n\n### Running from source\n\nFor local development, or to pin a specific commit:\n\n```bash\ngit clone https://github.com/santhosh-005/bevigil-mcp-server.git\ncd bevigil-mcp-server\nnpm install\nnpm run build\n```\n\nThen point your client at the built entry point instead of `npx`:\n\n```bash\nclaude mcp add bevigil -e BEVIGIL_API_KEY=your_key_here -- node /absolute/path/to/bevigil-mcp-server/build/index.js\n```\n\n**Requirements:** Node.js 20.12+, a BeVigil API key, and an MCP-compatible client.\n\n---\n\n## How it works\n\n```\nMCP Client  →  BeVigil MCP Server  →  osint.bevigil.com\n              · Zod input validation\n              · pagination + truncation\n              · error normalisation\n```\n\nThe server is a thin, well-defended layer: it validates inputs, keeps responses\ninside a sensible context budget, and turns the API's several different ways of\nsaying \"nothing here\" into one consistent, actionable message.\n\n**Design decisions worth knowing about:**\n\n- **Seven task-shaped tools**, not raw endpoint wrappers — each maps to something\n  a researcher actually wants.\n- **Paginated results** with next-offset hints, so large result sets stay reachable\n  without flooding the context window.\n- **Concurrent lookups** in the investigation workflow.\n- **Partial failure handling** — a broken lookup doesn't sink the whole report.\n- **Findings are labelled observed data**, never asserted as vulnerabilities. A\n  bucket name is a lead, not a finding.\n\n---\n\n## Limitations\n\n- **Mobile app data only** — this reflects what's embedded in Android app code, not\n  DNS enumeration or internet-wide scanning. Use it alongside your usual tooling,\n  not instead of it.\n- **Index-only coverage** — only apps BeVigil has scanned. Unindexed apps can be\n  submitted at [bevigil.com/scanApp](https://bevigil.com/scanApp).\n- **No app search** — you need a package ID or domain up front; there's no\n  endpoint to discover apps by name.\n- **Limited app metadata** — reverse hostname lookups return app name and version;\n  otherwise you get security-relevant assets only.\n- **Data freshness** — results reflect BeVigil's most recent scan of each app,\n  which may not be current.\n- **Credit-based** — see [Credits](#credits) above.\n\n---\n\n## Security\n\n- API keys are read from the environment (or a package-root `.env`) — never\n  hardcoded, never logged\n- Error messages never expose credentials, and a test asserts this\n- The server only talks to known BeVigil endpoints — no arbitrary URL fetching\n- Path parameters are URL-encoded, so a crafted package ID can't escape the\n  intended endpoint\n- All tool inputs are validated with Zod schemas\n- Request timeouts prevent hanging connections\n- Page sizes are bounded (max 500) to prevent context overflow\n- A pre-commit hook and a CI job both check that no credential reaches the repo\n\n**Use responsibly.** This tool queries a public OSINT database. What you do with\nthe results is your responsibility — only test systems you're authorised to test.\n\n---\n\n## Development\n\n```bash\nnpm install\nnpm test        # typecheck + full suite\nnpm run lint    # typecheck only\nnpm run build\n```\n\nTests use Node's built-in runner with mocked API responses — no live calls, no\ncredits spent. Coverage spans the API client (auth headers, every HTTP error path,\ntimeouts, malformed and enveloped responses, and a check that errors never leak the\nkey) and all seven tool handlers, including the investigation workflow's\npartial-failure behaviour.\n\nTo enable the pre-commit hook that blocks committing credentials:\n\n```bash\ngit config core.hooksPath .githooks\n```\n\nIt refuses any commit that stages a `.env` file or puts a non-placeholder value in\n`.env.example`, and runs [gitleaks](https://github.com/gitleaks/gitleaks) on staged\nchanges when installed.\n\n<details>\n<summary><b>Project structure</b></summary>\n\n```\n├── src/\n│   ├── index.ts              # MCP server entry point\n│   ├── bevigil-client.ts     # API client (auth, errors, timeouts, envelopes)\n│   ├── types.ts              # Shared types, pagination, output helpers\n│   └── tools/                # One file per MCP tool\n├── tests/\n│   ├── bevigil-client.test.ts\n│   ├── tools.test.ts\n│   └── fixtures/responses.ts\n├── .github/workflows/ci.yml  # Typecheck, build, test, secret scan\n├── .githooks/pre-commit      # Blocks committing credentials\n└── server.json               # MCP Registry metadata\n```\n</details>\n\n---\n\n## Contributing\n\nIssues and PRs welcome — bug reports, new BeVigil endpoints, and client\nconfigurations for MCP hosts not listed above are all useful.\n\n## License\n\nMIT — see [LICENSE](LICENSE).\n\nNot affiliated with or endorsed by CloudSEK. BeVigil is a CloudSEK product; this\nis an independent open-source client for their public OSINT API.\n",
+  "status": "curated"
+}

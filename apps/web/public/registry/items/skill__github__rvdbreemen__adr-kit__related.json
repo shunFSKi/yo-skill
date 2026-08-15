@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/rvdbreemen/adr-kit/related",
+  "type": "skill",
+  "name": "related",
+  "description": "Show inbound and outbound references for one ADR and flag dangling links. Read-only.",
+  "author": "rvdbreemen",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/rvdbreemen/adr-kit/blob/HEAD/codex/skills/related/SKILL.md",
+    "repo": "rvdbreemen/adr-kit",
+    "path": "codex/skills/related/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 4,
+    "pushed_at": "2026-08-11T05:38:30Z",
+    "score": 48,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 4
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

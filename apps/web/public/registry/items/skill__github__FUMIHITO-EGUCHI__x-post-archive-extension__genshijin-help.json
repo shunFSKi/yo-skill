@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/FUMIHITO-EGUCHI/x-post-archive-extension/genshijin-help",
+  "type": "skill",
+  "name": "genshijin-help",
+  "description": "genshijin の使い方を一度だけ表示する参照カード。 モード変更や状態永続化はしない。",
+  "author": "FUMIHITO-EGUCHI",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/FUMIHITO-EGUCHI/x-post-archive-extension/blob/HEAD/.agents/skills/genshijin-help/SKILL.md",
+    "repo": "FUMIHITO-EGUCHI/x-post-archive-extension",
+    "path": ".agents/skills/genshijin-help/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-07T11:12:07Z",
+    "score": 42,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

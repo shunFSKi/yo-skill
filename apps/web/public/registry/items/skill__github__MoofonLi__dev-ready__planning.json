@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/MoofonLi/dev-ready/planning",
+  "type": "skill",
+  "name": "planning",
+  "description": "Cut a dev-ready version into an ordered set of implementation phases and write the version plan (docs/handoff/<version>/<version>-plan.md) that each phase's Spec Loop runs over. Use when starting a new version or breaking a version's FRs into phases - e.g. \"plan v0.4\", \"break v0.4 into phases\".",
+  "author": "MoofonLi",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/MoofonLi/dev-ready/blob/HEAD/.claude/skills/planning/SKILL.md",
+    "repo": "MoofonLi/dev-ready",
+    "path": ".claude/skills/planning/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-14T09:57:54Z",
+    "score": 48
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/Gavin-Qiao/organon/promptus-graph",
+  "type": "skill",
+  "name": "promptus-graph",
+  "description": "Inspect the Promptus knowledge graph. Use to rank load-bearing units, lint dangling links and orphans, or suggest related-but-unlinked notes without embeddings.",
+  "author": "Gavin-Qiao",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Gavin-Qiao/organon/blob/HEAD/promptus/skills/promptus-graph/SKILL.md",
+    "repo": "Gavin-Qiao/organon",
+    "path": "promptus/skills/promptus-graph/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-07-10T16:41:59Z",
+    "score": 43,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

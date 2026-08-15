@@ -21,7 +21,7 @@
   "quality": {
     "stars": null,
     "pushed_at": "2026-08-14T17:49:14.167643Z",
-    "score": 52
+    "score": 42
   },
   "security": {
     "score": 100,
@@ -53,6 +53,6 @@
     "category": null,
     "featured": false
   },
-  "readme": "# aigentify\n\naigentify audits a product directory or live URL for agent-native readiness. It also creates the public artifacts that agents can use.\n\n## Install\n\n```sh\nnpm install aigentify\n```\n\n## Three faces\n\nUse the library in JavaScript or TypeScript:\n\n```ts\nimport { auditTarget, generate } from 'aigentify';\n\nconst report = await auditTarget('.');\nconst instructions = generate('agents-md', {\n  name: 'Example product',\n  description: 'A product with a clear agent interface.',\n  repository: 'https://github.com/example/product',\n});\n```\n\nUse the CLI:\n\n```sh\nnpx aigentify audit .\nnpx aigentify gen agents-md\nnpx aigentify gen server-json --out server.json\n```\n\nUse the MCP server with an MCP client:\n\n```sh\nnpx aigentify-mcp\n```\n\nThe MCP server exposes `audit` with `{ target }` and `gen` with `{ artifact, params }`.\n\n## Commands\n\n- `aigentify audit [target]` checks a directory or URL. The default target is `.`.\n- `aigentify init` writes starter `AGENTS.md` and `server.json` files. Existing files stay unchanged.\n- `aigentify gen <artifact>` prints an artifact or writes it with `--out`.\n- `aigentify mcp` starts the stdio MCP server.\n\nArtifacts are `agents-md`, `server-json`, `offer`, and `agents-route`.\n\n## Configuration\n\nAdd an optional `aigentify.config.ts`, `aigentify.config.js`, or `aigentify.config.mjs` file. Export `defineConfig(...)` data as the default export or as `aigentifyConfig`.\n\n```ts\nimport { defineConfig } from 'aigentify';\n\nexport default defineConfig({\n  name: 'Example product',\n  description: 'A product with a clear agent interface.',\n  repository: 'https://github.com/example/product',\n  npmPackage: 'example-product',\n  offer: { name: 'Access', price: 0, priceCurrency: 'USD' },\n});\n```\n\n## License\n\nMIT\n",
+  "readme": null,
   "status": "curated"
 }

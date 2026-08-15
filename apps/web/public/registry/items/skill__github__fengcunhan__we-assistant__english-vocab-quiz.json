@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/fengcunhan/we-assistant/english-vocab-quiz",
+  "type": "skill",
+  "name": "english-vocab-quiz",
+  "description": "英语单词学习与测验技能。随机发送英语单词，用户回答中文含义，支持记忆曲线复习、错题本、正确单词记录。每天不超过10个单词。",
+  "author": "fengcunhan",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/fengcunhan/we-assistant/blob/HEAD/vps/src/skills/english-vocab-quiz/SKILL.md",
+    "repo": "fengcunhan/we-assistant",
+    "path": "vps/src/skills/english-vocab-quiz/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-08-02T09:06:40Z",
+    "score": 46,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 2
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

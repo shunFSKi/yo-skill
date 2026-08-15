@@ -2,12 +2,12 @@
   "id": "mcp:official/com.coinbucha/bitcoin-signals",
   "type": "mcp",
   "name": "bitcoin-signals",
-  "description": "Signal-first Bitcoin intelligence: sovereign, hiring & hashrate signals over MCP.",
+  "description": "Leading non-price Bitcoin signals over MCP: sovereign, hiring, hashrate. Not financial advice.",
   "author": "com.coinbucha",
   "source": {
     "registry": "mcp-official",
-    "url": "https://coinbucha.com/api/mcp",
-    "repo": null
+    "url": "https://github.com/jukkablomberg/coinbucha-mcp",
+    "repo": "jukkablomberg/coinbucha-mcp"
   },
   "license": null,
   "install": {
@@ -16,8 +16,8 @@
   },
   "quality": {
     "stars": null,
-    "pushed_at": "2026-06-10T07:50:57.246152Z",
-    "score": 37
+    "pushed_at": "2026-08-15T07:36:12.378779Z",
+    "score": 52
   },
   "security": {
     "score": 100,
@@ -49,6 +49,6 @@
     "category": null,
     "featured": false
   },
-  "readme": null,
+  "readme": "# CoinBucha MCP — Bitcoin signal intelligence for AI agents\n\n> **Signal-first Bitcoin intelligence over MCP.** Leading, *non-price* indicators —\n> sovereign adoption, hiring velocity, network hashrate, ETF flows, corporate treasuries —\n> each as a 0–100 strength, a direction, a one-line `why`, and primary sources.\n>\n> **Information, not financial advice.** No tool returns a buy/sell/hold recommendation.\n\nThis is the public MCP interface for **[CoinBucha](https://coinbucha.com)**. The hosted server\nreads the same live signal data the dashboard renders, so the machine face and the human face\nnever diverge.\n\n## Connect (hosted — recommended, no install)\n\nThe server is remote and speaks **Streamable HTTP**. Point any MCP client at:\n\n```\nhttps://coinbucha.com/api/mcp\n```\n\n**Claude Desktop / Claude Code** — add a custom connector with that URL, or in\n`claude_desktop_config.json`:\n\n```json\n{\n  \"mcpServers\": {\n    \"coinbucha\": {\n      \"type\": \"streamable-http\",\n      \"url\": \"https://coinbucha.com/api/mcp\"\n    }\n  }\n}\n```\n\n**Cursor / other clients** — add an MCP server with transport `streamable-http` and the URL above.\n\nFree tier is open (IP rate-limited). Higher limits are available with an API key via the\n`Authorization: Bearer <key>` header — see [coinbucha.com](https://coinbucha.com).\n\n## Connect (local stdio — offline/dev)\n\nThe bundled `server.py` exposes the same tools and fetches the live public snapshots from\n`coinbucha.com`, so it needs no local data pipeline.\n\n```bash\npip install -r requirements.txt\npython3 server.py            # stdio transport\n# inspect: uv run mcp dev server.py\n```\n\n```json\n{\n  \"mcpServers\": {\n    \"coinbucha\": { \"command\": \"python3\", \"args\": [\"server.py\"] }\n  }\n}\n```\n\n## Tools\n\n| Tool | Returns |\n|------|---------|\n| `scan_signals` | Ranked composite signal feed (filter by `min_strength`, `direction`, `signal_types`) — the money tool |\n| `get_hiring_signal` | Bitcoin/crypto-infra hiring velocity: open roles + 30/90-day deltas from live ATS boards |\n| `get_sovereign_reserves` | Sovereign Bitcoin holdings, ranked (filter by `country` or `tier`) |\n| `get_treasury_holdings` | Corporate Bitcoin treasury holdings: total BTC held by public companies + top holders |\n| `get_etf_flows` | Spot Bitcoin ETF net flows (latest day + trailing 5/30-day) |\n| `get_network_signal` | Bitcoin network hashrate level + 30/90-day trend |\n| `get_daily_brew` | Today's machine-readable signal digest (the CoinBucha Daily Brew) |\n\n**Resource** `coinbucha://methodology` — how every signal is computed (see [`docs/methodology.md`](./docs/methodology.md)).\n**Prompt** `morning_bitcoin_brief` — one-shot template to render the Daily Brew from live signals.\n\nEvery response carries an `as_of` timestamp, a `why`, and a `disclaimer`.\n\n## Example\n\nCall `scan_signals` with `{ \"min_strength\": 60, \"direction\": \"tailwind\" }` → the strongest\nstructural tailwinds right now, ranked, each with its rationale and sources. Or run the\n`morning_bitcoin_brief` prompt for a written digest.\n\n## Methodology & guardrail\n\nSignals are **leading, non-price** indicators rendered as `signal_strength` (0–100), a\n`direction`, and a `why`. The full, versioned methodology is public — see\n[`docs/methodology.md`](./docs/methodology.md) — because an auditable method is the point.\n\nCoinBucha's public and MCP surfaces are self-audited against MiCA / FCA / GDPR. **No surface\npresents a signal as advice.**\n\n## Links\n\n- Dashboard: <https://coinbucha.com>\n- MCP endpoint: <https://coinbucha.com/api/mcp>\n- Discovery manifest: <https://coinbucha.com/.well-known/mcp.json>\n\n## License\n\nMIT — see [`LICENSE`](./LICENSE). This repository is the public MCP interface and\nmethodology; the signal-collection pipeline is maintained separately.\n",
   "status": "curated"
 }

@@ -27,7 +27,7 @@
   "quality": {
     "stars": null,
     "pushed_at": "2026-08-14T20:00:17.169326Z",
-    "score": 52
+    "score": 42
   },
   "security": {
     "score": 100,
@@ -59,6 +59,6 @@
     "category": "设计",
     "featured": false
   },
-  "readme": "# clipmaster-mcp\n\nmcp-name: io.github.n0Sp00n/clipmaster-mcp\n\nMCP (Model Context Protocol) server for [ClipMaster](https://clipmaster.app) —\nAI video clipping at [clipmaster.app](https://clipmaster.app). It exposes the\nClipMaster public API as tools, so Claude Desktop, Claude Code, and any MCP client can ingest videos,\nmonitor processing, browse clips, trigger exports, and schedule posts.\n\n- Talks ONLY to the public REST API (`https://api.clipmaster.app/api/v1`) with\n  the user's API key — no database access, no internal services.\n- Ingestion is URL-only by design (streaming a local file through an LLM tool\n  call is impractical). Account management (keys, billing, OAuth connects) is\n  excluded; the API rejects those routes for key auth anyway.\n\n## Requirements\n\n- Python 3.10+\n- A ClipMaster API key (paid plans): web app → Settings → API access\n\n## Install\n\nFrom this repo checkout:\n\n```bash\npipx install ./clipmaster-mcp\n# or, without installing:\nuvx --from ./clipmaster-mcp clipmaster-mcp\n```\n\n## Configure\n\n| Env var | Required | Meaning |\n|---|---|---|\n| `CLIPMASTER_API_KEY` | yes* | Your `cm_live_…` API key |\n| `CLIPMASTER_API_BASE` | no | Override the API base URL (default `https://api.clipmaster.app/api/v1`) |\n\n*Instead of the env var you can put the key in `~/.config/clipmaster/key` —\nthis keeps it out of client config files and shell history:\n\n```bash\nmkdir -p ~/.config/clipmaster && printf '%s' 'cm_live_...' > ~/.config/clipmaster/key && chmod 600 ~/.config/clipmaster/key\n```\n\nThe env var wins when both are set.\n\n### Claude Code\n\n```bash\nclaude mcp add clipmaster -e CLIPMASTER_API_KEY=cm_live_... -- clipmaster-mcp\n```\n\n### Claude Desktop\n\n`claude_desktop_config.json`:\n\n```json\n{\n  \"mcpServers\": {\n    \"clipmaster\": {\n      \"command\": \"clipmaster-mcp\",\n      \"env\": { \"CLIPMASTER_API_KEY\": \"cm_live_...\" }\n    }\n  }\n}\n```\n\n## Tools\n\n| Tool | What it does |\n|---|---|\n| `ingest_youtube(url, orientation?, user_query?, compilation_format?)` | Import a YouTube video, start clip generation |\n| `get_status(project_id)` | Processing progress / state |\n| `list_projects()` | The user's projects |\n| `list_clips(project_id)` | Generated clips with AI metadata |\n| `get_clip(project_id, clip_id)` | Full detail for one clip |\n| `trigger_export(project_id, clip_id)` | Render a clip with its saved settings (charges tokens) |\n| `get_export_status(export_id)` | Poll an export; completed → temporary `download_url` |\n| `list_compilations(source_project_id?)` / `get_compilation(id)` | Cross-project clip collections |\n| `list_social_accounts()` | Connected channels for scheduling |\n| `schedule_post(...)` | Schedule an export to publish (idempotent on retry) |\n| `list_scheduled_posts(from_date, to_date)` | Posting calendar range |\n\n## Development\n\n```bash\npython3 -m venv .venv && .venv/bin/pip install -e ./clipmaster-mcp pytest\n.venv/bin/pytest clipmaster-mcp/tests -q\n```\n",
+  "readme": null,
   "status": "curated"
 }

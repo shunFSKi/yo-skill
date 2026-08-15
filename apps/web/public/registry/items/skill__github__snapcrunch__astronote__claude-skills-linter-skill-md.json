@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/snapcrunch/astronote/claude-skills-linter-skill-md",
+  "type": "skill",
+  "name": "claude-skills-linter-skill-md",
+  "description": "When linting code, checking for bugs / errors, creating new code, or modifying existing code",
+  "author": "snapcrunch",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/snapcrunch/astronote/blob/HEAD/.claude/skills/linter/SKILL.md",
+    "repo": "snapcrunch/astronote",
+    "path": ".claude/skills/linter/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

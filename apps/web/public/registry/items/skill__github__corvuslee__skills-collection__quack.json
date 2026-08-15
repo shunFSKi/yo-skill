@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/corvuslee/skills-collection/quack",
+  "type": "skill",
+  "name": "quack",
+  "description": "CLI interface to search the web using DuckDuckGo and fetch webpages. Use when user asks to search the web or get info from a URL.",
+  "author": "corvuslee",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/corvuslee/skills-collection/blob/HEAD/quack/SKILL.md",
+    "repo": "corvuslee/skills-collection",
+    "path": "quack/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-06-29T17:06:53Z",
+    "score": 43,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

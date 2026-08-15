@@ -17,7 +17,7 @@
   "quality": {
     "stars": 60,
     "pushed_at": "2026-08-11T05:57:45Z",
-    "score": 71
+    "score": 61
   },
   "security": {
     "score": 100,
@@ -49,6 +49,6 @@
     "category": null,
     "featured": false
   },
-  "readme": "# CyberOS\n\nCyberSkill's AI-native internal operations platform. 26 federated modules, 244 agent Skills, 224 CUO workflows, 48 C-roles, 606 tasks.\n\n## Documentation\n\n**All documentation lives on the [docs site](https://os.cyberskill.world/docs/).**\n\n| Page | What's there |\n|---|---|\n| [Getting Started](https://os.cyberskill.world/docs/reference/getting-started.html) | Repo layout, quick start, versioning, install, deploy runbook |\n| [Modules](https://os.cyberskill.world/docs/) | Per-module pages (26 modules) with appendices, changelogs, deep-dives |\n| [task Catalog](https://os.cyberskill.world/docs/reference/task-catalog.html) | 579 Tasks across 29 domains |\n| [NFR Catalog](https://os.cyberskill.world/docs/reference/nfr-catalog.html) | ~157 Non-Functional Requirements across 10 categories |\n| [Changelog](https://os.cyberskill.world/docs/reference/changelog.html) | All significant changes across modules and services |\n| [Strategy](https://os.cyberskill.world/docs/architecture/strategy.html) | Ecosystem landscape, competitive analysis, EaaS roadmap |\n| [Roadmap](https://os.cyberskill.world/docs/architecture/milestones.html) | P0 -> P4 phased milestones |\n\n## Repository layout\n\n```\ncyberos/\n├── modules/          <- federated modules (cuo, skill, memory, ...), each owning its docs/\n├── services/         <- Rust production binaries (auth, chat, memory, ai-gateway, ...), each owning its docs/\n├── apps/             <- the one client (web) + thin desktop/console wrappers\n├── docs/             <- global docs sources: task/NFR specs, architecture, deploy runbooks\n├── tools/            <- install (the distributable payload) + docs-site (website generator)\n├── scripts/          <- gates, local_verify.sh (CI-equivalent), release.sh\n├── deploy/           <- VPS compose + Caddyfile\n├── dist/             <- build outputs (payload, website); gitignored, never committed\n├── AGENTS.md         <- Layer-1 memory protocol spec (normative)\n├── CLAUDE.md         <- loads AGENTS.md as project instructions\n└── VERSION           <- the single platform version\n```\n\nThe website is generated (`bash tools/docs-site/build.sh` -> `dist/website`); there is no hand-authored HTML in the repo. Consumer repos install CyberOS from the payload (`bash tools/install/build.sh`, then `dist/cyberos/install.sh <repo>`) - see the day-one guide on the docs site (cuo module -> Guides).\n\n## Quick start\n\n```bash\n# Memory module\ncd modules/memory && pip install -e .\ncyberos --store ../../.cyberos/memory/store doctor    # → READY\n\n# CUO module\ncd ../cuo && pip install -e .\ncyberos-cuo list-personas                        # → 47 active personas\n```\n\n## Versioning\n\n```bash\nscripts/release.sh minor    # bumps VERSION, propagates to all pyproject.toml + __init__.py\n```\n\n## License\n\nMIT\n\n## Maintainer\n\nCyberSkill Software Solutions Consultancy and Development JSC (DUNS 673219568), Ho Chi Minh City, Vietnam. Founder: Stephen Cheng (Trịnh Thái Anh) · [info@cyberskill.world](mailto:info@cyberskill.world)\n",
+  "readme": null,
   "status": "curated"
 }

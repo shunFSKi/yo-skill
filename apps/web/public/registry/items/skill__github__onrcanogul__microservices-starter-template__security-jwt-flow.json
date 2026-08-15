@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/onrcanogul/microservices-starter-template/security-jwt-flow",
+  "type": "skill",
+  "name": "security-jwt-flow",
+  "description": "Use when configuring JWT security, adding public paths, modifying token validation, debugging authentication errors, or understanding the two-layer security architecture (gateway reactive filter vs service servlet filter). Covers SecurityProperties validation, JwtService, SecurityFilterChain, AuthenticatedUser, and the X-User-Id header propagation pattern.",
+  "author": "onrcanogul",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/onrcanogul/microservices-starter-template/blob/HEAD/.github/skills/security-jwt-flow/SKILL.md",
+    "repo": "onrcanogul/microservices-starter-template",
+    "path": ".github/skills/security-jwt-flow/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-06-20T22:26:01Z",
+    "score": 43,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

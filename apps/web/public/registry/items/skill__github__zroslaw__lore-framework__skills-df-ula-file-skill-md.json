@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/zroslaw/lore-framework/skills-df-ula-file-skill-md",
+  "type": "skill",
+  "name": "skills-df-ula-file-skill-md",
+  "description": "BETA — Run a ULA (unit-level analysis) single-file pass: split a file into units, then per unit find potential bugs, generate clean-room test scenarios, and gap-analyse against existing tests. Persists per-file artifacts into <repo>-df. Usage: /lr:df-ula-file <file>",
+  "author": "zroslaw",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/zroslaw/lore-framework/blob/HEAD/skills/df-ula-file/SKILL.md",
+    "repo": "zroslaw/lore-framework",
+    "path": "skills/df-ula-file/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-12T05:37:40Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

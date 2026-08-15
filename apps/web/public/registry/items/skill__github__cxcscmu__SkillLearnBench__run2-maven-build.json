@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/cxcscmu/SkillLearnBench/run2-maven-build",
+  "type": "skill",
+  "name": "run2_maven-build",
+  "description": "Improved skill for building Apache Druid with Maven, focusing on skipping non-essential tasks efficiently.",
+  "author": "cxcscmu",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/cxcscmu/SkillLearnBench/blob/HEAD/skills/b2-self-feedback-gemini-3.1-flash-lite-preview/fix-security-bug/run2_maven-build/SKILL.md",
+    "repo": "cxcscmu/SkillLearnBench",
+    "path": "skills/b2-self-feedback-gemini-3.1-flash-lite-preview/fix-security-bug/run2_maven-build/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 77,
+    "pushed_at": "2026-07-09T20:57:02Z",
+    "score": 57
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

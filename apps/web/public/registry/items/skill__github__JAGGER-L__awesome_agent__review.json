@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/JAGGER-L/awesome_agent/review",
+  "type": "skill",
+  "name": "review",
+  "description": "Review code for correctness, risk, and maintainability",
+  "author": "JAGGER-L",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/JAGGER-L/awesome_agent/blob/HEAD/src/awesome_agent/extensions/skills/bundled/review/SKILL.md",
+    "repo": "JAGGER-L/awesome_agent",
+    "path": "src/awesome_agent/extensions/skills/bundled/review/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 5,
+    "pushed_at": "2026-08-11T19:48:21Z",
+    "score": 49,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 5
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

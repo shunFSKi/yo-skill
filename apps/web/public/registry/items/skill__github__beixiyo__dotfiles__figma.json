@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/beixiyo/dotfiles/figma",
+  "type": "skill",
+  "name": "figma",
+  "description": "仅当用户提供 Figma 链接、Figma MCP 数据，或明确要求“按 Figma 设计稿实现/还原”时使用。不处理普通 UI 实现",
+  "author": "beixiyo",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/beixiyo/dotfiles/blob/HEAD/.claude/skills/figma/SKILL.md",
+    "repo": "beixiyo/dotfiles",
+    "path": ".claude/skills/figma/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 5,
+    "pushed_at": "2026-08-14T14:54:00Z",
+    "score": 49,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 5
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

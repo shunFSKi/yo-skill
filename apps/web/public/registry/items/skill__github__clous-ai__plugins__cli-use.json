@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/clous-ai/plugins/cli-use",
+  "type": "skill",
+  "name": "cli-use",
+  "description": "Use when an AI agent should use the Clous CLI to inspect objects, run agents, retrieve knowledge, or manage webhooks in noninteractive JSON workflows.",
+  "author": "clous-ai",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/clous-ai/plugins/blob/HEAD/clous-use/skills/cli-use/SKILL.md",
+    "repo": "clous-ai/plugins",
+    "path": "clous-use/skills/cli-use/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-05-10T15:53:38Z",
+    "score": 35,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

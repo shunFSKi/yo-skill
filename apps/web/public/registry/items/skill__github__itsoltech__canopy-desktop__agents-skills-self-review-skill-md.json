@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/itsoltech/canopy-desktop/agents-skills-self-review-skill-md",
+  "type": "skill",
+  "name": "agents-skills-self-review-skill-md",
+  "description": "Code review current changes using project review standards before creating a PR",
+  "author": "itsoltech",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/itsoltech/canopy-desktop/blob/HEAD/.agents/skills/self-review/SKILL.md",
+    "repo": "itsoltech/canopy-desktop",
+    "path": ".agents/skills/self-review/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 19,
+    "pushed_at": "2026-08-15T06:38:00Z",
+    "score": 54,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 19
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

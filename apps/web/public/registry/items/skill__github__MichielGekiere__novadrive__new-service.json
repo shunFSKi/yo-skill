@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/MichielGekiere/novadrive/new-service",
+  "type": "skill",
+  "name": "new-service",
+  "description": "Generates a C# file where the interface is defined before the class.",
+  "author": "MichielGekiere",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/MichielGekiere/novadrive/blob/HEAD/.github/skills/new-service/SKILL.md",
+    "repo": "MichielGekiere/novadrive",
+    "path": ".github/skills/new-service/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-03T19:21:36Z",
+    "score": 37
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

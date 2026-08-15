@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/mk-testrun/PersonalAgentPlugin/responsive-view",
+  "type": "skill",
+  "name": "responsive-view",
+  "description": "Nutze für die visuelle Responsiveness-Prüfung einer lokalen Webanwendung (nur localhost:*) mit Playwright: prüft Breakpoints Desktop 1440 / Tablet 768 / Mobile 375, erkennt Überlauf/abgeschnittene Elemente und liefert Screenshots + findings[] je Breakpoint.",
+  "author": "mk-testrun",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/mk-testrun/PersonalAgentPlugin/blob/HEAD/marketplaces/work/plugins/testing/skills/responsive-view/SKILL.md",
+    "repo": "mk-testrun/PersonalAgentPlugin",
+    "path": "marketplaces/work/plugins/testing/skills/responsive-view/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-11T16:13:27Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

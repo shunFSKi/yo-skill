@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/aviz85/claude-skills-library/live-transcribe-stop",
+  "type": "skill",
+  "name": "live-transcribe-stop",
+  "description": "Stop a running real-time transcription. Use when user wants to stop/end live transcription. Triggers on: 'עצור תמלול', 'תעצור את התמלול', 'stop transcribing', 'end transcription', 'תפסיק להקליט'.",
+  "author": "aviz85",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/aviz85/claude-skills-library/blob/HEAD/plugins/live-transcribe/skills/live-transcribe-stop/SKILL.md",
+    "repo": "aviz85/claude-skills-library",
+    "path": "plugins/live-transcribe/skills/live-transcribe-stop/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 45,
+    "pushed_at": "2026-07-08T06:59:01Z",
+    "score": 55,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 45
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

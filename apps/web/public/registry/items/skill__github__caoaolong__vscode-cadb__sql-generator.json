@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/caoaolong/vscode-cadb/sql-generator",
+  "type": "skill",
+  "name": "sql-generator",
+  "description": "Use this skill to generate SQL queries from user intent and schema.",
+  "author": "caoaolong",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/caoaolong/vscode-cadb/blob/HEAD/resources/ai-skills/sql/sql-generator/SKILL.md",
+    "repo": "caoaolong/vscode-cadb",
+    "path": "resources/ai-skills/sql/sql-generator/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-06-03T10:40:24Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

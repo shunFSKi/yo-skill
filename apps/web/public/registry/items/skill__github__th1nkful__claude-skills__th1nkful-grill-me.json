@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/th1nkful/claude-skills/th1nkful-grill-me",
+  "type": "skill",
+  "name": "th1nkful:grill-me",
+  "description": "Interview the user relentlessly about a plan or design until reaching shared understanding, resolving each branch of the decision tree. Use when user wants to stress-test a plan, get grilled on their design, or mentions \"grill me\".",
+  "author": "th1nkful",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/th1nkful/claude-skills/blob/HEAD/skills/grill-me/SKILL.md",
+    "repo": "th1nkful/claude-skills",
+    "path": "skills/grill-me/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

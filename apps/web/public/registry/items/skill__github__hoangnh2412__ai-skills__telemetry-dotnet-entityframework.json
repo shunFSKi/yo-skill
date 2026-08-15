@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/hoangnh2412/ai-skills/telemetry-dotnet-entityframework",
+  "type": "skill",
+  "name": "telemetry-dotnet-entityframework",
+  "description": "Bật EF Core trace qua OpenTelemetry.Instrumentation.EntityFrameworkCore trong ConfigureTrace. Dùng khi cần span truy vấn DbContext trên pipeline trace.",
+  "author": "hoangnh2412",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/hoangnh2412/ai-skills/blob/HEAD/jarvis/skills/telemetry-dotnet/providers/entityframework/SKILL.md",
+    "repo": "hoangnh2412/ai-skills",
+    "path": "jarvis/skills/telemetry-dotnet/providers/entityframework/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 5,
+    "pushed_at": "2026-08-07T14:43:42Z",
+    "score": 52,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 5
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

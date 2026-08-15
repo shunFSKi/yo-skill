@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/jayterry/Dual-agent/open-app",
+  "type": "skill",
+  "name": "open_app",
+  "description": "在 Windows 啟動本機程式（例如 Chrome/Edge/記事本），支援用別名或直接給 exe 路徑。當使用者要求「打開某個程式」時使用。",
+  "author": "jayterry",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/jayterry/Dual-agent/blob/HEAD/dual_agent/cai/skills/open_app/SKILL.md",
+    "repo": "jayterry/Dual-agent",
+    "path": "dual_agent/cai/skills/open_app/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-12T08:52:34Z",
+    "score": 42,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

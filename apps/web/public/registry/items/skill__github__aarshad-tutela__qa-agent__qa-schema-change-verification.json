@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/aarshad-tutela/qa-agent/qa-schema-change-verification",
+  "type": "skill",
+  "name": "qa-schema-change-verification",
+  "description": "Verify ONXD and OneSource schema, table, view, and downstream column changes with post-activation freshness evidence.",
+  "author": "aarshad-tutela",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/aarshad-tutela/qa-agent/blob/HEAD/skills/domains/onxd/qa-schema-change-verification/SKILL.md",
+    "repo": "aarshad-tutela/qa-agent",
+    "path": "skills/domains/onxd/qa-schema-change-verification/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-25T15:30:19Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

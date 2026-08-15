@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/sithiro/ScriptMCP/task-start",
+  "type": "skill",
+  "name": "task-start",
+  "description": "This skill should be used when the user asks to start a scheduled task, enable a scheduled task, resume a task, or wants to start a ScriptMCP scheduled task.",
+  "author": "sithiro",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/sithiro/ScriptMCP/blob/HEAD/ScriptMCP.Plugin/skills/task-start/SKILL.md",
+    "repo": "sithiro/ScriptMCP",
+    "path": "ScriptMCP.Plugin/skills/task-start/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-05-14T10:39:56Z",
+    "score": 38,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

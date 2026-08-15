@@ -17,7 +17,7 @@
   "quality": {
     "stars": 70,
     "pushed_at": "2026-07-13T11:36:12Z",
-    "score": 64
+    "score": 54
   },
   "security": {
     "score": 100,
@@ -49,6 +49,6 @@
     "category": "设计",
     "featured": false
   },
-  "readme": "# Agent Scripts\n\nA public collection of reusable agent workflows and prompts.\n\nTo install a skill, point your agent to the skill you want and ask it to install it.\n\n## Skills\n\n- `/agent-browser` — automate browser, website, and Electron app workflows with the agent-browser CLI.\n- `/autoreview` — run structured Codex or Claude code reviews before commit or ship.\n- `/brainstorm` — generate and explore ideas before choosing a direction.\n- `/create-cli` — design command-line interfaces, flags, help, output, errors, config, and dry-run behavior.\n- `/frontend-design` — build distinctive, polished frontend UI instead of generic layouts.\n- `/grill-me` — interview the user relentlessly to stress-test a plan, design, or approach.\n\nEach one lives in `skills/<name>/SKILL.md`.\n\nSkills are reusable workflows. Matt Pocock's convention is: user-invoked skills set `disable-model-invocation: true`; model-invoked skills omit that field and keep a model-facing `description`.\n\n## Prompts\n\n- `prompts/security-audit.md` — phased, report-only security audit prompt.\n\nPrompts are manual, explicit-use instructions. They live outside `skills/` so agents do not invoke every workflow by themselves.\n\nCodex CLI does not currently use `disable-model-invocation` to control skill invocation. For Codex, implicit skill use is controlled by `agents/openai.yaml` with `policy.allow_implicit_invocation`; keep Codex-only manual workflows in `prompts/`.\n\n## Acknowledgements\n\nThis collection builds on ideas from Matt Pocock and Brian Madison’s agent workflow methodology. I love their work.\n\n- `/autoreview` and `/create-cli` are from Peter Steinberger’s `agent-scripts` repo.\n- `/frontend-design` is from Anthropic.\n- `/grill-me` is from Matt Pocock’s `skills` repo.\n- `/brainstorm` is an adaptation of the BMAD brainstorm skill.\n",
+  "readme": null,
   "status": "curated"
 }

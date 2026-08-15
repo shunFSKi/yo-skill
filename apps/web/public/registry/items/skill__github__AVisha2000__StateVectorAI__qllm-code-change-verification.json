@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/AVisha2000/StateVectorAI/qllm-code-change-verification",
+  "type": "skill",
+  "name": "qllm-code-change-verification",
+  "description": "Select and run the smallest sufficient deterministic checks for QLLM code, dashboard, benchmark, configuration, documentation, or agent-workflow changes. Use after implementation and before reporting a change complete; do not use for read-only answers.",
+  "author": "AVisha2000",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/AVisha2000/StateVectorAI/blob/HEAD/.claude/skills/qllm-code-change-verification/SKILL.md",
+    "repo": "AVisha2000/StateVectorAI",
+    "path": ".claude/skills/qllm-code-change-verification/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-03T05:18:20Z",
+    "score": 48,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/jgador/roslynkit/commit-context",
+  "type": "skill",
+  "name": "commit-context",
+  "description": "Refresh the ignored commit context file from the current git change set. Use as an end-of-session maintenance step, before `$git-commit-push`, or when the user asks to summarize current changes for faster commit preparation.",
+  "author": "jgador",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/jgador/roslynkit/blob/HEAD/.claude/skills/commit-context/SKILL.md",
+    "repo": "jgador/roslynkit",
+    "path": ".claude/skills/commit-context/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 3,
+    "pushed_at": "2026-08-13T18:55:56Z",
+    "score": 50,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 3
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

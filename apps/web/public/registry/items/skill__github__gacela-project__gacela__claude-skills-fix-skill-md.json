@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/gacela-project/gacela/claude-skills-fix-skill-md",
+  "type": "skill",
+  "name": "claude-skills-fix-skill-md",
+  "description": "Auto-fix all code quality issues with rector, cs-fixer, and phpstan",
+  "author": "gacela-project",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/gacela-project/gacela/blob/HEAD/.claude/skills/fix/SKILL.md",
+    "repo": "gacela-project/gacela",
+    "path": ".claude/skills/fix/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 134,
+    "pushed_at": "2026-08-15T09:25:09Z",
+    "score": 71,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 134
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "<p align=\"center\">\n    <picture>\n      <source media=\"(prefers-color-scheme: dark)\" srcset=\"gacela-logo-dark.svg\">\n      <img alt=\"Gacela logo\" src=\"gacela-logo.svg\" width=\"400\">\n    </picture>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://github.com/gacela-project/gacela/actions/workflows/tests.yml\">\n    <img src=\"https://github.com/gacela-project/gacela/actions/workflows/tests.yml/badge.svg\" alt=\"GitHub Build Status\">\n  </a> <a href=\"https://packagist.org/packages/gacela-project/gacela\">\n    <img src=\"https://img.shields.io/packagist/dt/gacela-project/gacela\" alt=\"Packagist Downloads\">\n  </a> <a href=\"https://shepherd.dev/github/gacela-project/gacela\">\n    <img src=\"https://shepherd.dev/github/gacela-project/gacela/coverage.svg\" alt=\"Psalm Type-coverage Status\">\n  </a> <a href=\"https://dashboard.stryker-mutator.io/reports/github.com/gacela-project/gacela/main\">\n    <img src=\"https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fgacela-project%2Fgacela%2Fmain\" alt=\"Mutation testing badge\">\n  </a> <a href=\"https://github.com/gacela-project/gacela/blob/main/LICENSE\">\n    <img src=\"https://img.shields.io/badge/License-MIT-green.svg\" alt=\"MIT Software License\">\n  </a>\n</p>\n\n## Gacela — build modular PHP applications\n\nGacela normalizes module boundaries so parts of your application communicate through a single entry point, without leaking internals.\n\nEach module is built from four pillars — only the first two are required:\n\n- [**Facade**](https://gacela-project.com/docs/facade/) — public API, the only way in\n- [**Factory**](https://gacela-project.com/docs/factory/) — creates internal services\n- [**Provider**](https://gacela-project.com/docs/provider/) — wires external dependencies *(optional)*\n- [**Config**](https://gacela-project.com/docs/config/) — reads project config *(optional)*\n\n## Installation\n\n```bash\ncomposer require gacela-project/gacela\n```\n\nRequires PHP 8.3+. Coming from 1.x? See [UPGRADE.md](UPGRADE.md).\n\n## Module structure\n\n```\napp/\n├── gacela.php\n├── config/\n└── src/\n    └── Blog/\n        ├── BlogFacade.php\n        ├── BlogFactory.php\n        ├── BlogProvider.php\n        └── BlogConfig.php\n```\n\nThat is what `make:module App/Blog` below writes. Pass `--short-name` for `Facade.php` instead of `BlogFacade.php` — both resolve; the prefix is the default because it survives being read out of context.\n\n## CLI\n\n```bash\nvendor/bin/gacela init                  # scaffold gacela.php\nvendor/bin/gacela make:module App/Blog  # scaffold a module\nvendor/bin/gacela                       # every command\n```\n\nModules can be inspected, validated and prepared for production — see [CLI commands](docs/cli.md).\n\n## Documentation\n\nStart with [getting started](docs/getting-started.md), then [getting a dependency](docs/getting-a-dependency.md) — the one that answers \"how do I reach *that* from *here*\". [`docs/`](docs/README.md) is the full index; the rest:\n\n- [Upgrading from 1.x](UPGRADE.md)\n- [CLI commands](docs/cli.md)\n- [Container configuration](docs/container-configuration.md) — bindings, contextual bindings, attributes, hooks\n- [Caching](docs/caching.md) and [cacheable methods](docs/cacheable-methods.md)\n- [Static analysis (PHPStan / Psalm)](docs/static-analysis.md)\n- [Module health checks](docs/module-health-checks.md)\n- [Events](docs/events.md)\n- [Testing](docs/testing.md)\n- [Opcache preload](docs/opcache-preload.md) and [production performance](docs/production-performance.md)\n- Full reference: [gacela-project.com](https://gacela-project.com/)\n- [Symfony bundle](symfony-bridge/README.md) — bootstrap Gacela from the kernel, reach Symfony services, `bin/console gacela:*`\n- [Laravel provider](laravel-bridge/README.md) — bootstrap Gacela when the app boots, reach Laravel services, `artisan gacela:*`\n- Examples:\n  - [gacela-example](https://github.com/gacela-project/gacela-example)\n  - [symfony-gacela-example](https://github.com/gacela-project/symfony-gacela-example) — Gacela with Symfony 7.4\n  - [laravel-gacela-example](https://github.com/gacela-project/laravel-gacela-example) — Gacela with Laravel 12\n\n## Contributing\n\nReport [issues](https://github.com/gacela-project/gacela/issues), share [ideas](https://github.com/gacela-project/gacela/discussions), or open a [pull request](.github/CONTRIBUTING.md).\n\n---\n\n> Inspired by [Spryker](https://github.com/spryker).\n",
+  "status": "curated"
+}

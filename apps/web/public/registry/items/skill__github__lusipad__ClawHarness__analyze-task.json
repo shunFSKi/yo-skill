@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/lusipad/ClawHarness/analyze-task",
+  "type": "skill",
+  "name": "analyze-task",
+  "description": "分析归一化后的 Azure DevOps 任务，并为 harness flow 生成结构化执行计划。",
+  "author": "lusipad",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/lusipad/ClawHarness/blob/HEAD/openclaw-plugin/skills/analyze-task/SKILL.md",
+    "repo": "lusipad/ClawHarness",
+    "path": "openclaw-plugin/skills/analyze-task/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-04-10T15:06:53Z",
+    "score": 32,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

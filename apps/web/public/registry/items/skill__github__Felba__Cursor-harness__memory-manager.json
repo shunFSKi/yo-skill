@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Felba/Cursor-harness/memory-manager",
+  "type": "skill",
+  "name": "memory-manager",
+  "description": "Reflect on recent activity and update semantic memory. Use when the user says \"reflect\", \"what did I learn\", \"update memory\", or \"compress memory\", and after major tasks or notable failures. Reads episodic log, identifies recurring patterns, proposes additions to LESSONS.md.",
+  "author": "Felba",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Felba/Cursor-harness/blob/HEAD/.claude/skills/memory-manager/SKILL.md",
+    "repo": "Felba/Cursor-harness",
+    "path": ".claude/skills/memory-manager/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-05-21T19:04:16Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

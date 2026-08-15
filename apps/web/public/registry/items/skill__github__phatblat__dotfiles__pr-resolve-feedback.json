@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/phatblat/dotfiles/pr-resolve-feedback",
+  "type": "skill",
+  "name": "pr-resolve-feedback",
+  "description": "Address GitHub PR review comments by fetching, evaluating, fixing, committing, and resolving feedback. Use when invoked as `$pr-resolve-feedback` or when the user asks to resolve PR feedback.",
+  "author": "phatblat",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/phatblat/dotfiles/blob/HEAD/.agents/skills/pr-resolve-feedback/SKILL.md",
+    "repo": "phatblat/dotfiles",
+    "path": ".agents/skills/pr-resolve-feedback/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 12,
+    "pushed_at": "2026-08-15T13:07:15Z",
+    "score": 55,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 12
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

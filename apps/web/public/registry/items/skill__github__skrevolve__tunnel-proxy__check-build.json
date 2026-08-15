@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/skrevolve/tunnel-proxy/check-build",
+  "type": "skill",
+  "name": "check-build",
+  "description": "tunnel-proxy 프로젝트를 Debug 모드로 빌드해 컴파일 에러를 확인한다. ctest는 실행하지 않는다 — CI가 대신한다.",
+  "author": "skrevolve",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/skrevolve/tunnel-proxy/blob/HEAD/.claude/skills/check-build/SKILL.md",
+    "repo": "skrevolve/tunnel-proxy",
+    "path": ".claude/skills/check-build/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

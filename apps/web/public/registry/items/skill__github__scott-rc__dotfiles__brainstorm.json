@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/scott-rc/dotfiles/brainstorm",
+  "type": "skill",
+  "name": "brainstorm",
+  "description": "Interview the user relentlessly about a plan or design until reaching shared understanding, resolving each branch of the decision tree. Use when user wants to brainstorm, stress-test a plan, or explore a design decision.",
+  "author": "scott-rc",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/scott-rc/dotfiles/blob/HEAD/configs/claude/skills/brainstorm/SKILL.md",
+    "repo": "scott-rc/dotfiles",
+    "path": "configs/claude/skills/brainstorm/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

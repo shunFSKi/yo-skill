@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/forge-town/skills/refine-trpc-best-practice",
+  "type": "skill",
+  "name": "refine-trpc-best-practice",
+  "description": "Must follow when 在 React 组件中进行数据获取，确保通过 Refine hooks（useList/useOne 等）经由 DataProvider 访问数据，禁止直接调用 trpc 客户端。",
+  "author": "forge-town",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/forge-town/skills/blob/HEAD/skills/refine-trpc-best-practice/SKILL.md",
+    "repo": "forge-town/skills",
+    "path": "skills/refine-trpc-best-practice/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 7,
+    "pushed_at": "2026-05-30T07:16:44Z",
+    "score": 48
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

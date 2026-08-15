@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/paulopierrondi/servicenow-agent-army/token-saver-specialist",
+  "type": "skill",
+  "name": "token-saver-specialist",
+  "description": "Use when a ServiceNow agent prompt, workflow spec, or launch message is too long and needs compression without losing behavior or safety.",
+  "author": "paulopierrondi",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/paulopierrondi/servicenow-agent-army/blob/HEAD/.agents/skills/token-saver-specialist/SKILL.md",
+    "repo": "paulopierrondi/servicenow-agent-army",
+    "path": ".agents/skills/token-saver-specialist/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-06-27T17:26:24Z",
+    "score": 43,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

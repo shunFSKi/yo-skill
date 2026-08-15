@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/9ilfoyl3/artoo/document-analyzer",
+  "type": "skill",
+  "name": "document-analyzer",
+  "description": "文档深度分析技能。擅长对长文档进行结构化分析、摘要提取、关键信息定位。",
+  "author": "9ilfoyl3",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/9ilfoyl3/artoo/blob/HEAD/backend/app/agent/skills/preloaded/document-analyzer/SKILL.md",
+    "repo": "9ilfoyl3/artoo",
+    "path": "backend/app/agent/skills/preloaded/document-analyzer/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 7,
+    "pushed_at": "2026-08-13T09:48:07Z",
+    "score": 47,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 7
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

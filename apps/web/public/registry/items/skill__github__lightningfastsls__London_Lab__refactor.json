@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/lightningfastsls/London_Lab/refactor",
+  "type": "skill",
+  "name": "refactor",
+  "description": "Plan vault restructuring from config changes. Compares config.yaml against derivation.md, identifies dimension shifts, shows restructuring plan, executes on approval. Triggers on \"/refactor\", \"restructure vault\".",
+  "author": "lightningfastsls",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/lightningfastsls/London_Lab/blob/HEAD/.agents/skills/refactor/SKILL.md",
+    "repo": "lightningfastsls/London_Lab",
+    "path": ".agents/skills/refactor/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-18T07:25:02Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

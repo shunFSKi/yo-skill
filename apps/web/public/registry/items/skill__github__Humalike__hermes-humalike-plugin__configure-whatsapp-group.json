@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/Humalike/hermes-humalike-plugin/configure-whatsapp-group",
+  "type": "skill",
+  "name": "configure-whatsapp-group",
+  "description": "Configure Hermes on WhatsApp to respond to everyone in groups and DMs, not just paired users or @mentions. Use when the bot ignores unmentioned or unpaired WhatsApp messages, or won't respond in groups.",
+  "author": "Humalike",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Humalike/hermes-humalike-plugin/blob/HEAD/skills/configure-whatsapp-group/SKILL.md",
+    "repo": "Humalike/hermes-humalike-plugin",
+    "path": "skills/configure-whatsapp-group/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 198,
+    "pushed_at": "2026-08-04T13:45:17Z",
+    "score": 76,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 198
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "<p align=\"center\">\n  <a href=\"https://humalike.ai/\"><img src=\"assets/humalike_x_hermes_banner.png\" alt=\"Humalike × Hermes\" width=\"100%\"></a>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://github.com/Humalike/hermes-humalike-plugin/blob/main/LICENSE\"><img src=\"https://img.shields.io/github/license/Humalike/hermes-humalike-plugin\" alt=\"License\"></a>\n  <a href=\"https://github.com/Humalike/hermes-humalike-plugin/stargazers\"><img src=\"https://img.shields.io/github/stars/Humalike/hermes-humalike-plugin\" alt=\"Stars\"></a>\n  <a href=\"https://github.com/Humalike/hermes-humalike-plugin/issues\"><img src=\"https://img.shields.io/github/issues/Humalike/hermes-humalike-plugin\" alt=\"Issues\"></a>\n  <a href=\"https://humalike.ai/\"><img src=\"https://img.shields.io/badge/website-humalike.ai-1f6feb\" alt=\"Website\"></a>\n</p>\n\n# Humalike Plugin\n\nFor any questions regarding Humalike, go to https://docs.humalike.com/.\n\nOne command gives your Hermes agent social intelligence. It decides when to speak, adapts to your group's tone and remembers who said what. Works in group chats on Slack, Telegram, WhatsApp and Discord, powered by the [Humalike](https://docs.humalike.com) APIs:\n\n- **[Turn-taking](https://docs.humalike.com/api-reference/turn-taking/overview)** -\n  decides when to jump in vs stay silent, and naturalizes replies so they read\n  like a person wrote them, not one wall of bot text.\n- **[Persona](https://docs.humalike.com/api-reference/personas)** -\n  `/soul enhance` turns a one-line description into a fleshed-out character\n  with a real voice.\n- **[Theory of mind](https://docs.humalike.com/api-reference/foresee)** -\n  considers how a message will land for the reader and adjusts before sending.\n- **[Social learning](https://docs.humalike.com/api-reference/extract)** -\n  picks up the group's slang, formatting, and jokes, and starts sounding like\n  a member rather than a visitor.\n\n## Install\n\nFirst update Hermes to the latest version - the plugin patches into Hermes\ninternals, so an out-of-date Hermes can leave turn-taking silently unhooked:\n\n```bash\nhermes update\n```\n\nThen clone and enable:\n\n```bash\ngit clone https://github.com/Humalike/hermes-humalike-plugin ~/.hermes/plugins/humalike\n\n# run `hermes` from your Hermes install - activate its virtualenv first\n# (or call the hermes CLI by its full path)\nhermes plugins enable humalike\n```\n\nThen start Hermes so the plugin loads and runs its first-start setup:\n\n```bash\nhermes\n```\n\n(`hermes plugins enable` only records the plugin; nothing happens until Hermes\nactually starts. Use whatever command runs your bot - `hermes`, or your gateway\nstart command.)\n\nOn first start the plugin applies every required config\nchange itself and prints what it changed, where, and why. For authentication it\nprints a login URL (and opens a browser tab when the machine has one) - approve\non any device and the key is saved to `~/.hermes/.env`.\n\nYou can also send the bot `/connect` at any time to link an account from chat;\nthe key goes live without a restart.\n\n### Configured for you on the first start\n\nEverything turn-taking needs is applied automatically the first time the plugin\nruns - it writes these settings itself and prints exactly what it changed. You\ndon't set any of them by hand; they're listed here so you know what and why:\n\n| Setting (file) | Set to | Why |\n|---|---|---|\n| `streaming` (config.yaml) | `false` | the plugin rewrites the final reply into human-style messages, so Hermes must not also stream its own raw draft over the top |\n| `group_sessions_per_user` (config.yaml) | `false` | everyone in a group shares one conversation, so the bot follows the whole room instead of a separate thread per person |\n| `display.tool_progress` (config.yaml) | `off` | hides \"Browsing…/Clicking…\" tool chatter so replies read as human |\n| `display.busy_ack_enabled` (config.yaml) | `false` | suppresses the deterministic \"⚡ Interrupting current task…\" busy acks - a human doesn't announce that |\n| `display.memory_notifications` (config.yaml) | `off` | hides the \"💾 Self-improvement review…\" background-memory posts - a human doesn't announce memory updates |\n| `display.platforms.telegram.streaming` (config.yaml) | `false` | Telegram's native draft streaming would show the raw draft before naturalization |\n| `agent.disabled_toolsets` (config.yaml) | `+ clarify` | the clarify tool's numbered-option menus are sent by the gateway directly, bypassing naturalization; without it the bot asks in plain text |\n| `slack.reply_in_thread` (config.yaml, only if Slack is connected) | `false` | one shared conversation per channel; the default starts a fresh thread + session for **every** message, so the bot would answer each one separately |\n| `WHATSAPP_*` / `SLACK_*` respond-to-everyone (`.env`, only for a connected platform) | open | reply to everyone in DMs and groups without needing an @mention |\n\n**Restart the gateway once after this first boot** so the new values load - the\nplugin's report ends with that reminder.\n\n### Action required - the few things it can't do for you\n\n- **Persona file location** - the plugin reads your persona from\n  `~/.hermes/SOUL.md`. If yours lives somewhere else (e.g. a Docker mount),\n  point it there in `~/.hermes/config.yaml`:\n  ```yaml\n  turn_taking:\n    soul_path: \"/path/to/SOUL.md\"\n  ```\n- **Telegram groups** - two steps that genuinely can't be automated: disable\n  privacy mode in @BotFather, and add the group's chat id to\n  `TELEGRAM_GROUP_ALLOWED_CHATS`. The plugin prints both when Telegram is in use.\n- **A personal WhatsApp number** - the respond-to-everyone setting means the bot\n  replies to *everyone* who messages that number, in DMs and all groups. If it's\n  your personal number, tighten it (the plugin warns about this at setup):\n  `WHATSAPP_ALLOW_ALL_USERS=false` and/or `WHATSAPP_GROUP_POLICY=allowlist`.\n- **Discord bot setup** - steps that can't be automated. Create the bot in the\n  [Developer Portal](https://discord.com/developers/applications), enable\n  **Message Content Intent** and **Server Members Intent**, and invite it with\n  the `bot+applications.commands` scope and `permissions=274878286912`. Full\n  walkthrough (intents, invite URL, env vars, auth models): the\n  [`configure-discord-group`](skills/configure-discord-group/SKILL.md) skill.\n\n### Overrides\n\n`~/.hermes/.env` (`Authorization: Bearer`):\n\n```bash\nHUMALIKE_API_KEY=your-api-key   # skips the login prompt\nHUMALIKE_API_URL=…              # non-default environment; set EMPTY to disable turn-taking\n```\n\nOptional persona knob in `~/.hermes/config.yaml` under `turn_taking:` -\n`soul_auto_enhance` (`true` by default: one automatic persona attempt per\nresolved `SOUL.md` path; set `false` to skip it).\n\nThat's it - restart the gateway and message the bot. It now reads the room and\nreplies when it has something to say.\n\n## Platforms\n\n| Platform | Extra setup |\n|---|---|\n| WhatsApp | DMs work as-is. Groups: [`skills/configure-whatsapp-group`](skills/configure-whatsapp-group/SKILL.md) |\n| Telegram | DMs work as-is. Groups: [`skills/configure-telegram-group`](skills/configure-telegram-group/SKILL.md) |\n| Slack | DMs/@mentions work as-is. Unmentioned channel messages: [`skills/configure-slack-group`](skills/configure-slack-group/SKILL.md) |\n| Discord | DMs work as-is. Server channels: [`skills/configure-discord-group`](skills/configure-discord-group/SKILL.md) |\n\n### Discord notes\n\n- **Typing indicator** - Discord's typing is a persistent refresh loop, so the\n  plugin mutes the host's think-time typing and shows typing only while a reply\n  bubble is being paced, with an explicit stop after the last bubble. To restore\n  host typing during think time: `HERMES_DISCORD_MUTE_HOST_TYPING=false` (env) or\n  `turn_taking: {discord_mute_host_typing: false}` (config.yaml).\n- **Captionless media** - images/files sent without text reach the service as a\n  clean `[image]`/`[media]` marker (with `has_media`), not the host's\n  placeholder sentence, so turn-taking knows media arrived.\n- **Fast message bursts** - a follow-up that arrives while the bot is composing\n  is merged into the in-flight turn and the reply is re-stamped with the newest\n  turn epoch, so quick \"hermes\" / \"are you here?\" bursts get an answer instead\n  of a silently superseded one.\n- **Mentions** - `<@id>`/`<@!id>` tokens are resolved for the service: the bot's\n  own mention becomes `@you`, other people become `@DisplayName`.\n- Slash commands (`/new`, `/sethome`, …) bypass the turn-taking gate.\n\n## Persona: `/soul enhance`\n\nSend the bot `/soul enhance` to deepen its persona: reads `SOUL.md`, enhances\nit via the [Personas API](https://docs.humalike.com/api-reference/personas),\nbacks up the old file to `SOUL.md.bak`, writes the result - effective on the\nnext message. Needs a seed description first; a bare template is skipped. The\nplugin makes one automatic attempt per resolved `SOUL.md` path (disable:\n`soul_auto_enhance: false`); if it fails, use `/soul enhance` to retry manually.\n\n## License\n\nMIT.\n",
+  "status": "curated"
+}

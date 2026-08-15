@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/JuanTaco4You/codex-agent-skills/pr-summary-and-rollback",
+  "type": "skill",
+  "name": "pr-summary-and-rollback",
+  "description": "Use when preparing a PR with a strong summary, verification notes, and rollback plan.",
+  "author": "JuanTaco4You",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/JuanTaco4You/codex-agent-skills/blob/HEAD/pr-summary-and-rollback/SKILL.md",
+    "repo": "JuanTaco4You/codex-agent-skills",
+    "path": "pr-summary-and-rollback/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-01-17T20:59:38Z",
+    "score": 27,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

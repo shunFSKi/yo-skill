@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/camunda/camunda-security-library/task",
+  "type": "skill",
+  "name": "task",
+  "description": "Use when the user asks to track a task, says \"create a task for X\", \"break this feature into tasks\", \"we need to implement X\", or wants a small, self-contained unit of work captured as an issue (standalone or as part of a feature)",
+  "author": "camunda",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/camunda/camunda-security-library/blob/HEAD/.claude/skills/task/SKILL.md",
+    "repo": "camunda/camunda-security-library",
+    "path": ".claude/skills/task/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 4,
+    "pushed_at": "2026-08-14T08:58:13Z",
+    "score": 51
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

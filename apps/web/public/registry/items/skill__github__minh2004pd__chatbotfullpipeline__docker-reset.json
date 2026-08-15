@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/minh2004pd/chatbotfullpipeline/docker-reset",
+  "type": "skill",
+  "name": "docker-reset",
+  "description": "Full Qdrant data reset — run when embedding dimension changes or data is corrupted. Destroys all vector data.",
+  "author": "minh2004pd",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/minh2004pd/chatbotfullpipeline/blob/HEAD/.claude/skills/docker-reset/SKILL.md",
+    "repo": "minh2004pd/chatbotfullpipeline",
+    "path": ".claude/skills/docker-reset/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 18,
+    "pushed_at": "2026-04-22T10:33:57Z",
+    "score": 47,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 18
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

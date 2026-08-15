@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/t0lab/harness-kit/stack-python",
+  "type": "skill",
+  "name": "stack-python",
+  "description": "Use when editing .py files. Loads Python coding style, patterns, testing, and security rules from .claude/rules/stack-python/ before making changes.",
+  "author": "t0lab",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/t0lab/harness-kit/blob/HEAD/packages/harness-kit/skills/stack-python/SKILL.md",
+    "repo": "t0lab/harness-kit",
+    "path": "packages/harness-kit/skills/stack-python/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-04-17T04:31:21Z",
+    "score": 39,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 2
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

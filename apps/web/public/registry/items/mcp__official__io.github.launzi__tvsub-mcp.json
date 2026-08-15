@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.launzi/tvsub-mcp",
+  "type": "mcp",
+  "name": "tvsub MCP",
+  "description": "Control tvsub subtitle selection, translation, styling, overlay, and sync from MCP.",
+  "author": "io.github.launzi",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/launzi/tvsub-mcp",
+    "repo": "launzi/tvsub-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "tvsub-mcp"
+    ],
+    "env": [
+      {
+        "name": "ANTHROPIC_API_KEY",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-15T14:38:00.176954Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# tvsub MCP\n\n<!-- mcp-name: io.github.launzi/tvsub-mcp -->\n\n`tvsub-mcp` is the MCP companion for [tvsub](https://youngji.kim/tvsub), an\nexperimental subtitle overlay for Apple TV.app on macOS. It lets an MCP client\ninspect the current playback item, choose or translate a subtitle file, adjust\nits appearance, start or stop the overlay, and calibrate subtitle timing.\n\nThe server does not download subtitles, bypass DRM, modify video, or launch\nTV.app. You provide subtitle files that you have the right to use and start\nplayback yourself.\n\n## Requirements\n\n- macOS\n- [tvsub](https://youngji.kim/tvsub), installed and built\n- Python 3.12 or later\n- [`uv`](https://docs.astral.sh/uv/getting-started/installation/) for the\n  recommended `uvx` installation\n- An Anthropic API key only if you use subtitle translation\n\n## Install and register with Claude Code\n\nReplace `/absolute/path/to/tvsub` with the directory containing tvsub's\n`build/`, `config/`, `src/`, and `subtitles/` directories.\n\n```bash\nbrew install uv\n\nclaude mcp add --transport stdio --scope user tvsub -- \\\n  uvx tvsub-mcp==0.1.0 \\\n  --tvsub-root /absolute/path/to/tvsub\n\nclaude mcp get tvsub\nclaude mcp list\n```\n\nTo enable translation, export your key and include it when registering the\nserver. The key is not needed for any other tool.\n\n```bash\nexport ANTHROPIC_API_KEY=\"your-key\"\n\nclaude mcp add --transport stdio --scope user \\\n  --env ANTHROPIC_API_KEY=\"$ANTHROPIC_API_KEY\" \\\n  tvsub -- uvx tvsub-mcp==0.1.0 \\\n  --tvsub-root /absolute/path/to/tvsub\n```\n\nOther stdio MCP clients can launch the same command:\n\n```bash\nuvx tvsub-mcp==0.1.0 --tvsub-root /absolute/path/to/tvsub\n```\n\n## Tools\n\n| Tool | Purpose |\n| --- | --- |\n| `now_playing` | Read the current Apple TV.app title, content ID, position, and playback state. |\n| `list_subtitles` | List and parse SRT, SMI, SAMI, and VTT files in tvsub's subtitle library. |\n| `load_subtitle` | Select a subtitle file for the current content while preserving sync anchors by default. |\n| `translate_subtitle` | Estimate or perform an LLM translation with cue and timecode validation. |\n| `list_fonts` | List installed macOS fonts and check sample glyph coverage. |\n| `set_style` | Change font, size, colors, outline, background, and screen position. |\n| `start_overlay` | Start tvsub with the selected subtitle and style. |\n| `stop_overlay` | Stop only the overlay process started by this server. |\n| `calibrate_sync` | Store one or more dialogue anchors and calculate timing offset and drift. |\n| `status` | Summarize playback, overlay, subtitle, style, and calibration state. |\n\nBefore translating, call `translate_subtitle` with `dry_run=true` to review the\ncue count, batch count, and estimated cost.\n\n## Important notices\n\n- **Experimental software:** expect rough edges and breaking changes. Keep a\n  backup of your tvsub configuration and subtitle files.\n- **Data sent to Anthropic:** translation sends the selected subtitle text and\n  surrounding subtitle context to the Anthropic API. Loading, styling, sync,\n  and overlay controls do not send subtitle text to Anthropic.\n- **User-paid API usage:** translation uses your Anthropic API key. All API\n  charges are your responsibility; estimates can differ from the final bill.\n- **Private API risk:** tvsub reads Apple playback state through undocumented\n  macOS MediaRemote interfaces. Apple does not support this integration and a\n  macOS update may change or disable it.\n- **Content rights:** you are responsible for having the right to process and\n  translate subtitle files. Do not redistribute protected content without\n  permission.\n- This project is independent from and not affiliated with Apple or Anthropic.\n\n## Development\n\n```bash\npython3.12 -m venv .venv\n.venv/bin/python -m pip install -e .\n.venv/bin/python -m unittest discover -s tests -p 'test_*.py' -v\nTVSUB_TEST_PYTHON=\"$PWD/.venv/bin/python\" .venv/bin/python tests/stdio_smoke.py\nbash scripts/hygiene-check.sh\n```\n\nLinux can run the unit tests and mock stdio smoke test. Apple TV.app,\nMediaRemote, CoreText, and the real overlay require macOS.\n\n## License\n\nMIT. See [LICENSE](LICENSE).\n\n",
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/devjotaduo/picoclaw/severity-classification",
+  "type": "skill",
+  "name": "severity-classification",
+  "description": "Classifica severidade de um chamado (crítico/alto/médio/baixo) usando os critérios do tenant.",
+  "author": "devjotaduo",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/devjotaduo/picoclaw/blob/HEAD/internal/saas/api/baseline-workspace/skills/severity-classification/SKILL.md",
+    "repo": "devjotaduo/picoclaw",
+    "path": "internal/saas/api/baseline-workspace/skills/severity-classification/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-02T17:47:58Z",
+    "score": 37
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

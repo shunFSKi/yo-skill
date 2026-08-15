@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/javimosch/supercli/humble-cli",
+  "type": "skill",
+  "name": "humble-cli",
+  "description": "Use this skill when the user wants to command line tool for humble bundle purchases and downloads.",
+  "author": "javimosch",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/javimosch/supercli/blob/HEAD/plugins/humble-cli/skills/quickstart/SKILL.md",
+    "repo": "javimosch/supercli",
+    "path": "plugins/humble-cli/skills/quickstart/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 51,
+    "pushed_at": "2026-08-14T14:20:39Z",
+    "score": 57
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

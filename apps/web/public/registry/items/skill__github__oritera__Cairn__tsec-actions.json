@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/oritera/Cairn/tsec-actions",
+  "type": "skill",
+  "name": "tsec-actions",
+  "description": "在 tsec CTF/智能渗透比赛中，当需要对某道题提交 flag 时使用",
+  "author": "oritera",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/oritera/Cairn/blob/HEAD/container/.agents/skills/tsec-actions/SKILL.md",
+    "repo": "oritera/Cairn",
+    "path": "container/.agents/skills/tsec-actions/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2299,
+    "pushed_at": "2026-07-15T18:13:31Z",
+    "score": 74,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 2299
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "<div align=\"center\">\n\n<img src=\"./README/banner.png\" alt=\"Cairn Banner\"/>\n\n# Cairn\n### More Than Just AI Penetration Testing — Towards General State-Space Search\n\n<p>\n  <a href=\"https://zc.tencent.com/hackathon\" target=\"_blank\" rel=\"noopener noreferrer\">\n    <img src=\"./README/tencent.png\" alt=\"Tencent\" height=\"55\" />\n  </a>\n  <a href=\"https://zc.tencent.com/hackathon\" target=\"_blank\" rel=\"noopener noreferrer\">\n    <img src=\"./README/tch.png\" alt=\"TCH\" height=\"55\" />\n  </a>\n</p>\n\nCairn is a general-purpose problem-solving engine. <br/>It defines no roles, no workflows. Given an origin and a goal, it searches for a path through an unknown state space. <br/>AI Penetration Testing is one such problem — and a proven one.\n\n<p>\n  <a href=\"https://discord.gg/nDSy4NZVP\" target=\"_blank\" rel=\"noopener noreferrer\">\n    <img src=\"https://img.shields.io/badge/Discord-5865F2?style=flat-square&logo=discord&logoColor=white\" alt=\"Discord\" />\n  </a>\n  <a href=\"https://x.com/le1xia0\" target=\"_blank\" rel=\"noopener noreferrer\">\n    <img src=\"https://img.shields.io/badge/X-000000?style=flat-square&logo=x&logoColor=white\" alt=\"X\" />\n  </a>\n</p>\n\n</div>\n\n<p align=\"center\">\n  <a href=\"https://www.bilibili.com/video/BV1a8R5BhEVi/\" target=\"_blank\" rel=\"noopener noreferrer\">\n    <img src=\"./README/cairn.png\" alt=\"Cairn runtime screenshot\" width=\"900\" />\n  </a>\n</p>\n\n## What is Cairn?\n\nPenetration testing is fundamentally a **directed search through a near-infinite state space**:\n\n- **Origin**: known (target IP, target system)\n- **Goal**: defined (get a shell, capture the flag)\n- **Path**: unknown\n\nThis structure is not unique to penetration testing. Vulnerability research, mathematical proof, CTF challenges — any problem with a clear starting point, a clear success condition, and an unknown path in between shares the same shape.\n\nCairn is built for this class of problems. Penetration testing is the first domain it has been validated on.\n\nThe engine is built on a **Blackboard Architecture** with an explicit fact-intent graph. Three primitives are all it needs:\n\n| Concept | Meaning |\n|---------|---------|\n| **Fact** | A confirmed, objective finding written to the board |\n| **Intent** | A declared direction of exploration, not yet executed |\n| **Hint** | Human judgment injected at any time; absorbed by agents on the next read |\n\nThe graph grows from `origin` toward `goal`. Every new Fact is a stepping stone; every Intent is a step into the unknown.\n\nAgent Workers run an OODA loop — Observe the full graph, Orient to the current state, Decide on next intents, Act to explore — and write their findings back as new Facts. Workers have no fixed roles. Tasks are generated at runtime from the graph's current state, not from predefined job descriptions.\n\nAgents coordinate exclusively through the shared board (Stigmergy). No direct communication. No information silos.\n\n## Cairn in Action\n\nhttps://github.com/user-attachments/assets/e557b1ac-dda4-41cb-87dd-9d56dbf05133\n\n\n## How It Works\n\nThree task types, all executed by the same Worker:\n\n| Task | What it does | Output |\n|------|-------------|--------|\n| **Bootstrap** | At project start, attempts to solve the problem directly | Fact + possible Complete |\n| **Reason** | Reads the full graph: is the goal met? What should be explored next? | Complete / new Intents / no-op |\n| **Explore** | Claims one Intent, executes the exploration, reports findings | One Fact |\n\nSystem architecture:\n\n```\n          ┌──────────────────────────────────┐\n          │           Cairn Server           │\n          │    Facts + Intents + Hints       │\n          └─────────────────┬────────────────┘\n                            │\n                     Read / Write API\n                            │\n          ┌─────────────────┴────────────────┐\n          │             Dispatcher           │\n          │   Schedules tasks, manages       │\n          │   containers, writes protocol    │\n          └──────────┬───────────────┬───────┘\n                     │               │\n     ┌───────────────┴──┐     ┌──────┴──────────────┐\n     │  Worker Container│     │  Worker Container   │\n     │   (Project A)    │     │   (Project B)       │\n     │  ┌────┐  ┌────┐  │     │  ┌────┐  ┌────┐     │\n     │  │ W. │  │ W. │  │     │  │ W. │  │ W. │     │\n     │  └────┘  └────┘  │     │  └────┘  └────┘     │\n     └──────────────────┘     └─────────────────────┘\n```\n\n**Cairn Server** maintains graph consistency only.\n\n**Cairn Dispatcher** reads the graph, schedules tasks, spins up and tears down worker containers, and is the sole writer to the protocol. Each project gets its own Worker Container; multiple Agent Workers run concurrently inside it. Agent Workers only receive a prompt and return structured output.\n\nWorkers can also run directly on the dispatcher host instead of in per-project containers — **local mode**, no Docker required. See [Local mode](#local-mode-no-docker) below.\n\nSupported worker backends: **Claude Code**, **Codex**, and **Pi**.\n\n## Results\n\n**Tencent Cloud Hackathon · AI Penetration Testing Challenge · 2nd Edition**\n\n610 teams · 1,345 participants · top universities and security firms across China\n\n| Metric | Value |\n|--------|-------|\n| Problems solved | **54 / 54 — only team to AK** |\n| Final ranking | 3rd |\n\n> The system had never been tested before the competition. The full pipeline came online for the first time at 4 AM on race day. No training, no tuning, no domain-specific tooling. Zero MCP tools, zero RAG, zero predefined agent roles.\n\n## Further Reading\n\n- <a href=\"https://mp.weixin.qq.com/s/DlpEH7bVr0xi0VawPJs3XA\" target=\"_blank\" rel=\"noopener noreferrer\">The Strongest AI Penetration Testing Agent: Postmortem of the Only Team to Achieve AK at the TCH Tencent Cloud Hackathon Intelligent Penetration Testing Challenge (2nd Edition)</a>\n- <a href=\"https://mp.weixin.qq.com/s/2rEqFLvkxvYWM3gW170C2w\" target=\"_blank\" rel=\"noopener noreferrer\">The Pathless Path: Cairn AI from Penetration Testing to General Problem Solving</a>\n\n## Getting Started\n\n**Prerequisites**\n \n- macOS or Linux\n- Python ≥ 3.12\n- Docker (container execution only — not needed for local mode)\n\n\n### Pull required images\n \nBoth setup methods require the worker container image:\n \n```bash\ndocker pull --platform=linux/amd64 ghcr.io/oritera/cairn-worker-container:latest\n```\n\nCreate your local dispatcher configuration and fill in your LLM endpoints and API keys:\n\n```bash\ncp dispatch.example.yaml dispatch.yaml\n```\n \n### Docker Compose (recommended)\n \nPull the base image used to build Cairn:\n \n```bash\ndocker pull ghcr.io/astral-sh/uv:python3.13-trixie\n```\n \n```bash\ndocker compose up --build\n```\n \nThis starts `cairn-server` on port `8000` and `cairn-dispatcher` once the server passes its health check. The dispatcher mounts `dispatch.yaml` from the project root and connects to Docker via the host socket. Data is persisted to `./datas/cairn/`.\n \n### Manual\n \n```bash\n# Start the server\nuv run --project cairn cairn serve\n \n# Run the dispatcher\nuv run --project cairn cairn dispatch --config dispatch.yaml\n \n# Run startup health checks only\nuv run --project cairn cairn dispatch --config dispatch.yaml --startup-healthcheck-only\n```\n\n### Local mode (no Docker)\n\nInstead of one container per project, workers can run directly on the dispatcher host, reusing the machine's already-configured `claude` / `codex` / `pi` CLIs — no Docker, and no API keys in the config.\n\n```bash\ncp dispatch.local.example.yaml dispatch.yaml\n\n# Start the server\nuv run --project cairn cairn serve\n\n# Run the dispatcher on the same host, where the CLIs are installed and logged in\nuv run --project cairn cairn dispatch --config dispatch.yaml\n```\n\nLocal mode is selected by `runtime.execution: local` (see `dispatch.local.example.yaml`). On startup the dispatcher checks each configured worker CLI is installed and runnable, and reminds you they must already be logged in. Each project gets an isolated working directory under `local.workspace_root` (default: the dispatcher's current directory). Run the dispatcher directly on the host — not inside Docker — since the agents run with your user's permissions and no sandbox.\n\n### Tests\n\nRun the fast regression suite without Docker or live model endpoints:\n\n```bash\nuv run --project cairn --group dev pytest\n```\n\n## Disclaimer\n\nCairn is a general-purpose problem-solving engine. Although it supports penetration testing, CTF solving, security assessment, and vulnerability research workflows, it is intended to be used only in environments where you have explicit authorization to operate.\n\nYou are solely responsible for how you use this project. Do not use Cairn against systems, networks, applications, or data without clear prior permission from the owner or operator. Unauthorized security testing, exploitation, or data access may be illegal and may cause harm.\n\nThe developers and contributors of this project do not endorse or accept responsibility for any misuse, abuse, damage, loss, or legal consequences arising from its use. By using this project, you agree to ensure that your activities comply with all applicable laws, regulations, contractual obligations, and professional or organizational policies in your jurisdiction.\n\n## Star History\n\n<a href=\"https://www.star-history.com/#oritera/Cairn&Date\" target=\"_blank\" rel=\"noopener noreferrer\">\n  <img src=\"https://api.star-history.com/svg?repos=oritera/Cairn&type=Date\" alt=\"Star History Chart\" />\n</a>\n\n## ⚖️ License\nThis project is licensed under **GNU AGPLv3** for personal and educational use.\n\n**Commercial Use**: If you wish to use this project in a commercial or proprietary environment without the AGPL-3.0 open-source obligations, **please contact me to obtain a commercial license.**\n\n**Contributions**: By submitting a Pull Request, you agree that your contributions may be used under both the AGPL-3.0 and the project's commercial license.\n",
+  "status": "curated"
+}

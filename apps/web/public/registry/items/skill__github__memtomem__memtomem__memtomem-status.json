@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/memtomem/memtomem/memtomem-status",
+  "type": "skill",
+  "name": "memtomem-status",
+  "description": "Check memtomem configuration, storage, index counts, dense coverage, and warnings. Use when search is empty, degraded, or needs diagnosis.",
+  "author": "memtomem",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/memtomem/memtomem/blob/HEAD/packages/opencode-memtomem/skills/memtomem-status/SKILL.md",
+    "repo": "memtomem/memtomem",
+    "path": "packages/opencode-memtomem/skills/memtomem-status/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 10,
+    "pushed_at": "2026-08-10T08:54:48Z",
+    "score": 54,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 10
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

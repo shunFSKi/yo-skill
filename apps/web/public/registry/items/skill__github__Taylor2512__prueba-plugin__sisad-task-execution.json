@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Taylor2512/prueba-plugin/sisad-task-execution",
+  "type": "skill",
+  "name": "sisad-task-execution",
+  "description": "Ejecuta una task-card SISAD PDFME de extremo a extremo con alcance, evidencia, gates y memoria delta.",
+  "author": "Taylor2512",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Taylor2512/prueba-plugin/blob/HEAD/.agents/skills/sisad-task-execution/SKILL.md",
+    "repo": "Taylor2512/prueba-plugin",
+    "path": ".agents/skills/sisad-task-execution/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-14T16:29:48Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

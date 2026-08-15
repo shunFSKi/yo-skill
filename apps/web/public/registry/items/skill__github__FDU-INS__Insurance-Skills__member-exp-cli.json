@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/FDU-INS/Insurance-Skills/member-exp-cli",
+  "type": "skill",
+  "name": "member_exp_cli",
+  "description": "Explain member coverage and benefits in plain language.",
+  "author": "FDU-INS",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/FDU-INS/Insurance-Skills/blob/HEAD/Skills/member_exp_cli/SKILL.md",
+    "repo": "FDU-INS/Insurance-Skills",
+    "path": "Skills/member_exp_cli/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 65,
+    "pushed_at": "2026-07-12T04:54:34Z",
+    "score": 53
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

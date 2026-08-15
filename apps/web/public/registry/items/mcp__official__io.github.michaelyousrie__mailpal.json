@@ -1,0 +1,70 @@
+{
+  "id": "mcp:official/io.github.michaelyousrie/mailpal",
+  "type": "mcp",
+  "name": "mailpal",
+  "description": "List, inspect, and run saved HTTP requests from MailPal collections; write tools on Pro",
+  "author": "io.github.michaelyousrie",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/michaelyousrie/mailpal",
+    "repo": "michaelyousrie/mailpal"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mailpal-mcp"
+    ],
+    "env": [
+      {
+        "name": "MAILPAL_WORKSPACE",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "MAILPAL_HISTORY_DIR",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-15T13:12:45.194057Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": "<p align=\"center\">\n  <img src=\"media/icon.png\" width=\"96\" alt=\"MailPal icon\" />\n</p>\n\n<h1 align=\"center\">MailPal</h1>\n\n<p align=\"center\"><strong>The honest API client for VS Code.</strong><br>\nCollections, variables, unlimited history, an MCP server for AI agents, and a free tier that stays free.</p>\n\n<p align=\"center\">\n  <a href=\"https://marketplace.visualstudio.com/items?itemName=MichaelYousrie.mailpal\"><strong>Install from the VS Code Marketplace</strong></a>\n</p>\n\n![MailPal request panel](media/hero.png)\n\n## Why MailPal exists\n\nThe most popular REST client for VS Code has 7.4 million installs and a 2.5 star rating, because its free tier slowly moved everything, including your own request history, behind a paywall.\n\nMailPal makes the opposite promise, and treats it like a contract:\n\n- The free tier is fully usable for a single user, forever.\n- Unlimited requests, unlimited collections, unlimited local history.\n- Pro adds new value only. It never gates access to your own data.\n- If a license lapses, Pro features stop. Everything else keeps working.\n\n## Highlights\n\n- Full request builder with a Postman-style editor: auto-growing key/value rows, header autocomplete, color-coded JSON editing with format and validation\n- Auto headers surfaced, so you see and control everything sent on the wire\n- Syntax-highlighted responses (JSON and XML), HTML raw/preview toggle, resizable request/response split\n- Per-collection variables with `{{VAR}}` placeholders; secret values live in your OS keychain, never in files\n- Unlimited local history with one-click re-send\n- Import Postman v2.1, Thunder Client, OpenAPI 3.x, and curl; export Postman and curl\n- Assertions per request with pass/fail on every send\n- A bundled MCP server, registered with VS Code agent mode automatically, so AI agents can list, run, and (with Pro) create requests\n\n## For AI agents (MCP)\n\nThe MCP server also ships standalone on npm as [mailpal-mcp](https://www.npmjs.com/package/mailpal-mcp):\n\n```bash\nclaude mcp add mailpal -- npx -y mailpal-mcp\n```\n\nWorks with any MCP client (Cursor, Claude Desktop, and friends) via `npx -y mailpal-mcp`.\n\n## Support\n\nQuestions, bugs, and feature requests: [open an issue](https://github.com/michaelyousrie/mailpal/issues).\n\nThis repository hosts the project's public home, issues, and media. The extension itself ships through the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=MichaelYousrie.mailpal).\n",
+  "status": "curated"
+}

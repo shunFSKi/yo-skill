@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/dmbijan/BusyTap/deployment",
+  "type": "skill",
+  "name": "deployment",
+  "description": "BusyTap deployment workflow. Use for environment configuration review, build and release readiness, hosting assumptions, and production deployment blockers.",
+  "author": "dmbijan",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/dmbijan/BusyTap/blob/HEAD/.github/skills/deployment/SKILL.md",
+    "repo": "dmbijan/BusyTap",
+    "path": ".github/skills/deployment/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-10T19:09:55Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

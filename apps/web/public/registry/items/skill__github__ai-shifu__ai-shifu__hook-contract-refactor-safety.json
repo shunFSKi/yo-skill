@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/ai-shifu/ai-shifu/hook-contract-refactor-safety",
+  "type": "skill",
+  "name": "hook-contract-refactor-safety",
+  "description": "当重构 hook 返回字段或参数契约时使用本技能。统一同步调用方解构与参数对象，避免大面积 TS 属性错误。",
+  "author": "ai-shifu",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ai-shifu/ai-shifu/blob/HEAD/src/cook-web/skills/hook-contract-refactor-safety/SKILL.md",
+    "repo": "ai-shifu/ai-shifu",
+    "path": "src/cook-web/skills/hook-contract-refactor-safety/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 309,
+    "pushed_at": "2026-08-15T11:41:26Z",
+    "score": 74,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 309
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "<div align=\"center\">\n  <img src=\"assets/logo_en.png\" width=256></img>\n<p><strong>Write Once, Teach Personally</strong></p>\n\nEnglish | [简体中文](README_ZH-CN.md)\n\n</div>\nAI-Shifu is designed for creators, instructors, and training/education teams, offering a scalable one-on-one teaching agent. Provide your expertise and teaching intent once, AI-Shifu will expand it into complete, personalized learning experiences. It adapts in real time to each learner’s profile with tailored explanations, interactive probing, assessments, and a full feedback loop—amplifying both your efficiency and the learner’s experience.\n\nDeveloped by the AI-Shifu Team and the Research Center of Intelligent Software Engineering at Harbin Institute of Technology.\n\n# Core Capabilities\n\n- **Personalized explanation engine** — Generates learning paths and tone based on learner background, goals, and level.\n- **Interactive Q&A & probing** — Decomposes questions, asks clarifiers, and suggests next actions during sessions.\n- **Rapid course assembly** — Author with high-level frameworks and intent; AI-Shifu elaborates into lessons, activities, and assessments.\n- **Reduced production & delivery overhead** — Minimizes repetitive prep and support; every learner gets a dedicated “AI tutor.”\n- **Multi-channel integration** — Embeddable in websites, course platforms, and enterprise training portals.\n\n# Use Cases\n\n- **Course creators** — Hand a single lesson framework to AI-Shifu; learners receive personalized explanations and real-time interaction.\n- **Enterprise training** — Input training content once; employees get role- and background-specific learning paths.\n- **Educators** — Provide a syllabus to generate personalized coaching content plus a Q&A assistant.\n\n# Roadmap\n\n- [ ] Writing AI agent for rapid script generation and maintenance\n- [ ] Knowledge base\n- [ ] Speech input and output\n\n# Using AI-Shifu\n\n## Platform\n\n[AI-Shifu.com](https://ai-shifu.com) is an education platform powered by AI-Shifu. You can try it and learn the AI-guided courses developed by human experts.\n\n## Self-hosting\n\n> For source code installation, please refer to the [Installation Manual](INSTALL_MANUAL.md)\n\nMake sure your machine has installed [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/).\n\n### Quick Start (Docker, zero config)\n\n```bash\ngit clone https://github.com/ai-shifu/ai-shifu.git\ncd ai-shifu/docker\n\n# Use Docker-ready defaults (matches bundled MySQL service; Redis is optional)\ncp .env.example.full .env\n\n# Only required change: edit .env and set at least one LLM API key\n# (e.g., OPENAI_API_KEY=sk-..., ERNIE_API_KEY=..., etc.)\n\n# Start all services\ndocker compose -f docker-compose.latest.yml up -d\n```\n\nNotes\n\n- First verified user is automatically promoted to Admin and Creator; the bundled demo course is assigned to this user.\n- Default universal verification code for demos is 1024 (change via `UNIVERSAL_VERIFICATION_CODE`).\n- `docker-compose.latest.yml` pulls the freshest `:latest` images (or your own locally built `latest` tags). Use `docker-compose.yml` when you need pinned release tags for reproducible environments.\n\n### Using Docker Hub image (customize)\n\n```bash\ngit clone https://github.com/ai-shifu/ai-shifu.git\ncd ai-shifu/docker\n\n# Copy the full template (contains defaults for Docker usage)\ncp .env.example.full .env\n\n# Edit .env and customize as needed (only mandatory change is an LLM key):\n# - OPENAI_API_KEY / ERNIE_API_KEY / GLM_API_KEY / ...\n# - SQLALCHEMY_DATABASE_URI: Defaults to docker MySQL service\n# - REDIS_HOST: Optional; set to enable Redis caching/locks (leave empty to disable)\n# - SECRET_KEY: Defaults to a demo value; change for production (generate with: python -c \"import secrets; print(secrets.token_urlsafe(32))\")\n# - UNIVERSAL_VERIFICATION_CODE: Test verification code (remove/empty in production)\n# - Any other optional integrations\n\ndocker compose -f docker-compose.latest.yml up -d  # Use -f docker-compose.yml for pinned versions\n```\n\n### Development mode (dev_in_docker.sh)\n\n\n```bash\ngit clone https://github.com/ai-shifu/ai-shifu.git\ncd ai-shifu/docker\n\ncp .env.example.full .env\n# Edit .env and set your preferred LLM API key(s)\n\n./dev_in_docker.sh\n```\n\n`dev_in_docker.sh` builds the backend and frontend images from your local source tree and then launches `docker-compose.dev.yml` (hot reload + bind mounts). Use it whenever you need to iterate on code without managing Python/Node runtimes locally.\n\n### Compose files\n\n- `docker-compose.latest.yml`: tracks the `:latest` tags for `aishifu/ai-shifu-api` and `aishifu/ai-shifu-cook-web`. Use this when you want the freshest container build (either from Docker Hub or after running your own `docker build ... -t aishifu/...:latest`).\n- `docker-compose.yml`: pins each image to a specific release tag for reproducible deployments (recommended for staging/prod mirrors or CI).\n\n### Access\n\nAfter Docker starts:\n\n1. Open `http://localhost:8080` in your browser to access Cook Web (learner interface and authoring console)\n2. Use any phone number for login; the default universal verification code is **1024** (for demo/testing only — change or disable in production)\n3. The first verified user becomes Admin and Creator\n\n## Internationalization (i18n)\n\n- Shared translations live in `src/i18n/<locale>/**/*.json` and are consumed by both Backend and Cook Web.\n- See the consolidated guide for conventions, scripts, and CI checks: `docs/i18n.md`.\n- Frontend language list only exposes `en-US` and `zh-CN`.\n\n## Text-to-Speech (TTS)\n\nAI-Shifu supports multiple TTS providers. To enable Volcengine HTTP v1/tts, set:\n\n- `VOLCENGINE_TTS_APP_KEY` (AppID)\n- `VOLCENGINE_TTS_ACCESS_KEY` (Token used by `Authorization: Bearer;{token}`)\n- `VOLCENGINE_TTS_CLUSTER_ID` (Cluster, default: `volcano_tts`)\n\nIn Shifu settings, select the provider name `volcengine_http` and choose a voice/model.\n",
+  "status": "curated"
+}

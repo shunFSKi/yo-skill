@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/zhiweiofli/Agent-LLM-Wiki/wiki-lint",
+  "type": "skill",
+  "name": "wiki-lint",
+  "description": "Check knowledge base health, stale claims, orphan concepts, and missing links.",
+  "author": "zhiweiofli",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/zhiweiofli/Agent-LLM-Wiki/blob/HEAD/.agents/skills/wiki-lint/SKILL.md",
+    "repo": "zhiweiofli/Agent-LLM-Wiki",
+    "path": ".agents/skills/wiki-lint/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-05-23T09:44:14Z",
+    "score": 40,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

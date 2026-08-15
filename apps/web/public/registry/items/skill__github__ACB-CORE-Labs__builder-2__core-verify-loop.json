@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/ACB-CORE-Labs/builder-2/core-verify-loop",
+  "type": "skill",
+  "name": "core-verify-loop",
+  "description": "Autonomous edit-test-fix loop for CORE. Write change, run builder verify, read failure output, fix upstream, re-run until PASS or human needed.",
+  "author": "ACB-CORE-Labs",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ACB-CORE-Labs/builder-2/blob/HEAD/.agents/skills/core-verify-loop/SKILL.md",
+    "repo": "ACB-CORE-Labs/builder-2",
+    "path": ".agents/skills/core-verify-loop/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-14T01:53:55Z",
+    "score": 48
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

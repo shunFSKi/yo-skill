@@ -17,7 +17,7 @@
   "quality": {
     "stars": 75,
     "pushed_at": "2026-08-14T19:49:13Z",
-    "score": 72,
+    "score": 62,
     "star_history": [
       {
         "d": "2026-08-15",
@@ -55,6 +55,6 @@
     "category": "写作",
     "featured": false
   },
-  "readme": "# Builderbot Monorepo\n\nThis repository contains Builderbot apps, shared UI packages, and Rust crates.\n\n## Quick Start\n\n```bash\n# from repo root\nsource ./bin/activate-hermit\njust setup\n```\n\n`just setup` runs `lefthook install` and `pnpm install`.\n\nThen run an app:\n\n```bash\njust dev          # start Staged\njust dev differ   # start Differ\n```\n\n## App Installation\n\nFor end-user installs:\n\n- Staged (macOS): `curl -fsSL https://raw.githubusercontent.com/block/builderbot/main/apps/staged/install.sh | bash`\n- Differ: no standalone installer yet; run from source with `just dev differ` or build with `just app differ build`\n\n## Command Guide\n\nThe root `justfile` supports both styles:\n\n```bash\njust dev differ     # verb-first (recommended for humans)\njust app differ dev # explicit delegation form\n```\n\nUseful commands:\n\n```bash\njust apps         # list app names\njust setup        # first-time setup (hooks + JS deps)\njust dev          # run Staged app\njust dev differ   # run Differ app\njust staged       # alias for `just app staged dev`\njust differ       # alias for `just app differ dev`\njust check        # full non-modifying checks\njust ci           # alias of `just check`\njust fmt          # format repo\njust lint         # lint repo\njust test         # run Rust workspace tests\n```\n\n## Repo Layout\n\n- `apps/staged`: main desktop app.\n- `apps/differ`: standalone diff app.\n- `packages/diff-viewer`: shared Svelte diff viewer package.\n- `crates/`: shared Rust crates.\n- `scripts/`: helper scripts used by app tooling.\n\n## App-Level Commands\n\nEach app has its own `justfile` for app-specific workflows:\n\n- `apps/staged/justfile`\n- `apps/differ/justfile`\n\nUse root delegation to run any app recipe:\n\n```bash\njust app staged ci\njust app differ build\n```\n\n## Troubleshooting\n\n- `just: command not found`\n  - Run `source ./bin/activate-hermit` in your shell.\n- Frontend waiting on dev server / port issues\n  - Check listeners: `lsof -nP -iTCP:<port> -sTCP:LISTEN`\n- `node_modules` appears at repo root\n  - Expected for this `pnpm` workspace monorepo; app `node_modules` entries are symlinked into the root store.\n\n## More Docs\n\n- Staged app docs: `apps/staged/README.md`\n",
+  "readme": null,
   "status": "curated"
 }

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Gruku/claude-tools/taskmaster",
+  "type": "skill",
+  "name": "taskmaster",
+  "description": "Universal taskmaster work router for projects with backlog.yaml. Invoke for features, bug fixes, tests, refactors, epic planning, or narrative-continuity work (handovers, issues). Skip only for: pure git commits, dedicated PR security reviews, and small direct changes asked for outright (one sitting, no open design decisions, ~<=3 files).",
+  "author": "Gruku",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Gruku/claude-tools/blob/HEAD/codex-plugins/taskmaster/skills/taskmaster/SKILL.md",
+    "repo": "Gruku/claude-tools",
+    "path": "codex-plugins/taskmaster/skills/taskmaster/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 3,
+    "pushed_at": "2026-07-14T03:59:25Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

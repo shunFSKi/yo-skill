@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/eurth/claude-for-ca/review",
+  "type": "skill",
+  "name": "review",
+  "description": "CA Student Hub dispatcher",
+  "author": "eurth",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/eurth/claude-for-ca/blob/HEAD/ca-student/skills/review/SKILL.md",
+    "repo": "eurth/claude-for-ca",
+    "path": "ca-student/skills/review/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-05-14T14:58:33Z",
+    "score": 33,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 2
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

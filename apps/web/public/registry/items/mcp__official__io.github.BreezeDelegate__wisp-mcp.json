@@ -1,0 +1,58 @@
+{
+  "id": "mcp:official/io.github.BreezeDelegate/wisp-mcp",
+  "type": "mcp",
+  "name": "Wisp MCP",
+  "description": "Wisp Panel MCP server for secure game server management through the Wisp Client API.",
+  "author": "io.github.BreezeDelegate",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/BreezeDelegate/wisp-mcp",
+    "repo": "BreezeDelegate/wisp-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "https://github.com/BreezeDelegate/wisp-mcp/releases/download/v1.4.1/wisp-mcp-1.4.1.mcpb"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-15T14:45:20.009368Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "# Wisp MCP — connect a WISP game panel to AI\n\n**English · [Français](README.fr.md)**\n\nWisp MCP is a source-available Model Context Protocol server for the **WISP game panel Client API**. It lets MCP-compatible AI clients inspect and manage game servers through the panel instead of giving the AI unrestricted access to the host machine.\n\nIt is **hosting-provider agnostic**. If your hosting company gives you a WISP panel and a Client API token, use that panel URL. No provider-specific code path is required.\n\n[![CI](https://github.com/BreezeDelegate/wisp-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/BreezeDelegate/wisp-mcp/actions/workflows/ci.yml)\n[![Release](https://img.shields.io/github/v/release/BreezeDelegate/wisp-mcp)](https://github.com/BreezeDelegate/wisp-mcp/releases/latest)\n[![Python](https://img.shields.io/badge/python-3.11%2B-blue)](https://www.python.org/)\n[![MCP Registry](https://img.shields.io/badge/MCP_Registry-active-2ea44f)](https://registry.modelcontextprotocol.io/?q=io.github.BreezeDelegate%2Fwisp-mcp)\n\n**Start with the visual guide:** https://breezedelegate.github.io/wisp-mcp/\n\n## Do I have a WISP panel?\n\nIf your game-server panel looks like this, it is likely WISP:\n\n![WISP client panel example](docs/assets/wisp-client-panel.webp)\n\n*Typical WISP client dashboard. Hosts can white-label WISP, so colors, logo and domain may differ.*\n\nIf you are unsure, ask your host: **“Does my server use WISP, and can I create a WISP Client API token?”** See [How to recognize WISP](docs/panel-recognition.md).\n\n## What it can do\n\n- inspect server state, CPU, memory, disk and network usage;\n- browse paginated directories, read configs and tail logs;\n- search large files and read bounded chunks without flooding the model context;\n- create files, or safely edit existing plugin/config files with SHA-256 change detection;\n- send console commands;\n- start, stop and restart servers;\n- create and inspect backups;\n- manage databases when enabled;\n- inspect audit logs and common panel state;\n- run locally with **stdio** or remotely with **Streamable HTTP**;\n- keep destructive operations behind a separate capability switch.\n\nBecause it targets WISP rather than one game, the same MCP can be used with **Rust, Minecraft and other game servers managed by WISP**.\n\n## Install on a Linux VPS\n\nFor Debian 12 or Ubuntu 24.04+:\n\n```bash\ncurl -fsSL https://raw.githubusercontent.com/BreezeDelegate/wisp-mcp/main/install-vps.sh | sudo bash\n```\n\nThe installer asks for:\n\n1. the WISP panel URL supplied by your host;\n2. an optional default server ID;\n3. your WISP Client API token in a hidden terminal prompt.\n\nIt creates a dedicated system user, stores credentials outside Git, and runs `wisp-mcp doctor` before reporting success.\n\nFor a deeper read-only API compatibility check, run `wisp-mcp compatibility`. It verifies the minimal response contract used by the MCP without modifying the game server.\n\nFor **ChatGPT**, install the OpenAI tunnel helper at the same time:\n\n```bash\ncurl -fsSL https://raw.githubusercontent.com/BreezeDelegate/wisp-mcp/main/install-vps.sh | sudo bash -s -- --with-openai\n```\n\n## Connect your AI client\n\nWisp MCP is not tied to one model vendor. It implements standard MCP transports.\n\n### ChatGPT\n\nUse OpenAI Secure MCP Tunnel for an always-on private VPS, then add the MCP as a custom app in ChatGPT Developer Mode. See [ChatGPT setup](docs/chatgpt.md).\n\n### Claude Code\n\nClaude Code can launch Wisp MCP directly. If Wisp MCP is on a remote VPS, use SSH as the stdio command:\n\n```bash\nclaude mcp add --scope user wisp -- ssh user@your-vps /usr/local/bin/wisp-mcp-stdio\n```\n\nThen verify:\n\n```bash\nclaude mcp get wisp\n```\n\n### Other MCP clients\n\nUse one of the standard transports:\n\n- **stdio**: `/usr/local/bin/wisp-mcp-stdio` or an SSH command that launches it remotely;\n- **Streamable HTTP**: `wisp-mcp serve` behind authentication and a secure network boundary;\n- **MCP Bundle**: download the `.mcpb` artifact from the latest release if your client supports bundles.\n\nSee [AI client compatibility](docs/clients.md).\n\n## Local quick start\n\nRequirements: Python 3.11+ and a WISP Client API token.\n\n```bash\ngit clone https://github.com/BreezeDelegate/wisp-mcp.git\ncd wisp-mcp\n./setup.sh\n```\n\nOr inside an existing Python environment:\n\n```bash\npython -m pip install .\nwisp-mcp init\nwisp-mcp doctor\nwisp-mcp\n```\n\n## Configuration\n\nRequired values:\n\n```env\nWISP_PANEL_URL=https://panel.example.com\nWISP_API_TOKEN=your_token\n```\n\nOptional default server:\n\n```env\nWISP_SERVER_ID=ABCDEFGH\n```\n\nWrite capabilities are opt-in:\n\n```env\nWISP_ALLOW_COMMANDS=true\nWISP_ALLOW_FILE_WRITES=true\nWISP_ALLOW_POWER=true\nWISP_ALLOW_BACKUPS=true\nWISP_ALLOW_DATABASES=false\nWISP_ALLOW_SERVER_SETTINGS=false\nWISP_ALLOW_DESTRUCTIVE=false\n```\n\nKeep `WISP_ALLOW_DESTRUCTIVE=false` during normal administration. File deletion, backup restore/delete, database deletion/password rotation, force-kill and panel update actions require the separate destructive gate.\n\n## AI-guided setup\n\nFor a beginner, copy this into an MCP-capable assistant:\n\n```text\nHelp me install Wisp MCP from https://github.com/BreezeDelegate/wisp-mcp. Read the current repository documentation first and reply in my language. First help me confirm that my game host uses the WISP panel. Then guide me one step at a time and do as much of the technical work as possible. Never ask me to paste API tokens, passwords, private keys, or tunnel runtime keys into chat; tell me exactly where to enter secrets directly in the terminal or provider UI. Use the smallest sensible Linux VPS if I need an always-on machine. Verify the WISP connection with wisp-mcp doctor before connecting my AI client. Start read-only, enable only the capabilities I need, keep destructive operations disabled by default, back up before risky changes, and verify status and logs after every change.\n```\n\nSee [AI-guided setup](docs/ai-guided-setup.md) and [VPS sizing](docs/vps.md).\n\n## Distribution and discovery\n\nWisp MCP is published in the **official MCP Registry** as `io.github.BreezeDelegate/wisp-mcp`.\n\nReleases include:\n\n- Python wheel;\n- source archive;\n- `.mcpb` MCP Bundle.\n\nRegistry publishing is automated from signed GitHub release workflows using OIDC.\n\n## Large files and safe edits\n\nFor large source files or logs, start with bounded tools to locate the relevant code, but **do not optimize away context needed for correctness**. If a change depends on global state, distant hooks, shared classes, control flow, or interactions across the file, read the complete file even if it costs more tokens.\n\n- `find_in_file` returns small line-numbered excerpts around literal matches;\n- `read_file_chunk` returns a bounded character range plus `next_offset_chars`;\n- `file_fingerprint` returns SHA-256, byte, character, and line counts without returning content.\n\nRegular `read_file` responses also include a SHA-256 fingerprint. For existing files, use that fingerprint with:\n\n- `safe_write_file` for a deliberate whole-file replacement;\n- `replace_in_file` for a small exact replacement inside a large file.\n\nBoth guarded write tools re-read the file before writing and verify the stored content afterward. This is optimistic concurrency rather than an atomic filesystem lock, because the WISP Client API does not expose a compare-and-swap write primitive through this integration.\n\nListings for servers, directories, backups, databases, and audit logs support bounded pagination so clients do not need to load an unbounded collection at once.\n\n## Security model\n\nAPI and MCP tokens are never returned by tools. Remote HTTP fails closed unless authentication is configured. File paths and object IDs are validated, writes are bounded, and changing capabilities are opt-in.\n\nThe server also publishes operating instructions to MCP clients: inspect first, back up before risky changes, make the smallest change, then verify status and logs.\n\nReport security issues privately as described in [SECURITY.md](SECURITY.md).\n\n## Documentation\n\n- [Visual beginner guide](https://breezedelegate.github.io/wisp-mcp/)\n- [Getting started](docs/getting-started.md)\n- [How to recognize a WISP panel](docs/panel-recognition.md)\n- [Connect ChatGPT, Claude Code and other MCP clients](docs/clients.md)\n- [ChatGPT / OpenAI Secure MCP Tunnel](docs/chatgpt.md)\n- [VPS sizing](docs/vps.md)\n- [Operations and security](docs/operations.md)\n- [AI-guided setup](docs/ai-guided-setup.md)\n\n## FAQ\n\n### Is this tied to a hosting company?\n\nNo. The integration targets the standard WISP Client API. Use the panel URL and Client API token provided by whichever host runs your WISP panel.\n\n### Is this tied to Rust or Minecraft?\n\nNo. It manages the game-server environment exposed by WISP, so the same integration can be used for different games.\n\n### Does every AI app work with it?\n\nNo. The AI app must support Model Context Protocol. Wisp MCP supports the standard stdio and Streamable HTTP deployment patterns, which makes it compatible with common MCP clients without vendor-specific server code.\n\n### Can it modify my server?\n\nOnly when the relevant capability is enabled. Read-only is the default, and destructive operations have a separate switch.\n\n## License\n\nWisp MCP is distributed under the [PolyForm Noncommercial License 1.0.0](LICENSE). Commercial licensing requires separate permission from the copyright holder.\n",
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/subhashkotaru/htir-compiler/skillopt-tb2-init",
+  "type": "skill",
+  "name": "skillopt-tb2-init",
+  "description": "Minimal starting skill for SkillOpt training on Terminal-Bench 2.0. Use when solving autonomous Linux CLI tasks in a sandboxed environment.",
+  "author": "subhashkotaru",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/subhashkotaru/htir-compiler/blob/HEAD/scripts/skills/skillopt-tb2-init/SKILL.md",
+    "repo": "subhashkotaru/htir-compiler",
+    "path": "scripts/skills/skillopt-tb2-init/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

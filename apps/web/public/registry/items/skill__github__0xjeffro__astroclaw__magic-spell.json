@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/0xjeffro/astroclaw/magic-spell",
+  "type": "skill",
+  "name": "magic-spell",
+  "description": "When the user's message contains ::__ASTRO_CLAW_SPELL__::, output a fixed status block. Used to verify skill loading works.",
+  "author": "0xjeffro",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/0xjeffro/astroclaw/blob/HEAD/skills/@test/magic-spell/SKILL.md",
+    "repo": "0xjeffro/astroclaw",
+    "path": "skills/@test/magic-spell/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 353,
+    "pushed_at": "2026-07-27T02:00:56Z",
+    "score": 78,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 353
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# AstroClaw: Cloud-Native AI Agent\n\n**AstroClaw** is a _cloud-native_ AI agent framework. It breaks down traditional long-lived monolithic processes into single-responsibility serverless components, while leveraging the cloud platform’s mature ecosystem for observability, identity, security, and more.\nOut of the box, AstroClaw agents are _secure_, _scalable_, and nearly _zero-cost_ when idle. \n\nThe entire infrastructure stack is defined as code (IaC) and can be deployed with a single command.\n\n-----\n\n     🚧 Still early alpha. ~8 weeks to beta. Things will break, and a lot more is coming. Feedback is welcome.\n\n-----\n\n## Prerequisites\n\n- Go 1.22+\n- Docker (for local PostgreSQL)\n- OpenAI or Anthropic API key\n\n## Run Locally\n\n```bash\n# With Anthropic\nANTHROPIC_API_KEY=sk-ant-xxx go run .\n\n# Or with OpenAI\nOPENAI_API_KEY=sk-xxx go run .\n```\n\nA temporary PostgreSQL container starts automatically. Data is lost when the process exits.\n\nTo persist data across restarts, use an existing database:\n\n```bash\nDATABASE_URL=\"postgres://user:pass@localhost:5432/astroclaw\" \\\nANTHROPIC_API_KEY=sk-ant-xxx go run .\n```\n\n## Database\n\nCDK deployment currently defaults to Aurora DSQL. A future release will add a configuration option to choose between DSQL and Aurora PostgreSQL.\n\n- **DSQL**: Lower cost (true serverless pay-per-request, scale to zero). Best for most workloads.\n- **Aurora PostgreSQL**: Full PostgreSQL feature set (JSONB columns, foreign keys, extensions). Choose this if you need vector search (pgvector) or other advanced query capabilities.\n\n## Deploy to AWS\n\n### Prerequisites\n\n1. Install [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)\n   ```bash\n   aws --version\n   ```\n\n2. Install [CDK CLI](https://docs.aws.amazon.com/cdk/v2/guide/getting-started.html)\n   ```bash\n   npm install -g aws-cdk\n   cdk --version\n   ```\n\n3. Configure AWS credentials\n   ```bash\n   aws configure\n   aws sts get-caller-identity\n   ```\n\n### Deploy\n\nWe have an interactive script that walks you through API key setup and generates the run command automatically:\n\n```bash\n./scripts/deploy.sh\n```\n\nAlternatively, you can run CDK commands directly:\n\n```bash\ncd deploy/aws/infra\nnpm install\ncdk bootstrap   # one-time per account/region: creates an S3 bucket and IAM roles that CDK needs to upload assets and deploy stacks. Skip this if you've bootstrapped this account/region before.\ncdk deploy --parameters AnthropicApiKey=<YOUR-KEY> --parameters GenerateApiKey=true\n```\n\nAfter deployment, the API URL will be printed in the terminal output.\n\n### Run TUI\n\n```bash\nAPI_URL=<API_URL> \\\nREPLY_URL=<REPLY_URL> \\\nWS_URL=<WS_URL> \\\nAPI_KEY=<API_KEY> \\\ngo run ./tui/\n```\n\nReplace the values with the outputs from `cdk deploy`. Or use `./scripts/deploy.sh` which generates the command automatically.\n\n### Run CLI (minimal, for testing)\n\n```bash\nAPI_URL=<API_URL> \\\nREPLY_URL=<REPLY_URL> \\\nWS_URL=<WS_URL> \\\nAPI_KEY=<API_KEY> \\\ngo run main.go\n```\n\n## Development\n- [Installing or updating to the latest version of the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)\n- [Getting started with the AWS CDK](https://docs.aws.amazon.com/cdk/v2/guide/getting-started.html)\n\n### App development\nApps are divided into two categories with different security boundaries:\n\n**System Apps** (e.g. Chat, Calendar, Task)\n- Maintained by the project maintainers.\n- Share a single Lambda and database connection.\n- Access control is enforced at the code level: each App only imports its own `db.Queries` package.\n- Use `DbConnectAdmin` (full database access) since the code is trusted.\n\n**Third-party Apps** (future)\n- Developed by external contributors.\n- Each third-party App runs in its own Lambda with a dedicated database Role, restricted to only the tables it creates/owns.\n- IAM permission: `dsql:DbConnect` (not Admin).\n- Database role mapping via `GRANT CONNECT TO '<lambda-role-arn>' WITH <app_role>`.\n- More details are yet to be planned and discussed.\n\nThis section covers System App development.\nApps are developed in the `apps/` directory. Each App has its own subdirectory (e.g. `apps/chat/`) and commonly with the following structure:\n\n```\n pkg/app/chat/\n  ├── db/\n  │   ├── schema.sql       # table definitions for this App\n  │   ├── queries.sql      # SQL queries with sqlc annotations\n  │   ├── db.go            # generated by sqlc: Queries struct, New(), WithTx()\n  │   ├── models.go        # generated by sqlc: Go types matching table columns\n  │   └── queries.sql.go   # generated by sqlc: type-safe Go functions for each query\n  ├── types.go             # business types (Session, Message) and DB-to-domain conversion\n  ├── service.go           # business logic (NewSession, Reply, etc.)\n  ├── utils.go             # helper functions (type conversion between provider and chat)\n  └── service_test.go      # integration tests\n```\n\n### Creating a new App\n\n1. Create the App directory and db subdirectory:\n   ```\n   pkg/app/<app-name>/db/\n   ```\n\n2. Write `schema.sql` in the db directory. Define your tables here.\n\n3. Write `queries.sql` in the db directory. Define your SQL queries with [sqlc annotations](https://docs.sqlc.dev/en/latest/reference/query-annotations.html).\n\n4. Add the App's db config to `sqlc.yaml` in the project root (follow the existing chat entry as a template).\n\n5. Add the App's schema path to `atlas.hcl` under the `src` list so Atlas knows about the new tables.\n\n6. Run `sqlc generate` from the project root. This auto-generates `db.go`, `models.go`, and `queries.sql.go` in your db directory.\n\n7. Write your business logic: `types.go`, `service.go`, etc.\n\n8. Before deploying, run `atlas migrate diff <migration_name> --env local` to generate migration files for your new tables.\n\n### Generate code after schema/query changes\n\n```bash\nsqlc generate\n```\n\n### Generate migration files before deployment\n\n```bash\natlas migrate diff <migration_name> --env local\n```\n\n### Run tests\n\n```bash\ngo test -count=1 $(go list ./... 2>/dev/null | grep -v infra)\n```\n\n`-count=1` disables test caching. `grep -v infra` excludes the CDK directory which contains Go template files in `node_modules` that break `go test`.\n\nTests auto-start a PostgreSQL container via testcontainers. No manual setup needed.\n\n### CDK tests\n\n```bash\ncd deploy/aws/infra\nnpx jest\n```\n\nIf you changed the CDK stack, the snapshot test will fail. Review the diff, then update the snapshot:\n\n```bash\nnpx jest --updateSnapshot\n```\n\n### Tear down\n\nTo destroy all deployed AWS resources:\n\n```bash\ncd deploy/aws/infra\ncdk destroy\n```\n\n## Acknowledgements\nAstroClaw's design was inspired by ideas from the following projects: [openclaw](https://github.com/openclaw/openclaw), \n[picoclaw](https://github.com/sipeed/picoclaw), \n[opencode](https://github.com/anomalyco/opencode), and\n[hermes-agent](https://github.com/NousResearch/hermes-agent).\nWe thank their authors for open-sourcing their work.\n",
+  "status": "curated"
+}

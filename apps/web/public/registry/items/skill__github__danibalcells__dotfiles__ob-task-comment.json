@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/danibalcells/dotfiles/ob-task-comment",
+  "type": "skill",
+  "name": "ob-task-comment",
+  "description": "Add a comment or note to an existing Obsidian vault task. Use when the user asks to add a note, comment, update, or log progress on a task like PKB-0003. Config at ~/.obsidian-tasks/.",
+  "author": "danibalcells",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/danibalcells/dotfiles/blob/HEAD/claude/.claude/skills/ob-task-comment/SKILL.md",
+    "repo": "danibalcells/dotfiles",
+    "path": "claude/.claude/skills/ob-task-comment/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 3,
+    "pushed_at": "2026-05-07T17:56:57Z",
+    "score": 40,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 3
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/100BillionAds/main-repo/test-generate",
+  "type": "skill",
+  "name": "test-generate",
+  "description": "사용자 관점 동작과 API 계약을 기반으로 단위/통합 테스트를 생성할 때 사용합니다. 릴리즈 신뢰도를 강화해야 할 때 활용합니다.",
+  "author": "100BillionAds",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/100BillionAds/main-repo/blob/HEAD/.github/skills/test-generate/SKILL.md",
+    "repo": "100BillionAds/main-repo",
+    "path": ".github/skills/test-generate/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-04-26T16:07:55Z",
+    "score": 32,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

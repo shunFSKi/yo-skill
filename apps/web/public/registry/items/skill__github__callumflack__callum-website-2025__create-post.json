@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/callumflack/callum-website-2025/create-post",
+  "type": "skill",
+  "name": "create-post",
+  "description": "Create a new MDX post using the repo template and taxonomy.",
+  "author": "callumflack",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/callumflack/callum-website-2025/blob/HEAD/.agents/skills/create-post/SKILL.md",
+    "repo": "callumflack/callum-website-2025",
+    "path": ".agents/skills/create-post/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-15T06:51:07Z",
+    "score": 45,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

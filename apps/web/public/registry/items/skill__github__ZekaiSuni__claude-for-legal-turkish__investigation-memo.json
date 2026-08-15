@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/ZekaiSuni/claude-for-legal-turkish/investigation-memo",
+  "type": "skill",
+  "name": "investigation-memo",
+  "description": "Açık iç soruşturma dosyasından Türk iş hukuku odaklı iç değerlendirme notu taslağı üretir veya günceller. Kronoloji, delil, görüşme, savunma, disiplin, fesih, KVKK ve İSG risklerini ayrıştırır.",
+  "author": "ZekaiSuni",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ZekaiSuni/claude-for-legal-turkish/blob/HEAD/employment-legal/skills/investigation-memo/SKILL.md",
+    "repo": "ZekaiSuni/claude-for-legal-turkish",
+    "path": "employment-legal/skills/investigation-memo/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 100,
+    "pushed_at": "2026-05-13T18:53:38Z",
+    "score": 63,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 100
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# Claude Legal Turkish\n\nClaude Legal Turkish, Anthropic'in açık kaynaklı **Claude for Legal** yapısını temel alan Türkiye uyarlamasıdır. Amaç, aynı plugin/skill iskeletini koruyarak hukuki içerikleri Türk hukuku, Türkiye yargı sistemi ve yerel regülasyonlar ekseninde çalışır hale getirmektir.\n\nBu repo; hukuk departmanları, avukatlar, uyum ekipleri ve hukuk operasyonları için sözleşme inceleme, dava/uyuşmazlık takibi, KVKK, iş hukuku, ürün hukuku, şirketler hukuku ve regülasyon izleme iş akışlarına yönelik Claude Code plugin'leri içerir.\n\n> Önemli: Bu proje hukuki danışmanlık vermez. Üretilen her çıktı avukat/hukukçu incelemesine tabi taslak, araştırma notu veya karar destek çıktısıdır. Kanun, içtihat, süre, tebliğ, yetki, imza ve resmi kaynak kontrolleri somut dosya için ayrıca doğrulanmalıdır.\n\n## Tasarım Kararı\n\nOperasyonel adlar orijinal repo ile uyumlu tutulur:\n\n- Plugin klasörleri: `commercial-legal`, `litigation-legal`, `privacy-legal` vb.\n- Komutlar: `/commercial-legal:review`, `/regulatory-legal:reg-feed-watcher` vb.\n- Dosya adları: `SKILL.md`, `CLAUDE.md`, `.mcp.json`, `.claude-plugin/plugin.json`\n\nTürkçeleştirme; hukuki içerikte, kontrol listelerinde, çıktı şablonlarında, örneklerde ve kaynak/kavram katmanında yapılır. Komut adlarını `/ticari-hukuk:*` gibi Türkçeleştirmek ayrı bir repo-geneli refactor işidir.\n\n## Durum Özeti\n\n| Alan | Durum | Not |\n|---|---|---|\n| `commercial-legal` | Uyarlandı | Türk ticari sözleşme pratiğine göre uyarlandı. |\n| `corporate-legal` | Uyarlandı | Türk şirketler hukuku pratiğine göre uyarlandı. |\n| `litigation-legal` | Uyarlandı | Türkiye yargı ve dava pratiğine göre uyarlandı. |\n| `privacy-legal` | Uyarlandı | KVKK pratiğine göre uyarlandı. |\n| `employment-legal` | Uyarlandı | Türk iş hukuku pratiğine göre uyarlandı. |\n| `product-legal` | Uyarlandı | Türk ürün, tüketici, reklam ve e-ticaret pratiğine göre uyarlandı. |\n| `regulatory-legal` | Uyarlandı | Türkiye regülasyon izleme pratiğine göre uyarlandı. |\n| `managed-agent-cookbooks` | Uyarlandı | Türkiye kaynak ve takip mantığına göre uyarlandı. |\n| `ip-legal` | Uyarlandı | Türk fikri mülkiyet pratiğine göre uyarlandı. |\n| `ai-governance-legal` | Uyarlandı | Türkiye AI yönetişimi ve KVKK odağıyla uyarlandı. |\n| `legal-builder-hub` | Uyarlanmadı | Hukuki içerik modülü değil, teknik/meta araç olduğu için kapsam dışında bırakıldı. |\n| `law-student` | Uyarlanmadı | ABD hukuk eğitimi/bar prep modeline dayandığı için kapsam dışında bırakıldı. |\n| `legal-clinic` | Uyarlanmadı | US law school clinic modeline dayandığı için kapsam dışında bırakıldı. |\n| `cocounsel-legal` | Uyarlanmadı | Üçüncü taraf Westlaw/Practical Law plugin'i olduğu için değiştirilmedi. |\n\nAyrıntılı takip için: [TURKISH_ADAPTATION_STATUS.md](TURKISH_ADAPTATION_STATUS.md)\n\n## Kurulum\n\nClaude Code içinde bu klasörü yerel marketplace olarak ekleyin:\n\n```text\n/plugin marketplace add C:\\path\\to\\legal-turkish-master\n```\n\nBir plugin kurun:\n\n```text\n/plugin install commercial-legal@legal-turkish\n```\n\nClaude Code'u yeniden başlatın. Ardından ilgili plugin'in başlangıç mülakatını çalıştırın:\n\n```text\n/commercial-legal:cold-start-interview\n```\n\nİlk kullanım örneği:\n\n```text\n/commercial-legal:review \"C:\\sozlesmeler\\tedarikci-taslak.docx\"\n```\n\nDiğer örnekler:\n\n```text\n/litigation-legal:demand-intake\n/privacy-legal:pia-generation\n/employment-legal:termination-review\n/regulatory-legal:reg-feed-watcher\n```\n\nKısa kurulum akışı için: [QUICKSTART.md](QUICKSTART.md)\n\n## Bağlantılar ve MCP\n\nPlugin'lerde Slack, Google Drive, Box, Linear, Asana gibi operasyonel bağlayıcılar opsiyonel olarak korunmuştur. Türk hukuk kaynaklarına yönelik yerel araştırma omurgası için `.mcp.json` dosyalarında **Yargı MCP** önerilir.\n\nYargı MCP; Yargıtay, Danıştay, Anayasa Mahkemesi, KVKK, Rekabet Kurumu ve benzeri Türkiye kaynaklarına erişim için kullanılır. Bağlantı çalışmıyorsa veya bağlı değilse çıktılardaki kaynak/citation etiketleri doğrulama uyarısı taşır.\n\n## Repo Yapısı\n\n```text\nlegal-turkish-master/\n├── .claude-plugin/\n│   └── marketplace.json\n├── commercial-legal/\n├── corporate-legal/\n├── litigation-legal/\n├── privacy-legal/\n├── employment-legal/\n├── product-legal/\n├── regulatory-legal/\n├── ip-legal/\n├── ai-governance-legal/\n├── managed-agent-cookbooks/\n├── legal-builder-hub/\n├── references/\n└── scripts/\n```\n\n## Doğrulama\n\nBu çalışma kopyasında yapılan son yapısal kontroller:\n\n- Marketplace `source` yolları ve plugin manifestleri çözümleniyor.\n- Tüm JSON dosyaları parse ediliyor.\n- Somut plugin komut atıfları mevcut skill klasörlerine gidiyor.\n- Managed-agent `manifest`, `file` ve `from_plugin` referansları çözümleniyor.\n- Ana `claude-for-legal-main` iskeletine göre eksik dosya yok.\n- Operasyonel identifier kontrolleri yapıldı (`reg-feed-watcher`, `feed-reader` korunur).\n\nWindows ortamında `bash` ve `pyyaml` yoksa repo'nun `scripts/test-cookbooks.sh` harness'i birebir çalışmayabilir; bu durumda eşdeğer statik kontroller PowerShell/Node ile yapılabilir.\n\n## Yayın Notu\n\nBu repo bir Türkiye uyarlama çalışmasıdır. Orijinal Claude for Legal projesinin lisans ve katkı koşulları korunur. Uyarlanan içeriklerde Türk hukuku terminolojisi kullanılsa da hiçbir çıktı doğrudan hukuki mütalaa, avukat görüşü veya resmi kaynak doğrulaması yerine geçmez.\n\n## Lisans\n\nApache License 2.0. Ayrıntı için [LICENSE](LICENSE).\n",
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/wri/wri-design-systems-interfaces/pr-description",
+  "type": "skill",
+  "name": "pr-description",
+  "description": "Guidelines for writing PR description. Covers required content, formatting, and examples. Use when the user asks to summarize changes for a PR or create a PR description.",
+  "author": "wri",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/wri/wri-design-systems-interfaces/blob/HEAD/agents/skills/pr-description/SKILL.md",
+    "repo": "wri/wri-design-systems-interfaces",
+    "path": "agents/skills/pr-description/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

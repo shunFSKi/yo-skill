@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/gaebalai/claude-code-marketplace/read-unresolved-pr-comments",
+  "type": "skill",
+  "name": "read-unresolved-pr-comments",
+  "description": "GitHub PR에서 아직 대응되지 않은 코멘트를 조회한다. GraphQL API를 사용해 (1) 코드의 특정 라인에 연결된 미해결 Review thread(Resolve 가능)와 (2) 코드 블록을 포함한 Issue comment(대화 탭, Resolve 불가)를 모두 가져와 JSON 형식으로 출력한다. PR 정보(번호, 제목, URL, 상태, 작성자, 리뷰어)도 함께 포함된다.",
+  "author": "gaebalai",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/gaebalai/claude-code-marketplace/blob/HEAD/gaebalai/skills/read-unresolved-pr-comments/SKILL.md",
+    "repo": "gaebalai/claude-code-marketplace",
+    "path": "gaebalai/skills/read-unresolved-pr-comments/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2025-12-13T19:07:34Z",
+    "score": 33,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

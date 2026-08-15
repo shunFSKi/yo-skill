@@ -1,0 +1,54 @@
+{
+  "id": "mcp:official/com.ainetcafe/netcafe-devkit",
+  "type": "mcp",
+  "name": "netcafe-devkit",
+  "description": "JSON/YAML, regex, diff, JWT, SQL dialects — the keyless millisecond ops an agent needs mid-task.",
+  "author": "com.ainetcafe",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mario03690/ai-netcafe",
+    "repo": "mario03690/ai-netcafe"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://ainetcafe.com/mcp/dev?s=registry"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-15T06:22:11.816958Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "# ai-netcafe\n\nHosted tools your agent can call over MCP — and a claim you can check in one command:\n\n```bash\ncurl \"https://ainetcafe.com/t/china_reachability?url=https://github.com\"\n```\n\n```json\n{\n  \"url\": \"https://github.com\",\n  \"tested_from\": \"mainland China (China Mobile backbone)\",\n  \"verdict\": \"unreachable: timeout (common signature of blocking or a very slow route)\"\n}\n```\n\nThat request was answered by a machine actually sitting on a Chinese backbone network. A monitor\nhosted anywhere else can only tell you GitHub is up *where it is* — which is not the question you\nwere asking. That is the kind of thing we host: capabilities that are hard to get, rather than\nwrappers around ones that aren't.\n\n## Four focused servers\n\nOne agent profile rarely needs both spreadsheet cleanup and the Chinese lunar calendar, and every\ntool description costs tokens on every session. So the catalogue is served as four focused MCP\nendpoints — connect the one you need and pay the context cost of nothing else.\n\n| Pack | URL | What it is |\n|---|---|---|\n| **Tables** | `https://ainetcafe.com/mcp/table` | Messy CSV in, clean checkable table out. Dedupe, merge, transpose, wide→long, find what differs between two tables, reconcile two ledgers. |\n| **Dev kit** | `https://ainetcafe.com/mcp/dev` | JSON↔YAML, validate JSON, line diff, regex test, JWT decode, SQL dialect transpile, timezone and unit conversion. |\n| **Doc flow** | `https://ainetcafe.com/mcp/paper` | Markdown → PDF / Word / PowerPoint / EPUB / HTML. PDFs merged, split, rotated, watermarked. |\n| **China facts** | `https://ainetcafe.com/mcp/cn` | Mainland reachability from a real backbone, statutory holidays **including make-up workdays (调休)**, offline ID and mobile validation, lunar calendar. |\n\nAll four are in the [official MCP registry](https://registry.modelcontextprotocol.io) as\n`com.ainetcafe/netcafe-tables`, `-devkit`, `-docflow` and `-china`.\n\n**Nothing in these four calls a language model or a third-party API.** They compute on our own\nservers, so results are deterministic and repeatable — and they cannot break because someone else\nchanged their API.\n\n## Numbers come with their own proof\n\nAnything involving counts or money returns an arithmetic check computed in code, not asserted by a\nmodel:\n\n```jsonc\n// reconcile_ledger: your books vs the bank statement\n{\n  \"total_a\": 105.30, \"total_b\": 106.80, \"gap\": -1.50,\n  \"only_in_a\":  [{ \"key\": \"B\",  \"amount\": 5.00 }],\n  \"only_in_b\":  [{ \"key\": \"C\",  \"amount\": 7.00 }],\n  \"mismatched\": [{ \"key\": \"A3\", \"a\": 100.00, \"b\": 99.50, \"diff\": 0.50 }],\n  \"arithmetic_check\": {\n    \"formula\": \"A 105.3 − B 106.8 = -1.5; differences explain -1.5\",\n    \"checks_out\": true\n  }\n}\n```\n\nIf `checks_out` is false, the response says the result is untrustworthy instead of handing back a\ntable that looks finished. Amounts are compared in integer cents, so `0.1 + 0.2` never invents a\ndifference for someone to go chase.\n\n## Connect it\n\n```bash\nclaude mcp add --transport http netcafe-tables https://ainetcafe.com/mcp/table\n```\n\nDeepSeek Harness:\n\n```bash\ndsh plugin --profile web add github:mario03690/dsh-netcafe\n```\n\nEverything is also a plain GET — no MCP client, no SDK, no key:\n\n```bash\ncurl \"https://ainetcafe.com/t/cn_holiday?date=2026-10-01\"\ncurl \"https://ainetcafe.com/t/diff_text?a=one%0Atwo&b=one%0Athree\"\n```\n\nCharts come back as images you can paste straight into a README:\n\n![live chart](https://ainetcafe.com/t/make_chart?labels=Jan,Feb,Mar&values=12,19,7&raw=1&s=github-readme)\n\nThat image is rendered on request, right now, by the same service this page describes.\n\n## Model cost is measured, not quoted\n\n```bash\nnpx ai-netcafe compare \"dedupe a JS array preserving order\"\n```\n\n```\nMODEL              COST       LATENCY\ndeepseek-v4-flash  $0.00012    7.6s\ngemini-3.5-flash   $0.000341   10.0s\nGLM5.2             $0.001828   9.0s\n\ncheapest: deepseek-v4-flash   fastest: deepseek-v4-flash\n15.2× between cheapest and priciest\n```\n\nEvery number is read from the upstream `usage` response, not derived from a published price list.\nThat distinction matters more than it sounds — while building this we found the obvious conversion\nformula was wrong for several models (one off by ~9×, another by ~3×), and only billing-delta\nmeasurement matched reality.\n[Full method and data.](https://ainetcafe.com/lab/llm-real-cost-comparison?s=github)\n\n## Heavier skills\n\nThe main endpoint (`https://ainetcafe.com/mcp`) also carries tools that do call a model, and say so:\n\n| Skill | What it does |\n|---|---|\n| `extract_invoices` | A batch of invoices → one ledger-ready table. Every row checked in code (net + tax = gross); the batch total re-added independently. Mixed currencies get no batch total on purpose — adding them would be an accounting error. |\n| `extract_statement` | Bank statement PDF → transactions, with reconciliation (opening + credits − debits = closing). If it doesn't balance it says where the running total first breaks. |\n| `transpile_sql` | SQL between dialects via a real parser, not a model — same input, same output, and syntax errors come back with line and column. |\n| `check_resume` | Whether an ATS can actually parse a résumé. Rule-based and reproducible. |\n| `remember` / `recall` | Cross-session memory, keyed to your AllRouter key or an anonymous workspace token. |\n| `create_task` | Hand a recurring job to a hosted runner; it notifies you only when the result actually changes. |\n\nFull catalogue: <https://ainetcafe.com/tools?s=github>\n\nBacked by open-source projects — PDFMathTranslate, GPT Academic, GPT Researcher, NextChat, LobeChat\n— hosted pre-configured so you can try them without installing Docker, Python, or supplying a key.\n\n## CLI\n\n```bash\nnpx ai-netcafe compare \"<prompt>\"   # multi-model comparison with real costs\nnpx ai-netcafe ask \"<prompt>\"       # single model\nnpx ai-netcafe apps                 # hosted apps + source repos\nnpx ai-netcafe models               # models with per-million prices\nnpx ai-netcafe install              # MCP config for your agent\n```\n\n## Quota\n\nAnonymous calls get a free allowance — enough to try everything here, no signup. When it runs out\nthe response tells you how to continue; nothing fails silently. Bring your own\n[AllRouter](https://allrouter.ai/register?aff=qjpC&utm_source=github) key and token cost is billed\nto your own account at direct rates with no markup:\n\n```bash\nexport ALLROUTER_API_KEY=sk-...\n```\n\nFailed calls are not charged. Documents are processed in memory and not retained.\n\n## Links\n\n- Docs and one-line configs: <https://ainetcafe.com/mcp.html?s=github>\n- Reconcile two tables in your browser, no install: <https://ainetcafe.com/duizhang?s=github>\n- What every call actually cost: <https://ainetcafe.com/spend?s=github>\n- Live cost comparison, updated daily: <https://ainetcafe.com/lab/llm-real-cost-comparison?s=github>\n- A2A agent card: <https://ainetcafe.com/.well-known/agent-card.json>\n\n## Disclosure\n\nBuilt and run by the people behind ainetcafe.com. It is our own service, with a free tier and paid\nusage beyond it. Links here carry an `s=` tag so we can tell which channel produces real usage — it\nidentifies the channel, not you.\n\nMIT\n",
+  "status": "curated"
+}

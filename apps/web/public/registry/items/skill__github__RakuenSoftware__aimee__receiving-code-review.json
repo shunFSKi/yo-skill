@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/RakuenSoftware/aimee/receiving-code-review",
+  "type": "skill",
+  "name": "receiving-code-review",
+  "description": "Use when evaluating reviewer feedback, review delegates, or suggested code changes.",
+  "author": "RakuenSoftware",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/RakuenSoftware/aimee/blob/HEAD/skills/receiving-code-review/SKILL.md",
+    "repo": "RakuenSoftware/aimee",
+    "path": "skills/receiving-code-review/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 179,
+    "pushed_at": "2026-08-15T16:12:11Z",
+    "score": 72,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 179
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "# aimee\n\nYour AI coding tool forgets everything between sessions, and you pay full price for the routine\nwork. aimee is a local server that fixes both. It holds memory and a map of your code across tools,\nroutes cheap work to cheap models, and enforces guardrails the model cannot write past.\n\nPoint any tool at it. Your context follows you between them.\n\nTwo services:\n\n- **aimee-server** assists one human. Sessions, tools, credentials, delegates, workflows.\n- **aimee-kb** serves a corpus, team, or company. Durable knowledge, code indexes, retrieval,\n  curation.\n\nThe `aimee` CLI is a thin client for Linux, macOS, and Windows. Core services are C, the workflow\ncontrol plane and browser are Go, and nothing phones home.\n\n## What you get\n\n- **Memory that survives the session.** The curator extracts facts, joins evidence, catches\n  contradictions, and lets stale detail decay. See [Knowledge](docs/KNOWLEDGE.md).\n- **Your code as a graph.** Symbols, callers, imports, and cross-repo dependencies feed search and\n  blast-radius checks. See [Code intelligence](docs/CODE_INTELLIGENCE.md).\n- **Delegates that cut the bill.** Send review, diagnosis, and routine implementation to the\n  cheapest model that fits the role. See [Delegates](docs/DELEGATES.md).\n- **Guardrails before execution.** Secret paths, unsafe writes, worktree escapes, and untrusted MCP\n  packages are checked first, and delegate sandboxes run with no network and no credentials. See\n  [Security](docs/SECURITY.md).\n- **One bus, one audit trail.** Every governed action, memory write, guardrail decision and vault\n  read crosses one sequenced tap into a WORM ledger. See [Event bus](docs/EVENT_BUS.md).\n- **Any provider.** OpenAI, Anthropic, Gemini, Mistral, Bedrock, and local OpenAI-compatible servers\n  pass through one internal request format. Switch models without switching tools.\n\n## Start\n\n```bash\ngit clone https://github.com/RakuenSoftware/aimee.git\ncd aimee\ndocker compose -f compose.server-managed.yaml up -d\ndocker compose -f compose.server-managed.yaml logs aimee-server\n```\n\nThe log prints a generated, one-time dashboard login. Open <https://localhost:8443>, sign in, and\nthe setup wizard covers the account, provider, knowledge base, deployment, and workspaces. After the\nnumbered steps, the summary can start `aimee-kb` with PostgreSQL 18, pgvector, and pgvectorscale\ninside the container.\n\nThe managed compose file mounts the Docker socket, which gives aimee-server control of the host\nDocker daemon. Use the split stack if you do not want that.\n\nThe [Quickstart](docs/QUICKSTART.md) has the rest: choosing your own login, the split stack, thin\nclient enrollment, and what to check when it does not work.\n\n## Docs\n\nStart at the [documentation index](docs/README.md).\n\n| Document | Use it for |\n|----------|------------|\n| [Quickstart](docs/QUICKSTART.md) | Install, enroll, verify. |\n| [What's new](docs/WHATS_NEW.md) | Everything 0.3.0 changed, and what it removed. |\n| [Upgrading](docs/UPGRADING.md) | Move from v0.2.192. One-way, so read it first. |\n| [Manual](MANUAL.md) | Day-to-day use and operations. |\n| [Architecture](docs/ARCHITECTURE.md) | Processes, storage, trust, request flow. |\n| [Deployment](docs/DEPLOYMENT.md) | Managed, split, external DB2, backup, hardening. |\n| [Command reference](docs/gen/cli-commands.md) | Every CLI command. Generated from source. |\n| [Configuration reference](docs/gen/configuration.md) | Every config key and variable. Generated from source. |\n| [Server API](docs/PUBLIC_API.md) | `/v1` transport, auth, compatibility. |\n| [Feature status](docs/STATUS.md) | What works, what is gated, what was removed. |\n| [Troubleshooting](docs/TROUBLESHOOTING.md) | Diagnose the first broken boundary. |\n\n## Community\n\nQuestions and discussion: <https://discord.gg/FjGjvcgAqz>.\n\n## License\n\nCopyright (C) 2026 The aimee authors. Licensed under the **GNU AGPL v3.0**. See\n[LICENSE](LICENSE) and [NOTICE](NOTICE).\n\nIf the AGPL does not suit you, other terms can be discussed. Contact <jbailes@gmail.com>.\nBundled components and generated SDKs may use different licenses; [NOTICE](NOTICE) lists them.\n",
+  "status": "curated"
+}

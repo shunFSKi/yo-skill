@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/aborroy/aiup-alfresco/rest-api",
+  "type": "skill",
+  "name": "rest-api",
+  "description": "Generate a modern ACS v1 Public REST API resource (annotation-based @EntityResource / @RelationshipResource with @WebApiDescription) plus model POJO, Spring registration, and unit test. In-Process SDK (Maven) only.",
+  "author": "aborroy",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/aborroy/aiup-alfresco/blob/HEAD/.cursor/skills/rest-api/SKILL.md",
+    "repo": "aborroy/aiup-alfresco",
+    "path": ".cursor/skills/rest-api/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 13,
+    "pushed_at": "2026-07-20T10:02:50Z",
+    "score": 55
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

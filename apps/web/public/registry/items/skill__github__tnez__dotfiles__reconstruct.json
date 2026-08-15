@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/tnez/dotfiles/reconstruct",
+  "type": "skill",
+  "name": "reconstruct",
+  "description": "Reconstruct Dottie's identity and context at the start of an interactive session. Pulls identity, reads bridge + recent narratives, checks Taskwarrior, primes for work.",
+  "author": "tnez",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/tnez/dotfiles/blob/HEAD/claude/dot-claude/skills/reconstruct/SKILL.md",
+    "repo": "tnez/dotfiles",
+    "path": "claude/dot-claude/skills/reconstruct/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-08-15T00:11:11Z",
+    "score": 49,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 2
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

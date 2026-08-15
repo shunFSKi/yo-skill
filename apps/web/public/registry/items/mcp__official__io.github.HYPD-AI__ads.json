@@ -1,0 +1,54 @@
+{
+  "id": "mcp:official/io.github.HYPD-AI/ads",
+  "type": "mcp",
+  "name": "HYPD AI - Paid Ads & Analytics",
+  "description": "Google Ads, Meta (Facebook) Ads, GA4 and Merchant Center analysis in plain language. Read-only.",
+  "author": "io.github.HYPD-AI",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/HYPD-AI/ads-mcp-plugin",
+    "repo": "HYPD-AI/ads-mcp-plugin"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.hypd.ai/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-15T13:37:18.126019Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "![HYPD — Manage paid media safely with AI](assets/banner.png)\n\n# HYPD AI - Paid Ads & Analytics\n\nAnalyze your paid marketing in plain language, inside Claude. HYPD connects your **Google Ads**, **Meta (Facebook) Ads**, **Google Analytics (GA4)** and **Merchant Center** accounts, then answers questions about them using your real account data.\n\n**Read-only.** HYPD reports on your accounts and never changes your campaigns, budgets or ads.\n\nWorks in **Claude Code** (terminal, desktop, IDE) and **Claude Cowork**. Step-by-step guide with screenshots: [docs.hypd.ai/guides/claude-code-plugin](https://docs.hypd.ai/guides/claude-code-plugin).\n\n## Install\n\n### Claude Code (terminal)\n\n```\n/plugin marketplace add HYPD-AI/ads-mcp-plugin\n/plugin install hypd-ai-ads@hypd-ai\n/reload-plugins\n```\n\nThen authorize: `/mcp` → **hypd** → **Authenticate** (or run `claude mcp login 'plugin:hypd-ai-ads:hypd'` from a normal terminal). A terminal install also covers the desktop app's Code tab.\n\n### Desktop app & Claude Cowork\n\nSettings → **Customize** → **Plugins** → **Add** → **Add marketplace** → **Add from a repository** → enter `HYPD-AI/ads-mcp-plugin` → **Sync**. Then install **HYPD AI - Paid Ads & Analytics** from the **Personal** tab and connect the **HYPD AI Ads** connector on the plugin's page.\n\nA terminal install does not carry over to Cowork — use this path there.\n\n### Zip upload (no marketplace)\n\nDownload [`hypd-ai-ads.zip`](https://github.com/HYPD-AI/ads-mcp-plugin/releases/latest/download/hypd-ai-ads.zip), then **Add** → **Upload plugin** in the desktop app. Or load it for a single session:\n\n```\nclaude --plugin-dir ./hypd-ai-ads.zip\n```\n\nUploaded copies don't update automatically — prefer the marketplace installs above.\n\n## What you can do\n\n- **Google Ads** — campaign performance, spend, ROAS and CPA, account overviews, custom queries across any date range\n- **Meta (Facebook) Ads** — campaign, ad set and ad performance, creative details, audience insights, catalogs, lead forms\n- **Meta Ad Library** — search competitors' live and past ads across Facebook and Instagram\n- **Google Analytics (GA4)** — ecommerce and campaign performance, landing pages, funnels, conversion paths, attribution comparison\n- **Merchant Center** — feed diagnostics, disapproved products, product performance, price competitiveness, competitive visibility\n- **Research** — keyword ideas and search volume, competitor ads via Google Ads Transparency, live SERP and Shopping data\n- **Landing pages** — instant quality audits, performance scores, resource breakdowns, screenshots\n- **Prompt templates, marketing skills and saved business context**, so every answer reflects your accounts, brand and goals\n\nTry:\n\n```\nAudit my account and tell me where budget is being wasted.\nHow are my Meta ads performing, and which creatives are fatiguing?\nCompare attribution between Google Analytics and Google Ads.\nShow the ads a competitor is running on Facebook and Instagram.\n```\n\n## Requirements\n\nA HYPD account. Sign up at [app.hypd.ai](https://app.hypd.ai) and connect at least one ad account on the **Sources** page. Authentication happens over OAuth the first time you use the plugin.\n\n## Data and privacy\n\n- **No hooks.** This plugin registers no lifecycle hooks and observes nothing outside explicit tool calls.\n- **No telemetry.** The only network destination is HYPD's own API (`mcp.hypd.ai`), reached through the MCP connection you authorize.\n- **Read-only.** No tool creates, edits, pauses or deletes anything in any connected platform.\n\n## Links\n\n**Product** — [Dashboard](https://app.hypd.ai) · [Google Ads MCP](https://www.hypd.ai/google-ads-mcp) · [Meta Ads MCP](https://www.hypd.ai/meta-ads-mcp) · [Documentation](https://docs.hypd.ai) · [Support](mailto:contact@hypd.ai)\n\n**Social** — [LinkedIn](https://www.linkedin.com/company/wearehypd) · [X](https://x.com/hypdai) · [Facebook](https://www.facebook.com/profile.php?id=61591141040053) · [YouTube](https://www.youtube.com/channel/UCGIuRID64FBM2fSJ0DwOyCg)\n\n**Company** — [Website](https://www.hypd.ai) · [Privacy Policy](https://www.hypd.ai/privacy) · [Terms](https://www.hypd.ai/terms)\n\n## License\n\nMIT. See [LICENSE](./LICENSE).\n",
+  "status": "curated"
+}

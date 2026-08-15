@@ -1,0 +1,58 @@
+{
+  "id": "mcp:official/io.github.aklodhi98/human-standards",
+  "type": "mcp",
+  "name": "human-standards",
+  "description": "Read-only Human Standards guidance for accessible, usable interface design.",
+  "author": "io.github.aklodhi98",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/aklodhi98/humanstandards",
+    "repo": "aklodhi98/humanstandards"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@humanstandards/mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-15T12:13:38.019596Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": "# Human Standards\n\nHuman factors research translated into practical design standards, implementation guidance, and read-only context for AI agents.\n\n[Explore the live library](https://www.humanstandards.org/) · [Connect the MCP server](https://www.humanstandards.org/human-overview/mcp-server/) · [Read Study 001](https://www.humanstandards.org/studies/study-001-case-study/)\n\n[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)\n\n> **Is Human Standards useful to you?** [Star the project on GitHub](https://github.com/aklodhi98/humanstandards) to save it for later and help other practitioners discover it. You can also watch the repository for future releases or join the public [Discussions](https://github.com/aklodhi98/humanstandards/discussions).\n\n> **Study 001 is published as an exploratory coordinator-reviewed pilot.** Directed MCP access improved the automated results but did not reliably remove obvious usability and accessibility problems. The planned independent review was not completed, and the missing human outcome is reported explicitly. [Read the case study and evidence](https://www.humanstandards.org/studies/study-001-case-study/).\n\n## Why Human Standards exists\n\nProduct teams have access to extensive research on cognition, ergonomics, accessibility, usability, and human-computer interaction. Turning that evidence into a concrete design decision is still difficult—and AI-assisted product work makes the gap more visible.\n\nHuman Standards is an open-source reference library designed to make that knowledge easier to inspect and apply. People can browse the guidance directly. Compatible AI tools can retrieve the same material through a local, read-only MCP server.\n\nThe project does not claim to replace user research, accessibility testing, professional judgment, or the standards and studies it cites.\n\n## What is included\n\n- **Human factors guidance** — Cognition, perception, emotion, decision-making, ergonomics, accessibility, and social context\n- **Design and implementation guidance** — Interaction patterns, playbooks, code examples, and design-token constraints\n- **Research methods** — Usability testing, cognitive walkthroughs, metrics, and evaluation guidance\n- **Evidence and references** — Links to the standards, publications, and source material behind the guidance\n- **Machine-readable access** — Five read-only MCP tools for search, retrieval, heuristics, and relationship-first spatial-rhythm guidance\n- **Open evaluation** — Study protocols and evidence intended for independent review and reproducible analysis\n\n## Current status\n\nHuman Standards is actively developed and should be treated as a working reference library, not a finished or universally validated standard.\n\n- The documentation library is available at [humanstandards.org](https://www.humanstandards.org/).\n- The MCP server runs locally from the published npm package, uses bundled guidance, and does not write to projects or external services.\n- Study 001 is published as an exploratory pilot. Its protocol deviation, automated evidence, coordinator observations, condition mapping and missing independent-review outcome are public.\n- Gaps, corrections, competing evidence, and well-scoped contributions are welcome.\n\n## Use the documentation library\n\nStart with [Getting Started](https://www.humanstandards.org/human-overview/getting-started/) or browse the library by topic. Every page is designed to connect principles with practical decisions, implementation guidance, and primary or established sources where available.\n\nTo run the site locally:\n\n```bash\ngit clone https://github.com/aklodhi98/humanstandards.git\ncd humanstandards\nnpm ci\nnpm run dev\n```\n\nOpen [http://localhost:4321](http://localhost:4321) to view the local site.\n\n## Use the MCP server\n\nThe MCP server exposes the library to compatible AI tools through five read-only tools:\n\n- `search_standards`\n- `get_standard`\n- `get_heuristic`\n- `get_all_heuristics`\n- `get_spatial_rhythm`\n\nThe MCP client runs the npm package; it is not an application dependency and\ndoes not become part of the project being built:\n\n```bash\nnpx --yes @humanstandards/mcp-server\n```\n\nConfigure a compatible MCP client to run that command:\n\n```json\n{\n  \"mcpServers\": {\n    \"human-standards\": {\n      \"command\": \"npx\",\n      \"args\": [\"--yes\", \"@humanstandards/mcp-server\"]\n    }\n  }\n}\n```\n\nThe server communicates over standard input/output, reads no project files,\nopens no network port, and uses the Human Standards snapshot bundled with its\npackage release. See the [MCP setup guide](https://www.humanstandards.org/human-overview/mcp-server/) for Codex, Claude Desktop, Claude Code, source-build, and verification instructions.\n\n## Project commands\n\n| Command | Action |\n| :-- | :-- |\n| `npm ci` | Install the documentation-site dependencies from the lockfile |\n| `npm run dev` | Start the local site at `localhost:4321` |\n| `npm run build` | Build the production site to `./dist/` |\n| `npm run check` | Build the site and validate internal links |\n| `npm run preview` | Preview the production build locally |\n| `npm run build --prefix human-standards-mcp` | Compile the MCP server |\n| `npm test --prefix human-standards-mcp` | Run the MCP server tests after it has been built |\n\n## Contributing\n\nUseful contributions include:\n\n- correcting inaccurate, ambiguous, or outdated guidance;\n- adding stronger primary or established sources;\n- improving examples and implementation details;\n- identifying missing contexts, limitations, or accessibility considerations;\n- reporting defects in the website, standards index, or MCP server.\n\nRead [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution workflow, evidence expectations, content structure, and local checks. Questions and early ideas can start in [GitHub Discussions](https://github.com/aklodhi98/humanstandards/discussions); concrete defects belong in [Issues](https://github.com/aklodhi98/humanstandards/issues).\n\n## Licensing and attribution\n\n- **Original documentation and standards data:** [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)\n- **Software and code examples:** [MIT License](LICENSE.md)\n- **Third-party material:** retained under its original terms and documented in [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md)\n\nHuman Standards builds on work across human factors, cognitive psychology, HCI, UX, and accessibility. Source citations are included throughout the library, with broader starting points in the [academic research references](https://www.humanstandards.org/references/academic-research/) and [standards and guidelines](https://www.humanstandards.org/references/standards-guidelines/).\n\nBuilt with [Astro](https://astro.build) and [Starlight](https://starlight.astro.build). Maintained by [AK Lodhi](https://aklodhi.com).\n",
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/ameno-/pi-acidbath/library-access",
+  "type": "skill",
+  "name": "library-access",
+  "description": "Map and scan the installed ameno-/lib library locally, then pull one skill, agent, or assistant. Use when a needed skill is not in the default Acidbath roster, or when the user says scan the library / pull a skill / what skills do we have.",
+  "author": "ameno-",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ameno-/pi-acidbath/blob/HEAD/skills/library-access/SKILL.md",
+    "repo": "ameno-/pi-acidbath",
+    "path": "skills/library-access/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-15T05:10:05Z",
+    "score": 45,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/minorun365/my-claude-code-settings/kb-claude-code-best-practices",
+  "type": "skill",
+  "name": "kb-claude-code-best-practices",
+  "description": "Claude Code 公式ベストプラクティス・設定ガイド（rules / hooks / skills / subagents 等）の参照。WebFetch で最新内容を取得して回答する",
+  "author": "minorun365",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/minorun365/my-claude-code-settings/blob/HEAD/claude/skills/kb-claude-code-best-practices/SKILL.md",
+    "repo": "minorun365/my-claude-code-settings",
+    "path": "claude/skills/kb-claude-code-best-practices/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 97,
+    "pushed_at": "2026-08-14T20:53:48Z",
+    "score": 70,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 97
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "# みのるんのClaude Code設定\n\n人気のコーディングAIエージェント、Claude Codeの個人設定ファイル集。\n自分の設定を参考実装として公開しています。\n\n[Claude Codeライトユーザー目線で、万人受けする便利設定を紹介 - Qiita](https://qiita.com/minorun365/items/3711c0de2e2558adb7c8)\n\n## 構成\n\n```text\nclaude/                # Claude設定フォルダ（本来は頭に\".\"が付く）\n├── CLAUDE.md          # @AGENTS.md を読み込む最小エントリーポイント\n├── AGENTS.md          # Codex / Claude Code共通の作業ガイド\n├── settings.json      # 権限・フック・プラグイン・表示設定\n├── statusline.py      # ステータスライン\n├── rules/             # 外部発信、文章、ファイル操作、開発の罠などのルール\n├── hooks/             # 外部発信コマンドを確認するフック\n├── agents/            # カスタムエージェント\n└── skills/            # カスタムスキルと技術ナレッジ\n```\n\n## 読みどころ\n\n| ファイル | 中身 |\n|---|---|\n| [`claude/AGENTS.md`](claude/AGENTS.md) | 全体の作業ガイド |\n| [`claude/rules/development.md`](claude/rules/development.md) | zshのglob中断、`String.replace`の1回置換、macOS bash 3.2の変数展開など、エラーにならずに間違った結果を返す罠 |\n| [`claude/skills/writing-guide/SKILL.md`](claude/skills/writing-guide/SKILL.md) | AI臭い定型表現を避けるための執筆ガイド |\n| [`claude/skills/dreaming/SKILL.md`](claude/skills/dreaming/SKILL.md) | 夜間バッチで学びを抽出し、設定の重複・陳腐化を棚卸しする運用 |\n\nAWS関連は [AWS Agent Toolkit](https://github.com/aws/agent-toolkit-for-aws)（`aws-core` / `aws-agents`）を第一の入口にして、`kb-*` スキルは補足として使い分けています。\n\n公開版は参考用に調整しています。アカウント名、端末固有パス、接続先、認証情報は含めていないので、必要な値は各自のローカル設定で指定してください。\n\n## ライセンス\n\n[MIT](LICENSE)\n",
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/mmx0071/novel-agents/consistency-auditor",
+  "type": "skill",
+  "name": "consistency-auditor",
+  "description": "细读正文，对照设定与前章，输出 audit.json。",
+  "author": "mmx0071",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/mmx0071/novel-agents/blob/HEAD/integrations/dsh-preset-novelx/preset/skills/consistency-auditor/SKILL.md",
+    "repo": "mmx0071/novel-agents",
+    "path": "integrations/dsh-preset-novelx/preset/skills/consistency-auditor/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-14T09:02:08Z",
+    "score": 42,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

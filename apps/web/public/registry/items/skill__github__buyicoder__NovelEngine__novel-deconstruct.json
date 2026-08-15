@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/buyicoder/NovelEngine/novel-deconstruct",
+  "type": "skill",
+  "name": "novel-deconstruct",
+  "description": "拆解参考小说，提取可迁移的创作模式。快速模式(黄金三章)和深度模式(逐章情节点)。不复制原作事实。",
+  "author": "buyicoder",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/buyicoder/NovelEngine/blob/HEAD/skills/novel-deconstruct/SKILL.md",
+    "repo": "buyicoder/NovelEngine",
+    "path": "skills/novel-deconstruct/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-21T07:15:13Z",
+    "score": 37
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

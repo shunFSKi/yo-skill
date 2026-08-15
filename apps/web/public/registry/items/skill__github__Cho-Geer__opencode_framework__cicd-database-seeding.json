@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Cho-Geer/opencode_framework/cicd-database-seeding",
+  "type": "skill",
+  "name": "cicd-database-seeding",
+  "description": "Provides validated solutions for executing database seed scripts in CI/CD environments, preventing common module resolution and path errors. Invoke when working with database seeding (Prisma, TypeORM, Knex, etc.) in CI/CD pipelines.",
+  "author": "Cho-Geer",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Cho-Geer/opencode_framework/blob/HEAD/.opencode/skills/cicd-database-seeding/SKILL.md",
+    "repo": "Cho-Geer/opencode_framework",
+    "path": ".opencode/skills/cicd-database-seeding/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-31T01:53:24Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/Jamie-BitFlight/claude_skills/python-cli-architect",
+  "type": "skill",
+  "name": "python-cli-architect",
+  "description": "Use when the python-cli-architect agent needs project structure reference and task completion quality gates for Python CLI projects. Loaded automatically by the python-cli-architect agent — covers package layout, Hatchling configuration, and implementation quality criteria.",
+  "author": "Jamie-BitFlight",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Jamie-BitFlight/claude_skills/blob/HEAD/plugins/python3-development/skills/python-cli-architect/SKILL.md",
+    "repo": "Jamie-BitFlight/claude_skills",
+    "path": "plugins/python3-development/skills/python-cli-architect/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 64,
+    "pushed_at": "2026-08-14T10:21:19Z",
+    "score": 61,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 64
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

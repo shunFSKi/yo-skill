@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/forest6511/claude-code-recipes/security-scan",
+  "type": "skill",
+  "name": "security-scan",
+  "description": "Runs security vulnerability scanning and static analysis. Use when checking for security issues, vulnerabilities, CVEs, OWASP violations, or when the user mentions security review, penetration testing, or code audit.",
+  "author": "forest6511",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/forest6511/claude-code-recipes/blob/HEAD/ch09-skills-tips/recipe-48/good-descriptions/SKILL.md",
+    "repo": "forest6511/claude-code-recipes",
+    "path": "ch09-skills-tips/recipe-48/good-descriptions/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 6,
+    "pushed_at": "2026-05-26T14:21:50Z",
+    "score": 48,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 6
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/eleboucher/memini/status",
+  "type": "skill",
+  "name": "status",
+  "description": "Show memini connection health, effective settings, namespace provenance, and read set. Use for configuration or recall diagnostics.",
+  "author": "eleboucher",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/eleboucher/memini/blob/HEAD/plugin/skills/status/SKILL.md",
+    "repo": "eleboucher/memini",
+    "path": "plugin/skills/status/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 20,
+    "pushed_at": "2026-08-14T11:31:25Z",
+    "score": 57
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

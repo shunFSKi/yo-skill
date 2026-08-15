@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/cnbison/lbc-skills/podcastifier",
+  "type": "skill",
+  "name": "podcastifier",
+  "description": "Turn incoming text (email/newsletter) into a short TTS podcast with chunking + ffmpeg concat.",
+  "author": "cnbison",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/cnbison/lbc-skills/blob/HEAD/skills/agents-skill-podcastifier/SKILL.md",
+    "repo": "cnbison/lbc-skills",
+    "path": "skills/agents-skill-podcastifier/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-05-27T04:10:28Z",
+    "score": 40,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

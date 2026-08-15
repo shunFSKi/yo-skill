@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/moisur/courstrompette/git-manager",
+  "type": "skill",
+  "name": "git_manager",
+  "description": "Outils pour automatiser les tâches Git courantes (add, commit, push).",
+  "author": "moisur",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/moisur/courstrompette/blob/HEAD/.agent/skills/git_manager/SKILL.md",
+    "repo": "moisur/courstrompette",
+    "path": ".agent/skills/git_manager/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-07-03T17:04:02Z",
+    "score": 40,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}
