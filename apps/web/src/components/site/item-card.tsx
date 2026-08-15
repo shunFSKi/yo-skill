@@ -30,13 +30,24 @@ export function ItemCard({
       className={cn("yo-card flex h-full flex-col p-5", className)}
     >
       <div className="flex items-start gap-3">
-        <span
-          aria-hidden
-          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] text-sm font-bold text-white"
-          style={{ backgroundColor: dotColor(item.name) }}
-        >
-          {item.name.charAt(0).toUpperCase()}
-        </span>
+        {item.repo ? (
+          // GitHub 官方头像接口，next/image 白名单外域名，用原生 img
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={`https://github.com/${item.repo.split("/")[0]}.png?size=72`}
+            alt=""
+            loading="lazy"
+            className="h-9 w-9 shrink-0 rounded-[10px] border border-line bg-paper-deep"
+          />
+        ) : (
+          <span
+            aria-hidden
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] text-sm font-bold text-white"
+            style={{ backgroundColor: dotColor(item.name) }}
+          >
+            {item.name.charAt(0).toUpperCase()}
+          </span>
+        )}
         <div className="min-w-0">
           <h3 className="truncate text-base font-semibold leading-snug">
             {item.name}

@@ -24,6 +24,8 @@ export interface IndexItem {
   category: Category | null;
   featured: boolean;
   needsKey: boolean;
+  /** github owner/repo：卡片头像用（github.com/<owner>.png）；null 用色块兜底 */
+  repo: string | null;
 }
 
 export interface EnvVar {

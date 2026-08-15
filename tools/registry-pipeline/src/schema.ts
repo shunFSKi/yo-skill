@@ -82,6 +82,8 @@ export interface IndexItem {
   featured: boolean;
   /** MCP 有需要填的 env 时置 true，卡片给「需要 API Key」琥珀 chip */
   needsKey: boolean;
+  /** github owner/repo：卡片头像用（github.com/<owner>.png）；无 repo 的条目为 null，卡片用色块兜底 */
+  repo: string | null;
 }
 
 /** id → 文件/路由安全串（: 与 / 全替换） */
@@ -102,5 +104,6 @@ export function toIndexItem(item: RegistryItem): IndexItem {
     featured: item.tags.featured,
     needsKey:
       item.install?.env?.some((e) => e.required || e.secret) ?? false,
+    repo: item.source.repo,
   };
 }
