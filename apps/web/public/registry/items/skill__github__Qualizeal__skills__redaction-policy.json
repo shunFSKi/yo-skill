@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/Qualizeal/skills/redaction-policy",
+  "type": "skill",
+  "name": "redaction-policy",
+  "description": "What must never enter the knowledge store — credentials, production personal data, customer names, internal-only URLs — and the stop-and-report rule when any is found. Use before writing any artefact into the shared corpus.",
+  "author": "Qualizeal",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Qualizeal/skills/blob/HEAD/plugins/qa-knowledge-fabric/skills/redaction-policy/SKILL.md",
+    "repo": "Qualizeal/skills",
+    "path": "plugins/qa-knowledge-fabric/skills/redaction-policy/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-29T08:27:14Z",
+    "score": 45,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

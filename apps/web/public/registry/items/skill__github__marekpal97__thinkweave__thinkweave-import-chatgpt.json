@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/marekpal97/thinkweave/thinkweave-import-chatgpt",
+  "type": "skill",
+  "name": "thinkweave-import-chatgpt",
+  "description": "Inline ChatGPT-export import — walk conversations.json, summarize each thread via the running model, and weave_create one note per conversation. The `weave import chatgpt --via inline` path; pairs with `--via batch` which fans out via the API wrapper instead.",
+  "author": "marekpal97",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/marekpal97/thinkweave/blob/HEAD/skills/thinkweave-import-chatgpt/SKILL.md",
+    "repo": "marekpal97/thinkweave",
+    "path": "skills/thinkweave-import-chatgpt/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 9,
+    "pushed_at": "2026-08-10T16:38:41Z",
+    "score": 54,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 9
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

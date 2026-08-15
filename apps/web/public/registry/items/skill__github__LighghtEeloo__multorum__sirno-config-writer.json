@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/LighghtEeloo/multorum/sirno-config-writer",
+  "type": "skill",
+  "name": "sirno-config-writer",
+  "description": "Write, repair, or validate Sirno.toml. Use for creating or editing a Sirno project config, adding repository witness members, configuring structural fields, repairing missing generated comments, or explaining the exact Sirno.toml schema and validation workflow.",
+  "author": "LighghtEeloo",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/LighghtEeloo/multorum/blob/HEAD/.agents/skills/sirno-config-writer/SKILL.md",
+    "repo": "LighghtEeloo/multorum",
+    "path": ".agents/skills/sirno-config-writer/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 25,
+    "pushed_at": "2026-05-18T13:24:55Z",
+    "score": 53
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

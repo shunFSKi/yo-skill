@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/TWalkingSE/osint-sentinel/gerar-relatorio",
+  "type": "skill",
+  "name": "gerar-relatorio",
+  "description": "Produzir relatorio OSINT estruturado em 13 secoes para juntada em IPL/laudo. Acao E - Fase 5 (Producao). Integra com /cadeia-custodia e /grafo-conexoes.",
+  "author": "TWalkingSE",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/TWalkingSE/osint-sentinel/blob/HEAD/.claude/skills/gerar-relatorio/SKILL.md",
+    "repo": "TWalkingSE/osint-sentinel",
+    "path": ".claude/skills/gerar-relatorio/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-04-19T16:36:50Z",
+    "score": 35
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

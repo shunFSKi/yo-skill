@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/Fize/soloQueue/pua",
+  "type": "skill",
+  "name": "pua",
+  "description": "Forces exhaustive problem-solving with corporate PUA rhetoric. Trigger on: task failed 2+ times, about to give up, suggesting user do it manually, blaming environment unverified, stuck in loops, passive behavior, or user frustration ('try harder', 'figure it out', '换个方法', '为什么还不行'). ALL task types. Not for first failures.",
+  "author": "Fize",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Fize/soloQueue/blob/HEAD/skills/pua/SKILL.md",
+    "repo": "Fize/soloQueue",
+    "path": "skills/pua/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-13T11:52:39Z",
+    "score": 45,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

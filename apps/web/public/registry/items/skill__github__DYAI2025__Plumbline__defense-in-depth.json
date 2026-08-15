@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/DYAI2025/Plumbline/defense-in-depth",
+  "type": "skill",
+  "name": "defense-in-depth",
+  "description": "Use when designing verification strategy so independent gates cover requirements, implementation, security, validation, and judgment without claiming perfect certainty.",
+  "author": "DYAI2025",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/DYAI2025/Plumbline/blob/HEAD/config/claude/skills/defense-in-depth/SKILL.md",
+    "repo": "DYAI2025/Plumbline",
+    "path": "config/claude/skills/defense-in-depth/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 6,
+    "pushed_at": "2026-08-05T16:52:23Z",
+    "score": 53
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

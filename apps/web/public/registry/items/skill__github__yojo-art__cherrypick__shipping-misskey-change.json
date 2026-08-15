@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/yojo-art/cherrypick/shipping-misskey-change",
+  "type": "skill",
+  "name": "shipping-misskey-change",
+  "description": "Use at every finish moment of a Misskey change, before committing, opening a PR, merging, or handing work back, especially when validation, SPDX, locale safety, migrations, misskey-js generation, or CHANGELOG checks may apply.",
+  "author": "yojo-art",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/yojo-art/cherrypick/blob/HEAD/.agents/skills/shipping-misskey-change/SKILL.md",
+    "repo": "yojo-art/cherrypick",
+    "path": ".agents/skills/shipping-misskey-change/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 19,
+    "pushed_at": "2026-08-13T19:40:15Z",
+    "score": 57,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 19
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

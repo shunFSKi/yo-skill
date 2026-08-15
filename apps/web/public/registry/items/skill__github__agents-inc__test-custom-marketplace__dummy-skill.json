@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/agents-inc/test-custom-marketplace/dummy-skill",
+  "type": "skill",
+  "name": "dummy-skill",
+  "description": "Brief description of this skill",
+  "author": "agents-inc",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/agents-inc/test-custom-marketplace/blob/HEAD/src/skills/dummy-skill/SKILL.md",
+    "repo": "agents-inc/test-custom-marketplace",
+    "path": "src/skills/dummy-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-02-27T20:53:36Z",
+    "score": 29,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

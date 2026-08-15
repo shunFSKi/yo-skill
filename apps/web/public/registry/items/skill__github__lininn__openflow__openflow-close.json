@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/lininn/openflow/openflow-close",
+  "type": "skill",
+  "name": "openflow-close",
+  "description": "OpenFlow close: Verify consistency and archive. Visibility alias for openflow close.",
+  "author": "lininn",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/lininn/openflow/blob/HEAD/.claude/skills/openflow-close/SKILL.md",
+    "repo": "lininn/openflow",
+    "path": ".claude/skills/openflow-close/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 83,
+    "pushed_at": "2026-07-06T08:21:29Z",
+    "score": 64,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 83
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# @lininn/openflow\n\n[中文文档](./README.zh-CN.md)\n\nOpenSpec + Superpowers workflow orchestrator for agentic development.\n\nOpenFlow gives AI coding tools one spec-driven path from project context to requirements, implementation, verification, and archive. It initializes reusable skills for Claude Code, Codex, Cursor, and OpenCode; keeps OpenSpec change state visible; and translates requirements artifacts into executable Superpowers handoffs.\n\n## Installation\n\n```bash\nnpm install -g @lininn/openflow\n```\n\n## Usage\n\n### Initialize a project\n\n```bash\ncd your-project\nopenflow init --tools claude\n```\n\nCLI `init` will automatically:\n1. Detect and guide OpenSpec CLI installation\n2. Detect Superpowers and show install instructions\n3. Check if OpenSpec is initialized in the project\n4. Create or refine the OpenSpec project context scaffold in `openspec/config.yaml`\n5. Generate openflow skills to the selected tools' local skill directories, such as `.claude/skills/openflow/`, `.codex/skills/openflow/`, `.cursor/skills/openflow/`, or `.opencode/skills/openflow/`\n\nSupported tools: `claude`, `codex`, `cursor`, `opencode` (comma-separated, e.g. `--tools claude,codex`)\n\n### Install skills globally\n\n```bash\nopenflow init --tools claude -g\nopenflow init --tools claude,codex,cursor,opencode --global\n```\n\nWith `-g` / `--global`, `openflow` installs skills under the selected tools' home directories:\n\n| Tool | Global skill path |\n|------|-------------------|\n| `claude` | `~/.claude/skills/openflow/` |\n| `codex` | `~/.codex/skills/openflow/` |\n| `cursor` | `~/.cursor/skills/openflow/` |\n| `opencode` | `~/.opencode/skills/openflow/` |\n\nGlobal install only writes reusable skills. Project context is still initialized per repository with local `openflow init` or through the AI workflow command `/openflow init`.\n\n### Check status\n\n```bash\nopenflow status\n```\n\nShows dependency installation status and active changes in the project.\n\nStatus now renders an OpenFlow dashboard for each active OpenSpec change:\n\n- current phase and capture mode\n- source of truth, either `workflow-status.md` or inferred from files\n- phase gates such as requirements captured, specs validated, plan ready, implementation complete, verification complete, and archived\n- task counts, blockers, conflicts, and the recommended next command\n\n### Update skills\n\n```bash\nopenflow update\n```\n\nRe-generates project skills after upgrading the npm package.\n\n## Workflow Commands\n\nCanonical usage is `/openflow <phase>`. For Claude Code, Codex, and Cursor,\n`openflow` also generates visible phase aliases such as `/openflow-spec` or\n`$openflow-spec` so typing `openflow` in the command/skill picker surfaces the\navailable phases. OpenCode keeps its native command-tree form under\n`/openflow/spec`, `/openflow/build`, and so on.\n\n| Command | Phase | Description |\n|---------|-------|-------------|\n| `/openflow init` | init | Capture project introduction, rules, and implementation constraints |\n| `/openflow proposal` | proposal | Lightweight capture — 3-5 questions to converge on requirements |\n| `/openflow brainstorming` | brainstorming | Deep design — multi-round tradeoff exploration |\n| `/openflow grill` | grill | Optional stress-test — challenge proposal assumptions before spec |\n| `/openflow spec` | spec | Call OpenSpec to generate specs + auto-translate to plan-ready.md |\n| `/openflow amend` | amend | Revise requirements/specs before close and update plan-ready.md |\n| `/openflow build` | build | Call Superpowers to execute implementation |\n| `/openflow close` | close | Verify consistency + archive |\n\n`/openflow init` is the project-context phase. It scans the repository, captures the project's purpose, coding rules, architectural boundaries, and implementation constraints, then writes them to `openspec/config.yaml` so future proposal, spec, and build work has project-specific guidance.\n\n`/openflow grill` is optional: skip it when the proposal is already clear, or use it to challenge hidden assumptions before committing to specs. The spec phase treats `plan-ready.md` as a detailed Superpowers handoff, not a task summary: it must preserve source coverage, file responsibilities, implementation slices, TDD expectations, validation commands, and blockers.\n\nEach workflow phase maintains `openspec/changes/<change-id>/workflow-status.md`. Bare `/openflow` and phase commands read that status first, fall back to file-based inference when it is missing, and warn when status claims conflict with actual artifacts.\n\n## Dependency Strategy\n\n```\nBest with: OpenSpec + Superpowers\nWorks without them: yes, with manual-file fallback\n```\n\n| Dependency | Install | Fallback when missing |\n|------------|---------|----------------------|\n| OpenSpec | `npm install -g @fission-ai/openspec@latest` | Manually create `openspec/changes/` directories and files |\n| Superpowers | `/plugin install superpowers@claude-plugins-official` | Manually break down plan-ready.md steps in build phase |\n\n### Dual-layer dependency check\n\n| Layer | Mechanism | When missing |\n|-------|-----------|-------------|\n| **Init time** | Detect OpenSpec CLI from `PATH`; detect project OpenSpec in `./openspec/`; scaffold `openspec/config.yaml`; detect Superpowers in the selected tools' local/global skill dirs | Non-blocking, skills still generated |\n| **Runtime** | Dependency check injected into SKILL.md | Build phase falls back to manual step-by-step execution |\n\n## Architecture\n\n> Detailed diagrams: [Architecture (SVG)](./openflow-architecture.svg) | [Architecture (PNG)](./openflow-architecture.png) | [Workflow (SVG)](./openflow-workflow.svg) | [Workflow (PNG)](./openflow-workflow.png)\n\n![OpenFlow workflow](./openflow-workflow.svg)\n\n```\nUser Requirements\n   │\n   ├── Project context ──→ /openflow init ──→ openspec/config.yaml\n   │\n   ├── Quick ──→ /openflow proposal ──┐\n   │           3-5 questions          │\n   │                                  ├─→ proposal.md\n   └── Deep ───→ /openflow brainstorming ─┘ (openspec/changes/<name>/)\n               Multi-round exploration\n                                     │\n                          ┌──────────▼───────────┐\n                          │  /openflow grill      │\n                          │  Optional stress-test │\n                          └──────────┬───────────┘\n                                     │\n                          ┌──────────▼───────────┐\n                          │  /openflow spec         │\n                          │  OpenSpec generates     │\n                          └──────────┬───────────┘\n                                     │\n                          ┌──────────▼───────────┐\n                          │   Translation Layer    │\n                          │  Requirements → Eng    │\n                          └──────────┬───────────┘\n                                     │\n                                plan-ready.md\n                                     │\n                             workflow-status.md\n                        phase gates, tasks, blockers\n                                     │\n                          ┌──────────▼───────────┐\n                          │  /openflow build       │\n                          │  Superpowers execution │\n                          │  TDD + checkpoint      │\n                          └──────────┬───────────┘\n                                     │\n                          ┌──────────▼───────────┐\n                          │  /openflow amend       │\n                          │  Requirement revision  │\n                          │  (only when needed)    │\n                          └──────────┬───────────┘\n                                     │\n                          ┌──────────▼───────────┐\n                          │  /openflow close       │\n                          │  Verify + archive      │\n                          └──────────────────────┘\n```\n\n## Sponsored by\n\n🚀 **[GLM-5.2 — Free to use!](https://maas.xfyun.cn/packageSubscription?inviteCode=MAAS-E4248A94)** — Experience the latest GLM-5.2 model on iFlytek MaaS platform. Click to start using it now.\n\n## Acknowledgments\n\nopenflow orchestrates two open-source projects:\n\n| Project | Repository | License | Usage |\n|---------|-----------|---------|-------|\n| [OpenSpec](https://github.com/Fission-AI/OpenSpec) | `@fission-ai/openspec` | MIT | Generates structured spec files (proposal.md, design.md, specs/, tasks.md). openflow calls its CLI and reads its output format. |\n| [Superpowers](https://github.com/obra/superpowers) | `superpowers` plugin | MIT | Provides `writing-plans` skill for detailed implementation planning. openflow delegates build-phase execution to its workflow. |\n\nopenflow is a **standalone orchestrator** — it does not bundle, fork, or embed code from either project. Dependencies are detected at init/runtime, with manual fallback when either is not installed.\n\n## License\n\nMIT\n",
+  "status": "curated"
+}

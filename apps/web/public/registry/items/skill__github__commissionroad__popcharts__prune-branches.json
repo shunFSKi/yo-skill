@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/commissionroad/popcharts/prune-branches",
+  "type": "skill",
+  "name": "prune-branches",
+  "description": "Delete branches and worktrees that no longer back live work — merged branches, closed-PR branches, and leftover worktree directories. Use for /prune-branches or whenever the user asks to clean up stale branches or worktrees.",
+  "author": "commissionroad",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/commissionroad/popcharts/blob/HEAD/.agents/skills/prune-branches/SKILL.md",
+    "repo": "commissionroad/popcharts",
+    "path": ".agents/skills/prune-branches/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-14T10:25:53Z",
+    "score": 45,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

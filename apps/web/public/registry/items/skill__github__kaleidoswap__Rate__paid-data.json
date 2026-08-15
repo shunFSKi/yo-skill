@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/kaleidoswap/Rate/paid-data",
+  "type": "skill",
+  "name": "paid-data",
+  "description": "Fetch premium or paywalled data that requires a small Lightning (L402) payment — paid feeds, gated APIs, unlockable resources. Triggers when the user wants premium, paid, or unlockable data behind an L402 paywall.",
+  "author": "kaleidoswap",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/kaleidoswap/Rate/blob/HEAD/skills/paid-data/SKILL.md",
+    "repo": "kaleidoswap/Rate",
+    "path": "skills/paid-data/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 3,
+    "pushed_at": "2026-08-11T09:06:22Z",
+    "score": 50,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 3
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

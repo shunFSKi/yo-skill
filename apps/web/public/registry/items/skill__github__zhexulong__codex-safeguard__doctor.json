@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/zhexulong/codex-safeguard/doctor",
+  "type": "skill",
+  "name": "doctor",
+  "description": "Run Codex Safeguard diagnostics to verify hooks, self-tests, and recent activity for the current repository.",
+  "author": "zhexulong",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/zhexulong/codex-safeguard/blob/HEAD/skills/doctor/SKILL.md",
+    "repo": "zhexulong/codex-safeguard",
+    "path": "skills/doctor/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 6,
+    "pushed_at": "2026-03-27T20:31:58Z",
+    "score": 43,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 6
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

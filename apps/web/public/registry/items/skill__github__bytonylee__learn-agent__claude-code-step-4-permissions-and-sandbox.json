@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/bytonylee/learn-agent/claude-code-step-4-permissions-and-sandbox",
+  "type": "skill",
+  "name": "claude-code-step-4-permissions-and-sandbox",
+  "description": "Teach Claude Code permission modes, /permissions, /sandbox, allow/ask/deny rules, and fewer-permission-prompts.",
+  "author": "bytonylee",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/bytonylee/learn-agent/blob/HEAD/.claude/skills/claude-code-step-4-permissions-and-sandbox/SKILL.md",
+    "repo": "bytonylee/learn-agent",
+    "path": ".claude/skills/claude-code-step-4-permissions-and-sandbox/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-02T13:36:25Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

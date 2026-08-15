@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/Manshawar/toolkit/tkt-gc",
+  "type": "skill",
+  "name": "tkt-gc",
+  "description": "用本机 tkt CLI 分析 diff 并提交。需要固定提交流水线时调用命令，不要在对话里重做 commit 编排。",
+  "author": "Manshawar",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Manshawar/toolkit/blob/HEAD/skills/tkt-gc/SKILL.md",
+    "repo": "Manshawar/toolkit",
+    "path": "skills/tkt-gc/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-13T12:12:45Z",
+    "score": 42,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

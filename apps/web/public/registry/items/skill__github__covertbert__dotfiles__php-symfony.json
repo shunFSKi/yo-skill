@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/covertbert/dotfiles/php-symfony",
+  "type": "skill",
+  "name": "php-symfony",
+  "description": "Use when working in a PHP or Symfony repository, running PHP tests, static analysis (Psalm, PHP CS Fixer), or Docker-based checks. Covers required Docker Compose workflow and test scope rules.",
+  "author": "covertbert",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/covertbert/dotfiles/blob/HEAD/config/pi/skills/php-symfony/SKILL.md",
+    "repo": "covertbert/dotfiles",
+    "path": "config/pi/skills/php-symfony/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-12T08:33:53Z",
+    "score": 45,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

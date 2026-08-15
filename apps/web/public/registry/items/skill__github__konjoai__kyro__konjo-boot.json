@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/konjoai/kyro/konjo-boot",
+  "type": "skill",
+  "name": "konjo-boot",
+  "description": "Use at the start of every session to orient yourself in the kyro codebase and load the Konjo quality mindset.",
+  "author": "konjoai",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/konjoai/kyro/blob/HEAD/.claude/skills/konjo-boot/SKILL.md",
+    "repo": "konjoai/kyro",
+    "path": ".claude/skills/konjo-boot/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-06-22T02:55:04Z",
+    "score": 44,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 2
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

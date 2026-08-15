@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/TheOrcDev/8bitcn-ui/js-set-map-lookups",
+  "type": "skill",
+  "name": "js-set-map-lookups",
+  "description": "Use Set and Map for O(1) membership lookups instead of array.includes(). Apply when checking membership repeatedly or performing frequent lookups against a collection.",
+  "author": "TheOrcDev",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/TheOrcDev/8bitcn-ui/blob/HEAD/.claude/skills/js-set-map-lookups/SKILL.md",
+    "repo": "TheOrcDev/8bitcn-ui",
+    "path": ".claude/skills/js-set-map-lookups/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1988,
+    "pushed_at": "2026-08-08T12:42:00Z",
+    "score": 85,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1988
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": "<div align=\"center\">\n\n# 8bitcn/ui\n\n<p><strong>Accessible retro components that you can copy and paste into your apps.<br>Free. Open Source. Built on shadcn/ui.</strong></p>\n\n<a href=\"https://8bitcn.com\">\n  <picture>\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"./public/assets/8bitcn-showcase-dark.png\">\n    <source media=\"(prefers-color-scheme: light)\" srcset=\"./public/assets/8bitcn-showcase-light.png\">\n    <img alt=\"8bitcn/ui components\" src=\"./public/assets/8bitcn-showcase-light.png\">\n  </picture>\n</a>\n\n<p>\n  <a href=\"https://github.com/TheOrcDev/8bitcn-ui/stargazers\"><img alt=\"Stars\" src=\"https://shieldcn.dev/github/stars/TheOrcDev/8bitcn-ui.svg\"></a>\n  <a href=\"https://github.com/TheOrcDev/8bitcn-ui/forks\"><img alt=\"Forks\" src=\"https://shieldcn.dev/github/forks/TheOrcDev/8bitcn-ui.svg\"></a>\n  <a href=\"/license.md\"><img alt=\"License\" src=\"https://shieldcn.dev/github/license/TheOrcDev/8bitcn-ui.svg\"></a>\n  <a href=\"https://ui.shadcn.com\"><img alt=\"Built with shadcn/ui\" src=\"https://shieldcn.dev/badge/built_with-shadcn%2Fui.svg?logo=shadcnui\"></a>\n  <a href=\"https://github.com/sponsors/theorcdev\"><img alt=\"Sponsor\" src=\"https://shieldcn.dev/badge/sponsor-%E2%9D%A4.svg?logo=githubsponsors&logoColor=18181b\"></a>\n</p>\n\n<p>\n  <a href=\"https://8bitcn.com/docs\"><strong>Documentation</strong></a> ·\n  <a href=\"https://8bitcn.com/docs/components\"><strong>Components</strong></a> ·\n  <a href=\"https://8bitcn.com/docs/blocks\"><strong>Blocks</strong></a> ·\n  <a href=\"https://8bitcn.com/themes\"><strong>Themes</strong></a> ·\n  <a href=\"https://discord.com/invite/uFB5YzH9YG\"><strong>Discord</strong></a>\n</p>\n\n</div>\n\n## Contributing\n\nPlease read the [contributing guide](/contributing.md).\n\n### Usage Example\n\nTo add the `button` component to your project, run the following command:\n\n```bash\npnpm dlx shadcn@latest add @8bitcn/button\n```\n\nOnce installed, you can import and use the component in your files:\n\n```typescript\nimport { Button } from \"@/components/ui/8bit\";\n\nexport default function App() {\n  return <Button>Click me</Button>;\n}\n```\n\n**Note:** The import path `@/components/ui/8bit` assumes your project has a path alias configured (common in Next.js and similar frameworks). Adjust the path to match your project's structure if needed.\n\n<p align=\"center\">\n  <img src=\"./public/images/readme/8bitcn-button-example.png\" alt=\"8bitcn Button example\" />\n</p>\n\n## License\n\nLicensed under the [MIT license](/license.md).\n\n## Open Source Program\n\n<a href=\"https://vercel.com/oss\">\n  <img alt=\"Vercel OSS Program\" src=\"https://vercel.com/oss/program-badge.svg\" />\n</a>\n\n## Star History\n\n[![RepoStars](https://repostars.dev/api/embed?repo=TheOrcDev%2F8bitcn-ui&theme=terminal)](https://repostars.dev/?repos=TheOrcDev%2F8bitcn-ui&theme=terminal)\n",
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/yabafre/pekulo/aped-from-ticket",
+  "type": "skill",
+  "name": "aped-from-ticket",
+  "description": "Use when user says \"from ticket\", \"pickup ticket\", \"pickup from Linear\", \"pickup from Jira\", \"work on this ticket\", \"start the GitHub issue\", \"ingest ticket\", references an external ticket ID, \"aped from-ticket\", or invokes aped-from-ticket.",
+  "author": "yabafre",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/yabafre/pekulo/blob/HEAD/.aped/aped-from-ticket/SKILL.md",
+    "repo": "yabafre/pekulo",
+    "path": ".aped/aped-from-ticket/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-29T11:47:00Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/RasaHQ/rasa-maestro-voice-agent-tutorial/flight-status",
+  "type": "skill",
+  "name": "flight_status",
+  "description": "Look up live flight status for a Horizon Travel booking. Activate for delays, gates, cancellations, or \"is my flight on time\".",
+  "author": "RasaHQ",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/RasaHQ/rasa-maestro-voice-agent-tutorial/blob/HEAD/tutorial/snippets/step-03-constraints/skills/flight_status/skill.md",
+    "repo": "RasaHQ/rasa-maestro-voice-agent-tutorial",
+    "path": "tutorial/snippets/step-03-constraints/skills/flight_status/skill.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-10T13:34:56Z",
+    "score": 45,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

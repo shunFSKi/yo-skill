@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/danstrem2/clawdbot-skill-master-pack/project-status",
+  "type": "skill",
+  "name": "project-status",
+  "description": "Checks the health of the project, including PM2 services, disk space, and configuration.",
+  "author": "danstrem2",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/danstrem2/clawdbot-skill-master-pack/blob/HEAD/skills/project-status/SKILL.md",
+    "repo": "danstrem2/clawdbot-skill-master-pack",
+    "path": "skills/project-status/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-01-31T16:24:10Z",
+    "score": 31
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

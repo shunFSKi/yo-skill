@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/Tenon-Net/TenonAdmin/tenon-release",
+  "type": "skill",
+  "name": "tenon-release",
+  "description": "TenonAdmin（榫卯）专用发版流程——定版、CHANGELOG、双前端 version bump、文档站 site/.vitepress 导航徽章、本地验绿、合 main、打 v* tag、盯 backend-release、改 GitHub Release 说明。当用户在本仓要发版、发布 TenonAdmin、tenon-release、打 tag、推 NuGet、准备 X.Y.Z 时使用。勿用于其他项目。",
+  "author": "Tenon-Net",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Tenon-Net/TenonAdmin/blob/HEAD/.agents/skills/tenon-release/SKILL.md",
+    "repo": "Tenon-Net/TenonAdmin",
+    "path": ".agents/skills/tenon-release/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 23,
+    "pushed_at": "2026-08-13T00:28:08Z",
+    "score": 57,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 23
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

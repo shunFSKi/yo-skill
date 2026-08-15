@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/pasindudilshan1/lanka-finance-skills/cse-company-snapshot",
+  "type": "skill",
+  "name": "cse-company-snapshot",
+  "description": "Pull a Colombo Stock Exchange company snapshot for a symbol such as LOLC.N0000, including live or latest price, change percent, market cap, sector, and source metadata via the unofficial CSE companyInfoSummery endpoint.",
+  "author": "pasindudilshan1",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/pasindudilshan1/lanka-finance-skills/blob/HEAD/plugins/lk-market-analysis/skills/cse-company-snapshot/SKILL.md",
+    "repo": "pasindudilshan1/lanka-finance-skills",
+    "path": "plugins/lk-market-analysis/skills/cse-company-snapshot/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-26T18:38:56Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

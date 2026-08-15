@@ -48,7 +48,7 @@
   "quality": {
     "stars": null,
     "pushed_at": "2026-08-14T14:14:46.170896Z",
-    "score": 52
+    "score": 42
   },
   "security": {
     "score": 100,
@@ -80,6 +80,6 @@
     "category": null,
     "featured": false
   },
-  "readme": "# Peer Cash MCP server\n\nAn MCP server for agents that need to cash out Base USDC through [Peer Cash](https://github.com/zkp2p/peer-cash). It exposes live payout capabilities, oracle estimates, unsigned transaction preparation, receipt finalization, order reads, withdrawals, and top-ups.\n\nThe server never accepts private keys or submits transactions. Write tools return unsigned Base transactions for the host wallet to review, approve, sign, and confirm.\n\nThe repository is also an [Agent Plugins 1.0](https://agent-plugins.org/specification) package. `plugin.json` identifies the package, `skills/peer-cash/SKILL.md` provides the portable workflow, and `mcp.json` starts the published server without embedding credentials.\n\n## Run\n\n```json\n{\n  \"mcpServers\": {\n    \"peer-cash\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"peer-cash-mcp\"]\n    }\n  }\n}\n```\n\nThe default environment is production and the public Base RPC is sufficient for normal reads. Optional environment variables:\n\n| Variable                  | Purpose                                                    |\n| ------------------------- | ---------------------------------------------------------- |\n| `PEER_CASH_ENVIRONMENT`   | `production`, `preproduction`, or `staging`                |\n| `PEER_CASH_RPC_URL`       | Custom Base RPC for reads and receipt finalization         |\n| `PEER_CASH_API_KEY`       | Curator API key when the selected environment requires one |\n| `PEER_CASH_REFERRAL_CODE` | Six-character Peer integration referral code               |\n| `PEER_CASH_REFERRER`      | Analytics-only ERC-8021 attribution code                   |\n\n## Tool flow\n\n1. Call `peer_cash_capabilities` before naming a payout platform or currency.\n2. Call `peer_cash_estimate`. Treat it as approximate: the binding Chainlink rate resolves when a buyer fills.\n3. Call `peer_cash_prepare` with a Base USDC amount in 6-decimal base units and one or more payout legs.\n4. Show the returned transaction plan and obtain explicit user approval.\n5. Submit each transaction in order through the host wallet and confirm it on Base.\n6. Call `peer_cash_finalize` with the confirmed `createDeposit` transaction hash.\n7. If `accessPolicyRequired` was true, call `peer_cash_prepare_access_policy` and submit that transaction with the depositor wallet.\n8. Persist the returned `depositId` for order tracking and recovery.\n\nUnknown transaction outcomes must be inspected before any resubmission. Peer Cash errors include a code, retryability, remediation, and recovery evidence for this purpose.\n\n## Development\n\n```bash\nbun install\nbun run ci\n```\n\nRequires Node.js 22 or newer.\n\nValidate the portable package separately from the server test suite:\n\n```bash\nnpx skills-ref validate skills/peer-cash\n```\n",
+  "readme": null,
   "status": "curated"
 }

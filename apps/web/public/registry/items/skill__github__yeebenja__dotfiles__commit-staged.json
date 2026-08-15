@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/yeebenja/dotfiles/commit-staged",
+  "type": "skill",
+  "name": "commit-staged",
+  "description": "Use when the user asks to commit staged file changes, or says \"commit staged\", \"commit my changes\", or similar. Runs `git diff --cached` and generates a conventional commit message, then commits.",
+  "author": "yeebenja",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/yeebenja/dotfiles/blob/HEAD/.config/opencode/skills/commit-staged/SKILL.md",
+    "repo": "yeebenja/dotfiles",
+    "path": ".config/opencode/skills/commit-staged/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 3,
+    "pushed_at": "2026-08-04T16:28:29Z",
+    "score": 50,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 3
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/bianhaifeng789-hue/openclaw-config/check-context-warnings-pattern",
+  "type": "skill",
+  "name": "check-context-warnings-pattern",
+  "description": "上下文警告检查模式。检测上下文异常，发送警告通知。Use when detecting context anomalies.",
+  "author": "bianhaifeng789-hue",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/bianhaifeng789-hue/openclaw-config/blob/HEAD/skills-experimental/check-context-warnings-pattern/SKILL.md",
+    "repo": "bianhaifeng789-hue/openclaw-config",
+    "path": "skills-experimental/check-context-warnings-pattern/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-05-04T01:22:12Z",
+    "score": 32
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

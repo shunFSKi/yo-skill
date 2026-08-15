@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/ivfarias/workspace-socrates/awaken-socrates",
+  "type": "skill",
+  "name": "awaken-socrates",
+  "description": "Thematic alias for installer bootstrap. Usage: /awaken_socrates [--agent-id <id>] [--workspace <path>] [--set-default] [--model-primary <id>] [--fallback <id>] [--wizard-model]",
+  "author": "ivfarias",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ivfarias/workspace-socrates/blob/HEAD/skills/awaken-socrates/SKILL.md",
+    "repo": "ivfarias/workspace-socrates",
+    "path": "skills/awaken-socrates/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-03-25T20:32:30Z",
+    "score": 38,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

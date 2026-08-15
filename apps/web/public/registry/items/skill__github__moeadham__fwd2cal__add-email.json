@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/moeadham/fwd2cal/add-email",
+  "type": "skill",
+  "name": "add-email",
+  "description": "Link an additional email address to the user's fwd2cal account. Pattern \"add\" followed by a valid email address can appear in subject OR body.",
+  "author": "moeadham",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/moeadham/fwd2cal/blob/HEAD/functions/src/agents/calendar/skills/add-email/SKILL.md",
+    "repo": "moeadham/fwd2cal",
+    "path": "functions/src/agents/calendar/skills/add-email/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 34,
+    "pushed_at": "2026-03-02T06:24:49Z",
+    "score": 59,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 34
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": "\n# fwd2cal\n\nforward an email => get calendar event\n\nThat's it. No buttons, no clicking - just forward an email, and a calendar event gets added to your Google Calendar.\n\nfwd2cal uses an LLM to parse the thread, generate a JSON of the event details, and then adds the event to your google calendar.\n\n[fwd2cal.com](https://www.fwd2cal.com) - running in production, free until it gets annoying/expensive to run.\n\nhttps://github.com/moeadham/fwd2cal/assets/2141397/bb081bb1-9518-4cb4-8bcb-a1b6559f0eb5\n\n\nYou can self host - it runs on firebase functions.\n\n## Features:\n\n- Signup with an email: just email calendar@fwd2cal.com and you'll be sent a google auth link.\n- Send from multiple email addresses: send `add myworkemail@address.com` in the subject line to calendar@fwd2cal.com, and then you can add events to your google calendar from another email address\n- ICS attachment support: Forward emails with .ics calendar attachments to automatically add them to your calendar\n- Multi-event extraction: Extract and add multiple events from a single email\n- Email threading: Replies appear in the same email thread for better organization\n- Completely private: No logging, or storage of any emails. All that is stored are your email addresses.\n- That's it. The goal is to just do one thing correctly and stay out of the way of the user.\n\n## Self hosting setup\n\nYou will need:\n1. a firebase project\n2. an OpenRouter API key (for LLM access)\n3. a Resend account for sending and receiving emails\n\nWhen you deploy or run the emulator `firebase emulators:start`, Firebase will prompt you to set the required parameters:\n- `OPENROUTER_API_KEY` - Your OpenRouter API key\n- `RESEND_API_KEY` - Your Resend API key\n- `RESEND_SIGNING_SECRET` - Resend webhook signing secret\n- `POSTHOG_API_KEY` - (Optional) PostHog API key for analytics\n- `ENVIRONMENT_NAME` - (Optional) Defaults to \"production\"\n\nConfigure Resend to forward incoming emails to your Firebase Functions webhook:\n- In your Resend dashboard, set up email forwarding to: `https://{your project name}.web.app/v2/resendInboundCallback`\n- be sure to copy the RESEND_SIGNING_SECRET after you set your callback url\n- Make sure to configure your domain's DNS records in Resend to receive emails\n\n## Local setup\n\nCreate a `functions/.env` file with your local development credentials:\n```bash\n# Environment Configuration\nENVIRONMENT_NAME=local\n\n# API Keys\nOPENROUTER_API_KEY=sk-or-v1-YOUR_API_KEY\n\n# Resend\nRESEND_API_KEY=re_YOUR_API_KEY\nRESEND_SIGNING_SECRET=whsec_YOUR_SECRET\n\n# PostHog Analytics (optional)\nPOSTHOG_API_KEY=phc_YOUR_API_KEY\n```\n\nAlso - you're probably going to want to save your credentials from https://console.cloud.google.com/apis/credentials to: `functions/auth/v2-google-auth-credentials.json`.\n\nYou want to make sure your `redirect_uris` are setup correctly. It is a list, [0] should be the default from firebase, [1] should be `http://127.0.0.1:5002/v2/oauthCallback` for local development, and [2] should be the prod url.\n\n\n## Testing\n\n```bash\nexport TESTER_PRIMARY_GOOGLE_ACCT=\"your@gmail.com\"\nexport TESTER_SECONDARY_EMAIL_ACCT=\"anotherEmailAddressThatYouUse@anything.com\"\ncd functions\nnpm test\n```\nMake sure you authorize your google account in 30 seconds after starting the test so the tests can run.\n\nThe test suite uses a mock Resend client to simulate email sending and receiving without making actual API calls.\n\nTo test scheduled functions (note: token refresh is currently disabled):\n```bash\nfirebase functions:shell\nv2refreshTokensScheduled()\n```\n\n## Contributing\n\nAll contributions are welcome. I will do by best to keep `main` stable.\n\n### Where you can help:\n\n- `functions/util/prompts.js` - Prompt engineers can help here. If you notice fwd2cal fail to add your event correctly, consider adding examples to the prompts to improve the AI's understanding.\n- Timezones - The current timezone detection could be improved for better accuracy across different formats and locations.\n- Multiple calendars: Right now all events are added to the default calendar - the AI could potentially understand context and select an appropriate calendar.\n- Find a way to add a test for the oAuth refresh tokens.\n\n## Author\n\nThis was written by [@moeadham](https://twitter.com/moeadham) to get familiar with firebase and structured data from LLMs - training for a much larger project I'm working on.\n",
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/mbaker95/nanodex/update-nanodex",
+  "type": "skill",
+  "name": "update-nanodex",
+  "description": "Bring upstream NanoDex changes into a customized fork while preserving local modifications.",
+  "author": "mbaker95",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/mbaker95/nanodex/blob/HEAD/.agents/skills/update-nanodex/SKILL.md",
+    "repo": "mbaker95/nanodex",
+    "path": ".agents/skills/update-nanodex/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-03-12T15:02:12Z",
+    "score": 32,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

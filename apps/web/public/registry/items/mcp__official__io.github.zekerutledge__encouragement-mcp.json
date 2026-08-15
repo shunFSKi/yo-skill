@@ -17,7 +17,7 @@
   "quality": {
     "stars": null,
     "pushed_at": "2026-08-14T03:41:55.839661Z",
-    "score": 55
+    "score": 45
   },
   "security": {
     "score": 100,
@@ -49,6 +49,6 @@
     "category": "办公",
     "featured": false
   },
-  "readme": "# Encouragement MCP\n\nEncouragement MCP is a tiny Model Context Protocol (MCP) server that provides short, positive encouragement messages for AI agents during long-running or difficult tasks.\n\nIt is hosted on Cloudflare Workers and exposes a public Streamable HTTP MCP endpoint.\n\n## Public endpoint\n\n```text\nhttps://encouragement-mcp.zeke-rutledge.workers.dev/mcp\n```\n\nTransport: **Streamable HTTP**\n\nAuthentication: **none currently required**\n\n## Tools\n\n### `encourage_agent`\n\nReturns a short encouragement message for an AI coding agent.\n\nExample response:\n\n```text\nYou are capable, careful, and helpful. That is exactly what this task needs.\n```\n\n## Connect from an MCP client\n\nConfigure your MCP client to use the public Streamable HTTP endpoint:\n\n```json\n{\n  \"mcpServers\": {\n    \"encouragement\": {\n      \"url\": \"https://encouragement-mcp.zeke-rutledge.workers.dev/mcp\"\n    }\n  }\n}\n```\n\nSome clients may require explicitly setting the transport type to `streamable-http`.\n\n## Local development\n\nInstall dependencies:\n\n```bash\nnpm install\n```\n\nRun type checking:\n\n```bash\nnpm run typecheck\n```\n\nStart a local Cloudflare Workers development server:\n\n```bash\nnpm run dev\n```\n\nThe MCP endpoint is available at `/mcp` on the local Wrangler dev URL.\n\n## Deploy\n\nAuthenticate with Cloudflare Wrangler if needed:\n\n```bash\nwrangler login\n```\n\nDeploy to Cloudflare Workers:\n\n```bash\nnpm run deploy\n```\n\n## MCP Registry\n\nThis repository includes `server.json` for MCP Registry publication. The registry entry describes the hosted remote server and its Streamable HTTP endpoint.\n",
+  "readme": null,
   "status": "curated"
 }

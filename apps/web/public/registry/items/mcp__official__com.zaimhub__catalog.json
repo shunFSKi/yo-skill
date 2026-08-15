@@ -1,0 +1,54 @@
+{
+  "id": "mcp:official/com.zaimhub/catalog",
+  "type": "mcp",
+  "name": "catalog",
+  "description": "Read-only catalog of Russian MFOs: loan terms, Bank of Russia registry data, ratings, reviews.",
+  "author": "com.zaimhub",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/alexandrrzk-ctrl/zaimhub-mcp",
+    "repo": "alexandrrzk-ctrl/zaimhub-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://zaimhub.com/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T17:11:06.674217Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# ZaimHub — Russia Microloans Catalog (MCP Server)\n\nPublic **read-only** [Model Context Protocol](https://modelcontextprotocol.io) server for the catalog of Russian microfinance organizations (MFOs) listed in the state registry of the Bank of Russia, powered by [zaimhub.com](https://zaimhub.com) — ZaimHub, a Russian MFO comparison marketplace.\n\n| | |\n|---|---|\n| **Endpoint** | `https://zaimhub.com/api/mcp` |\n| **Transport** | Streamable HTTP (stateless) |\n| **Authentication** | none (public data) |\n| **Registry** | [`com.zaimhub/catalog`](https://registry.modelcontextprotocol.io/v0/servers?search=zaimhub) (official MCP Registry, domain-verified) |\n| **Server card** | [`/.well-known/mcp/server-card.json`](https://zaimhub.com/.well-known/mcp/server-card.json) |\n| **Language** | Russian (`ru`) |\n| **Rate limit** | 60 requests/min per IP → HTTP 429 |\n\nEvery entity in every response carries a `canonical_url` pointing to the live page on zaimhub.com.\n\n## Tools\n\n| Tool | Parameters | Returns |\n|---|---|---|\n| `list_mfo` | `limit?` (default 50) | All MFOs with borrower rating, quick terms and canonical card URLs, ordered by rating position. |\n| `get_mfo` | `slug` | Full MFO card: terms for new/repeat clients (amount, term, rate, full cost of credit), borrower requirements, fees, legal entity, OGRN, Bank of Russia registry number, 4-criteria rating, record update date. Empty fields are omitted. |\n| `search_offers` | `amount?`, `term_days?`, `first_loan_zero?`, `limit?` (default 15) | Matching first-loan offers with terms, `first_loan_zero_percent: true/false/null` (null = unconfirmed), honest `total` + `truncated`. |\n| `list_categories` | — | Catalog categories grouped as on the site (popular, by payout method, by amount/term, by borrower type, other), each with its selection criterion. |\n| `get_category` | `slug` | One category: criterion, sorting, offer table with per-MFO terms. |\n| `get_reviews` | `slug`, `limit?` (≤50, default 10) | Latest borrower reviews for an MFO: rating, date, text. |\n| `get_market_rules` | — | Legal context of microlending in Russia (0.8%/day rate cap under Art. 6.1 of Law 353-FZ, 100% total-cost cap since 2026-04-01, self-ban via Gosuslugi, cooling-off periods, debt collection rules under Law 230-FZ) with last-review date. |\n\nResources: [`llms.txt`](https://zaimhub.com/llms.txt) and [`llms-full.txt`](https://zaimhub.com/llms-full.txt).\n\n## Installation\n\n### Claude (claude.ai / Claude Desktop)\n\n1. **Settings → Connectors → Add custom connector**\n2. Name: `ZaimHub catalog`, URL: `https://zaimhub.com/api/mcp`\n3. Save. No API keys or OAuth — the server is public and read-only.\n\n### Any MCP client (generic)\n\nPoint your client at the remote Streamable HTTP endpoint:\n\n```json\n{\n  \"mcpServers\": {\n    \"zaimhub-catalog\": {\n      \"type\": \"streamable-http\",\n      \"url\": \"https://zaimhub.com/api/mcp\"\n    }\n  }\n}\n```\n\nQuick sanity check with MCP Inspector:\n\n```bash\nnpx @modelcontextprotocol/inspector --cli https://zaimhub.com/api/mcp --transport http --method tools/list\n```\n\n## Example prompts\n\n- *\"Find Russian microloans up to 10,000 RUB for two weeks where the first loan is interest-free.\"*\n- *\"Show the legal entity, Bank of Russia registry number and current terms for Zaymer.\"*\n- *\"What are the legal limits on microloan interest rates and total repayment in Russia?\"*\n- *\"List the top-rated Russian MFOs by borrower reviews and link their pages.\"*\n- *«Подбери займ до 10 000 ₽ на две недели, у кого первый займ под 0%»*\n- *«Условия и юрданные Займера»*\n\n## Screenshot\n\n<!-- TODO: replace with a screenshot of a live Claude conversation using the connector -->\n*Screenshot of a live Claude dialog coming soon.*\n\n## Data & Terms\n\n- **Public read-only catalog data.** The server exposes the same data that is publicly visible on zaimhub.com. There are no mutation tools.\n- **Not financial advice.** ZaimHub is a comparison catalog, not a lender. Terms are volatile — final conditions live on the `canonical_url` pages.\n- **Attribution required.** When using the data, cite the `canonical_url` of the respective page on zaimhub.com.\n- **Rate limit:** 60 requests/min per IP.\n- No tracker or affiliate links anywhere in responses (enforced by tests).\n\n## По-русски\n\nZaimHub — каталог и рейтинг микрофинансовых организаций России из государственного реестра Банка России. Этот MCP-сервер отдаёт те же публичные данные, что и сайт: условия займов для новых и повторных клиентов, полную стоимость кредита, юридические данные компаний (ОГРН, номер в реестре ЦБ РФ), рейтинг и отзывы заёмщиков, правовой контекст микрозаймов (ставка не выше 0,8% в день по ст. 6.1 ФЗ-353, переплата не выше 100% с 01.04.2026 и т.д.). Сервер read-only, без аутентификации; при использовании данных ссылайтесь на canonical_url соответствующей страницы.\n\n## Links\n\n- Website: https://zaimhub.com\n- Server card: https://zaimhub.com/.well-known/mcp/server-card.json\n- llms.txt: https://zaimhub.com/llms.txt\n- Contact: admin@zaimhub.com\n\n## License\n\nDocumentation in this repository is licensed under [MIT](LICENSE). The catalog data served by the MCP endpoint is proprietary to ZaimHub (zaimhub.com) and may be used with attribution to canonical URLs.\n",
+  "status": "curated"
+}

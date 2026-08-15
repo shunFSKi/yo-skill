@@ -1,0 +1,61 @@
+{
+  "id": "mcp:official/io.github.GSterlingPress/mailtype",
+  "type": "mcp",
+  "name": "MAILTYPE — Email Domain Capability Intelligence",
+  "description": "Email-domain intelligence: MX capability, provider, disposable status, SPF, DMARC, and MTA-STS.",
+  "author": "io.github.GSterlingPress",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/GSterlingPress/mailtype-api",
+    "repo": "GSterlingPress/mailtype-api"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mailtype-api.onrender.com/mcp",
+    "env": [
+      {
+        "name": "X-API-Key",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T16:04:44.890665Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": "# MAILTYPE\n\n**Email/domain → objective mail capability intelligence.**\n\nMAILTYPE is a tiny REST + MCP API for applications that need fast, objective domain-level email infrastructure answers before accepting, storing, routing, or acting on an email address.\n\n**Live API:** https://mailtype-api.onrender.com/docs  \n**OpenAPI:** https://mailtype-api.onrender.com/openapi.json  \n**Playground:** https://mailtype-api.onrender.com/play?q=gmail.com  \n**MCP endpoint:** https://mailtype-api.onrender.com/mcp\n\n## What it returns\n\n- `DOMAIN_EXISTS`\n- `CAN_RECEIVE_MAIL`\n- MX records and provider\n- disposable-domain evidence\n- SPF\n- DMARC\n- MTA-STS\n- confidence, evidence, and `checked_at`\n\n## Why MAILTYPE\n\nMAILTYPE deliberately does **not** perform SMTP probing or claim that an individual mailbox exists. It answers the cheaper, objective domain-level questions that software often needs first. `UNKNOWN` is a valid answer whenever the evidence is insufficient.\n\n## REST\n\n```bash\ncurl -H \"X-API-Key: YOUR_KEY\" \\\n  https://mailtype-api.onrender.com/v1/domain/gmail.com\n\ncurl -H \"X-API-Key: YOUR_KEY\" \\\n  https://mailtype-api.onrender.com/v1/email/person@gmail.com\n```\n\n## MCP\n\nEndpoint: `POST https://mailtype-api.onrender.com/mcp`\n\nTool: `inspect_mail_domain`\n\nInput:\n\n```json\n{\"input\":\"gmail.com\"}\n```\n\n## Public discovery endpoints\n\n- Docs: https://mailtype-api.onrender.com/docs\n- Playground: https://mailtype-api.onrender.com/play?q=gmail.com\n- OpenAPI 3.1: https://mailtype-api.onrender.com/openapi.json\n- Sources and methodology: https://mailtype-api.onrender.com/sources\n- Health: https://mailtype-api.onrender.com/health\n\n## Data and standards\n\nMAILTYPE uses DNS evidence plus a maintained legally reusable disposable-domain dataset. The API exposes its methodology and source disclosure publicly. Relevant standards include RFC 5321, RFC 7505 (Null MX), RFC 7208 (SPF), RFC 7489 (DMARC), and RFC 8461 (MTA-STS).\n\n## Hard boundary\n\nMAILTYPE does not verify that a mailbox exists, connect to recipient SMTP servers, send email, infer deliverability from opaque scores, or claim `CAN_RECEIVE_MAIL=YES` without explicit MX evidence. If a domain exists but explicit MX evidence is insufficient, MAILTYPE returns `UNKNOWN`.\n\n## Stranger Verification Standard\n\nOur own tests, health probes, validators, uptime traffic, and known internal callers do not count as adoption. A tool call alone does not automatically become a verified stranger; outside calls remain unverified until evidence supports credible real use.\n\n## Keywords\n\nemail API · domain API · MX lookup API · disposable email domain API · SPF API · DMARC API · MTA-STS API · email infrastructure · email validation preflight · MCP server · developer API\n",
+  "status": "curated"
+}

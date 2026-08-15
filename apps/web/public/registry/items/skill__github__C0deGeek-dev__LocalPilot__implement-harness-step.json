@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/C0deGeek-dev/LocalPilot/implement-harness-step",
+  "type": "skill",
+  "name": "implement-harness-step",
+  "description": "Implement or modify the harness execution loop (brief.md / PROGRESS.md, rule verdicts, attempt limits, progress update, commit policy). Use when touching localpilot-harness or the init/status/intake/plan/feature/resume commands.",
+  "author": "C0deGeek-dev",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/C0deGeek-dev/LocalPilot/blob/HEAD/.claude/skills/implement-harness-step/SKILL.md",
+    "repo": "C0deGeek-dev/LocalPilot",
+    "path": ".claude/skills/implement-harness-step/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-08-11T09:14:22Z",
+    "score": 49,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 2
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

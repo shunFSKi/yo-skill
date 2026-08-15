@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/zakirkun/ice-tea/weak-hashing-algorithms",
+  "type": "skill",
+  "name": "Weak Hashing Algorithms",
+  "description": "Detects the use of cryptographically weak hashing algorithms like MD5 and SHA1.",
+  "author": "zakirkun",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/zakirkun/ice-tea/blob/HEAD/skills/crypto/weak-hashing/SKILL.md",
+    "repo": "zakirkun/ice-tea",
+    "path": "skills/crypto/weak-hashing/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 38,
+    "pushed_at": "2026-03-19T05:43:58Z",
+    "score": 56
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "<div align=\"center\">\n  <h1>🍵 Ice Tea Security Scanner</h1>\n  <p><strong>AI-Powered Static Application Security Testing (SAST) — written in Go</strong></p>\n  <p>\n    <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/license-MIT-blue.svg\" alt=\"MIT License\"></a>\n    <a href=\"go.mod\"><img src=\"https://img.shields.io/badge/Go-1.21+-00ADD8?logo=go\" alt=\"Go 1.21+\"></a>\n    <img src=\"https://img.shields.io/badge/Languages-10-brightgreen\" alt=\"10 Languages\">\n    <img src=\"https://img.shields.io/badge/Rules-456+-red\" alt=\"456+ Rules\">\n    <img src=\"https://img.shields.io/badge/SKILLs-82-orange\" alt=\"82 SKILLs\">\n  </p>\n</div>\n\n---\n\nIce Tea is an advanced SAST tool that combines **lightning-fast AST pattern matching** (via Tree-sitter) with **AI-powered deep reasoning** (via OpenAI) to find security vulnerabilities in your source code — with dramatically fewer false positives than traditional scanners.\n\n```bash\n$ ice-tea scan ./src --format console --severity high\n\n[CRITICAL] [CWE-89] SQL Injection — src/handlers/user.go:47\n  Rule: GO-SQLI-001 | Confidence: high\n  Code: query := \"SELECT * FROM users WHERE id = \" + userID\n\n[CRITICAL] [CWE-798] Hardcoded JWT Secret — src/config/config.go:12\n  Rule: AUTH-SEC-003 | Confidence: high\n  Code: const jwtSecret = \"supersecret123\"\n\n[HIGH]     [CWE-295] InsecureSkipVerify TLS — src/client/http.go:31\n  Rule: CRYPTO-TLS-001 | Confidence: high\n  Code: TLSClientConfig: &tls.Config{InsecureSkipVerify: true}\n\nSummary: 3 findings (2 critical, 1 high) in 0.4s\n```\n\n---\n\n## Features\n\n- **3-Engine Architecture**:\n  1. **Pattern Matching Engine** — AST + Regex rules via Tree-sitter and Go's native `go/ast`\n  2. **Taint Tracker** — Traces data flow from user-controlled sources to dangerous sinks\n  3. **LLM Reasoning Engine** — Optionally consults OpenAI to verify each finding and eliminate false positives\n\n- **10 Languages**: Go, JavaScript, TypeScript, Python, Java, PHP, Ruby, Rust, C, C++\n\n- **82 Built-in SKILLs / 456+ Detection Rules** across 12 security domains:\n  - Authentication, Injection, Web/API, Cryptography, Filesystem, Infrastructure, Logging, Memory Safety, Cloud, Android, Network\n\n- **4 Output Formats**: Console, JSON, SARIF 2.1.0, GitLab SAST JSON\n\n- **MCP Server**: Model Context Protocol integration for Claude / ChatGPT agentic workflows\n\n- **CI/CD Ready**: Native SARIF output, configurable exit codes, `.ice-tea.yaml` config file\n\n- **Extensible SKILL System**: Add custom detection rules in Markdown + YAML — no Go code required\n\n---\n\n## Installation\n\n**Requirements:** Go 1.21+, GCC or Clang (for Tree-sitter CGO bindings)\n\n```bash\ngit clone https://github.com/zakirkun/ice-tea.git\ncd ice-tea\nmake build\n\n# Verify\n./bin/ice-tea version\n```\n\n**Windows (PowerShell):**\n```powershell\n# Install GCC via MSYS2: https://www.msys2.org/\ngit clone https://github.com/zakirkun/ice-tea.git\ncd ice-tea\ngo build -o bin/ice-tea.exe ./cmd/ice-tea\n.\\bin\\ice-tea.exe version\n```\n\n---\n\n## Quick Start\n\n### 1. Scan a Project\n\n```bash\n# Scan with default settings (medium+ severity)\n./bin/ice-tea scan ./your-project\n\n# Show all findings including low severity\n./bin/ice-tea scan ./your-project --severity low\n\n# Only critical findings to keep CI fast\n./bin/ice-tea scan ./your-project --severity critical\n```\n\n### 2. SARIF Output for GitHub\n\n```bash\n./bin/ice-tea scan ./src --format sarif --output results.sarif\n```\n\n```yaml\n# .github/workflows/security.yml\n- name: Run Ice Tea\n  run: ./bin/ice-tea scan ./src --format sarif --output results.sarif\n  continue-on-error: true\n\n- name: Upload SARIF\n  uses: github/codeql-action/upload-sarif@v3\n  with:\n    sarif_file: results.sarif\n```\n\n### 3. AI False-Positive Filtering\n\n```bash\nexport OPENAI_API_KEY=\"sk-proj-...\"\n./bin/ice-tea scan ./src --enable-llm --severity medium\n```\n\n### 4. Test Against Vulnerable Example Projects\n\n```bash\n# All 4 example apps (Go, PHP, Python, Node.js)\n./bin/ice-tea scan ./examples --severity low\n\n# Each individually\n./bin/ice-tea scan ./examples/vulnerable-go\n./bin/ice-tea scan ./examples/vulnerable-php --language php\n./bin/ice-tea scan ./examples/vulnerable-python --language python\n./bin/ice-tea scan ./examples/vulnerable-nodejs --language javascript\n```\n\n---\n\n## SKILL Coverage\n\nIce Tea ships with **82 SKILL definitions** (456+ rules) covering:\n\n| Category | Skills | Key Detections |\n|----------|--------|----------------|\n| **auth/** | 10 | Hardcoded secrets, JWT weaknesses, session fixation, insecure cookies, OAuth flaws, MFA bypass |\n| **web/** | 16 | XSS, SSRF, CSRF, CORS misconfiguration, clickjacking, prototype pollution, ReDoS, WebSocket |\n| **injection/** | 9 | SQL, Command, XXE, Template (SSTI), LDAP, XPath, NoSQL, Header/CRLF, Log injection |\n| **crypto/** | 8 | Weak hash (MD5/SHA1), weak cipher (DES/RC4/ECB), insecure TLS, hardcoded IV, insecure RSA |\n| **api/** | 7 | BOLA/IDOR, broken function-level auth, missing rate limiting, GraphQL security, mass assignment |\n| **fs/** | 5 | Path traversal, unsafe file upload, Zip Slip, unsafe temp files |\n| **infra/** | 5 | Debug mode in production, default credentials, insecure Docker/Kubernetes, hardcoded IPs |\n| **logging/** | 3 | Sensitive data in logs, insufficient security logging, verbose error responses |\n| **memory/** | 5 | Buffer overflow, use-after-free, null pointer dereference, integer overflow, format string |\n| **cloud/** | 5 | AWS/GCP/Azure misconfigurations, secrets in env files, IaC security (Terraform) |\n| **android/** | 5 | Insecure data storage, exported components, WebView JS bridge, intent redirection |\n| **network/** | 4 | Cleartext HTTP, insecure sockets, DNS rebinding, extended SSRF (cloud metadata) |\n\n---\n\n## Creating Custom SKILLs\n\nAdding a new detection rule requires only two files — no Go code needed:\n\n```\nskills/\n└── myteam/\n    └── my-custom-vuln/\n        ├── SKILL.md      ← Metadata + remediation guidance\n        └── patterns.yaml ← Detection rules (regex or AST)\n```\n\n**`SKILL.md`** (frontmatter + markdown):\n```yaml\n---\nname: My Custom Vulnerability\nversion: 1.0.0\ndescription: Detects unsafe use of dangerous_function()\ntags: [custom, injection]\nlanguages: [python]\nseverity: high\nconfidence: high\ncwe: [CWE-78]\nowasp: [A03:2025]\n---\n# My Custom Vulnerability\n## Overview\n...\n## Remediation\n...\n```\n\n**`patterns.yaml`**:\n```yaml\nrules:\n  - id: CUSTOM-001\n    name: dangerous-function-call\n    description: \"dangerous_function() called with user input\"\n    severity: high\n    confidence: high\n    languages: [python]\n    patterns:\n      - regex: \"dangerous_function\\\\s*\\\\(.*request\\\\.\"\n      - ast_node_type: \"call_expression\"\n        function: \"dangerous_function\"\n```\n\nThen scan with your custom skills:\n```bash\n./bin/ice-tea scan ./src --skills-dir ./my-skills\n```\n\n📖 Read the full guide: [docs/08-how-to-create-skills.md](docs/08-how-to-create-skills.md)\n\n---\n\n## Configuration File\n\nPlace `.ice-tea.yaml` in your project root:\n\n```yaml\noutput:\n  format: \"sarif\"\n  file: \"results.sarif\"\n\nscan:\n  severity: \"medium\"\n  confidence: \"medium\"\n  concurrency: 8\n\nexclude:\n  dirs: [\"vendor\", \"node_modules\", \"testdata\", \"dist\"]\n  files: [\"*.min.js\", \"*_test.go\", \"*.pb.go\"]\n\nllm:\n  enabled: false\n  provider: \"openai\"\n  model: \"gpt-4o\"\n```\n\n---\n\n## Exit Codes\n\n| Code | Meaning |\n|------|---------|\n| `0` | No findings above threshold |\n| `1` | Findings found above threshold |\n| `2` | Fatal error (bad args, config issue, etc.) |\n\n---\n\n## Documentation\n\n| Document | Description |\n|----------|-------------|\n| [Architecture Overview](docs/01-architecture-overview.md) | System design and engine pipeline |\n| [AI Agent Skills](docs/02-ai-agent-skills.md) | How the SKILL system works |\n| [AST Parsing](docs/03-ast-parsing.md) | Tree-sitter and Go AST internals |\n| [Vulnerability Detection](docs/04-vulnerability-detection.md) | Pattern matching and taint tracking |\n| [CI/CD Integration](docs/05-cicd-integration.md) | GitHub Actions, GitLab CI, Jenkins |\n| [MCP Integration](docs/06-mcp-integration.md) | Claude / ChatGPT agent workflows |\n| [How to Create SKILLs](docs/08-how-to-create-skills.md) | Step-by-step guide for custom rules |\n| [**Usage Guide**](docs/09-usage-guide.md) | **Complete CLI reference and examples** |\n\n---\n\n## Contributing\n\nContributions are welcome — especially new SKILL definitions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on:\n- Adding new vulnerability patterns\n- Reporting false positives\n- Improving parser coverage\n- Submitting pull requests\n\n---\n\n## License\n\nThis project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.\n\nCopyright (c) 2026 Ice Tea Scanner Contributors\n",
+  "status": "curated"
+}

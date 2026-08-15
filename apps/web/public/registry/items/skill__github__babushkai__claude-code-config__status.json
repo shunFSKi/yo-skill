@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/babushkai/claude-code-config/status",
+  "type": "skill",
+  "name": "status",
+  "description": "Show a summary of the current project state including git, tests, and build status",
+  "author": "babushkai",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/babushkai/claude-code-config/blob/HEAD/.claude/skills/status/SKILL.md",
+    "repo": "babushkai/claude-code-config",
+    "path": ".claude/skills/status/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 10,
+    "pushed_at": "2026-03-11T19:00:42Z",
+    "score": 41,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 10
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

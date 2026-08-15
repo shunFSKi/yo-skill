@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/ByteDeskAI/bytedesk-marketplace/knowledge-verify",
+  "type": "skill",
+  "name": "knowledge-verify",
+  "description": "Mark an OKF concept as human-reviewed (verified frontmatter) after the user confirms accuracy. Use for /knowledge:verify, \"I reviewed this\", or trust upgrades.",
+  "author": "ByteDeskAI",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ByteDeskAI/bytedesk-marketplace/blob/HEAD/knowledge-management/skills/verify/SKILL.md",
+    "repo": "ByteDeskAI/bytedesk-marketplace",
+    "path": "knowledge-management/skills/verify/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-13T04:21:40Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

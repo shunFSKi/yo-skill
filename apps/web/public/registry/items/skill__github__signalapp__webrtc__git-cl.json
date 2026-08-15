@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/signalapp/webrtc/git-cl",
+  "type": "skill",
+  "name": "git-cl",
+  "description": "Provides commands for interacting with Gerrit CLs using git cl, including issue management and non-interactive uploads.",
+  "author": "signalapp",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/signalapp/webrtc/blob/HEAD/agents/skills/git-cl/SKILL.md",
+    "repo": "signalapp/webrtc",
+    "path": "agents/skills/git-cl/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 174,
+    "pushed_at": "2026-08-10T17:29:10Z",
+    "score": 75,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 174
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "This is a fork of WebRTC intended to be used in [RingRTC](https://github.com/signalapp/ringrtc).\nIt currently has the following changes:\n* Injections into the build system for RingRTC's Rust FFI\n* Changes to Android and iOS SDKs for some more control/customization\n* ICE forking (from https://webrtc-review.googlesource.com/c/src/+/167051/)\n* Various things disabled (RTP header extensions, audio codecs)\n* Various security patches (since the version when the fork branched off)\n\nSee [here][native-dev] for instructions on how to get started\ndeveloping with the native code.\n\n[Authoritative list](native-api.md) of directories that contain the\nnative API header files.\n\n### More info\n\n * Official web site: http://www.webrtc.org\n * Master source code repo: https://webrtc.googlesource.com/src\n * Samples and reference apps: https://github.com/webrtc\n * Mailing list: http://groups.google.com/group/discuss-webrtc\n * Continuous build: https://ci.chromium.org/p/webrtc/g/ci/console\n * [Coding style guide](g3doc/style-guide.md)\n * [Code of conduct](CODE_OF_CONDUCT.md)\n * [Reporting bugs](docs/bug-reporting.md)\n * [Documentation](g3doc/sitemap.md)\n\n[native-dev]: https://webrtc.googlesource.com/src/+/main/docs/native-code/\n",
+  "status": "curated"
+}

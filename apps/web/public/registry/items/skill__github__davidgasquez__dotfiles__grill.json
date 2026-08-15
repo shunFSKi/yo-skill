@@ -17,7 +17,7 @@
   "quality": {
     "stars": 60,
     "pushed_at": "2026-08-08T10:14:03Z",
-    "score": 58
+    "score": 68
   },
   "security": {
     "score": 100,
@@ -49,6 +49,6 @@
     "category": "设计",
     "featured": false
   },
-  "readme": null,
+  "readme": "<div align=\"center\">\n  <h1>.dotfiles</h1>\n  <p><em>Here you will find my dotfiles, living in peace and harmony.</em></p>\n</div>\n\n![image](https://github.com/davidgasquez/dotfiles/assets/1682202/6c4492d8-98ce-4430-9921-4d7ba70f4193)\n\n## 🔍 Overview\n\n- **OS:** Arch Linux\n- **WM**: [Hyprland](https://hyprland.org/)\n- **Launcher**: [Fuzzel](https://codeberg.org/dnkl/fuzzel)\n- **Terminal**: [Ghostty](https://ghostty.org/)\n- **Theme**: [Catppuccin](https://github.com/catppuccin/catppuccin) (Frappe flavor)\n- **Shell**: `zsh` with [Starship](https://starship.rs/) prompt and [Sheldon](https://sheldon.cli.rs/) plugin manager\n- **Coding**: Zed, Codex, and Pi\n\n## 📦 Configuration\n\nFollow the [Arch Linux installation guide](https://wiki.archlinux.org/title/Installation_guide) to set up your system.\n\nOnce Arch is installed and this repository cloned locally, run the `make` targets defined in the `Makefile`. Each target handles one part of the system.\n\nCommon targets:\n\n```bash\nmake paru      # install paru AUR helper\nmake terminal  # shell, prompt, terminal config\nmake git       # git config\nmake fonts     # font setup\nmake zed       # Zed config\nmake agents    # agent config\nmake secrets   # gopass and secret sync setup\nmake hypr      # Hyprland config\nmake desktop   # desktop app flags/config\nmake system    # system config files\nmake check     # validate tracked configuration\nmake doctor    # check live workstation drift\n```\n\n### Environment Variables\n\n- Secrets live in `gopass` with the store synced at `~/.secrets`; run `make secrets` to install the sync service and timer.\n- User session variables live in `~/.config/environment.d/*.conf`.\n\n### 🧰 Utility Scripts\n\nThe repository includes useful scripts in the `scripts/` directory, including:\n\n- `web-fetch`: convert public web pages to Markdown\n- `dirty-dirs-git` / `pull-all-dirs`: manage multiple git repositories\n- `record-audio`: audio recording helper\n- `pi-sandbox`: Pi agent helper\n\n## 📜 License\n\nMIT © David Gasquez\n",
   "status": "curated"
 }

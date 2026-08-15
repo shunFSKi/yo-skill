@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/forge-town/skills/checklist-best-practice",
+  "type": "skill",
+  "name": "checklist-best-practice",
+  "description": "Must follow when 为 Skill 或项目模块编写检查清单（checklist.md），确保每一项可判断、有示例、结构清晰、支持自动化验证。",
+  "author": "forge-town",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/forge-town/skills/blob/HEAD/skills/checklist-best-practice/SKILL.md",
+    "repo": "forge-town/skills",
+    "path": "skills/checklist-best-practice/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 7,
+    "pushed_at": "2026-05-30T07:16:44Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/roethlar/qbit-mobile/catchup",
+  "type": "skill",
+  "name": "catchup",
+  "description": "Re-ground in this repo's current state, tidy the record, and report. Use when the owner says catchup or asks where things stand.",
+  "author": "roethlar",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/roethlar/qbit-mobile/blob/HEAD/.agents/skills/catchup/SKILL.md",
+    "repo": "roethlar/qbit-mobile",
+    "path": ".agents/skills/catchup/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 3,
+    "pushed_at": "2026-08-11T21:16:13Z",
+    "score": 50,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 3
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

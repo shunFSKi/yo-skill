@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/phibkro/homelab/gotcha-ollama-acceleration-deprecated",
+  "type": "skill",
+  "name": "gotcha-ollama-acceleration-deprecated",
+  "description": "USE WHEN configuring CUDA support for Ollama — `services.ollama.acceleration = \"cuda\"` is removed in current nixpkgs. Use `package = pkgs.ollama-cuda` instead. First build is slow (~30 min) — nvcc compiles GGML for many CUDA arches and binary cache often misses.",
+  "author": "phibkro",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/phibkro/homelab/blob/HEAD/.claude/skills/gotcha-ollama-acceleration-deprecated/SKILL.md",
+    "repo": "phibkro/homelab",
+    "path": ".claude/skills/gotcha-ollama-acceleration-deprecated/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-14T01:15:03Z",
+    "score": 45,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

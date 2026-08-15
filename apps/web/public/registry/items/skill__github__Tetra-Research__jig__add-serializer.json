@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Tetra-Research/jig/add-serializer",
+  "type": "skill",
+  "name": "add-serializer",
+  "description": "Add a new serializer class to serializers.py. Use when adding serializers or API data schemas.",
+  "author": "Tetra-Research",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Tetra-Research/jig/blob/HEAD/eval/scenarios/discover-recipe/codebase/.claude/skills/add-serializer/SKILL.md",
+    "repo": "Tetra-Research/jig",
+    "path": "eval/scenarios/discover-recipe/codebase/.claude/skills/add-serializer/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 6,
+    "pushed_at": "2026-04-10T01:57:50Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

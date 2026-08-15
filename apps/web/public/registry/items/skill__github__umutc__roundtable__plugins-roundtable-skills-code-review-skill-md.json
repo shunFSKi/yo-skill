@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/umutc/roundtable/plugins-roundtable-skills-code-review-skill-md",
+  "type": "skill",
+  "name": "plugins-roundtable-skills-code-review-skill-md",
+  "description": "Run a multi-agent code review panel (security, performance, readability reviewers + moderator) on the current project using roundtable.",
+  "author": "umutc",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/umutc/roundtable/blob/HEAD/plugins/roundtable/skills/code-review/SKILL.md",
+    "repo": "umutc/roundtable",
+    "path": "plugins/roundtable/skills/code-review/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-04-16T21:02:19Z",
+    "score": 35,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

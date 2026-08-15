@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/claudianus/superliora/file-reader",
+  "type": "skill",
+  "name": "file-reader",
+  "description": "文件读取技能。当用户需要读取文件内容、查看文件、cat 文件时激活。支持读取文本文件、配置文件、代码文件等。",
+  "author": "claudianus",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/claudianus/superliora/blob/HEAD/packages/agent-core/src/skill/catalog/luokai-file-reader/SKILL.md",
+    "repo": "claudianus/superliora",
+    "path": "packages/agent-core/src/skill/catalog/luokai-file-reader/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-14T12:59:21Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/galibhabibullah786/CinemaSeat/update-config",
+  "type": "skill",
+  "name": "update-config",
+  "description": "Configure the puku-cli harness via .claude/settings.json. Load when the user asks for automated behaviour that fires on every/most invocations — \"from now on\", \"each time\", \"whenever\", \"before/after every\" — because the harness executes hooks, not the LLM.",
+  "author": "galibhabibullah786",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/galibhabibullah786/CinemaSeat/blob/HEAD/.claude/skills/update-config/SKILL.md",
+    "repo": "galibhabibullah786/CinemaSeat",
+    "path": ".claude/skills/update-config/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-08T12:08:48Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

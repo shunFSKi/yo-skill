@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/szhshp/panda-video-automation-notebooklm/pva-check",
+  "type": "skill",
+  "name": "pva-check",
+  "description": "Check all prerequisites (Python, Node.js, notebooklm-mcp-cli, PVA) before running any workflow.",
+  "author": "szhshp",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/szhshp/panda-video-automation-notebooklm/blob/HEAD/.agents/skills/pva-check/SKILL.md",
+    "repo": "szhshp/panda-video-automation-notebooklm",
+    "path": ".agents/skills/pva-check/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 3,
+    "pushed_at": "2026-08-11T14:38:18Z",
+    "score": 47,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 3
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

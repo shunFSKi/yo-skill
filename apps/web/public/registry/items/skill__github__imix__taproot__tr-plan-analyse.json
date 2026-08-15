@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/imix/taproot/tr-plan-analyse",
+  "type": "skill",
+  "name": "tr-plan-analyse",
+  "description": "Analyse `taproot/plan.md` before execution: check each pending item for readiness, flag ambiguous specs, unresolved dependencies, and missing prerequisites, and produce a per-item report so the developer knows what needs fixing before executing",
+  "author": "imix",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/imix/taproot/blob/HEAD/channels/cursor/skills/plan-analyse/SKILL.md",
+    "repo": "imix/taproot",
+    "path": "channels/cursor/skills/plan-analyse/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 6,
+    "pushed_at": "2026-04-16T20:37:06Z",
+    "score": 43,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 6
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,58 @@
+{
+  "id": "mcp:official/io.github.arose26/bank-of-canada-mcp",
+  "type": "mcp",
+  "name": "bank-of-canada-mcp",
+  "description": "Bank of Canada economic data: exchange rates, policy rate, CPI, bond yields. No API key.",
+  "author": "io.github.arose26",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/arose26/bank-of-canada-mcp",
+    "repo": "arose26/bank-of-canada-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "bank-of-canada-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T23:17:24.592273Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "# bank-of-canada-mcp\n\nAn [MCP](https://modelcontextprotocol.io) server that gives Claude and other LLMs live access to **Canadian economic data** via the Bank of Canada's free [Valet API](https://www.bankofcanada.ca/valet/docs) — ~16,000 time series covering exchange rates, the policy interest rate, CPI, bond yields, commodity prices, and more.\n\nFRED, the World Bank, and the IMF all have MCP servers. Canada didn't — now it does.\n\nNo API key required.\n\n## Quick start\n\n**Claude Code**\n\n```bash\nclaude mcp add bank-of-canada -- npx -y bank-of-canada-mcp\n```\n\n**Claude Desktop** — add to `claude_desktop_config.json`:\n\n```json\n{\n  \"mcpServers\": {\n    \"bank-of-canada\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"bank-of-canada-mcp\"]\n    }\n  }\n}\n```\n\nThe same `npx` invocation works in Cursor, Windsurf, and any other MCP client.\n\n## Tools\n\n| Tool | What it does |\n|------|--------------|\n| `search_series` | Keyword search across the full series catalogue — find the series name for anything (\"overnight rate target\", \"CPI\", \"5-year bond\") |\n| `get_observations` | Time-series data for up to 5 series, by date range or N most recent |\n| `latest_fx_rates` | Today's official daily exchange rates vs CAD |\n| `convert_currency` | Convert between any two supported currencies using today's rates |\n\n## Example prompts\n\n- *\"What's the Bank of Canada's current policy rate, and how has it moved this year?\"*\n- *\"Plot USD/CAD for the last 90 days.\"*\n- *\"Convert 2,500 EUR to CAD at today's official rate.\"*\n- *\"How does core CPI compare to headline CPI over the past two years?\"*\n\n## Development\n\n```bash\nnpm install\nnpm test        # offline unit tests (vitest)\nnpm run build   # tsc → dist/\n```\n\nArchitecture: [`src/valet.ts`](src/valet.ts) is a plain API client with pure, unit-tested logic (search, conversion math); [`src/index.ts`](src/index.ts) is the MCP wiring. Errors from the Valet API (e.g. an unknown series name) are returned as MCP tool errors with the API's own message, so the model can self-correct by re-searching.\n\n## Notes\n\n- Rates are the Bank of Canada's **indicative daily averages**, published once per business day — not transactional quotes.\n- Data is © Bank of Canada, used under their [terms](https://www.bankofcanada.ca/terms/). This project is not affiliated with or endorsed by the Bank of Canada.\n\n## Roadmap\n\n- Statistics Canada Web Data Service tools\n- Group browsing (`lists/groups`)\n- Streamable HTTP transport for remote deployment\n\n## License\n\nMIT\n",
+  "status": "curated"
+}

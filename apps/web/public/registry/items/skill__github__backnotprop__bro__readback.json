@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/backnotprop/bro/readback",
+  "type": "skill",
+  "name": "readback",
+  "description": "Clearly restate a human's request so they can confirm alignment before work begins. Use when the human explicitly invokes /readback or $readback after a long, dictated, unclear, or complex prompt; never invoke automatically.",
+  "author": "backnotprop",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/backnotprop/bro/blob/HEAD/skills/readback/SKILL.md",
+    "repo": "backnotprop/bro",
+    "path": "skills/readback/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 39,
+    "pushed_at": "2026-08-11T17:22:00Z",
+    "score": 69,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 39
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "```\n____   ____   ___  \n|    \\ |    \\ /   \\ \n|  o  )|  D  )     |\n|     ||    /|  O  |\n|  O  ||    \\|     |\n|     ||  .  \\     |\n|_____||__|\\_|\\___/ \n```               \nAlignment shouldn't be so hard.\n\n## Skills\n\nPractical skills for daily work with AI.\n\nUse them to simplify AI output, identify the facts that matter, confirm requests, and recap recent work.\n\n- `bro`: Restates the last AI response in plain language.\n- `facts`: Lists only the facts that can affect the work, related systems, or the people who use it.\n- `readback`: Restates your request before work starts so that you can confirm it.\n- `recap`: Gives a two- or three-sentence recap of recent work, with focus on what happened last.\n\n### (latest ✨): Readback \n\n`/readback [long prompt, often voice prompt]`\n\nUse `readback` after a long, dictated, or complex request. The AI states the request clearly and waits for your confirmation.\n\n## Install\n\n```bash\nnpx skills add backnotprop/bro\n```\n\n### Claude Code plugin\n\n```text\n/plugin marketplace add backnotprop/bro\n/plugin install bro@bro\n```\n\n### Codex plugin\n\n```bash\ncodex plugin marketplace add backnotprop/bro\ncodex plugin add bro@bro\n```\n",
+  "status": "curated"
+}

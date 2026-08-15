@@ -33,7 +33,7 @@
   "quality": {
     "stars": null,
     "pushed_at": "2026-08-14T10:21:08.853097Z",
-    "score": 52
+    "score": 42
   },
   "security": {
     "score": 100,
@@ -65,6 +65,6 @@
     "category": "办公",
     "featured": false
   },
-  "readme": "# postio-integrations\n\n[Postio](https://postio.co.uk) is the UK validation API for addresses,\nemails and phone numbers. This repo holds the JS-family npm packages,\nthe AI / agent surface, and the `cdn.postio.co.uk` Worker that powers\nPostio's browser drop-in.\n\n> **First time?** [Sign up free](https://postio.co.uk) — first 100 lookups on us, no card needed.\n\nThe Postio API + OpenAPI spec live in\n[`postio-uk/postio-api`](https://github.com/postio-uk/postio-api). The\nspec is also published as\n[`@postio/openapi`](https://www.npmjs.com/package/@postio/openapi).\n\n## Packages\n\n| Package | What it is |\n|---|---|\n| [`@postio/api-types`](https://www.npmjs.com/package/@postio/api-types) | TypeScript types generated from the OpenAPI spec. |\n| [`@postio/core`](https://www.npmjs.com/package/@postio/core) | Runtime-agnostic typed client (browser / Node / Workers / Bun / Deno). |\n| [`@postio/node`](https://www.npmjs.com/package/@postio/node) | Node SDK on top of `core` — retries with exponential backoff, structured logger hook. |\n| [`@postio/postman-collection`](https://www.npmjs.com/package/@postio/postman-collection) | Postman v2.1 collection for every endpoint. |\n| [`@postio/address-finder`](https://www.npmjs.com/package/@postio/address-finder) | Browser address autocomplete — ARIA combobox, themable, framework-agnostic source. |\n| [`@postio/address-finder-bundled`](https://www.npmjs.com/package/@postio/address-finder-bundled) | The same component prebuilt for `<script>` tag use. |\n| [`@postio/react`](https://www.npmjs.com/package/@postio/react) | React hooks + `<AddressFinder />` component, TanStack Query under the hood. |\n| [`@postio/mcp`](https://www.npmjs.com/package/@postio/mcp) | Model Context Protocol server — `npx -y @postio/mcp` for Claude Desktop / Cursor / Windsurf / Zed. |\n\n## Layout\n\n```\npackages/         pnpm workspace; one publishable npm package per subdir\nai/               AI / agent surface (Claude Skill, GPT Action, recommendation prompts)\ncdn-worker/       Cloudflare Worker that serves the address-finder bundles\n.github/workflows/  CI for publishing + deploying\n```\n\n## Building\n\n```bash\ncd packages\npnpm install\npnpm -r run build\n```\n\nEach package builds independently (`pnpm -F @postio/<name> run build`).\nThe address-finder bundle has a topological-build quirk — use the\n`...` suffix so its workspace dep builds first:\n\n```bash\npnpm -F \"@postio/address-finder-bundled...\" run build\n```\n\n## Contributing\n\nPRs welcome. Conventions:\n\n- Node 22+, pnpm 10+, ESM only, MIT-licensed.\n- `stage` is the working branch; `master` deploys / publishes via CI.\n- One package change per PR where possible.\n- Versions on each package are independent SemVer; bump the version\n  in `package.json` when you intend a release.\n\nThe full integration index — including the server SDKs in their own\nrepos and the WordPress plugin — lives at\n[postio.co.uk/integrations](https://postio.co.uk/integrations).\n\n## License\n\nMIT.\n",
+  "readme": null,
   "status": "curated"
 }

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/EffortlessMetrics/perl-lsp-swarm/review-plan",
+  "type": "skill",
+  "name": "review-plan",
+  "description": "Adversarially review a researched plan for vision, authority, architecture, negative cases, proof, rollback, and unnecessary complexity.",
+  "author": "EffortlessMetrics",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/EffortlessMetrics/perl-lsp-swarm/blob/HEAD/.claude/skills/review-plan/SKILL.md",
+    "repo": "EffortlessMetrics/perl-lsp-swarm",
+    "path": ".claude/skills/review-plan/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-14T17:10:01Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

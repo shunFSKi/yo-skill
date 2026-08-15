@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/manasseh152/platformer/map-render",
+  "type": "skill",
+  "name": "map-render",
+  "description": "Render and validate this platformer project's tilemap as a full-size PNG. Use when CI/validation needs a visual map artifact or when level/rendering changes should be reviewed as one complete image.",
+  "author": "manasseh152",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/manasseh152/platformer/blob/HEAD/.pi/skills/map-render/SKILL.md",
+    "repo": "manasseh152/platformer",
+    "path": ".pi/skills/map-render/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-05-25T03:44:40Z",
+    "score": 40,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

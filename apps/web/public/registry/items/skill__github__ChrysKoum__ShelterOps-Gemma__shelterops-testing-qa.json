@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/ChrysKoum/ShelterOps-Gemma/shelterops-testing-qa",
+  "type": "skill",
+  "name": "shelterops-testing-qa",
+  "description": "Validate ShelterOps Gemma end to end with frontend install/build, backend startup, health checks, API tests, urgency/privacy/export/fallback tests, route smoke checks, and demo-flow QA.",
+  "author": "ChrysKoum",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ChrysKoum/ShelterOps-Gemma/blob/HEAD/.codex/skills/shelterops-testing-qa/SKILL.md",
+    "repo": "ChrysKoum/ShelterOps-Gemma",
+    "path": ".codex/skills/shelterops-testing-qa/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-05-11T20:30:29Z",
+    "score": 35
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

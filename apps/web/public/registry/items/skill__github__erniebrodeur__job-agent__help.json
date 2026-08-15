@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/erniebrodeur/job-agent/help",
+  "type": "skill",
+  "name": "help",
+  "description": "Display the canonical Job Agent capability guide. Use when the user says help, including when the message is only the word \"help\", or asks for instructions, available commands, supported workflows, what Job Agent can do, or how to get started. Also use when onboarding needs to present the standard help text.",
+  "author": "erniebrodeur",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/erniebrodeur/job-agent/blob/HEAD/plugins/job-agent/skills/help/SKILL.md",
+    "repo": "erniebrodeur/job-agent",
+    "path": "plugins/job-agent/skills/help/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-12T20:33:35Z",
+    "score": 48,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

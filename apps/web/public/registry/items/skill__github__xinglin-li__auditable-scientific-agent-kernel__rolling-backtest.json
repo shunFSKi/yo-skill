@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/xinglin-li/auditable-scientific-agent-kernel/rolling-backtest",
+  "type": "skill",
+  "name": "rolling-backtest",
+  "description": "Use this skill when evaluating forecasting designs, comparing time-series models (like ARIMA vs ETS), or verifying that chronological simulation rows do not leak future information.",
+  "author": "xinglin-li",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/xinglin-li/auditable-scientific-agent-kernel/blob/HEAD/skills/rolling-backtest/SKILL.md",
+    "repo": "xinglin-li/auditable-scientific-agent-kernel",
+    "path": "skills/rolling-backtest/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-21T23:31:18Z",
+    "score": 40,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

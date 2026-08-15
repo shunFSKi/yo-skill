@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/fantoine/claude-later/later-config",
+  "type": "skill",
+  "name": "later:config",
+  "description": "Show the current persistence configuration for the later-queue in this project",
+  "author": "fantoine",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/fantoine/claude-later/blob/HEAD/skills/config/SKILL.md",
+    "repo": "fantoine/claude-later",
+    "path": "skills/config/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-04-20T11:50:39Z",
+    "score": 35,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

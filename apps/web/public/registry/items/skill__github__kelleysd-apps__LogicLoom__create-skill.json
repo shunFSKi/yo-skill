@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/kelleysd-apps/LogicLoom/create-skill",
+  "type": "skill",
+  "name": "create-skill",
+  "description": "⚠️ DEPRECATED — Use create-plugin skill instead",
+  "author": "kelleysd-apps",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/kelleysd-apps/LogicLoom/blob/HEAD/plugins/loom-creation/skills/create-skill/SKILL.md",
+    "repo": "kelleysd-apps/LogicLoom",
+    "path": "plugins/loom-creation/skills/create-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-13T21:56:17Z",
+    "score": 45,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

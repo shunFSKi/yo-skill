@@ -2,7 +2,7 @@
   "id": "mcp:official/com.revdoku/revdoku",
   "type": "mcp",
   "name": "Revdoku",
-  "description": "Publish websites from AI agents using Revdoku buckets.",
+  "description": "Create account-free website previews and publish durable sites from AI agents with Revdoku.",
   "author": "com.revdoku",
   "source": {
     "registry": "mcp-official",
@@ -16,8 +16,8 @@
   },
   "quality": {
     "stars": null,
-    "pushed_at": "2026-06-22T23:04:35.439069Z",
-    "score": 37
+    "pushed_at": "2026-08-14T17:56:08.398947Z",
+    "score": 52
   },
   "security": {
     "score": 100,
@@ -49,6 +49,6 @@
     "category": null,
     "featured": false
   },
-  "readme": null,
+  "readme": "# Revdoku\n\n> **Create websites from your AI for FREE**\n>\n> Ask ChatGPT, Claude or other AI to publish to Revdoku.\n>\n> Get a live `*.revdoku.site` website in seconds.\n>\n> **No account needed.**\n\nRevdoku publishes static websites and SPAs from AI-generated files and folders.\nThe first public preview is live for 24 hours and can be claimed if the user\nwants to keep updating the same website.\n\n## Prompt for an AI agent\n\n```text\nI'd like you to set up Revdoku so you can publish a website for me for free.\n\nBrowser-only chat: don't install anything. Direct me to your setup guide—Claude: https://revdoku.com/claude/; ChatGPT: https://revdoku.com/chatgpt/; other products: https://revdoku.com/<lowercase-hyphenated-product-name>/.\n\nWith terminal access, run `npx skills add revdoku/revdoku --skill revdoku -g`; without npm, run `curl -fsSL https://revdoku.com/install.sh | bash`.\n\nThen review https://revdoku.com/docs and ask what I'd like to publish.\n```\n\nThe agent should run setup commands itself when it has shell access. It must not\nsend the user to a separate terminal.\n\n## How the first publish works\n\n1. The agent creates a public preview at a randomized Revdoku URL. No signup or\n   login is needed.\n2. The preview lasts 24 hours. The agent can update the same URL without\n   extending that deadline.\n3. Revdoku returns one browser claim link. Account creation happens only at\n   `https://app.revdoku.com/users/sign_up`.\n4. After email verification, the website appears in the new Free account. The\n   original agent reconnects automatically on its next command.\n\nAnonymous previews never create private buckets and do not include forms,\nanalytics, custom domains, or custom URLs. They are noindex and use a\n`no-referrer` policy.\n\n## Local agents\n\nInstall the public skill and CLI:\n\n```sh\nnpx skills add revdoku/revdoku --skill revdoku -g\n```\n\nIf npm is unavailable:\n\n```sh\ncurl -fsSL https://revdoku.com/install.sh | bash\n```\n\nPublish or update the current folder:\n\n```sh\nrevdoku p\n```\n\nThe first unsigned run prints the preview and claim URLs. Re-running updates the\nsame preview. After claim, re-running exchanges Revdoku's one-time connection\ngrant automatically and updates the claimed website.\n\nFor a different existing account, run `revdoku login`. This is sign-in only;\nnew accounts are created on the web signup page.\n\nUseful commands:\n\n- `revdoku p [PATH]` — publish or update a website.\n- `revdoku preview [PATH]` — create a review URL.\n- `revdoku p [PATH] --draft` — save a private draft after sign-in.\n- `revdoku p --protected` — publish with Password access on an eligible plan.\n- `revdoku p --access-mode require_email` — require visitor email OTP.\n- `revdoku open`, `revdoku status`, `revdoku ls`, `revdoku --help` — inspect\n  the current connection and sites.\n\n## Hosted and web agents\n\nThe hosted MCP endpoint is `https://app.revdoku.com/mcp`. Its anonymous website\npreview tools require no authentication. Durable buckets and account features\nuse OAuth, and that OAuth screen is sign-in only. If the user has no Revdoku\naccount, the agent should create an anonymous preview and share its returned web\nsignup/claim link instead of trying to sign the user up through OAuth.\n\nHosted agents cannot read files from the user's computer. Use the local CLI for\nlocal folders, JavaScript bundles, images, fonts, PDFs, and other binary assets.\nMCP can directly write generated text files.\n\n## Tutorials\n\nClient guides use the lowercase product name, with spaces replaced by hyphens:\n`https://revdoku.com/<client>/` (for example, `/cursor/` and `/antigravity/`).\n\n- Setup hub: <https://revdoku.com/connect/>\n- ChatGPT: <https://revdoku.com/chatgpt/>\n- Codex: <https://revdoku.com/codex/>\n- Claude: <https://revdoku.com/claude/>\n- Claude Desktop and terminal agents:\n  <https://revdoku.com/claude-desktop-terminal/>\n- Gemini: <https://revdoku.com/gemini/>\n- Hermes: <https://revdoku.com/hermes/>\n\nUse those tutorials only when manual setup or troubleshooting is actually\nneeded. Normal onboarding should stay to one preview URL and one claim link.\n\n## Public package\n\nThis repository contains the Revdoku CLI, skill, API documentation, and\nClaude/Codex/Cursor plugin manifests. The hosted MCP implementation runs at\n`https://app.revdoku.com/mcp`. MCP manifests use `\"auth\":\"oauth\"` for account\ntools; the tool descriptors separately advertise the anonymous preview tools as\n`noauth`.\n\nSee [CHANGELOG.md](./CHANGELOG.md) and [api.md](./api.md).\n",
   "status": "curated"
 }

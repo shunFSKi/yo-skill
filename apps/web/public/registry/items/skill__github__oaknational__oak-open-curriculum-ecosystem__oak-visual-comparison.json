@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/oaknational/oak-open-curriculum-ecosystem/oak-visual-comparison",
+  "type": "skill",
+  "name": "oak-visual-comparison",
+  "description": "Judge whether a rebuilt page matches its visual reference: capture both sides as images at the same canonical width, run the windowed rejection statistics, and read the pair with the heatmap and σ-scores directing attention. Use whenever comparing a rebuild against a design export, a reference render, or a prior capture — fidelity reviews, visual regression triage, and owner-reported \"looks different\" reports.",
+  "author": "oaknational",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/oaknational/oak-open-curriculum-ecosystem/blob/HEAD/.agents/skills/oak-visual-comparison/SKILL.md",
+    "repo": "oaknational/oak-open-curriculum-ecosystem",
+    "path": ".agents/skills/oak-visual-comparison/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 7,
+    "pushed_at": "2026-08-14T16:11:12Z",
+    "score": 53
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

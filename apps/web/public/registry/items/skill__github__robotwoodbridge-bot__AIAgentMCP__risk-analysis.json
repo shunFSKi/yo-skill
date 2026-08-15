@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/robotwoodbridge-bot/AIAgentMCP/risk-analysis",
+  "type": "skill",
+  "name": "risk-analysis",
+  "description": "Evaluate quality risk for a change, feature, or release in this lab — categorize business/customer/security/performance/operational risk, rate severity, and recommend mitigations. Use when the user asks to assess risk, prioritize testing by risk, or surface what could go wrong.",
+  "author": "robotwoodbridge-bot",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/robotwoodbridge-bot/AIAgentMCP/blob/HEAD/.claude/skills/risk-analysis/SKILL.md",
+    "repo": "robotwoodbridge-bot/AIAgentMCP",
+    "path": ".claude/skills/risk-analysis/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-07T20:02:14Z",
+    "score": 40,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

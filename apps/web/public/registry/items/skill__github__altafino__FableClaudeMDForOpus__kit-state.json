@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/altafino/FableClaudeMDForOpus/kit-state",
+  "type": "skill",
+  "name": "kit-state",
+  "description": "Create or refresh docs/STATE.md before pausing, stopping, compaction, or handoff — guardrails session state. Use when asked to save state, checkpoint the session, or wrap up for the day.",
+  "author": "altafino",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/altafino/FableClaudeMDForOpus/blob/HEAD/.claude/skills/kit-state/SKILL.md",
+    "repo": "altafino/FableClaudeMDForOpus",
+    "path": ".claude/skills/kit-state/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 6,
+    "pushed_at": "2026-07-10T03:36:08Z",
+    "score": 48
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

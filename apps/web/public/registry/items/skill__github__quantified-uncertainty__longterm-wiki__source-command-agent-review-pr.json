@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/quantified-uncertainty/longterm-wiki/source-command-agent-review-pr",
+  "type": "skill",
+  "name": "source-command-agent-review-pr",
+  "description": "Adaptive, intensive PR review. Triages the diff, builds a verification plan scaled to risk and size, and executes it before shipping.",
+  "author": "quantified-uncertainty",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/quantified-uncertainty/longterm-wiki/blob/HEAD/.agents/skills/source-command-agent-review-pr/SKILL.md",
+    "repo": "quantified-uncertainty/longterm-wiki",
+    "path": ".agents/skills/source-command-agent-review-pr/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 6,
+    "pushed_at": "2026-08-11T17:19:49Z",
+    "score": 53
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

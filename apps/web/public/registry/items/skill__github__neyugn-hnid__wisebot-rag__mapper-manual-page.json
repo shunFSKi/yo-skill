@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/neyugn-hnid/wisebot-rag/mapper-manual-page",
+  "type": "skill",
+  "name": "mapper-manual-page",
+  "description": "Use when: tao mapper thu cong, map Page -> response list. Keywords: mapper, page response, manual mapping.",
+  "author": "neyugn-hnid",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/neyugn-hnid/wisebot-rag/blob/HEAD/.github/skills/mapper-manual-page/SKILL.md",
+    "repo": "neyugn-hnid/wisebot-rag",
+    "path": ".github/skills/mapper-manual-page/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-14T09:16:06Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

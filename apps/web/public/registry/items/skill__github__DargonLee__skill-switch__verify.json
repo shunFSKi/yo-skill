@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/DargonLee/skill-switch/verify",
+  "type": "skill",
+  "name": "verify",
+  "description": "Run full verification pipeline (lint, format check, type check, cargo clippy)",
+  "author": "DargonLee",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/DargonLee/skill-switch/blob/HEAD/.claude/skills/verify/SKILL.md",
+    "repo": "DargonLee/skill-switch",
+    "path": ".claude/skills/verify/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 57,
+    "pushed_at": "2026-05-01T04:47:56Z",
+    "score": 58,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 57
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# SkillSwitch\n\n<img src=\"images/home.png\" alt=\"SkillSwitch 主界面\" width=\"100%\">\n\n**AI Skill 管理工具** — 专为 Claude Code、Codex CLI、Gemini CLI、Cursor、Windsurf 等 AI 编程助手设计的跨平台桌面应用，统一管理、发现、创建和备份你的 Skill 文件。\n\n---\n\n## 核心功能\n\n### 📦 已安装管理\n\n浏览和管理已安装的 Skills，支持：\n- 版本信息、Stars、下载量统计\n- 按全局/项目级别控制启用状态\n- 查看 SKILL.md 入口文件\n\n### 🔍 发现新 Skill\n\n从仓库源浏览可安装 Skills，按分类筛选（Git & CI/CD、调试、安全、数据库、AI/LLM），一键安装/卸载。\n\n### ✏️ 创建新 Skill\n\n可视化编辑器创建 Skill，自动生成标准目录结构：\n- `SKILL.md` — 入口文件\n- `agents/` — 子 Agent 指令\n- `assets/` — 静态资源\n- `references/` — 参考文档\n- `scripts/` — 可执行脚本\n\n### 💾 备份与恢复\n\n- 手动创建快照，随时回滚\n- 卸载时自动保留，支持恢复\n- SSH 推送到 GitHub 远程仓库\n\n---\n\n## 多 App 支持\n\n侧边栏切换管理的 AI 应用：\n\n| App | 标识色 |\n|---|---|\n| Claude Code | 🤖 橙色 |\n| Codex CLI | ⌨️ 绿色 |\n| Gemini CLI | 💎 蓝色 |\n| Cursor | 🖱️ 紫色 |\n| Windsurf | 🏄 青色 |\n\n---\n\n## 技术栈\n\n| 层 | 技术 |\n|---|---|\n| 前端 | React 18 + TypeScript 5 + Vite 6 |\n| 后端 | Tauri 2 (Rust) |\n| 样式 | CSS Modules + CSS Variables |\n| 包管理 | pnpm |\n\n---\n\n## 安装\n\n从 [ Releases ](https://github.com/YOUR_USERNAME/skill-switch/releases) 下载对应平台安装包：\n\n- **macOS** — `.dmg` 或 `.app`\n- **Windows** — `.msi` 或 `.exe`\n- **Linux** — `.deb` 或 `.AppImage`\n\n---\n\n## 常见问题\n\n### macOS: \"无法打开应用，因为无法验证开发者\"\n\n从 GitHub Releases 下载的应用未经过 Apple 签名，首次打开可能会被 macOS 阻止。解决方法：\n\n```bash\nxattr -d com.apple.quarantine /Applications/skill-switch.app\n```\n\n运行后即可正常打开应用。\n\n---\n\n## 开发\n\n```bash\n# 安装依赖\npnpm install\n\n# 启动开发服务器\npnpm tauri dev\n\n# 构建\npnpm tauri build\n```\n\n---\n\n## 许可证\n\nMIT License",
+  "status": "curated"
+}

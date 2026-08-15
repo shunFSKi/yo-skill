@@ -1,0 +1,61 @@
+{
+  "id": "mcp:official/com.elucora/evidence",
+  "type": "mcp",
+  "name": "Elucora Evidence API",
+  "description": "Capture a public web source and return a portable, signed evidence receipt.",
+  "author": "com.elucora",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/Fuyuki0/citeseal",
+    "repo": "Fuyuki0/citeseal"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://elucora.com/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T20:55:05.904328Z",
+    "score": 42
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

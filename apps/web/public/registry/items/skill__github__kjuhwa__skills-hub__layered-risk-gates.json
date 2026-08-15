@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/kjuhwa/skills-hub/layered-risk-gates",
+  "type": "skill",
+  "name": "layered-risk-gates",
+  "description": "Three-layer safety pattern for autonomous action loops — pre-action admission gate, in-flight monitor (stop/target thresholds), and a consecutive-failure circuit breaker — so a single runaway loop can't clear out the account before a human sees it.",
+  "author": "kjuhwa",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/kjuhwa/skills-hub/blob/HEAD/skills/arch/layered-risk-gates/SKILL.md",
+    "repo": "kjuhwa/skills-hub",
+    "path": "skills/arch/layered-risk-gates/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-04-26T15:42:32Z",
+    "score": 35
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

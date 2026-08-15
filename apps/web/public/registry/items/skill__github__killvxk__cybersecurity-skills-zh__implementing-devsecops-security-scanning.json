@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/killvxk/cybersecurity-skills-zh/implementing-devsecops-security-scanning",
+  "type": "skill",
+  "name": "implementing-devsecops-security-scanning",
+  "description": "使用 Semgrep、Trivy 和 Gitleaks 等工具将安全扫描集成到 CI/CD 流水线中。 涵盖 SAST、SCA、容器扫描和密钥检测，并通过结构化 JSON 输出设置流水线门禁。",
+  "author": "killvxk",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/killvxk/cybersecurity-skills-zh/blob/HEAD/skills/implementing-devsecops-security-scanning/SKILL.md",
+    "repo": "killvxk/cybersecurity-skills-zh",
+    "path": "skills/implementing-devsecops-security-scanning/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 38,
+    "pushed_at": "2026-04-28T10:15:40Z",
+    "score": 56,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 38
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "<p align=\"center\">\n  <img src=\"assets/banner.png\" alt=\"网络安全技能库\" width=\"600\">\n</p>\n\n<p align=\"center\">\n  <strong>734+ 面向 AI Agent 的网络安全技能 &middot; agentskills.io 开放标准</strong>\n</p>\n\n<p align=\"center\">\n  <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/license-Apache_2.0-blue.svg?style=flat\" alt=\"License\"></a>\n  <img src=\"https://img.shields.io/badge/skills-734%2B-brightgreen?style=flat\" alt=\"Skills Count\">\n  <a href=\"https://agentskills.io\"><img src=\"https://img.shields.io/badge/standard-agentskills.io-purple?style=flat\" alt=\"Agent Skills\"></a>\n  <img src=\"https://img.shields.io/badge/platforms-26%2B-orange?style=flat\" alt=\"Platforms\">\n  <img src=\"https://img.shields.io/badge/lang-zh--CN-red?style=flat\" alt=\"中文版\">\n</p>\n\n---\n\n> **注意：社区项目 -- 与 Anthropic PBC 无关联。**\n> 这是一个独立的社区创建合集。仓库名称中的 \"Anthropic\" 指的是与 agentskills.io 标准的兼容性，并非 Anthropic 官方项目。\n>\n> 本仓库为中文翻译版本，原始英文版本请参见 [mukul975/Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills)。\n\n最大的开源 AI Agent 网络安全技能合集。每个技能都遵循 [agentskills.io](https://agentskills.io) 开放标准，可直接在 Claude Code、GitHub Copilot、OpenAI Codex CLI、Cursor、Gemini CLI 等 20+ 平台上使用。\n\n## 快速开始\n\n**方法 1：npx skills**\n```bash\nnpx skills add mukul975/Anthropic-Cybersecurity-Skills\n```\n\n**方法 2：Claude Code 插件**\n```\n/plugin marketplace add mukul975/Anthropic-Cybersecurity-Skills\n```\n\n**方法 3：手动克隆**\n```bash\ngit clone https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git\n```\n\n## 技能分类\n\n| 分类 | 技能数 | 示例技能 |\n|------|-------:|----------|\n| 云安全（Cloud Security） | 60 | AWS S3 存储桶审计、Azure AD 配置、GCP 安全评估 |\n| 威胁狩猎（Threat Hunting） | 55 | 凭据转储检测、使用 Zeek 检测 DNS 隧道、离地攻击二进制文件 |\n| 威胁情报（Threat Intelligence） | 50 | 使用 MITRE Navigator 分析 APT 组织、攻击活动溯源归因、暗网监控 |\n| Web 应用安全 | 42 | HTTP 请求走私、使用 Burp Suite 检测 XSS、Web 缓存投毒 |\n| 网络安全（Network Security） | 40 | Wireshark 流量分析、VLAN 分段、Suricata IDS 配置 |\n| 恶意软件分析（Malware Analysis） | 39 | Cobalt Strike Beacon 配置分析、Ghidra 逆向工程、YARA 规则开发 |\n| 数字取证（Digital Forensics） | 37 | 使用 dd/dcfldd 进行磁盘镜像、Volatility3 内存取证、浏览器取证 |\n| 安全运营（Security Operations） | 36 | Windows 事件日志分析、Splunk 检测规则、SIEM 用例实现 |\n| 身份与访问管理（IAM） | 35 | 使用 Okta 配置 SAML SSO、特权访问管理、Kubernetes RBAC |\n| SOC 运营 | 33 | 安全日志分析、告警分诊、事件管理 |\n| 容器安全（Container Security） | 30 | Trivy 镜像扫描、Falco 运行时检测、Kubernetes Pod 安全 |\n| OT/ICS 安全 | 28 | SCADA 系统攻击检测、Modbus 异常检测、Purdue 模型分段 |\n| API 安全 | 28 | API 枚举攻击检测、BOLA 利用、GraphQL 安全评估 |\n| 事件响应（Incident Response） | 25 | 勒索软件响应、云端事件遏制、易失性证据收集 |\n| 漏洞管理（Vulnerability Management） | 25 | DefectDojo 仪表盘、CVSS 评分、补丁管理工作流 |\n| 红队演练（Red Teaming） | 24 | Sliver C2 框架、BloodHound AD 分析、使用 Impacket 进行 Kerberoasting |\n| 渗透测试（Penetration Testing） | 23 | 外部网络渗透测试、Kubernetes 渗透测试、Active Directory 渗透测试 |\n| DevSecOps | 17 | GitLab CI 流水线、Semgrep 自定义 SAST 规则、使用 Gitleaks 扫描密钥泄露 |\n| 终端安全（Endpoint Security） | 17 | CIS 基准加固、Windows Defender 配置、主机入侵检测 |\n| 钓鱼防御（Phishing Defense） | 16 | 邮件头分析、GoPhish 模拟演练、DMARC/DKIM/SPF 配置 |\n| 密码学（Cryptography） | 14 | TLS 1.3 配置、HSM 密钥存储、使用 OpenSSL 配置证书颁发机构 |\n| 零信任架构（Zero Trust） | 13 | HashiCorp Boundary、Zscaler ZTNA、BeyondCorp 访问模型 |\n| 移动安全（Mobile Security） | 12 | 使用 objection 分析 iOS 应用、Android 恶意软件逆向工程、Frida Hook |\n| 勒索软件防御 | 7 | 勒索软件前兆检测、备份策略、蜜罐检测 |\n| 合规治理 | 5 | GDPR 数据保护、ISO 27001 ISMS、PCI DSS 控制措施 |\n\n## 工作原理\n\n每个技能都遵循 [agentskills.io](https://agentskills.io) 的**渐进式披露**模式。在技能发现阶段，AI Agent 仅读取 YAML frontmatter（约 30-50 个 token）来判断相关性：\n\n```yaml\n---\nname: performing-memory-forensics-with-volatility3\ndescription: 使用 Volatility3 分析内存转储，提取进程、网络连接和恶意软件制品。\ndomain: cybersecurity\nsubdomain: digital-forensics\ntags: [forensics, memory-analysis, volatility3, incident-response]\n---\n```\n\n如果技能与任务匹配，Agent 才会加载完整内容——工作流步骤、前置条件、工具命令和验证检查——避免在不相关的技能上浪费 token。\n\n## 兼容平台\n\n这些技能可与任何支持 agentskills.io 标准或能读取结构化 Markdown 的工具配合使用：\n\n| 平台 | 集成方式 |\n|------|----------|\n| **Claude Code** | 通过 `/plugin` 原生加载技能 |\n| **GitHub Copilot** | 通过 `.skills/` 目录提供工作区上下文 |\n| **OpenAI Codex CLI** | 基于文件的上下文注入 |\n| **Cursor** | 项目规则和文档集成 |\n| **Gemini CLI** | 上下文文件加载 |\n| **Amp** | 技能目录挂载 |\n| **Goose** | 基于插件的技能加载 |\n| **Windsurf** | 从项目文件感知上下文 |\n| **Aider** | 仓库映射集成 |\n| **Continue** | 自定义上下文提供者 |\n| 以及 16+ 其他平台 | 任何能读取结构化 Markdown 的 Agent |\n\n## 技能结构\n\n每个技能都遵循一致的目录结构：\n\n```\nskills/{skill-name}/\n├── SKILL.md            # 技能定义文件（含 YAML frontmatter）\n│   ├── Frontmatter     # name, description, domain, subdomain, tags\n│   ├── 适用场景         # AI Agent 的触发条件\n│   ├── 前置条件         # 所需工具和访问权限\n│   ├── 工作流程         # 分步执行指南\n│   └── 验证            # 确认成功的方法\n├── references/\n│   ├── standards.md    # NIST、MITRE ATT&CK、CVE 参考\n│   └── workflows.md    # 深度技术流程参考\n├── scripts/\n│   └── process.py      # 从业者辅助脚本\n└── assets/\n    └── template.md     # 检查清单和报告模板\n```\n\n## 贡献指南\n\n欢迎网络安全社区的贡献。请参阅 [CONTRIBUTING.md](CONTRIBUTING.md) 了解添加新技能、改进现有技能和审核流程的指南。\n\n## 许可证\n\n<a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/license-Apache_2.0-blue.svg?style=flat\" alt=\"License\"></a>\n\n本项目基于 Apache License 2.0 许可。详情请参阅 [LICENSE](LICENSE)。\n",
+  "status": "curated"
+}

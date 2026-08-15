@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/kjuhwa/skills-hub/immutable-action-event-log",
+  "type": "skill",
+  "name": "immutable-action-event-log",
+  "description": "Model state transitions as `(state, action) → (newState, List<Event>)` where the event list is an append-only, serializable log. Enables deterministic replay, audit trails, cheat detection, and UI choreography without coupling engine to presentation.",
+  "author": "kjuhwa",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/kjuhwa/skills-hub/blob/HEAD/skills/arch/immutable-action-event-log/SKILL.md",
+    "repo": "kjuhwa/skills-hub",
+    "path": "skills/arch/immutable-action-event-log/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-04-26T15:42:32Z",
+    "score": 35
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

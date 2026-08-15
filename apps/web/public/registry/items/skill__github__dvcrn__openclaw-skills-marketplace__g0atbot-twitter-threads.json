@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/dvcrn/openclaw-skills-marketplace/g0atbot-twitter-threads",
+  "type": "skill",
+  "name": "g0atbot-twitter-threads",
+  "description": "Twitter Thread Generator",
+  "author": "dvcrn",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/dvcrn/openclaw-skills-marketplace/blob/HEAD/plugins/g0atfac3--g0atbot-twitter-threads/skills/g0atbot-twitter-threads/SKILL.md",
+    "repo": "dvcrn/openclaw-skills-marketplace",
+    "path": "plugins/g0atfac3--g0atbot-twitter-threads/skills/g0atbot-twitter-threads/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 32,
+    "pushed_at": "2026-06-12T21:33:13Z",
+    "score": 58
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# OpenClaw Skills Marketplace For Claude\n\nThis repository is an automatic conversion of [`openclaw/skills`](https://github.com/openclaw/skills) into the Claude Skills marketplace format so the skills can be installed and used directly in Claude.\n\nIt takes the OpenClaw skill corpus and rewrites it into a Claude-compatible marketplace with:\n\n- a root marketplace manifest at `.claude-plugin/marketplace.json`\n- one Claude plugin per OpenClaw skill under `plugins/`\n- a generation report at `reports/generate-marketplace.json`\n\n## Use In Claude\n\nAdd this marketplace in Claude with:\n\n```text\n/plugin marketplace add dvcrn/openclaw-skills-marketplace\n```\n\nThen install any generated plugin from the marketplace:\n\n```text\n/plugin install <plugin-name>@openclaw-skills\n```\n\nExample:\n\n```text\n/plugin install 0x-professor--agentic-mcp-server-builder@openclaw-skills\n```\n\n## What This Repo Does\n\nThe generator reads canonical OpenClaw source skills from:\n\n```text\nopenclaw-skills/skills/<owner>/<slug>/\n```\n\nEach source skill is expected to contain:\n\n- `_meta.json`\n- `SKILL.md` or lowercase `skill.md`\n\nThe conversion process:\n\n- maps each OpenClaw skill to one Claude plugin\n- normalizes lowercase `skill.md` to `SKILL.md`\n- extracts Claude plugin root assets like `agents/`, `hooks/`, `.mcp.json`, `.lsp.json`, and `settings.json`\n- preserves nested `skills/` trees when a source package already behaves like a multi-skill plugin\n- skips malformed inputs and records them in `reports/generate-marketplace.json`\n\n## Regenerate The Entire Marketplace\n\nTo rebuild the full marketplace from the `openclaw-skills` submodule:\n\n```bash\nmise run generate\n```\n\nThat regenerates:\n\n- `.claude-plugin/marketplace.json`\n- `plugins/<plugin-id>/...`\n- `reports/generate-marketplace.json`\n\nThe generator replaces previous generated output under `.claude-plugin/`, `plugins/`, and `reports/` on each run.\n\nIf you want the explicit underlying task name, this still works too:\n\n```bash\nmise run generate_marketplace\n```\n\nFor small development runs:\n\n```bash\npython3 scripts/generate_marketplace.py --source openclaw-skills/skills --output . --limit 10\n```\n\n## Validate And Test\n\nRun the generator tests:\n\n```bash\nmise run test\n```\n\nValidate the generated marketplace:\n\n```bash\nclaude plugin validate .\n```\n\n## Notes\n\n- Plugin ids are generated as `<owner>--<slug>` after sanitization.\n- Nested source `skills/` directories are preserved as plugin content rather than treated as separate top-level source skills.\n- The upstream OpenClaw source is included as the `openclaw-skills` submodule.\n",
+  "status": "curated"
+}

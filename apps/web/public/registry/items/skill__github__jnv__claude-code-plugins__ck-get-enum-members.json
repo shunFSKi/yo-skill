@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/jnv/claude-code-plugins/ck-get-enum-members",
+  "type": "skill",
+  "name": "ck-get-enum-members",
+  "description": "List enum members for a specific C#, TypeScript, Kotlin, or Python enum without reading full file content.",
+  "author": "jnv",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/jnv/claude-code-plugins/blob/HEAD/plugins/context-king/skills/ck-get-enum-members/SKILL.md",
+    "repo": "jnv/claude-code-plugins",
+    "path": "plugins/context-king/skills/ck-get-enum-members/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-08T12:21:15Z",
+    "score": 40,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

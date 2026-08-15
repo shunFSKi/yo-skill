@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/pmduc97/demo_ai_workspace/sample-skill",
+  "type": "skill",
+  "name": "sample_skill",
+  "description": "Skill mẫu hướng dẫn cách định nghĩa một tác vụ chuyên biệt cho agent.",
+  "author": "pmduc97",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/pmduc97/demo_ai_workspace/blob/HEAD/.agents/skills/sample_skill/SKILL.md",
+    "repo": "pmduc97/demo_ai_workspace",
+    "path": ".agents/skills/sample_skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-07-12T12:43:15Z",
+    "score": 41,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 2
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

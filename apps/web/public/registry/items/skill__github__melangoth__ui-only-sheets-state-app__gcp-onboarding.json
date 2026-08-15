@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/melangoth/ui-only-sheets-state-app/gcp-onboarding",
+  "type": "skill",
+  "name": "gcp-onboarding",
+  "description": "Codex adapter for the repo-global GCP onboarding skill. Use when changes touch Google Cloud setup, OAuth consent or clients, Google API scopes, Secret Manager, Cloud Run, GitHub Pages deployment configuration, backend environment variables, or frontend environment flags that a new project/environment must configure.",
+  "author": "melangoth",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/melangoth/ui-only-sheets-state-app/blob/HEAD/.codex/skills/gcp-onboarding/SKILL.md",
+    "repo": "melangoth/ui-only-sheets-state-app",
+    "path": ".codex/skills/gcp-onboarding/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-14T09:20:53Z",
+    "score": 40,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

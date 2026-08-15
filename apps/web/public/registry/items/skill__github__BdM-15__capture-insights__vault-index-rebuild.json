@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/BdM-15/capture-insights/vault-index-rebuild",
+  "type": "skill",
+  "name": "vault-index-rebuild",
+  "description": "Rebuild Knowledge Vault index.md from disk truth per capture-llm-wiki schema. Use when vault structure drifted or after bulk ingest of pursuit folders. Karpathy LLM wiki maintenance skill.",
+  "author": "BdM-15",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/BdM-15/capture-insights/blob/HEAD/skills/vault-index-rebuild/SKILL.md",
+    "repo": "BdM-15/capture-insights",
+    "path": "skills/vault-index-rebuild/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-09T12:14:12Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

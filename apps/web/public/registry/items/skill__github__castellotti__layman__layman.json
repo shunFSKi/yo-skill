@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/castellotti/layman/layman",
+  "type": "skill",
+  "name": "layman",
+  "description": "Activate Layman monitoring for this Codex session",
+  "author": "castellotti",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/castellotti/layman/blob/HEAD/packages/server/skills/codex/layman/SKILL.md",
+    "repo": "castellotti/layman",
+    "path": "packages/server/skills/codex/layman/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-08-04T08:23:12Z",
+    "score": 46,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 2
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

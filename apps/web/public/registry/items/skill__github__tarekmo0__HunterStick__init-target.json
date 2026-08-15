@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/tarekmo0/HunterStick/init-target",
+  "type": "skill",
+  "name": "init-target",
+  "description": "Scaffold a target brain from the hunter's verbatim scope statement. Use for \"initialize a new target\", \"start a new program\", or any requested work naming a target that has no directory yet. Records the scope verbatim, never expands a company name into domains, then STOPS.",
+  "author": "tarekmo0",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/tarekmo0/HunterStick/blob/HEAD/.claude/skills/init-target/SKILL.md",
+    "repo": "tarekmo0/HunterStick",
+    "path": ".claude/skills/init-target/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 8,
+    "pushed_at": "2026-08-12T14:49:43Z",
+    "score": 54,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 8
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

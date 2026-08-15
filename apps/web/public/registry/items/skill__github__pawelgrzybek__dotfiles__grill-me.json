@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/pawelgrzybek/dotfiles/grill-me",
+  "type": "skill",
+  "name": "grill-me",
+  "description": "Interview the user relentlessly about a plan or design until reaching shared understanding, resolving each branch of the decision tree. Use when user wants to stress-test a plan, get grilled on their design, or mentions \"grill me\".",
+  "author": "pawelgrzybek",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/pawelgrzybek/dotfiles/blob/HEAD/claude/skills/grill-me/SKILL.md",
+    "repo": "pawelgrzybek/dotfiles",
+    "path": "claude/skills/grill-me/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 249,
+    "pushed_at": "2026-08-14T12:11:54Z",
+    "score": 77,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 249
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": "# dotfiles\n\nBefore doing anything, make sure you know what you're doing! The settings applied by this repository are highly personal and certainly not suitable for everyone. I recommend creating your own set of dotfiles based on this repository.\n\n1. Install [brew](https://brew.sh).\n1. SSH setup.\n1. Clone this repo to the hidden `.dotfile` directory in your home directory\n   (`git` comes with brew) -\n   `git clone https://github.com/pawelgrzybek/dotfiles.git ~/.dotfiles`\n1. Install brew formulas and casks - `source ~/.dotfiles/setup-brew.sh`\n1. Download your fav apps from app store - (Keynote, Numbers, Pages,\n   Photomator, Pixelmator Pro)\n1. Setup macOS - `source ~/.dotfiles/setup-macos.sh`\n1. Setup symlinks - `source ~/.dotfiles/setup-symlinks.sh`\n\n## Claude setup\n\nClaude Code stores MCP servers in `~/.claude.json`, which isn't practical to track here. Instead, re-add user-scoped MCP servers manually on each machine so they're available across all projects.\n\n```sh\nclaude mcp add --transport http mdn -s user https://mcp.mdn.mozilla.net/\nclaude mcp add safari-mcp-stp -s user -- \"/Applications/Safari Technology Preview.app/Contents/MacOS/safaridriver\" --mcp\n```\n",
+  "status": "curated"
+}

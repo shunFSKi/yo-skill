@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/haomingz/kimi-skills/glab-version",
+  "type": "skill",
+  "name": "glab-version",
+  "description": "显示 glab CLI 版本信息和构建详情。适用于检查已安装的 glab 版本或排查安装问题。触发词：version、glab 版本、检查版本、CLI 版本。",
+  "author": "haomingz",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/haomingz/kimi-skills/blob/HEAD/skills/gitlab-cli-guide/glab-version/SKILL.md",
+    "repo": "haomingz/kimi-skills",
+    "path": "skills/gitlab-cli-guide/glab-version/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 13,
+    "pushed_at": "2026-06-24T10:53:02Z",
+    "score": 47,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 13
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

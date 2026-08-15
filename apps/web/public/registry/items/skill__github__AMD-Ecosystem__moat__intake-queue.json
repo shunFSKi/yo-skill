@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/AMD-Ecosystem/moat/intake-queue",
+  "type": "skill",
+  "name": "intake-queue",
+  "description": "Publish the intake queue and carry a person's decision back into state. Use after a batch of intake screens finishes, when someone replies to the queue issue, or when asked what is waiting on a fork-or-decline decision.",
+  "author": "AMD-Ecosystem",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/AMD-Ecosystem/moat/blob/HEAD/.agents/skills/intake-queue/SKILL.md",
+    "repo": "AMD-Ecosystem/moat",
+    "path": ".agents/skills/intake-queue/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 3,
+    "pushed_at": "2026-08-14T16:46:21Z",
+    "score": 50
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/lxyeternal/MalSkillBench/pdf-processing",
+  "type": "skill",
+  "name": "pdf-processing",
+  "description": "从 PDF 中提取文本和表格，填写表单，并合并文档",
+  "author": "lxyeternal",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/lxyeternal/MalSkillBench/blob/HEAD/Dataset/Skills/benign/pdf-processing/SKILL.md",
+    "repo": "lxyeternal/MalSkillBench",
+    "path": "Dataset/Skills/benign/pdf-processing/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 47,
+    "pushed_at": "2026-06-10T06:43:36Z",
+    "score": 59,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 47
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": "# MalSkillBench\n\n**A runtime-verified benchmark of malicious agent skills, with the pipeline that builds it.**\n\nAI coding agents (Claude Code, OpenCode, Gemini CLI, ...) extend themselves with third-party *skills*: `SKILL.md` packages that bundle natural-language instructions, executable scripts, and tool permissions. A skill is at once code and agent-facing instruction, so it opens an attack surface that is neither pure software nor pure prompt. MalSkillBench is the first large-scale, taxonomy-driven, runtime-verified benchmark for malicious agent skills that jointly covers code injection, prompt injection, and mixed instruction-code attacks.\n\n\n**Cite Me**\n\n```\n@misc{guo2026malskillbenchruntimeverifiedbenchmarkmalicious,\n      title={MalSkillBench: A Runtime-Verified Benchmark of Malicious Agent Skills}, \n      author={Wenbo Guo and Wei Zeng and Chengwei Liu and Xiaojun Jia and Yijia Xu and Lei Tang and Yong Fang and Yang Liu},\n      year={2026},\n      eprint={2606.07131},\n      archivePrefix={arXiv},\n      primaryClass={cs.CR},\n      url={https://arxiv.org/abs/2606.07131}, \n}\n```\n\n\n## What's in the benchmark\n\n| Split | Count | Description |\n|---|---|---|\n| Generated | 3,214 | Synthesized by our closed-loop pipeline and confirmed by sandbox + LLM verification |\n| Wild | 703 | Collected from public registries and manually verified |\n| Test | 27 | Confirmed-malicious samples bundled with existing detection tools |\n| **Malicious total** | **3,944** | |\n| Benign | 4,000 | Most-downloaded skills, used as the false-positive set |\n\nGenerated samples are produced with overall **85.6%** verification yield (CI 94.5%, MIXED 91.9%, PI 75.8%) and cover all 108 taxonomy cells.\n\n## Attack taxonomy\n\nEvery malicious skill is labeled along three dimensions; the valid combinations form **108 cells** (`9x4` CI + `15x3` PI + `9x3` MIXED).\n\n**1. Attack vector**\n\n| Vector | Meaning |\n|---|---|\n| `CI` | Code Injection: malicious code in scripts or inline code blocks |\n| `PI` | Prompt Injection: adversarial instructions in `SKILL.md` |\n| `MIXED` | The chain is split across markdown and code; malicious only when combined |\n\n**2. Malicious behavior** (B1-B9 work via CI/PI/MIXED; B10-B15 target the agent and are PI-only)\n\n| ID | Behavior | ID | Behavior |\n|---|---|---|---|\n| B1 | Data Exfiltration | B9 | Privilege Escalation |\n| B2 | Credential Theft | B10 | Role Hijack |\n| B3 | Remote Code Execution | B11 | Safety Bypass |\n| B4 | Malware Delivery | B12 | Instruction Override |\n| B5 | Persistence | B13 | System Prompt Leak |\n| B6 | Reverse Shell | B14 | Goal Hijacking |\n| B7 | Ransomware | B15 | Content Manipulation |\n| B8 | Resource Abuse | | |\n\n**3. Insertion strategy**\n\n| Vector | Strategies |\n|---|---|\n| `CI` | New Script File, Function Append, Function Inject, Inline Code Block |\n| `PI` | Full Camouflage, Partial Injection, Steganographic |\n| `MIXED` | Download+Execute, Config+Load, Fetch+Run |\n\n## Repository structure\n\n```text\nMalSkillBench/\n├── Core/\n│   ├── generation/      # LLM-based malicious skill generation\n│   ├── verification/    # Docker sandbox + two-layer verification\n│   ├── taxonomy/        # Behavior definitions, material labeling\n│   ├── collection/      # Benign/wild skill scraping\n│   └── analyzers/\n├── Dataset/\n│   ├── Codes/           # CI knowledge base (malicious package corpus)\n│   ├── Prompts/         # PI knowledge base (jailbreak/injection corpora)\n│   └── Skills/\n│       ├── malware/     # all malicious skills (generated + wild + tool-test), one dir each\n│       └── benign/      # benign reference set\n├── Baselines/           # Detector baselines (3 groups, see below)\n├── Experiment/          # RQ3/RQ4 runner code + Results/ (RQ1/RQ2 are placeholders)\n├── Configs/             # LLM configuration (template only is tracked)\n└── Utils/               # LLM client, logging, token accounting\n```\n\nEach released skill is a complete, self-contained skill package — `SKILL.md`\nplus any `scripts/`, `references/`, or `assets/` it ships. Generation- and\nverification-time artifacts (`_expected.json`, `_evidence.json`, `_runtime/`,\netc.) are kept local and not part of the release.\n\n## Setup\n\n```bash\ncp Configs/llm_config.template.json Configs/llm_config.json\n# edit Configs/llm_config.json and add your own API keys / endpoints\n```\n\nAll `llm_config*.json` files except the template are gitignored. The generator and verifier read their own config, so you can point each at whichever provider (openai / azure / ollama / custom) you prefer.\n\n## Generation\n\n```bash\n# one cell\npython Core/generation/agent.py --vector CI --behavior B1 --strategy \"New Script File\"\n\n# the whole taxonomy, N samples per cell\npython Core/generation/agent.py --generate_all --per_cell 3 --workers 6\n```\n\nThe pipeline retrieves real attack patterns from the knowledge base, wraps them in a benign skill template as camouflage, synthesizes the skill, and writes `_expected.json` declaring the behavior to verify.\n\n## Verification\n\nA candidate enters the benchmark only if its declared behavior is actually observed at runtime.\n\n- **CI / MIXED**: the skill runs in a Docker sandbox (OpenCode agent + `strace` + `inotifywait`); Layer 1 matches declared IOCs in the syscall trace, Layer 2 is an LLM judge over the trace.\n- **PI**: no syscall trace, so the Layer-2 judge classifies the agent's response as `triggered`, `detected`, or `ineffective` (the first two count as positive).\n\n```bash\ndocker build -t malskillbench/sandbox Core/verification/docker/\n\n# one skill\npython Core/verification/agent.py --skill_dir Dataset/Skills/malware/<sample>\n\n# everything, with closed-loop feedback\npython Core/verification/agent.py --verify_all --workers 6 --with_feedback\n```\n\nRejected candidates loop back to the generator with structured feedback (up to 3 retries).\n\n## Baselines\n\nEvaluated under `Experiment/RQ3` and `Experiment/RQ4`, grouped under `Baselines/`:\n\n| Group | Folder | Examples |\n|---|---|---|\n| Skill-specific detectors | `skillsecurity/` | Cisco Skill Scanner, Sentry Skill Scanner, LLM Guard, ... |\n| Supply-chain scanners | `supplychain/` | GuardDog, OSSGadget, Bandit4Mal, MalGuard, SAP |\n| Prompt-injection defenses | `promptinjection/` | DataSentinel, Llama Guard 3, Prompt Guard 2, NeMo Guardrails, MELON, Attention Tracker |\n\nThe central question is not whether a detector catches malicious code or malicious text alone, but whether it can reason over the relationship between a skill's code and its instructions.\n\n## Cite Me\n\n```\n@misc{guo2026malskillbenchruntimeverifiedbenchmarkmalicious,\n      title={MalSkillBench: A Runtime-Verified Benchmark of Malicious Agent Skills}, \n      author={Wenbo Guo and Wei Zeng and Chengwei Liu and Xiaojun Jia and Yijia Xu and Lei Tang and Yong Fang and Yang Liu},\n      year={2026},\n      eprint={2606.07131},\n      archivePrefix={arXiv},\n      primaryClass={cs.CR},\n      url={https://arxiv.org/abs/2606.07131}, \n}\n```\n\n## License\n\nFor academic research use only.\n",
+  "status": "curated"
+}

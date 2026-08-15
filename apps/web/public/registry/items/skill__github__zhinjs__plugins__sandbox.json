@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/zhinjs/plugins/sandbox",
+  "type": "skill",
+  "name": "sandbox",
+  "description": "沙箱测试适配器：基于 WebSocket 的本地测试环境，提供浏览器内聊天 UI，无需第三方平台即可调试插件和命令。",
+  "author": "zhinjs",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/zhinjs/plugins/blob/HEAD/adapters/sandbox/skills/sandbox/SKILL.md",
+    "repo": "zhinjs/plugins",
+    "path": "adapters/sandbox/skills/sandbox/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 4,
+    "pushed_at": "2026-04-15T04:23:55Z",
+    "score": 38
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

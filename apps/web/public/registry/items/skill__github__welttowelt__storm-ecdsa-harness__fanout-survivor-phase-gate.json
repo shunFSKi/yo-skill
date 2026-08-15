@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/welttowelt/storm-ecdsa-harness/fanout-survivor-phase-gate",
+  "type": "skill",
+  "name": "fanout-survivor-phase-gate",
+  "description": "Storm repo-local skill for gating q1152 fanout GPU survivors against phase-aware official eval evidence.",
+  "author": "welttowelt",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/welttowelt/storm-ecdsa-harness/blob/HEAD/.agents/skills/fanout-survivor-phase-gate/SKILL.md",
+    "repo": "welttowelt/storm-ecdsa-harness",
+    "path": ".agents/skills/fanout-survivor-phase-gate/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-07-10T12:37:37Z",
+    "score": 43
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": false
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

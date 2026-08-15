@@ -1,0 +1,58 @@
+{
+  "id": "mcp:official/io.github.loncadev/baron",
+  "type": "mcp",
+  "name": "Baron",
+  "description": "Let your coding agent write to your work tracker: issues, branches, PRs and CI, one contract.",
+  "author": "io.github.loncadev",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/loncadev/baron",
+    "repo": "loncadev/baron"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@lonca/baron-mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T18:05:26.663168Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": "# Baron\n\n> **Let your coding agent write to your work tracker — and keep the same flow when you change trackers.**\n> Baron is an open-source layer that turns issues, branches, PRs, CI runs, and deployments into one\n> normalized contract, so your agent never learns a vendor's API, states, or column names.\n\n![Baron running the task-start then task-finish recipes through its normalized ports](docs/demo/baron-demo.gif)\n\n## The problem\n\nAI coding agents bake **one vendor's API** and **one team's process** into prompts. The moment your\nissues live in Azure DevOps but your code is on GitHub, or your board columns aren't literally \"To Do\n/ Done\", or you switch trackers next quarter — the prompts break, and the agent falls back to raw,\nvendor-specific tools. You've hardcoded vendor lock-in into the way you work.\n\n## What Baron does\n\nPlenty of tools let an agent *read* your tracker. Baron is about the other direction: **writing** —\ncreating work items, moving them, cutting branches, opening and merging PRs — which is where an agent\ndoes damage when it guesses a vendor's state machine wrong.\n\nThe agent speaks one abstract vocabulary in terms of **roles** (`backlog → ready → in_progress →\nin_review → done`; blocking is an orthogonal flag, so a blocked item keeps the role the work is\nactually in), and Baron translates to each provider's real API, states, and\nquirks. You confirm that mapping once, at `baron init`, and it is committed to your repo as\nconfiguration — not re-guessed by the model on every call.\n\nEach port binds to a provider independently, so `issues` on Azure DevOps, `scm` on GitHub, and\n`notify` on Slack is a normal setup rather than a special case.\n\n## What it looks like\n\n```\nYou:  Start work on STORE-142.\n\nBaron  ▸ runs the task-start recipe as a single call:\n  ✓ Loaded STORE-142 \"Add rate limiting to the login endpoint\"  (type role: task)\n  ✓ Checked it: not done, has a canonical branch, not assigned to someone else\n  ✓ Branched feature/STORE-142 from the repo's default branch\n  ✓ Moved STORE-142 → in_progress, assigned to you\n  ✓ Commented on the item: \"Started work — on branch feature/STORE-142.\"\n```\n\nThat same prompt on **Azure DevOps** sets the work item state to `Active`; on **GitHub** it applies an\n`in-progress` label — because `in_progress` is a *role*, not a vendor state.\n\nThe checks matter as much as the actions: if the item is already done, belongs to someone else, or is\na container that should never be branched, the run stops **before** anything is created. The branch\nname is derived by Baron from the item's type role, so every agent and every recipe derives the same\nname for the same item instead of inventing one.\n\n## Why it's different\n\n- **Capability ports, not \"a tracker.\"** `issues` / `scm` / `ci` / `deploy` / `notify`, each bound to\n  a provider independently — so a consumer mixes providers rather than betting on one vendor spanning\n  everything.\n- **Normalize, don't raw-proxy.** New capabilities become first-class normalized ports; a clearly\n  labeled provider-native escape hatch is the explicit last resort, never the default path.\n- **Capability gaps are never silent.** When a provider lacks something (say, native issue hierarchy),\n  Baron either emulates it (e.g. labels), degrades with a warning, or errors loudly — decided by\n  policy, never swallowed.\n- **Workflows are recipes, not prompts.** Multi-step flows (`task-start`, `task-finish`, `task-land`,\n  `ship`) are declarative YAML executed as a single call, with guards that stop a run *before* it\n  mutates anything. The order lives in the recipe rather than being improvised per run.\n\n## Quick start\n\nPublished to npm — no clone, no build. From inside your project:\n\n```bash\n# 1. Configure — one command. Auto-detects owner/repo from your git remote, offers to sign you in\n#    through your browser (or paste a token instead), writes .baron/credentials (gitignored) +\n#    .baron/policy.json (issues + scm bound).\nnpx -y @lonca/baron-cli@latest init --provider github      # or: --provider azure-devops\n\n# 2. Check the policy against the live provider (drift → exit 1)\nnpx -y @lonca/baron-cli@latest doctor\n\n# 3. Run a workflow recipe\nnpx -y @lonca/baron-cli@latest run --recipe task-start          # by name; or pass a path\n```\n\nOn GitHub, step 1 opens the approval page and you confirm a short code — no permission list to read,\nno boxes to tick, no token to paste. Pasting a fine-grained token is still offered, because it is a\nnarrower credential than any OAuth scope and an install that wants the tighter one should not have to\nfight the friendlier path to get it. Either way `baron doctor` verifies what the credential can\nactually do before you start work.\n\nOr drive it from an agent — install the Claude Code plugin (MCP server + workflow skills in one):\n\n```\n/plugin marketplace add loncadev/baron\n/plugin install baron@baron\n```\n\nSee [Getting started](./docs/getting-started.md) for the full walkthrough. Contributing to Baron\nitself? Run from source with `pnpm baron …` — see [CONTRIBUTING](./CONTRIBUTING.md).\n\nOr wire the **MCP server** into your agent and call the tools directly across every port —\n`baron_issue_write op=create`, `baron_scm_write op=pr_create`, `baron_ci_read op=runs`, `baron_deploy_read op=deployments`,\n`baron_notify_send`, plus `baron_recipe_run` for whole workflows. In Claude Code, the plugin also\nships per-recipe **skills** (`/baron:task-start`, `/baron:ship`). See [docs/mcp.md](./docs/mcp.md).\n\nThe server is listed in the official **MCP Registry** as `io.github.loncadev/baron`, and runs as a\ncontainer for anyone who would rather not have Node on the host — see\n[docs/mcp.md](./docs/mcp.md#running-it-as-a-container).\n\nNew to it? The [Azure DevOps setup walkthrough](./docs/setup-azure-devops.md) is copy-paste from\nscratch (PAT scopes, `init → doctor → MCP`, troubleshooting).\n\n## Providers\n\n| Provider | Ports |\n| --- | --- |\n| **Azure DevOps** | `issues` · `scm` · `ci` · `deploy` |\n| **GitHub** | `issues` · `scm` · `ci` · `deploy` |\n| **Slack** | `notify` |\n\nGitLab, Jira, and Linear are on the [roadmap](./ROADMAP.md) — adding one never changes how the agent\ntalks to Baron, which is the whole point. Until they land, those names describe intent, not support.\n\n## Documentation\n\n| Guide | What it covers |\n| --- | --- |\n| [Getting started](./docs/getting-started.md) | Install, prerequisites, first `init` → `doctor` → `run`. |\n| [Setup walkthrough — Azure DevOps](./docs/setup-azure-devops.md) | From-scratch, copy-paste setup on Azure DevOps + Claude Code. |\n| [Concepts](./docs/concepts.md) | Ports, roles, capability gaps, the knowledge loop — the mental model. |\n| [Configuration](./docs/configuration.md) | `.baron/policy.json`, role/type/gap maps, credentials. |\n| [CLI](./docs/cli.md) | `baron init` / `doctor` / `run` reference. |\n| [Recipes](./docs/recipes.md) | Writing YAML recipes: `ask` / `do` / `message`, interpolation, the op table. |\n| [MCP server & plugin](./docs/mcp.md) | The MCP tools and the Claude Code plugin. |\n| [Trying it with Claude Code](./docs/trying-with-claude-code.md) | Hands-on: wire the MCP server to a real project + a verification checklist. |\n| [Providers](./docs/providers.md) | Which provider supports which port and capability. |\n| [Demo script](./docs/demo.md) | Ready-to-record 60-second demo (Claude Code or CLI). |\n\nThe full design decision record is in [ARCHITECTURE.md](./ARCHITECTURE.md); the contributor working\ncontract is [CLAUDE.md](./CLAUDE.md), contribution terms are in [CONTRIBUTING.md](./CONTRIBUTING.md),\nand the publish playbook is [RELEASING.md](./RELEASING.md).\n\n## Status\n\nv1 is built end-to-end: the `issues`, `scm`, `ci`, and `deploy` ports across **Azure DevOps** and\n**GitHub** plus `notify` via **Slack**, the config engine (`baron init` / `doctor`), a multi-port MCP\nserver, the YAML recipe engine + `baron run`, the knowledge loop, and a Claude Code plugin. Every\nadapter passes a network-free **conformance suite**; the Azure DevOps ports are additionally\n**live-validated** against a real project.\n\nBaron now also runs this repository — its issues, branches, and pull requests move through its own\nGitHub adapter. That is a working proof, not adoption: Baron is young and has not yet been put\nthrough a stack it did not grow up on. If you run it against yours, the resulting bug report is the\nmost useful thing you could send. What is planned next, and what is deliberately out of scope, is in\n[ROADMAP.md](./ROADMAP.md).\n\n## License\n\nOpen-core. The core, the P0 adapters (Azure DevOps, GitHub, Slack), the recipes, and the CLI/MCP\nserver are licensed under [Apache-2.0](./LICENSE). Future commercial-tier features (SSO, secret-manager\nintegrations, multi-team governance, audit) will ship under a separate commercial license — see\n[ARCHITECTURE.md](./ARCHITECTURE.md) decision #20.\n",
+  "status": "curated"
+}

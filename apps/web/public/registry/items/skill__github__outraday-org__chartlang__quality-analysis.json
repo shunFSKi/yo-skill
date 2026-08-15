@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/outraday-org/chartlang/quality-analysis",
+  "type": "skill",
+  "name": "quality-analysis",
+  "description": "Analyze code quality, reusability, and conventions. Staff engineer review for diffs, branches, or task verification. Fixes all issues found and runs the chartlang gates.",
+  "author": "outraday-org",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/outraday-org/chartlang/blob/HEAD/.codex/skills/quality-analysis/SKILL.md",
+    "repo": "outraday-org/chartlang",
+    "path": ".codex/skills/quality-analysis/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-14T05:43:11Z",
+    "score": 48
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

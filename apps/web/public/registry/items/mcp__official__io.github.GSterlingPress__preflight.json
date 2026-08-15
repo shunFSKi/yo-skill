@@ -1,13 +1,13 @@
 {
   "id": "mcp:official/io.github.GSterlingPress/preflight",
   "type": "mcp",
-  "name": "PREFLIGHT",
-  "description": "Route URLs for AI agents before fetch or browser rendering.",
+  "name": "PREFLIGHT — URL Routing for AI Agents",
+  "description": "Choose HTTP, browser, machine endpoint, or avoid before an agent visits an unfamiliar URL.",
   "author": "io.github.GSterlingPress",
   "source": {
     "registry": "mcp-official",
-    "url": "https://preflight-api-production-01a2.up.railway.app/mcp",
-    "repo": null
+    "url": "https://github.com/GSterlingPress/preflight-api",
+    "repo": "GSterlingPress/preflight-api"
   },
   "license": null,
   "install": {
@@ -16,8 +16,8 @@
   },
   "quality": {
     "stars": null,
-    "pushed_at": "2026-08-11T01:00:46.949901Z",
-    "score": 42
+    "pushed_at": "2026-08-14T20:02:53.754437Z",
+    "score": 52
   },
   "security": {
     "score": 100,
@@ -49,6 +49,6 @@
     "category": null,
     "featured": false
   },
-  "readme": null,
+  "readme": "# PREFLIGHT\n\n**Before your AI agent visits a URL, ask us how to get there.**\n\nPREFLIGHT is routing intelligence for browser, research and shopping agents. Given a URL, it recommends the cheapest likely route to try first: `HTTP`, `BROWSER`, `MACHINE_ENDPOINT`, or `AVOID`.\n\nThe long-term product is a machine map of the web: not *what is on the web*, but *how should a machine interact with this destination?*\n\n## Live service\n\nBase URL:\n\n`https://preflight-api-production-01a2.up.railway.app`\n\nREST — use the **actual URL your agent is about to visit**:\n\n```http\nGET /v1/check?url=<encoded-actual-destination-url>\n```\n\nFor example, if your agent is about to inspect a product, documentation page, article, booking page, or SaaS site, pass that real destination to PREFLIGHT first. `example.com` is only a documentation placeholder and should not be used when a real task URL exists.\n\nRemote MCP:\n\n`https://preflight-api-production-01a2.up.railway.app/mcp`\n\nThe MCP server exposes two tools:\n\n- `preflight_check` — call this **before fetching or browser-rendering an unfamiliar real URL**.\n- `preflight_feedback` — report whether the chosen route worked so PREFLIGHT can improve future recommendations.\n\nExample tool intent:\n\n> Before opening the URL from my current task, use PREFLIGHT to decide whether ordinary HTTP, a browser, a machine-readable endpoint, or avoidance is the best first route.\n\n## Why an agent should call PREFLIGHT\n\nFetching first can be wasteful. A destination may be directly readable over HTTP, require browser rendering, expose a smaller machine endpoint, block automation, require authentication/payment, or carry access signals that make a fetch undesirable. PREFLIGHT tries to answer that routing question before the expensive step.\n\nResponses combine direct probe signals, cached domain knowledge, and sufficiently strong observed route feedback. They can include status, redirects, robots/access hints, estimated token size, JavaScript-shell hints, structured-data signals, machine endpoints, latency, confidence, cache age, and learned route evidence.\n\n## Feedback loop\n\n```http\nPOST /v1/feedback\nContent-Type: application/json\nAuthorization: Bearer <feedback-key>   # when protection is enabled\n```\n\n```json\n{\n  \"url\": \"https://merchant.example/product/123\",\n  \"route\": \"BROWSER\",\n  \"outcome\": \"success\",\n  \"latencyMs\": 840\n}\n```\n\nPREFLIGHT stores aggregated success/failure evidence rather than page content or user identities. URL-level learning requires at least 5 samples at 80% success; domain-level learning requires at least 10 samples at 85% success. Feedback never overrides a current `AVOID` decision from live safety/access/robots signals.\n\n## Agent discovery\n\n- `AGENTS.md` tells coding/AI agents exactly when to use PREFLIGHT.\n- `llms.txt` gives LLMs a compact machine-readable explanation, live endpoints, and usage rule.\n- `openapi.json` exposes REST operations in OpenAPI 3.1 format for tool importers and generated clients.\n- `mcp.json` contains a generic remote MCP client configuration.\n- `docs/AGENT-INTEGRATIONS.md` contains copy/paste integration patterns for browser, research, shopping, coding, MCP, and REST agents.\n- `server.json` contains official MCP Registry metadata for the public Streamable HTTP server.\n- `/mcp` supports MCP initialize, initialized notification, ping, `tools/list`, and `tools/call`.\n- The ordinary REST endpoint remains available for clients that do not use MCP.\n\nSearch/discovery concepts: **AI agent URL routing**, **browser-agent preflight**, **choose HTTP vs browser**, **machine-readable endpoint discovery**, **reduce agent browsing tokens**, **agent web routing**, **pre-fetch routing intelligence**, **AI browser cost reduction**, **route before crawl**, **agent URL access intelligence**.\n\n## Public deployment\n\n`GET /ready` verifies the data directory is writable. Railway deployments use `/data`; mount a persistent volume there when long-term feedback persistence is required. `PREFLIGHT_FEEDBACK_KEY` optionally bearer-protects feedback writes while keeping route checks public. `npm run smoke:live` exercises the public route/feedback cycle.\n\n## Real-world benchmark\n\n`benchmarks/sites.json` contains a cross-category live corpus. Run `npm run benchmark`. The scheduled benchmark records route, status, latency, token estimate and machine endpoints and preserves machine-readable reports for trend analysis.\n\n## Safety boundary\n\nPREFLIGHT blocks localhost, private/link-local network addresses, credential-bearing URLs, non-HTTP protocols, and unsafe redirect destinations. Endpoint discovery and negotiated probes go through the same SSRF-safe fetch layer. MCP validates browser Origins, and route feedback cannot relax an active `AVOID` result.\n\n## Run locally\n\nRequires Node.js 20+.\n\n```bash\nnpm test\nnpm start\n```\n\n## Product boundary\n\nPREFLIGHT is not a crawler, browser farm, search engine or site-owner audit tool. Its job is narrower:\n\n> **Real URL in → cheapest reliable machine route out.**\n",
   "status": "curated"
 }

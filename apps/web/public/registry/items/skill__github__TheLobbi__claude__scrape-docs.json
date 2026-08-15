@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/TheLobbi/claude/scrape-docs",
+  "type": "skill",
+  "name": "scrape-docs",
+  "description": "Scrape and extract documentation from a URL using Firecrawl. Use when you need to read external documentation.",
+  "author": "TheLobbi",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/TheLobbi/claude/blob/HEAD/.claude/skills/scrape-docs/SKILL.md",
+    "repo": "TheLobbi/claude",
+    "path": ".claude/skills/scrape-docs/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 18,
+    "pushed_at": "2026-08-13T05:26:51Z",
+    "score": 57
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

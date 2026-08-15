@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/platootalp/agents/ppt-generator",
+  "type": "skill",
+  "name": "ppt_generator",
+  "description": "根据文本内容生成PPT演示文稿，支持多种模板和自动化生成",
+  "author": "platootalp",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/platootalp/agents/blob/HEAD/apps/engineer/coder/skills/ppt_generator/SKILL.md",
+    "repo": "platootalp/agents",
+    "path": "apps/engineer/coder/skills/ppt_generator/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 6,
+    "pushed_at": "2026-04-11T02:30:40Z",
+    "score": 37,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 6
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

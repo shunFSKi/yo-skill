@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/mombe090/.files/gitops-repo-audit",
+  "type": "skill",
+  "name": "gitops-repo-audit",
+  "description": "Audit and validate Flux CD GitOps repositories by scanning local repo files (not live clusters) — runs Kubernetes schema validation, detects deprecated Flux APIs, reviews RBAC/multi-tenancy/secrets management, and produces a prioritized GitOps report. Use when users ask to audit, analyze, validate, review, or security-check a GitOps repo.",
+  "author": "mombe090",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/mombe090/.files/blob/HEAD/opencode/.config/opencode/skills/gitops-repo-audit/SKILL.md",
+    "repo": "mombe090/.files",
+    "path": "opencode/.config/opencode/skills/gitops-repo-audit/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-25T20:33:34Z",
+    "score": 45,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

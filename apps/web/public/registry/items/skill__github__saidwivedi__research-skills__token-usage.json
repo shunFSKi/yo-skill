@@ -15,9 +15,15 @@
     "kind": "skill-dir"
   },
   "quality": {
-    "stars": null,
-    "pushed_at": null,
-    "score": 25
+    "stars": 40,
+    "pushed_at": "2026-06-29T15:55:10Z",
+    "score": 65,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 40
+      }
+    ]
   },
   "security": {
     "score": 100,
@@ -49,6 +55,6 @@
     "category": null,
     "featured": false
   },
-  "readme": null,
+  "readme": "# research-skills\n\nClaude Code skills for AI/ML researchers.\n\n## Demos\n\n<table>\n  <tr>\n    <td align=\"center\"><strong>Research Collaborator</strong><br><br>\n      <video src=\"https://github.com/user-attachments/assets/f09a0afd-b149-4233-8f65-4d4f193517a1\" width=\"480\" controls></video>\n    </td>\n    <td align=\"center\"><strong>Results to Slides</strong><br><br>\n      <video src=\"https://github.com/user-attachments/assets/5d583ca8-03e7-4740-ad7e-8cfef469e4fc\" width=\"480\" controls></video>\n    </td>\n  </tr>\n</table>\n\n## Skills\n\n<table>\n  <tr>\n    <td width=\"280\"><a href=\"plugins/research-collaborator/\"><b>research-collaborator</b></a></td>\n    <td>Guardrails your research workflow. Encodes principles from experienced researchers and applies them before you spend the GPU hours. Checks your hypothesis, catches known bugs and flags sloppy methodology.</td>\n  </tr>\n  <tr>\n    <td width=\"280\"><a href=\"plugins/results-to-slides/\"><b>results-to-slides</b></a></td>\n    <td>Discovers experiments from git history and output folders, collects images and metrics, generates editable PowerPoint presentations (.pptx).</td>\n  </tr>\n</table>\n\nAlso includes a utility skill:\n\n<table>\n  <tr>\n    <td width=\"280\"><a href=\"plugins/token-usage/\"><b>token-usage</b></a></td>\n    <td>Per-session token usage breakdown. <code>/token-usage</code> or <code>/token-usage 30</code> for last N days.</td>\n  </tr>\n</table>\n\n## Installation\n\nAdd the marketplace in Claude Code:\n\n```bash\n/plugin marketplace add saidwivedi/research-skills\n```\n\nInstall all plugins:\n\n```bash\n/plugin install research-collaborator@saidwivedi-research\n/plugin install results-to-slides@saidwivedi-research\n/plugin install token-usage@saidwivedi-research\n```\n\nOr install just the ones you need.\n\nSkills are invoked via slash commands in Claude Code:\n- `/research-collaborator` - start a research collaboration session\n- `/results-to-slides 0301 0308` - generate a presentation for experiments from March 1-8\n- `/token-usage 30` - show token usage over the last 30 days\n\n## Requirements\n\n**results-to-slides:**\n- Python with `python-pptx`, `Pillow`, `lxml`\n- Optional: `cv2` or `ffmpeg` for video poster frame extraction\n- A git repository with experiment outputs\n\n**research-collaborator:**\n- Web search access (for literature search)\n- A codebase with experiments to investigate\n\n## License\n\nMIT\n",
   "status": "curated"
 }

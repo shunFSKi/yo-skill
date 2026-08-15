@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/HeDaas-Code/cerebellum/image-analyzer",
+  "type": "skill",
+  "name": "image-analyzer",
+  "description": "帮助没有视觉能力的模型进行图像理解。当需要分析图像内容、提取图片中的信息、文字、界面元素，或理解截图、图表、架构图等任何视觉内容时，使用此技能，传入图片路径即可获得描述信息。",
+  "author": "HeDaas-Code",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/HeDaas-Code/cerebellum/blob/HEAD/cerebellum/skills/image-analyzer/SKILL.md",
+    "repo": "HeDaas-Code/cerebellum",
+    "path": "cerebellum/skills/image-analyzer/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-20T02:59:28Z",
+    "score": 37,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

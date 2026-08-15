@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/jrkasprzyk/RiverWare-AI-Tools/explain-riverware-model",
+  "type": "skill",
+  "name": "explain-riverware-model",
+  "description": "Write a plain-language narrative explanation of a RiverWare model (.mdl) and/or ruleset (.rls) — what objects, slots, rule curves, DMIs, and policy rules the file contains and how they operate together. Use when asked to explain, summarize, document, walk through, or describe a RiverWare .mdl or .rls file.",
+  "author": "jrkasprzyk",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/jrkasprzyk/RiverWare-AI-Tools/blob/HEAD/.claude/skills/explain-riverware-model/SKILL.md",
+    "repo": "jrkasprzyk/RiverWare-AI-Tools",
+    "path": ".claude/skills/explain-riverware-model/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-14T00:44:04Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

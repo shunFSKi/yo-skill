@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/tomascortereal/claude-code-setup/gsd-session-report",
+  "type": "skill",
+  "name": "gsd-session-report",
+  "description": "Generate a session report with token usage estimates, work summary, and outcomes",
+  "author": "tomascortereal",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/tomascortereal/claude-code-setup/blob/HEAD/skills/gsd-session-report/SKILL.md",
+    "repo": "tomascortereal/claude-code-setup",
+    "path": "skills/gsd-session-report/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 61,
+    "pushed_at": "2026-04-08T17:19:14Z",
+    "score": 58,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 61
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# Claude Code Setup\n\nMy full Claude Code configuration — agents, skills, hooks, plugins, and global instructions.\n\n## How It Works\n\n![How Claude Code Setup Works](docs/architecture.svg)\n\nInteractive diagram: [docs/architecture.drawio](docs/architecture.drawio) (open in [diagrams.net](https://app.diagrams.net/)).\n\n## What's Included\n\n| Component | Count | Description |\n|-----------|-------|-------------|\n| **CLAUDE.md** | 1 | Global instructions (15 sections, 14 auto-decision rules) |\n| **Agents** | 21 | Specialized agent definitions (GSD framework) |\n| **Standalone Skills** | 62 | Slash commands (59 GSD + 3 other) |\n| **Plugin Skills** | 34 | Skills bundled inside 6 plugins |\n| **Plugin Commands** | 7 | Commands bundled inside 3 plugins |\n| **Plugin Agents** | 5 | Agent definitions bundled inside 4 plugins |\n| **Total Slash Commands** | **103** | All available slash commands (62 + 34 + 7) |\n| **Hooks** | 8 | Lifecycle automation (SessionStart, PreToolUse, PostToolUse) |\n| **Plugins & MCP** | 20 (19 plugins + 1 standalone MCP) | Serena, Context7, Playwright, Codex, code-review-graph, etc. |\n\n## Quick Install\n\n```bash\ngit clone https://github.com/tomascortereal/claude-code-setup.git\ncd claude-code-setup\n./install.sh\n```\n\nThen edit `~/.claude/settings.json` to fill in your personal values (API URL, OTEL endpoint, etc.).\n\n## Plugins\n\n### Official (claude-plugins-official) — 12 plugins\n| Plugin | Description |\n|--------|-------------|\n| **serena** | Semantic code navigation (LSP-based symbols, references, edits) |\n| **context7** | Live library/framework documentation |\n| **playwright** | Browser automation (navigate, click, screenshot, snapshot) |\n| **superpowers** (v5.0.7) | Brainstorming, TDD, debugging, parallel agents, code review, plans (14 skills) |\n| **code-simplifier** | Code quality review agent |\n| **ralph-loop** | Recurring task loops |\n| **typescript-lsp** | TypeScript language server |\n| **pyright-lsp** | Python language server |\n| **supabase** | Database/auth/storage/edge functions |\n| **agent-sdk-dev** | Claude Agent SDK scaffolding |\n| **claude-code-setup** | Automation recommender |\n| **greptile** | Codebase intelligence (disabled by default) |\n\n### Third-Party — 3 plugins\n| Plugin | Source | Description |\n|--------|--------|-------------|\n| **ui-ux-pro-max** (v2.0.1) | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | 50+ styles, 161 palettes, 99 UX guidelines (7 skills) |\n| **claude-mem** (v10.5.5) | [thedotmack/claude-mem](https://github.com/thedotmack/claude-mem) | Persistent cross-session memory (4 skills) |\n| **arize-skills** (v0.1.0) | [Arize-ai/arize-skills](https://github.com/Arize-ai/arize-skills) | LLM observability, tracing, experiments (6 skills) |\n\n### OpenAI ([openai/codex-plugin-cc](https://github.com/openai/codex-plugin-cc)) — 1 plugin\n| Plugin | Description |\n|--------|-------------|\n| **codex** | Codex code review, adversarial review, task delegation (2 skills, 1 agent) |\n\n### LSPs ([Piebald-AI/claude-code-lsps](https://github.com/Piebald-AI/claude-code-lsps)) — 3 plugins\n| Plugin | Description |\n|--------|-------------|\n| **pyright** (v0.1.0) | Python type checking |\n| **basedpyright** (v0.1.0) | Enhanced Python type checking |\n| **vtsls** (v0.1.0) | TypeScript/JavaScript (disabled by default) |\n\n## MCP Servers\n\nStandalone MCP servers configured globally via `~/.claude/.mcp.json` (not part of the plugin system):\n\n| Server | Source | Description |\n|--------|--------|-------------|\n| **code-review-graph** | [tirth8205/code-review-graph](https://github.com/tirth8205/code-review-graph) | Knowledge graph for code review — semantic search, impact analysis, change detection, architecture overview |\n\nInstall: `uvx code-review-graph serve` (runs via uvx, no global pip install needed).\n\n## Standalone Skills (External)\n\nSkills installed globally via pip/uvx (not part of the plugin system):\n\n| Skill | Source | Description |\n|-------|--------|-------------|\n| **graphify** | [safishamsi/graphify](https://github.com/safishamsi/graphify) | Knowledge graph from code, docs, papers, images — architecture understanding, design rationale, 19 languages, multimodal |\n\nInstall: `uvx --from graphifyy graphify install` (auto-detects Claude Code, installs skill to `~/.claude/skills/graphify/`).\n\n## Architecture\n\nSee [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the full directory tree, model config, hook details, and exact counts.\n\n## Hooks\n\n8 hook files, 6 wired in `settings.json`:\n\n| Hook | Trigger | What it does |\n|------|---------|-------------|\n| `global-memory-symlink.sh` | SessionStart | Ensures all project memory dirs symlink to global `~/.claude/memory/` |\n| `gsd-check-update.js` | SessionStart | Checks for GSD framework updates |\n| `integration-sync.js` | SessionStart | Syncs plugin/MCP integrations |\n| `gsd-context-monitor.js` | PostToolUse (Bash\\|Edit\\|Write\\|Agent\\|Task) | Monitors context window usage |\n| `gsd-prompt-guard.js` | PreToolUse (Write\\|Edit) | Guards against prompt injection |\n| `gsd-read-guard.js` | PreToolUse (Write\\|Edit) | Validates reads before edits |\n| `gsd-workflow-guard.js` | _(not wired)_ | Workflow validation (available but not active) |\n| `gsd-statusline.js` | _(not wired as hook)_ | Used by statusLine config, not a lifecycle hook |\n\n## Global Memory\n\nMemory is **global** (shared across all projects), not project-scoped. The `global-memory-symlink.sh` hook runs on every session start to ensure new projects automatically use the shared memory at `~/.claude/memory/`.\n\n## Customization\n\nAfter installing, you'll want to:\n\n1. **`settings.json`** — Set your `ANTHROPIC_BASE_URL`, OTEL endpoint, and resource attributes\n2. **`CLAUDE.md`** — Adjust the decision rules and tool preferences to match your workflow\n3. **`memory/`** — Add your own memory files (communication preferences, dev profile, etc.)\n\nSee [docs/CUSTOMIZATION.md](docs/CUSTOMIZATION.md) for detailed guidance.\n\n## Requirements\n\n- [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code) installed\n- Node.js 18+\n- Git\n",
+  "status": "curated"
+}

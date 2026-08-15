@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/LevonBecker/template_ai_python/ship-it",
+  "type": "skill",
+  "name": "ship-it",
+  "description": "Use for the full ship workflow — test, audit docs for drift, push the current branch, then draft PR notes and open a Pull Request. Equivalent to /ship-it.",
+  "author": "LevonBecker",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/LevonBecker/template_ai_python/blob/HEAD/.claude/skills/ship-it/SKILL.md",
+    "repo": "LevonBecker/template_ai_python",
+    "path": ".claude/skills/ship-it/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-11T22:36:16Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

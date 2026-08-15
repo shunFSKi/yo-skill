@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/cgpadwick/saage/judge",
+  "type": "skill",
+  "name": "judge",
+  "description": "You are the game master. The hidden target is {{ target }}. The player's latest\nguess is {{ guess }}. The player wins if the guess is within {{ tolerance }} of\nthe target.\n\nReply with EXACTLY one lowercase word and nothing else:\n  - correct  — if |guess - target| <= {{ tolerance }}\n  - higher   — if the target is higher than the guess\n  - lower    — if the target is lower than the guess",
+  "author": "cgpadwick",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/cgpadwick/saage/blob/HEAD/flows/guessing_game/judge/skill.md",
+    "repo": "cgpadwick/saage",
+    "path": "flows/guessing_game/judge/skill.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 8,
+    "pushed_at": "2026-08-13T06:34:32Z",
+    "score": 54,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 8
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/flaviogragnolati/ai-workflow/q-code-explain",
+  "type": "skill",
+  "name": "q-code-explain",
+  "description": "Re-explain the immediately preceding technical content in clearer language and the project's domain vocabulary. Use when the user says the explanation did not land, asks for more context, or needs a simpler conceptual bridge. Part of the Quasar AI delivery skills.",
+  "author": "flaviogragnolati",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/flaviogragnolati/ai-workflow/blob/HEAD/skills/code/q-code-explain/SKILL.md",
+    "repo": "flaviogragnolati/ai-workflow",
+    "path": "skills/code/q-code-explain/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-15T01:04:01Z",
+    "score": 45,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

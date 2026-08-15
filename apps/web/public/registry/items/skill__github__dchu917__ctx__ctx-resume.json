@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/dchu917/ctx/ctx-resume",
+  "type": "skill",
+  "name": "ctx resume",
+  "description": "Resume a ContextFun workstream and print a markdown pack.",
+  "author": "dchu917",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/dchu917/ctx/blob/HEAD/skills/claude/ctx-resume/SKILL.md",
+    "repo": "dchu917/ctx",
+    "path": "skills/claude/ctx-resume/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 127,
+    "pushed_at": "2026-04-21T18:01:32Z",
+    "score": 61,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 127
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": "# ctx\n\nLocal context manager for Claude Code and Codex.\n\nKeep exact conversation bindings, resume work cleanly, branch context without mixing streams, and optionally inspect saved workstreams in a local browser frontend.\n\n```text\nClaude Code chat          Codex chat\n      |                      |\n      v                      v\n   /ctx ...               ctx ...\n          \\              /\n           v            v\n      +----------------------+\n      | workstream: feature-audit |\n      |   claude:  abc123    |\n      |   codex:   def456    |\n      +----------------------+\n                 |\n                 +--> feature-audit-v2 branch\n```\n\n## Why `ctx`\n\n- Exact transcript binding: each internal ctx session can bind to the exact Claude and/or Codex conversation it came from.\n- No transcript drift: later pulls stay on that bound conversation instead of jumping to the newest chat on disk.\n- Safe branching: start a new workstream from the current state of another one without sharing future transcript pulls or hijacking the source conversation.\n- Indexed retrieval: saved workstreams, sessions, and entries are indexed for fast `ctx search` lookup.\n- Curated loads: pin saved entries so they always load, exclude saved entries so they stay searchable but stop getting passed back to the model, or delete them entirely.\n- Local-first: no API keys, no hosted service, plain SQLite plus local files.\n\n## Quick Install\n\nClone the repo and do the standard project-local setup:\n\n```bash\ngit clone https://github.com/dchu917/ctx.git\ncd ctx\n./setup.sh\n```\n\nThis is the main development-friendly install path.\n\nIt does the following:\n\n- creates `./.contextfun/context.db`\n- writes `./ctx.env`\n- installs a repo-backed `ctx` shim into `~/.contextfun/bin`\n- links local skills into `~/.claude/skills` and `~/.codex/skills`\n\nUse this when:\n\n- you want the repo checked out locally\n- you want `ctx` to use a project-local DB by default\n- you are developing or editing the repo itself\n\n## 4-Step Demo\n\n1. Clone and set it up:\n\n```bash\ngit clone https://github.com/dchu917/ctx.git\ncd ctx\n./setup.sh\n```\n\n2. Start a new workstream:\n\nClaude Code:\n\n```text\n/ctx start feature-audit --pull\n```\n\nCodex or your terminal:\n\n```bash\nctx start feature-audit --pull\n```\n\n3. Know what `--pull` means:\n\n- `ctx start feature-audit --pull` creates the workstream and pulls the existing context from the current conversation into it.\n- `ctx start feature-audit` creates the workstream starting from that point only. It does not backfill the earlier conversation.\n\n4. Come back later and continue or branch:\n\nClaude Code:\n\n```text\n/ctx resume feature-audit\n/ctx branch feature-audit feature-audit-v2\n```\n\nCodex:\n\n```bash\nctx resume feature-audit\nctx branch feature-audit feature-audit-v2\n```\n\n## Daily Use\n\nClaude Code:\n\n- `/ctx`: show the current workstream for this repo, or tell you that none is set yet.\n- `/ctx list`: list saved workstreams, with this repo first when applicable.\n- `/ctx search dataset download`: search saved workstreams and entries for matching context.\n- `/ctx start my-stream --pull`: create a new workstream and pull the existing context from the current conversation into it before continuing.\n- `/ctx resume my-stream`: continue an existing workstream and append new context from this conversation to it.\n- `/ctx rename better-name`: rename the current workstream.\n- `/ctx rename better-name --from old-name`: rename a specific workstream without switching to it first.\n- `/ctx delete my-stream`: delete the latest saved `ctx` session in that workstream.\n- `/ctx curate my-stream`: open the saved-memory curation UI for that workstream.\n- `/ctx branch source-stream target-stream`: create a new workstream seeded from the current saved state of another one.\n- `/branch source-stream target-stream`: Claude shortcut for the same branch operation.\n\nCodex:\n\n- `ctx`: show the current workstream for this repo, or tell you that none is set yet.\n- `ctx list`: list saved workstreams.\n- `ctx list --this-repo`: list only workstreams linked to the current repo.\n- `ctx search dataset download`: search saved workstreams and entries for matching context.\n- `ctx search dataset download --this-repo`: search only workstreams linked to the current repo.\n- `ctx web --open`: open the optional local browser UI for browsing, searching, and copying continuation commands.\n- `ctx start my-stream`: create a new workstream starting from this point only.\n- `ctx start my-stream --pull`: create a new workstream and pull the existing context from the current conversation into it first.\n- `ctx resume my-stream`: continue an existing workstream.\n- `ctx resume my-stream --compress`: continue an existing workstream with a smaller load pack.\n- `ctx rename better-name`: rename the current workstream.\n- `ctx rename better-name --from old-name`: rename a specific workstream without switching to it first.\n- `ctx delete my-stream`: delete the latest saved `ctx` session in that workstream.\n- `ctx curate my-stream`: open the saved-memory curation UI for that workstream.\n- `ctx branch source-stream target-stream`: create a new workstream seeded from the current saved state of another one.\n\nCodex note:\n\nCodex does not currently support repo-defined custom slash commands like `/ctx list`, so in Codex you should use the installed `ctx` command with subcommands. When `ctx start`, `ctx resume`, or `ctx branch` load context, they print a short summary of what the workstream is, the latest session being targeted, and the most recent items. They also include an explicit hint that in Codex you can inspect the full command output with `ctrl-t`, and in Claude you can expand the tool output block, plus guidance for the agent to summarize briefly and ask how you want to proceed instead of pasting the full pack back.\n\n## Other Installation Paths\n\n### Clone the repo and install a shared global setup from that clone\n\n```bash\ngit clone https://github.com/dchu917/ctx.git\ncd ctx\n./setup.sh --global\n```\n\nThis runs the same quickstart entrypoint, but installs the pinned global release into `~/.contextfun` instead of wiring the current clone as the live runtime.\n\n### Install globally without cloning first\n\n```bash\ncurl -fsSL https://raw.githubusercontent.com/dchu917/ctx/main/scripts/install.sh | bash\n```\n\nThis installs a pinned tagged release into `~/.contextfun`, including the `ctx` binary, the Python package, the default DB, and the self-contained Claude/Codex skills.\n\n### Install the bootstrap skill first with `skills.sh`\n\n```bash\nnpx skills add https://github.com/dchu917/ctx --skill ctx -y -g\n```\n\nThis installs the `ctx` bootstrap skill first, not the CLI binary directly. After that, the bundled `skills/ctx/scripts/ctx.sh` wrapper can run `ctx install` or auto-install the global CLI into `~/.contextfun` on first use.\n\n### Bootstrap an agent shell without a full manual clone flow\n\nGlobal shell bootstrap:\n\n```bash\nsource <(curl -fsSL https://raw.githubusercontent.com/dchu917/ctx/main/scripts/agent_bootstrap.sh)\n```\n\nProject-local shell bootstrap:\n\n```bash\nsource <(curl -fsSL https://raw.githubusercontent.com/dchu917/ctx/main/scripts/agent_setup_local_ctx.sh)\n```\n\nThese are best for Claude Code or Codex terminals.\n\n### Advanced manual wiring after cloning\n\nRepo-backed `ctx` shim:\n\n```bash\nbash scripts/install_shims.sh\n```\n\nSkill links only:\n\n```bash\nbash scripts/install_skills.sh\n```\n\nOverride skill directories if needed:\n\n```bash\nCODEX_SKILLS_DIR=/custom/codex/skills \\\nCLAUDE_SKILLS_DIR=/custom/claude/skills \\\nbash scripts/install_skills.sh\n```\n\n## Documentation\n\n- [Install and Remove](docs/install.md)\n- [Usage](docs/usage.md)\n- [Architecture](docs/architecture.md)\n- [Integrations](docs/integrations.md)\n- [Repo Layout](docs/repo-layout.md)\n- [Maintenance and Release](docs/maintenance.md)\n- [Documentation Index](docs/README.md)\n\n## Curate Saved Memory\n\nUse `ctx curate <workstream>` to review the saved entries that feed future loads for a workstream:\n\n```bash\nctx curate my-stream\n```\n\nThe terminal UI lets you scroll saved entries, inspect a preview, and change how each entry behaves in future packs:\n\n- `j` / `k` or arrow keys move through entries\n- `Enter` toggles a larger preview\n- `p` pins an entry so it always loads, even in compressed mode\n- `x` excludes an entry from future loads, but keeps it saved and searchable\n- `a` restores the default load behavior\n- `d` marks an entry for deletion, then `y` confirms the delete\n- `q` exits\n\nNotes:\n\n- This changes ctx memory only. It does not edit or delete the original Claude/Codex chat.\n- If you are in a non-interactive shell, use `ctx web --open` and manage entries from the browser detail page instead.\n- `ctx delete --interactive <workstream>` opens the same curation UI.\n- See [docs/usage.md](docs/usage.md) and [docs/architecture.md](docs/architecture.md) for deeper detail on load controls.\n\n## Clear Workstreams\n\nUse `ctx clear` to delete whole workstreams together with their linked sessions and saved entries:\n\n```bash\nctx clear --this-repo --yes\nctx clear --all --yes\n```\n\nNotes:\n\n- `--this-repo` deletes only workstreams linked to the current repo.\n- `--all` deletes workstreams across the entire current `ctx` DB.\n- `--yes` is required for the actual delete. Without it, `ctx` prints what would be removed and exits without deleting anything.\n- This clears ctx-managed memory, attachments, and current-workstream pointers for the deleted workstreams. It does not delete the original Claude/Codex chat files.\n\n## Security\n\n`ctx` is a context layer, not a sandbox. See [SECURITY.md](SECURITY.md) for the threat-model summary and [docs/maintenance.md](docs/maintenance.md) for operational notes.\n\n## FAQ\n\nDo I need API keys?\n\n- No. Everything is local.\n\nCan multiple repos share the same context DB?\n\n- Yes. Set `ctx_DB` to a shared path such as `~/.contextfun/context.db`.\n\nDoes deleting a ctx session delete the actual Claude/Codex chat?\n\n- No. It only deletes the internal ctx session and its stored attachments.\n\n## License\n\nMIT. See [LICENSE](LICENSE).\n",
+  "status": "curated"
+}

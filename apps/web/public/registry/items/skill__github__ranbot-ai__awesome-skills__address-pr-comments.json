@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/ranbot-ai/awesome-skills/address-pr-comments",
+  "type": "skill",
+  "name": "address_pr_comments",
+  "description": "First, check the branch {{ BRANCH_NAME }} and read the diff against the main branch to understand the purpose.",
+  "author": "ranbot-ai",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ranbot-ai/awesome-skills/blob/HEAD/skills/address-pr-comments/SKILL.md",
+    "repo": "ranbot-ai/awesome-skills",
+    "path": "skills/address-pr-comments/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 6,
+    "pushed_at": "2026-08-14T07:53:06Z",
+    "score": 53,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 6
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

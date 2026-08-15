@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Battle-Creek-LLC/tamos/elicitation",
+  "type": "skill",
+  "name": "elicitation",
+  "description": "Put one decision to a human with a recommendation and trade-offs. Use when asked to choose between options, \"A or B?\", \"which way should we go?\", or when an ambiguous requirement needs a human decision before work continues.",
+  "author": "Battle-Creek-LLC",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Battle-Creek-LLC/tamos/blob/HEAD/skills/elicitation/SKILL.md",
+    "repo": "Battle-Creek-LLC/tamos",
+    "path": "skills/elicitation/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-14T16:27:18Z",
+    "score": 48
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

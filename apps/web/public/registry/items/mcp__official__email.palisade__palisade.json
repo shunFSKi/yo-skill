@@ -11,12 +11,23 @@
   },
   "license": null,
   "install": {
-    "kind": "remote",
-    "remote_url": "https://api.palisade.email/mcp"
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@palisadeemail/mcp"
+    ],
+    "env": [
+      {
+        "name": "PALISADE_API_KEY",
+        "required": true,
+        "secret": true
+      }
+    ]
   },
   "quality": {
     "stars": null,
-    "pushed_at": "2026-08-14T15:02:58.882467Z",
+    "pushed_at": "2026-08-14T19:18:02.160911Z",
     "score": 52
   },
   "security": {

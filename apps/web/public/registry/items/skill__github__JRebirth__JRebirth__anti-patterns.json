@@ -17,7 +17,7 @@
   "quality": {
     "stars": 92,
     "pushed_at": "2026-06-25T13:05:45Z",
-    "score": 58
+    "score": 68
   },
   "security": {
     "score": 100,
@@ -49,6 +49,6 @@
     "category": "编程",
     "featured": false
   },
-  "readme": null,
+  "readme": "JRebirth\n========\n\nJRebirth Application Framework for JavaFX graphical toolkit\n\nA set of Showcase Applications are provided for code-centric documentation and they are used as integration test\n\nMore information is available on our website : [www.jrebirth.org](http://www.jrebirth.org)\n\nLive feed is available on our [Blog](http://blog.jrebirth.org)\n\n[![Join the chat at https://gitter.im/JRebirth/JRebirth](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/JRebirth/JRebirth?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)\n\n## Download & Build\n\n[![Maven Central](https://img.shields.io/maven-central/v/org.jrebirth.af/core.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/org.jrebirth.af/core)\n[![Build Status](http://ci.jrebirth.org/job/JRebirth-8x/badge/icon)](http://ci.jrebirth.org/job/JRebirth-8x/)\n\n## Demo\n\nSeveral Demos are available online :\n- Apps\n  - [Showcase Demo](http://www.jrebirth.org/apps/Demo.html)\n  - [Mastering Tables Game](http://www.jrebirth.org/apps/MasteringTables.html)\n  - [Analyzer App](http://www.jrebirth.org/apps/Analyzer.html)\n- Presentations\n  - [EclipseDay Prez](http://www.jrebirth.org/apps/EclipseDay.html)\n  - [Breizhcamp Prez](http://www.jrebirth.org/apps/Breizhcamp.html)\n  - [LightningTalk](http://www.jrebirth.org/apps/LightningTalk.html)\n  - [EclipseCON](http://www.jrebirth.org/apps/EclipseCON.html)\n  - [JRebirth Tour](http://www.jrebirth.org/apps/JRebirthTour.html)\n\n## Use it\n\nThis repository targets **Java 25**, **JavaFX 26**, and **JRebirth AF 12.0.0-SNAPSHOT** (see `org.jrebirth.af/pom.xml`).\n\n**Latest release on Maven Central** is **8.6.0** ([artifact search](https://central.sonatype.com/search?q=org.jrebirth.af)):\n\n    <dependency>\n        <groupId>org.jrebirth.af</groupId>\n        <artifactId>core</artifactId>\n        <version>8.6.0</version>\n    </dependency>\n\nTo depend on this **12.x** line, build and install from source (`mvn clean install`), then use:\n\n    <dependency>\n        <groupId>org.jrebirth.af</groupId>\n        <artifactId>core</artifactId>\n        <version>12.0.0-SNAPSHOT</version>\n    </dependency>\n\n## Documentation\n\nDocumentation is available [here](http://www.jrebirth.org/doc/Toc.html).\n\n## Build it\n\nRequires [Git](http://git-scm.com/), **JDK 25** or newer, [Apache Maven](http://maven.apache.org/) **3.9+** (the build is validated against Maven 3.9.11).\n\n    git clone https://github.com/JRebirth/JRebirth.git\n    cd JRebirth/org.jrebirth.af\n    mvn clean install\n\nTo skip test compilation and execution for the full reactor (for example if a tooling module fails test compile), use:\n\n    mvn clean install -Dmaven.test.skip=true\n",
   "status": "curated"
 }

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/xz1220/oh-my-kimi/security-review",
+  "type": "skill",
+  "name": "security-review",
+  "description": "面向密钥、注入、authz/authn、不安全 IO、依赖与数据外泄风险的安全评审",
+  "author": "xz1220",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/xz1220/oh-my-kimi/blob/HEAD/skills/security-review/SKILL.md",
+    "repo": "xz1220/oh-my-kimi",
+    "path": "skills/security-review/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-05-14T07:39:15Z",
+    "score": 32,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

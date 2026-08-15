@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/TheCardGoat/tcg-engines/source-command-triage-player-report",
+  "type": "skill",
+  "name": "source-command-triage-player-report",
+  "description": "Compatibility router for the migrated Lorcana triage-player-report source command. Use only when an older prompt explicitly invokes source-command-triage-player-report.",
+  "author": "TheCardGoat",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/TheCardGoat/tcg-engines/blob/HEAD/submodules/lorcana/.agents/skills/source-command-triage-player-report/SKILL.md",
+    "repo": "TheCardGoat/tcg-engines",
+    "path": "submodules/lorcana/.agents/skills/source-command-triage-player-report/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 30,
+    "pushed_at": "2026-07-29T07:43:39Z",
+    "score": 68,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 30
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# TCG Engines\n\nThis repository contains the open-source engine and simulator workspaces used by\nTCG Online. It includes game rules, card definitions, adapters, shared simulator\ncontracts, and test tooling for the public parts of the project.\n\nThe production web app, API, gateway, reverse proxy, workers, auth, matchmaking\nservices, infrastructure, and deployment configuration are private and are not\nincluded here.\n\n## Workspaces\n\n- `submodules/agnostic-simulator` - shared protocol, simulator contracts,\n  runtime adapters, simulator UI primitives, and agent tooling.\n- `submodules/lorcana` - Lorcana engine, cards, simulator, replay tooling, and\n  tests.\n- `submodules/cyberpunk` - Cyberpunk cards, engine, parser/scraper tooling, and\n  server adapter.\n- `submodules/gundam` - Gundam engine, cards, simulator, tooling, and server\n  adapter.\n- `submodules/one-piece` - One Piece simulator, engine, cards, types,\n  and utilities.\n\n## Requirements\n\n- Node.js 24.x\n- pnpm 10.33.x\n- Bun, for packages that use Bun-powered scripts\n- Vite+ (`vp`), installed by the package manager in each workspace\n\n## Setup\n\nEach exported subdirectory is its own pnpm workspace. Install dependencies from\nthe workspace you are changing:\n\n```bash\npnpm --dir submodules/cyberpunk install --frozen-lockfile\npnpm --dir submodules/agnostic-simulator install --frozen-lockfile\n```\n\nFor cross-game simulator work, install and build game workspaces before running\nthe agnostic simulator checks.\n\n## Validation\n\nThe root package provides convenience wrappers:\n\n```bash\npnpm run ci:cyberpunk:check\npnpm run ci:gundam:check\npnpm run ci:lorcana:check\npnpm run ci:one-piece:check\npnpm run ci:agnostic:check\npnpm run ci:public\n```\n\nRun the focused workspace check first. Broader checks are useful before opening\nor merging a public PR.\n\n## Contributions\n\nPublic contributions should target engines, cards, rules, adapters, shared\nsimulator contracts, tests, and developer tooling in the exported workspaces.\nProduction service, account, deployment, and infrastructure changes are out of\nscope for this repository.\n",
+  "status": "curated"
+}

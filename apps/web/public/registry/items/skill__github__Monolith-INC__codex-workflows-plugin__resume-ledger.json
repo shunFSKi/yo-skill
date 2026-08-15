@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/Monolith-INC/codex-workflows-plugin/resume-ledger",
+  "type": "skill",
+  "name": "resume-ledger",
+  "description": "Use when the user issues /resume-ledger or asks to restore workflow ledger hook enforcement after a prior /skip-ledger.",
+  "author": "Monolith-INC",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Monolith-INC/codex-workflows-plugin/blob/HEAD/skills/resume-ledger/SKILL.md",
+    "repo": "Monolith-INC/codex-workflows-plugin",
+    "path": "skills/resume-ledger/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-02T18:45:47Z",
+    "score": 45,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

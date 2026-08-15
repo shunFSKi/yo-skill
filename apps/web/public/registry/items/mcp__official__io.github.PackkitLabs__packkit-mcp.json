@@ -1,0 +1,58 @@
+{
+  "id": "mcp:official/io.github.PackkitLabs/packkit-mcp",
+  "type": "mcp",
+  "name": "Packkit",
+  "description": "Scaffold and upgrade modern projects (JS/TS, Python) as a native tool for AI agents.",
+  "author": "io.github.PackkitLabs",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/PackkitLabs/packkit-mcp",
+    "repo": "PackkitLabs/packkit-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "packkit-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T23:36:12.931373Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# packkit-mcp\n\n[![npm](https://img.shields.io/npm/v/packkit-mcp)](https://www.npmjs.com/package/packkit-mcp)\n\nThe **Packkit** [Model Context Protocol](https://modelcontextprotocol.io) server —\nlet AI agents (Claude Desktop, Cursor, VS Code, …) scaffold and upgrade modern\nprojects as a native tool. It fronts **every** Packkit generator through the\n[`@packkit/core`](https://github.com/PackkitLabs/packkit-core) protocol, so the same\ntools work across languages:\n\n- **JavaScript / TypeScript** — [`create-packkit`](https://github.com/PackkitLabs/create-packkit-js) (libraries, CLIs, services, SPAs, monorepos)\n- **Python** — [`create-packkit-py`](https://github.com/PackkitLabs/create-packkit-py) (libraries, CLIs)\n\nAdding a language later is one `registry.register(...)` line here — the tools don't change.\n\n## Install\n\nPoint your MCP client at the published package (no install needed — `npx` fetches it):\n\n```json\n{\n  \"mcpServers\": {\n    \"packkit\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"packkit-mcp\"]\n    }\n  }\n}\n```\n\n## Tools\n\n| Tool | What it does |\n| --- | --- |\n| `list_generators` | List every generator (language target) with maturity + capabilities. **Start here.** |\n| `list_presets` | List a generator's presets (experimental hidden unless asked). |\n| `get_generator_schema` | A generator's full option schema (options, choices, defaults). |\n| `generate_project` | Preview a project (file tree + stack + deployment contract), or `write: true` to scaffold to disk. |\n| `plan_upgrade` | Baseline-aware three-way upgrade plan for an existing project — template changes vs your edits, writes nothing. |\n\nThe typical flow: `list_generators` → `list_presets` / `get_generator_schema` →\n`generate_project`. All generation is protocol-driven; the server holds no\nlanguage-specific logic.\n\n## Develop\n\n```sh\nnpm install\nnpm run smoke     # boot the server over MCP stdio and exercise all three generators\nnpm run check     # server.json sync check + smoke (what CI runs)\n```\n\nReleases are automated with [Changesets](https://github.com/changesets/changesets) —\nsee [RELEASING.md](./RELEASING.md).\n\n## License\n\nMIT © DanMat\n",
+  "status": "curated"
+}

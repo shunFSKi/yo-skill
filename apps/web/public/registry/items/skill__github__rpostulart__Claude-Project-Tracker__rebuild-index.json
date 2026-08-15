@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/rpostulart/Claude-Project-Tracker/rebuild-index",
+  "type": "skill",
+  "name": "rebuild-index",
+  "description": "Rebuild the issues index from individual issue files. Use when the index is out of sync or missing.",
+  "author": "rpostulart",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/rpostulart/Claude-Project-Tracker/blob/HEAD/.project/skills/rebuild-index/SKILL.md",
+    "repo": "rpostulart/Claude-Project-Tracker",
+    "path": ".project/skills/rebuild-index/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 10,
+    "pushed_at": "2026-05-06T11:10:55Z",
+    "score": 41,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 10
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Aiweline/WelineFramework/dev-ai-codex-plugins-weline-codex-plugin-skills-a7092083",
+  "type": "skill",
+  "name": "安全权限工程师-会话配置与数据保护",
+  "description": "Review or implement Weline session configuration, auth-area isolation, sensitive-state handling, and data-protection boundaries. Use for session keys, AreaConfig, state leakage, or admin/frontend identity separation; use WLS Session/SSE for runtime server behavior and ACL skills for permission trees.",
+  "author": "Aiweline",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Aiweline/WelineFramework/blob/HEAD/dev/ai/codex/plugins/weline-codex-plugin/skills/安全权限工程师-会话配置与数据保护/SKILL.md",
+    "repo": "Aiweline/WelineFramework",
+    "path": "dev/ai/codex/plugins/weline-codex-plugin/skills/安全权限工程师-会话配置与数据保护/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-11T16:20:18Z",
+    "score": 48
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

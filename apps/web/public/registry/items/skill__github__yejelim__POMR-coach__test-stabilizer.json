@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/yejelim/POMR-coach/test-stabilizer",
+  "type": "skill",
+  "name": "test-stabilizer",
+  "description": "Stabilize flaky or intermittent tests without hiding real failures.",
+  "author": "yejelim",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/yejelim/POMR-coach/blob/HEAD/.agents/skills/test-stabilizer/SKILL.md",
+    "repo": "yejelim/POMR-coach",
+    "path": ".agents/skills/test-stabilizer/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-13T03:05:42Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

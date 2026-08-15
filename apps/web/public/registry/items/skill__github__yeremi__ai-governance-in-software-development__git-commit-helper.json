@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/yeremi/ai-governance-in-software-development/git-commit-helper",
+  "type": "skill",
+  "name": "git-commit-helper",
+  "description": "Suggest conventional commit messages for this repository when the user asks for commit text or staged changes need a concise summary.",
+  "author": "yeremi",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/yeremi/ai-governance-in-software-development/blob/HEAD/.claude/skills/git-commit-helper/SKILL.md",
+    "repo": "yeremi/ai-governance-in-software-development",
+    "path": ".claude/skills/git-commit-helper/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-05-28T15:01:09Z",
+    "score": 40,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

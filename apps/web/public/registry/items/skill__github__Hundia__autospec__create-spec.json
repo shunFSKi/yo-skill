@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Hundia/autospec/create-spec",
+  "type": "skill",
+  "name": "create-spec",
+  "description": "Create a new AutoSpec feature specification and propose follow-up sprint tickets.",
+  "author": "Hundia",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Hundia/autospec/blob/HEAD/.opencode/skills/create-spec/SKILL.md",
+    "repo": "Hundia/autospec",
+    "path": ".opencode/skills/create-spec/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 4,
+    "pushed_at": "2026-06-29T08:34:21Z",
+    "score": 43
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

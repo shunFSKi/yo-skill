@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/0p9b/TLDR/tldr-stats",
+  "type": "skill",
+  "name": "tldr-stats",
+  "description": "Show real token usage and estimated savings for the current session. Reads directly from the Claude Code session log — no AI estimation. Triggers on /tldr-stats. Output is injected by the mode-tracker hook; the model itself does not compute the numbers.",
+  "author": "0p9b",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/0p9b/TLDR/blob/HEAD/skills/tldr-stats/SKILL.md",
+    "repo": "0p9b/TLDR",
+    "path": "skills/tldr-stats/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 21,
+    "pushed_at": "2026-07-28T23:46:07Z",
+    "score": 57,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 21
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

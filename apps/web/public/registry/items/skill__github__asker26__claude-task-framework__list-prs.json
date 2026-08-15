@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/asker26/claude-task-framework/list-prs",
+  "type": "skill",
+  "name": "list-prs",
+  "description": "List open PRs for the current project in a table. Usage: /list-prs",
+  "author": "asker26",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/asker26/claude-task-framework/blob/HEAD/skills/list-prs/SKILL.md",
+    "repo": "asker26/claude-task-framework",
+    "path": "skills/list-prs/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 4,
+    "pushed_at": "2026-06-03T14:26:46Z",
+    "score": 43,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 4
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

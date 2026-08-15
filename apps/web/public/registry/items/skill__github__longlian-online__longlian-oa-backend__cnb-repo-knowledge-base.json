@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/longlian-online/longlian-oa-backend/cnb-repo-knowledge-base",
+  "type": "skill",
+  "name": "cnb-repo-knowledge-base",
+  "description": "检索指定仓库的知识库，返回相关的文本片段及其来源。",
+  "author": "longlian-online",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/longlian-online/longlian-oa-backend/blob/HEAD/.agents/skills/cnb-repo-knowledge-base/SKILL.md",
+    "repo": "longlian-online/longlian-oa-backend",
+    "path": ".agents/skills/cnb-repo-knowledge-base/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-08-04T14:18:03Z",
+    "score": 43,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 2
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/BURGEJOS000/public/git-worktree-create",
+  "type": "skill",
+  "name": "git-worktree-create",
+  "description": "Create a linked git worktree and feature branch for a ticket or issue id (Jira key, GitHub issue, etc.), based on the latest integration branch. Use when the user invokes /git-worktree-create, asks for a worktree for a ticket, or wants a separate checkout to work on an issue in parallel.",
+  "author": "BURGEJOS000",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/BURGEJOS000/public/blob/HEAD/Exported tools/user-skills/git-worktree-create/SKILL.md",
+    "repo": "BURGEJOS000/public",
+    "path": "Exported tools/user-skills/git-worktree-create/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-02T04:28:02Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

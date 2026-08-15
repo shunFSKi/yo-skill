@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/platootalp/claude-harness/build-graph",
+  "type": "skill",
+  "name": "build-graph",
+  "description": "内部技能——从 wiki 页面提取交叉引用，构建图谱数据。由 serve 技能自动调用。",
+  "author": "platootalp",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/platootalp/claude-harness/blob/HEAD/plugins/kb/skills/build-graph/SKILL.md",
+    "repo": "platootalp/claude-harness",
+    "path": "plugins/kb/skills/build-graph/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-28T11:33:19Z",
+    "score": 37,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

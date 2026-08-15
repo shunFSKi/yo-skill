@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/aristoapp/membase/membase-wiki",
+  "type": "skill",
+  "name": "membase-wiki",
+  "description": "Store and retrieve factual documents, references, and stable project knowledge in Membase wiki.",
+  "author": "aristoapp",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/aristoapp/membase/blob/HEAD/skills/wiki/SKILL.md",
+    "repo": "aristoapp/membase",
+    "path": "skills/wiki/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 5,
+    "pushed_at": "2026-07-15T22:28:32Z",
+    "score": 44,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 5
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/wiseiodev/rageai/rage-share",
+  "type": "skill",
+  "name": "rage-share",
+  "description": "Generate copy-ready X or LinkedIn posts for a published Rage AI score. Use when the user asks to share or draft a social post from Rage AI stats.",
+  "author": "wiseiodev",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/wiseiodev/rageai/blob/HEAD/plugins/rage-codex/skills/rage-share/SKILL.md",
+    "repo": "wiseiodev/rageai",
+    "path": "plugins/rage-codex/skills/rage-share/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-22T04:48:09Z",
+    "score": 40,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

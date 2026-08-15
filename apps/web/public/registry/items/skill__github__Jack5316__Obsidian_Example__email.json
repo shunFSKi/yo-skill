@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Jack5316/Obsidian_Example/email",
+  "type": "skill",
+  "name": "email",
+  "description": "Email digest skill (placeholder - configure IMAP or email API). Use when user asks for email processing or /email.",
+  "author": "Jack5316",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Jack5316/Obsidian_Example/blob/HEAD/.claude/skills/email/SKILL.md",
+    "repo": "Jack5316/Obsidian_Example",
+    "path": ".claude/skills/email/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-04-26T11:07:35Z",
+    "score": 35
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

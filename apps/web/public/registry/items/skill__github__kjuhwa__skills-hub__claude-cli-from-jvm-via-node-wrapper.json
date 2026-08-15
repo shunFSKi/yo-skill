@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/kjuhwa/skills-hub/claude-cli-from-jvm-via-node-wrapper",
+  "type": "skill",
+  "name": "claude-cli-from-jvm-via-node-wrapper",
+  "description": "Shell out to the `claude` CLI from a JVM / Spring Boot app by going through a tiny Node.js wrapper that supplies the required empty stdin — the CLI hangs when invoked with a directly-inherited TTY-less stdin from ProcessBuilder.",
+  "author": "kjuhwa",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/kjuhwa/skills-hub/blob/HEAD/skills/ai/claude-cli-from-jvm-via-node-wrapper/SKILL.md",
+    "repo": "kjuhwa/skills-hub",
+    "path": "skills/ai/claude-cli-from-jvm-via-node-wrapper/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-04-26T15:42:32Z",
+    "score": 35
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

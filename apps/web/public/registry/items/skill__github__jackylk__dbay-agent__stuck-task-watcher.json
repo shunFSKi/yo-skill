@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/jackylk/dbay-agent/stuck-task-watcher",
+  "type": "skill",
+  "name": "stuck_task_watcher",
+  "description": "Detect async tasks stuck in_progress beyond threshold (wiki/agentfs/kb). Every 5 min.",
+  "author": "jackylk",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/jackylk/dbay-agent/blob/HEAD/sre-agent/skills/sre/stuck_task_watcher/SKILL.md",
+    "repo": "jackylk/dbay-agent",
+    "path": "sre-agent/skills/sre/stuck_task_watcher/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-07-21T12:08:37Z",
+    "score": 45,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

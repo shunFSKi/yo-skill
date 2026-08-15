@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/yito000/HackSlashGame/hotfix",
+  "type": "skill",
+  "name": "hotfix",
+  "description": "Run the converted CCGS hotfix workflow in Codex. Use when the user invokes /hotfix, $hotfix, or asks for: Emergency fix workflow that bypasses normal sprint processes with a full audit trail. Creates hotfix branch, tracks approvals, and ensures the fix is backported correctly.",
+  "author": "yito000",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/yito000/HackSlashGame/blob/HEAD/.codex/skills/hotfix/SKILL.md",
+    "repo": "yito000/HackSlashGame",
+    "path": ".codex/skills/hotfix/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-26T10:25:37Z",
+    "score": 40,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

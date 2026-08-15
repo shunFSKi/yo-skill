@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/flowork-os/flowork_Router/flow-router-web-search",
+  "type": "skill",
+  "name": "flow-router-web-search",
+  "description": "Web search via flow_router /v1/search. Routes to active search providers (Tavily, Brave, SerpAPI, etc.) and normalizes results.",
+  "author": "flowork-os",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/flowork-os/flowork_Router/blob/HEAD/router/skills/flow-router-web-search/SKILL.md",
+    "repo": "flowork-os/flowork_Router",
+    "path": "router/skills/flow-router-web-search/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 8,
+    "pushed_at": "2026-07-03T07:03:02Z",
+    "score": 49,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 8
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

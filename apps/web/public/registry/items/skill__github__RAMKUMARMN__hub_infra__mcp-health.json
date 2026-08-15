@@ -17,7 +17,7 @@
   "quality": {
     "stars": 35,
     "pushed_at": "2026-07-19T13:30:27Z",
-    "score": 56
+    "score": 66
   },
   "security": {
     "score": 100,
@@ -49,6 +49,6 @@
     "category": null,
     "featured": false
   },
-  "readme": null,
+  "readme": "# CixioHub Infrastructure\n\nThis repository contains the infrastructure configuration, MQTT broker setup, and the intelligent AI router for the CixioHub ecosystem.\n\n## Components\n\n### 1. `ai/` (AI Router)\nAn intelligent routing engine built with Python and FastAPI that acts as a gateway for LLM requests. It analyzes incoming queries and intelligently routes them to specialized LLM models (e.g., Coding, Reasoning, Vision) or handles general requests using a lightweight router model. It relies on local Ollama models.\n\n### 2. `terraform/`\nContains the Infrastructure as Code (IaC) definitions to provision AWS resources for the CixioHub cloud environment. \nModules include:\n- `vpc`: Core networking and security groups.\n- `rds`: PostgreSQL database provisioning.\n- `elasticache`: Redis cache setup.\n- `s3`: Cloud storage buckets.\n\n### 3. `mosquitto/`\nConfiguration for the Mosquitto MQTT broker, providing real-time bidirectional communication channels (WebSocket and TCP) for features such as chat, presence, and notifications.\n\n## Development Setup\nPlease see `.setup-notes` for instructions on setting up your local environment.\n",
   "status": "curated"
 }

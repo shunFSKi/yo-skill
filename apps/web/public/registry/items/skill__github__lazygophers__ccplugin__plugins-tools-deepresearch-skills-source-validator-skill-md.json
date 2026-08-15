@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/lazygophers/ccplugin/plugins-tools-deepresearch-skills-source-validator-skill-md",
+  "type": "skill",
+  "name": "plugins-tools-deepresearch-skills-source-validator-skill-md",
+  "description": "This skill should be used when the user needs to validate sources, verify claims, or rate evidence quality. Typical triggers include verifying citations, checking credibility, or rating sources.",
+  "author": "lazygophers",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/lazygophers/ccplugin/blob/HEAD/plugins/tools/deepresearch/skills/source-validator/SKILL.md",
+    "repo": "lazygophers/ccplugin",
+    "path": "plugins/tools/deepresearch/skills/source-validator/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 4,
+    "pushed_at": "2026-08-15T02:22:54Z",
+    "score": 51,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 4
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

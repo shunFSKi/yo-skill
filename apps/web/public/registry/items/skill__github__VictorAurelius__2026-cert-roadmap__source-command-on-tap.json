@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/VictorAurelius/2026-cert-roadmap/source-command-on-tap",
+  "type": "skill",
+  "name": "source-command-on-tap",
+  "description": "Run the migrated source command on-tap. Use when the user asks for /on-tap or wants a focused review session for Java, SQL, Spring, or AWS certification topics.",
+  "author": "VictorAurelius",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/VictorAurelius/2026-cert-roadmap/blob/HEAD/.agents/skills/source-command-on-tap/SKILL.md",
+    "repo": "VictorAurelius/2026-cert-roadmap",
+    "path": ".agents/skills/source-command-on-tap/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-07-09T03:21:51Z",
+    "score": 43,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

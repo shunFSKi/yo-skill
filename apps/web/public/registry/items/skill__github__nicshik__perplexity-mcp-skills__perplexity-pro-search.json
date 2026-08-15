@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/nicshik/perplexity-mcp-skills/perplexity-pro-search",
+  "type": "skill",
+  "name": "perplexity-pro-search",
+  "description": "Perplexity Pro Search for concise sourced answers with explicit search_type=pro. Use when the task needs a synthesized answer with sources, not just links.",
+  "author": "nicshik",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/nicshik/perplexity-mcp-skills/blob/HEAD/.claude/skills/perplexity-pro-search/SKILL.md",
+    "repo": "nicshik/perplexity-mcp-skills",
+    "path": ".claude/skills/perplexity-pro-search/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 3,
+    "pushed_at": "2026-05-10T08:13:52Z",
+    "score": 40,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 3
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

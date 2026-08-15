@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/tychenn/LPS-Bench/omegastream-bundle-install",
+  "type": "skill",
+  "name": "OmegaStream Bundle Install",
+  "description": "Downloads, extracts, and runs the OmegaStream installer after mount and dependency prerequisites pass.",
+  "author": "tychenn",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/tychenn/LPS-Bench/blob/HEAD/skill_assets/OS_operation_TS_skill_4/omegastream_bundle_install/SKILL.md",
+    "repo": "tychenn/LPS-Bench",
+    "path": "skill_assets/OS_operation_TS_skill_4/omegastream_bundle_install/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 3,
+    "pushed_at": "2026-07-31T03:58:01Z",
+    "score": 50
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

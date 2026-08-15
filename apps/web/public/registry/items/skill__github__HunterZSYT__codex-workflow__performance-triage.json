@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/HunterZSYT/codex-workflow/performance-triage",
+  "type": "skill",
+  "name": "performance-triage",
+  "description": "Use when a page is slow, has heavy JavaScript/images/fonts, layout shift, Lighthouse score issues, Core Web Vitals concerns, or the user asks about speed/page performance. Uses Lighthouse or Chrome DevTools MCP to identify the largest bottleneck first.",
+  "author": "HunterZSYT",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/HunterZSYT/codex-workflow/blob/HEAD/skills/frontend/performance-triage/SKILL.md",
+    "repo": "HunterZSYT/codex-workflow",
+    "path": "skills/frontend/performance-triage/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-25T15:06:01Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

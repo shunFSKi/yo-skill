@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/toderian/project_template/performance-optimization",
+  "type": "skill",
+  "name": "performance-optimization",
+  "description": "Measure-first performance optimization -- profile to find the real hot path, record a baseline, change one thing, and re-measure before keeping it. Use when the user wants Codex to optimize performance, reduce latency or memory, speed something up, or asks \"why is this slow?\" for a known hot path.",
+  "author": "toderian",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/toderian/project_template/blob/HEAD/.agents/skills/engineering/performance-optimization/SKILL.md",
+    "repo": "toderian/project_template",
+    "path": ".agents/skills/engineering/performance-optimization/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-13T07:43:17Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

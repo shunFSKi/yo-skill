@@ -15,9 +15,15 @@
     "kind": "skill-dir"
   },
   "quality": {
-    "stars": null,
-    "pushed_at": null,
-    "score": 22
+    "stars": 47,
+    "pushed_at": "2026-05-04T16:13:32Z",
+    "score": 57,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 47
+      }
+    ]
   },
   "security": {
     "score": 100,
@@ -49,6 +55,6 @@
     "category": null,
     "featured": false
   },
-  "readme": null,
+  "readme": "# Skills & Agents\n\nA collection of [Claude Code](https://docs.anthropic.com/en/docs/claude-code) custom skills and agent definitions that enforce disciplined, worker-routed AI-assisted development workflows.\n\n_If you like what I do, consider supporting my work via donation_\n\n[![](https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-1.svg)](https://www.buymeacoffee.com/romanliutikov)\n\n## What's Inside\n\n### Skills (`skills/`)\n\nReusable process guides that Claude Code invokes via slash commands. Each skill lives in its own directory with a `SKILL.md` file.\n\n| Skill | Purpose |\n|---|---|\n| `using-superpowers` | Router/gatekeeper — routes every task through the correct worker agent pipeline before any work begins |\n| `writing-plans` | Structured implementation planning before coding |\n| `test-driven-development` | RED-GREEN-REFACTOR cycle enforcement |\n| `systematic-debugging` | Root-cause analysis before proposing fixes |\n| `brainstorming` | Explores intent, requirements, and design before implementation |\n| `interview` | In-depth user interviewing to create detailed specs |\n| `writing-skills` | TDD-based approach to creating and testing new skills |\n| `find-bugs` | Security and code quality review of local branch changes |\n| `code-simplifier` | Refines code for clarity and consistency while preserving behavior |\n| `requesting-code-review` | Verify work meets requirements before merging |\n| `receiving-code-review` | Technical rigor when processing review feedback |\n| `verification-before-completion` | Evidence-based verification before claiming work is done |\n| `dispatching-parallel-agents` | Parallelizes independent tasks across subagents |\n| `subagent-driven-development` | Executes plans with independent implementation agents |\n| `executing-plans` | Runs implementation plans with review checkpoints |\n| `finishing-a-development-branch` | Guides branch completion — merge, PR, or cleanup |\n\n### Agents (`agents/`)\n\nWorker agent definitions that skills route tasks to. Each agent has a focused role and strict boundaries.\n\n| Agent | Role |\n|---|---|\n| `task-planner` | Translates tasks into minimal, executable implementation plans |\n| `feature-implementer` | Implements one scoped plan step with minimal diff |\n| `test-engineer` | Writes/updates tests, regression coverage, edge cases |\n| `code-reviewer` | Reviews correctness, regressions, standards, test adequacy |\n| `acceptance-checker` | Maps implementation to acceptance criteria with evidence |\n| `docs-updater` | Keeps documentation aligned with recent code changes |\n| `api-researcher` | Researches external APIs/libraries and produces guidance |\n| `bug-repro-triager` | Produces repro steps, hypotheses, and investigation plans |\n| `code-simplifier` | Simplifies recently modified code while preserving behavior |\n| `research` | General-purpose research agent |\n\n## Installation\n\nCopy skills and agents into your Claude Code configuration directory:\n\n```sh\n# Skills\ncp -r skills/* ~/.claude/skills/\n\n# Agents (if supported by your setup)\ncp -r agents/* ~/.claude/agents/\n```\n\nThen add the routing instruction to your `~/.claude/CLAUDE.md`:\n\n```markdown\nFor EVERY task — no exceptions — invoke the `using-superpowers` skill before doing any work.\n```\n\n## How It Works\n\n1. Every task triggers `using-superpowers` first\n2. The skill selects an ordered pipeline of worker agents (e.g. `task-planner -> feature-implementer -> test-engineer -> code-reviewer`)\n3. Each worker self-identifies, stays in role, and produces structured output\n4. No silent fallback to generic behavior — routing is always visible\n\n## License\n\nMIT\n",
   "status": "curated"
 }

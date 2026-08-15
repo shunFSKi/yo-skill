@@ -1,0 +1,58 @@
+{
+  "id": "mcp:official/io.github.arose26/statcan-mcp",
+  "type": "mcp",
+  "name": "statcan-mcp",
+  "description": "Statistics Canada's 8,200+ data tables: CPI, GDP, labour force, housing. No API key.",
+  "author": "io.github.arose26",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/arose26/statcan-mcp",
+    "repo": "arose26/statcan-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "statcan-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T23:17:24.828482Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "# statcan-mcp\n\nAn [MCP](https://modelcontextprotocol.io) server that gives Claude and other LLMs live access to **Statistics Canada** — all 8,200+ data tables from the [Web Data Service](https://www.statcan.gc.ca/en/developers/wds): CPI, GDP, labour force, housing starts, population, trade, and more.\n\nNo API key required.\n\nSibling project: [bank-of-canada-mcp](https://github.com/arose26/bank-of-canada-mcp) for Bank of Canada rates and FX.\n\n## Why this exists\n\nStatCan's API is powerful but hostile: POST-only lookups, opaque numeric vector IDs, 10-position \"coordinate\" addressing, and numeric code enums everywhere (`scalarFactorCode: 3`). This server translates it into something an LLM can actually drive:\n\n- **Discovery flow built into the tools** — search tables → inspect dimensions → fetch data, with each tool description pointing to the next step.\n- **Context-friendly by default** — a CPI dimension has 359 members and a series can span a century; members are capped and keyword-filterable, data defaults to the last 12 periods.\n- **Codes decoded at runtime** via StatCan's own code-set endpoint — responses say `\"scale\": \"thousands\"` and `\"note\": \"use with caution\"`, not `scalarFactorCode: 3, statusCode: 5`. Nothing hardcoded to go stale.\n- **Forgiving inputs** — vector IDs accepted as `v41690973` or `41690973`; coordinates padded automatically.\n\n## Quick start\n\n**Claude Code**\n\n```bash\nclaude mcp add statcan -- npx -y statcan-mcp\n```\n\n**Claude Desktop** — add to `claude_desktop_config.json`:\n\n```json\n{\n  \"mcpServers\": {\n    \"statcan\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"statcan-mcp\"]\n    }\n  }\n}\n```\n\nThe same `npx` invocation works in Cursor, Windsurf, and any other MCP client.\n\n## Tools\n\n| Tool | What it does |\n|------|--------------|\n| `search_tables` | Keyword search across all ~8,200 data tables |\n| `get_table_metadata` | A table's dimensions and members (capped, filterable) — the map you need to pull data |\n| `get_data_by_vectors` | Time series by vector ID(s), date range or latest-N |\n| `get_data_by_coordinate` | Time series by table + one member choice per dimension |\n| `get_series_info` | Decode a mystery vector ID into its title and source table |\n\n## Example prompts\n\n- *\"What's Canada's current unemployment rate, and how has it trended over 12 months?\"*\n- *\"Compare gasoline price inflation in Ontario vs Quebec since 2024.\"*\n- *\"How many housing starts were there in Canada last quarter?\"*\n- *\"What is vector v41690973?\"*\n\n## Development\n\n```bash\nnpm install\nnpm test           # offline unit tests (vitest)\nnpm run build      # tsc → dist/\nnode scripts/smoke.mjs   # live smoke test against the real API\n```\n\nArchitecture: [`src/wds.ts`](src/wds.ts) is a plain WDS client with pure, unit-tested logic (catalogue search, coordinate padding, code decoding); [`src/index.ts`](src/index.ts) is the MCP wiring. API failures (unknown vector, bad coordinate) come back as MCP tool errors carrying StatCan's own message so the model can self-correct.\n\n## Notes\n\n- Data is © Statistics Canada, used under the [Statistics Canada Open Licence](https://www.statcan.gc.ca/en/reference/licence). This project is not affiliated with or endorsed by Statistics Canada.\n- English output only for now (the API also carries French — see roadmap).\n\n## Roadmap\n\n- French-language output (`*Fr` fields are already in the API responses)\n- Full-table CSV download for bulk analysis\n- Streamable HTTP transport for remote deployment\n\n## License\n\nMIT\n",
+  "status": "curated"
+}

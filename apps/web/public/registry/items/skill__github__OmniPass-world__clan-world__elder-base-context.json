@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/OmniPass-world/clan-world/elder-base-context",
+  "type": "skill",
+  "name": "elder-base-context",
+  "description": "Inheritance-test skill — confirms the elder agent's parent-walk picks up shared skills from `~/clan-world/.claude/skills/`. Stub for now; replaced when real elder skill set lands.",
+  "author": "OmniPass-world",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/OmniPass-world/clan-world/blob/HEAD/runtime/elders/parent/.claude/skills/elder-base-context/SKILL.md",
+    "repo": "OmniPass-world/clan-world",
+    "path": "runtime/elders/parent/.claude/skills/elder-base-context/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 4,
+    "pushed_at": "2026-05-06T17:51:42Z",
+    "score": 41,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 4
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

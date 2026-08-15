@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/AngDrew/opencode-openspec/openspec-list",
+  "type": "skill",
+  "name": "openspec-list",
+  "description": "List all OpenSpec changes and specifications",
+  "author": "AngDrew",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/AngDrew/opencode-openspec/blob/HEAD/src/skills/openspec-list/SKILL.md",
+    "repo": "AngDrew/opencode-openspec",
+    "path": "src/skills/openspec-list/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 6,
+    "pushed_at": "2026-02-01T05:47:52Z",
+    "score": 35
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

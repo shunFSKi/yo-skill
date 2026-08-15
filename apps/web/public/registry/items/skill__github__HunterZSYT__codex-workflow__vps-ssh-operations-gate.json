@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/HunterZSYT/codex-workflow/vps-ssh-operations-gate",
+  "type": "skill",
+  "name": "vps-ssh-operations-gate",
+  "description": "Use for SSH, VPS, server, process manager, webserver, Docker, DB engine, logs, ports, and backup inspection. Enforces read-only inspection first and requires approval before server-changing operations.",
+  "author": "HunterZSYT",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/HunterZSYT/codex-workflow/blob/HEAD/skills/backend-database/vps-ssh-operations-gate/SKILL.md",
+    "repo": "HunterZSYT/codex-workflow",
+    "path": "skills/backend-database/vps-ssh-operations-gate/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-25T15:06:01Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

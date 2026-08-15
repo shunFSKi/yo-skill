@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/osolmaz/tools/video-editing",
+  "type": "skill",
+  "name": "video-editing",
+  "description": "Use when editing video files with local tools, including changing playback speed while preserving audio pitch and keeping the original file unchanged.",
+  "author": "osolmaz",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/osolmaz/tools/blob/HEAD/agents/skills/video-editing/SKILL.md",
+    "repo": "osolmaz/tools",
+    "path": "agents/skills/video-editing/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 12,
+    "pushed_at": "2026-08-14T17:03:41Z",
+    "score": 55,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 12
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

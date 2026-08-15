@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/ArkLabsHQ/arkadian/pm-plan",
+  "type": "skill",
+  "name": "pm-plan",
+  "description": "RESTRICTED to ark-project-manager. Execute implementation planning workflow to generate design artifacts.",
+  "author": "ArkLabsHQ",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ArkLabsHQ/arkadian/blob/HEAD/skills/pm-plan/SKILL.md",
+    "repo": "ArkLabsHQ/arkadian",
+    "path": "skills/pm-plan/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 3,
+    "pushed_at": "2026-08-14T05:00:48Z",
+    "score": 50
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

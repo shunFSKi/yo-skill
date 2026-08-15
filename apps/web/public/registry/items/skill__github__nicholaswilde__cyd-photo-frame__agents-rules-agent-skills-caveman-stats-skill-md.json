@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/nicholaswilde/cyd-photo-frame/agents-rules-agent-skills-caveman-stats-skill-md",
+  "type": "skill",
+  "name": "agents-rules-agent-skills-caveman-stats-skill-md",
+  "description": "Show real token usage and estimated savings for the current session. Reads directly from the Claude Code session log — no AI estimation. Triggers on /caveman-stats. Output is injected by the mode-tracker hook; the model itself does not compute the numbers.",
+  "author": "nicholaswilde",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/nicholaswilde/cyd-photo-frame/blob/HEAD/.agents/rules/agent/skills/caveman-stats/SKILL.md",
+    "repo": "nicholaswilde/cyd-photo-frame",
+    "path": ".agents/rules/agent/skills/caveman-stats/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 3,
+    "pushed_at": "2026-08-14T19:46:41Z",
+    "score": 50,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 3
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

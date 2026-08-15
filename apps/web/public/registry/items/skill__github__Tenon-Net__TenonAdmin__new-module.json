@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/Tenon-Net/TenonAdmin/new-module",
+  "type": "skill",
+  "name": "new-module",
+  "description": "新增一个完整业务模块的全流程编排(实体 → 后端 CRUD → 测试 → gen:api → 前端页面 → i18n → 菜单/权限 → 验证)。当用户要\"加一个 XX 管理模块/功能\"、从零做一个新模块时使用;单做其中一步用对应的专项 skill。",
+  "author": "Tenon-Net",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Tenon-Net/TenonAdmin/blob/HEAD/.claude/skills/new-module/SKILL.md",
+    "repo": "Tenon-Net/TenonAdmin",
+    "path": ".claude/skills/new-module/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 23,
+    "pushed_at": "2026-08-13T00:28:08Z",
+    "score": 57,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 23
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

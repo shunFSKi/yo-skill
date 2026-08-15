@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/Hayatelin/caveman-zh-CN/caveman-stats",
+  "type": "skill",
+  "name": "caveman-stats",
+  "description": "显示目前 session 的实际 token 用量与估算节省量。 直接读 Claude Code 的 session log——不是 AI 估的。 输入 /caveman-stats 时触发。输出由 mode-tracker hook 注入； 模型本身不计算这些数字。",
+  "author": "Hayatelin",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Hayatelin/caveman-zh-CN/blob/HEAD/skills/caveman-stats/SKILL.md",
+    "repo": "Hayatelin/caveman-zh-CN",
+    "path": "skills/caveman-stats/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-07-30T14:44:32Z",
+    "score": 49,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 2
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

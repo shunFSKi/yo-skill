@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/joshband/LocusQ/juce-webview-windows",
+  "type": "skill",
+  "name": "juce-webview-windows",
+  "description": "Alias router for the JUCE WebView Windows implementation skill in LocusQ. Use when user references `juce-webview-windows` explicitly or requests WebView2-specific implementation guidance.",
+  "author": "joshband",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/joshband/LocusQ/blob/HEAD/.claude/skills/juce-webview-windows/SKILL.md",
+    "repo": "joshband/LocusQ",
+    "path": ".claude/skills/juce-webview-windows/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 3,
+    "pushed_at": "2026-04-26T05:01:31Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

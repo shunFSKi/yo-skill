@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/buchananwill/ue-claude-scaffold/mandate-critic",
+  "type": "skill",
+  "name": "mandate-critic",
+  "description": "Use when an agent's role is to attack proposals for failure modes, hidden complexity, and over-engineering. Defines the critic's rules of engagement.",
+  "author": "buchananwill",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/buchananwill/ue-claude-scaffold/blob/HEAD/skills/mandate-critic/SKILL.md",
+    "repo": "buchananwill/ue-claude-scaffold",
+    "path": "skills/mandate-critic/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-07-31T17:07:40Z",
+    "score": 49,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 2
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/jeiea/agent-dotfiles/gemini-query",
+  "type": "skill",
+  "name": "gemini-query",
+  "description": "Gemini(제미나이)에게 텍스트를 질의합니다. 자료 수집, 사전 조사, 창의성 소스, 코드 리뷰, 구글 프로덕트 질의에 사용합니다.",
+  "author": "jeiea",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/jeiea/agent-dotfiles/blob/HEAD/source/plugins/disabled/skills/gemini-query/SKILL.md",
+    "repo": "jeiea/agent-dotfiles",
+    "path": "source/plugins/disabled/skills/gemini-query/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-14T21:40:51Z",
+    "score": 42,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

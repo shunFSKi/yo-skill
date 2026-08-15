@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/richlander/dotnet-package-skills/markout-realmcp",
+  "type": "skill",
+  "name": "markout-realmcp",
+  "description": "Experiment harness shell: attaches the real NuGet.Mcp.Server to the Markout task. Carries no inline grounding; package context is delivered only via the real server's get_package_context tool (README or the package's shipped agent doc, depending on what ships in the package).",
+  "author": "richlander",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/richlander/dotnet-package-skills/blob/HEAD/experiments/markout-realmcp/grounding/markout-realmcp/SKILL.md",
+    "repo": "richlander/dotnet-package-skills",
+    "path": "experiments/markout-realmcp/grounding/markout-realmcp/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-14T22:03:50Z",
+    "score": 48,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

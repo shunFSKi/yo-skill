@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/BdM-15/capture-insights/pursuit-kickoff",
+  "type": "skill",
+  "name": "pursuit-kickoff",
+  "description": "Thin orchestrator — runs capture-brief, sam-scan, and competitive-snapshot in order for a new pursuit row. Use when user wants standard admin kickoff without running three buttons manually.",
+  "author": "BdM-15",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/BdM-15/capture-insights/blob/HEAD/skills/pursuit-kickoff/SKILL.md",
+    "repo": "BdM-15/capture-insights",
+    "path": "skills/pursuit-kickoff/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-09T12:14:12Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

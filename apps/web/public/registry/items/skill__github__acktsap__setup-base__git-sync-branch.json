@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/acktsap/setup-base/git-sync-branch",
+  "type": "skill",
+  "name": "git-sync-branch",
+  "description": "Rebase current branch onto latest main/master.",
+  "author": "acktsap",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/acktsap/setup-base/blob/HEAD/terminal/claude/skills/git-sync-branch/SKILL.md",
+    "repo": "acktsap/setup-base",
+    "path": "terminal/claude/skills/git-sync-branch/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 3,
+    "pushed_at": "2026-08-13T09:03:06Z",
+    "score": 47,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 3
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

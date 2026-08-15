@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/jessefreeman/ai-for-dev/query",
+  "type": "skill",
+  "name": "query",
+  "description": "Search the wiki and synthesize an answer with citations. Optionally file the result as an analysis page.",
+  "author": "jessefreeman",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/jessefreeman/ai-for-dev/blob/HEAD/.claude/skills/query/SKILL.md",
+    "repo": "jessefreeman/ai-for-dev",
+    "path": ".claude/skills/query/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 5,
+    "pushed_at": "2026-04-10T11:22:05Z",
+    "score": 42,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 5
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

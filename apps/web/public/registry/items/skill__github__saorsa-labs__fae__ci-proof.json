@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/saorsa-labs/fae/ci-proof",
+  "type": "skill",
+  "name": "ci-proof",
+  "description": "Phase C headless proof skill — prints a deterministic marker via uv run --script through the governed ToolHost bash path.",
+  "author": "saorsa-labs",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/saorsa-labs/fae/blob/HEAD/crates/fae-daemon/test-fixtures/skills/ci-proof/SKILL.md",
+    "repo": "saorsa-labs/fae",
+    "path": "crates/fae-daemon/test-fixtures/skills/ci-proof/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 3,
+    "pushed_at": "2026-08-03T17:03:50Z",
+    "score": 50,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 3
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

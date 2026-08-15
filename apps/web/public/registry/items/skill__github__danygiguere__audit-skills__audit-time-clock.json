@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/danygiguere/audit-skills/audit-time-clock",
+  "type": "skill",
+  "name": "audit-time-clock",
+  "description": "Time, timezone, and clock-correctness checklist. Use when code stores or computes timestamps, durations, timeouts, or expiry — naive vs aware datetimes, server-local now(), wall-clock for elapsed time, DST and calendar math, cross-zone comparisons.",
+  "author": "danygiguere",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/danygiguere/audit-skills/blob/HEAD/.agents/skills/audit-time-clock/SKILL.md",
+    "repo": "danygiguere/audit-skills",
+    "path": ".agents/skills/audit-time-clock/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 5,
+    "pushed_at": "2026-07-03T01:09:31Z",
+    "score": 47
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

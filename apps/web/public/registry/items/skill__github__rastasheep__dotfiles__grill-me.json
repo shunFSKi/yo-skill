@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/rastasheep/dotfiles/grill-me",
+  "type": "skill",
+  "name": "grill-me",
+  "description": "Interview the user relentlessly about a plan or design until reaching shared understanding, resolving each branch of the decision tree. Use when user asks to stress-test a plan, get grilled on their design, or mentions \"grill me\".",
+  "author": "rastasheep",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/rastasheep/dotfiles/blob/HEAD/packages/claude-code/config/skills/grill-me/SKILL.md",
+    "repo": "rastasheep/dotfiles",
+    "path": "packages/claude-code/config/skills/grill-me/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 6,
+    "pushed_at": "2026-08-09T23:25:21Z",
+    "score": 53,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 6
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

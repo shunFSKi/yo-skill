@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/Stilsi-dev/second-thought/report",
+  "type": "skill",
+  "name": "report",
+  "description": "Assembles the final structured Decision Report from the domain draft, critic findings, and collected facts. Triggers last, after the critic skill and (for sensitive domains) human confirmation. Produces structured data only — rendering is left to the UI (A2UI-style separation, Day 2).",
+  "author": "Stilsi-dev",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Stilsi-dev/second-thought/blob/HEAD/decision_concierge/skills/report/SKILL.md",
+    "repo": "Stilsi-dev/second-thought",
+    "path": "decision_concierge/skills/report/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-07T05:10:03Z",
+    "score": 40,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

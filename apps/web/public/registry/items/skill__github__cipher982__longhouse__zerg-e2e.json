@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/cipher982/longhouse/zerg-e2e",
+  "type": "skill",
+  "name": "zerg-e2e",
+  "description": "Zerg E2E principles and stability guardrails. Use when fixing flaky E2E or re-enabling tests.",
+  "author": "cipher982",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/cipher982/longhouse/blob/HEAD/.agents/skills/zerg-e2e/SKILL.md",
+    "repo": "cipher982/longhouse",
+    "path": ".agents/skills/zerg-e2e/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 6,
+    "pushed_at": "2026-08-14T22:18:25Z",
+    "score": 50,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 6
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

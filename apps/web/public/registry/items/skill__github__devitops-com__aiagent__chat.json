@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/devitops-com/aiagent/chat",
+  "type": "skill",
+  "name": "chat",
+  "description": "Basic resumable multi-turn Q&A against the configured model (a minor convenience feature).",
+  "author": "devitops-com",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/devitops-com/aiagent/blob/HEAD/src/aiagent/builtin_skills/chat/SKILL.md",
+    "repo": "devitops-com/aiagent",
+    "path": "src/aiagent/builtin_skills/chat/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-09T00:31:48Z",
+    "score": 37,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

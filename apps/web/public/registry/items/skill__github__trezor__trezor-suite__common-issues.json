@@ -15,9 +15,15 @@
     "kind": "skill-dir"
   },
   "quality": {
-    "stars": null,
-    "pushed_at": null,
-    "score": 25
+    "stars": 1028,
+    "pushed_at": "2026-08-14T21:33:31Z",
+    "score": 82,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1028
+      }
+    ]
   },
   "security": {
     "score": 100,
@@ -49,6 +55,6 @@
     "category": "编程",
     "featured": false
   },
-  "readme": null,
+  "readme": "# TREZOR SUITE MONOREPO\n\nWelcome to the Trezor Suite repository! This repository contains the source code for 3 projects:\n\n- **Connect** - tool that offers developers an easy way to integrate Trezor's functionality into their own applications\n- **Trezor Suite** - desktop and web application for managing Trezor hardware wallet\n- **Trezor Suite Mobile** - Mobile/Tablet application designed for managing Trezor hardware wallet\n\n![img](https://repository-images.githubusercontent.com/148657224/439f6100-765f-11e9-9bff-b725eef3c4a6)\n\n# Development\n\n### Prerequisities\n\n- Install [NVM](https://github.com/nvm-sh/nvm)\n    - _Hint: you can have your shell [automatically switch versions](https://github.com/nvm-sh/nvm/blob/master/README.md#calling-nvm-use-automatically-in-a-directory-with-a-nvmrc-file) in each repo_\n- Enable [Yarn](https://yarnpkg.com/getting-started/install) through npm\n- Install [Git LFS](https://git-lfs.github.com/) (For Linux/Ubuntu, [after adding the repository](https://packagecloud.io/github/git-lfs/install) do `sudo apt-get install git-lfs`, more info [here](https://github.com/git-lfs/git-lfs/blob/main/INSTALLING.md))\n- Optional recommended: [setup PMG](https://docs.trezor.io/trezor-suite/misc/local-development-security.html)\n\n### Getting started\n\n- `git clone git@github.com:trezor/trezor-suite.git`\n- `cd trezor-suite`\n- `git submodule update --init --recursive`\n- `git lfs install` // Set up Git LFS for your user account. You only need to run this once per user account.\n- `git lfs pull`\n- `nvm install`\n- `yarn`\n- `yarn build:essential`\n\nIt's recommended to enable `git config --global submodule.recurse true` so you don't need to run `git submodule update --init --recursive` every time when submodules are updated.\n\n> You don't need a Trezor device to get into the app, you can use emulator. There is a [Trezor User Env](https://github.com/trezor/trezor-user-env) to help you set it up and run emulator for any Trezor model 🎉\n\n> You can use Nix to set up the repository — see [Nix Documentation](docs/misc/development-on-nix.md).\n\n## **Connect** @trezor/connect\n\nThis repository is used for development of version 10 of @trezor/connect. For detailed documentation, please refer to this [page](./docs/packages/connect/index.md).\n\nHistorically, Trezor Connect had its [own repository](https://github.com/trezor/connect). This repository is now archived.\n\n## **Trezor Suite** @trezor/suite\n\nDev environment is primarily supported on **macOS or Linux**,\nthough development on Windows is possible by following [this guide](https://docs.trezor.io/trezor-suite/misc/development-on-windows.html).\n\nRun a dev build:\n\n- `yarn suite:dev` (web app)\n- `yarn suite:dev:vite` (⚠️ EXPERIMENTAL: web app with Vite bundler used for **development only**, use `yarn suite:dev` if you want fidelity to production app)\n- `yarn suite:dev:desktop` (electron app)\n    - React dev tools are available with a known caveat: you need to reload the renderer process (Ctrl+R or Cmd+R) while having the dev tools open\n- `yarn suite:build:web:preview` (localhost of production web app with applied security headers)\n\nLocal `.env` setup (optional):\n\n- Rename `env.local.example` to `.env.local` in the repo root.\n- Set `TANSTACK_REACT_QUERY_DEV_TOOLS=true` to enable TanStack React Query Devtools on localhost.\n- Set `TRANSPORT_BROWSER_PING=false` to disable transport period ping.\n\n## **Trezor Suite Mobile** @suite-native/app\n\n> To set up your dev environment for a native platform (iOS/Android) follow [these additional steps](https://github.com/trezor/trezor-suite/tree/develop/suite-native/app#prerequisites).\n\n## Contribute\n\nInspired by [GitLab Contributing Guide](https://docs.gitlab.com/ee/development/contributing/)\n\nUsing [Conventional Commits](COMMITS.md) is required.\n\n## Security vulnerability disclosure\n\nPlease report suspected security vulnerabilities in private to [security@satoshilabs.com](mailto:security@satoshilabs.com), also see [the disclosure section on the Trezor.io website](https://trezor.io/security). Please do NOT create publicly viewable issues for suspected security vulnerabilities.\n\n## IDE specific settings\n\nFind specific settings for Integrated Development Environments (IDE) in [IDE.md](./IDE.md)\n",
   "status": "curated"
 }

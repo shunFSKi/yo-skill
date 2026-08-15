@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/Stackdome/Stackdome/zoom-out",
+  "type": "skill",
+  "name": "zoom-out",
+  "description": "Tell the agent to zoom out and give broader context or a higher-level perspective. Use when you're unfamiliar with a section of code or need to understand how it fits into the bigger picture.",
+  "author": "Stackdome",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Stackdome/Stackdome/blob/HEAD/.claude/skills/zoom-out/SKILL.md",
+    "repo": "Stackdome/Stackdome",
+    "path": ".claude/skills/zoom-out/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 24,
+    "pushed_at": "2026-08-13T21:56:34Z",
+    "score": 58,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 24
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

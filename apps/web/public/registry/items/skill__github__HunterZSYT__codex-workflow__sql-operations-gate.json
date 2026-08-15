@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/HunterZSYT/codex-workflow/sql-operations-gate",
+  "type": "skill",
+  "name": "sql-operations-gate",
+  "description": "Use to analyze SQL before execution. Classifies read-only, write, destructive, schema-changing, transaction-needed, backup-required, and production-risk SQL. Never executes SQL automatically.",
+  "author": "HunterZSYT",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/HunterZSYT/codex-workflow/blob/HEAD/skills/backend-database/sql-operations-gate/SKILL.md",
+    "repo": "HunterZSYT/codex-workflow",
+    "path": "skills/backend-database/sql-operations-gate/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-25T15:06:01Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

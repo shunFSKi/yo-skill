@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/zrosenfield/sharepoint-ai-skills/find-expert",
+  "type": "skill",
+  "name": "find-expert",
+  "description": "Matches open Knowledge Gaps items to subject matter experts in the Expert Directory and assigns them. Triggers when asked to find experts, route open questions, or review unassigned gaps.",
+  "author": "zrosenfield",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/zrosenfield/sharepoint-ai-skills/blob/HEAD/Skills/find-expert/SKILL.md",
+    "repo": "zrosenfield/sharepoint-ai-skills",
+    "path": "Skills/find-expert/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 86,
+    "pushed_at": "2026-08-04T17:53:17Z",
+    "score": 72,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 86
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# SharePoint AI Experiments and Demo Lab\n\nExperimental AI skills, prototypes, automated demo scripts, sample data, and presentation assets for AI in Microsoft 365 SharePoint.\n\n> **Repository status:** This is an incubation and demonstration repository. For maintained community skills, use the official [PnP SharePoint Skills repository](https://github.com/pnp/sharepoint-skills).\n\n## What Is Here\n\n| Path | Purpose |\n|---|---|\n| [`Skills/`](./Skills/) | Experimental skills that have not graduated to the PnP repository |\n| [`demos/`](./demos/) | Demo documentation, sample data, golden outputs, and presentation assets |\n| [`tools/scripts/`](./tools/scripts/) | Automated browser demo scripts |\n| [`tools/`](./tools/) | The Playwright-based demo runner and local configuration examples |\n\n## Skill Lifecycle\n\nSkills in this repository are prototypes. They may change quickly and should be reviewed before production use.\n\n1. New ideas are developed and demonstrated here.\n2. Mature skills are contributed to [`pnp/sharepoint-skills`](https://github.com/pnp/sharepoint-skills).\n3. After graduation, the local copy is removed and [`Skills/README.md`](./Skills/README.md) links to the maintained PnP version.\n\nDo not submit updates for graduated skills here. Open issues and pull requests against the official repository instead.\n\n## Running Demos\n\nDemo scripts use site-agnostic defaults. Put real SharePoint URLs in the gitignored `tools/demo.vars.json`; never edit a `.demo` file to insert a tenant or site URL.\n\n```powershell\nnpm install\nnpm run demo -- tools/scripts/23-program-portfolio-review/23-program-portfolio-review.demo\n```\n\nMost scripts support `--setup`, the default demo section, and `--reset`.\n\n## Prerequisites\n\n- Microsoft 365 tenant with a Copilot license\n- SharePoint contributor permissions for setup and skill installation\n- Node.js for the automated demo runner\n\n## Contributing\n\nContributions are welcome for experimental skills, demo scenarios, runner improvements, and sample assets. Stable reusable skills should be proposed to [PnP SharePoint Skills](https://github.com/pnp/sharepoint-skills).\n\n## License\n\n[MIT](./LICENSE) © 2026 [zrosenfield](https://github.com/zrosenfield)\n\n## Disclaimer\n\nThis repository is provided as-is for learning and experimentation. It is not official Microsoft documentation. Verify behavior against current Microsoft Learn documentation before production deployment.\n",
+  "status": "curated"
+}

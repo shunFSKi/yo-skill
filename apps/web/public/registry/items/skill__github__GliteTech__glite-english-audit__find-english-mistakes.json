@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/GliteTech/glite-english-audit/find-english-mistakes",
+  "type": "skill",
+  "name": "find-english-mistakes",
+  "description": "Read one session's projected utterances and answer with the mistakes found in them: high-confidence non-native English only, each already privacy-clean, with a privacy-safe example and addressed by the index and span it was found at. Use during step d of an audit run, one agent per session file.",
+  "author": "GliteTech",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/GliteTech/glite-english-audit/blob/HEAD/.claude/skills/find-english-mistakes/SKILL.md",
+    "repo": "GliteTech/glite-english-audit",
+    "path": ".claude/skills/find-english-mistakes/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-14T01:22:23Z",
+    "score": 45,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

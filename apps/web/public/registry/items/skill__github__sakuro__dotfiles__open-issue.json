@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/sakuro/dotfiles/open-issue",
+  "type": "skill",
+  "name": "open-issue",
+  "description": "Create a GitHub issue. Use when the user wants to create an issue, open an issue, or report a bug/feature request.",
+  "author": "sakuro",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/sakuro/dotfiles/blob/HEAD/.config/claude/skills/open-issue/SKILL.md",
+    "repo": "sakuro/dotfiles",
+    "path": ".config/claude/skills/open-issue/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-08-14T11:27:23Z",
+    "score": 49,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 2
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

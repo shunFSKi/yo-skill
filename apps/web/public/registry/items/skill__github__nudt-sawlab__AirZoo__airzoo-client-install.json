@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/nudt-sawlab/AirZoo/airzoo-client-install",
+  "type": "skill",
+  "name": "airzoo-client-install",
+  "description": "Install and set up the AirZoo rendering client on Windows: clone repo, create conda env airzoo, copy AirSim settings.json, download UE engine from Hugging Face, and run a test render. Use when the user asks to install, set up, or configure AirZoo, AirZooClient, the AirZoo renderer, conda environment, or first-time rendering on Windows.",
+  "author": "nudt-sawlab",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/nudt-sawlab/AirZoo/blob/HEAD/.cursor/skills/airzoo-client-install/SKILL.md",
+    "repo": "nudt-sawlab/AirZoo",
+    "path": ".cursor/skills/airzoo-client-install/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 27,
+    "pushed_at": "2026-07-31T04:16:24Z",
+    "score": 58,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 27
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

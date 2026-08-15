@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/Libeny/model-steer-claude/model-steer",
+  "type": "skill",
+  "name": "model-steer",
+  "description": "MSC 模型路由。路由规则由 system prompt 注入，此 skill 仅提供切换机制。\n相关命令：/smoke（省钱）、/redbull（全力）、/think-level N（指定等级）",
+  "author": "Libeny",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Libeny/model-steer-claude/blob/HEAD/skills/model-steer/SKILL.md",
+    "repo": "Libeny/model-steer-claude",
+    "path": "skills/model-steer/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-04-16T09:44:06Z",
+    "score": 36,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 2
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

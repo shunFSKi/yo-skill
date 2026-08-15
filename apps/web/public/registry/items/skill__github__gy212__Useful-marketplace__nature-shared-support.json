@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/gy212/Useful-marketplace/nature-shared-support",
+  "type": "skill",
+  "name": "nature-shared-support",
+  "description": "Internal support content for the Nature skill collection. Do not use as a standalone workflow; load only when another nature-* skill explicitly references files under skills/_shared.",
+  "author": "gy212",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/gy212/Useful-marketplace/blob/HEAD/plugins/nature-workflow/skills/_shared/SKILL.md",
+    "repo": "gy212/Useful-marketplace",
+    "path": "plugins/nature-workflow/skills/_shared/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-08-13T03:57:34Z",
+    "score": 49,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 2
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

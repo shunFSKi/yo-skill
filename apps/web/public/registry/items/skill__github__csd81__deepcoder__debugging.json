@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/csd81/deepcoder/debugging",
+  "type": "skill",
+  "name": "debugging",
+  "description": "Debug an issue in the current DeepCoder session — review the issue, scan debug logs for [ERROR]/[WARN] entries and stack traces, explain findings, and suggest concrete fixes.",
+  "author": "csd81",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/csd81/deepcoder/blob/HEAD/.agents/skills/debugging/SKILL.md",
+    "repo": "csd81/deepcoder",
+    "path": ".agents/skills/debugging/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-26T00:09:44Z",
+    "score": 40,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

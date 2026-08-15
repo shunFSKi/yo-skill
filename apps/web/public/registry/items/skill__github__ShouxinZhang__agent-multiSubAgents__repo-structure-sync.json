@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/ShouxinZhang/agent-multiSubAgents/repo-structure-sync",
+  "type": "skill",
+  "name": "repo-structure-sync",
+  "description": "仓库架构文档同步。结构变更后必须更新仓库元数据与结构文档。",
+  "author": "ShouxinZhang",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ShouxinZhang/agent-multiSubAgents/blob/HEAD/.agents/skills/repo-structure-sync/SKILL.md",
+    "repo": "ShouxinZhang/agent-multiSubAgents",
+    "path": ".agents/skills/repo-structure-sync/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-03-12T11:32:57Z",
+    "score": 32,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

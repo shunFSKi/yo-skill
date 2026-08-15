@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/xiaodongQ/xworkbench/ip-info",
+  "type": "skill",
+  "name": "ip-info",
+  "description": "查询 IP 地址信息（公网 IP 或指定域名的解析结果）。当用户说\"查 IP\"、\"我的 IP 是多少\"、\"域名解析\"时触发。",
+  "author": "xiaodongQ",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/xiaodongQ/xworkbench/blob/HEAD/tools/ip-info/SKILL.md",
+    "repo": "xiaodongQ/xworkbench",
+    "path": "tools/ip-info/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-05T23:38:42Z",
+    "score": 42,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

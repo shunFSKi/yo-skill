@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/brsbl/ottonomous/skill-diff",
+  "type": "skill",
+  "name": "skill-diff",
+  "description": "Shows side-by-side diffs of skill changes. Generates HTML comparison of before/after for changed SKILL.md files. Use when reviewing skill changes.",
+  "author": "brsbl",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/brsbl/ottonomous/blob/HEAD/.claude/skills/skill-diff/SKILL.md",
+    "repo": "brsbl/ottonomous",
+    "path": ".claude/skills/skill-diff/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 15,
+    "pushed_at": "2026-08-02T01:31:51Z",
+    "score": 56,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 15
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

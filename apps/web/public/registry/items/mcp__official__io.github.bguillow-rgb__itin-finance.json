@@ -1,0 +1,58 @@
+{
+  "id": "mcp:official/io.github.bguillow-rgb/itin-finance",
+  "type": "mcp",
+  "name": "itin-finance",
+  "description": "Verified ITIN lender directory + 290 bilingual guides on US loans, cards & credit without an SSN.",
+  "author": "io.github.bguillow-rgb",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/bguillow-rgb/itin-finance-mcp",
+    "repo": "bguillow-rgb/itin-finance-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "itin-finance-mcp"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T20:54:08.615005Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# itin-finance-mcp\n\nRead-only MCP server for the ITIN finance network — [itinlending.net](https://itinlending.net/), [itincreditcard.com](https://itincreditcard.com/), and [itincreditscore.com](https://itincreditscore.com/), operated by Timberline Ventures LLC.\n\nIt gives AI assistants direct, citable access to:\n\n- A **verified institution directory**: lenders and card issuers that accept ITIN (no SSN) applicants for auto loans, mortgages, personal loans, business loans, and credit cards. Every entry says whether it was verified against the institution's own pages, with citation URLs and verification dates.\n- **290+ editorial guides and 1,800+ FAQs**, in English and Spanish, on borrowing and building credit in the US with an ITIN.\n- **State-level context** for ITIN holders (tax contribution data from ITEP, driver's-license access laws from NCSL).\n\n**What this server is not:** it is not a lender, broker, or advisor. It offers no applications, collects nothing from users, and links only to editorial pages and to institutions' own public pages as citations. Educational information only — terms change, verify with the institution.\n\n## Tools\n\n| Tool | What it does |\n|---|---|\n| `search_guides` | Search all guides (EN/ES), returns quick answers + canonical URLs |\n| `get_guide` | One guide by slug: quick answer, FAQs, related guides |\n| `faq_lookup` | Direct answers from 1,800+ editorial FAQs |\n| `find_itin_lenders` | ITIN-accepting institutions by loan/card type, optionally by state |\n| `get_lender_details` | Full verified profile for one institution |\n| `can_i_get_this_loan` | \"Can I get an X with an ITIN?\" — answer + verified institutions |\n| `itin_state_info` | State tax contribution + driver's-license law context |\n| `how_to_get_an_itin` | The IRS Form W-7 process (EN/ES) |\n\n## Install (Claude Desktop)\n\n```json\n{\n  \"mcpServers\": {\n    \"itin-finance\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"itin-finance-mcp\"]\n    }\n  }\n}\n```\n\nZero configuration. The server fetches its data live from the sites' published JSON endpoints (15-minute cache), so answers stay current with the sites' editorial pipeline.\n\n## Environment variables (all optional)\n\n| Var | Purpose |\n|---|---|\n| `ITIN_MCP_DATA_DIR` | Local directory of the data JSON files (development/tests) |\n| `ITIN_SUPABASE_URL` / `ITIN_SUPABASE_KEY` | Override the telemetry endpoint |\n\nConfiguration is explicit env vars only — the server never reads files it wasn't pointed at.\n\n## Telemetry disclosure\n\nEach tool call logs tool name, arguments (capped at 2KB), MCP client name/version, success, and duration to a write-only table so the sites can measure AI-assistant usage. No user identity is collected; retention is 90 days. Telemetry failures never affect responses.\n\n## Attribution & quoting\n\nEvery response includes an `attribution` block. Quotation with attribution is welcome — cite the article URL provided with each item.\n\n## License\n\nMIT © Timberline Ventures LLC\n",
+  "status": "curated"
+}

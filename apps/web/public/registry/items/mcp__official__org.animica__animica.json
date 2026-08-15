@@ -1,0 +1,94 @@
+{
+  "id": "mcp:official/org.animica/animica",
+  "type": "mcp",
+  "name": "Animica",
+  "description": "Read-only Animica chain data, free AI inference, verifiable quantum randomness, and mining stats.",
+  "author": "org.animica",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/animicaorg/animica-mcp",
+    "repo": "animicaorg/animica-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "animica-mcp"
+    ],
+    "env": [
+      {
+        "name": "ANIMICA_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ANIMICA_RPC_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ANIMICA_BASE_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ANIMICA_POOL_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ANIMICA_BEACON_URL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ANIMICA_MODEL",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ANIMICA_MCP_TIMEOUT_S",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-14T21:08:06.882354Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# Animica MCP Server\n\n> **Registry & packaging mirror.** The server source lives in the monorepo:\n> https://github.com/animicaorg/all/tree/main/python/animica/mcp — it ships inside\n> the [`animica`](https://pypi.org/project/animica/) PyPI wheel (`animica.mcp.server`,\n> `[mcp]` extra). This repo holds the registry/packaging metadata (`server.json`,\n> Smithery/Docker files) and contains zero server code, so it can never drift from\n> the shipped implementation.\n\nMCP (Model Context Protocol) server for the [Animica](https://animica.dev) AI + blockchain network. One command gives any MCP client (Claude Code, Claude Desktop, Cursor, VS Code, …) 15 read/compute tools: OpenAI-compatible AI inference, a verifiable quantum randomness beacon, read-only chain and account lookups, mining-pool stats, and Studio compute cost estimates.\n\nThe installable package is [`animica-mcp`](https://pypi.org/project/animica-mcp/) — a thin console wrapper around `animica[mcp]`; installing it pulls in the server and exposes the `animica-mcp` command.\n\n## Install\n\n```bash\npip install animica-mcp\n# or run it without installing:\nuvx animica-mcp\n```\n\n## Tools (15)\n\n| Tool | What it does |\n| --- | --- |\n| `animica_info` | Orientation: what Animica is, the AI API, quantum beacon, endpoints, docs. Start here. |\n| `animica_ai_ask` | Ask Animica's ENA AI a question (OpenAI-compatible chat inference). |\n| `animica_ai_models` | List the AI models available on Animica's OpenAI-compatible API. |\n| `animica_ai_job_status` | Read the status of an ENA AI request/job by id (read-only). |\n| `animica_quantum_beacon_latest` | Latest round of the verifiable quantum randomness beacon. |\n| `animica_quantum_draw` | Compute a verifiable quantum-random draw off a beacon round (lottery, choice, weighted, shuffle, range, coin, dice, bytes). |\n| `animica_quantum_verify` | Re-verify a quantum-random draw client-side — pure offline compute. |\n| `animica_qdna_verify_gene` | Verify a qDNA training-genome gene seal (tamper-evidence) — pure offline compute. |\n| `animica_chain_head` | Chain head: current height/hash and chain id. Read-only. |\n| `animica_chain_block` | Read a block by height or hash (head block with neither). Read-only. |\n| `animica_chain_account` | Balance + nonce for an `anim1…` address. Read-only — no keys, no signing. |\n| `animica_pool_stats` | Live mining-pool stats: pool status plus active miner count. |\n| `animica_network_hashrate` | Current network hashrate from the chain. |\n| `animica_studio_estimate` | Estimate the ANM cost of an Animica Studio run before paying — local quote, charges nothing. |\n| `animica_studio_functions` | List functions deployed to Animica Studio. Read-only. |\n\n## Client setup\n\n### Claude Code\n\n```bash\nclaude mcp add animica -- uvx animica-mcp\n```\n\n### Claude Desktop\n\nAdd to `claude_desktop_config.json`:\n\n```json\n{\n  \"mcpServers\": {\n    \"animica\": {\n      \"command\": \"uvx\",\n      \"args\": [\"animica-mcp\"]\n    }\n  }\n}\n```\n\n### Cursor\n\nAdd to `~/.cursor/mcp.json` (or project `.cursor/mcp.json`):\n\n```json\n{\n  \"mcpServers\": {\n    \"animica\": {\n      \"command\": \"uvx\",\n      \"args\": [\"animica-mcp\"]\n    }\n  }\n}\n```\n\n### VS Code\n\nAdd to `.vscode/mcp.json`:\n\n```json\n{\n  \"servers\": {\n    \"animica\": {\n      \"type\": \"stdio\",\n      \"command\": \"uvx\",\n      \"args\": [\"animica-mcp\"]\n    }\n  }\n}\n```\n\nIf you installed with `pip install animica-mcp`, replace `\"command\": \"uvx\", \"args\": [\"animica-mcp\"]` with `\"command\": \"animica-mcp\"` in any of the configs above.\n\n## Configuration (environment variables)\n\nAll endpoints default to public Animica infrastructure — the server works with zero configuration.\n\n| Variable | Default | Purpose |\n| --- | --- | --- |\n| `ANIMICA_BASE_URL` | `https://pool.animica.org/v1` | OpenAI-compatible inference API base (chat + models). `https://animica.dev/v1` is the free keyless endpoint if you prefer it. |\n| `ANIMICA_RPC_URL` | `https://rpc.animica.org/rpc` | Node JSON-RPC endpoint (read-only calls). |\n| `ANIMICA_POOL_URL` | `https://pool.animica.org` | Mining-pool stats API. |\n| `ANIMICA_BEACON_URL` | `https://pool.animica.org` | Quantum randomness beacon (`/beacon/*`). |\n| `ANIMICA_API_KEY` | *(empty)* | Optional Bearer key for the inference API; not required. |\n| `ANIMICA_MODEL` | `anm-fast-8b` | Default model for `animica_ai_ask`. |\n| `ANIMICA_MCP_TIMEOUT_S` | `60` | HTTP timeout (seconds) for backend calls. |\n| `MCP_TRANSPORT` | `stdio` | Transport: `stdio` (default), `streamable-http`, or `sse`. |\n\n## Transports\n\n- **stdio** (default) — what Claude Code / Claude Desktop / Cursor / VS Code use; just run `animica-mcp`.\n- **streamable-http** — `MCP_TRANSPORT=streamable-http animica-mcp` serves HTTP on `127.0.0.1:8765`. For host/port flags use the full CLI from the `animica` package: `animica mcp serve --transport http --host 0.0.0.0 --port 8765` (serves MCP at `/mcp`).\n- **sse** — `MCP_TRANSPORT=sse animica-mcp` (legacy SSE clients).\n\nThe `Dockerfile` + `smithery.yaml` in this repo package the streamable-HTTP mode for [Smithery](https://smithery.ai) and other container hosts (listens on `$PORT`, serves MCP at `/mcp`).\n\n## Security posture\n\n- **Read + compute only.** Chain access goes through a hard-coded allow-list of read-only JSON-RPC methods (`RPC_READ_ALLOWLIST` in the source); mutating methods (send, sign, deploy, claim) are not on the list and cannot be reached, even by a bug.\n- **No keys.** The server never handles private keys, never signs, never spends, and never mutates wallet state.\n- Quantum draw/verify and qDNA gene verification are pure local compute and work fully offline.\n\n## Links\n\n- Homepage: https://animica.dev (free OpenAI-compatible AI API at `https://animica.dev/v1`)\n- Developer docs: https://animica.org/developers/\n- Explorer: https://explorer.animica.org\n- Mining pool: https://pool.animica.org\n- Monorepo (server source): https://github.com/animicaorg/all\n- PyPI wrapper: https://pypi.org/project/animica-mcp/\n- Core package: https://pypi.org/project/animica/\n- Contact: ai@3vdc.com\n\n## License\n\nApache-2.0\n\n<!-- mcp-name: org.animica/animica -->\n<!-- mcp-name: io.github.animicaorg/animica -->\n",
+  "status": "curated"
+}

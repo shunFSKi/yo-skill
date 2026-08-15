@@ -20,7 +20,7 @@
   "quality": {
     "stars": null,
     "pushed_at": "2026-08-14T01:36:19.302756Z",
-    "score": 52
+    "score": 42
   },
   "security": {
     "score": 100,
@@ -52,6 +52,6 @@
     "category": null,
     "featured": false
   },
-  "readme": "# Dot Plot MCP\n\n> See individual users, not aggregate charts.\n\n**English** | [한국어](README.ko.md)\n\n![report](.github/report_en.png)\n\n## Install\n\nPaste this to your agent and it sets everything up:\n\n```\nSet up Dotplot (MCP + skills) — instructions are here https://dotplot-reports.vercel.app/setup.md\n```\n\n<details>\n<summary>Or do it by hand</summary>\n\n```bash\nclaude mcp add --scope user dotplot -- uvx dotplot-mcp\n```\n\n</details>\n\n## Use\n\nSay this in any project:\n\n> **\"Analyze my product\"**\n\nYou get the report above. That's it.\n\nOr use the slash commands:\n\n```\n/dotplot-analyze-product    full analysis and report\n/dotplot-add-tracking       find and write the logging you're missing\n/dotplot-whats-changed      compare with the previous report\n```\n\nClaude finds your data, picks the action that means \"this user got value\", and\nwrites the report. No events table needed — your `orders` table already is one:\n\n```sql\nSELECT user_id, created_at::date AS date, 'purchase' AS event FROM orders\nUNION ALL\nSELECT user_id, added_at::date, 'add_to_wishlist' FROM wishlist_items\n```\n\nNothing tracked yet? Say **\"add the tracking I'm missing\"** and Claude reads your\ncode, writes the logging that's absent, and tells you when to come back.\n\n<details>\n<summary>No product to analyze yet? Try the sample</summary>\n\n```bash\ngit clone https://github.com/brownglasses/dotplot-mcp && cd dotplot-mcp\nuv run sample_data.py   # 40 fake users with a pattern planted in them\nuv run harness.py       # watch the whole pipeline run\n```\n\n</details>\n\n## Why this exists\n\nDAU/MAU charts go \"up and to the right\" as long as new users arrive — even when\nnobody stays. Until you have hundreds of users, the most informative dashboard is\n[YC's dot plot](https://www.youtube.com/watch?v=e5-6rEwzxLs) (David Lieb):\n**one row per user, one cell per day.**\n\nFour rules keep it honest:\n\n- **Code computes, AI only interprets** — same data, same numbers, every time\n- **Small samples withhold judgment** — under 5 users in a group, it says nothing\n- **Correlation isn't cause** — every finding ships with \"test this before you believe it\"\n- **Vanity metrics are refused** — pick `open_app` as your value event and the code says no\n\nReports come out in your language (English, 한국어, 日本語 built in; anything else\ntranslated on the fly with the numbers verified intact).\n\n## More\n\n- [What each tool does, and the anonymous benchmark](docs/tools.md)\n- [How it's built](docs/architecture.md)\n\nMIT\n\n<!-- mcp-name: io.github.brownglasses/dotplot-mcp -->\n",
+  "readme": null,
   "status": "curated"
 }

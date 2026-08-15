@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/Aasdqwe1/agent-toolbox/demo-echo",
+  "type": "skill",
+  "name": "demo-echo",
+  "description": "演示 app 端 skill 工具路径的最小示例技能（提供一个 demo_echo 工具回显输入）",
+  "author": "Aasdqwe1",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Aasdqwe1/agent-toolbox/blob/HEAD/assets/skills/demo-echo/SKILL.md",
+    "repo": "Aasdqwe1/agent-toolbox",
+    "path": "assets/skills/demo-echo/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 14,
+    "pushed_at": "2026-08-09T16:09:43Z",
+    "score": 53,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 14
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

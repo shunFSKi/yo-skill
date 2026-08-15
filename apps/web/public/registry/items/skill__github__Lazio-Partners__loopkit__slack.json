@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/Lazio-Partners/loopkit/slack",
+  "type": "skill",
+  "name": "slack",
+  "description": "Post loop checkpoint notifications to Slack through a webhook. Use when a turn needs human attention. Read this SKILL.md, then run scripts/notify.sh.",
+  "author": "Lazio-Partners",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Lazio-Partners/loopkit/blob/HEAD/.pi/skills/slack/SKILL.md",
+    "repo": "Lazio-Partners/loopkit",
+    "path": ".pi/skills/slack/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-06-25T20:07:57Z",
+    "score": 44,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 2
+      }
+    ]
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

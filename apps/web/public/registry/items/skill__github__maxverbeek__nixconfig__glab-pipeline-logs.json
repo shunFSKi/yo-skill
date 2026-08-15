@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/maxverbeek/nixconfig/glab-pipeline-logs",
+  "type": "skill",
+  "name": "glab-pipeline-logs",
+  "description": "Fetch and display GitLab CI job logs for a specific pipeline. Use when the user wants to read CI logs, debug pipeline failures, or check job output.",
+  "author": "maxverbeek",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/maxverbeek/nixconfig/blob/HEAD/modules/development/agents/_plugins/normal/skills/glab-pipeline-logs/SKILL.md",
+    "repo": "maxverbeek/nixconfig",
+    "path": "modules/development/agents/_plugins/normal/skills/glab-pipeline-logs/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-11T21:15:39Z",
+    "score": 48,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

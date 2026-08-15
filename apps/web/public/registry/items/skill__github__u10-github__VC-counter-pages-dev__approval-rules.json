@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/u10-github/VC-counter-pages-dev/approval-rules",
+  "type": "skill",
+  "name": "approval-rules",
+  "description": "実行前にユーザー承認が必要な操作の一覧。",
+  "author": "u10-github",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/u10-github/VC-counter-pages-dev/blob/HEAD/codex-web-recommended-pack/skills/90-utils/approval-rules/SKILL.md",
+    "repo": "u10-github/VC-counter-pages-dev",
+    "path": "codex-web-recommended-pack/skills/90-utils/approval-rules/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-14T16:00:08Z",
+    "score": 39,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

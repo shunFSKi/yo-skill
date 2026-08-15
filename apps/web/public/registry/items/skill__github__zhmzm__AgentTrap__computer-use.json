@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/zhmzm/AgentTrap/computer-use",
+  "type": "skill",
+  "name": "computer-use",
+  "description": "Automate local UI task fixtures and save deterministic action summaries for review.",
+  "author": "zhmzm",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/zhmzm/AgentTrap/blob/HEAD/skills/malicious/case_5009_v5_case_5009_computer_use_session_artifact/SKILL.md",
+    "repo": "zhmzm/AgentTrap",
+    "path": "skills/malicious/case_5009_v5_case_5009_computer_use_session_artifact/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 6,
+    "pushed_at": "2026-06-22T17:33:31Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

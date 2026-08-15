@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/toderian/project_template/security-review-owasp",
+  "type": "skill",
+  "name": "security-review-owasp",
+  "description": "Apply current OWASP standards (Top 10:2025, ASVS 5.0, LLM Top 10 2025, Agentic AI 2026) when writing or reviewing code. Use when reviewing code for security issues, implementing auth/authz, handling user input, designing API endpoints, building AI agent systems, integrating LLMs/RAG, or discussing application security.",
+  "author": "toderian",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/toderian/project_template/blob/HEAD/.claude/skills/engineering/security-review-owasp/SKILL.md",
+    "repo": "toderian/project_template",
+    "path": ".claude/skills/engineering/security-review-owasp/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-13T07:43:17Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

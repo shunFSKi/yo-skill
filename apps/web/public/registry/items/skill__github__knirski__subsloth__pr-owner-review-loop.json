@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/knirski/subsloth/pr-owner-review-loop",
+  "type": "skill",
+  "name": "pr-owner-review-loop",
+  "description": "Use for the PR-owner role when one agent owns one PR, branch, and worktree from publish through merge.",
+  "author": "knirski",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/knirski/subsloth/blob/HEAD/.agents/skills/pr-owner-review-loop/SKILL.md",
+    "repo": "knirski/subsloth",
+    "path": ".agents/skills/pr-owner-review-loop/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-05T09:18:19Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}
