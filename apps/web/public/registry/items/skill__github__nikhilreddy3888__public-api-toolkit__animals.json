@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/nikhilreddy3888/public-api-toolkit/animals",
+  "type": "skill",
+  "name": "animals",
+  "description": "Animal facts, dog/cat breeds, animal images. Free. No API key. Use when user ask about animal facts, dog breeds, cat breeds.",
+  "author": "nikhilreddy3888",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/nikhilreddy3888/public-api-toolkit/blob/HEAD/skills/animals/SKILL.md",
+    "repo": "nikhilreddy3888/public-api-toolkit",
+    "path": "skills/animals/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-04-19T16:19:12Z",
+    "score": 39
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

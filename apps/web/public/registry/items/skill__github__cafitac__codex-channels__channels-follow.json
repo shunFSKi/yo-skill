@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/cafitac/codex-channels/channels-follow",
+  "type": "skill",
+  "name": "channels-follow",
+  "description": "[CODEX-CHANNELS] Watch quietly and optionally resolve the next actionable request with provided text.",
+  "author": "cafitac",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/cafitac/codex-channels/blob/HEAD/skills/channels-follow/SKILL.md",
+    "repo": "cafitac/codex-channels",
+    "path": "skills/channels-follow/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-04-23T13:44:33Z",
+    "score": 39
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

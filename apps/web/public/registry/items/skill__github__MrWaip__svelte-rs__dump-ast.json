@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/MrWaip/svelte-rs/dump-ast",
+  "type": "skill",
+  "name": "dump-ast",
+  "description": "Dumps the ESTree JSON AST that OXC produces for a JS/TS snippet. Use before constructing a new AST node in builder.rs or a codegen visitor, when unsure how OXC represents a JS construct, or when debugging an AST mismatch.",
+  "author": "MrWaip",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/MrWaip/svelte-rs/blob/HEAD/.claude/skills/dump-ast/SKILL.md",
+    "repo": "MrWaip/svelte-rs",
+    "path": ".claude/skills/dump-ast/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 21,
+    "pushed_at": "2026-08-01T11:41:59Z",
+    "score": 57,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 21
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

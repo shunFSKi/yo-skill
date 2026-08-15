@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/diazMelgarejo/orama-system/orama-afrp",
+  "type": "skill",
+  "name": "orama-afrp",
+  "description": "Audience-First Response Protocol — mandatory pre-router gate. Classifies query type (A/B/C/D), declares scope, and calibrates abstraction level before any oramasys stage begins. Activates before generating any non-trivial output.",
+  "author": "diazMelgarejo",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/diazMelgarejo/orama-system/blob/HEAD/.claude/skills/orama-afrp/SKILL.md",
+    "repo": "diazMelgarejo/orama-system",
+    "path": ".claude/skills/orama-afrp/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-14T12:32:09Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

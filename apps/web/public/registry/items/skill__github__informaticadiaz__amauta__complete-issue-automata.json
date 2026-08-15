@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/informaticadiaz/amauta/complete-issue-automata",
+  "type": "skill",
+  "name": "complete-issue-automata",
+  "description": "Ejecutor autónomo de issues. Lee el issue de GitHub, carga el contexto necesario, implementa con TDD, verifica que los tests pasen, hace commit y cierra el issue. Al terminar escribe next-prompt.md para relanzar project-manager-automata. Trigger: /complete-issue-automata #N [loop_count=X/N]",
+  "author": "informaticadiaz",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/informaticadiaz/amauta/blob/HEAD/.claude/skills/complete-issue-automata/SKILL.md",
+    "repo": "informaticadiaz/amauta",
+    "path": ".claude/skills/complete-issue-automata/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

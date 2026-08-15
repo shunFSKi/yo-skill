@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/shahshrey/unclaw/research",
+  "type": "skill",
+  "name": "research",
+  "description": "Research a topic using web search and scraping. Use when asked to \"look up\", \"research\", \"find out about\" something.",
+  "author": "shahshrey",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/shahshrey/unclaw/blob/HEAD/.claude/skills/research/SKILL.md",
+    "repo": "shahshrey/unclaw",
+    "path": ".claude/skills/research/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

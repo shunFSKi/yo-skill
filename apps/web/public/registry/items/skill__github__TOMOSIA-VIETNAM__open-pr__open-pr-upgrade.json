@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/TOMOSIA-VIETNAM/open-pr/open-pr-upgrade",
+  "type": "skill",
+  "name": "open-pr-upgrade",
+  "description": "Bring every per-repo open-pr config below the current directory up to the schema this build expects. Use after updating the plugin, or when a command reports a config too old. Takes no URL.",
+  "author": "TOMOSIA-VIETNAM",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/TOMOSIA-VIETNAM/open-pr/blob/HEAD/skills/open-pr-upgrade/SKILL.md",
+    "repo": "TOMOSIA-VIETNAM/open-pr",
+    "path": "skills/open-pr-upgrade/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 19,
+    "pushed_at": "2026-08-14T02:37:21Z",
+    "score": 57,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 19
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

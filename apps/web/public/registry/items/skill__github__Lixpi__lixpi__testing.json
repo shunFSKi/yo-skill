@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Lixpi/lixpi/testing",
+  "type": "skill",
+  "name": "testing",
+  "description": "Follow Lixpi testing and verification rules when adding or updating tests, test utilities, mocks, fixtures, or verifying any work. Never run svelte-check or use browser-based verification.",
+  "author": "Lixpi",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Lixpi/lixpi/blob/HEAD/.claude/skills/testing/SKILL.md",
+    "repo": "Lixpi/lixpi",
+    "path": ".claude/skills/testing/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 15,
+    "pushed_at": "2026-08-13T16:05:07Z",
+    "score": 56
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

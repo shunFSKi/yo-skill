@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/cherry-pick-networks/picker/struct",
+  "type": "skill",
+  "name": "struct",
+  "description": "Apply when renaming or moving files, directories, or rules.\nTriggers:\n  File audit    — \"파일명 감사\", \"이름 다시 짓기\", \"misleading filename\",\n                  \"naming audit\", \"파일 이름 불일치\"\n  Migration     — \"migrate rules\", \"rename directory\", \"rule migration\",\n                  \"디렉터리 이전\", \"규칙 이전\"",
+  "author": "cherry-pick-networks",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/cherry-pick-networks/picker/blob/HEAD/.cursor/skills/struct/SKILL.md",
+    "repo": "cherry-pick-networks/picker",
+    "path": ".cursor/skills/struct/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-03-05T23:41:23Z",
+    "score": 35,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/acekyd/command-center-starter/weekly-reflection",
+  "type": "skill",
+  "name": "weekly-reflection",
+  "description": "Run the weekly command-center check-in — review the week against goals and refresh the user's current focus. Use when the user says \"run my weekly reflection\", \"weekly check-in\", or \"let's reflect\".",
+  "author": "acekyd",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/acekyd/command-center-starter/blob/HEAD/.claude/skills/weekly-reflection/SKILL.md",
+    "repo": "acekyd/command-center-starter",
+    "path": ".claude/skills/weekly-reflection/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 5,
+    "pushed_at": "2026-07-24T17:38:02Z",
+    "score": 52,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 5
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

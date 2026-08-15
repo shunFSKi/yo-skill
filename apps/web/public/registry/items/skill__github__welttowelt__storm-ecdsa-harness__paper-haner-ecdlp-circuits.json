@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/welttowelt/storm-ecdsa-harness/paper-haner-ecdlp-circuits",
+  "type": "skill",
+  "name": "paper-haner-ecdlp-circuits",
+  "description": "Storm repo-local skill for comparing ecdsa.fail point-add routes against Haener et al. ECDLP circuit tradeoffs.",
+  "author": "welttowelt",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/welttowelt/storm-ecdsa-harness/blob/HEAD/.agents/skills/paper-haner-ecdlp-circuits/SKILL.md",
+    "repo": "welttowelt/storm-ecdsa-harness",
+    "path": ".agents/skills/paper-haner-ecdlp-circuits/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-07-10T12:37:37Z",
+    "score": 43
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

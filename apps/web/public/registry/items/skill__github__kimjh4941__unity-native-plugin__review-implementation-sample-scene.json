@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/kimjh4941/unity-native-plugin/review-implementation-sample-scene",
+  "type": "skill",
+  "name": "review-implementation-sample-scene",
+  "description": "サンプルシーン実装コードをサンプルシーン計画書・実装結果ファイルと照らし合わせてレビューする。ExampleController / UXML / USS のライフサイクル・コンパイルガード・権限ガード・ナビゲーション統合を中心に検査する。使用例: /review-implementation-sample-scene, /review-implementation-sample-scene pr=123",
+  "author": "kimjh4941",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/kimjh4941/unity-native-plugin/blob/HEAD/.claude/skills/review-implementation-sample-scene/skill.md",
+    "repo": "kimjh4941/unity-native-plugin",
+    "path": ".claude/skills/review-implementation-sample-scene/skill.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

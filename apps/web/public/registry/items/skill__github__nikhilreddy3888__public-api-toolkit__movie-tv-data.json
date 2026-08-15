@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/nikhilreddy3888/public-api-toolkit/movie-tv-data",
+  "type": "skill",
+  "name": "movie_tv_data",
+  "description": "TV and movie data from TVmaze API. Free. No API key. Use when user ask about TV shows, movies, actors, episode guides.",
+  "author": "nikhilreddy3888",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/nikhilreddy3888/public-api-toolkit/blob/HEAD/skills/movie_tv_data/SKILL.md",
+    "repo": "nikhilreddy3888/public-api-toolkit",
+    "path": "skills/movie_tv_data/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-04-19T16:19:12Z",
+    "score": 39
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

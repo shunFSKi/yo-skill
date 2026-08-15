@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/aniruddha1295/ZeroLayer/escrow-create",
+  "type": "skill",
+  "name": "escrow-create",
+  "description": "Create an Alkahest escrow contract for a Filecoin pin. Holds payment until pin is verified. Use when the user asks to upload with escrow, trustless payment, or conditional payment.",
+  "author": "aniruddha1295",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/aniruddha1295/ZeroLayer/blob/HEAD/skills/escrow/SKILL.md",
+    "repo": "aniruddha1295/ZeroLayer",
+    "path": "skills/escrow/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-05-17T18:06:58Z",
+    "score": 43,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

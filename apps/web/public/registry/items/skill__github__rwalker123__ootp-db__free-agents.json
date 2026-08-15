@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/rwalker123/ootp-db/free-agents",
+  "type": "skill",
+  "name": "free-agents",
+  "description": "Search for free agents matching natural language criteria (position, age, stats, personality, injury risk). Invoke when the user asks to find, search, or list free agents. The user's message is the full search criteria in plain English.",
+  "author": "rwalker123",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/rwalker123/ootp-db/blob/HEAD/.agents/skills/free-agents/SKILL.md",
+    "repo": "rwalker123/ootp-db",
+    "path": ".agents/skills/free-agents/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-04-20T02:01:10Z",
+    "score": 35
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

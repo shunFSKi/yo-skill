@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/trsdn/github-copilot-agent-demo/agent-council",
+  "type": "skill",
+  "name": "agent-council",
+  "description": "Coordinate specialized demo roles and synthesize their perspectives into one actionable engineering recommendation.",
+  "author": "trsdn",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/trsdn/github-copilot-agent-demo/blob/HEAD/agent-mode-command-center-demo/.github/skills/agent-council/SKILL.md",
+    "repo": "trsdn/github-copilot-agent-demo",
+    "path": "agent-mode-command-center-demo/.github/skills/agent-council/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

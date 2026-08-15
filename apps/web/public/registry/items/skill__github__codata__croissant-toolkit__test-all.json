@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/codata/croissant-toolkit/test-all",
+  "type": "skill",
+  "name": "test-all",
+  "description": "Discovers and executes all test scripts across all skills in the project to verify system integrity. Use this to run a comprehensive test suite.",
+  "author": "codata",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/codata/croissant-toolkit/blob/HEAD/.gemini/skills/test-all/SKILL.md",
+    "repo": "codata/croissant-toolkit",
+    "path": ".gemini/skills/test-all/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 8,
+    "pushed_at": "2026-04-26T22:28:46Z",
+    "score": 44,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 8
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

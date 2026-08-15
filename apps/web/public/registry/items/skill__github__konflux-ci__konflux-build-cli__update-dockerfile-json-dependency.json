@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/konflux-ci/konflux-build-cli/update-dockerfile-json-dependency",
+  "type": "skill",
+  "name": "Update dockerfile-json dependency",
+  "description": "Use this skill to update or change versuions of dockerfile-json dependency in go.mod",
+  "author": "konflux-ci",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/konflux-ci/konflux-build-cli/blob/HEAD/skills/update-dockerfile-json/SKILL.md",
+    "repo": "konflux-ci/konflux-build-cli",
+    "path": "skills/update-dockerfile-json/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

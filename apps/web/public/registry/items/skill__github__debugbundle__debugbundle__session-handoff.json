@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/debugbundle/debugbundle/session-handoff",
+  "type": "skill",
+  "name": "session-handoff",
+  "description": "Ensure clean session continuity when context is getting long or session is ending",
+  "author": "debugbundle",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/debugbundle/debugbundle/blob/HEAD/.agents/skills/session-handoff/SKILL.md",
+    "repo": "debugbundle/debugbundle",
+    "path": ".agents/skills/session-handoff/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 6,
+    "pushed_at": "2026-08-11T22:05:48Z",
+    "score": 50,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 6
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

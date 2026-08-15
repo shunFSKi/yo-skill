@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/d-issy/dotfiles/pi-agent-user-settings",
+  "type": "skill",
+  "name": "pi-agent-user-settings",
+  "description": "Use only when the user explicitly mentions Pi project user settings, .pi/settings.user.json, or asks to change project tools, tool sets, or project-local focuses.",
+  "author": "d-issy",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/d-issy/dotfiles/blob/HEAD/files/agent-skills/pi-agent-user-settings/SKILL.md",
+    "repo": "d-issy/dotfiles",
+    "path": "files/agent-skills/pi-agent-user-settings/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 5,
+    "pushed_at": "2026-08-13T12:38:24Z",
+    "score": 52,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 5
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

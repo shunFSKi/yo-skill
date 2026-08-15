@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/prateek/dotfiles/chezmoi-management",
+  "type": "skill",
+  "name": "chezmoi-management",
+  "description": "Single entry point for chezmoi work in Prateek's dotfiles repo. (snapshot for eval4)",
+  "author": "prateek",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/prateek/dotfiles/blob/HEAD/.agents/skills/chezmoi-management/evals/files/eval4_meta_maintenance/chezmoi-management/SKILL.md.fixture",
+    "repo": "prateek/dotfiles",
+    "path": ".agents/skills/chezmoi-management/evals/files/eval4_meta_maintenance/chezmoi-management/SKILL.md.fixture"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

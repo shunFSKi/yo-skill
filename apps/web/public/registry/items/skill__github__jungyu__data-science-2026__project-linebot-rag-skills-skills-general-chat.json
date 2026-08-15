@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/jungyu/data-science-2026/project-linebot-rag-skills-skills-general-chat",
+  "type": "skill",
+  "name": "一般對話",
+  "description": "用於一般閒聊、簡單常識問題與沒有明顯專業路由需求的訊息。",
+  "author": "jungyu",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/jungyu/data-science-2026/blob/HEAD/project-linebot-rag-skills/skills/general-chat/SKILL.md",
+    "repo": "jungyu/data-science-2026",
+    "path": "project-linebot-rag-skills/skills/general-chat/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 19
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Somi-Project/Somi/automation-operator-helper",
+  "type": "skill",
+  "name": "Automation Operator Helper",
+  "description": "Help Somi turn repeated work into safe automations with clear operator visibility.",
+  "author": "Somi-Project",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Somi-Project/Somi/blob/HEAD/workshop/skills/marketplace_packages/automation_operator_helper/SKILL.md",
+    "repo": "Somi-Project/Somi",
+    "path": "workshop/skills/marketplace_packages/automation_operator_helper/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 23,
+    "pushed_at": "2026-03-20T00:56:16Z",
+    "score": 44
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

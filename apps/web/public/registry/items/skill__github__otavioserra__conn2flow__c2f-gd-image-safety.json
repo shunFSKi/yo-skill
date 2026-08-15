@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/otavioserra/conn2flow/c2f-gd-image-safety",
+  "type": "skill",
+  "name": "c2f-gd-image-safety",
+  "description": "Use ao ler, converter, redimensionar ou gerar miniaturas com GD, SimpleImage, WebP, AVIF ou outros formatos opcionais.",
+  "author": "otavioserra",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/otavioserra/conn2flow/blob/HEAD/.cursor/skills/c2f-gd-image-safety/SKILL.md",
+    "repo": "otavioserra/conn2flow",
+    "path": ".cursor/skills/c2f-gd-image-safety/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

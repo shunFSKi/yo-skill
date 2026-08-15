@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/Tran-Thanh-Dat/ModularMonolith/clone-setup-run",
+  "type": "skill",
+  "name": "clone-setup-run",
+  "description": "Guides first-time setup and run of the Modular Monolith Web API after cloning—PostgreSQL connection, migrations, seed admin login, Visual Studio F5, and common startup failures. Use when the user clones the repo, asks how to start/run the project, configure database, run migrations, or hits Identity migration/seed or Hangfire JobStorage errors on startup.",
+  "author": "Tran-Thanh-Dat",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Tran-Thanh-Dat/ModularMonolith/blob/HEAD/ai/skills/clone-setup-run/SKILL.md",
+    "repo": "Tran-Thanh-Dat/ModularMonolith",
+    "path": "ai/skills/clone-setup-run/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-06-25T08:40:45Z",
+    "score": 43,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

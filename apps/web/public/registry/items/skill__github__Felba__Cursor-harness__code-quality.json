@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Felba/Cursor-harness/code-quality",
+  "type": "skill",
+  "name": "code-quality",
+  "description": "General code-quality principles for this repository. Use when writing or reviewing any code in any language — covers what to NOT add (no premature abstraction, no error handling for impossible cases, no comments unless WHY is non-obvious), naming, function size, dependency discipline, and reversibility checks before risky actions.",
+  "author": "Felba",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Felba/Cursor-harness/blob/HEAD/.claude/skills/code-quality/SKILL.md",
+    "repo": "Felba/Cursor-harness",
+    "path": ".claude/skills/code-quality/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-05-21T19:04:16Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

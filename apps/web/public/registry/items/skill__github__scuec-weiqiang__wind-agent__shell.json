@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/scuec-weiqiang/wind-agent/shell",
+  "type": "skill",
+  "name": "shell",
+  "description": "执行本地终端命令，用于文件创建、编译、目录查看等本地操作。",
+  "author": "scuec-weiqiang",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/scuec-weiqiang/wind-agent/blob/HEAD/skills/shell/SKILL.md",
+    "repo": "scuec-weiqiang/wind-agent",
+    "path": "skills/shell/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 19
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

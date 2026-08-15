@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/MaxMa04/qgen/qgen-agent-skill",
+  "type": "skill",
+  "name": "qgen-agent-skill",
+  "description": "Use the local QGen repo in `/home/max-mannstein/coding/qgen` to render DAZE offers and related documents as PDF, DOCX, or HTML, or to create and patch filesystem-based templates via prompt-driven authoring. Trigger when an agent should generate an offer, render a quote document, test an export, inspect available templates, or create/update a QGen template from a prompt.",
+  "author": "MaxMa04",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/MaxMa04/qgen/blob/HEAD/hunter-skill/HUNTER-QGEN-SKILL.md",
+    "repo": "MaxMa04/qgen",
+    "path": "hunter-skill/HUNTER-QGEN-SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-04-23T12:13:27Z",
+    "score": 35,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

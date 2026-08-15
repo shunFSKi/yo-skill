@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/pavsidhu/pull-list/fastmod",
+  "type": "skill",
+  "name": "fastmod",
+  "description": "Use fastmod to make mass code updates to avoid many repetitive changes.",
+  "author": "pavsidhu",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/pavsidhu/pull-list/blob/HEAD/.cursor/skills/fastmod/SKILL.md",
+    "repo": "pavsidhu/pull-list",
+    "path": ".cursor/skills/fastmod/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

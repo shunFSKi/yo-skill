@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/kodhama/wisp/dashboard",
+  "type": "skill",
+  "name": "dashboard",
+  "description": "Open or show the Wisp dashboard for the current project. Use when the user asks to open, show, start, or get a link to the Wisp dashboard.",
+  "author": "kodhama",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/kodhama/wisp/blob/HEAD/plugins/wisp/skills/dashboard/SKILL.md",
+    "repo": "kodhama/wisp",
+    "path": "plugins/wisp/skills/dashboard/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/hjklasdfg/layla/analyse-image",
+  "type": "skill",
+  "name": "analyse-image",
+  "description": "Analyse a road or pavement photo with a vision-language model. Returns hazard type, severity, description, accessibility impact, and confidence. Use as skill 1 in the hazard report pipeline.",
+  "author": "hjklasdfg",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/hjklasdfg/layla/blob/HEAD/backend/layla-nemoclaw/skills/analyse-image/SKILL.md",
+    "repo": "hjklasdfg/layla",
+    "path": "backend/layla-nemoclaw/skills/analyse-image/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-06-10T14:41:24Z",
+    "score": 44,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 2
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

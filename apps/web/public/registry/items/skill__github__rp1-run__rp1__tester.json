@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/rp1-run/rp1/tester",
+  "type": "skill",
+  "name": "tester",
+  "description": "Test command template for verifying argument passing and skill invocation.",
+  "author": "rp1-run",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/rp1-run/rp1/blob/HEAD/plugins/utils/skills/tester/SKILL.md",
+    "repo": "rp1-run/rp1",
+    "path": "plugins/utils/skills/tester/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

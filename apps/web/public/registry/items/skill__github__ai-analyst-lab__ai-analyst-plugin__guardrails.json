@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/ai-analyst-lab/ai-analyst-plugin/guardrails",
+  "type": "skill",
+  "name": "guardrails",
+  "description": "EMBEDDED — Pairs success metrics with guardrail metrics to check for trade-offs. This functionality is built into the ask-question and run-analysis skill. Do NOT invoke guardrails separately — use ask-question and run-analysis instead, which includes these instructions inline.",
+  "author": "ai-analyst-lab",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ai-analyst-lab/ai-analyst-plugin/blob/HEAD/skills/guardrails/SKILL.md",
+    "repo": "ai-analyst-lab/ai-analyst-plugin",
+    "path": "skills/guardrails/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 21,
+    "pushed_at": "2026-03-18T06:26:05Z",
+    "score": 47
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

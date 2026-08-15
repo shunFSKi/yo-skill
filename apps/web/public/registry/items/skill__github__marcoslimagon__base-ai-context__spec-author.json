@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/marcoslimagon/base-ai-context/spec-author",
+  "type": "skill",
+  "name": "spec-author",
+  "description": "Use when creating or editing artifacts under 1-/2-/3-/4- folders. Enforces frontmatter completeness, template structure, and cross-link validity. Invoke proactively when the user asks to draft a PRD, ADR, strategy doc, change proposal, tracker, or retro.",
+  "author": "marcoslimagon",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/marcoslimagon/base-ai-context/blob/HEAD/.claude/skills/spec-author/SKILL.md",
+    "repo": "marcoslimagon/base-ai-context",
+    "path": ".claude/skills/spec-author/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-06T02:36:36Z",
+    "score": 45,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

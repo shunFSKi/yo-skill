@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/sushichan044/dotfiles/gh-timeline",
+  "type": "skill",
+  "name": "gh-timeline",
+  "description": "Use this to view the timeline of GitHub issues or pull requests. Note that it does not fetch the title and description, unlike `gh pr view`.",
+  "author": "sushichan044",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/sushichan044/dotfiles/blob/HEAD/.agents/skills/gh-timeline/SKILL.md",
+    "repo": "sushichan044/dotfiles",
+    "path": ".agents/skills/gh-timeline/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/miaodi/llm_config/coding",
+  "type": "skill",
+  "name": "coding",
+  "description": "Use when implementing, debugging, refactoring, or reviewing code. Covers code changes, defect investigation, and verification.",
+  "author": "miaodi",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/miaodi/llm_config/blob/HEAD/skills/coding/SKILL.md",
+    "repo": "miaodi/llm_config",
+    "path": "skills/coding/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

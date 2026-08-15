@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/CaseyLabs/kcUtils/qa-linting",
+  "type": "skill",
+  "name": "qa-linting",
+  "description": "Run the local validation checks for scripts, JSON, Gemini skills, and generated markdown.",
+  "author": "CaseyLabs",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/CaseyLabs/kcUtils/blob/HEAD/utils/kcNotebookAI/.agents/skills/qa-linting/SKILL.md",
+    "repo": "CaseyLabs/kcUtils",
+    "path": "utils/kcNotebookAI/.agents/skills/qa-linting/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 4,
+    "pushed_at": "2026-07-01T04:22:43Z",
+    "score": 43,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 4
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

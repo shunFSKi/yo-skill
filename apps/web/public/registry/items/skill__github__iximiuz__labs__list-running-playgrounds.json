@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/iximiuz/labs/list-running-playgrounds",
+  "type": "skill",
+  "name": "list-running-playgrounds",
+  "description": "Lists recent playground sessions. Use to find running playground IDs or check playground status.",
+  "author": "iximiuz",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/iximiuz/labs/blob/HEAD/content-samples/claude/skills/list-running-playgrounds/SKILL.md",
+    "repo": "iximiuz/labs",
+    "path": "content-samples/claude/skills/list-running-playgrounds/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 57,
+    "pushed_at": "2026-08-09T09:13:00Z",
+    "score": 68,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 57
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# iximiuz Labs\n\nThis is a multi-purpose repository behind the [iximiuz Labs](https://labs.iximiuz.com/) interactive learning platform.\nThe repository contains a collection of open-source materials related to the platform and also serves as a bug- and feature request tracker (via [issues](/../../issues)).\n\nThe repository currently includes:\n\n- [Content samples](content-samples/) - self-documenting samples of Tutorials, Challenges, and Skill Paths (for people interested in publishing their own content on the platform)\n- [Documentation](docs/) - documentation for the platform (what is iximiuz Labs, how to get started, how to learn on the platform, how to use existing and create your own playgrounds, etc.)\n- [Playgrounds](playgrounds/) - collection of rootfs images for the playground virtual machines (for people interested in creating their own playgrounds)\n\n## See also\n\n- [labctl](https://github.com/iximiuz/labctl) - iximiuz Labs CLI (start remote microVM playgrounds from the command line).\n",
+  "status": "curated"
+}

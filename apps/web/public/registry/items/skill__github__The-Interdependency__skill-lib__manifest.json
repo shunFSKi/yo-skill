@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/The-Interdependency/skill-lib/manifest",
+  "type": "skill",
+  "name": "manifest",
+  "description": "Living-spec generator. Derives observable repo facts (name/version, Python floor, runtime deps, license, top-level layout) from pyproject.toml + the file tree and splices them into a machine-owned marked block in CLAUDE.md, with a CI --check drift gate. Use to keep the factual half of a doc generated rather than hand-typed.",
+  "author": "The-Interdependency",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/The-Interdependency/skill-lib/blob/HEAD/skills/manifest/SKILL.md",
+    "repo": "The-Interdependency/skill-lib",
+    "path": "skills/manifest/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-14T04:23:25Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/1024XEngineer/bytemind/bug-investigation",
+  "type": "skill",
+  "name": "bug-investigation",
+  "description": "Diagnose issues with reproducible evidence before proposing a fix.",
+  "author": "1024XEngineer",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/1024XEngineer/bytemind/blob/HEAD/internal/skills/bug-investigation/SKILL.md",
+    "repo": "1024XEngineer/bytemind",
+    "path": "internal/skills/bug-investigation/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 43,
+    "pushed_at": "2026-07-29T04:33:51Z",
+    "score": 57
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

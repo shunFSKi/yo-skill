@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/afollestad/board-web-sdk-template/screenshot",
+  "type": "skill",
+  "name": "screenshot",
+  "description": "Capture a screenshot of the current screen on the paired Board device. Use when the user asks to screenshot, grab a screen capture, or see what's on the device.\nIt may also aid in debugging when needed.",
+  "author": "afollestad",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/afollestad/board-web-sdk-template/blob/HEAD/.agents/skills/screenshot/SKILL.md",
+    "repo": "afollestad/board-web-sdk-template",
+    "path": ".agents/skills/screenshot/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-06-03T23:43:13Z",
+    "score": 44,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 2
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

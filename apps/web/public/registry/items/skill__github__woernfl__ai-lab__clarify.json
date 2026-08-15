@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/woernfl/ai-lab/clarify",
+  "type": "skill",
+  "name": "clarify",
+  "description": "Interview the user relentlessly about a plan or design until reaching shared understanding, resolving each branch of the decision tree. Use when user wants to stress-test a plan, get clarifications on their design.",
+  "author": "woernfl",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/woernfl/ai-lab/blob/HEAD/skills/clarify/SKILL.md",
+    "repo": "woernfl/ai-lab",
+    "path": "skills/clarify/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

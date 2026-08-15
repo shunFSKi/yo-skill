@@ -1,0 +1,54 @@
+{
+  "id": "mcp:official/io.github.kerne-protocol/honesty-index",
+  "type": "mcp",
+  "name": "Kerne Honesty Index",
+  "description": "Advertised versus realized yield for stablecoin vaults, signed hourly, reproducible from chain.",
+  "author": "io.github.kerne-protocol",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/kerne-protocol/honesty-index-mcp",
+    "repo": "kerne-protocol/honesty-index-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://kerne.fi/api/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-15T03:40:06.261243Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# honesty-index-mcp\n\n**Advertised versus realized yield for stablecoin vaults, as a Model Context\nProtocol server. Remote, no key, no account, nothing to install.**\n\n```\nhttps://kerne.fi/api/mcp\n```\n\nStreamable HTTP. Stateless. Free, and it stays free: the numbers behind it are\nalready served without a key at\n[kerne.fi/api/honesty-index](https://kerne.fi/api/honesty-index), and putting\nthem behind one would defeat the argument the board is making.\n\n## Add it\n\nClaude Code:\n\n```\nclaude mcp add --transport http kerne-honesty-index https://kerne.fi/api/mcp\n```\n\nAnything that reads a config file:\n\n```json\n{\n  \"mcpServers\": {\n    \"kerne-honesty-index\": {\n      \"type\": \"http\",\n      \"url\": \"https://kerne.fi/api/mcp\"\n    }\n  }\n}\n```\n\nRegistry name: `io.github.kerne-protocol/honesty-index`\n\n## What it answers\n\nThe [Kerne Honesty Index](https://kerne.fi/honesty-index) is an hourly, signed\nboard comparing what synthetic and yield-bearing dollars **advertise** against\nwhat their holders actually **realized**, computed from ERC-4626 share price\ngrowth on chain over a thirty day window. Kerne Protocol publishes it, is\nmeasured on it, and lists its own row first by rule.\n\n| Tool | What it returns |\n| --- | --- |\n| `list_rows` | The roster: key, protocol, symbol, chain, contract address. Cheap. Call it first. |\n| `get_board` | Every row with its advertised figure, its realized figure, the stated gap, the delivery ratio, plus the board summary and the snapshot's provenance. |\n| `get_row` | One row with everything behind it: the verbatim advertised quote and the first-party page it was read from, the capture date, both block heights, both share prices, the arithmetic, and the exact `eth_call` payloads to reproduce it. |\n| `get_methodology` | The measurement, the comparability rules that decide when a gap may be stated at all, the ten day capture expiry, and what the board deliberately does not cover. |\n| `get_corrections` | The append-only log of every time the board changed something it had stated about a named company, with both values and the rule that stops a repeat. |\n| `get_right_of_reply` | The free, permanent, unedited reply slot every measured protocol has on its own row, its terms, and every reply received. |\n\nOne resource, `kerne://honesty-index/snapshot`, is the raw signed snapshot\nincluding the canonical payload, its sha256 attestation hash and the EIP-191\nsignature over it.\n\n## Three things a model should know before quoting a row\n\nThese are in the server's `instructions` too, because getting them wrong\nproduces a confident false statement about a named company.\n\n1. **A null gap is not zero.** It means the two figures cover different periods,\n   or the advertised capture is older than the freshness limit, or the protocol\n   publishes no first-party figure at all. Absence is never a finding of\n   non-payment.\n2. **Rank on the delivery ratio, not the point gap.** A percentage point gap is\n   not comparable across products at different rates, and this board spans\n   several.\n3. **A protocol in an announced wind down paying nothing is behaving\n   correctly.** Read the `status` field beside the figure.\n\nThe board scores one axis. It is not an audit, not a rating, not a solvency\nopinion, and it says nothing about the hedge or the reserves of any protocol on\nit, including Kerne's.\n\n## Do not take the server's word for it\n\nEvery figure it serves is re-derivable from public chain data by a program that\nshares no code with the one that produced it:\n\n```\nnpx -y github:kerne-protocol/realized-apy check\n```\n\nThat is a second implementation with its own decoder, its own arithmetic, and\nkeccak256 and secp256k1 written from scratch rather than taken from a library.\nIt re-reads every row at the block heights the signed snapshot names and prints\nPASS or FAIL. Method, tolerances and what happens if you get a different answer:\n[kerne.fi/honesty-index/reproduce](https://kerne.fi/honesty-index/reproduce).\n\n## Do not take this README's word for it either\n\nThis file describes a live server, and a live server can quietly stop matching\nits documentation. So check it:\n\n```\nnode probe.mjs\n```\n\nIt runs the real handshake against the real endpoint, lists what is actually\noffered, makes one real call, and **exits non-zero if the live tool list and the\ntable above have drifted apart in either direction**. No dependencies, Node 20 or\nlater. It runs in CI here on a schedule for the same reason.\n\n## Right of reply\n\nEvery protocol this board publishes a number about has a free, permanent,\nunedited reply slot on its own row. Published verbatim, never edited, never\nremoved, published whether or not it agrees with us, and we never answer inside\none. Nothing is charged for it and no commercial conversation is a condition of\nit. Terms and form:\n[kerne.fi/honesty-index/reproduce#right-of-reply](https://kerne.fi/honesty-index/reproduce#right-of-reply).\n\n## What is in this repository\n\n`server.json` is the registry descriptor. `probe.mjs` is the check above. The\nserver itself is a route on kerne.fi rather than a package here, because it is a\nremote server: there is nothing for you to run, and a copy of the handler in this\nrepository would be a second thing to keep in step with the first.\n\nMIT licensed.\n",
+  "status": "curated"
+}

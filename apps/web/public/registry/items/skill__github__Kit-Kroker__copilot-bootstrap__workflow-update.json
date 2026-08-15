@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/Kit-Kroker/copilot-bootstrap/workflow-update",
+  "type": "skill",
+  "name": "workflow-update",
+  "description": "Update the bootstrap workflow state after completing a step. Writes the new step name and status to workflow.json and project.json. Use this after every step transition.",
+  "author": "Kit-Kroker",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Kit-Kroker/copilot-bootstrap/blob/HEAD/.github/skills/workflow-update/SKILL.md",
+    "repo": "Kit-Kroker/copilot-bootstrap",
+    "path": ".github/skills/workflow-update/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-04-20T07:23:57Z",
+    "score": 35,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

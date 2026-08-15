@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/liangyueshier/ai_dance/grill-me",
+  "type": "skill",
+  "name": "grill-me",
+  "description": "对用户提出的计划或设计方案进行层层追问，遍历决策树的每个分支直到达成共识。当用户想要压力测试方案、接受设计质问时使用，或提到 \"grill me\" 时触发。",
+  "author": "liangyueshier",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/liangyueshier/ai_dance/blob/HEAD/skills/grill-me/SKILL.md",
+    "repo": "liangyueshier/ai_dance",
+    "path": "skills/grill-me/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

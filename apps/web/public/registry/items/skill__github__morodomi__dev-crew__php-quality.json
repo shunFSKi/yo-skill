@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/morodomi/dev-crew/php-quality",
+  "type": "skill",
+  "name": "php-quality",
+  "description": "PHP品質チェック。PHPStan/Pint/PHPUnit実行時に使用。「PHPの品質チェック」「PHPの静的解析」で起動。Do NOT use for 他言語の静的解析（→ python-quality / js-quality / ts-quality）。",
+  "author": "morodomi",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/morodomi/dev-crew/blob/HEAD/skills/php-quality/SKILL.md",
+    "repo": "morodomi/dev-crew",
+    "path": "skills/php-quality/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-07-27T01:59:13Z",
+    "score": 48
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

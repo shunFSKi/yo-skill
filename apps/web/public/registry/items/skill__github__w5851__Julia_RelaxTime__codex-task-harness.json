@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/w5851/Julia_RelaxTime/codex-task-harness",
+  "type": "skill",
+  "name": "codex-task-harness",
+  "description": "将宽泛、跨模块的 Julia_RelaxTime 需求收束为可执行 harness：目标、边界、契约、风险、验证、交付物与最小 skill 路由。仅用于容易扩 scope 的混合任务；边界清楚的窄任务应直接执行。",
+  "author": "w5851",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/w5851/Julia_RelaxTime/blob/HEAD/.claude/skills/codex-task-harness/SKILL.md",
+    "repo": "w5851/Julia_RelaxTime",
+    "path": ".claude/skills/codex-task-harness/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

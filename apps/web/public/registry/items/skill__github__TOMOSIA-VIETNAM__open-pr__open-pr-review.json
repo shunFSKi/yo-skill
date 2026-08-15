@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/TOMOSIA-VIETNAM/open-pr/open-pr-review",
+  "type": "skill",
+  "name": "open-pr-review",
+  "description": "Review a GitHub Pull Request or GitLab Merge Request against the conventions that repo has taught this plugin, and post exactly one review. Use when handed a PR or MR URL; never edits code.",
+  "author": "TOMOSIA-VIETNAM",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/TOMOSIA-VIETNAM/open-pr/blob/HEAD/skills/open-pr-review/SKILL.md",
+    "repo": "TOMOSIA-VIETNAM/open-pr",
+    "path": "skills/open-pr-review/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 19,
+    "pushed_at": "2026-08-14T02:37:21Z",
+    "score": 57,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 19
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

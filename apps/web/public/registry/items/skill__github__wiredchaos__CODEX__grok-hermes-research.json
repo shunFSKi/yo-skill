@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/wiredchaos/CODEX/grok-hermes-research",
+  "type": "skill",
+  "name": "grok-hermes-research",
+  "description": "Run a SuperGrok-style X research loop in Hermes using Grok native X Search and route outputs into AGENTROPOLIS build, content, consulting, newsletter and verification workflows.",
+  "author": "wiredchaos",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/wiredchaos/CODEX/blob/HEAD/agentropolis-codex-agent/SKILL.md",
+    "repo": "wiredchaos/CODEX",
+    "path": "agentropolis-codex-agent/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

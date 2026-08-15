@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/cuzfrog/lissom-skills/lissom-review",
+  "type": "skill",
+  "name": "lissom-review",
+  "description": "Dispatches to lissom-reviewer agent to review the implementation given an explicit task_dir, which contains the related documents.",
+  "author": "cuzfrog",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/cuzfrog/lissom-skills/blob/HEAD/src/skills/lissom-review/SKILL.md",
+    "repo": "cuzfrog/lissom-skills",
+    "path": "src/skills/lissom-review/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 53,
+    "pushed_at": "2026-06-25T22:58:07Z",
+    "score": 66,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 53
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": "# Lissom Skills\n\n[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)\n[![GitHub stars](https://img.shields.io/github/stars/cuzfrog/lissom-skills)](https://github.com/cuzfrog/lissom-skills/stargazers)\n[![GitHub last commit](https://img.shields.io/github/last-commit/cuzfrog/lissom-skills/main)](https://github.com/cuzfrog/lissom-skills/commits/main)\n[![GitHub repo size](https://img.shields.io/github/repo-size/cuzfrog/lissom-skills)](https://github.com/cuzfrog/lissom-skills)\n[![CI](https://github.com/cuzfrog/lissom-skills/actions/workflows/ci.yml/badge.svg)](https://github.com/cuzfrog/lissom-skills/actions/workflows/ci.yml)\n\n**English** · [简体中文](README.zh.md) · [日本語](README.ja.md)\n\n```\n┌─┐\n│L│░ LISSOM  —  Simple, reliable Claude Code skills & agents\n└─┘  SKILLS     for daily dev automation and context protection.\n```\n\n---\n\n#### Why? What's the difference from [GSD](https://github.com/gsd-build/get-shit-done), [SuperPower](https://github.com/obra/superpowers)?\n- **Zero Dependency** — just plain files.\n- **Thin Skill Dispatchers** — relentless context protection.\n- **Idempotency** — hussle-free resume with minimal state.\n- **Hammered Specs** — no surprise dev experience.\n\n<table>\n  <tr>\n    <th>/gsd-autonomous</th>\n    <th>/lissom-auto</th>\n  </tr>\n  <tr>\n    <td><img src=\"./doc/qwen_context_gsd.png\" alt=\"GSD context\" /></td>\n    <td><img src=\"./doc/qwen_context_ls.png\" alt=\"LISSOM context\" /></td>\n  </tr>\n</table>\n(Context after a 10m task on a small local model with Qwen Code)\n\n\n#### When to use?\n- I have a scoped idea, help me refine the specs and automate the implementation.\n\n#### When not to use?\n- Trivial or small tasks.\n- Exploratory tasks — use `/explore`.\n\n### Basic Workflow\n```\n           ┌─ interview ─┐\n           │             /\n research ─┘ auto ──►   +   ──► plan ──► impl ──► review ──► done\n  Specs.md    Research.md /    Plan.md         Review.md     │\n   ▲                     /                                   │ critical?\n   │                     └──────────── fix cycle (max 3)  ◄──┘\n   │                                          │\n   └──────────────── fix cycles exhausted ────┘\n```\n\n---\n\n## Installation\n\nInstall into your project's directory with:\n\n```bash\ncurl -fsSL https://raw.githubusercontent.com/cuzfrog/lissom-skills/main/scripts/install.sh | bash\n```\n\nSupported:\n- `.claude/` [Claude Code](https://code.claude.com) and compatible agents.\n- `.opencode/` [OpenCode](https://opencode.ai).\n- `.qwen/` [Qwen Code](https://qwen.ai/qwencode).\n- `.gemini/` [Gemini CLI](https://geminicli.com).\n\n### Uninstallation\n\nRemove all installed files from the current project:\n\n```bash\ncurl -fsSL https://raw.githubusercontent.com/cuzfrog/lissom-skills/main/scripts/uninstall.sh | bash\n```\n\nOnly files originally installed by this bundle are removed — any custom files you added are left untouched. Empty directories are cleaned up automatically.\n\n---\n\n## Here We Go!\n\n**Run** `/lissom-auto <task_id>` — get interviewed and wait for the job done!\n\n1. It looks for the task in `.lissom/tasks/<task_id>/Specs.md`\n2. If not found, it tries to locate with tools (e.g. JIRA MCP)\n\n### Best practices\n- Don't outsource your thinking. Review architecture and code structure. You should understand your code.\n- Use a simple [grill-me](doc/grill-me.md) skill to build the `Specs.md`. ([mattpocock/skills](https://github.com/mattpocock/skills))\n- Steer the behavior: `/lissom-auto <task_id> Directly go to plan phase, I have a well-written spec already.`\n- Define test methods (development cycle) clearly (e.g. in `CLAUDE.md`)\n\n---\n\n## Configuration\n\nSet preferences in `.lissom/settings.local.json` to avoid being asked each run:\n\n```json\n{\n  \"user_attention\": \"default\",\n  \"fix_threshold\": \"warning\",\n  \"spec_review_required\": false,\n  \"impl_delegation\": \"single\"\n}\n```\n\n| Key | Options |\n|---|---|\n| `user_attention` | `default` — Interview for major concerns; `auto` — Best effort auto pilot; `focused` — Exhaustive questioning |\n| `fix_threshold` | `warning` — Fix critical & warnings; `critical` — Critical only; `suggestion` — All issues |\n| `spec_review_required` | `false` — Skip spec review; `true` — Review and refine specs before research |\n| `research_required` | `true` — Perform research before implementation; `false` — Skip research if the specs are already sufficient |\n| `impl_delegation` | `single` — Perform impl in one subagent (faster in most cases); `multiple` — Perform impl in multiple subagents (if impl scope is large; usually not necessary) |\n---\n\n## Links\n\n- [GitHub](https://github.com/cuzfrog/lissom-skills) — source code and releases\n- [Issues](https://github.com/cuzfrog/lissom-skills/issues) — bug reports and feature requests\n- [License](LICENSE) — MIT\n\n---\n\n## Author\n\nCause Chung <cuzfrog@gmail.com>\n",
+  "status": "curated"
+}

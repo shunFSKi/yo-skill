@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/gauravmm/ai-tutorial-triage/triage-bot",
+  "type": "skill",
+  "name": "triage-bot",
+  "description": "Send and receive messages from the triage simulator",
+  "author": "gauravmm",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/gauravmm/ai-tutorial-triage/blob/HEAD/.agents/skills/triage-bot/SKILL.md",
+    "repo": "gauravmm/ai-tutorial-triage",
+    "path": ".agents/skills/triage-bot/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 14,
+    "pushed_at": "2026-04-05T14:14:25Z",
+    "score": 43,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 14
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

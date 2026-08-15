@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/lwmxiaobei/xbcode/pdf",
+  "type": "skill",
+  "name": "pdf",
+  "description": "Process and extract content from PDF files",
+  "author": "lwmxiaobei",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/lwmxiaobei/xbcode/blob/HEAD/skills/pdf/SKILL.md",
+    "repo": "lwmxiaobei/xbcode",
+    "path": "skills/pdf/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/weichenglin0215/TextSpeedReader/textspeedreader",
+  "type": "skill",
+  "name": "TextSpeedReader專案規範總覽",
+  "description": "開始任何 TextSpeedReader 開發任務前必須先讀此文件，再依任務類型讀取對應規範",
+  "author": "weichenglin0215",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/weichenglin0215/TextSpeedReader/blob/HEAD/.agent/skills/SKILL.md",
+    "repo": "weichenglin0215/TextSpeedReader",
+    "path": ".agent/skills/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

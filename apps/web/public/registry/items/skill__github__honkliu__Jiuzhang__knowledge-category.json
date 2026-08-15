@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/honkliu/Jiuzhang/knowledge-category",
+  "type": "skill",
+  "name": "knowledge-category",
+  "description": "Use when: categorizing documents from Shang Raw into durable knowledge category pages with summaries, hashes, and source grounding.",
+  "author": "honkliu",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/honkliu/Jiuzhang/blob/HEAD/Shang/Agents/skills/knowledge-category/SKILL.md",
+    "repo": "honkliu/Jiuzhang",
+    "path": "Shang/Agents/skills/knowledge-category/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

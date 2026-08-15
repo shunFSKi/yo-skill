@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/nicobit/spec-poc/devops-ci-cd-update",
+  "type": "skill",
+  "name": "devops-ci-cd-update",
+  "description": "Update CI/CD, deployment, release, and environment guidance while preserving rollout, rollback, observability, and GitHub and GitLab parity.",
+  "author": "nicobit",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/nicobit/spec-poc/blob/HEAD/.codex/skills/devops-ci-cd-update/SKILL.md",
+    "repo": "nicobit/spec-poc",
+    "path": ".codex/skills/devops-ci-cd-update/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-01T06:59:32Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

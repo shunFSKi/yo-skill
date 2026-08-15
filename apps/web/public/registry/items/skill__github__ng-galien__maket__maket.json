@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/ng-galien/maket/maket",
+  "type": "skill",
+  "name": "maket",
+  "description": "Orientation skill for Maket visual document work. Use when Codex is asked to design, edit, review, or learn Maket; call maket_learn first for live product guidance, then operate through MCP tools.",
+  "author": "ng-galien",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ng-galien/maket/blob/HEAD/plugin/codex/skills/maket/SKILL.md",
+    "repo": "ng-galien/maket",
+    "path": "plugin/codex/skills/maket/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

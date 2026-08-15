@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/akii09/yukti/review",
+  "type": "skill",
+  "name": "review",
+  "description": "Review a recently-applied diff for bugs, regressions, missing tests, and quality issues. Reads the diff first, files only as needed. Runs on Opus. Returns a prioritized P0/P1/P2/P3 issue list and a SHIP/FIX-FIRST/NEEDS-REWORK verdict.",
+  "author": "akii09",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/akii09/yukti/blob/HEAD/skills/review/SKILL.md",
+    "repo": "akii09/yukti",
+    "path": "skills/review/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-05-06T19:57:33Z",
+    "score": 35,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

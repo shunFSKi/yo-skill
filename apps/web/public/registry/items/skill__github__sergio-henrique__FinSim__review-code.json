@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/sergio-henrique/FinSim/review-code",
+  "type": "skill",
+  "name": "review-code",
+  "description": "Revisar alterações de código do FinSim e reportar bugs, riscos, problemas arquiteturais, testes ausentes e documentação faltante por prioridade. Use quando o usuário pedir code review sem implementação automática.",
+  "author": "sergio-henrique",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/sergio-henrique/FinSim/blob/HEAD/.codex/skills/review-code/SKILL.md",
+    "repo": "sergio-henrique/FinSim",
+    "path": ".codex/skills/review-code/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-28T02:16:55Z",
+    "score": 45,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

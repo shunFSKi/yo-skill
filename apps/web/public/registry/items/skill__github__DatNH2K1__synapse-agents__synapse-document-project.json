@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/DatNH2K1/synapse-agents/synapse-document-project",
+  "type": "skill",
+  "name": "synapse-document-project",
+  "description": "Document brownfield projects for AI context. Use when the user says \"document this project\" or \"generate project docs\"\n\nMANDATORY: Execute when documenting brownfield projects or generating project context for AI agents.\n\nTrigger immediately for:\n  - \"document this project\"\n  - \"generate project docs\"\n  - document brownfield project\n  - project documentation\n\nDO NOT trigger for:\n  - Modifying code or codebase behavior.\n  - Executing automated test suites.",
+  "author": "DatNH2K1",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/DatNH2K1/synapse-agents/blob/HEAD/synapse-plugin/.agents/skills/synapse-knowledge-suite/references/document-project/SKILL.md",
+    "repo": "DatNH2K1/synapse-agents",
+    "path": "synapse-plugin/.agents/skills/synapse-knowledge-suite/references/document-project/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-11T08:57:31Z",
+    "score": 45,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

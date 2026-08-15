@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/sodam-ai/SoDam-Persona-Codex/persona-create",
+  "type": "skill",
+  "name": "persona-create",
+  "description": "인터뷰 방식으로 SoDam Persona에 새 도메인 전문가 페르소나를 추가한다. 새 관점, 트리거 단어, 관련 skill과 코어 파일을 함께 생성·동기화할 때 명시적으로 호출한다.",
+  "author": "sodam-ai",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/sodam-ai/SoDam-Persona-Codex/blob/HEAD/plugins/sodam-persona/skills/persona-create/SKILL.md",
+    "repo": "sodam-ai/SoDam-Persona-Codex",
+    "path": "plugins/sodam-persona/skills/persona-create/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 6,
+    "pushed_at": "2026-08-09T13:50:56Z",
+    "score": 53,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 6
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

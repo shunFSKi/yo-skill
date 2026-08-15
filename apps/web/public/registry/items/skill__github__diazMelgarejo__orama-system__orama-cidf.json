@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/diazMelgarejo/orama-system/orama-cidf",
+  "type": "skill",
+  "name": "orama-cidf",
+  "description": "Content Insertion Decision Framework v1.2 — sub-skill. Provides the executable decide(), lint_strict(), and execute_with_fallback() API for content insertion decisions. Activates whenever content must be inserted, written, pasted…",
+  "author": "diazMelgarejo",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/diazMelgarejo/orama-system/blob/HEAD/.claude/skills/orama-cidf/SKILL.md",
+    "repo": "diazMelgarejo/orama-system",
+    "path": ".claude/skills/orama-cidf/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-14T12:32:09Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

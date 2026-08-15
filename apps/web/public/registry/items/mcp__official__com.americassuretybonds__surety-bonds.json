@@ -1,0 +1,54 @@
+{
+  "id": "mcp:official/com.americassuretybonds/surety-bonds",
+  "type": "mcp",
+  "name": "surety-bonds",
+  "description": "Search over 6,900 U.S. surety bond requirements across all 50 states with instant pricing.",
+  "author": "com.americassuretybonds",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/AmericasSuretyBonds/americassuretybonds-mcp",
+    "repo": "AmericasSuretyBonds/americassuretybonds-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://americassuretybonds.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-15T02:48:30.736339Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# America's Surety Bonds MCP Server\n\nA free, read-only [Model Context Protocol](https://modelcontextprotocol.io) server providing AI assistants with structured access to more than 6,900 U.S. surety bond requirements across all 50 states and the District of Columbia.\n\nHomepage: [americassuretybonds.com](https://americassuretybonds.com)\n\n## Endpoint\n\n    https://americassuretybonds.com/mcp\n\nTransport: Streamable HTTP. Authentication: none required.\n\n## Connecting\n\n**Claude:** Settings, then Connectors, then Add custom connector, then paste the endpoint URL above.\n\n**Other MCP clients:** add the endpoint as a remote MCP server. No API key or account is needed.\n\n## Tools\n\n| Tool | Description |\n|---|---|\n| `search_bonds` | Search bond requirements by keyword, with an optional state filter. Returns bond name, state, jurisdiction, and information page URL. |\n| `get_bond` | Full details for one bond: summary, application steps, eligibility requirements, FAQs, official government links, and the instant-price application URL. |\n| `list_states` | Every state in the catalog with its bond count. |\n| `list_jurisdictions` | Every jurisdiction (statewide, county, city, or obligee) within one state. |\n\n## Example\n\nAsk your assistant:\n\n> What surety bond do I need to become a used car dealer in Texas, and where can I get an instant price?\n\nThe assistant calls `search_bonds`, then `get_bond`, and returns the requirements along with a link to apply.\n\n## Who this is for\n\nContractors, auto dealers, notaries, freight brokers, and business owners determining which bond a license or permit requires, what it covers, and how to obtain one. Also useful for attorneys, accountants, and compliance staff researching bonding requirements across jurisdictions.\n\n## Data\n\nAll data is sourced from the [AmericasSuretyBonds.com](https://americassuretybonds.com) catalog and is already publicly available on the website. The server is read-only. Reasonable per-IP rate limits apply.\n\n## About\n\n[AmericasSuretyBonds.com](https://americassuretybonds.com) is a veteran-owned surety bond platform operated by Philip E Pavarini Jr, Licensed Insurance Producer, NPN 8314541, CA License No. 4481016, licensed in 49 states and the District of Columbia.\n\nContact: mcp@americassuretybonds.com\n\n## License\n\nProprietary. The MCP server and its data are provided free for use by AI assistants and their users. AmericasSuretyBonds.com and America's Surety Bonds are registered trademarks owned by Nagashima Pavarini Ltd.\n",
+  "status": "curated"
+}

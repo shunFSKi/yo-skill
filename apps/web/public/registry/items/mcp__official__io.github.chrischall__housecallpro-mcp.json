@@ -1,0 +1,65 @@
+{
+  "id": "mcp:official/io.github.chrischall/housecallpro-mcp",
+  "type": "mcp",
+  "name": "housecallpro-mcp",
+  "description": "Read Housecall Pro estimates from the customer link your contractor sent you.",
+  "author": "io.github.chrischall",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/chrischall/housecallpro-mcp",
+    "repo": "chrischall/housecallpro-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@chrischall/housecallpro-mcp"
+    ],
+    "env": [
+      {
+        "name": "HOUSECALLPRO_LINK",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-15T03:23:05.305325Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# Housecall Pro MCP\n\n[![CI](https://github.com/chrischall/housecallpro-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/chrischall/housecallpro-mcp/actions/workflows/ci.yml)\n[![npm](https://img.shields.io/npm/v/@chrischall/housecallpro-mcp)](https://www.npmjs.com/package/@chrischall/housecallpro-mcp)\n[![license](https://img.shields.io/npm/l/@chrischall/housecallpro-mcp)](LICENSE)\n\nA [Model Context Protocol](https://modelcontextprotocol.io) server that connects\nClaude to the **customer side** of [Housecall Pro](https://housecallpro.com) —\nthe estimate or invoice link a contractor (HVAC, plumbing, electrical, cleaning)\nemails or texts you.\n\n> [!WARNING]\n> **AI-developed project.** This codebase was built and is actively maintained\n> by [Claude Code](https://www.anthropic.com/claude). No human has audited the\n> implementation. Review all code and tool permissions before use.\n\n## This is the customer side, not the business side\n\nHousecall Pro has two surfaces, and they share nothing:\n\n| | Public API | Customer portal (**this repo**) |\n| --- | --- | --- |\n| Host | `api.housecallpro.com` | `app.housecallpro.com` |\n| Serves | the business running on Housecall Pro | that business's customers |\n| Auth | an API key from the pro's account | the link your contractor sent you |\n| Docs | [docs.housecallpro.com](https://docs.housecallpro.com) | [`docs/HOUSECALLPRO-API.md`](docs/HOUSECALLPRO-API.md) |\n\nIf you *run* a business on Housecall Pro, you want the public API instead. This\nserver is for being someone's customer.\n\n## What you can do\n\n- *\"What did Queen City quote me for the tankless flush?\"*\n- *\"What's on that estimate, line by line?\"*\n- *\"How much of that $346 is tax?\"*\n- *\"Am I still on the hook to respond to this?\"*\n- *\"Decline option 2.\"*\n\n## Install\n\n```sh\nnpx -y @chrischall/housecallpro-mcp\n```\n\nConfigure it with the link your contractor sent you:\n\n```sh\nHOUSECALLPRO_LINK='https://pro.housecallpro.com/mobile_estimate/XXXXXXXXXX'\n```\n\nEstimate and invoice links both work, short or long form —\n`pro.housecallpro.com/mobile_estimate/…` and `/mobile_invoice/…`, or\n`client.housecallpro.com/estimates/…` and `/invoices/…`. For several documents:\n\n```sh\nHOUSECALLPRO_LINKS='[{\"label\":\"tankless\",\"url\":\"…\"},{\"label\":\"hvac\",\"url\":\"…\"}]'\n```\n\nThen every tool takes an optional `link` selector; with one configured you never\nneed it.\n\n> [!IMPORTANT]\n> **Your link is a bearer credential.** Anyone holding it can read the document\n> and, for an estimate, decline it. It is read from the environment, never logged, and never\n> returned in a tool result — `housecallpro_list_links` reports labels only.\n\n## Tools\n\n| Tool | |\n| --- | --- |\n| `housecallpro_get_estimate` | Line items, totals, tax, company, approval state |\n| `housecallpro_get_invoice` | Amount, subtotal, tax, balance due, payability |\n| `housecallpro_get_company` | The contractor: phone, email, website, arrival window |\n| `housecallpro_list_links` | Configured links, labels only |\n| `housecallpro_decline_estimate` | Decline options — confirm-gated |\n| `housecallpro_approve_estimate` | Always refuses; explains why |\n| `housecallpro_healthcheck` | Reachability + whether a link still resolves |\n\n### Estimates and invoices are different documents\n\nThey use different token shapes — 129 characters for an estimate, 32 for an\ninvoice — and different endpoints. The client checks the shape and refuses a\ntoken pointed at the wrong tool before spending a request, rather than passing\nalong an unexplained 404.\n\nAn invoice carries **no line items** and **no tax field**: a paid invoice renders\nas a summary in the portal and the API returns exactly that, so `tax_usd` is\nderived as `total - subtotal`. `is_paid` comes from the balance, not the status\nstring.\n\n### Money is returned twice\n\nThe upstream API returns **integer cents** — the estimate the portal renders as\n`$346.39` arrives as `total_amount: 34639`. Reporting that raw overstates every\nfigure 100×, so each money field is emitted as both `*_cents` (verbatim) and\n`*_usd` (derived). `tax.rate` is a fraction (`0.0825` = 8.25%) and is never\nscaled.\n\n### Why you can't approve an estimate\n\n`housecallpro_approve_estimate` always refuses, and that is deliberate.\n\nApproval posts a `response_token` — a **reCAPTCHA v3 token** minted in-page for\nthe action `estimates_customer_approvals`. No server-side client can produce\none, and neither can a browser-bridge transport: the bridge issues `fetch`\ncalls, it does not execute page JS. Declining carries no such token, which is\nwhy decline works and approve does not.\n\nRather than post a request that would be rejected — or worse, might *not* be,\nbinding you to a quoted price — the tool refuses and tells you to approve in a\nbrowser.\n\nDeclining is confirm-gated: without `confirm: true` it makes no network call and\nreturns a preview of exactly what would be sent. After a real decline it\n**re-reads the estimate** and reports the option's actual status, because a 2xx\nis not proof a write landed.\n\n## Without the MCP\n\n[`skills/housecallpro`](skills/housecallpro/SKILL.md) does the same reads from a\nshell with plain `curl` and `jq`, for scripts or machines where the server isn't\ninstalled. No browser bridge is involved there either.\n\n## No browser bridge\n\nUnlike much of this fleet, `app.housecallpro.com` is not bot-walled — a bare\n`curl` gets a `200`. So this server talks to it directly over HTTPS, has no\n`@fetchproxy/server` dependency, needs no extension or signed-in tab, and hosts\ncleanly as a remote connector.\n\n## What isn't here\n\n- **Payments and cards.** Deliberately out of scope.\n- **The account-level portal.** Housecall Pro has an OTP/magic-link customer\n  portal that spans every document from one contractor, which is a strictly\n  better surface than per-document links. Standing it up needs a human to\n  receive a one-time code, so it is the obvious next increment rather than part\n  of this first cut.\n\n## Development\n\n```sh\nnpm install\nnpm run build\nnpm test\n```\n\n## License\n\nMIT\n",
+  "status": "curated"
+}

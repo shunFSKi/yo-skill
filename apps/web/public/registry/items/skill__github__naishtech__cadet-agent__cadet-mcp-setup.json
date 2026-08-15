@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/naishtech/cadet-agent/cadet-mcp-setup",
+  "type": "skill",
+  "name": "cadet-mcp-setup",
+  "description": "Install the Pipeline package and register Unity's built-in MCP server to connect Cadet to the Editor.",
+  "author": "naishtech",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/naishtech/cadet-agent/blob/HEAD/.claude/skills/cadet-mcp-setup/SKILL.md",
+    "repo": "naishtech/cadet-agent",
+    "path": ".claude/skills/cadet-mcp-setup/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

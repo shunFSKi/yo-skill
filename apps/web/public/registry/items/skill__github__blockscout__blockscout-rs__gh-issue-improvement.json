@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/blockscout/blockscout-rs/gh-issue-improvement",
+  "type": "skill",
+  "name": "gh-issue-improvement",
+  "description": "Generate a structured improvement/enhancement proposal for GitHub issues based on conversation context",
+  "author": "blockscout",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/blockscout/blockscout-rs/blob/HEAD/interchain-indexer/.claude/skills/gh-issue-improvement/SKILL.md",
+    "repo": "blockscout/blockscout-rs",
+    "path": "interchain-indexer/.claude/skills/gh-issue-improvement/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 229,
+    "pushed_at": "2026-08-14T14:11:49Z",
+    "score": 76,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 229
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "<h1 align=\"center\">Blockscout Rust Services</h1>\n\n<a href=\"https://github.com/blockscout/blockscout-rs/actions/workflows/bens.yml\">\n   <img src=\"https://img.shields.io/github/actions/workflow/status/blockscout/blockscout-rs/bens.yml?branch=main&label=blockscout-ens&logo=github&style=flat-square\"><!--\n--></a>\n<a href=\"https://github.com/blockscout/blockscout-rs/actions/workflows/da-indexer.yml\">\n   <img src=\"https://img.shields.io/github/actions/workflow/status/blockscout/blockscout-rs/da-indexer.yml?branch=main&label=da-indexer&logo=github&style=flat-square\"><!--\n--></a>\n<a href=\"https://github.com/blockscout/blockscout-rs/actions/workflows/eth-bytecode-db.yml\">\n   <img src=\"https://img.shields.io/github/actions/workflow/status/blockscout/blockscout-rs/eth-bytecode-db.yml?branch=main&label=eth-bytecode-db&logo=github&style=flat-square\"><!--\n--></a>\n<a href=\"https://github.com/blockscout/blockscout-rs/actions/workflows/proxy-verifier.yml\">\n   <img src=\"https://img.shields.io/github/actions/workflow/status/blockscout/blockscout-rs/proxy-verifier.yml?branch=main&label=proxy-verifier&logo=github&style=flat-square\"><!--\n--></a>\n<a href=\"https://github.com/blockscout/blockscout-rs/actions/workflows/sig-provider.yml\">\n   <img src=\"https://img.shields.io/github/actions/workflow/status/blockscout/blockscout-rs/sig-provider.yml?branch=main&label=sig-provider&logo=github&style=flat-square\"><!--\n--></a>\n<a href=\"https://github.com/blockscout/blockscout-rs/actions/workflows/smart-contract-verifier.yml\">\n   <img src=\"https://img.shields.io/github/actions/workflow/status/blockscout/blockscout-rs/smart-contract-verifier.yml?branch=main&label=smart-contract-verifier&logo=github&style=flat-square\"><!--\n--></a>\n<a href=\"https://github.com/blockscout/blockscout-rs/actions/workflows/stats.yml\">\n   <img src=\"https://img.shields.io/github/actions/workflow/status/blockscout/blockscout-rs/stats.yml?branch=main&label=stats&logo=github&style=flat-square\"><!--\n--></a>\n<a href=\"https://github.com/blockscout/blockscout-rs/actions/workflows/tac-operation-lifecycle.yml\">\n   <img src=\"https://img.shields.io/github/actions/workflow/status/blockscout/blockscout-rs/tac-operation-lifecycle.yml?branch=main&label=tac-operation-lifecycle&logo=github&style=flat-square\"><!--\n--></a>\n<a href=\"https://github.com/blockscout/blockscout-rs/actions/workflows/user-ops-indexer.yml\">\n   <img src=\"https://img.shields.io/github/actions/workflow/status/blockscout/blockscout-rs/user-ops-indexer.yml?branch=main&label=user-ops-indexer&logo=github&style=flat-square\"><!--\n--></a>\n<a href=\"https://github.com/blockscout/blockscout-rs/actions/workflows/visualizer.yml\">\n   <img src=\"https://img.shields.io/github/actions/workflow/status/blockscout/blockscout-rs/visualizer.yml?branch=main&label=visualizer&logo=github&style=flat-square\"><!--\n--></a>\n<a href=\"https://github.com/blockscout/blockscout-rs/actions/workflows/multichain-search.yml\">\n   <img src=\"https://img.shields.io/github/actions/workflow/status/blockscout/blockscout-rs/multichain-search.yml?branch=main&label=multichain-search&logo=github&style=flat-square\"><!--\n--></a>\n<a href=\"https://github.com/blockscout/blockscout-rs/actions/workflows/libs.yml\">\n   <img src=\"https://img.shields.io/github/actions/workflow/status/blockscout/blockscout-rs/libs.yml?branch=main&label=libs&logo=github&style=flat-square\"><!--\n--></a>\n\n\nA set of services used by [Blockscout](https://blockscout.com/) blockchain explorer, written in Rust.\n\n## Services\n\n1. [blockscout-ens](blockscout-ens) - indexed data of domain name service for blockscout instances.\n\n2. [da-indexer](da-indexer) - collects blobs from different DA solutions (e.g, Celestia) \n\n3. [eth-bytecode-db](eth-bytecode-db/) - Ethereum Bytecode Database. Cross-chain smart-contracts database used for automatic contracts verification\n\n4. [interchain-indexer](interchain-indexer/) - Universal Bridge Indexer. A standalone service for indexing and aggregating interoperability data across multiple blockchains\n\n5. [proxy-verifier](proxy-verifier) - backend for the standalone multi-chain verification service\n\n6. [sig-provider](sig-provider/) - aggregator of ethereum signatures for transactions and events\n\n7. [smart-contract-verifier](smart-contract-verifier/) - smart-contracts verification\n\n8. [stats](stats) - service designed to calculate and present statistical information from a Blockscout instance\n\n9. [tac-operation-lifecycle](tac-operation-lifecycle/) - indexing operations in TAC (Ton Application Chain)\n\n10. [user-ops-indexer](user-ops-indexer) - service designed to index, decode and serve user operations as per the ERC-4337 standard\n\n11. [visualizer](visualizer/) - service for evm visualization such as:\n   \n   * Solidity contract visualization using [sol2uml](https://www.npmjs.com/package/sol2uml)\n\n12. [multichain-aggregator](multichain-aggregator/) - service to store and index data from multiple blockscout instances. Also contains logic with [interop messages](https://docs.optimism.io/interop/message-passing)\n\n\n## Running and configuring services\n\nServices are distributed as docker images. For each service, you can find information about packages and their recent releases\ninside service directories.\n\nYou can configure your app by passing the necessary environment variables when starting the container. \nConfiguration variables common for all services can be found [here](docs/common-envs.md).\nSee full list of ENVs and their description inside service directories.\n\n```shell\ndocker run -p 8050:8050 --env-file <path-to-your-env-file> ghcr.io/blockscout/{service-name}:latest \n```\n\nAlternatively, you can build your own docker images or compile them directly from sources. \nSome of such options are described in [build](docs/build.md).\n\n## Project Layouts\n\nMost of the projects consist of 3 main parts:\n1. `{service-name}-proto` - defines the gRPC proto file with all API related data.\n   Defines mapping HTTP/JSON requests and their parameters to those gRPC methods.\n2. `{service-name}-logic` - the crate with the implementation of the main business logic.\n    \n    _Note: previously the logic crate was named as `{service-name}`; \n    some services still use that convention_\n\n3. `{service-name}-server` - initialize the server using the defined API.\n    Using the methods from “{service-name}-logic” to handle incoming requests.\n\nThe separation on \"logic\" and \"server\" crates is designed to separate functional and transport layers.\nFor now, \"server\" crates contain gRPC and HTTP as the transport layer. \nIt was assumed, that users may want to implement their own APIs, for which the library with functional logic might be used.\n\nCrates that require database connection may also have additional `sea-orm`-defined crates:\n1. `{service-name}-migration` - contains migrations for the database\n2. `{service-name}-entity` - contains the entity files generated from the schema \n\n## Contributing\n\nWe appreciate your support. Before writing code and submitting a pull request, please read contributing [instructions](CONTRIBUTING.md).\n\n\n## License\n\n\nThis project is primarily distributed under the terms of the MIT license. See [LICENSE-MIT](LICENSE-MIT) for details.\n",
+  "status": "curated"
+}

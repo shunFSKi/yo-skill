@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/epam/ai-dial-admin-evaluation-framework-backend/pr-summary",
+  "type": "skill",
+  "name": "pr-summary",
+  "description": "Use when the user wants to generate a pull/merge request (PR/MR) summary for the changes in the current branch",
+  "author": "epam",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/epam/ai-dial-admin-evaluation-framework-backend/blob/HEAD/.claude/skills/pr-summary/SKILL.md",
+    "repo": "epam/ai-dial-admin-evaluation-framework-backend",
+    "path": ".claude/skills/pr-summary/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 3,
+    "pushed_at": "2026-08-14T10:41:07Z",
+    "score": 50,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 3
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

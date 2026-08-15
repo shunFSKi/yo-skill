@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/dandye/secops-gemini-extension/secops-cases",
+  "type": "skill",
+  "name": "secops-cases",
+  "description": "List recent SOAR cases. Use this for \"list cases\" or \"show cases\".",
+  "author": "dandye",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/dandye/secops-gemini-extension/blob/HEAD/skills/cases/SKILL.md",
+    "repo": "dandye/secops-gemini-extension",
+    "path": "skills/cases/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 4,
+    "pushed_at": "2026-04-15T20:40:25Z",
+    "score": 38,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 4
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

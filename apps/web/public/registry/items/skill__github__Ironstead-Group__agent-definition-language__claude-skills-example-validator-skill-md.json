@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/Ironstead-Group/agent-definition-language/claude-skills-example-validator-skill-md",
+  "type": "skill",
+  "name": "claude-skills-example-validator-skill-md",
+  "description": "Validate ADL example documents against the spec and schema",
+  "author": "Ironstead-Group",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Ironstead-Group/agent-definition-language/blob/HEAD/.claude/skills/example-validator/SKILL.md",
+    "repo": "Ironstead-Group/agent-definition-language",
+    "path": ".claude/skills/example-validator/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-06-20T20:58:28Z",
+    "score": 41,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 2
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

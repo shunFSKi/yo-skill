@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/DecisionNerd/waccy/waccy-status",
+  "type": "skill",
+  "name": "waccy-status",
+  "description": "Show the current status of the WACCY dataset — last extraction time, record count, and whether it's up to date.",
+  "author": "DecisionNerd",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/DecisionNerd/waccy/blob/HEAD/.agents/skills/waccy-status/SKILL.md",
+    "repo": "DecisionNerd/waccy",
+    "path": ".agents/skills/waccy-status/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 20,
+    "pushed_at": "2026-08-05T04:26:46Z",
+    "score": 57,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 20
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

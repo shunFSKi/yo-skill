@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/tarekmo0/HunterStick/analyse-request",
+  "type": "skill",
+  "name": "analyse-request",
+  "description": "Analyze a pasted raw HTTP request as a bug-bounty entrypoint. Use when the human pastes a Burp, DevTools, mobile-proxy, curl, or raw HTTP request and asks what to test, what vulnerabilities apply, or to analyze/analyse the request. Routes directly to the request-analysis workflow without recon.",
+  "author": "tarekmo0",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/tarekmo0/HunterStick/blob/HEAD/.claude/skills/analyse-request/SKILL.md",
+    "repo": "tarekmo0/HunterStick",
+    "path": ".claude/skills/analyse-request/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 8,
+    "pushed_at": "2026-08-12T14:49:43Z",
+    "score": 54,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 8
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

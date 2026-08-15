@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/venturalabs-ai/ventura.roadmap/link-audit",
+  "type": "skill",
+  "name": "link-audit",
+  "description": "Audit Ventura Roadmap learning and reference links for canonical destinations duplicates and obsolete resources. Use when maintaining or releasing roadmap content. Do not use when deciding whether a milestone belongs in the roadmap sequence.",
+  "author": "venturalabs-ai",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/venturalabs-ai/ventura.roadmap/blob/HEAD/.github/skills/link-audit/SKILL.md",
+    "repo": "venturalabs-ai/ventura.roadmap",
+    "path": ".github/skills/link-audit/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

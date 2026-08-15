@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/River-181/hagent-os/agent-runtime-checker",
+  "type": "skill",
+  "name": "agent-runtime-checker",
+  "description": "에이전트 실행 전 runtime readiness를 점검하는 시스템 스킬입니다.",
+  "author": "River-181",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/River-181/hagent-os/blob/HEAD/skills/hagent/agent-runtime-checker/SKILL.md",
+    "repo": "River-181/hagent-os",
+    "path": "skills/hagent/agent-runtime-checker/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-04-13T17:33:49Z",
+    "score": 35
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

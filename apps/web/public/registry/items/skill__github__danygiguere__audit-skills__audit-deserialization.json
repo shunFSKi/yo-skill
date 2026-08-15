@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/danygiguere/audit-skills/audit-deserialization",
+  "type": "skill",
+  "name": "audit-deserialization",
+  "description": "Insecure deserialization checklist. Use when untrusted bytes (request bodies, cookies, sessions, cache entries, queue messages, uploaded files) are deserialized — native object deserializers, polymorphic JSON/XML typing, unsafe YAML, or missing type allowlists.",
+  "author": "danygiguere",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/danygiguere/audit-skills/blob/HEAD/.agents/skills/audit-deserialization/SKILL.md",
+    "repo": "danygiguere/audit-skills",
+    "path": ".agents/skills/audit-deserialization/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 5,
+    "pushed_at": "2026-07-03T01:09:31Z",
+    "score": 47
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

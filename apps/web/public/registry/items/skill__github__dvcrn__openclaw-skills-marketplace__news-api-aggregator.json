@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/dvcrn/openclaw-skills-marketplace/news-api-aggregator",
+  "type": "skill",
+  "name": "news-api-aggregator",
+  "description": "Aggregate news from multiple sources into a unified API. Each call charges 0.001 USDT via SkillPay.",
+  "author": "dvcrn",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/dvcrn/openclaw-skills-marketplace/blob/HEAD/plugins/mosonchan2023--news-api-aggregator/skills/news-api-aggregator/SKILL.md",
+    "repo": "dvcrn/openclaw-skills-marketplace",
+    "path": "plugins/mosonchan2023--news-api-aggregator/skills/news-api-aggregator/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 32,
+    "pushed_at": "2026-06-12T21:33:13Z",
+    "score": 51
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/maotoumao/Cebian/i18n-naming",
+  "type": "skill",
+  "name": "i18n-naming",
+  "description": "Cebian project i18n key naming, placeholder, pluralization, file layout, and glossary conventions. MUST be used whenever adding, editing, refactoring, or reviewing any translation key in `locales/*.yml`, any `t(...)` call in source code, or any `__MSG_*__` placeholder in manifest. Also triggers when reviewing diffs that touch i18n files, when proposing new user-facing strings, or when validating translation completeness/consistency between `en.yml`, `zh_CN.yml`, and `zh_TW.yml`.",
+  "author": "maotoumao",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/maotoumao/Cebian/blob/HEAD/.claude/skills/i18n-naming/SKILL.md",
+    "repo": "maotoumao/Cebian",
+    "path": ".claude/skills/i18n-naming/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

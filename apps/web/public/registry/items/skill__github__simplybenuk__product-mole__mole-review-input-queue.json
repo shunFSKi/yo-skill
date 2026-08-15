@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/simplybenuk/product-mole/mole-review-input-queue",
+  "type": "skill",
+  "name": "mole-review-input-queue",
+  "description": "Review the current Mole input queue and tell the PM the highest-value questions to answer.",
+  "author": "simplybenuk",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/simplybenuk/product-mole/blob/HEAD/cli/skills/mole-review-input-queue/SKILL.md",
+    "repo": "simplybenuk/product-mole",
+    "path": "cli/skills/mole-review-input-queue/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

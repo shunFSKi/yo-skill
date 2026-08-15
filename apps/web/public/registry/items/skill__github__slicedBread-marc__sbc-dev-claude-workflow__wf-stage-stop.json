@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/slicedBread-marc/sbc-dev-claude-workflow/wf-stage-stop",
+  "type": "skill",
+  "name": "wf-stage-stop",
+  "description": "Stop the running staging environment container",
+  "author": "slicedBread-marc",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/slicedBread-marc/sbc-dev-claude-workflow/blob/HEAD/skills/wf-stage-stop/SKILL.md",
+    "repo": "slicedBread-marc/sbc-dev-claude-workflow",
+    "path": "skills/wf-stage-stop/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

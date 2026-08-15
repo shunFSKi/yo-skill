@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/nanlabs/agent-toolkit/nanlabs-setup",
+  "type": "skill",
+  "name": "nanlabs-setup",
+  "description": "DEPRECATED — setup now ships in nanlabs-core. See DEPRECATION.md in this plugin directory.",
+  "author": "nanlabs",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/nanlabs/agent-toolkit/blob/HEAD/plugins/nanlabs-setup/skills/nanlabs-setup/SKILL.md",
+    "repo": "nanlabs/agent-toolkit",
+    "path": "plugins/nanlabs-setup/skills/nanlabs-setup/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

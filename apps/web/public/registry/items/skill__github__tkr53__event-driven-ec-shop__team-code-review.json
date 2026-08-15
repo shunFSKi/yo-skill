@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/tkr53/event-driven-ec-shop/team-code-review",
+  "type": "skill",
+  "name": "team-code-review",
+  "description": "Reviews code changes following our team's coding standards",
+  "author": "tkr53",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/tkr53/event-driven-ec-shop/blob/HEAD/.claude/skills/codeReview/SKILL.md",
+    "repo": "tkr53/event-driven-ec-shop",
+    "path": ".claude/skills/codeReview/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

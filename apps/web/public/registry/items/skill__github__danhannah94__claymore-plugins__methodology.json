@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/danhannah94/claymore-plugins/methodology",
+  "type": "skill",
+  "name": "methodology",
+  "description": "The Hannah Labs methodology (v3). Use when the AI needs to understand the methodology pipeline (requirements → draft → red-team → reply → update → ship), the three-file system (methodology.md, next.md, decisions.md), the decisions lifecycle, or when asked 'how does this process work?' Third iteration of the same process: OpenClaw → lean → hl.",
+  "author": "danhannah94",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/danhannah94/claymore-plugins/blob/HEAD/hl/skills/methodology/SKILL.md",
+    "repo": "danhannah94/claymore-plugins",
+    "path": "hl/skills/methodology/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-14T04:46:17Z",
+    "score": 40,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

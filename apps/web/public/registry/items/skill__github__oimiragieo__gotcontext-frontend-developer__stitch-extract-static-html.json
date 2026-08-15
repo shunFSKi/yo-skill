@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/oimiragieo/gotcontext-frontend-developer/stitch-extract-static-html",
+  "type": "skill",
+  "name": "stitch-extract-static-html",
+  "description": "Extract self-contained static HTML from a built web application or React components by inlining CSS and images. Use this skill whenever you need to capture a specific UI state, share a static version of a page, or prepare assets for Stitch upload, even if the user just asks to 'save the HTML' or 'mock the view'.",
+  "author": "oimiragieo",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/oimiragieo/gotcontext-frontend-developer/blob/HEAD/.cursor/skills/stitch-extract-static-html/SKILL.md",
+    "repo": "oimiragieo/gotcontext-frontend-developer",
+    "path": ".cursor/skills/stitch-extract-static-html/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-11T03:12:59Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

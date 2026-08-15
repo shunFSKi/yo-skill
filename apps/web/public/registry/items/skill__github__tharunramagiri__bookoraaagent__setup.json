@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/tharunramagiri/bookoraaagent/setup",
+  "type": "skill",
+  "name": "setup",
+  "description": "Run initial Bookoraa Agent setup. Use when user wants to install Bookoraa Agent, configure it, or go through first-time setup. Triggers on \"setup\", \"install\", \"setup bookoraa agent\", or first-time setup requests.",
+  "author": "tharunramagiri",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/tharunramagiri/bookoraaagent/blob/HEAD/.claude/skills/setup/SKILL.md",
+    "repo": "tharunramagiri/bookoraaagent",
+    "path": ".claude/skills/setup/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

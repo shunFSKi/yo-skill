@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/bladeofgod/flutter-ai-harness/protobuf-workflow",
+  "type": "skill",
+  "name": "protobuf-workflow",
+  "description": "适用：修改 .proto、Dart 生成产物、协议 Envelope、API Endpoint 或 Proto→Entity Mapper。不适用：纯 JSON API，也不允许手工编辑生成文件。触发词：protobuf、proto、protoc、generated、mapper、wire field、API contract。",
+  "author": "bladeofgod",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/bladeofgod/flutter-ai-harness/blob/HEAD/.agents/skills/protobuf-workflow/SKILL.md",
+    "repo": "bladeofgod/flutter-ai-harness",
+    "path": ".agents/skills/protobuf-workflow/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 77,
+    "pushed_at": "2026-08-11T14:57:48Z",
+    "score": 72,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 77
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "# Flutter AI Harness\n\n![Flutter AI Harness repository-native engineering system](docs/media/harness-readme-banner.png)\n\n**[Read the detailed guide](https://htmlpreview.github.io/?https://github.com/bladeofgod/flutter-ai-harness/blob/main/docs/index.html)** · [中文 README](docs/README.zh-CN.md)\n\nAn AI-native engineering harness for production Flutter and hybrid mobile application repositories.\n\nFlutter AI Harness helps coding agents work inside explicit, testable engineering boundaries. It combines repository-owned project contracts, focused agent roles, task artifacts, review loops, and executable quality gates. It is an engineering system for building applications with AI agents, not an SDK for adding AI features to a Flutter app.\n\nThis README is the primary adoption entry and project preview. The [detailed guide](https://htmlpreview.github.io/?https://github.com/bladeofgod/flutter-ai-harness/blob/main/docs/index.html) covers the system model, delivery workflow, security review, reference implementation, adoption paths, and future extensions.\n\n## What This Repository Is\n\nAI Harness is a repository-level engineering system for governing and executing AI-assisted software delivery. The Flutter Demo is its first governed reference implementation, not the Harness itself.\n\n```text\nAI Harness\n├── Project contract: architecture boundaries, coding rules, security policy\n├── Workflows: planning, execution, review, fixes, archival, release checks\n├── Task system: task cards, dependencies, executors, acceptance criteria\n├── Agent system: architect, executors, routed reviewers, security reviewer\n├── Quality gates: static checks, tests, builds, evidence, CI\n├── AI tool adapters: Claude Code and Codex\n└── Reference technology stacks and adapters\n    ├── Flutter / Dart\n    ├── Android / Kotlin\n    └── iOS / Swift\n```\n\nThe reusable product is the project contract, delivery workflow, agent collaboration model, and executable quality loop. Flutter, Android, and iOS provide the current reference environment used to exercise and verify that system.\n\n## Use the Harness in Your Project\n\nStart a coding agent in the project you want to build or improve. Do not clone the Flutter Demo into that project. The Agent uses this repository as reference input, first produces an adoption plan, and changes the target only after you approve the plan.\n\nThis repository currently ships native project entries for Claude Code and Codex. Another coding agent can follow the same tool-neutral protocol when it has equivalent filesystem, shell, and instruction-control capabilities.\n\n### 1. Start in the Target Directory\n\n```bash\ncd path/to/your-project\n# Start Claude Code, Codex, or an equivalent coding agent here.\n```\n\n### 2. Paste the Bootstrap Prompt\n\n```text\nAdapt the AI Harness engineering model from\nhttps://github.com/bladeofgod/flutter-ai-harness.git\nto the current directory.\n\nThe current directory is the target project. The Harness repository is reference\ninput only. Keep the target read-only during phase one: do not edit its files,\ninstall dependencies, initialize a project, commit, or push. The only permitted\nwrite is cloning the Harness outside the target into a temporary directory. Do not\nexecute source-repository scripts. Record the exact source commit and follow\ndocs/adoption/AGENT_BOOTSTRAP.md.\n\nIf this is an existing project, audit its stack, architecture, instructions, tests,\nCI, and current changes before proposing an adaptation plan. If the directory is\nempty, first discuss the product requirements, targets, constraints, deployment,\nteam capabilities, and quality expectations with me. Do not select a stack or\ninitialize the project until I approve those decisions. If the directory is\nambiguous, ask me how it should be treated.\n\nDo not copy the Flutter Demo, business code, archived tasks, reviews, or evidence.\nPresent the adoption plan, proposed files, verification commands, conflicts, and\nunresolved decisions, then stop and wait for my approval.\n```\n\n### 3. Approve Before Implementation\n\nReview the proposed stack and adaptation plan. When it is correct, continue with:\n\n```text\nImplement the approved adoption plan. Keep the target project's confirmed stack\nand contract authoritative, adopt only capabilities with real consumers, preserve\nexisting work, and run the target-specific checks. Report every unverified platform\nor unavailable environment. Do not commit or push unless I explicitly ask.\n```\n\n```text\nTarget directory\n├── Existing project -> read-only audit -> adaptation plan -> approval -> implementation\n├── Empty directory  -> requirements and stack discussion -> initialization plan -> approval -> implementation\n└── Ambiguous files  -> ask the user and stop\n```\n\nRead the complete [Agent adoption protocol](docs/adoption/AGENT_BOOTSTRAP.md), [existing-project path](docs/adoption/existing-project.md), and [new-project path](docs/adoption/new-project.md). The adopted result belongs to the target repository; this repository does not become its runtime dependency.\n\n## At A Glance\n\n- One authoritative project contract with generated Codex-native Skill and Agent adapters.\n- Focused workflows for planning, Figma decomposition, implementation, work-routed review, risk-triggered security review, and release checks.\n- Repository-owned architecture gates, Git hooks, evidence capture, and CI checks.\n- A layered Flutter workspace with explicit package, data, routing, and dependency-injection boundaries.\n- First-class Android and iOS host guidance, including contract-first platform channels.\n- Optional Figma and Marionette integrations for design context and explicitly scheduled UI verification.\n\n```text\nProduct input or Figma\n        -> task cards\n        -> implementation and focused tests\n        -> workKinds-routed independent review\n        -> explicit fixes and re-review\n        -> archived evidence\n```\n\nOrdinary review follows the task instead of using one general-purpose role:\n\n| Task work | Independent review profile |\n| --- | --- |\n| Flutter, Dart Client, Native, Bridge Adapter, integration, quality gates | Code Reviewer |\n| Harness commands, agents, validators, fixtures, evidence, adapters | Harness Reviewer |\n| Capability/Wire contracts, or standalone documentation and planning | Contract Reviewer |\n\nOne task can select multiple profiles in a fixed order. Their findings stay in one aggregated task report, while Security Review remains a separate, conditional dimension. After a repair, only checks and review profiles whose inputs or conclusions changed are rerun.\n\n## Run the Reference Demo\n\nRunning the Demo is optional. Use it to inspect a complete working example of task cards, reviews, evidence, architecture gates, and Flutter/Android/iOS integration. It is not a prerequisite for adopting the Harness.\n\nPrerequisites: Claude Code 2.1.198 or later for the repository's Claude workflows, `ripgrep`, and either FVM or Flutter 3.41.9.\n\n```bash\ngit clone https://github.com/bladeofgod/flutter-ai-harness.git\ncd flutter-ai-harness\nmake setup\nmake check\n```\n\nRun the local-fixture Demo:\n\n```bash\nTOOL_WORKDIR=app/apps/demo bash scripts/flutter-tool.sh run\n```\n\nSee the complete [reference evaluation path](docs/adoption/evaluation.md).\n\n### Demo Preview\n\n> **Automated development record:** The Demo was completed in one overnight run, with no human intervention in implementation during execution. Human input covered design selection, scope decisions, and environment operations.\n\n<table>\n  <tr>\n    <td><img src=\"docs/media/demo-app-preview-01.gif\" alt=\"Ai-Harness Demo preview 01\" width=\"240\"></td>\n    <td><img src=\"docs/media/demo-app-preview-02.gif\" alt=\"Ai-Harness Demo preview 02\" width=\"240\"></td>\n  </tr>\n  <tr>\n    <td><img src=\"docs/media/demo-app-preview-03.gif\" alt=\"Ai-Harness Demo preview 03\" width=\"240\"></td>\n    <td><img src=\"docs/media/demo-app-preview-04.gif\" alt=\"Ai-Harness Demo preview 04\" width=\"240\"></td>\n  </tr>\n</table>\n\n`Android Debug · deterministic local fixtures · four sequential previews · source recording duration: 1m 13s`\n\nThe Shoppe-inspired Demo includes Welcome, Auth, Shop, Categories, Product Detail, Wishlist, Cart, Checkout, Profile, Settings, Orders, Search, Promotions, Rewards, and Support flows. Its task cards, reviews, implementation evidence, and project documentation were produced through the Harness workflow rather than written as placeholder history.\n\nDesign source: [Shoppe Community design](https://www.figma.com/community/file/1321464360558173342/shoppe-ecommerce-clothing-fashion-store-multi-purpose-ui-mobile-app-design). Source and license notes are recorded in [`docs/figma-links.md`](docs/figma-links.md).\n\n## Repository Map\n\n```text\nflutter-ai-harness/\n├── CLAUDE.md     Authoritative project contract\n├── .claude/      Commands, agents, skills, and memories\n├── .agents/      Generated Codex Skill adapters\n├── .codex/       Generated Codex project Agents\n├── docs/         Detailed guide, architecture, tasks, and reviews\n├── scripts/      Hooks and executable quality gates\n└── app/          Flutter workspace and reference Demo\n```\n\n## Continue Reading\n\n- [Agent adoption protocol](docs/adoption/AGENT_BOOTSTRAP.md)\n- [Adopt in an existing project](docs/adoption/existing-project.md)\n- [Start a new project](docs/adoption/new-project.md)\n- [Detailed design and adoption guide](https://htmlpreview.github.io/?https://github.com/bladeofgod/flutter-ai-harness/blob/main/docs/index.html)\n- [Authoritative project contract](CLAUDE.md)\n- [Application architecture](docs/architecture.md)\n- [Background article: AI 编程的工程化实践](https://mp.weixin.qq.com/s/XAV8U9SfvbGgsAC5Tj2GEA) (Chinese)\n\n## Project Status\n\nThe Harness baseline, Demo UI, shared media resources, and Android/iOS Media Capture integration are implemented. The app uses deterministic local business data rather than production services. Android Debug and iOS no-codesign builds are verified; Android emulator/device capture flows and iOS camera, microphone, interruption, and performance acceptance remain manual device checks.\n\n## License\n\nFlutter AI Harness is available under the [MIT License](LICENSE).\n",
+  "status": "curated"
+}

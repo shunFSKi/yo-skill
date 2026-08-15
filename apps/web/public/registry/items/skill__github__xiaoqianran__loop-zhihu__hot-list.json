@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/xiaoqianran/loop-zhihu/hot-list",
+  "type": "skill",
+  "name": "hot-list",
+  "description": "获取知乎热榜列表（官方 OpenAPI）。Use when fetching Zhihu hot list via API.",
+  "author": "xiaoqianran",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/xiaoqianran/loop-zhihu/blob/HEAD/.grok/skills/hot-list/SKILL.md",
+    "repo": "xiaoqianran/loop-zhihu",
+    "path": ".grok/skills/hot-list/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

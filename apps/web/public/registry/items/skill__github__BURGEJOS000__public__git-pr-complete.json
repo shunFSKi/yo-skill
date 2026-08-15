@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/BURGEJOS000/public/git-pr-complete",
+  "type": "skill",
+  "name": "git-pr-complete",
+  "description": "Complete (merge) an open pull request or merge request when required checks have passed, reviews are satisfied, and the PR is mergeable; then close linked tracker issues with a comment referencing the PR. Use when the user invokes /git-pr-complete, asks to merge a PR, or wants to finish a PR that is ready to land.",
+  "author": "BURGEJOS000",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/BURGEJOS000/public/blob/HEAD/Exported tools/user-skills/git-pr-complete/SKILL.md",
+    "repo": "BURGEJOS000/public",
+    "path": "Exported tools/user-skills/git-pr-complete/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-02T04:28:02Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

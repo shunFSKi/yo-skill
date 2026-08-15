@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/PurrPHP/pure-collection/run-tests-make",
+  "type": "skill",
+  "name": "run-tests-make",
+  "description": "Run project tests exclusively using \"make test\" command. Use when the user asks to run tests, execute tests, check tests, verify code, or run the test suite. Never use direct test runner commands (phpunit, pytest, jest, etc.) — always use \"make test\".",
+  "author": "PurrPHP",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/PurrPHP/pure-collection/blob/HEAD/.cursor/skills/run-tests-make/SKILL.md",
+    "repo": "PurrPHP/pure-collection",
+    "path": ".cursor/skills/run-tests-make/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-02T22:22:20Z",
+    "score": 48,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

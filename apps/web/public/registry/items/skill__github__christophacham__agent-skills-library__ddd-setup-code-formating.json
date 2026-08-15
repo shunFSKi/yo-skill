@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/christophacham/agent-skills-library/ddd-setup-code-formating",
+  "type": "skill",
+  "name": "ddd:setup-code-formating",
+  "description": "Sets up code formatting rules and style guidelines in CLAUDE.md",
+  "author": "christophacham",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/christophacham/agent-skills-library/blob/HEAD/skills/database/setup-code-formating/SKILL.md",
+    "repo": "christophacham/agent-skills-library",
+    "path": "skills/database/setup-code-formating/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 78,
+    "pushed_at": "2026-08-08T09:57:53Z",
+    "score": 69
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "# Agent Skills Library\n\nThe largest open-source collection of agent skills -- 2,622 skills from 48 sources, organized into 34 categories.\n\n![Total Skills](https://img.shields.io/badge/skills-2%2C622-blue?style=flat-square)\n ![Categories](https://img.shields.io/badge/categories-34-green?style=flat-square)\n ![Sources](https://img.shields.io/badge/sources-48-orange?style=flat-square)\n\n## Table of Contents\n\n- [3d-graphics](#3d-graphics)\n- [aerospace](#aerospace)\n- [agents](#agents)\n- [ai-ml](#ai-ml)\n- [animation](#animation)\n- [architecture](#architecture)\n- [automation](#automation)\n- [backend-dev](#backend-dev)\n- [biomedical](#biomedical)\n- [business](#business)\n- [code-review](#code-review)\n- [compliance](#compliance)\n- [data-science](#data-science)\n- [database](#database)\n- [design](#design)\n- [devops](#devops)\n- [education](#education)\n- [finance](#finance)\n- [game-dev](#game-dev)\n- [git](#git)\n- [marketing](#marketing)\n- [mcp](#mcp)\n- [media-production](#media-production)\n- [mobile](#mobile)\n- [programming](#programming)\n- [project-management](#project-management)\n- [quantum](#quantum)\n- [robotics](#robotics)\n- [security](#security)\n- [simulation](#simulation)\n- [testing](#testing)\n- [tooling](#tooling)\n- [web-dev](#web-dev)\n- [writing](#writing)\n\n## Categories\n\n| Category | Skills | Description |\n|----------|--------|-------------|\n| [3d-graphics](skills/3d-graphics/README.md) | 4 | 3D graphics, rendering, and visualization skills |\n| [aerospace](skills/aerospace/README.md) | 2 | Aerospace engineering, flight systems, and space technology |\n| [agents](skills/agents/README.md) | 9 | Agent frameworks, multi-agent systems, and agent orchestration |\n| [ai-ml](skills/ai-ml/README.md) | 314 | Artificial intelligence, machine learning, and deep learning |\n| [animation](skills/animation/README.md) | 1 | Animation, motion design, and keyframe techniques |\n| [architecture](skills/architecture/README.md) | 28 | Software architecture, system design, and design patterns |\n| [automation](skills/automation/README.md) | 806 | Workflow automation, scripting, and process orchestration |\n| [backend-dev](skills/backend-dev/README.md) | 162 | Backend development, APIs, servers, and services |\n| [biomedical](skills/biomedical/README.md) | 5 | Biomedical research, bioinformatics, and computational biology |\n| [business](skills/business/README.md) | 42 | Business strategy, operations, and enterprise tooling |\n| [code-review](skills/code-review/README.md) | 21 | Code review practices, linting, and code quality |\n| [compliance](skills/compliance/README.md) | 11 | Regulatory compliance, auditing, and governance |\n| [data-science](skills/data-science/README.md) | 17 | Data science, analytics, and statistical computing |\n| [database](skills/database/README.md) | 137 | Databases, data modeling, querying, and storage systems |\n| [design](skills/design/README.md) | 149 | UI/UX design, design systems, and visual design |\n| [devops](skills/devops/README.md) | 160 | DevOps, CI/CD, infrastructure, and cloud operations |\n| [education](skills/education/README.md) | 2 | Educational technology, learning platforms, and courseware |\n| [finance](skills/finance/README.md) | 3 | Financial technology, trading, and accounting |\n| [game-dev](skills/game-dev/README.md) | 200 | Game development, game engines, and interactive media |\n| [git](skills/git/README.md) | 105 | Git workflows, version control, and repository management |\n| [marketing](skills/marketing/README.md) | 10 | Marketing technology, SEO, and content strategy |\n| [mcp](skills/mcp/README.md) | 2 | Model Context Protocol servers and integrations |\n| [media-production](skills/media-production/README.md) | 24 | Media production, audio/video processing, and content creation |\n| [mobile](skills/mobile/README.md) | 9 | Mobile app development for iOS, Android, and cross-platform |\n| [programming](skills/programming/README.md) | 39 | General programming, languages, and software engineering |\n| [project-management](skills/project-management/README.md) | 10 | Project management, planning, and team coordination |\n| [quantum](skills/quantum/README.md) | 1 | Quantum computing and quantum information science |\n| [robotics](skills/robotics/README.md) | 10 | Robotics, control systems, and autonomous agents |\n| [security](skills/security/README.md) | 119 | Application security, penetration testing, and threat analysis |\n| [simulation](skills/simulation/README.md) | 4 | Simulation, modeling, and computational experiments |\n| [testing](skills/testing/README.md) | 17 | Software testing, QA, and test automation |\n| [tooling](skills/tooling/README.md) | 27 | Developer tooling, CLI utilities, and productivity tools |\n| [web-dev](skills/web-dev/README.md) | 144 | Web development, frontend frameworks, and browser technologies |\n| [writing](skills/writing/README.md) | 28 | Technical writing, documentation, and content authoring |\n\n## Stats\n\n| Metric | Value |\n|--------|-------|\n| Total skills | 2,622 |\n| Categories | 34 |\n| Sources | 48 |\n\n## Source Attribution\n\nThis library aggregates skills from the following 48 open-source repositories:\n\n| # | Repository |\n|---|------------|\n| 1 | [sickn33/antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills) |\n| 2 | [github/awesome-copilot](https://github.com/github/awesome-copilot) |\n| 3 | [obra/superpowers](https://github.com/obra/superpowers) |\n| 4 | [anthropics/skills](https://github.com/anthropics/skills) |\n| 5 | [microsoft/skills](https://github.com/microsoft/skills) |\n| 6 | [vercel-labs/skills](https://github.com/vercel-labs/skills) |\n| 7 | [expo/skills](https://github.com/expo/skills) |\n| 8 | [trailofbits/skills](https://github.com/trailofbits/skills) |\n| 9 | [VoltAgent/awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills) |\n| 10 | [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) |\n| 11 | [hesreallyhim/awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code) |\n| 12 | [muratcankoylan/Agent-Skills-for-Context-Engineering](https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering) |\n| 13 | [K-Dense-AI/claude-scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) |\n| 14 | [antfu/skills](https://github.com/antfu/skills) |\n| 15 | [NeoLabHQ/context-engineering-kit](https://github.com/NeoLabHQ/context-engineering-kit) |\n| 16 | [agent-sh/agentsys](https://github.com/agent-sh/agentsys) |\n| 17 | [Gentleman-Programming/Gentleman-Skills](https://github.com/Gentleman-Programming/Gentleman-Skills) |\n| 18 | [awesome-opencode/awesome-opencode](https://github.com/awesome-opencode/awesome-opencode) |\n| 19 | [numman-ali/openskills](https://github.com/numman-ali/openskills) |\n| 20 | [numman-ali/n-skills](https://github.com/numman-ali/n-skills) |\n| 21 | [malhashemi/opencode-skills](https://github.com/malhashemi/opencode-skills) |\n| 22 | [zrt-ai-lab/opencode-skills](https://github.com/zrt-ai-lab/opencode-skills) |\n| 23 | [joshuadavidthomas/opencode-agent-skills](https://github.com/joshuadavidthomas/opencode-agent-skills) |\n| 24 | [flitzrrr/opencode-processing-skills](https://github.com/flitzrrr/opencode-processing-skills) |\n| 25 | [kedbin/opencode-skills](https://github.com/kedbin/opencode-skills) |\n| 26 | [jjmartres/opencode](https://github.com/jjmartres/opencode) |\n| 27 | [darrenhinde/Opencode-skills-example](https://github.com/darrenhinde/Opencode-skills-example) |\n| 28 | [hardw00t/ai-security-arsenal](https://github.com/hardw00t/ai-security-arsenal) |\n| 29 | [software-mansion-labs/react-native-skills](https://github.com/software-mansion-labs/react-native-skills) |\n| 30 | [CodeAlive-AI/codealive-skills](https://github.com/CodeAlive-AI/codealive-skills) |\n| 31 | [neurofoo/agent-skills](https://github.com/neurofoo/agent-skills) |\n| 32 | [hoodini/ai-agents-skills](https://github.com/hoodini/ai-agents-skills) |\n| 33 | [tech-leads-club/agent-skills](https://github.com/tech-leads-club/agent-skills) |\n| 34 | [forefy/.context](https://github.com/forefy/.context) |\n| 35 | [OthmanAdi/planning-with-files](https://github.com/OthmanAdi/planning-with-files) |\n| 36 | [Prat011/awesome-llm-skills](https://github.com/Prat011/awesome-llm-skills) |\n| 37 | [heilcheng/awesome-agent-skills](https://github.com/heilcheng/awesome-agent-skills) |\n| 38 | [skillmatic-ai/awesome-agent-skills](https://github.com/skillmatic-ai/awesome-agent-skills) |\n| 39 | [TheArchitectit/awesome-opencode-skills](https://github.com/TheArchitectit/awesome-opencode-skills) |\n| 40 | [wondelai/skills](https://github.com/wondelai/skills) |\n| 41 | [skillcreatorai/Ai-Agent-Skills](https://github.com/skillcreatorai/Ai-Agent-Skills) |\n| 42 | [Weizhena/Deep-Research-skills](https://github.com/Weizhena/Deep-Research-skills) |\n| 43 | [0xranx/OpenContext](https://github.com/0xranx/OpenContext) |\n| 44 | [sanjay3290/ai-skills](https://github.com/sanjay3290/ai-skills) |\n| 45 | [louiechiu137/SKILLS](https://github.com/louiechiu137/SKILLS) |\n| 46 | [viliamvolosv/n8n-opencode-skill](https://github.com/viliamvolosv/n8n-opencode-skill) |\n| 47 | [Code-and-Sorts/awesome-copilot-agents](https://github.com/Code-and-Sorts/awesome-copilot-agents) |\n| 48 | [anchildress1/awesome-github-copilot](https://github.com/anchildress1/awesome-github-copilot) |\n\n## License\n\nMIT\n",
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/kaledor2/my-roast-website/read-rules",
+  "type": "skill",
+  "name": "read-rules",
+  "description": "Read all project rules and provide a quick recap of understanding",
+  "author": "kaledor2",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/kaledor2/my-roast-website/blob/HEAD/.claude/skills/read-rules/SKILL.md",
+    "repo": "kaledor2/my-roast-website",
+    "path": ".claude/skills/read-rules/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

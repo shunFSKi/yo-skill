@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/NBXXF/xxf_ios/xxf-aaa-security-privacy",
+  "type": "skill",
+  "name": "xxf-aaa-security-privacy",
+  "description": "iOS 安全与隐私基线，覆盖敏感数据存储、日志脱敏、权限最小化、传输安全、第三方 SDK 合规与审计清单。",
+  "author": "NBXXF",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/NBXXF/xxf_ios/blob/HEAD/skills/xxf-aaa-security-privacy/SKILL.md",
+    "repo": "NBXXF/xxf_ios",
+    "path": "skills/xxf-aaa-security-privacy/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 6,
+    "pushed_at": "2026-06-05T06:30:20Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

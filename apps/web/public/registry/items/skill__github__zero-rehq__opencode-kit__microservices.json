@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/zero-rehq/opencode-kit/microservices",
+  "type": "skill",
+  "name": "microservices",
+  "description": "Workflow E2E multi-repo: targets → snapshot → implement → no-any + ci → E2E_TRACE → review → wrap.",
+  "author": "zero-rehq",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/zero-rehq/opencode-kit/blob/HEAD/.opencode/skill/microservices/SKILL.md",
+    "repo": "zero-rehq/opencode-kit",
+    "path": ".opencode/skill/microservices/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

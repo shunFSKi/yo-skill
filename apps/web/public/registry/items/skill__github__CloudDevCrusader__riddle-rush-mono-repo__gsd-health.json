@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/CloudDevCrusader/riddle-rush-mono-repo/gsd-health",
+  "type": "skill",
+  "name": "gsd-health",
+  "description": "Diagnose planning directory health and optionally repair issues",
+  "author": "CloudDevCrusader",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/CloudDevCrusader/riddle-rush-mono-repo/blob/HEAD/.github/skills/gsd-health/SKILL.md",
+    "repo": "CloudDevCrusader/riddle-rush-mono-repo",
+    "path": ".github/skills/gsd-health/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-01T18:44:52Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

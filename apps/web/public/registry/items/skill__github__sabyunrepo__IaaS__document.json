@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/sabyunrepo/IaaS/document",
+  "type": "skill",
+  "name": "document",
+  "description": "문서 작성 및 업데이트. README, API 문서, 가이드, 아키텍처 문서 작성 시 사용.",
+  "author": "sabyunrepo",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/sabyunrepo/IaaS/blob/HEAD/.claude/skills/document/SKILL.md",
+    "repo": "sabyunrepo/IaaS",
+    "path": ".claude/skills/document/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

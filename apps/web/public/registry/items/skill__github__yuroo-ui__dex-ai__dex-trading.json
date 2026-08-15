@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/yuroo-ui/dex-ai/dex-trading",
+  "type": "skill",
+  "name": "dex-trading",
+  "description": "DEX swap & routing integration skills",
+  "author": "yuroo-ui",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/yuroo-ui/dex-ai/blob/HEAD/packages/plugins/dex-trading/SKILL.md",
+    "repo": "yuroo-ui/dex-ai",
+    "path": "packages/plugins/dex-trading/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 19
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

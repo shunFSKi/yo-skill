@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/maximemader/kitty-claw/gmail-fetch",
+  "type": "skill",
+  "name": "gmail_fetch",
+  "description": "Fetch a read-only summary of unread inbox messages tagged with [KittyClaw] in the subject as JSON using Google Workspace CLI",
+  "author": "maximemader",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/maximemader/kitty-claw/blob/HEAD/src/kitty/skills/gmail_fetch/SKILL.md",
+    "repo": "maximemader/kitty-claw",
+    "path": "src/kitty/skills/gmail_fetch/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

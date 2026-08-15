@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/steueranwalt/steuerkanzlei/erstantwort-generator",
+  "type": "skill",
+  "name": "erstantwort-generator",
+  "description": "Sekretariat oder Anwalt muss professionelle Erstantwort-E-Mail an potentiellen Mandanten senden. Hauptskill Erstantwort-E-Mail. Prüfraster: Dank für Anfrage exakte Anrede Terminvergabe-Hinweis Transkriptionsservice mit DSGVO-Einwilligung Mandatsverhältnis-Disclaimer Schlussformel. Output: fertige Erstantwort-E-Mail mit allen Pflichthinweisen. Abgrenzung zu muster-erstantwort (Template-Vorlage) und anrede-uebernehmen.",
+  "author": "steueranwalt",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/steueranwalt/steuerkanzlei/blob/HEAD/mandantenanfragen-assistent/skills/erstantwort-generator/SKILL.md",
+    "repo": "steueranwalt/steuerkanzlei",
+    "path": "mandantenanfragen-assistent/skills/erstantwort-generator/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-14T12:43:11Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/TWalkingSE/cybershield/privacidade-ia",
+  "type": "skill",
+  "name": "privacidade-ia",
+  "description": "Proteção de dados pessoais ao usar ferramentas de IA e LLMs. Use quando o usuário perguntar sobre privacidade em ChatGPT, Gemini, Copilot, Claude, Midjourney, ou qualquer IA generativa. Também use para: \"é seguro usar IA?\", \"a IA salva meus dados?\", \"como usar IA sem vazar dados\", \"LLM local\", \"Ollama\", \"LM Studio\", \"IA privada\", ou qualquer preocupação sobre dados em serviços de IA na nuvem.",
+  "author": "TWalkingSE",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/TWalkingSE/cybershield/blob/HEAD/.claude/skills/privacidade-ia/SKILL.md",
+    "repo": "TWalkingSE/cybershield",
+    "path": ".claude/skills/privacidade-ia/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-04-23T01:25:32Z",
+    "score": 35
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

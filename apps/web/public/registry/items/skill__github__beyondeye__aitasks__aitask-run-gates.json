@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/beyondeye/aitasks/aitask-run-gates",
+  "type": "skill",
+  "name": "aitask-run-gates",
+  "description": "Run a task's declared gates — the conversational front of the headless gate orchestrator engine. Dispatches unlocked machine-gate verifiers within their retry budgets, observes human gates without self-signalling, and reports.",
+  "author": "beyondeye",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/beyondeye/aitasks/blob/HEAD/.opencode/skills/aitask-run-gates/SKILL.md",
+    "repo": "beyondeye/aitasks",
+    "path": ".opencode/skills/aitask-run-gates/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 7,
+    "pushed_at": "2026-08-14T13:25:51Z",
+    "score": 53
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

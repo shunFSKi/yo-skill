@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/vishipayyallore/inspirational-quotes/content-review",
+  "type": "skill",
+  "name": "content-review",
+  "description": "Review vocabulary and quote content for format and convention compliance",
+  "author": "vishipayyallore",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/vishipayyallore/inspirational-quotes/blob/HEAD/.opencode/skills/content-review/SKILL.md",
+    "repo": "vishipayyallore/inspirational-quotes",
+    "path": ".opencode/skills/content-review/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

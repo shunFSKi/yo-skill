@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/DanielRamosAcosta/nas-k3s/postgres-create-backup",
+  "type": "skill",
+  "name": "postgres-create-backup",
+  "description": "Crear un backup lógico ad-hoc de todas las BBDD de Postgres, p. ej. antes de un cambio de riesgo (upgrade mayor de un servicio). Úsala cuando el usuario quiera forzar un backup inmediato de la BBDD antes de tocar algo.",
+  "author": "DanielRamosAcosta",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/DanielRamosAcosta/nas-k3s/blob/HEAD/.claude/skills/postgres-create-backup/SKILL.md",
+    "repo": "DanielRamosAcosta/nas-k3s",
+    "path": ".claude/skills/postgres-create-backup/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-08-14T22:26:39Z",
+    "score": 49,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 2
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

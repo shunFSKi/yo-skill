@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/gtr36/personal-health-graph/maintenance",
+  "type": "skill",
+  "name": "maintenance",
+  "description": "Scheduled audit of the Personal Health Graph — file staleness, cross-reference validity, upcoming retests and follow-ups. Use when the user asks to check the health graph for stale data, run maintenance, or audit what needs updating.",
+  "author": "gtr36",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/gtr36/personal-health-graph/blob/HEAD/.claude/skills/maintenance/SKILL.md",
+    "repo": "gtr36/personal-health-graph",
+    "path": ".claude/skills/maintenance/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 20,
+    "pushed_at": "2026-08-14T21:25:14Z",
+    "score": 57,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 20
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

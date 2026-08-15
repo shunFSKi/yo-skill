@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/tane-git/dotfiles/jira-images",
+  "type": "skill",
+  "name": "jira-images",
+  "description": "Download and view image attachments from Rocket Lab Jira issues",
+  "author": "tane-git",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/tane-git/dotfiles/blob/HEAD/.config/opencode/skills/jira-images/SKILL.md",
+    "repo": "tane-git/dotfiles",
+    "path": ".config/opencode/skills/jira-images/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

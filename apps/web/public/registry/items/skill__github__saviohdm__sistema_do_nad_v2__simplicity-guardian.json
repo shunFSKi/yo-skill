@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/saviohdm/sistema_do_nad_v2/simplicity-guardian",
+  "type": "skill",
+  "name": "simplicity-guardian",
+  "description": "Ensure system simplicity and avoid unnecessary complexity.",
+  "author": "saviohdm",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/saviohdm/sistema_do_nad_v2/blob/HEAD/.claude/skills/simplicity-guardian/SKILL.md",
+    "repo": "saviohdm/sistema_do_nad_v2",
+    "path": ".claude/skills/simplicity-guardian/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

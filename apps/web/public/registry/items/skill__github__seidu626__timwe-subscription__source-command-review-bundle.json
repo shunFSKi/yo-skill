@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/seidu626/timwe-subscription/source-command-review-bundle",
+  "type": "skill",
+  "name": "source-command-review-bundle",
+  "description": "Generate a review bundle for the current branch",
+  "author": "seidu626",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/seidu626/timwe-subscription/blob/HEAD/.agents/skills/source-command-review-bundle/SKILL.md",
+    "repo": "seidu626/timwe-subscription",
+    "path": ".agents/skills/source-command-review-bundle/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

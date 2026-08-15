@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/danygiguere/audit-skills/audit-exception-handling",
+  "type": "skill",
+  "name": "audit-exception-handling",
+  "description": "Exception and error-handling audit checklist. Use when reviewing try/catch blocks, error propagation, empty or overly broad catches, rethrowing, cleanup/finally paths, async error handling, or whether errors map to the right HTTP status (404 vs 403, 401, 422, 409).",
+  "author": "danygiguere",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/danygiguere/audit-skills/blob/HEAD/.agents/skills/audit-exception-handling/SKILL.md",
+    "repo": "danygiguere/audit-skills",
+    "path": ".agents/skills/audit-exception-handling/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 5,
+    "pushed_at": "2026-07-03T01:09:31Z",
+    "score": 47
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

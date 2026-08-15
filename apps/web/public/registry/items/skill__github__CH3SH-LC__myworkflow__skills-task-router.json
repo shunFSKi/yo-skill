@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/CH3SH-LC/myworkflow/skills-task-router",
+  "type": "skill",
+  "name": "任务分类入口",
+  "description": "Use when 拿不准请求属于哪类任务、该用哪个 skill，或疑似专项任务时查表。分类概念由会话注入（hook）提供，本表只作速查。不适用于子智能体。",
+  "author": "CH3SH-LC",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/CH3SH-LC/myworkflow/blob/HEAD/skills/task-router/SKILL.md",
+    "repo": "CH3SH-LC/myworkflow",
+    "path": "skills/task-router/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 3,
+    "pushed_at": "2026-08-03T18:54:45Z",
+    "score": 47,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 3
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

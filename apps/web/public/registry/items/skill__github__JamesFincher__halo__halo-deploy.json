@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/JamesFincher/halo/halo-deploy",
+  "type": "skill",
+  "name": "halo-deploy",
+  "description": "Deploy preview/dev only. Capture URL. Live probe REQUIRED before any human-facing message. Never production without human.",
+  "author": "JamesFincher",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/JamesFincher/halo/blob/HEAD/.grok/skills/halo-deploy/SKILL.md",
+    "repo": "JamesFincher/halo",
+    "path": ".grok/skills/halo-deploy/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-09T11:47:31Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

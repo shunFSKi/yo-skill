@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/kjuhwa/skills-hub/exact-name-fast-path-skip-interactive-prompt",
+  "type": "skill",
+  "name": "exact-name-fast-path-skip-interactive-prompt",
+  "description": "When a search keyword matches exactly one catalog entry's `name` field, skip the numbered-list picker and resolve directly. A UX pattern for CLIs with a \"search + pick\" flow that saves a round-trip for the common script/demo/exact-slug case.",
+  "author": "kjuhwa",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/kjuhwa/skills-hub/blob/HEAD/skills/cli/exact-name-fast-path-skip-interactive-prompt/SKILL.md",
+    "repo": "kjuhwa/skills-hub",
+    "path": "skills/cli/exact-name-fast-path-skip-interactive-prompt/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-04-26T15:42:32Z",
+    "score": 35
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

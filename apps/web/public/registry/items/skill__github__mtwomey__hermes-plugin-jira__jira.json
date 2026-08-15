@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/mtwomey/hermes-plugin-jira/jira",
+  "type": "skill",
+  "name": "jira",
+  "description": "Jira Cloud (roberthalf.atlassian.net) via the jira native plugin. This is a redirect stub — load the full skill with skill_view(name=\"jira:jira\").",
+  "author": "mtwomey",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/mtwomey/hermes-plugin-jira/blob/HEAD/skill-stub/SKILL.md",
+    "repo": "mtwomey/hermes-plugin-jira",
+    "path": "skill-stub/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

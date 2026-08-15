@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/Barytes/gogo/kb-ops",
+  "type": "skill",
+  "name": "kb-ops",
+  "description": "Ingest files, maintain the wiki, and run basic cleanup for this local knowledge base.",
+  "author": "Barytes",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Barytes/gogo/blob/HEAD/example-knowledge-base/skills/kb-ops/SKILL.md",
+    "repo": "Barytes/gogo",
+    "path": "example-knowledge-base/skills/kb-ops/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 4,
+    "pushed_at": "2026-04-28T03:16:24Z",
+    "score": 38,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 4
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

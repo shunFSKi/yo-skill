@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/NurfitraPujo/sentinel/sentinel-agent",
+  "type": "skill",
+  "name": "sentinel-agent",
+  "description": "Triage Sentinel issues as a registered agent via /api/agent/*: discover work from the events feed, claim/release, read issue detail, comment/progress/question, set status, link relations, batch mutations, and verify inbound webhooks.",
+  "author": "NurfitraPujo",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/NurfitraPujo/sentinel/blob/HEAD/.claude/skills/sentinel-agent/SKILL.md",
+    "repo": "NurfitraPujo/sentinel",
+    "path": ".claude/skills/sentinel-agent/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-15T03:56:22Z",
+    "score": 45,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

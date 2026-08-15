@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/agent-ecosystem/agent-skill-implementation/invoke-beta",
+  "type": "skill",
+  "name": "invoke-beta",
+  "description": "Second skill in a three-skill invocation chain. Activated by invoke-alpha, activates invoke-gamma. Use when directed by invoke-alpha.",
+  "author": "agent-ecosystem",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/agent-ecosystem/agent-skill-implementation/blob/HEAD/benchmark-skills/invoke-beta/SKILL.md",
+    "repo": "agent-ecosystem/agent-skill-implementation",
+    "path": "benchmark-skills/invoke-beta/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-08-03T05:12:38Z",
+    "score": 49
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -2,13 +2,13 @@
   "id": "skill:github/07130918/Agents/git-diff",
   "type": "skill",
   "name": "git-diff",
-  "description": "現在のブランチとベースブランチ(develop優先、なければmain)の差分を表示し、日本語で要約する。\nUse when: user asks to inspect branch diff, summarize changes, or run /git-diff.\nAccepts args: none.",
+  "description": "現在のブランチとベースブランチ(develop/main)の差分を表示し、変更内容の日本語サマリーを生成する。変更ファイル一覧、統計、コミット履歴を含む。`/git-diff` で呼び出される。",
   "author": "07130918",
   "source": {
     "registry": "github-search",
-    "url": "https://github.com/07130918/Agents/blob/HEAD/codex/skills/git-diff/SKILL.md",
+    "url": "https://github.com/07130918/Agents/blob/HEAD/claude/skills.disabled/git-diff/SKILL.md",
     "repo": "07130918/Agents",
-    "path": "codex/skills/git-diff/SKILL.md"
+    "path": "claude/skills.disabled/git-diff/SKILL.md"
   },
   "license": null,
   "install": {
@@ -17,7 +17,7 @@
   "quality": {
     "stars": 0,
     "pushed_at": "2026-08-09T07:09:26Z",
-    "score": 45,
+    "score": 42,
     "star_history": [
       {
         "d": "2026-08-15",

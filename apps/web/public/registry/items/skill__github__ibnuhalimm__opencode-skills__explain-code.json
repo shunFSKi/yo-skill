@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/ibnuhalimm/opencode-skills/explain-code",
+  "type": "skill",
+  "name": "explain-code",
+  "description": "Explains code with visual diagrams and analogies. Use when explaining how code works, teaching about a codebase, or when the user asks \"how does this code work?\"",
+  "author": "ibnuhalimm",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ibnuhalimm/opencode-skills/blob/HEAD/explain-code/SKILL.md",
+    "repo": "ibnuhalimm/opencode-skills",
+    "path": "explain-code/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

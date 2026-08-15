@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/Flow-Research/workstream/docs-review",
+  "type": "skill",
+  "name": "docs-review",
+  "description": "Review whether a code change requires documentation updates, examples, migration notes, policy docs, or developer onboarding updates.",
+  "author": "Flow-Research",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Flow-Research/workstream/blob/HEAD/.agents/skills/docs-review/SKILL.md",
+    "repo": "Flow-Research/workstream",
+    "path": ".agents/skills/docs-review/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 7,
+    "pushed_at": "2026-08-14T20:32:22Z",
+    "score": 53,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 7
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

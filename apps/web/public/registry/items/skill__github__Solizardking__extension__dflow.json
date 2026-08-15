@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Solizardking/extension/dflow",
+  "type": "skill",
+  "name": "dflow",
+  "description": "Build Solana trading apps with DFlow spot, prediction markets, Proof KYC, and Agent CLI, backed by Helius Sender and LaserStream. Use when the user mentions DFlow, pond.dflow.net, or prediction markets.",
+  "author": "Solizardking",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Solizardking/extension/blob/HEAD/plugins/clawd-code/skills/dflow/SKILL.md",
+    "repo": "Solizardking/extension",
+    "path": "plugins/clawd-code/skills/dflow/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-14T03:41:09Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

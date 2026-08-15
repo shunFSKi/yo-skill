@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/leanprover-community/lean-update/create-release-note",
+  "type": "skill",
+  "name": "create-release-note",
+  "description": "Use when writing release notes",
+  "author": "leanprover-community",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/leanprover-community/lean-update/blob/HEAD/.agents/skills/create-release-note/SKILL.md",
+    "repo": "leanprover-community/lean-update",
+    "path": ".agents/skills/create-release-note/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 19
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

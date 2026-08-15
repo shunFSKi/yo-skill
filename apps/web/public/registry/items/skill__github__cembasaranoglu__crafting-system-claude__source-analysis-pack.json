@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/cembasaranoglu/crafting-system-claude/source-analysis-pack",
+  "type": "skill",
+  "name": "source-analysis-pack",
+  "description": "Inspect a repository and produce a source-first artifact pack covering languages, frameworks, conventions, runtime surfaces, build pipeline, tests, and configs. Use when starting work on an unfamiliar repository.",
+  "author": "cembasaranoglu",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/cembasaranoglu/crafting-system-claude/blob/HEAD/cowork/skills/source-analysis-pack/SKILL.md",
+    "repo": "cembasaranoglu/crafting-system-claude",
+    "path": "cowork/skills/source-analysis-pack/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 5,
+    "pushed_at": "2026-05-05T18:25:10Z",
+    "score": 42
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

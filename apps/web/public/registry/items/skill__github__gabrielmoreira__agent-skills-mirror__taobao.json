@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/gabrielmoreira/agent-skills-mirror/taobao",
+  "type": "skill",
+  "name": "taobao",
+  "description": "Shop on the 淘宝 (Taobao) app. Use whenever the user wants to buy, order, or price something on 淘宝 / Taobao / 淘宝闪购, or names the Taobao app.",
+  "author": "gabrielmoreira",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/gabrielmoreira/agent-skills-mirror/blob/HEAD/mirrors/repos/physiclaw@PhysiClaw/skills/taobao/SKILL.md",
+    "repo": "gabrielmoreira/agent-skills-mirror",
+    "path": "mirrors/repos/physiclaw@PhysiClaw/skills/taobao/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 16,
+    "pushed_at": "2026-08-14T04:07:48Z",
+    "score": 56
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

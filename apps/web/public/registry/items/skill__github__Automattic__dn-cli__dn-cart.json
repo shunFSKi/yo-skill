@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Automattic/dn-cli/dn-cart",
+  "type": "skill",
+  "name": "dn-cart",
+  "description": "View the WordPress.com shopping cart using the dn CLI. Use when the user wants to see what domains are in their cart before checkout. User mode only - not available in partner mode.",
+  "author": "Automattic",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Automattic/dn-cli/blob/HEAD/skills/dn-cart/SKILL.md",
+    "repo": "Automattic/dn-cli",
+    "path": "skills/dn-cart/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 5,
+    "pushed_at": "2026-05-01T20:38:29Z",
+    "score": 42
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

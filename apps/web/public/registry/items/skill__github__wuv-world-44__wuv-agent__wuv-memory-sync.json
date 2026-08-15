@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/wuv-world-44/wuv-agent/wuv-memory-sync",
+  "type": "skill",
+  "name": "wuv-memory-sync",
+  "description": "Syncs your local conversations into your S.I.M. memory at api.wuv.ai",
+  "author": "wuv-world-44",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/wuv-world-44/wuv-agent/blob/HEAD/skills/wuv-memory-sync/SKILL.md",
+    "repo": "wuv-world-44/wuv-agent",
+    "path": "skills/wuv-memory-sync/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/xenonbyte/req-2-plan/r2p-archive",
+  "type": "skill",
+  "name": "r2p-archive",
+  "description": "Use when the user asks to run r2p-archive, archive an r2p run, or move a closed or executing r2p workflow run out of the active workspace.",
+  "author": "xenonbyte",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/xenonbyte/req-2-plan/blob/HEAD/tools/workflow_cli/agent_templates/codex/skills/r2p-archive/SKILL.md",
+    "repo": "xenonbyte/req-2-plan",
+    "path": "tools/workflow_cli/agent_templates/codex/skills/r2p-archive/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-07-11T14:53:18Z",
+    "score": 43,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

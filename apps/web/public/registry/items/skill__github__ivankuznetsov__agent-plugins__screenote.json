@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/ivankuznetsov/agent-plugins/screenote",
+  "type": "skill",
+  "name": "screenote",
+  "description": "Capture an HTTP(S) page or publish explicit PNG/JPEG files through the Screenote JSON CLI.",
+  "author": "ivankuznetsov",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ivankuznetsov/agent-plugins/blob/HEAD/plugins/screenote/pi/skills/screenote/SKILL.md",
+    "repo": "ivankuznetsov/agent-plugins",
+    "path": "plugins/screenote/pi/skills/screenote/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/luizarnoldch/skills-laboratory/feature-expert",
+  "type": "skill",
+  "name": "feature-expert",
+  "description": "Feature expert manager. Manage the active and archived feature lifecycle in FEATURES.yml and spect/archive/FEATURES.yml. Use when the user asks to initialize, add, update, list, link, query, or archive features; set or change sprint metadata (current_sprint, sprint_start, sprint_end); manage feature relationships (blocked_by, blocking, related_with); or link features to PRD paths. Do NOT use for creating or editing PRD files, creating or editing ADR files, coding tasks, git operations, CI/CD, package management, or general project architecture questions.",
+  "author": "luizarnoldch",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/luizarnoldch/skills-laboratory/blob/HEAD/workspace/legacy/feature-expert-tests/feature-expert-triggert/iteration_001/.opencode/skills/feature-expert/SKILL.md",
+    "repo": "luizarnoldch/skills-laboratory",
+    "path": "workspace/legacy/feature-expert-tests/feature-expert-triggert/iteration_001/.opencode/skills/feature-expert/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

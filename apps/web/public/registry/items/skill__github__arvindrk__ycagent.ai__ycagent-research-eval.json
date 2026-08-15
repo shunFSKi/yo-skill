@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/arvindrk/ycagent.ai/ycagent-research-eval",
+  "type": "skill",
+  "name": "ycagent-research-eval",
+  "description": "Design and run lightweight evals for the YC company research agent. Use when changing Trigger.dev tasks, E2B browsing, LLM providers, source crawling, extraction, or synthesis.",
+  "author": "arvindrk",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/arvindrk/ycagent.ai/blob/HEAD/.agents/skills/ycagent-research-eval/SKILL.md",
+    "repo": "arvindrk/ycagent.ai",
+    "path": ".agents/skills/ycagent-research-eval/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 4,
+    "pushed_at": "2026-08-06T11:47:35Z",
+    "score": 51,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 4
+      }
+    ]
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": false
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/alphadx/document_epic_extract/build-error-resolver",
+  "type": "skill",
+  "name": "build-error-resolver",
+  "description": "Resolver fallos de build, lint o tests con cambios mínimos y verificables. Usar cuando falle CI local/remota o aparezcan errores tras refactors.",
+  "author": "alphadx",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/alphadx/document_epic_extract/blob/HEAD/.codex/skills/build-error-resolver/SKILL.md",
+    "repo": "alphadx/document_epic_extract",
+    "path": ".codex/skills/build-error-resolver/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-04-06T02:20:44Z",
+    "score": 35,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

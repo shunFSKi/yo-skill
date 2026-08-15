@@ -1,0 +1,61 @@
+{
+  "id": "mcp:official/io.github.eltociear/repo-security-scanner",
+  "type": "mcp",
+  "name": "Repo Security Scanner — Malicious Code & Supply Chain",
+  "description": "Audit GitHub repos for malicious and supply-chain code before you depend on them.",
+  "author": "io.github.eltociear",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/eltociear/my-molt-agent",
+    "repo": "eltociear/my-molt-agent"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.apify.com/?actors=eltociear/mcp-server-security-scanner",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-15T02:32:48.275064Z",
+    "score": 42
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

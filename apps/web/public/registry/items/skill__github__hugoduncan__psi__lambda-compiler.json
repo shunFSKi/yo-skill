@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/hugoduncan/psi/lambda-compiler",
+  "type": "skill",
+  "name": "lambda-compiler",
+  "description": "compile and decompile prompts as lambda expressions.  Use when you want to compile, decompile or translate between lambda expressions and prose.",
+  "author": "hugoduncan",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/hugoduncan/psi/blob/HEAD/.psi/skills/lambda-compiler/SKILL.md",
+    "repo": "hugoduncan/psi",
+    "path": ".psi/skills/lambda-compiler/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 47,
+    "pushed_at": "2026-08-14T00:52:51Z",
+    "score": 60,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 47
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

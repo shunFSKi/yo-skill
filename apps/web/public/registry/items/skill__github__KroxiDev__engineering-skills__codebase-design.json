@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/KroxiDev/engineering-skills/codebase-design",
+  "type": "skill",
+  "name": "codebase-design",
+  "description": "Vocabulario compartido para diseñar módulos profundos. Usar cuando el usuario quiera diseñar o mejorar la interface de un módulo, encontrar oportunidades de profundización, decidir dónde va un seam, hacer el código más testeable o navegable por IA, o cuando otro skill necesite el vocabulario de módulos profundos.",
+  "author": "KroxiDev",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/KroxiDev/engineering-skills/blob/HEAD/skills/codebase-design/SKILL.md",
+    "repo": "KroxiDev/engineering-skills",
+    "path": "skills/codebase-design/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 3,
+    "pushed_at": "2026-08-09T14:32:58Z",
+    "score": 50
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/zone1987/claude-a-dev-team/gotenberg-outbound-filtering",
+  "type": "skill",
+  "name": "gotenberg-outbound-filtering",
+  "description": "Configure outbound URL filtering and SSRF protection in Gotenberg. Triggers: \"gotenberg ssrf\", \"outbound url filter\", \"ip filter gotenberg\", \"CHROMIUM_DENY_PRIVATE_IPS\", \"WEBHOOK_DENY_PRIVATE_IPS\", \"allow list gotenberg\", \"deny list gotenberg\", private ip blocking, url filtering konfigurieren.",
+  "author": "zone1987",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/zone1987/claude-a-dev-team/blob/HEAD/plugins/gotenberg/skills/gotenberg-outbound-filtering/SKILL.md",
+    "repo": "zone1987/claude-a-dev-team",
+    "path": "plugins/gotenberg/skills/gotenberg-outbound-filtering/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-06-15T06:30:18Z",
+    "score": 43
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

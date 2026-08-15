@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/terraleiloa/seren-skills/meet",
+  "type": "skill",
+  "name": "meet",
+  "description": "Create and manage Google Meet meeting spaces. Generate meeting links, configure meeting settings, and manage active conferences with OAuth authentication.",
+  "author": "terraleiloa",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/terraleiloa/seren-skills/blob/HEAD/google/meet/SKILL.md",
+    "repo": "terraleiloa/seren-skills",
+    "path": "google/meet/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

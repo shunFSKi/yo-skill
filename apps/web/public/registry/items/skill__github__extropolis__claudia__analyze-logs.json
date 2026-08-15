@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/extropolis/claudia/analyze-logs",
+  "type": "skill",
+  "name": "analyze-logs",
+  "description": "Analyze Claudia backend logs for errors or issues. Use when debugging problems with the orchestrator.",
+  "author": "extropolis",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/extropolis/claudia/blob/HEAD/.claude/skills/analyze-logs/SKILL.md",
+    "repo": "extropolis/claudia",
+    "path": ".claude/skills/analyze-logs/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 7,
+    "pushed_at": "2026-08-13T23:12:30Z",
+    "score": 53,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 7
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

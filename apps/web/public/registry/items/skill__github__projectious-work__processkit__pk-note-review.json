@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/projectious-work/processkit/pk-note-review",
+  "type": "skill",
+  "name": "pk-note-review",
+  "description": "Use the note-management skill to review all fleeting notes and decide what to promote or discard.",
+  "author": "projectious-work",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/projectious-work/processkit/blob/HEAD/.claude/skills/pk-note-review/SKILL.md",
+    "repo": "projectious-work/processkit",
+    "path": ".claude/skills/pk-note-review/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-07T19:38:05Z",
+    "score": 42
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

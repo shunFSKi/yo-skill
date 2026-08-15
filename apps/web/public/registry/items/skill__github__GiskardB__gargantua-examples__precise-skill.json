@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/GiskardB/gargantua-examples/precise-skill",
+  "type": "skill",
+  "name": "precise-skill",
+  "description": "Deterministic, low-temperature skill that should route to a dedicated model alias.",
+  "author": "GiskardB",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/GiskardB/gargantua-examples/blob/HEAD/agent-example-skill-llm-overrides/src/main/resources/skills/precise-skill/SKILL.md",
+    "repo": "GiskardB/gargantua-examples",
+    "path": "agent-example-skill-llm-overrides/src/main/resources/skills/precise-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-05T14:55:56Z",
+    "score": 42
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

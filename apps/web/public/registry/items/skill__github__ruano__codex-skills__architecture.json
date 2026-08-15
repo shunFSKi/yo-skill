@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/ruano/codex-skills/architecture",
+  "type": "skill",
+  "name": "architecture",
+  "description": "Review system design and architectural decisions",
+  "author": "ruano",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ruano/codex-skills/blob/HEAD/.agents/skills/architecture/SKILL.md",
+    "repo": "ruano/codex-skills",
+    "path": ".agents/skills/architecture/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

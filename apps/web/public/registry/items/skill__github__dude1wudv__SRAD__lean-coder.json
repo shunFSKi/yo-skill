@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/dude1wudv/SRAD/lean-coder",
+  "type": "skill",
+  "name": "lean-coder",
+  "description": "Project-local lean coding mode. Use for SRAD edits to choose the shortest correct change, avoid speculative abstractions, prefer existing code and standard tools, and keep checks minimal but real.",
+  "author": "dude1wudv",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/dude1wudv/SRAD/blob/HEAD/.agents/skills/lean-coder/SKILL.md",
+    "repo": "dude1wudv/SRAD",
+    "path": ".agents/skills/lean-coder/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-07-02T19:55:22Z",
+    "score": 43,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/mike-douglas/just-one-thing-website/just-one-thing-product",
+  "type": "skill",
+  "name": "just-one-thing-product",
+  "description": "Used to look up information about the Just One Thing app, specifically product specifications, branding and voice guidelines, and scope documentation. This skill has information to answer the questions about what the product is, what the problems it's trying to solve, and what is in scope for the first version of it.",
+  "author": "mike-douglas",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/mike-douglas/just-one-thing-website/blob/HEAD/.agents/skills/just-one-thing-product/SKILL.md",
+    "repo": "mike-douglas/just-one-thing-website",
+    "path": ".agents/skills/just-one-thing-product/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

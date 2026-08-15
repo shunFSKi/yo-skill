@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/DawnEver/ai-agents/reply-email",
+  "type": "skill",
+  "name": "reply-email",
+  "description": "Codex entry point for the canonical Claude email-reply command. Use to draft, resume, polish, or archive email replies while preserving the explicit archive-approval gate.",
+  "author": "DawnEver",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/DawnEver/ai-agents/blob/HEAD/reply-email/.agents/skills/reply-email/SKILL.md",
+    "repo": "DawnEver/ai-agents",
+    "path": "reply-email/.agents/skills/reply-email/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-13T19:29:48Z",
+    "score": 48,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/gricha/dangerous-skills/generate-readme",
+  "type": "skill",
+  "name": "generate-readme",
+  "description": "Generate a README.md for the project. Use when the user asks to create or update the README.",
+  "author": "gricha",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/gricha/dangerous-skills/blob/HEAD/skills/readme-generator/SKILL.md",
+    "repo": "gricha/dangerous-skills",
+    "path": "skills/readme-generator/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 38,
+    "pushed_at": "2026-05-31T23:16:24Z",
+    "score": 51,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 38
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/kisuk010203/cargoscope/cargo-check",
+  "type": "skill",
+  "name": "cargo-check",
+  "description": "Run full Rust quality pipeline - format check, clippy lint, build, and test. Use when code has been modified and needs validation.",
+  "author": "kisuk010203",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/kisuk010203/cargoscope/blob/HEAD/.claude/skills/cargo-check/SKILL.md",
+    "repo": "kisuk010203/cargoscope",
+    "path": ".claude/skills/cargo-check/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

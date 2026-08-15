@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/curtis-turner/stint/release-check",
+  "type": "skill",
+  "name": "release-check",
+  "description": "Run the full quality gate before a release. Use when the user wants to prepare a release, check if the project is ready to tag, or verify everything passes.",
+  "author": "curtis-turner",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/curtis-turner/stint/blob/HEAD/.claude/skills/release-check/SKILL.md",
+    "repo": "curtis-turner/stint",
+    "path": ".claude/skills/release-check/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-03T16:45:48Z",
+    "score": 48,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

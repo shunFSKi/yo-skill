@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/caarlos0/dotfiles/go-doc",
+  "type": "skill",
+  "name": "go-doc",
+  "description": "Get documentation for any Go library using `go doc`. Use when asked about Go package documentation, API reference, function signatures, or how to use a specific Go library/package.",
+  "author": "caarlos0",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/caarlos0/dotfiles/blob/HEAD/skills/go-doc/SKILL.md",
+    "repo": "caarlos0/dotfiles",
+    "path": "skills/go-doc/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 219,
+    "pushed_at": "2026-08-14T01:11:37Z",
+    "score": 76,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 219
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": "# caarlos0/dotfiles\n\nThis is my latest dotfiles generation.\n\nI've been experimenting with many different tools to manage them properly, from\nAnsible to shell scripts, and never liked any of them that much, to be honest.\n\nYou can see the history on these repositories:\n\n- [dotfiles.zsh](https://github.com/caarlos0/dotfiles.zsh)\n- [dotfiles.fish](https://github.com/caarlos0/dotfiles.fish)\n\nThen, I tried nix, which seemed fine, but also overkill for my case.\nIn the end, what I really wanted was just a simple shell script, which is this\nversion here!\n\n## Applying\n\n```bash\n./setup\n\n# And maybe:\n./macos/set-defaults.sh\n```\n\nMachine-specific bits (`Brewfile.<host>`, `hammerspoon/apps.<host>.lua`) are\npicked by `hostname -s`: `darkmatter` is personal, `quasar` is work.\n\n## Releasing\n\n```bash\n./scripts/release.sh\n```\n",
+  "status": "curated"
+}

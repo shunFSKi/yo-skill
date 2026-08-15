@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/mxz7/nypsi/discord-rest",
+  "type": "skill",
+  "name": "discord-rest",
+  "description": "Prefer the shared Discord REST client for Discord API operations from the main process, API controllers, jobs, or utilities. Use when fetching or mutating Discord resources without an existing NypsiClient instance.",
+  "author": "mxz7",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/mxz7/nypsi/blob/HEAD/.agents/skills/discord-rest/SKILL.md",
+    "repo": "mxz7/nypsi",
+    "path": ".agents/skills/discord-rest/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

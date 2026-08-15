@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/Smile-L-up/industrial-agent/weather-map-recent",
+  "type": "skill",
+  "name": "weather_map_recent",
+  "description": "生成最近N天的气象色斑图（用户说'最近三天/近一周/近一个月'等相对时间时使用）",
+  "author": "Smile-L-up",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Smile-L-up/industrial-agent/blob/HEAD/skills/weather_map_recent/SKILL.md",
+    "repo": "Smile-L-up/industrial-agent",
+    "path": "skills/weather_map_recent/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-05-25T01:49:55Z",
+    "score": 37,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

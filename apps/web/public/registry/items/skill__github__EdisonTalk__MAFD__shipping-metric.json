@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/EdisonTalk/MAFD/shipping-metric",
+  "type": "skill",
+  "name": "shipping-metric",
+  "description": "处理跨境物流中的距离、重量与报价换算，适用于运营人员答复客户前的规则确认。",
+  "author": "EdisonTalk",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/EdisonTalk/MAFD/blob/HEAD/07_AgentSkill/04_ScriptExecution_Offical/skills/shipping-metric/SKILL.md",
+    "repo": "EdisonTalk/MAFD",
+    "path": "07_AgentSkill/04_ScriptExecution_Offical/skills/shipping-metric/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 25,
+    "pushed_at": "2026-04-19T12:50:34Z",
+    "score": 42,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 25
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

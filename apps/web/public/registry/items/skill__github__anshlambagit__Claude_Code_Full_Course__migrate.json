@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/anshlambagit/Claude_Code_Full_Course/migrate",
+  "type": "skill",
+  "name": "migrate",
+  "description": "Migrates the fetched data stored in the \".claude/skills/fetchAPI/data/\" directory to a new location. Use when you want to move your data to a different directory.",
+  "author": "anshlambagit",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/anshlambagit/Claude_Code_Full_Course/blob/HEAD/.claude/skills/migrate/SKILL.md",
+    "repo": "anshlambagit/Claude_Code_Full_Course",
+    "path": ".claude/skills/migrate/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 22,
+    "pushed_at": "2026-03-15T12:31:18Z",
+    "score": 47,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 22
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

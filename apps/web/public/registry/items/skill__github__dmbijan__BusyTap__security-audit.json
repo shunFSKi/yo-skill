@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/dmbijan/BusyTap/security-audit",
+  "type": "skill",
+  "name": "security-audit",
+  "description": "BusyTap security audit workflow. Use for auth hardening, RBAC checks, input validation, payment security, webhook validation, secret handling, and sensitive data exposure review.",
+  "author": "dmbijan",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/dmbijan/BusyTap/blob/HEAD/.github/skills/security-audit/SKILL.md",
+    "repo": "dmbijan/BusyTap",
+    "path": ".github/skills/security-audit/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-10T19:09:55Z",
+    "score": 45
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

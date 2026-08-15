@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/projectamazonph/agent-skills-library/astryx-component-docs",
+  "type": "skill",
+  "name": "astryx-component-docs",
+  "description": "Guide for writing Astryx component documentation (.doc.mjs files). Covers exports, architecture, translation layers, and best practices for the Astryx design system.",
+  "author": "projectamazonph",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/projectamazonph/agent-skills-library/blob/HEAD/skills/shared-skills/astryx-component-docs/SKILL.md",
+    "repo": "projectamazonph/agent-skills-library",
+    "path": "skills/shared-skills/astryx-component-docs/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

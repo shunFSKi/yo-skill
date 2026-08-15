@@ -2,13 +2,13 @@
   "id": "skill:github/GiskardB/gargantua-examples/default-skill",
   "type": "skill",
   "name": "default-skill",
-  "description": "Fallback for anything that is not a frequently asked question — greetings, small talk, and requests that need a human.",
+  "description": "Generic skill — this example focuses on the cost-tracking and audit beans, not on skill behaviour. Tests call CostTracker and AuditStore directly and synthesise stub AgentRequest/AgentResponse/RoutingResult values to exercise AuditService.recordRequest.",
   "author": "GiskardB",
   "source": {
     "registry": "github-search",
-    "url": "https://github.com/GiskardB/gargantua-examples/blob/HEAD/agent-example-runtime-bundle/support-agent.gbundle/skills/default-skill/SKILL.md",
+    "url": "https://github.com/GiskardB/gargantua-examples/blob/HEAD/agent-example-cost-and-audit/src/main/resources/skills/default-skill/SKILL.md",
     "repo": "GiskardB/gargantua-examples",
-    "path": "agent-example-runtime-bundle/support-agent.gbundle/skills/default-skill/SKILL.md"
+    "path": "agent-example-cost-and-audit/src/main/resources/skills/default-skill/SKILL.md"
   },
   "license": null,
   "install": {
@@ -46,7 +46,7 @@
     ]
   },
   "tags": {
-    "category": null,
+    "category": "编程",
     "featured": false
   },
   "readme": null,

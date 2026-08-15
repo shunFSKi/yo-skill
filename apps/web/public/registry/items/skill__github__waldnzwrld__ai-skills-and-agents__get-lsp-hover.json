@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/waldnzwrld/ai-skills-and-agents/get-lsp-hover",
+  "type": "skill",
+  "name": "get-lsp-hover",
+  "description": "Fetch LSP hover documentation for a symbol at a specific position. Use to get type signatures, docstrings, and inline docs without reading source files.",
+  "author": "waldnzwrld",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/waldnzwrld/ai-skills-and-agents/blob/HEAD/agent-skills/get-lsp-hover/SKILL.md",
+    "repo": "waldnzwrld/ai-skills-and-agents",
+    "path": "agent-skills/get-lsp-hover/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

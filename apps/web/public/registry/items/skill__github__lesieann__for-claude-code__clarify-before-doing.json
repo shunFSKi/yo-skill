@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/lesieann/for-claude-code/clarify-before-doing",
+  "type": "skill",
+  "name": "clarify-before-doing",
+  "description": "在動手做複雜任務前，先釐清使用者意圖、目的與成功條件，再規劃步驟。",
+  "author": "lesieann",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/lesieann/for-claude-code/blob/HEAD/skills/clarify-before-doing/SKILL.md",
+    "repo": "lesieann/for-claude-code",
+    "path": "skills/clarify-before-doing/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 19
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

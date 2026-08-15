@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/f1sherman/new-machine-bootstrap/catchup",
+  "type": "skill",
+  "name": "_catchup",
+  "description": "Use when the user wants a quick summary of the current session context. Use when switching between sessions, losing track, or needing a refresher on what's happening and what's next.",
+  "author": "f1sherman",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/f1sherman/new-machine-bootstrap/blob/HEAD/roles/common/files/config/skills/common/_catchup/SKILL.md",
+    "repo": "f1sherman/new-machine-bootstrap",
+    "path": "roles/common/files/config/skills/common/_catchup/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-08-15T03:58:19Z",
+    "score": 49,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 2
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

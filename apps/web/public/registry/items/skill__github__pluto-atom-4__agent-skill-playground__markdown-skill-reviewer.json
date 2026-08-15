@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/pluto-atom-4/agent-skill-playground/markdown-skill-reviewer",
+  "type": "skill",
+  "name": "markdown-skill-reviewer",
+  "description": "Reviews Agent Skill files (SKILL.md) for style and structural consistency using markdownlint-cli2.",
+  "author": "pluto-atom-4",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/pluto-atom-4/agent-skill-playground/blob/HEAD/.claude/skills/markdown-reviewer/SKILL.md",
+    "repo": "pluto-atom-4/agent-skill-playground",
+    "path": ".claude/skills/markdown-reviewer/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

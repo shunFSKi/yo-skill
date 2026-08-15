@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/ongspxm/mobot_skills/web-search",
+  "type": "skill",
+  "name": "web-search",
+  "description": "Use for no-key DuckDuckGo Lite search.",
+  "author": "ongspxm",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ongspxm/mobot_skills/blob/HEAD/DEPRECATED/web-search/SKILL.md",
+    "repo": "ongspxm/mobot_skills",
+    "path": "DEPRECATED/web-search/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 19
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

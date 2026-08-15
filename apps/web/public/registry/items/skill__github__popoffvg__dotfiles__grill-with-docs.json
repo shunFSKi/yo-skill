@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/popoffvg/dotfiles/grill-with-docs",
+  "type": "skill",
+  "name": "grill-with-docs",
+  "description": "This skill should be used when the user wants a relentless interview that sharpens a plan or design AND records docs (ADRs + glossary) as it goes — \"grill me and write it up\", \"grill with docs\".",
+  "author": "popoffvg",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/popoffvg/dotfiles/blob/HEAD/harness/claude/skills/grill-with-docs/SKILL.md",
+    "repo": "popoffvg/dotfiles",
+    "path": "harness/claude/skills/grill-with-docs/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

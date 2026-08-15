@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/masayannuu/agent-toybox/plantuml-stdlib",
+  "type": "skill",
+  "name": "plantuml-stdlib",
+  "description": "Find PlantUML Standard Library (stdlib) modules and suggest `!include <...>` paths (C4-PlantUML, icons, macros, etc.).",
+  "author": "masayannuu",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/masayannuu/agent-toybox/blob/HEAD/skills/plantuml-stdlib/SKILL.md",
+    "repo": "masayannuu/agent-toybox",
+    "path": "skills/plantuml-stdlib/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/wechat-miniprogram/ai-mode-skills/wxa-skills-eval",
+  "type": "skill",
+  "name": "wxa-skills-eval",
+  "description": "微信小程序 AI Skill 端到端评测引擎；当需要评测一个或多个 wxapp Skill 的意图理解、轨迹生成与最终答案质量时加载本 Skill。",
+  "author": "wechat-miniprogram",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/wechat-miniprogram/ai-mode-skills/blob/HEAD/wxa-skills-eval/SKILL.md",
+    "repo": "wechat-miniprogram/ai-mode-skills",
+    "path": "wxa-skills-eval/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": false
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/AhsanAyaz/code-with-ahsan/hello-world",
+  "type": "skill",
+  "name": "hello-world",
+  "description": "Provides system information and a greeting when the user says \"hello world\".",
+  "author": "AhsanAyaz",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/AhsanAyaz/code-with-ahsan/blob/HEAD/.agent/skills/hello-world/SKILL.md",
+    "repo": "AhsanAyaz/code-with-ahsan",
+    "path": ".agent/skills/hello-world/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 26,
+    "pushed_at": "2026-08-14T08:29:49Z",
+    "score": 55,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 26
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

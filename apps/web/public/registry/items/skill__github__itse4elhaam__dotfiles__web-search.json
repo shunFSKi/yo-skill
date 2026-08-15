@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/itse4elhaam/dotfiles/web-search",
+  "type": "skill",
+  "name": "web-search",
+  "description": "Web search and page content extraction via DuckDuckGo. No API key required. Use for searching documentation, facts, or any web content.",
+  "author": "itse4elhaam",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/itse4elhaam/dotfiles/blob/HEAD/.pi/agent/skills/web-search/SKILL.md",
+    "repo": "itse4elhaam/dotfiles",
+    "path": ".pi/agent/skills/web-search/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

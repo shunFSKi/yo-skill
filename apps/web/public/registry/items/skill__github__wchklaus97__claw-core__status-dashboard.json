@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/wchklaus97/claw-core/status-dashboard",
+  "type": "skill",
+  "name": "status-dashboard",
+  "description": "Display current status of Claw Core sessions, OpenClaw cron jobs, and recent activity. Use when user asks for status/overview/dashboard.",
+  "author": "wchklaus97",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/wchklaus97/claw-core/blob/HEAD/plugin/skills/status-dashboard/SKILL.md",
+    "repo": "wchklaus97/claw-core",
+    "path": "plugin/skills/status-dashboard/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

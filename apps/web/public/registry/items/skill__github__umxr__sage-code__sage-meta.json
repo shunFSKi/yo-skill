@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/umxr/sage-code/sage-meta",
+  "type": "skill",
+  "name": "sage-meta",
+  "description": "Run SAGE-Code meta-evaluation to score heuristic effectiveness and prune ineffective rules. Triggers automatically every 10 sessions or daily.",
+  "author": "umxr",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/umxr/sage-code/blob/HEAD/sage-code/skills/sage-meta/SKILL.md",
+    "repo": "umxr/sage-code",
+    "path": "sage-code/skills/sage-meta/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

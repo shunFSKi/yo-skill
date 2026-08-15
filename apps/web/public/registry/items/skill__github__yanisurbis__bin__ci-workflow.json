@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/yanisurbis/bin/ci-workflow",
+  "type": "skill",
+  "name": "ci-workflow",
+  "description": "Use this skill when you see CI failures and want to understand the exact error. Debug GitHub Actions CI failures by fetching workflow runs, identifying failed jobs, and retrieving logs. Use when CI fails, builds break, tests fail in GitHub Actions, or user asks about CI/PR status. Triggers on phrases like \"CI failed\", \"build failed\", \"check CI\", \"fix pipeline\", \"workflow failed\", \"why did the build fail\", \"check PR status\", \"PR checks failing\", or \"why is my PR red\".",
+  "author": "yanisurbis",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/yanisurbis/bin/blob/HEAD/.claude/skills/ci-workflow/SKILL.md",
+    "repo": "yanisurbis/bin",
+    "path": ".claude/skills/ci-workflow/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

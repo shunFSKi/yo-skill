@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/islee23520/codex-xai-oauth/xai-x-search",
+  "type": "skill",
+  "name": "xai_x_search",
+  "description": "Use when the user asks to search X, Twitter, posts, handles, or tweets through xAI/Grok server-side x_search.",
+  "author": "islee23520",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/islee23520/codex-xai-oauth/blob/HEAD/skills/xai-x-search/SKILL.md",
+    "repo": "islee23520/codex-xai-oauth",
+    "path": "skills/xai-x-search/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-13T00:48:36Z",
+    "score": 40,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

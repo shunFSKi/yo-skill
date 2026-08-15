@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/NagyVikt/codex-plugins/setup",
+  "type": "skill",
+  "name": "setup",
+  "description": "Use when user encounters Supabase MCP errors, OAuth/auth failures, project access issues, or needs help configuring and validating Supabase integration.",
+  "author": "NagyVikt",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/NagyVikt/codex-plugins/blob/HEAD/plugins/supabase/skills/setup/SKILL.md",
+    "repo": "NagyVikt/codex-plugins",
+    "path": "plugins/supabase/skills/setup/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-03-29T18:19:53Z",
+    "score": 39,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 2
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

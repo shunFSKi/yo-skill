@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/mokagio/dotfiles/pull",
+  "type": "skill",
+  "name": "pull",
+  "description": "Rebase the current branch onto its upstream.\nUse when asked to \"pull\", \"rebase on remote\", or invokes /pull.\nAlso the recovery path /push points at when a push is rejected non-fast-forward.",
+  "author": "mokagio",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/mokagio/dotfiles/blob/HEAD/agents/skills/pull/SKILL.md",
+    "repo": "mokagio/dotfiles",
+    "path": "agents/skills/pull/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

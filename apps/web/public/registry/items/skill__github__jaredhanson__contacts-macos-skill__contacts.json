@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/jaredhanson/contacts-macos-skill/contacts",
+  "type": "skill",
+  "name": "contacts",
+  "description": "Get contact information from macOS.  Use when texting, calling, emailing or social networking with people and companies.",
+  "author": "jaredhanson",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/jaredhanson/contacts-macos-skill/blob/HEAD/SKILL.md",
+    "repo": "jaredhanson/contacts-macos-skill",
+    "path": "SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

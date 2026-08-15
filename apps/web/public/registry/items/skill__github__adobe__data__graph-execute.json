@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/adobe/data/graph-execute",
+  "type": "skill",
+  "name": "graph-execute",
+  "description": "executes a graph of steps",
+  "author": "adobe",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/adobe/data/blob/HEAD/packages/data-ai/skills/graph-execute/SKILL.md",
+    "repo": "adobe/data",
+    "path": "packages/data-ai/skills/graph-execute/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 12,
+    "pushed_at": "2026-08-13T21:07:07Z",
+    "score": 49
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

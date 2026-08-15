@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/LCBO/codecondense_claude_plugin/slim-update",
+  "type": "skill",
+  "name": "slim-update",
+  "description": "Update the installed condense plugin (git clone → git pull; Claude Code marketplace install → claude plugin update; Grok equivalent via grok plugin update). Restart the agent after.",
+  "author": "LCBO",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/LCBO/codecondense_claude_plugin/blob/HEAD/skills/slim-update/SKILL.md",
+    "repo": "LCBO/codecondense_claude_plugin",
+    "path": "skills/slim-update/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-07T21:23:15Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

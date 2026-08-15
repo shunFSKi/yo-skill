@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/giggsoinc/raven/raven-incident",
+  "type": "skill",
+  "name": "raven-incident",
+  "description": "Use to create a manual incident report for Guard events or production issues. Classifies as P1/P2/P3 and notifies Prism7.",
+  "author": "giggsoinc",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/giggsoinc/raven/blob/HEAD/skills/raven-incident/SKILL.md",
+    "repo": "giggsoinc/raven",
+    "path": "skills/raven-incident/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 5,
+    "pushed_at": "2026-08-07T19:49:47Z",
+    "score": 52,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 5
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

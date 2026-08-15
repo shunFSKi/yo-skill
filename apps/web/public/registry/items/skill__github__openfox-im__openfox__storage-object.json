@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/openfox-im/openfox/storage-object",
+  "type": "skill",
+  "name": "storage-object",
+  "description": "Deterministic object preparation and rendering backend for immutable storage providers.",
+  "author": "openfox-im",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/openfox-im/openfox/blob/HEAD/skills/storage-object/SKILL.md",
+    "repo": "openfox-im/openfox",
+    "path": "skills/storage-object/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-03-23T00:58:55Z",
+    "score": 35
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

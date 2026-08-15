@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/p3nGu1nZz/Review-Cat/worktree-manager",
+  "type": "skill",
+  "name": "worktree-manager",
+  "description": "Manages git worktrees for worker containers (create/remove/cleanup). Use when setting up parallel work, repairing worktree state, or cleaning up stale worktrees.",
+  "author": "p3nGu1nZz",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/p3nGu1nZz/Review-Cat/blob/HEAD/.github/skills/worktree-manager/SKILL.md",
+    "repo": "p3nGu1nZz/Review-Cat",
+    "path": ".github/skills/worktree-manager/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

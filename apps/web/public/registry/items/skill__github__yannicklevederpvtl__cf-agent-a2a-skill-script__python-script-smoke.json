@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/yannicklevederpvtl/cf-agent-a2a-skill-script/python-script-smoke",
+  "type": "skill",
+  "name": "python-script-smoke",
+  "description": "Verify that Python skill scripts execute correctly via the SkillRunner MCP sidecar.",
+  "author": "yannicklevederpvtl",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/yannicklevederpvtl/cf-agent-a2a-skill-script/blob/HEAD/apps/agent-a2a-beta/.agents/skills/python-script-smoke/SKILL.md",
+    "repo": "yannicklevederpvtl/cf-agent-a2a-skill-script",
+    "path": "apps/agent-a2a-beta/.agents/skills/python-script-smoke/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

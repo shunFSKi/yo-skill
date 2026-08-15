@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/nullhyeon/mju-cli/mju-library-seat-position",
+  "type": "skill",
+  "name": "mju-library-seat-position",
+  "description": "자연도서관 지원 열람실의 좌석 위치를 설명하는 helper skill.",
+  "author": "nullhyeon",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/nullhyeon/mju-cli/blob/HEAD/skills/mju-library-seat-position/SKILL.md",
+    "repo": "nullhyeon/mju-cli",
+    "path": "skills/mju-library-seat-position/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 19
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/717986230/erbing-workspace/multi-agent-collab",
+  "type": "skill",
+  "name": "multi-agent-collab",
+  "description": "多Agent协作系统 - 管理collector/researcher/main三个Agent的协作。自动分配任务、收集结果、汇总给主代理。触发：当需要并行处理多个任务时使用。",
+  "author": "717986230",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/717986230/erbing-workspace/blob/HEAD/skills/multi-agent-collab/SKILL.md",
+    "repo": "717986230/erbing-workspace",
+    "path": "skills/multi-agent-collab/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-04-10T04:30:52Z",
+    "score": 32,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/zenbuapps/zenbu-powers/aibdd-core",
+  "type": "skill",
+  "name": "aibdd-core",
+  "description": "跨 skill 共用的 reference 庫。包含 reconciler contract（desired-state reconciliation 合約）等 所有 form skill 共用的模式定義。不直接觸發，由其他 skill Read references/ 中的檔案。",
+  "author": "zenbuapps",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/zenbuapps/zenbu-powers/blob/HEAD/skills/aibdd-core/SKILL.md",
+    "repo": "zenbuapps/zenbu-powers",
+    "path": "skills/aibdd-core/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/mirror-mind-ai/mirror/mm-welcome",
+  "type": "skill",
+  "name": "mm:welcome",
+  "description": "Renders the state-aware welcome card on demand",
+  "author": "mirror-mind-ai",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/mirror-mind-ai/mirror/blob/HEAD/.claude/skills/mm-welcome/SKILL.md",
+    "repo": "mirror-mind-ai/mirror",
+    "path": ".claude/skills/mm-welcome/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 16,
+    "pushed_at": "2026-08-14T18:51:01Z",
+    "score": 53,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 16
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/danygiguere/audit-skills/audit-blocking-io-async",
+  "type": "skill",
+  "name": "audit-blocking-io-async",
+  "description": "Blocking I/O in async contexts checklist. Use when reviewing async/await code, event-loop or reactor-based services, coroutines, or worker/thread pools — sync calls in async handlers, CPU work on the event loop, sync-over-async, blocking sleeps, missing timeouts.",
+  "author": "danygiguere",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/danygiguere/audit-skills/blob/HEAD/.agents/skills/audit-blocking-io-async/SKILL.md",
+    "repo": "danygiguere/audit-skills",
+    "path": ".agents/skills/audit-blocking-io-async/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 5,
+    "pushed_at": "2026-07-03T01:09:31Z",
+    "score": 47
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

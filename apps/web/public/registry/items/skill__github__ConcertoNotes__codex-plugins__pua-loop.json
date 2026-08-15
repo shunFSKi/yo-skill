@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/ConcertoNotes/codex-plugins/pua-loop",
+  "type": "skill",
+  "name": "pua-loop",
+  "description": "PUA 的自动迭代模式。适合连续推进、持续验证、直到达到停机条件或显式暂停条件的任务。",
+  "author": "ConcertoNotes",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ConcertoNotes/codex-plugins/blob/HEAD/plugins/community/team-skills-platform/skills/pua-loop/SKILL.md",
+    "repo": "ConcertoNotes/codex-plugins",
+    "path": "plugins/community/team-skills-platform/skills/pua-loop/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-26T02:13:54Z",
+    "score": 37
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

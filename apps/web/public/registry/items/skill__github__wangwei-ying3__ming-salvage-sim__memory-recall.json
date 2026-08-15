@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/wangwei-ying3/ming-salvage-sim/memory-recall",
+  "type": "skill",
+  "name": "memory-recall",
+  "description": "皇帝问及旧事、某年某月发生了什么、或需补充检索历史记录时使用。",
+  "author": "wangwei-ying3",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/wangwei-ying3/ming-salvage-sim/blob/HEAD/.agno_skills/memory-recall/SKILL.md",
+    "repo": "wangwei-ying3/ming-salvage-sim",
+    "path": ".agno_skills/memory-recall/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 19
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

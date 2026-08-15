@@ -28,7 +28,7 @@
   "quality": {
     "stars": null,
     "pushed_at": "2026-08-14T14:51:52.930973Z",
-    "score": 52
+    "score": 42
   },
   "security": {
     "score": 100,
@@ -60,6 +60,6 @@
     "category": "设计",
     "featured": false
   },
-  "readme": "# imagedimensions-mcp\n\nAn [MCP](https://modelcontextprotocol.io) server that audits the images on any public web page —\n**natural vs. rendered dimensions, oversized-image detection, and format breakdown** — so AI agents\n(Claude, Cursor, Windsurf, etc.) can check image performance during development.\n\nPowered by [imagedimensions.com](https://imagedimensions.com). The scan runs server-side, so **no\nlocal browser or Chrome install is required.**\n\n## Install / run\n\n```jsonc\n// Claude Desktop / any MCP client config\n{\n  \"mcpServers\": {\n    \"imagedimensions\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"imagedimensions-mcp\"]\n    }\n  }\n}\n```\n\n## Tool\n\n### `scan_image_dimensions`\n\n| Param | Type | Description |\n| --- | --- | --- |\n| `url` | string (required) | Public URL of the page to audit. |\n| `oversizedThreshold` | number (optional) | Area-overshoot ratio to flag as oversized. Default `4` (≈2× per dimension). |\n\nReturns a text report plus structured content:\n\n- total / visible image counts and CSS-background count\n- modern-format share (WebP + AVIF)\n- format breakdown\n- the list of oversized images (natural → rendered, overshoot ratio, format, src)\n- a link to the full visual report on imagedimensions.com\n\n**Example agent uses:** \"Audit the images on https://example.com,\" \"Which images on this page are\noversized and hurting LCP?\", \"What % of this site's images use modern formats?\"\n\n## Why \"oversized\" matters\n\nAn image downloaded much larger than the box it renders into wastes bandwidth and slows Largest\nContentful Paint — the most common image-performance mistake on the web. See\n[the writeup](https://imagedimensions.com/blog/right-size-web-images).\n\n## Config\n\n- `IMAGEDIMENSIONS_API_BASE` — override the API base (default `https://imagedimensions.com`).\n\n## License\n\nMIT\n",
+  "readme": null,
   "status": "curated"
 }

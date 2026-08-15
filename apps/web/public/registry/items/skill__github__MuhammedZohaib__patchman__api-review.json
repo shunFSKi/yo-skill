@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/MuhammedZohaib/patchman/api-review",
+  "type": "skill",
+  "name": "api-review",
+  "description": "Review an authorized API surface for access control, mass assignment, schema validation, rate limiting, SSRF, error leakage, webhook verification, and unsafe defaults. Use for REST, GraphQL, RPC, and webhook handlers.",
+  "author": "MuhammedZohaib",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/MuhammedZohaib/patchman/blob/HEAD/plugins/patchman/skills/api-review/SKILL.md",
+    "repo": "MuhammedZohaib/patchman",
+    "path": "plugins/patchman/skills/api-review/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 3,
+    "pushed_at": "2026-04-16T14:07:08Z",
+    "score": 40
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

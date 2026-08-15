@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/idontwannarock/dotfiles/worklog-team-status",
+  "type": "skill",
+  "name": "worklog-team-status",
+  "description": "Trigger a GitHub Actions workflow to refresh team Jira status into per-member issues, then read and present them. Triggered when the user mentions team status, querying Jira, team progress, member workloads, or sprint status — including Chinese phrasings like 「團隊狀態」、「查 Jira」、「查一下大家的狀況」、「今天站會要報什麼」 — or invokes the worklog-team-status skill. Also applies to standup prep, weekly report assembly, or wanting to know what each member is working on.",
+  "author": "idontwannarock",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/idontwannarock/dotfiles/blob/HEAD/home/dot_codex/skills/worklog-team-status/SKILL.md.tmpl",
+    "repo": "idontwannarock/dotfiles",
+    "path": "home/dot_codex/skills/worklog-team-status/SKILL.md.tmpl"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

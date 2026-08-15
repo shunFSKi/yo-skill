@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/launchdarkly-labs/tessl-security-gate/report-summarizer",
+  "type": "skill",
+  "name": "report-summarizer",
+  "description": "Summarize a business report into up to three factual highlights and one bottom-line sentence. Use when a user pastes report text and asks for a quick summary.",
+  "author": "launchdarkly-labs",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/launchdarkly-labs/tessl-security-gate/blob/HEAD/skills-content/demo/report-summarizer/SKILL.md",
+    "repo": "launchdarkly-labs/tessl-security-gate",
+    "path": "skills-content/demo/report-summarizer/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

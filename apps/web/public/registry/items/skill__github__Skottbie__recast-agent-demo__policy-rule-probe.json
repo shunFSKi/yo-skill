@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Skottbie/recast-agent-demo/policy-rule-probe",
+  "type": "skill",
+  "name": "policy_rule_probe",
+  "description": "Lightweight probe for platform rule, policy, compliance, safety, or license changes that may affect old content.",
+  "author": "Skottbie",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Skottbie/recast-agent-demo/blob/HEAD/backend/agent/skills/policy_rule_probe/SKILL.md",
+    "repo": "Skottbie/recast-agent-demo",
+    "path": "backend/agent/skills/policy_rule_probe/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-20T10:40:32Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

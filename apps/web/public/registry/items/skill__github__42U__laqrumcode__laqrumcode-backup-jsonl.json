@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/42U/laqrumcode/laqrumcode-backup-jsonl",
+  "type": "skill",
+  "name": "laqrumcode-backup-jsonl",
+  "description": "Activate when the user wants to export laqrumcode for import into a non-SurrealDB system — Postgres + pgvector, Neo4j, OpenSearch, a custom store, or any system that ingests JSON. Triggers on \"export laqrumcode to JSON\", \"dump laqrumcode for ingestion\", \"migrate laqrumcode off SurrealDB\". Use this skill when the destination is not SurrealDB; for SurrealDB-to-SurrealDB use `laqrumcode-backup-native`.",
+  "author": "42U",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/42U/laqrumcode/blob/HEAD/skills/laqrumcode-backup-jsonl/SKILL.md",
+    "repo": "42U/laqrumcode",
+    "path": "skills/laqrumcode-backup-jsonl/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 11,
+    "pushed_at": "2026-08-04T14:14:52Z",
+    "score": 55
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

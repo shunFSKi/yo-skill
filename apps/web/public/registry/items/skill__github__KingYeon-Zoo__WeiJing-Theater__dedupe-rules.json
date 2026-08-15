@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/KingYeon-Zoo/WeiJing-Theater/dedupe-rules",
+  "type": "skill",
+  "name": "dedupe-rules",
+  "description": "Use when extractor 需要判断角色或场景是复用已有数据还是新增当前集记录。",
+  "author": "KingYeon-Zoo",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/KingYeon-Zoo/WeiJing-Theater/blob/HEAD/skills/extractor/dedupe-rules/SKILL.md",
+    "repo": "KingYeon-Zoo/WeiJing-Theater",
+    "path": "skills/extractor/dedupe-rules/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-13T14:13:05Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

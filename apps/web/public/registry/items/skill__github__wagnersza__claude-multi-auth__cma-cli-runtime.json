@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/wagnersza/claude-multi-auth/cma-cli-runtime",
+  "type": "skill",
+  "name": "cma-cli-runtime",
+  "description": "Internal helper contract for calling the cma-companion runtime from Claude Code",
+  "author": "wagnersza",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/wagnersza/claude-multi-auth/blob/HEAD/plugins/cma/skills/cma-cli-runtime/SKILL.md",
+    "repo": "wagnersza/claude-multi-auth",
+    "path": "plugins/cma/skills/cma-cli-runtime/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 22
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

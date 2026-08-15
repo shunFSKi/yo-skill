@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/shandingwangyue/winclaw/news",
+  "type": "skill",
+  "name": "news",
+  "description": "Fetches latest news stories from Hacker News. Use when user wants to read tech news, top stories, or ask \"what's new\".",
+  "author": "shandingwangyue",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/shandingwangyue/winclaw/blob/HEAD/skills/python/news/SKILL.md",
+    "repo": "shandingwangyue/winclaw",
+    "path": "skills/python/news/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": null,
+    "score": 25
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

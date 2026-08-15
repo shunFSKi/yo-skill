@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/ssiumha/dots/task-naming",
+  "type": "skill",
+  "name": "task-naming",
+  "description": "CLI command naming convention for Justfile and Makefile. Enforces GAT (group-action-target) word order, grouped listing, mandatory descriptions. Use when creating Justfile recipes, Makefile targets, or reviewing task runner configs for naming consistency. Also use when asking \"what should I name this command?\" for task runners. Do NOT use for npm scripts, mise tasks, or Claude Code skill naming.",
+  "author": "ssiumha",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ssiumha/dots/blob/HEAD/prompts/skills/task-naming/SKILL.md",
+    "repo": "ssiumha/dots",
+    "path": "prompts/skills/task-naming/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 9,
+    "pushed_at": "2026-07-28T08:49:19Z",
+    "score": 54,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 9
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}
