@@ -13,6 +13,14 @@
  *
  * 幂等论证：输入 items 按 id 排序（上游保证），贪心打包只依赖字节长度，
  * 同一输入产出逐字节一致；writeShards 逐文件比对，无变化不落盘。
+ *
+ * [INPUT]   ./schema.ts 的 IndexItem 类型；node:fs/promises（无网络、无外部服务）
+ * [OUTPUT]  SHARD_TARGET_BYTES / ShardManifest / buildShards / writeShards
+ *           （writeShards 落盘 shards/manifest.json + shards/index-NNN.json，幂等）
+ * [POS]     registry-pipeline 的分片产物层——index.json 的确定性派生物，
+ *           供镜像源（Gitee/jsDelivr 单文件上限绕开）与桌面端 skill-index 分片读取
+ * [PROTOCOL] 分片形态变更时同步 crates/skill-index/src/lib.rs 的 assemble_from_shards
+ *            与本目录 README「下游读取地址」节
  */
 
 import { mkdir, readdir, readFile, rm, writeFile } from "node:fs/promises";

@@ -8,6 +8,12 @@
  *
  * 用法：pnpm shard:index（根目录）
  *   或 node scripts/shard-index.ts（输出目录可用 REGISTRY_OUT_DIR 覆盖）
+ *
+ * [INPUT]   ../src/schema.ts（IndexItem）、../src/shards.ts（buildShards/writeShards）；
+ *           读取 OUT_DIR/index.json（默认 apps/web/public/registry/，REGISTRY_OUT_DIR 可覆盖）
+ * [OUTPUT]  无导出（CLI 脚本）；副作用 = OUT_DIR/shards/ 分片落盘 + 控制台汇报，失败 exit 1
+ * [POS]     一次性/手动补产入口——不等下次跑批即给存量 index.json 补齐分片
+ * [PROTOCOL] 分片逻辑只在 src/shards.ts 维护，本脚本不得复制其实现
  */
 
 import { readFile } from "node:fs/promises";

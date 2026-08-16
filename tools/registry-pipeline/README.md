@@ -28,9 +28,10 @@
 pnpm fetch:registry        # 仓库根目录；等价于 pnpm --filter @yo-skill/registry-pipeline fetch
 pnpm typecheck             # 本包 TS 检查
 pnpm migrate:index-fields  # 一次性迁移：给存量 index.json 补 pushed_at/added_at/remote/license（见下）
+pnpm shard:index           # 一次性/手动补产：从存量 index.json 生成 shards/ 分片（不联网，幂等）
 ```
 
-- 产物：`apps/web/public/registry/`（`meta.json` + `index.json` + `items/*.json`），官网构建期直接读，全站 SSG
+- 产物：`apps/web/public/registry/`（`meta.json` + `index.json` + `items/*.json` + `shards/` 分片），官网构建期直接读，全站 SSG
 - **幂等**：数据无变化时不落盘（`generated_at` 不动）；有变化才整体重写（清掉过期条目）并打新时间戳。`generated_at` 是下游判断要不要同步的锚点
 - **代理**：fetch 自动走 `HTTP_PROXY` / `HTTPS_PROXY`（undici `EnvHttpProxyAgent`），没配代理则直连；注意 raw.githubusercontent.com 在大陆直连不通（DNS 污染），跑管线需要代理或 CI
 - 输出目录可用环境变量覆盖：`REGISTRY_OUT_DIR=/path/to/repo node src/index.ts`
@@ -91,9 +92,14 @@ harvest-cache.json  # SKILL.md 增量采集状态：待采分片队列 + 全量�
 
 下游读取地址（**GitHub 系对应海外，Gitee 对应国内**）：
 
-- GitHub raw（海外）：`https://raw.githubusercontent.com/shunFSKi/yo-skill-registry/main/meta.json`
-- jsDelivr CDN（海外加速）：`https://cdn.jsdelivr.net/gh/shunFSKi/yo-skill-registry@main/meta.json`
-- Gitee raw（国内）：`https://gitee.com/shunFSki/yo-skill-registry/raw/main/meta.json`
+- GitHub raw（海外主源）：`https://raw.githubusercontent.com/shunFSKi/yo-skill-registry/main/meta.json`
+- Gitee raw（国内兜底）：`https://gitee.com/shunFSki/yo-skill-registry/raw/main/meta.json`
+- jsDelivr CDN（殿后）：`https://cdn.jsdelivr.net/gh/shunFSKi/yo-skill-registry@main/meta.json`
 
-桌面端按网络环境选源：国内优先 Gitee，海外优先 GitHub/jsDelivr；拿不准就顺序 fallback，
-双通道覆盖海内外。
+**镜像源单文件上限（2026-08-16 实测）**：Gitee raw >1MB 匿名 403、jsDelivr 单文件 ≤20MB、
+>50MB 仓库 jsDelivr 整体拒服务。整包 index.json 已 ~17MB 且日增，因此数据仓另产
+`shards/` 分片（单片 ≤800KB，全镜像可用），桌面端读取**分片优先、整包兜底**。
+
+桌面端选源策略（已实现于 `crates/skill-index`，`MarketSource::HttpFallback`）：
+GitHub → Gitee → jsDelivr 三 CDN（cdn/fastly/gcore）顺序兜底，任一源成功即用，
+全挂聚合报错——不判网络环境，靠失败降级覆盖海内外。
