@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "fetch": "node src/index.ts",
+    "migrate:index-fields": "node scripts/migrate-index-fields.ts",
+    "shard:index": "node scripts/shard-index.ts",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {

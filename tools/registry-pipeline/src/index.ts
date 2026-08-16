@@ -1,6 +1,7 @@
 /**
  * 仓库聚合管线入口：拉取 → 归一化 → 扫描 → 打标 → 抓 README → 落盘 JSON。
- * 默认产物写到 apps/web/public/registry/（index.json + items/*.json + meta.json），
+ * 默认产物写到 apps/web/public/registry/（index.json + items/*.json + meta.json
+ * + shards/ 分片〔镜像源单文件上限兜底：Gitee >1MB 403 / jsDelivr ≤20MB，见 shards.ts〕），
  * 官网构建期直接读，无需运行时数据库。
  *
  * 三条纪律：
@@ -38,8 +39,9 @@ import { fetchReadmes } from "./fetchers/readme.ts";
 import { setupProxy } from "./http.ts";
 import { scanItem } from "./scan.ts";
 import { scoreItem } from "./score.ts";
+import { writeShards } from "./shards.ts";
 import { tagCategory } from "./tag.ts";
-import { safeId, toIndexItem, type RegistryItem } from "./schema.ts";
+import { safeId, toIndexItem, type IndexItem, type RegistryItem } from "./schema.ts";
 
 const OUT_DIR =
   process.env.REGISTRY_OUT_DIR ??
@@ -86,6 +88,32 @@ async function isUnchanged(
     return true;
   } catch {
     return false;
+  }
+}
+
+/**
+ * added_at 幂等继承：读上一版 index.json，已有 id 保留原 added_at（含 null——
+ * 2026-08-15 字段迁移前的存量条目收录日不可考，永久为 null，不造假）；
+ * 新出现的 id 记今天（YYYY-MM-DD）。上一版不存在/不可读 → 全 null。
+ *
+ * 幂等论证：同一天重跑，上一版已含今天写入的日期，全部按 id 保留 → 逐字节一致；
+ * 隔天重跑，已有条目的 added_at 一律来自上一版不再漂移，只有真·新收录条目拿新日期。
+ * 必须在 isUnchanged 比对之前执行，比对内容才包含 added_at。
+ */
+async function applyAddedAt(items: IndexItem[], outDir: string): Promise<void> {
+  let prev: Map<string, string | null> | null = null;
+  try {
+    const raw = JSON.parse(
+      await readFile(join(outDir, "index.json"), "utf8"),
+    ) as Array<{ id: string; added_at?: string | null }>;
+    prev = new Map(raw.map((e) => [e.id, e.added_at ?? null]));
+  } catch {
+    prev = null; // 首跑或文件损坏：全 null
+  }
+  const today = new Date().toISOString().slice(0, 10);
+  for (const item of items) {
+    item.added_at =
+      prev === null ? null : (prev.has(item.id) ? (prev.get(item.id) ?? null) : today);
   }
 }
 
@@ -192,11 +220,19 @@ async function main(): Promise<void> {
   // 综合质量分：依赖扫描结果与 README，必须在两者之后算
   for (const item of curated) item.quality.score = scoreItem(item);
 
-  const indexJson = serialize(curated.map(toIndexItem));
+  const indexItems = curated.map(toIndexItem);
+  await applyAddedAt(indexItems, OUT_DIR);
+  const indexJson = serialize(indexItems);
 
   console.log("== 落盘 ==");
   if (await isUnchanged(OUT_DIR, indexJson, curated)) {
-    console.log(`数据无变化，跳过落盘（${OUT_DIR}）`);
+    // 整包无变化也要补产分片：分片是 index 的确定性派生物，
+    // 升级此版本后的首跑靠这一步把 shards/ 补齐（幂等，已有则不写）
+    if (await writeShards(OUT_DIR, indexItems)) {
+      console.log("整包无变化，分片产物有补齐/更新");
+    } else {
+      console.log(`数据无变化，跳过落盘（${OUT_DIR}）`);
+    }
     return;
   }
 
@@ -210,6 +246,7 @@ async function main(): Promise<void> {
       serialize(item),
     );
   }
+  await writeShards(OUT_DIR, indexItems);
   await writeFile(
     join(OUT_DIR, "meta.json"),
     serialize({

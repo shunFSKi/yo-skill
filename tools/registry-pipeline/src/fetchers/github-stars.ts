@@ -1,5 +1,6 @@
 /**
- * GitHub repo stars / pushedAt 富化：给 github-search 来源的条目补流行度信号。
+ * GitHub repo stars / pushedAt / license 富化：给 github-search 来源的条目补流行度信号，
+ * 同时给全库条目补 repo 级 license（SPDX id）。
  *
  * 为什么需要：github-search 采集器拿不到 repo 元数据，stars 全 null 会让
  * 「Stars 高到低」排序形同虚设，好内容和占位垃圾混在一起沉底（2026-08-14 实测：
@@ -39,6 +40,9 @@ interface RepoMeta {
   fetched_at: string;
   /** 每日快照：每次富化追加/更新当天一个点 */
   history?: StarPoint[];
+  /** SPDX license id（GraphQL licenseInfo，2026-08-15 起随富化写入）。
+   *  缺省 = 该缓存条目在加字段前抓的，等自然过期（7 天）后重抓补齐，不强制全量重抓 */
+  license?: string | null;
 }
 
 type StarsCache = Record<string, RepoMeta>;
@@ -54,7 +58,12 @@ async function loadCache(outDir: string): Promise<StarsCache> {
 }
 
 interface GraphqlResponse {
-  data?: Record<string, { nameWithOwner: string; stargazerCount: number; pushedAt: string } | null> & {
+  data?: Record<string, {
+    nameWithOwner: string;
+    stargazerCount: number;
+    pushedAt: string;
+    licenseInfo?: { spdxId?: string } | null;
+  } | null> & {
     rateLimit?: { remaining: number };
   };
 }
@@ -97,7 +106,7 @@ export async function enrichGitHubStars(
     const fields = chunk
       .map((repo, j) => {
         const [owner, name] = repo.split("/");
-        return `r${j}: repository(owner: ${JSON.stringify(owner)}, name: ${JSON.stringify(name)}) { nameWithOwner stargazerCount pushedAt }`;
+        return `r${j}: repository(owner: ${JSON.stringify(owner)}, name: ${JSON.stringify(name)}) { nameWithOwner stargazerCount pushedAt licenseInfo { spdxId } }`;
       })
       .join("\n");
     const res = await fetch(GRAPHQL_API, {
@@ -137,6 +146,7 @@ export async function enrichGitHubStars(
           pushed_at: node.pushedAt,
           fetched_at: new Date().toISOString(),
           history,
+          license: node.licenseInfo?.spdxId ?? null,
         };
       }
     }
@@ -150,6 +160,7 @@ export async function enrichGitHubStars(
   // 回填条目（stars 只动 github-search 源；claudeskills / MCP 官方自带元数据，不覆盖）
   let filled = 0;
   let histAttached = 0;
+  let licenseFilled = 0;
   for (const it of items) {
     if (!it.source.repo) continue;
     const c = cache[it.source.repo];
@@ -159,12 +170,18 @@ export async function enrichGitHubStars(
       it.quality.star_history = c.history;
       histAttached++;
     }
+    // license 是 repo 级事实，不分源回填；缓存条目还没补过 license 字段的（undefined）跳过，
+    // 等缓存自然过期重抓后补齐（尊重现有 7 天缓存节奏，不强制全量重抓）
+    if (c.license !== undefined) {
+      it.license = c.license;
+      licenseFilled++;
+    }
     if (it.source.registry !== "github-search") continue;
     it.quality.stars = c.stars;
     it.quality.pushed_at = c.pushed_at;
     filled++;
   }
-  console.log(`  stars: 回填 ${filled} 条，挂 star 快照 ${histAttached} 条`);
+  console.log(`  stars: 回填 ${filled} 条，挂 star 快照 ${histAttached} 条，回填 license ${licenseFilled} 条`);
 
   // 只有真补过才写缓存（内容不变不重写，保持 git diff 干净）
   if (stale.length > 0) {

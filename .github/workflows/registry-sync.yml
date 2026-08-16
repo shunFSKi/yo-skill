@@ -5,10 +5,10 @@
 # 接入数据仓库：GitHub 仓库 Settings → Secrets and variables → Actions 里配：
 #   Variables: REGISTRY_REPO（本项目为 shunFSKi/yo-skill-registry）
 #   Secrets:   REGISTRY_TOKEN（对数据仓有写权限的 PAT）
-# Gitee 国内镜像不在此推送：数据仓已通过 Gitee 官方镜像功能单向 Pull，
-# GitHub 数据仓上配了 push webhook 自动触发 Gitee 同步（2026-08-14 配通）。
-# 注意：Gitee 处理 pull 常超 GitHub 10s 投递超时，投递记录显示 500 但同步实际会执行；
-# 兜底：镜像管理页点「更新」，或手动 POST remote_mirror/pull?access_token=<Gitee令牌>。
+# Gitee 国内镜像不在此推送：数据仓走 Gitee 官方镜像功能单向 Pull，
+# 由本工作流最后一步 curl Gitee remote_mirror/pull API 触发（需主仓 secret GITEE_TOKEN）。
+# GitHub push webhook 方案已降为兜底：2 万+ 文件的 push payload 超过 GitHub 10s
+# 投递超时，投递记录永远显示 500 假失败（2026-08-14 两次实测）。
 # 详见 tools/registry-pipeline/README.md
 
 name: registry-sync

@@ -71,12 +71,14 @@ interface SearchResponse {
   message?: string;
 }
 
-/** 采集记录。n/d 为空串 = 墓碑（抓过但解析失败或不合口径，不重抓） */
+/** 采集记录。n/d 为空串 = 墓碑（抓过但解析失败或不合口径，不重抓）。
+ *  ts = 首次见到日期（YYYY-MM-DD，2026-08-15 起新记录带上；旧记录无此字段，不回补） */
 interface HarvestRecord {
   r: string; // repo owner/name
   p: string; // SKILL.md 路径
   n: string; // frontmatter name
   d: string; // frontmatter description
+  ts?: string;
 }
 
 interface HarvestCache {
@@ -271,6 +273,7 @@ async function harvestBatch(
     for (let i = 0; i < fresh.length; i += CONTENT_CONCURRENCY) {
       if (fetched >= DAILY_BUDGET) break;
       const chunk = fresh.slice(i, i + CONTENT_CONCURRENCY);
+      const today = new Date().toISOString().slice(0, 10);
       await Promise.all(
         chunk.map(async (it) => {
           const repo = it.repository.full_name;
@@ -281,10 +284,10 @@ async function harvestBatch(
           const md = await fetchContent(repo, it.path);
           const fm = md ? parseFrontmatter(md) : null;
           if (!fm || fm.description.length < MIN_DESC_LEN) {
-            cache.records.push({ r: repo, p: it.path, n: "", d: "" }); // 墓碑
+            cache.records.push({ r: repo, p: it.path, n: "", d: "", ts: today }); // 墓碑
             return;
           }
-          cache.records.push({ r: repo, p: it.path, n: fm.name, d: fm.description });
+          cache.records.push({ r: repo, p: it.path, n: fm.name, d: fm.description, ts: today });
         }),
       );
     }

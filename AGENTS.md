@@ -6,16 +6,17 @@
 
 ## 一、项目概览
 
-这是独立开发者产品 **yo-skill**（跨 Agent 工具的 Skill / Prompt / MCP 同步管理工具，定位 "AI 工具的 1Password"）的**调研与规划工作区**。
+这是独立开发者产品 **yo-skill**（跨 Agent 工具的 Skill / Prompt / MCP 同步管理工具，定位 "AI 工具的 1Password"）的**产品工作区**。
 
-**当前状态：调研文档仓库 + 桌面端静态 UI 原型（`prototype/`，双击即开）+ 官网 Web 应用（`apps/web`，Next.js 15，已可 `pnpm dev` 跑起来，含真实数据的 Skill 与 MCP 市场）。**
+**当前状态（2026-08-16 起）：调研文档仓库 + 桌面端静态 UI 原型（`prototype/`）+ 官网 Web 应用（`apps/web`，Next.js 15）+ 桌面端产品代码（`apps/desktop` + `crates/*`，Tauri 2 + Rust Cargo workspace，MVP 已建成可安装）。**
 
 - 工作区仓库已开源：**GitHub `shunFSKi/yo-skill`**（2026-08-14 上线，即本仓库；市场数据仓 `shunFSKi/yo-skill-registry` 为海外主仓 + Gitee 同名国内镜像）
-- 已有代码：`apps/web`（官网落地页 + 等待列表 API + `/market` 市场，pnpm workspace）、`packages/ui-kit`（共享 UI 骨架）与 `tools/registry-pipeline`（市场数据管线，Node TS）；桌面端（Tauri/Rust）尚未动工
-- 没有测试、没有部署流程；CI 仅一条 registry 数据定时同步工作流（`.github/workflows/registry-sync.yml`，每天两次跑管线并推数据仓）
-- 主体内容仍是 **Markdown 调研报告**（中文撰写）+ 产品设计定稿 V2 + 桌面端 7 屏 HTML 原型
+- **双远程纪律（2026-08-16 起）**：本仓 = 公开面（GitHub，`main` 分支）——调研文档 + 市场数据管线（`tools/registry-pipeline`）+ registry 数据（`apps/web/public/registry`）。产品代码——桌面端（`crates/*` / `apps/desktop` / 根 `Cargo.*`）与官网源码（`apps/web` 源码及 README / `pnpm-lock.yaml`）——走内网 Gitea 私有仓 `http://192.168.1.100:3002/shunfski/yo-skill-private`（`dev` 分支 = main + 全部产品代码）。**红线：`dev` 分支与上述私有路径永远不得 push 到 GitHub origin**（「桌面端先闭源 3 个月」决策不变，官网源码同日转入私有）。日常开发在 `dev` 分支；公开内容更新时把对应文件提交到 `main` 推 origin。注意：apps/web 旧版源码仍在公开仓历史里（2026-08-14 已公开的事实不改写），从公开仓剔除是牵动 Vercel 部署的单独迁移，本次未做
+- 已有代码：`apps/web`（官网 + 市场）、`packages/ui-kit`（共享 UI 骨架）、`tools/registry-pipeline`（市场数据管线，Node TS）、**`crates/*`（5 个 Rust crate 业务核心，32 个测试全绿）与 `apps/desktop`（Tauri 壳 + React 七屏前端，NSIS 安装包已产出）**——桌面端架构见 `apps/desktop/ARCHITECTURE.md`
+- 桌面端 Rust 测试：根目录 `pnpm test:crates`；桌面开发：`pnpm desktop`；出安装包：`pnpm desktop:build`
+- 主体内容仍是 **Markdown 调研报告**（中文撰写）+ 产品设计定稿 V2 + 桌面端 7 屏 HTML 原型（原型的 `yo.css` 已被桌面端逐字移植为设计系统实现）
 
-因此：根目录的 `pnpm dev / build / lint / typecheck` 只作用于 `@yo-skill/web`；桌面端若开始编码，应先与用户确认（调研结论建议 Tauri + Cargo workspace，见下文"已冻结的技术决策"）。
+因此：根目录的 `pnpm dev / build / lint / typecheck` 只作用于 `@yo-skill/web`；桌面端已按冻结技术决策（Tauri + Cargo workspace）动工落地。
 
 ## 二、目录结构
 
@@ -26,11 +27,18 @@ skill-manager/
 ├── DESIGN.md                        # 视觉设计系统（从 7 屏原型归纳：色彩 / 字体 / 组件约定）
 ├── package.json / pnpm-workspace.yaml / tsconfig.base.json  # pnpm monorepo 根（Node 22+ / pnpm 10+）
 ├── apps/
-│   └── web/                         # 官网 Web 应用 @yo-skill/web（Next.js 15 App Router + React 18 + Tailwind + next-themes；落地页 + /api/waitlist + /market 真实数据市场（4 万+ 条：服务端过滤 URL 即状态 + 详情页头部 200 SSG/长尾 ISR，含源仓库 README）+ account 占位；视觉「纸上墨字 + 一笔翡翠」，详见本目录 README）
+│   ├── web/                         # 官网 Web 应用 @yo-skill/web（Next.js 15 App Router + React 18 + Tailwind + next-themes；落地页 + /api/waitlist + /market 真实数据市场（4 万+ 条：服务端过滤 URL 即状态 + 动态分类〔管线 10 类〕+ 四档排序 + 详情页头部 200 SSG/长尾 ISR，含源仓库 README + 三微章信任体系 + 可复制安装芯片 + 每 Agent 路径矩阵 + 同类推荐 + yoskill:// deeplink + 动态 OG + JSON-LD）+ /market/collections 策展页 + /api/v1 只读 API + llms.txt + RSS + 隐私/条款页 + 移动端汉堡导航 + account 占位；视觉「纸上墨字 + 一笔翡翠」，详见本目录 README）
+│   └── desktop/                     # 桌面端 @yo-skill/desktop（Tauri 2 + React 18 + Vite；七屏：已安装/发现/详情/去重/设置/首次向导/恢复；33 个 IPC 命令；ARCHITECTURE.md 是架构真相源，AGENTS.md 是 L2 地图；视觉 = 原型 yo.css 逐字移植）
+├── crates/                          # Rust 业务核心（Cargo workspace 成员，L2 地图见 crates/AGENTS.md）
+│   ├── vault/                       # 本地数据层：SQLite（可选 SQLCipher）+ Argon2id + API Key 字段级 AES-256-GCM + 快照
+│   ├── agent-adapter/               # 15 助手适配：检测 / Skill·MCP 扫描 / 模式 A/B 分发记账（junction/symlink/副本）
+│   ├── conflict-detector/           # 重复/冲突检测（同名归并 + 内容指纹 + 描述相似度）
+│   ├── skill-index/                 # 市场数据层：registry 拉取（数据仓 raw URL 多源兜底 GitHub→Gitee→jsDelivr / 本地目录）+ 搜索过滤排序
+│   └── sync-engine/                 # E2E 加密备份（YSBK 格式）+ LocalDirBackend（指向用户云盘即得云同步）
 ├── packages/
 │   └── ui-kit/                      # 共享 UI 原语骨架（TS，与未来的 apps/desktop 复用）
 ├── tools/
-│   └── registry-pipeline/           # 市场数据管线 @yo-skill/registry-pipeline（Node 22 直跑 TS：全量口径——claudeskills 全量 + MCP 官方 Registry 全分页 + GitHub 代码搜索每日定额增量采集 SKILL.md〔需 token，size 分片；GITHUB_HARVEST_DAILY 默认 8000/次，状态存 harvest-cache.json〔分片队列+全量记录含墓碑〕，官网随每日提交实时增长〕→ 收录口径过滤〔≥500B + description ≥20 字符 + 路径黑名单〕→ GraphQL stars 富化〔stars-cache.json 缓存，每日增量 + 每 repo 每日 star 快照〔最多 30 点，详情页画近段时间曲线〕〕→ fork 洪水去重〔同名同描述留 stars 最高〕→ 5 条静态扫描 + 场景分类 + 综合质量分〔score.ts，0-100：stars 对数 45/新鲜度 20/扫描 15/README 10/描述 10，官网「推荐优先」按它排〕→ README 分层抓〔featured + stars 前 1500 + MCP 新近 300，全文截断 200KB〕 → 落盘 apps/web/public/registry/*.json；根目录 pnpm fetch:registry 重跑即更新；fetch 走环境变量代理；幂等——按 id 排序后逐字节比对，无变化不落盘；定时同步工作流在 .github/workflows/registry-sync.yml〔push 前 rebase 防人工撞车〕；数据仓已建：GitHub `shunFSKi/yo-skill-registry` 海外主仓 + Gitee 同名仓国内镜像〔走 Gitee 官方镜像功能 Pull，CI 推完数据仓后 curl Gitee API 触发同步〔主仓 secret `GITEE_TOKEN`〕，webhook 因大 payload 超时假失败已降为兜底〕，接入细节见该目录 README）
+│   └── registry-pipeline/           # 市场数据管线 @yo-skill/registry-pipeline（Node 22 直跑 TS：全量口径——claudeskills 全量 + MCP 官方 Registry 全分页 + GitHub 代码搜索每日定额增量采集 SKILL.md〔需 token，size 分片；GITHUB_HARVEST_DAILY 默认 8000/次，状态存 harvest-cache.json〔分片队列+全量记录含墓碑〕，官网随每日提交实时增长〕→ 收录口径过滤〔≥500B + description ≥20 字符 + 路径黑名单〕→ GraphQL stars+license 富化〔stars-cache.json 缓存，每日增量 + 每 repo 每日 star 快照〔最多 30 点，详情页画近段时间曲线〕+ licenseInfo〔spdxId〕渐进回填〕→ fork 洪水去重〔同名同描述留 stars 最高〕→ 5 条静态扫描 + 场景分类〔2026-08-15 扩至 10 类：原 5 类 + 数据/AI/运维/营销/金融，抽样依据见管线 README〕+ 综合质量分〔score.ts，0-100：stars 对数 45/新鲜度 20/扫描 15/README 10/描述 10，官网「推荐优先」按它排〕→ README 分层抓〔featured + stars 前 1500 + MCP 新近 300，全文截断 200KB〕 → 落盘 apps/web/public/registry/*.json〔index.json 已扩充 pushed_at/added_at〔首次收录日，幂等继承旧值〕/remote/license，存量字段一次性迁移脚本 pnpm migrate:index-fields；另有 shards/ 分片产物〔单片 ≤800KB，破镜像源单文件上限：Gitee >1MB 403 / jsDelivr ≤20MB，手动补产 pnpm shard:index〕〕；根目录 pnpm fetch:registry 重跑即更新；fetch 走环境变量代理；幂等——按 id 排序后逐字节比对，无变化不落盘；定时同步工作流在 .github/workflows/registry-sync.yml〔push 前 rebase 防人工撞车〕；数据仓已建：GitHub `shunFSKi/yo-skill-registry` 海外主仓 + Gitee 同名仓国内镜像〔走 Gitee 官方镜像功能 Pull，CI 推完数据仓后 curl Gitee API 触发同步〔主仓 secret `GITEE_TOKEN`〕，webhook 因大 payload 超时假失败已降为兜底〕，接入细节见该目录 README）
 ├── prototype/                       # 桌面端 UI 设计稿（纯静态 HTML/CSS，仅供视觉参考、非产品代码，双击 index.html 进入）
 │   ├── README.md                    # 原型说明 + 7 屏清单（先读这个）
 │   ├── yo.css                       # 共享设计系统（E 墨极调色层 + 深色模式，变量已语义化 --accent/--warn；尾部 .ob-* 向导组件）
@@ -76,11 +84,14 @@ skill-manager/
 │   ├── 20260812_230034_skill_registry_pipeline/
 │   │   ├── README.md                # 索引 + 关键数据卡片（先读这个）
 │   │   └── skill_registry_pipeline.md # 仓库聚合管线：Skill 主源 claudeskills.info + MCP 主源官方 Registry（+Glama 增强），8 项安全静态扫描，MVP 400+150 条约 2 周
-│   └── 20260813_100940_official_site_design_reference/
+│   ├── 20260813_100940_official_site_design_reference/
+│   │   ├── README.md                # 索引 + 关键数据卡片（先读这个）
+│   │   ├── official_site_design_reference.md # 同类官网设计调研：12 站四种首屏打法，12 个可抄手法按 ROI 排序，P0-P2 改版清单
+│   │   ├── sites/                   # 12 张站点卡片
+│   │   └── shots/                   # 24 张真实浏览器截图（首屏 + 中段）
+│   └── 20260815_153841_official_site_feature_roadmap/
 │       ├── README.md                # 索引 + 关键数据卡片（先读这个）
-│       ├── official_site_design_reference.md # 同类官网设计调研：12 站四种首屏打法，12 个可抄手法按 ROI 排序，P0-P2 改版清单
-│       ├── sites/                   # 12 张站点卡片
-│       └── shots/                   # 24 张真实浏览器截图（首屏 + 中段）
+│       └── official_site_feature_roadmap.md # 官网功能迭代调研：8 站 × 19 功能矩阵，P0/P1/P2 功能与设计清单（2026-08-15 非后端项已实施落地）
 ├── self-media/                      # 自媒体账号任务（2026-08-11 自 Mac ai_research 迁入，Mac 原件已删）
 │   ├── README.md                    # 索引（先读这个）
 │   ├── xilo2991_network/            # X 圈层调研 + 顺哥账号运营工作区（自有 AGENTS.md / INDEX.md 入口）
@@ -105,7 +116,7 @@ skill-manager/
 - 界面术语（2026-08-11 用户改定）：Agent 称 AI 助手，Skill / MCP / API Key 直接用原文，导航为 已安装 / 发现；原"大脑/工具箱/保险库/钥匙"隐喻体系已废弃；禁用"武器库 / 治理 / 资产 / 市场"等企业级或硬核话术
 - 视觉定稿 V4（2026-08-11 用户改定）：**E 墨极**黑白骨架 + 功能色——交互翡翠 `#29A383`（Radix jade 同族，可点行动）、成功徽章中性化（中性灰底 + 翡翠勾，`--ok` 绿 `#30A46C` 仅留同步点等微小语义位）、危险红 `#E5484D`（仅卸载类）、琥珀橙 `#E8890C` 仅提醒 + 完整深色模式；V2"行动层纯黑白"、V3"交互蓝"同日相继被用户修订（Tailwind 默认色廉价、蓝太普通、紫"AI 味"均否决），薄荷绿旧案已废弃（五套候选存档于 `prototype/themes.html`，状态配色三选一存档于 `prototype/colors.html`）；中文思源黑体、英文 Inter
 
-**已冻结的技术决策（调研建议，尚未落地为代码）**
+**已冻结的技术决策（2026-08-16 起已落地为代码：`crates/*` + `apps/desktop`，实现细节见 `apps/desktop/ARCHITECTURE.md`；与实现的差异点——前端 shadcn/Radix/Tailwind 换成原型 yo.css 逐字移植——已在架构文档 §6 如实声明）**
 - 桌面框架：**Tauri**（明确避开 Cindy 的 Electron 路线）。2026-08-12 横向复核（见 `mavis-deep-research/20260812_013131_framework_comparison/`）：Wails / Flutter Desktop / .NET MAUI 首次纳入对比后**全部否决**（Wails 自动更新未落地、Flutter 无官方 updater 且原型迁移成本高、MAUI 最不成熟），Electron 维持否决。**Tauri 须打 4 条补丁**：① Linux 降级（见下"平台优先级"）② Windows 安装包带 WebView2 bootstrapper（WebView2 偶发安装失败砸首装率）③ updater 必须 RSA 签名 + GitHub Releases（抄 cc-switch）④ `tauri-plugin-single-instance` 必须第一个注册
 - 工程形态：**Cargo workspace（主体）+ pnpm workspace（前端）**，不是纯 pnpm monorepo；主体在 Rust 侧。MVP 阶段砍到 **6-7 个包**（不要学 Cindy 的 14 包）
 - 建议骨架：`apps/desktop`（Tauri：`src-tauri/` Rust + 前端）+ `crates/`（`vault` / `sync-engine` / `conflict-detector` / `skill-index` / `agent-adapter`，均为 **Rust crate**，单一真相源层）+ `packages/ui-kit`（**TS**）。**无 CLI**——目标用户是小白，CLI 对他们是天书（2026-08-12 用户改定；原 `apps/cli` 是早期"先 CLI 后 GUI"残留，该路线已推翻）
@@ -140,12 +151,15 @@ skill-manager/
 
 **官网（已存在）**：根目录 `pnpm dev`（:3000）/ `pnpm build` / `pnpm lint` / `pnpm typecheck`，均 filter 到 `@yo-skill/web`（typecheck 为全 workspace）；`pnpm fetch:registry` 重跑市场数据管线刷新 `apps/web/public/registry/`。⚠️ 踩坑：跑过 `pnpm build` 后 `pnpm dev` 会样式丢失，删掉 `apps/web/.next` 再 dev 即可（见 `apps/web/README.md`）。
 
-**调研报告**：没有测试框架。验证一份报告的正确方式是：检查事实与数据来源是否一致、引用是否可追溯、与已冻结结论是否冲突。
+**桌面端（已建成，2026-08-16）**：
+- **Rust 测试**：根目录 `pnpm test:crates`（五个 crate 共 32 个测试；不要用 `cargo test --workspace`，避免 desktop feature 干扰）
+- **开发**：`pnpm desktop`（Tauri dev，前端 :1420 + Rust 热载）
+- **安装包**：`pnpm desktop:build`（NSIS，产物 `target/release/bundle/nsis/yo-skill_*_x64-setup.exe`）
+- **整库加密发布构建**：Strawberry Perl 便携版（`G:\dev\perl`）前置到 PATH 后 `pnpm --filter @yo-skill/desktop tauri build -- --features yoskill-desktop/sqlcipher`（默认构建为纯 SQLite，加密分层见 `apps/desktop/ARCHITECTURE.md` §3.2）
+- **Rust 工具链**：本机装在 `G:\dev\rust`（CARGO_HOME/RUSTUP_HOME 已写入 `~/.bashrc` 注入块，不碰 C 盘）；MSVC Build Tools 2022 已就绪
+- **前端**：`pnpm --filter @yo-skill/desktop typecheck` / `build`（Vite 6，产物 dist/）
 
-**桌面端（未动工，预期方向）**：
-- **前端层**：Node.js 22+ / pnpm 10 / TypeScript（参考 Cindy 工程水位）
-- **后端 + 数据层**：Rust 工具链（Tauri 桌面端 `src-tauri/`、`crates/*` 均为 Rust）
-- 建议沿用 Cindy 的工程纪律：DCO sign-off（`git commit -s`）、Git LFS 管二进制、外部工具 sha256 校验测试
+**调研报告**：没有测试框架。验证一份报告的正确方式是：检查事实与数据来源是否一致、引用是否可追溯、与已冻结结论是否冲突。
 
 ## 六、安全注意事项
 

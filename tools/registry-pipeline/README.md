@@ -11,7 +11,7 @@
 | claudeskills.info | Skill 全量（按源仓库去重的 repo 级条目） | 免 key JSON API |
 | MCP 官方 Registry | MCP server 全量（active + 最新版去重，全分页） | 免 key JSON API |
 | GitHub 代码搜索 | **每日定额增量**采集 SKILL.md（size 分片绕 1000 上限；`GITHUB_HARVEST_DAILY` 默认 8000/次，状态存 `harvest-cache.json`：分片队列 + 全量记录含墓碑，队列扫完自动重置专扫新文件；需 `GITHUB_TOKEN`/`REGISTRY_TOKEN`） | search/code API |
-| GitHub GraphQL | repo stars/pushedAt 富化 + 每日 star 快照（100 repo/批，缓存 `stars-cache.json`，每日增量，`STARS_MAX_REPOS` 默认 4500；快照每 repo 最多 30 个点，详情页画「近段时间」曲线） | graphql API |
+| GitHub GraphQL | repo stars/pushedAt/license 富化 + 每日 star 快照（100 repo/批，缓存 `stars-cache.json`，每日增量，`STARS_MAX_REPOS` 默认 4500；快照每 repo 最多 30 个点，详情页画「近段时间」曲线；license 取 `licenseInfo.spdxId`，2026-08-15 起随缓存自然过期节奏补齐，不强制全量重抓） | graphql API |
 | GitHub 源仓库 | 根 README 完整抓取（按 repo 去重，截断 200KB；分层：featured + stars 前 1500 + MCP 新近 300） | raw.githubusercontent.com |
 
 **增量采集（2026-08-14 拍板）**：不搞一次性全量（会顶到 CI 6 小时上限且配额风险大），每天固定采一批，官网随每日提交实时增长，十几天爬完全量（参照 agentskillshub 标称 13 万+）。已采文件的内容变化不回溯——换 CI 时长与配额的确定性。
@@ -20,11 +20,14 @@
 
 **综合质量分（score.ts，0-100）**：参考 agentskillshub 的多维评分思路取可用子集——stars 对数分（45）+ 维护新鲜度（20）+ 静态扫描通过（15）+ README（10）+ 描述丰富度（10），落进每条 item 的 `quality.score`，官网「推荐优先」排序依据；「Stars 高到低」保留为可选排序。
 
+**场景分类（tag.ts，2026-08-15 扩充 5 → 10 类）**：`写作 / 编程 / 设计 / 办公 / 生活 / 金融 / AI / 数据 / 运维 / 营销`。关键词命中计数取最多，无命中保持 null（精确率优先，不硬塞）。扩充依据：对 16,783 条无分类条目均匀抽样 200 条人工判读（金融 ~14% / AI ~14% / 数据 ~10% / 运维 ~8% / 营销 ~6%；教育、媒体占比 <2% 不立类）；全库干跑无分类占比 57.5% → 36.4%。关键词避让清单（sem→semantic、tax→taxonomy、stock→库存、crypto→cryptographic、defi→definition、cli→client 等）见 tag.ts 头注。
+
 ## 用法
 
 ```bash
 pnpm fetch:registry        # 仓库根目录；等价于 pnpm --filter @yo-skill/registry-pipeline fetch
 pnpm typecheck             # 本包 TS 检查
+pnpm migrate:index-fields  # 一次性迁移：给存量 index.json 补 pushed_at/added_at/remote/license（见下）
 ```
 
 - 产物：`apps/web/public/registry/`（`meta.json` + `index.json` + `items/*.json`），官网构建期直接读，全站 SSG
@@ -37,10 +40,26 @@ pnpm typecheck             # 本包 TS 检查
 ```
 meta.json           # schema_version + generated_at + counts：同步锚点，客户端先拉它比对
 index.json          # 全量卡片索引（每条最小集），列表页一次拉完
+shards/             # index 的分片形态（2026-08-16 起）：manifest.json + index-NNN.json 紧凑数组（单片 ≤800KB）。
+                    # 为什么存在：镜像源单文件上限——Gitee raw >1MB 匿名 403、jsDelivr ≤20MB——整包 index
+                    # 已 ~17MB 且随日采增长，分片是唯一全镜像可用、无增长天花板的形态；桌面端分片优先、整包兜底。
+                    # 手动补产：pnpm shard:index（scripts/shard-index.ts，不联网，幂等；管线跑批自动产出）
 items/*.json        # 每条完整档案（安装配方 / env / 扫描明细 / README），详情页按需懒拉
-stars-cache.json    # GitHub repo stars/pushedAt 富化缓存 + 每日 star 快照（每 repo 最多 30 点）：每日增量补新 + 7 天过期刷新
-harvest-cache.json  # SKILL.md 增量采集状态：待采分片队列 + 全量采集记录（含墓碑）
+stars-cache.json    # GitHub repo stars/pushedAt/license 富化缓存 + 每日 star 快照（每 repo 最多 30 点）：每日增量补新 + 7 天过期刷新
+harvest-cache.json  # SKILL.md 增量采集状态：待采分片队列 + 全量采集记录（含墓碑；2026-08-15 起新记录带 ts 首见日期，旧记录不回补）
 ```
+
+**index.json 条目字段**（2026-08-15 扩充，新增四个）：
+
+| 字段 | 口径 |
+| ---- | ---- |
+| id / type / name / description / stars / score / scanned / category / featured / needsKey / repo | 原有最小集 |
+| `pushed_at` | 源仓库最近推送时间（自 item `quality.pushed_at` 提升）；null = 来源没给 |
+| `added_at` | 首次收录日（YYYY-MM-DD）。写盘时读上一版 index.json：已有 id 保留原值（含 null），新 id 记当天；上一版不存在则全 null。同一天重跑逐字节一致，不破坏幂等；存量条目（2026-08-15 迁移前收录）永久为 null——收录日不可考，不造假 |
+| `remote` | `install.kind === "remote"`（纯远程 MCP，免安装） |
+| `license` | 源仓库 SPDX id（GraphQL `licenseInfo` 经 stars-cache 流入）；null = 未知或未轮到补抓 |
+
+**一次性迁移脚本**：`scripts/migrate-index-fields.ts`（`pnpm migrate:index-fields`）——不联网给存量 index.json 补上述四字段（pushed_at/remote 从 items/*.json 读，added_at/license 全 null 等真实数据源），字段顺序与 `toIndexItem` 一致保证下次跑批 diff 干净；写完回读自验条数与字段齐全。2026-08-15 已执行：29,167 条条数不变，pushed_at 有值 28,974、remote=true 9,937。
 
 ## 定时同步（GitHub Actions）
 
