@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/MrSuiChuan/claude-code-series/paperclip-status",
+  "type": "skill",
+  "name": "paperclip-status",
+  "description": "查看 PaperClip 公司实时仪表盘。显示所有 Agent 状态、任务分布、预算使用。",
+  "author": "MrSuiChuan",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/MrSuiChuan/claude-code-series/blob/HEAD/paperclip-orchestrator/skills/paperclip-status/SKILL.md",
+    "repo": "MrSuiChuan/claude-code-series",
+    "path": "paperclip-orchestrator/skills/paperclip-status/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 7,
+    "pushed_at": "2026-06-04T14:35:23Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

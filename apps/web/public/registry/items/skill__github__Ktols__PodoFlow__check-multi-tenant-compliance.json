@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/Ktols/PodoFlow/check-multi-tenant-compliance",
+  "type": "skill",
+  "name": "Check Multi-Tenant Compliance",
+  "description": "Reviews the current file or selection to ensure database queries correctly filter by sucursal_id.",
+  "author": "Ktols",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Ktols/PodoFlow/blob/HEAD/.github/skills/check-tenant/SKILL.md",
+    "repo": "Ktols/PodoFlow",
+    "path": ".github/skills/check-tenant/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-05-23T08:39:03Z",
+    "score": 40,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

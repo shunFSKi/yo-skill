@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/josephfung/curia/calendar",
+  "type": "skill",
+  "name": "calendar",
+  "description": "Google Calendar tools for listing calendars/events, creating and updating events, finding free time, checking conflicts, RSVPs, and tentative holds. Per-tool action_risk is preserved (list/find/check = none; create-hold/RSVP = medium; holds-sweep = low; create/update/delete/register = high).",
+  "author": "josephfung",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/josephfung/curia/blob/HEAD/skills/calendar/SKILL.md",
+    "repo": "josephfung/curia",
+    "path": "skills/calendar/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 8,
+    "pushed_at": "2026-08-10T22:53:25Z",
+    "score": 54,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 8
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

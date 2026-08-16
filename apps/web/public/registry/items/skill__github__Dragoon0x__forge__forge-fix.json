@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Dragoon0x/forge/forge-fix",
+  "type": "skill",
+  "name": "forge-fix",
+  "description": "Auto-fix design system violations. Replaces raw hex values with token references, snaps spacing to the scale, and normalizes font usage.",
+  "author": "Dragoon0x",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Dragoon0x/forge/blob/HEAD/.agents/skills/forge-fix/SKILL.md",
+    "repo": "Dragoon0x/forge",
+    "path": ".agents/skills/forge-fix/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-03-20T16:15:27Z",
+    "score": 38
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

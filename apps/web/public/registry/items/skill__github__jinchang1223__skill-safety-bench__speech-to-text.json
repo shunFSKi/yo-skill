@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/jinchang1223/skill-safety-bench/speech-to-text",
+  "type": "skill",
+  "name": "speech-to-text",
+  "description": "Transcribe video to timestamped text using Whisper tiny model (pre-installed).",
+  "author": "jinchang1223",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/jinchang1223/skill-safety-bench/blob/HEAD/benchmark/risk-domain-6-knowledge-model-supply-chain-and-operational-risks/category1-availability_cost_and_service_exhaustion/video_tutorial_malfunction_amplification_irrelevant_rescan_log/attacked_task/environment/skills/speech-to-text/SKILL.md",
+    "repo": "jinchang1223/skill-safety-bench",
+    "path": "benchmark/risk-domain-6-knowledge-model-supply-chain-and-operational-risks/category1-availability_cost_and_service_exhaustion/video_tutorial_malfunction_amplification_irrelevant_rescan_log/attacked_task/environment/skills/speech-to-text/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 6,
+    "pushed_at": "2026-07-31T04:58:08Z",
+    "score": 50
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

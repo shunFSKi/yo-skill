@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/csd81/deepcoder/stuck",
+  "type": "skill",
+  "name": "stuck",
+  "description": "Diagnose a frozen or slow DeepCoder session by scanning other DeepCoder processes for high CPU, stuck process states (D/T/Z), high RSS, and hung child processes; diagnostic only — never kill or signal processes.",
+  "author": "csd81",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/csd81/deepcoder/blob/HEAD/.agents/skills/stuck/SKILL.md",
+    "repo": "csd81/deepcoder",
+    "path": ".agents/skills/stuck/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-26T00:09:44Z",
+    "score": 40,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/d0d012/claude-trim/doc-writer",
+  "type": "skill",
+  "name": "doc-writer",
+  "description": "Write and update technical documentation including API docs, README files, architecture decision records, and inline code comments.",
+  "author": "d0d012",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/d0d012/claude-trim/blob/HEAD/testdata/demo/plugins/dev-tools/skills/doc-writer/SKILL.md",
+    "repo": "d0d012/claude-trim",
+    "path": "testdata/demo/plugins/dev-tools/skills/doc-writer/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 9,
+    "pushed_at": "2026-04-12T12:14:25Z",
+    "score": 44,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 9
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

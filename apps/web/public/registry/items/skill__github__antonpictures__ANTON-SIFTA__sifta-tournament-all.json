@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/antonpictures/ANTON-SIFTA/sifta-tournament-all",
+  "type": "skill",
+  "name": "sifta-tournament-all",
+  "description": "Cline mirror for the canonical SIFTA tournament skill. Delegates to skills/sifta-tournament-all/SKILL.md so the living scoreboard has one source of truth.",
+  "author": "antonpictures",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/antonpictures/ANTON-SIFTA/blob/HEAD/.cline/skills/sifta-tournament-all/SKILL.md",
+    "repo": "antonpictures/ANTON-SIFTA",
+    "path": ".cline/skills/sifta-tournament-all/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 4,
+    "pushed_at": "2026-08-09T09:05:23Z",
+    "score": 51,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 4
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

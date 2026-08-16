@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/johanwigmo/.dotfiles/git-commit",
+  "type": "skill",
+  "name": "git-commit",
+  "description": "Write and run a git commit with a conventional commit message. Use when asked to commit, or when staged changes are ready to be committed.",
+  "author": "johanwigmo",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/johanwigmo/.dotfiles/blob/HEAD/claude/skills/git-commit/SKILL.md",
+    "repo": "johanwigmo/.dotfiles",
+    "path": "claude/skills/git-commit/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-14T21:07:06Z",
+    "score": 45,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/chrisblattman/claudeblattman/kit-hello",
+  "type": "skill",
+  "name": "kit-hello",
+  "description": "Smoke-test skill for the starter kit. Confirms the plugin installed and skills load. Use when the user runs /kit-hello or asks to verify the starter kit installation.",
+  "author": "chrisblattman",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/chrisblattman/claudeblattman/blob/HEAD/plugins/starter-kit/skills/kit-hello/SKILL.md",
+    "repo": "chrisblattman/claudeblattman",
+    "path": "plugins/starter-kit/skills/kit-hello/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 443,
+    "pushed_at": "2026-06-14T20:36:19Z",
+    "score": 74,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 443
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "# Claude Blattman\n\n**A professor's guide to building AI workflows — from chatbots to self-improving systems.**\n\nWebsite: [claudeblattman.com](https://claudeblattman.com)\n\n---\n\n## What This Is\n\nA free, open-source resource for non-developers who want to build real AI workflows. Three paths:\n\n1. **The Essentials** — Tools and foundations. Chatbots done right, dictation, transcription, prompt engineering.\n2. **The Toolkit** — Claude Code setup, configuration, and downloadable skills. From \"what is this?\" to a working system.\n3. **Build Your Own** — Creating custom skills, agents, and self-improving workflows.\n\n## Who It's For\n\n- Academics and researchers managing multiple projects\n- Professionals buried in email, meetings, and coordination\n- Anyone who wants to move beyond casual chatbot use\n\nNo coding background required. Everything is built with markdown and AI tools.\n\n## Quick Start\n\nNew to the desktop agent apps? Start with the **Desktop Agent Starter Kit**:\n\n1. Install Claude Code, then sign in.\n2. In Claude Code, add and install the starter plugin:\n\n   ```text\n   /plugin marketplace add chrisblattman/claudeblattman\n   /plugin install starter-kit@claudeblattman\n   ```\n\n3. After your first Claude Code handoff, optionally install the Codex starter pack:\n\n```bash\ngit clone https://github.com/chrisblattman/claudeblattman.git\ncd claudeblattman/codex-starter\npython3 install-codex-starter.py install\n```\n\nThen follow [Start Here: Desktop Agent Starter Kit](https://claudeblattman.com/starter-kit/).\n\nThe older `skills/` library remains available as advanced/reference material,\nbut it is not the recommended first-run path.\n\n## Repo Structure\n\n```\nclaudeblattman/\n├── docs/               # Website source (MkDocs Material)\n├── plugins/starter-kit/ # Claude plugin for the desktop-agent starter kit\n├── codex-starter/      # Codex starter pack installer + skills\n├── skills/             # Downloadable skill files\n├── agents/             # Downloadable agent files\n├── templates/          # Starter templates (CLAUDE.md, goals.yaml)\n├── mkdocs.yml          # Site configuration\n├── CONTRIBUTING.md     # Maintenance guide\n└── LICENSE             # MIT\n```\n\n## Contributing\n\nSee [CONTRIBUTING.md](CONTRIBUTING.md) for how to edit content, add skills, and maintain the site.\n\n## Release Notes\n\nThe starter kit is versioned separately from the broader docs. Each public\nstarter-kit release should have a matching tag such as `starter-kit-v0.1.0` and\na current `public-manifest.json`. If a plugin release needs rollback, install\nfrom the last known-good tag and avoid changing the marketplace/plugin names.\n\n## License\n\nMIT — use anything here however you want.\n\n---\n\nBuilt by [Chris Blattman](https://chrisblattman.com). The name is a joke. The tools are real.\n",
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/LighghtEeloo/multorum/sirno-narrative-session",
+  "type": "skill",
+  "name": "sirno-narrative-session",
+  "description": "Conduct adaptive Sirno narrative sessions with users and materialize the resulting route as a Sirno Lake entry. Use for teaching, onboarding, reviewing, or exploring project knowledge through questions, feedback loops, reader-state tracking, narrative route design, or serialized narrative artifacts in `sirno-docs/`.",
+  "author": "LighghtEeloo",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/LighghtEeloo/multorum/blob/HEAD/.agents/skills/sirno-narrative-session/SKILL.md",
+    "repo": "LighghtEeloo/multorum",
+    "path": ".agents/skills/sirno-narrative-session/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 25,
+    "pushed_at": "2026-05-18T13:24:55Z",
+    "score": 53
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

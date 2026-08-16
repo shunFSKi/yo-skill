@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/zhinjs/plugins/music",
+  "type": "skill",
+  "name": "music",
+  "description": "音乐搜索与分享：支持 QQ 音乐和网易云音乐，可搜索歌曲并生成分享卡片。",
+  "author": "zhinjs",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/zhinjs/plugins/blob/HEAD/utils/music/skills/music/SKILL.md",
+    "repo": "zhinjs/plugins",
+    "path": "utils/music/skills/music/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 4,
+    "pushed_at": "2026-04-15T04:23:55Z",
+    "score": 35
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

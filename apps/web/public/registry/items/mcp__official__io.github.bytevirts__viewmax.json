@@ -1,0 +1,61 @@
+{
+  "id": "mcp:official/io.github.bytevirts/viewmax",
+  "type": "mcp",
+  "name": "ViewMax MCP",
+  "description": "Remote MCP for AI video, image, music and speech generation.",
+  "author": "io.github.bytevirts",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/bytevirts/viewmax-mcp",
+    "repo": "bytevirts/viewmax-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://viewmax.studio/api/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-15T23:11:41.485666Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": "# ViewMax MCP\n\nOfficial remote MCP server for [ViewMax Studio](https://viewmax.studio/mcp). Generate AI video, images, music, and speech from Claude, Cursor, ChatGPT (Codex), or any MCP client.\n\n**Endpoint:** `https://viewmax.studio/api/mcp`  \n**Docs:** https://viewmax.studio/docs/mcp\n\n## Connect\n\n### Claude (Web & Desktop)\n\nSettings → Connectors → Add custom connector. Name it `ViewMax`, paste:\n\n```text\nhttps://viewmax.studio/api/mcp\n```\n\nClick Connect and sign in with your ViewMax account. OAuth, no API key.\n\n### Claude Code\n\n```bash\nclaude mcp add --transport http viewmax https://viewmax.studio/api/mcp --header \"Authorization: Bearer YOUR_API_KEY\"\n```\n\n### Cursor\n\nAdd to `~/.cursor/mcp.json`:\n\n```json\n{\n  \"mcpServers\": {\n    \"viewmax\": {\n      \"url\": \"https://viewmax.studio/api/mcp\",\n      \"headers\": {\n        \"Authorization\": \"Bearer YOUR_API_KEY\"\n      }\n    }\n  }\n}\n```\n\n### Codex (ChatGPT)\n\n```bash\nexport VIEWMAX_API_KEY=YOUR_API_KEY\ncodex mcp add viewmax --url https://viewmax.studio/api/mcp --bearer-token-env-var VIEWMAX_API_KEY\n```\n\nCreate an API key in ViewMax Settings → API Keys.\n\n## Tools\n\n| Tool | Purpose |\n| --- | --- |\n| `list_video_models` / `get_video_model` | Discover video models and pricing |\n| `generate_video` | Create a video generation task |\n| `list_image_models` / `get_image_model` | Discover image models and pricing |\n| `generate_image` | Create an image generation task |\n| `list_music_models` | Discover music models |\n| `generate_music` | Generate music (usually returns URLs immediately) |\n| `list_voices` | List TTS voices |\n| `generate_speech` | Text to speech |\n| `generate_sound_effect` | Sound effect from a prompt |\n| `get_task` / `wait_for_task` | Poll generation status |\n| `get_credits` | Remaining account credits |\n\nGeneration consumes ViewMax credits. Inspect a model before calling a `generate_*` tool.\n\n## License\n\nDocumentation in this repository is provided so agents and directories can discover the hosted ViewMax MCP server. The ViewMax product itself is a hosted service at [viewmax.studio](https://viewmax.studio).\n",
+  "status": "curated"
+}

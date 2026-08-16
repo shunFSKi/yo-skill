@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/Jablem/claude-code-skill-installer/skill-installer",
+  "type": "skill",
+  "name": "skill-installer",
+  "description": "当用户需要安装 .skill 文件、双击 .skill 无反应、或询问如何安装 skill 时使用此技能。",
+  "author": "Jablem",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Jablem/claude-code-skill-installer/blob/HEAD/SKILL.md",
+    "repo": "Jablem/claude-code-skill-installer",
+    "path": "SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-11T10:19:42Z",
+    "score": 37,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

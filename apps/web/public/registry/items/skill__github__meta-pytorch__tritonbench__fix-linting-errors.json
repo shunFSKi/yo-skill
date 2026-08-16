@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/meta-pytorch/tritonbench/fix-linting-errors",
+  "type": "skill",
+  "name": "fix-linting-errors",
+  "description": "Fix linting errors in a PR or Diff.",
+  "author": "meta-pytorch",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/meta-pytorch/tritonbench/blob/HEAD/.claude/skills/fix-linting-errors/SKILL.md",
+    "repo": "meta-pytorch/tritonbench",
+    "path": ".claude/skills/fix-linting-errors/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 365,
+    "pushed_at": "2026-08-14T23:53:43Z",
+    "score": 72,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 365
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# TritonBench\n\nTritonBench is a collection of PyTorch operators used to evaluation the performance of [Triton](https://github.com/triton-lang/triton),\nand its integration with PyTorch.\n\n\n## Installation\n\nThe benchmark suite should be self-contained of its dependencies. To install, follow the steps below.\n\n\nStep 1: clone the repository and checkout all submodules\n\n``` bash\ngit clone https://github.com/meta-pytorch/tritonbench.git\ncd tritonbench\ngit submodule update --init --recursive\n```\n\nStep 2: run install.py\n\n``` bash\npython install.py\n```\n\nBy default, it will install the latest PyTorch nightly release and use the Triton version bundled with it.\n\n## Basic Usage\n\nTo benchmark an operator, run the following command:\n\n``` bash\npython run.py --op gemm\n```\n\n## Install as a library\n\nTo install as a library:\n\n``` bash\npip install -e .\n```\n\nIn your own benchmark script:\n``` python\nimport tritonbench\nfrom tritonbench.utils import parser\nop_args = parser.parse_args()\naddmm_bench = tritonbench.load_opbench_by_name(\"addmm\")(op_args)\naddmm_bench.run()\n```\n\n## Submodules\n\nWe depend on the following projects as a source of customized Triton or CUTLASS kernels:\n\n* (CUDA, HIP) [generative-recommenders](https://github.com/facebookresearch/generative-recommenders)\n* (CUDA, HIP) [Liger-Kernel](https://github.com/linkedin/Liger-Kernel)\n* (CUDA, HIP) [tilelang](https://github.com/tile-ai/tilelang)\n* (CUDA) [flash-attention](https://github.com/Dao-AILab/flash-attention)\n* (CUDA) [FBGEMM](https://github.com/pytorch/FBGEMM)\n* (CUDA) [ThunderKittens](https://github.com/HazyResearch/ThunderKittens)\n* (HIP) [AITer](https://github.com/ROCm/aiter)\n\n\n## License\nTritonBench is BSD 3-Clause licensed, as found in the LICENSE file.\n",
+  "status": "curated"
+}

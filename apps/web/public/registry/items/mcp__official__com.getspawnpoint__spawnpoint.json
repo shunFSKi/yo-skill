@@ -17,7 +17,7 @@
   "quality": {
     "stars": null,
     "pushed_at": "2026-08-14T23:57:10.98841Z",
-    "score": 55
+    "score": 45
   },
   "security": {
     "score": 100,
@@ -49,6 +49,6 @@
     "category": "编程",
     "featured": false
   },
-  "readme": "# spawnpoint plugin\n\nThe official [Claude Code](https://claude.com/claude-code) plugin for\n[spawnpoint](https://getspawnpoint.com): your agent builds a small app, spawnpoint puts it\nonline, and you get a link to share.\n\n## Install\n\n```sh\nclaude plugin marketplace add spawnpoint-inc/spawnpoint-plugin\nclaude plugin install spawnpoint@spawnpoint\n```\n\nRestart Claude Code so the skills load, then just talk to your agent:\n\n- **\"set up spawnpoint\"**: connects Claude Code to spawnpoint and walks you through a\n  one-time browser sign-in. No keys to copy.\n- **\"deploy this to spawnpoint\"**: builds, ships, and hands you the link.\n\n## Update\n\n**Do this once and never think about updates again:** run `/plugin`, open\n**Marketplaces**, select **spawnpoint**, and enable **auto-update**. Third-party\nmarketplaces have it off by default, which is why it takes the one toggle; after that\nClaude Code picks up new versions on its own.\n\nPrefer manual? Two commands, then restart Claude Code:\n\n```sh\nclaude plugin marketplace update spawnpoint\nclaude plugin update spawnpoint@spawnpoint\n```\n\nNew MCP tools need no plugin update at all: agents discover them from the server.\n\n## What's in it\n\nTwo skills and the MCP wiring, in [`plugin/spawnpoint/`](plugin/spawnpoint/):\n\n- `setup-spawnpoint`: registers the MCP server and drives the OAuth sign-in.\n- `deploy-to-spawnpoint`: packages the app and calls the `deploy_project` tool.\n\nDetails in the [plugin README](plugin/spawnpoint/README.md). This repo is the published\nplugin only; docs live at [getspawnpoint.com](https://getspawnpoint.com).\n",
+  "readme": null,
   "status": "curated"
 }

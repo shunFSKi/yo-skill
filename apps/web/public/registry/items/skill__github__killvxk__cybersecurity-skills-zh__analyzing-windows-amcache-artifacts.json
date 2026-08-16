@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/killvxk/cybersecurity-skills-zh/analyzing-windows-amcache-artifacts",
+  "type": "skill",
+  "name": "analyzing-windows-amcache-artifacts",
+  "description": "解析并分析 Windows Amcache.hve 注册表配置单元（Registry Hive），提取程序执行证据、文件元数据、 SHA-1 哈希及设备连接历史，用于数字取证（Digital Forensics）和事件响应（Incident Response）调查。",
+  "author": "killvxk",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/killvxk/cybersecurity-skills-zh/blob/HEAD/skills/analyzing-windows-amcache-artifacts/SKILL.md",
+    "repo": "killvxk/cybersecurity-skills-zh",
+    "path": "skills/analyzing-windows-amcache-artifacts/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 38,
+    "pushed_at": "2026-04-28T10:15:40Z",
+    "score": 49,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 38
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

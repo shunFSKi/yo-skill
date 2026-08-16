@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/tomzx/agents/end-week",
+  "type": "skill",
+  "name": "end-week",
+  "description": "Summarizes the week from Slack, colleagues, action items, and thanks, then runs the end-of-week review. Use when the user says /end-week, end of week, weekly summary, or Friday wrap-up.",
+  "author": "tomzx",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/tomzx/agents/blob/HEAD/skills/end-week/SKILL.md",
+    "repo": "tomzx/agents",
+    "path": "skills/end-week/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 5,
+    "pushed_at": "2026-08-16T02:56:34Z",
+    "score": 52,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 5
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

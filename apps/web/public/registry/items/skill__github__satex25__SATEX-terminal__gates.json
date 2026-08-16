@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/satex25/SATEX-terminal/gates",
+  "type": "skill",
+  "name": "gates",
+  "description": "Run all four SATEX gates (typecheck → lint → test → knip) from satex-app/ and report real exit codes and counts. Use before any commit, merge, or to verify a clean baseline.",
+  "author": "satex25",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/satex25/SATEX-terminal/blob/HEAD/.agents/skills/gates/SKILL.md",
+    "repo": "satex25/SATEX-terminal",
+    "path": ".agents/skills/gates/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-07T12:55:17Z",
+    "score": 45,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

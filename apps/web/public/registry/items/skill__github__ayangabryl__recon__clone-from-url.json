@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/ayangabryl/recon/clone-from-url",
+  "type": "skill",
+  "name": "clone-from-url",
+  "description": "DEPRECATED — renamed to recon. Use recon for mirror, remix, and scout modes. Triggers still match for backwards compatibility.",
+  "author": "ayangabryl",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ayangabryl/recon/blob/HEAD/skills/clone-from-url/SKILL.md",
+    "repo": "ayangabryl/recon",
+    "path": "skills/clone-from-url/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-25T15:24:25Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

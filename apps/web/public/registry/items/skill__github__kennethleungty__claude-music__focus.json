@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/kennethleungty/claude-music/focus",
+  "type": "skill",
+  "name": "focus",
+  "description": "Focus — pomodoro timer with music that fades when time's up",
+  "author": "kennethleungty",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/kennethleungty/claude-music/blob/HEAD/skills/focus/SKILL.md",
+    "repo": "kennethleungty/claude-music",
+    "path": "skills/focus/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 20,
+    "pushed_at": "2026-04-12T14:43:06Z",
+    "score": 44
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

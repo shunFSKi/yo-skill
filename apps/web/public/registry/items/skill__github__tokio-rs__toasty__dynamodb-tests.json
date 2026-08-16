@@ -15,9 +15,15 @@
     "kind": "skill-dir"
   },
   "quality": {
-    "stars": null,
-    "pushed_at": null,
-    "score": 22
+    "stars": 3016,
+    "pushed_at": "2026-08-16T04:31:53Z",
+    "score": 83,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 3016
+      }
+    ]
   },
   "security": {
     "score": 100,
@@ -49,6 +55,6 @@
     "category": "编程",
     "featured": false
   },
-  "readme": null,
+  "readme": "<div align=\"center\">\n  <h1>Toasty</h1>\n</div>\n\n<div align=\"center\">\n  <h3>The cozy, easy ORM for Rust</h3>\n  <a href=\"https://tokio-rs.github.io/toasty/0.10.0/guide/\">Guide</a> •\n  <a href=\"https://docs.rs/toasty\">API Docs</a> •\n  <a href=\"https://crates.io/crates/toasty\">Crates.io</a> •\n  <a href=\"https://discord.gg/tokio\">Discord</a>\n</div>\n\n<br/>\n\n<div align=\"center\">\n\n[![Crates.io][crates-badge]][crates-url]\n[![MIT licensed][mit-badge]][mit-url]\n[![Build Status][actions-badge]][actions-url]\n[![Discord chat][discord-badge]][discord-url]\n\n</div>\n\n[crates-badge]: https://img.shields.io/crates/v/toasty.svg\n[crates-url]: https://crates.io/crates/toasty\n[mit-badge]: https://img.shields.io/badge/license-MIT-blue.svg\n[mit-url]: https://github.com/tokio-rs/toasty/blob/main/LICENSE\n[actions-badge]: https://github.com/tokio-rs/toasty/workflows/Cargo%20Build%20%26%20Test/badge.svg\n[actions-url]: https://github.com/tokio-rs/toasty/actions?query=workflow%3A%22Cargo+Build+%26+Test%22+branch%3Amain\n[discord-badge]: https://img.shields.io/discord/500028886025895936.svg?logo=discord&style=flat-square\n[discord-url]: https://discord.gg/tokio\n\nToasty supports SQL databases (SQLite/Turso, PostgreSQL, MySQL) and DynamoDB.\nIt does not hide database capabilities — it exposes features based on the\ntarget database.\n\n## Using Toasty\n\nYou will define your data model using Rust structs annotated with the\n`#[derive(toasty::Model)]` derive macro. Runnable examples live in the\n[`examples/`](examples/) directory; the snippets below illustrate the basics.\n\n```rust\n#[derive(Debug, toasty::Model)]\nstruct User {\n    #[key]\n    #[auto]\n    id: u64,\n\n    name: String,\n\n    #[unique]\n    email: String,\n\n    #[has_many]\n    todos: toasty::Deferred<Vec<Todo>>,\n}\n\n#[derive(Debug, toasty::Model)]\nstruct Todo {\n    #[key]\n    #[auto]\n    id: u64,\n\n    #[index]\n    user_id: u64,\n\n    #[belongs_to]\n    user: toasty::Deferred<User>,\n\n    title: String,\n}\n```\n\nThen, you can easily work with the data model:\n\n```rust\n// Create a new user and give them some todos.\nlet user = toasty::create!(User {\n    name: \"John Doe\",\n    email: \"john@example.com\",\n    todos: [\n        { title: \"Make pizza\" },\n        { title: \"Finish Toasty\" },\n        { title: \"Sleep\" },\n    ],\n}).exec(&mut db).await?;\n\n// Load the user from the database\nlet user = User::get_by_id(&mut db, &user.id).await?;\n\n// Load and iterate the user's todos\nlet todos = user.todos().exec(&mut db).await?;\n\nfor todo in &todos {\n    println!(\"{:#?}\", todo);\n}\n```\n\n## SQL and NoSQL\n\nToasty supports both SQL and NoSQL databases. Current drivers are SQLite,\nTurso, PostgreSQL, MySQL, and DynamoDB. However, it does not aim to abstract\nthe database. Instead, Toasty leans into the target database's capabilities\nand aims to help the user avoid issuing inefficient queries for that database.\n\nWhen targeting both SQL and NoSQL databases, Toasty generates query methods\n(e.g. `get_by_id` only for access patterns that are indexed). When targeting a\nSQL database, Toasty might allow arbitrary additional query constraints. When\ntargeting a NoSQL database, Toasty will only allow constraints that the\nspecific target database can execute. For example, with DynamoDB, query methods\nmight be generated based on the table's primary key, and additional constraints\nmay be set for the sort key.\n\n## Application data model vs. database schema\n\nToasty decouples the application data model from the database's schema. By\ndefault, a toasty application schema will map 1-1 with a database schema.\nHowever, additional annotations may be specified to customize how the\napplication data model maps to the database schema.\n\n## Roadmap\n\nDevelopment priorities are based on feedback and contributions. If you run into\nmissing features or rough edges, please open an issue or submit a pull request.\nPlanned work lives under [`docs/dev/roadmap.md`](docs/dev/roadmap.md).\n\n## Contributing\n\nSee [`CONTRIBUTING.md`](CONTRIBUTING.md). Small fixes can go straight to a PR;\nlarger changes follow a lightweight propose → roadmap + design doc → implement\nflow.\n\n## License\n\nThis project is licensed under the [MIT license].\n\n[MIT license]: LICENSE\n\n### Contribution\n\nUnless you explicitly state otherwise, any contribution intentionally submitted\nfor inclusion in Toasty by you, shall be licensed as MIT, without any additional\nterms or conditions.\n",
   "status": "curated"
 }

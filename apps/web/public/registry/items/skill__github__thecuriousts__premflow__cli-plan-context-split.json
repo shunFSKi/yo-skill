@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/thecuriousts/premflow/cli-plan-context-split",
+  "type": "skill",
+  "name": "cli-plan-context-split",
+  "description": "Parse first arg as plan (e.g. 20,4,20,4) and remainder as session label/context; fallback treats whole tail as context",
+  "author": "thecuriousts",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/thecuriousts/premflow/blob/HEAD/.cursor/skills/cli-plan-context-split/SKILL.md",
+    "repo": "thecuriousts/premflow",
+    "path": ".cursor/skills/cli-plan-context-split/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-07-26T04:04:19Z",
+    "score": 48,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

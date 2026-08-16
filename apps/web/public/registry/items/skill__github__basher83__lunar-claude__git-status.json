@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/basher83/lunar-claude/git-status",
+  "type": "skill",
+  "name": "git-status",
+  "description": "Summarize the current state of the git repository",
+  "author": "basher83",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/basher83/lunar-claude/blob/HEAD/plugins/devops/git-workflow/skills/git-status/SKILL.md",
+    "repo": "basher83/lunar-claude",
+    "path": "plugins/devops/git-workflow/skills/git-status/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 22,
+    "pushed_at": "2026-08-13T22:09:37Z",
+    "score": 54
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

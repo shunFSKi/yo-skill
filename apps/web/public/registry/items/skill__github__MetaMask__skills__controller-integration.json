@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/MetaMask/skills/controller-integration",
+  "type": "skill",
+  "name": "controller-integration",
+  "description": "Wire a new or existing controller — whether imported from a `@metamask/*-controller` npm package or defined locally in the repo — into the MetaMask Mobile Engine or the MetaMask Extension background. Use this skill when: adding a controller to Engine or to the extension's messenger-client init, creating a controller init function or messenger, delegating actions/events between controllers, adding a controller to EngineState/Engine.context or to MESSENGER_FACTORIES and the MessengerClient union, or debugging a controller whose state never reaches Redux/the UI or resets on restart.",
+  "author": "MetaMask",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/MetaMask/skills/blob/HEAD/domains/coding/skills/controller-integration/skill.md",
+    "repo": "MetaMask/skills",
+    "path": "domains/coding/skills/controller-integration/skill.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 22,
+    "pushed_at": "2026-08-14T18:42:05Z",
+    "score": 57,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 22
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

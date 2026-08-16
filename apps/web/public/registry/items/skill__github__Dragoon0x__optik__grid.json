@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Dragoon0x/optik/grid",
+  "type": "skill",
+  "name": "grid",
+  "description": "Apply 8px grid system with automatic snap correction. Finds all spacing values not aligned to the grid and snaps them to the nearest valid value.",
+  "author": "Dragoon0x",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Dragoon0x/optik/blob/HEAD/.agents/skills/grid/SKILL.md",
+    "repo": "Dragoon0x/optik",
+    "path": ".agents/skills/grid/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-03-20T15:47:28Z",
+    "score": 38
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

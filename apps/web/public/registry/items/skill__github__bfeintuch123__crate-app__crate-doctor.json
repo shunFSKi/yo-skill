@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/bfeintuch123/crate-app/crate-doctor",
+  "type": "skill",
+  "name": "crate-doctor",
+  "description": "Run Crate local readiness checks before release, deploy, QA, or long-running loop work. Use when Bryant asks for doctor/preflight or when a Crate playbook requires machine readiness verification.",
+  "author": "bfeintuch123",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/bfeintuch123/crate-app/blob/HEAD/.agents/skills/crate-doctor/SKILL.md",
+    "repo": "bfeintuch123/crate-app",
+    "path": ".agents/skills/crate-doctor/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-14T20:14:38Z",
+    "score": 45,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

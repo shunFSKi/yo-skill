@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Tryboy869/dojutsu-for-ai/fastapi-application-rules",
+  "type": "skill",
+  "name": "fastapi-application-rules",
+  "description": "[Applies to: **/main.py] Specific guidelines for FastAPI application structure and setup in the main application file.",
+  "author": "Tryboy869",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Tryboy869/dojutsu-for-ai/blob/HEAD/senjutsu/skills/fastapi-application-rules/SKILL.md",
+    "repo": "Tryboy869/dojutsu-for-ai",
+    "path": "senjutsu/skills/fastapi-application-rules/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 4,
+    "pushed_at": "2026-02-28T22:58:13Z",
+    "score": 41
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/dvcrn/openclaw-skills-marketplace/jun-invest-option-master-installer",
+  "type": "skill",
+  "name": "jun-invest-option-master-installer",
+  "description": "Install/restore the jun-invest-option-master Agent App (repo-based) into an OpenClaw workspace.",
+  "author": "dvcrn",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/dvcrn/openclaw-skills-marketplace/blob/HEAD/plugins/gm4leejun-stack--jun-invest-option-master/skills/jun-invest-option-master/clawhub-skill/SKILL.md",
+    "repo": "dvcrn/openclaw-skills-marketplace",
+    "path": "plugins/gm4leejun-stack--jun-invest-option-master/skills/jun-invest-option-master/clawhub-skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 32,
+    "pushed_at": "2026-06-12T21:33:13Z",
+    "score": 51
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

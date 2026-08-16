@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/nvtruongops/nodetask/hook-before-commit",
+  "type": "skill",
+  "name": "hook-before-commit",
+  "description": "Hook kích hoạt trước khi commit code vào Git repository.",
+  "author": "nvtruongops",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/nvtruongops/nodetask/blob/HEAD/.agents/hooks/before-commit/SKILL.md",
+    "repo": "nvtruongops/nodetask",
+    "path": ".agents/hooks/before-commit/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-07T00:17:11Z",
+    "score": 42,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/mc44ft/DreamSenker/refactor-plan-document",
+  "type": "skill",
+  "name": "refactor-plan-document",
+  "description": "DreamSenker 的 Assets/Documentation 文档写作规范。用户要求在 Assets/Documentation/思路整理、Assets/Documentation/规划文档、 Assets/Documentation/参考文档、Assets/Documentation/说明文档 下创建或整理文档时使用。 其中规划文档沿用重构方案规范；思路整理文档使用短、清晰、面向用户阅读的结构规范。",
+  "author": "mc44ft",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/mc44ft/DreamSenker/blob/HEAD/.claude/skills/refactor-plan-document/SKILL.md",
+    "repo": "mc44ft/DreamSenker",
+    "path": ".claude/skills/refactor-plan-document/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-07-16T03:15:03Z",
+    "score": 43
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

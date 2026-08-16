@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/konveyor/ai-rule-gen/generate-rules",
+  "type": "skill",
+  "name": "generate-rules",
+  "description": "Generate Konveyor analyzer migration rules from a migration guide (URL, file path, or pasted text). Use when the user wants to create Konveyor rules, migrate an application, or convert a migration guide into analyzer rules.",
+  "author": "konveyor",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/konveyor/ai-rule-gen/blob/HEAD/.claude/skills/generate-rules/SKILL.md",
+    "repo": "konveyor/ai-rule-gen",
+    "path": ".claude/skills/generate-rules/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-06-30T14:56:00Z",
+    "score": 43,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

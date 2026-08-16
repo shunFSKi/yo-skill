@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/romarayt/raytsystem-public-os/research",
+  "type": "skill",
+  "name": "research",
+  "description": "Perform bounded source research for raytsystem and return provenance-rich evidence proposals without canonical writes. Use for RESEARCH, public fact gathering, source comparison, primary-source verification, or preparing evidence for a later INGEST; keep private corpus local unless scoped egress is approved.",
+  "author": "romarayt",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/romarayt/raytsystem-public-os/blob/HEAD/.agents/skills/research/SKILL.md",
+    "repo": "romarayt/raytsystem-public-os",
+    "path": ".agents/skills/research/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 123,
+    "pushed_at": "2026-08-12T05:39:53Z",
+    "score": 64,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 123
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

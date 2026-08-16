@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/yabafre/pekulo/aped-iterate",
+  "type": "skill",
+  "name": "aped-iterate",
+  "description": "Use when user says \"iterate\", \"rework\", \"after merge\", \"post-ship\", \"what now after merge\", \"we shipped X, now we need Y\", \"address the gap\", or invokes aped-iterate. Routes a post-ship delta to the right downstream skill — does not implement the change itself.",
+  "author": "yabafre",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/yabafre/pekulo/blob/HEAD/.aped/aped-iterate/SKILL.md",
+    "repo": "yabafre/pekulo",
+    "path": ".aped/aped-iterate/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-29T11:47:00Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

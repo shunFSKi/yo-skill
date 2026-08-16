@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/tools-only/X-Skills/p1-plugin-validator-pre-commit-output-is-too-noisy",
+  "type": "skill",
+  "name": "P1: plugin-validator pre-commit output is too noisy",
+  "description": "Running `prek --all-files` produces pages of plugin-validator output — every file in the repo gets validated, and pre-existing warnings/errors (broken links, SK006 complexity, missing trigger phrases) for files unrelated to the current change drown out actionable information. The validator needs a review of its pre-commit integration to reduce noise.",
+  "author": "tools-only",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/tools-only/X-Skills/blob/HEAD/automation/scripting/419-p1-p1-plugin-validator-pre-commit-output-is-too-noisy_bd37edca/skill.md",
+    "repo": "tools-only/X-Skills",
+    "path": "automation/scripting/419-p1-p1-plugin-validator-pre-commit-output-is-too-noisy_bd37edca/skill.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 7,
+    "pushed_at": "2026-05-16T18:12:55Z",
+    "score": 43
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

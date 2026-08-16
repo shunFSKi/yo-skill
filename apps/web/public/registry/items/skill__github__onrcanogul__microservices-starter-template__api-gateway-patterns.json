@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/onrcanogul/microservices-starter-template/api-gateway-patterns",
+  "type": "skill",
+  "name": "api-gateway-patterns",
+  "description": "Use when modifying the API Gateway: adding routes, configuring rate limiting, customizing JWT validation, adding global filters, or debugging gateway behavior. Covers the reactive WebFlux architecture, JwtAuthFilter with header propagation, Redis rate limiting, CORS config, and the critical difference between gateway (reactive) and service (servlet) filters.",
+  "author": "onrcanogul",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/onrcanogul/microservices-starter-template/blob/HEAD/.github/skills/api-gateway-patterns/SKILL.md",
+    "repo": "onrcanogul/microservices-starter-template",
+    "path": ".github/skills/api-gateway-patterns/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-06-20T22:26:01Z",
+    "score": 43,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

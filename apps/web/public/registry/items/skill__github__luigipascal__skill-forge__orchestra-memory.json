@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/luigipascal/skill-forge/orchestra-memory",
+  "type": "skill",
+  "name": "orchestra-memory",
+  "description": "Queries Orchestra shared memory at localhost:4317 before coding when context may exist in prior chats, synced repos, or ingested threads. Use when the user mentions Orchestra memory, Untitled threads, recall, or cross-project context.",
+  "author": "luigipascal",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/luigipascal/skill-forge/blob/HEAD/.cursor/skills/orchestra-memory/SKILL.md",
+    "repo": "luigipascal/skill-forge",
+    "path": ".cursor/skills/orchestra-memory/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-30T08:17:14Z",
+    "score": 40,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

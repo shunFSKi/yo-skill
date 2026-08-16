@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/Ambiguous-Interactive/DxMessaging/cache-eviction",
+  "type": "skill",
+  "name": "cache-eviction",
+  "description": "Build a bounded cache with LRU, LFU, SLRU, FIFO, or Random eviction, write/access TTL, and hit-rate statistics via the struct-based CacheBuilder. Use when a Dictionary is being used as a cache, when memoizing an expensive query or computation, when memory grows without bound, or when picking an eviction policy for an access pattern.",
+  "author": "Ambiguous-Interactive",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Ambiguous-Interactive/DxMessaging/blob/HEAD/.agents/skills/cache-eviction/SKILL.md",
+    "repo": "Ambiguous-Interactive/DxMessaging",
+    "path": ".agents/skills/cache-eviction/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 26,
+    "pushed_at": "2026-08-15T02:22:43Z",
+    "score": 58,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 26
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

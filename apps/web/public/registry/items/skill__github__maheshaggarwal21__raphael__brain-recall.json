@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/maheshaggarwal21/raphael/brain-recall",
+  "type": "skill",
+  "name": "brain-recall",
+  "description": "Pull relevant lessons from the developer's Raphael brain when stuck, debugging a repeated failure, or before risky changes (deploys, migrations, auth, payments, webhooks).",
+  "author": "maheshaggarwal21",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/maheshaggarwal21/raphael/blob/HEAD/plugin/skills/brain-recall/SKILL.md",
+    "repo": "maheshaggarwal21/raphael",
+    "path": "plugin/skills/brain-recall/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-08-14T08:34:38Z",
+    "score": 49,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 2
+      }
+    ]
+  },
+  "security": {
+    "score": 85,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": false
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

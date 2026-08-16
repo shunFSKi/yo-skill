@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/DammianMiller/universal-agent-protocol/uap-worktree",
+  "type": "skill",
+  "name": "uap-worktree",
+  "description": "Manage git worktrees for safe, isolated code changes. Use before making any file edits to ensure changes are in an isolated branch.",
+  "author": "DammianMiller",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/DammianMiller/universal-agent-protocol/blob/HEAD/.factory/skills/uap-worktree/SKILL.md",
+    "repo": "DammianMiller/universal-agent-protocol",
+    "path": ".factory/skills/uap-worktree/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-14T10:34:53Z",
+    "score": 48,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

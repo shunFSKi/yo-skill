@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/5uck1ess/devkit/self-lint",
+  "type": "skill",
+  "name": "self-lint",
+  "description": "Run linter and fix violations until clean — use when asked to self-lint, lint and fix, fix lint errors, \"make lint pass\", or \"fix all the lint issues\". Triggers the deterministic self-lint workflow (baseline → fix → verify → loop until clean).",
+  "author": "5uck1ess",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/5uck1ess/devkit/blob/HEAD/skills/self-lint/SKILL.md",
+    "repo": "5uck1ess/devkit",
+    "path": "skills/self-lint/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 5,
+    "pushed_at": "2026-08-12T13:33:55Z",
+    "score": 52,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 5
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

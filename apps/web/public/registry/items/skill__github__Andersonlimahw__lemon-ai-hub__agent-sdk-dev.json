@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/Andersonlimahw/lemon-ai-hub/agent-sdk-dev",
+  "type": "skill",
+  "name": "agent-sdk-dev",
+  "description": "agent-sdk-dev plugin. Routes to its sub-skills: agent-sdk-dev, agent-sdk-verifier-py. Use when the task matches any of the capabilities listed below.",
+  "author": "Andersonlimahw",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Andersonlimahw/lemon-ai-hub/blob/HEAD/plugins/agent-sdk-dev/SKILL.md",
+    "repo": "Andersonlimahw/lemon-ai-hub",
+    "path": "plugins/agent-sdk-dev/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 13,
+    "pushed_at": "2026-08-08T12:05:30Z",
+    "score": 55,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 13
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

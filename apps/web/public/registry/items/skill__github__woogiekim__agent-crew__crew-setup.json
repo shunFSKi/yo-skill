@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/woogiekim/agent-crew/crew-setup",
+  "type": "skill",
+  "name": "crew:setup",
+  "description": "Use when the user explicitly mentions $crew:setup or asks to initialize agent-crew in Codex. This is a thin Codex skill wrapper for crew:setup and delegates all behavior to ~/.agent-crew/commands/setup.md.",
+  "author": "woogiekim",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/woogiekim/agent-crew/blob/HEAD/adapters/codex/skill/crew:setup/SKILL.md",
+    "repo": "woogiekim/agent-crew",
+    "path": "adapters/codex/skill/crew:setup/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-13T04:53:43Z",
+    "score": 48,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

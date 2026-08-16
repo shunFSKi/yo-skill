@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/ccccaiwork-coder/claude-config/update-rules",
+  "type": "skill",
+  "name": "update-rules",
+  "description": "當使用者說「更新規則」時，自動將 ~/.claude-config 的變更 commit 並 push 到 GitHub。",
+  "author": "ccccaiwork-coder",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ccccaiwork-coder/claude-config/blob/HEAD/skills/update-rules/SKILL.md",
+    "repo": "ccccaiwork-coder/claude-config",
+    "path": "skills/update-rules/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-06T06:48:40Z",
+    "score": 37,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

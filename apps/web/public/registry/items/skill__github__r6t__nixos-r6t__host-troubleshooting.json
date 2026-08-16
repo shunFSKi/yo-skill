@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/r6t/nixos-r6t/host-troubleshooting",
+  "type": "skill",
+  "name": "host-troubleshooting",
+  "description": "Use for diagnosing host freezes, GPU or kernel instability, hardware-specific failures, boot issues, and prior goldenball freeze investigations in this repository.",
+  "author": "r6t",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/r6t/nixos-r6t/blob/HEAD/.agents/skills/host-troubleshooting/SKILL.md",
+    "repo": "r6t/nixos-r6t",
+    "path": ".agents/skills/host-troubleshooting/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 4,
+    "pushed_at": "2026-08-06T00:14:34Z",
+    "score": 51,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 4
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

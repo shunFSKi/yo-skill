@@ -1,0 +1,58 @@
+{
+  "id": "mcp:official/io.github.NomadBuilder/un-default",
+  "type": "mcp",
+  "name": "Un-Default",
+  "description": "Inclusive language scan/fix for AI and human copy. Local rules, no account.",
+  "author": "io.github.NomadBuilder",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/NomadBuilder/anti-default",
+    "repo": "NomadBuilder/anti-default"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "anti-default"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-15T23:42:53.401425Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# Un-Default\n\n### One thoughtful-language check for every way you build.\n\n> Formerly **Anti-Default**. Same tool — the name shifted so it reads as undoing\n> defaults, not opposing people. Old URLs under\n> [`darkai.ca/anti-default`](https://darkai.ca/anti-default) redirect here.\n> `npx anti-default` still works as an alias for `npx -y anti-default`.\n\nUn-Default reviews copy, docs, UI strings, and live pages for colonial\ndefaults, gendered assumptions, ableist metaphors, and documented dogwhistles.\nIt explains what it noticed and offers clearer alternatives.\n\nNo account. No AI required for matching. Open rules you can tune.\n\n<p align=\"center\">\n  <a href=\"https://darkai.ca/un-default/for-agents/\"><strong>After Claude writes UI copy</strong></a>\n  ·\n  <a href=\"https://darkai.ca/un-default\"><strong>Try the web app</strong></a>\n  ·\n  <a href=\"https://chromewebstore.google.com/detail/anti-default-%E2%80%94-inclusive/aajdplalleopollfjegljkajkdcihmhc\"><strong>Add the Chrome extension</strong></a>\n  ·\n  <a href=\"https://github.com/NomadBuilder/anti-default\"><strong>Star on GitHub</strong></a>\n</p>\n\n---\n\n## After Claude / Cursor writes UI copy\n\n**One command** — skill + MCP + PR check. This is the habit that sticks:\n\n```bash\nnpx -y anti-default init\n```\n\nOr install the Claude Code plugin from this repo’s marketplace:\n\n```bash\nclaude plugin marketplace add NomadBuilder/anti-default\nclaude plugin install un-default@un-default\n```\n\nPaste-ready MCP JSON, Claude Project instructions, and a LinkedIn draft:\n\n**https://darkai.ca/un-default/for-agents/**\n\nDirectory checklist: [`docs/PUBLISH-DIRECTORIES.md`](docs/PUBLISH-DIRECTORIES.md)\n\n### Paste MCP config (Cursor · Claude Desktop · Claude Code)\n\n```json\n{\n  \"mcpServers\": {\n    \"un-default\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"anti-default\", \"mcp\"]\n    }\n  }\n}\n```\n\n| Host | Where it goes |\n|------|----------------|\n| Cursor | `.cursor/mcp.json` (written by `init`) or Settings → MCP |\n| Claude Desktop | Settings → Developer → Edit Config → `claude_desktop_config.json` (merge, quit, relaunch) |\n| Claude Code | Plugin marketplace (above), or `.mcp.json` via `init`, or `claude mcp add` |\n\nTools: `un_default_scan` · `un_default_fix` · `un_default_feedback`\n\n---\n\n## Add it in under a minute\n\n```bash\nnpx -y anti-default .\n```\n\nThat is the whole local setup. It prints findings and exits non-zero on clear\nhits. Ambiguous or quoted matches stay advisory.\n\nTo pin it in a team project:\n\n```bash\nnpm install --save-dev anti-default\n```\n\nWant the complete project setup?\n\n```bash\nnpx -y anti-default init\n```\n\n`init` adds an ignore file, changed-files GitHub workflow, Cursor + Claude\nskills, `.cursor/mcp.json` + `.mcp.json`, **Claude/Cursor after-edit hooks**,\n`CLAUDE.md` instructions, and `inclusive-check` / `inclusive-fix` scripts.\nExisting files are never overwritten. Hooks surface hard findings back to the\nagent after Edit/Write so Claude keeps checking even when nobody remembers.\n\n### AI-copy habit (definition of done)\n\n```bash\nnpx -y anti-default fix .          # safe 1:1 autofixes only\nnpx -y anti-default .              # remaining findings\n```\n\nAgents should not mark UI/docs work done until hard findings are cleared or\nexplicitly marked fine in context. Soft/coded hits stay advisory.\n\n```bash\n# Preview autofixes without writing\nnpx -y anti-default fix . --dry-run\n\n# Intentional language — suppress locally + share structured feedback\nnpx -y anti-default feedback --kind fine_in_context \\\n  --rule guys-generic --match \"guys\" --context \"…snippet…\" \\\n  --note \"Quoted lyric\" --open-issue\n```\n\n### MCP server\n\n```bash\nnpx -y anti-default mcp\n```\n\nSee [for-agents](https://darkai.ca/un-default/for-agents/) for host-specific paste steps.\n\n### Scan the way you work\n\n```bash\n# Paths\nnpx -y anti-default ./src ./docs README.md\n\n# CI formats\nnpx -y anti-default . --format json  -o report.json\nnpx -y anti-default . --format sarif -o results.sarif\n\n# Batch URLs — no Review UI\nnpx -y anti-default --urls https://example.com https://example.com/about\nnpx -y anti-default --urls-file urls.txt --format json\n\n# Only files changed in this branch\nnpx -y anti-default . --changed-from origin/main\n\n# Keep existing findings quiet; report only new ones\nnpx -y anti-default baseline .\n```\n\n### Ignore what doesn’t matter\n\nCommit a `.undefaultignore` so day-two noise doesn’t drown the team ([example](.undefaultignore.example)):\n\n```\nnode_modules/\nvendor/\n*.min.js\nrule:guys          # turn off one rule for this repo\n```\n\n---\n\n## GitHub Action\n\nKeep inclusive language in the PR loop. This scans only changed files, fails on\nclear new findings, and leaves a checklist comment:\n\n```yaml\n# .github/workflows/un-default.yml\nname: Un-Default\non: [pull_request]\npermissions:\n  contents: read\n  pull-requests: write\n  security-events: write\n\njobs:\n  scan:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n        with:\n          fetch-depth: 0\n      - uses: NomadBuilder/anti-default@v1\n        with:\n          changed-from: ${{ github.event.pull_request.base.sha }}\n          format: json\n          comment-on-pr: \"true\"\n```\n\nPrefer SARIF for Code Scanning? Set `format: sarif` and `output-file: un-default.sarif`. Full inputs: [`action.yml`](action.yml).\n\n---\n\n## Agent skill\n\n`npx -y anti-default init` installs `.cursor/skills/un-default/SKILL.md` — the\ndefinition-of-done workflow for AI-generated copy: **fix → scan → ask or\nfeedback → re-scan**.\n\nSource: [`skills/un-default/SKILL.md`](skills/un-default/SKILL.md) ·\nfeedback model: [`feedback/README.md`](feedback/README.md)\n\n---\n\n## Use it as a library\n\nThe npm package has no runtime dependencies and exposes the same analyzer used\nby the CLI and web app:\n\n```ts\nimport { analyzeText, LANGUAGE_RULES } from \"anti-default\";\n\nconst result = analyzeText(\"Welcome, you guys.\");\nconsole.log(result.findings);\n```\n\n---\n\n## Chrome extension\n\nSame rules as the app — on the page you’re already looking at.\n\n**[Add to Chrome →](https://chromewebstore.google.com/detail/anti-default-%E2%80%94-inclusive/aajdplalleopollfjegljkajkdcihmhc)**\n\nRuns offline from a bundled rule list. No tracking. No AI calls.  \nDev / unpacked: `npm run extension:pack` → Load unpacked → `extension/` · details in [`extension/README.md`](extension/README.md)\n\n## Web app — try, learn, tune\n\n[darkai.ca/un-default](https://darkai.ca/un-default)\n\n- **Review** — paste, upload, or scan a URL; export Markdown, CSV, or a checklist\n- **Swap** — turn one phrase into clearer alternatives\n- **Dogwhistles** — learn what a phrase can signal and when context matters\n- **Rules** — tune the open rule catalog for your project\n\n```bash\nnpm install && npm run dev   # localhost:3000\n```\n\n---\n\n## Why teams reach for it\n\n- **Before publish** — catch defaults in marketing, docs, and product copy  \n- **In the PR** — Action + SARIF/JSON so machines and humans both get a signal  \n- **On the live page** — extension for writers who never open a terminal  \n- **Without a lecture** — suggestions are invitations; context always wins  \n\nEvery suggestion cites the style guides and references behind it → [/sources](https://darkai.ca/un-default/sources)\n\n---\n\n## Customize & self-host\n\n- Tune in the UI: [/rules](https://darkai.ca/un-default/rules) · edit code: `src/lib/rules.ts`\n- Practice corpus: `npm run corpus`\n- Static export: `npm run build` → `out/`  \n  Subpath (DarkAI): `STATIC_EXPORT=true BASE_PATH=/un-default npm run build`\n\nProduction lives at [darkai.ca/un-default](https://darkai.ca/un-default) and is also vendored in [DarkAI](https://github.com/NomadBuilder/DarkAI).\n\n## License\n\n[MIT](LICENSE)\n",
+  "status": "curated"
+}

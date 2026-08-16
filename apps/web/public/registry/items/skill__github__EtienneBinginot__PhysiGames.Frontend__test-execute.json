@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/EtienneBinginot/PhysiGames.Frontend/test-execute",
+  "type": "skill",
+  "name": "test-execute",
+  "description": "Execute unit tests for the project. Always call this skill after writing or modifying tests to verify they pass.",
+  "author": "EtienneBinginot",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/EtienneBinginot/PhysiGames.Frontend/blob/HEAD/.claude/skills/test-execute/SKILL.md",
+    "repo": "EtienneBinginot/PhysiGames.Frontend",
+    "path": ".claude/skills/test-execute/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-04-10T18:02:50Z",
+    "score": 35,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

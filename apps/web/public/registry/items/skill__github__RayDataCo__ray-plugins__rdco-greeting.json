@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/RayDataCo/ray-plugins/rdco-greeting",
+  "type": "skill",
+  "name": "rdco-greeting",
+  "description": "Example skill bundled in the rdco-example plugin. Use when the user asks for a Ray Data Co greeting or wants to see how a plugin-bundled skill is structured.",
+  "author": "RayDataCo",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/RayDataCo/ray-plugins/blob/HEAD/plugins/rdco-example/skills/rdco-greeting/SKILL.md",
+    "repo": "RayDataCo/ray-plugins",
+    "path": "plugins/rdco-example/skills/rdco-greeting/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-11T13:20:41Z",
+    "score": 40,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

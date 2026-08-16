@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/tyroneross/build-loop/repo-closeout",
+  "type": "skill",
+  "name": "repo-closeout",
+  "description": "Compatibility alias for Repository Maintenance. Use when an existing prompt or workflow invokes repo-closeout; route all repository structure, artifact, branch, worktree, sibling consolidation, and local-main maintenance work to repo-maintenance. Deprecated: prefer repo-maintenance for new work.",
+  "author": "tyroneross",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/tyroneross/build-loop/blob/HEAD/plugin-artifacts/codex/skills/repo-closeout/SKILL.md",
+    "repo": "tyroneross/build-loop",
+    "path": "plugin-artifacts/codex/skills/repo-closeout/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-07T17:57:49Z",
+    "score": 48,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

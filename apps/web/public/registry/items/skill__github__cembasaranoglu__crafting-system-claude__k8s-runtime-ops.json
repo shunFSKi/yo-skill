@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/cembasaranoglu/crafting-system-claude/k8s-runtime-ops",
+  "type": "skill",
+  "name": "k8s-runtime-ops",
+  "description": "Review or design Kubernetes runtime operations including health, readiness, graceful shutdown, resource sizing, security context, and rollout. Use when working with Dockerfile, Kubernetes manifests, Helm, or rollout strategy.",
+  "author": "cembasaranoglu",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/cembasaranoglu/crafting-system-claude/blob/HEAD/cowork/skills/k8s-runtime-ops/SKILL.md",
+    "repo": "cembasaranoglu/crafting-system-claude",
+    "path": "cowork/skills/k8s-runtime-ops/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 5,
+    "pushed_at": "2026-05-05T18:25:10Z",
+    "score": 42
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

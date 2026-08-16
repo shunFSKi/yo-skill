@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/huifer/ds-ai/github-fetch",
+  "type": "skill",
+  "name": "github-fetch",
+  "description": "Auto-generated skill for intake agent.\n每日 23:50 拉取 GitHub commits、Pi Session、Discord、飞书摘要。",
+  "author": "huifer",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/huifer/ds-ai/blob/HEAD/agent-core/agents/intake/skills/github-fetch.skill.md",
+    "repo": "huifer/ds-ai",
+    "path": "agent-core/agents/intake/skills/github-fetch.skill.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-07-21T14:44:34Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

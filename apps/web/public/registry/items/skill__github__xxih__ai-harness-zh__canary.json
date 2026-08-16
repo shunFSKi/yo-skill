@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/xxih/ai-harness-zh/canary",
+  "type": "skill",
+  "name": "canary",
+  "description": "部署后的金丝雀监控。借助 browse daemon 持续观察线上应用的控制台错误、\n性能回归和页面故障，并定期截图、对比基线。 (gstack)",
+  "author": "xxih",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/xxih/ai-harness-zh/blob/HEAD/references/translations/gstack/canary/SKILL.md.tmpl",
+    "repo": "xxih/ai-harness-zh",
+    "path": "references/translations/gstack/canary/SKILL.md.tmpl"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-06-03T16:22:03Z",
+    "score": 40,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/cesarfavero/fastregex-mcp/fastregex-policy",
+  "type": "skill",
+  "name": "fastregex-policy",
+  "description": "Enforce use of fastregex-mcp for code search. Use this skill when an AI should avoid direct rg/grep and always call regex_search.",
+  "author": "cesarfavero",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/cesarfavero/fastregex-mcp/blob/HEAD/wrappers/skills/fastregex-policy/SKILL.md",
+    "repo": "cesarfavero/fastregex-mcp",
+    "path": "wrappers/skills/fastregex-policy/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-03-28T05:30:15Z",
+    "score": 38,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

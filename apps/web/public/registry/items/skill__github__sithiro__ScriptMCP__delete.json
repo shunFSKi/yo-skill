@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/sithiro/ScriptMCP/delete",
+  "type": "skill",
+  "name": "delete",
+  "description": "This skill should be used when the user asks to delete a script, remove a script, or wants to delete a registered ScriptMCP script.",
+  "author": "sithiro",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/sithiro/ScriptMCP/blob/HEAD/ScriptMCP.Plugin/skills/delete/SKILL.md",
+    "repo": "sithiro/ScriptMCP",
+    "path": "ScriptMCP.Plugin/skills/delete/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-05-14T10:39:56Z",
+    "score": 38,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

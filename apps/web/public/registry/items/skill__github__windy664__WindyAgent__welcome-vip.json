@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/windy664/WindyAgent/welcome-vip",
+  "type": "skill",
+  "name": "welcome_vip",
+  "description": "给指定在线玩家发 VIP 欢迎礼包（5 钻石）并全服欢迎；玩家开通会员时使用",
+  "author": "windy664",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/windy664/WindyAgent/blob/HEAD/core/src/main/resources/skills/welcome_vip/SKILL.md",
+    "repo": "windy664/WindyAgent",
+    "path": "core/src/main/resources/skills/welcome_vip/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-07-17T13:02:54Z",
+    "score": 42,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

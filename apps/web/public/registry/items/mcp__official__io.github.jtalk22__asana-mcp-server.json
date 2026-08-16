@@ -1,0 +1,75 @@
+{
+  "id": "mcp:official/io.github.jtalk22/asana-mcp-server",
+  "type": "mcp",
+  "name": "Asana MCP Server",
+  "description": "Change Asana without opening Asana — custom fields, sections, start dates, rich notes, bulk. PAT.",
+  "author": "io.github.jtalk22",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/jtalk22/asana-mcp-server",
+    "repo": "jtalk22/asana-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@jtalk22/asana-mcp"
+    ],
+    "env": [
+      {
+        "name": "ASANA_PAT",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "ASANA_WORKSPACE_GID",
+        "required": false,
+        "secret": false
+      },
+      {
+        "name": "ASANA_MCP_TOOLS",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-15T22:06:26.174376Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": "<div align=\"center\">\n\n<h1>Asana MCP Server</h1>\n\n<p><strong>Change Asana without opening Asana.</strong></p>\n\n<p>A local-first Asana MCP over the REST API: controlled writes, schema operations, diagnostics, and one-call briefs over a Personal Access Token.</p>\n\n```bash\nnpx -y @jtalk22/asana-mcp --setup\n```\n\n<p><kbd>Claude Code</kbd> <kbd>Claude Desktop</kbd> <kbd>Cursor</kbd> <kbd>Copilot</kbd> <kbd>Windsurf</kbd> <kbd>Gemini CLI</kbd> <kbd>Codex CLI</kbd> <kbd>any stdio MCP client</kbd></p>\n\n</div>\n\n<p align=\"center\">\n  <a href=\"#why-this-exists\">Why this exists</a> ·\n  <a href=\"#install\">Install</a> ·\n  <a href=\"#75-tools-read-act-design\">75 tools</a> ·\n  <a href=\"#composites-one-call-one-answer\">Composites</a> ·\n  <a href=\"#slack--asana-continuity-preview\">Slack + Asana</a> ·\n  <a href=\"#honest-limits\">Honest limits</a> ·\n  <a href=\"docs/API.md\">API reference</a>\n</p>\n\n---\n\n## Why this exists\n\nAsana's official V2 MCP server is the supported hosted choice: OAuth, workspace-scoped access, consolidated task writes, and interactive confirmations in supported clients. Its tool set changes over time, so use Asana's [current tools reference](https://developers.asana.com/docs/mcp-tools-reference) rather than a frozen comparison table.\n\nChoose this server when you want a transparent local stdio process and direct REST coverage:\n\n| Need | This server's approach |\n|---|---|\n| Local operation | PAT + stdio. No hosted intermediary and no product telemetry. |\n| Controlled agent surface | Mount `read`, `write`, `all`, or an explicit comma-list of tools. |\n| Board and field design | Create fields and enum options, attach fields to projects, create/reorder sections, and instantiate templates. |\n| Reliable REST edge cases | Typed custom-field values, section placement, rich task notes, start/due ordering, pagination, and bounded retry. |\n| Large or repetitive work | Bulk loops continue past individual failures and report per-item outcomes. |\n| Fewer agent round-trips | Morning briefs, user queues, portfolio rollups, board rollups, and inbox triage return decision-ready results. |\n| Local diagnostics | `--doctor`, explicit workspace detection, generated tool reference, and release preflight. |\n\nYou can use both: the official service for managed OAuth and this package for local-first REST workflows or capabilities your operating model needs. To use this package, create a [Personal Access Token](https://app.asana.com/0/my-apps), run `--setup`, and keep the process on your machine. It talks only to `app.asana.com`.\n\n## Slack + Asana continuity preview\n\nThis package remains the full 75-tool, MIT-licensed local server. Nothing below is an unlock for missing tools.\n\nThe same maintainer is also building [Keep the Thread](https://mcp.revasserlabs.com/workflows), a managed continuity layer for an independent operator or two-to-five-person team that already works in Slack and Asana but does not want another dashboard. Its first cross-tool contract asks a narrower question:\n\n> Which Slack commitment is missing, incomplete, or stale in one selected Asana project?\n\n```mermaid\nflowchart LR\n    Slack[\"1–5 selected Slack channels\"] --> Report[\"continuity_asana_discrepancy_report\"]\n    Asana[\"1 selected Asana project\\nincomplete tasks only\"] --> Report\n    Report --> Gaps[\"matched commitments · gaps · task drift · next reviews\"]\n    Gaps --> Receipt[\"source IDs preserved\\nwrites_performed: 0\"]\n```\n\n| Choose | When it fits |\n|---|---|\n| **This open-source package** | You want local stdio, your own PAT, all 75 Asana REST tools, controlled writes, board/schema design, and no hosted intermediary. |\n| **Keep the Thread preview** | You want a managed remote MCP endpoint, official connector consent, Slack-to-Asana discrepancy reporting, saved continuity contracts, or scheduled Slack delivery. |\n\nThe hosted Asana connector code is live and read-only, but public OAuth activation is still staged. See the [representative input/output contract](https://mcp.revasserlabs.com/workflows), inspect the [live connector status](https://mcp.revasserlabs.com/api/v1/asana/oauth/status), or request a bounded [deployment review](https://mcp.revasserlabs.com/deployment). Creating, updating, completing, or deleting Asana tasks is not part of the hosted discrepancy report.\n\n## Install\n\n**1. Get a token** — [app.asana.com/0/my-apps](https://app.asana.com/0/my-apps) → Personal access tokens → Create. Then either:\n\n```bash\nnpx -y @jtalk22/asana-mcp --setup    # stores it in the macOS Keychain (or ~/.asana-mcp.json, mode 600)\n```\n\nor export `ASANA_PAT` yourself.\n\n**2. Add the server** to your MCP client:\n\n```json\n{\n  \"mcpServers\": {\n    \"asana\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@jtalk22/asana-mcp\"]\n    }\n  }\n}\n```\n\nClaude Code one-liner: `claude mcp add asana -- npx -y @jtalk22/asana-mcp`\n\n**3. Verify:**\n\n```bash\nnpx -y @jtalk22/asana-mcp --doctor   # token → identity → workspace → tool surface, as JSON\n```\n\nWorkspace is auto-detected when your token sees exactly one. Tokens that see several: set `ASANA_WORKSPACE_GID` (the doctor lists your options) or pass `workspace` per call.\n\n## 75 tools: read, act, design\n\n- **26 reads** — tasks, projects, sections, users, teams, tags, stories, subtasks, dependencies, attachments, statuses, portfolios, typeahead (name→GID), cross-board duplicate detection that knows a multi-homed task is *not* a duplicate.\n- **40 writes** — create/update/complete/assign, comments, followers, tags, dependencies, memberships, section moves, dates (`start_on` done right), custom fields (dates wrapped, `multi_enum` arrays), rich notes (sanitized), attachments (100MB uploads), bulk ops, project statuses, portfolios, templates with async-job polling, and `asana_set_notes_safe` for boards where automations rewrite what you just wrote.\n- **6 schema/design tools** — create custom fields, extend dropdowns, attach fields to projects, sections, reorder: the agent can *build* the board, not just fill it.\n- **3 destructive** — `delete_task` / `delete_project` / `delete_section` refuse to run without `confirm: true`.\n- **Local file boundary** — `attach_file` requires `confirm: true` and only reads from the current directory or `ASANA_MCP_FILE_ROOTS`.\n- **Read-only batch** — `batch_ops` rejects every non-GET action at both schema and runtime layers.\n\nEvery tool declares [MCP annotations](https://modelcontextprotocol.io/docs/concepts/tools#tool-annotations) — `readOnlyHint`, `destructiveHint`, `idempotentHint`, `openWorldHint`, titles. Clients that honor them (Claude Code does) auto-allow reads in plan mode, parallelize them safely, and gate the destructive three.\n\nTrim the advertised surface with `ASANA_MCP_TOOLS=read` (30 tools), `write`, or a comma-list — a triage agent doesn't need delete tools in its context.\n\nFull inputs and semantics: [docs/API.md](docs/API.md).\n\n## Composites: one call, one answer\n\nFive tools that replace ten-call round-trips, built from running real boards daily:\n\n- **`asana_morning_brief`** — incomplete tasks bucketed overdue / due-today / upcoming / blocked-by-dependency, one call.\n- **`asana_user_queue`** — one person's FULL queue, paginated past the API's 100-result search cap, bucketed by due date with per-project counts. The \"what is X sitting on?\" call.\n- **`asana_portfolio_rollup`** — per-project health (incomplete / overdue / completed-this-week + status) across a portfolio or project list. `include_archived: true` catches the open tasks hiding on archived boards — every default listing skips them.\n- **`asana_board_rollup`** — one board grouped by section, any number custom field summed per section (\"Deal $\", \"Claim $\"), deadline fields checked for overdue **by name** — fields resolve live from the board's own settings, nothing hard-coded.\n- **`asana_triage_inbox`** — bulk-create from a triaged list (the bulk CREATE the API doesn't have), per-item overrides, continues past failures.\n\n## Honest limits\n\n- Asana's search API caps at 100 results with no pagination. Tools built on it say so (`truncated: true`) instead of pretending the tail doesn't exist; `asana_user_queue` and the list tools paginate past it where the REST API allows.\n- The `/batch` endpoint silently discards PUT bodies and GET options upstream — so this server doesn't route writes through it. `asana_batch_ops` exists for GET-with-default-fields only, and its description says exactly that.\n- Comment rich text (`html_text` on stories) is downgraded to escaped plaintext *by Asana* — comments here are plain text by design rather than silently ugly.\n- Date custom fields come back as full ISO timestamps; overdue math normalizes to `YYYY-MM-DD` before comparing (a silent all-clear bug we hit and fixed).\n- A PAT reads only its *own* My Tasks (others 403) — `asana_user_queue` uses the assignee route that works for anyone.\n\nMore in [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md).\n\n## Security\n\nYour PAT has the same access as your Asana login. It's read from `ASANA_PAT`, the macOS Keychain (`asana-mcp`), or `~/.asana-mcp.json` (written mode 600) — never logged, never sent anywhere but `api.asana.com`'s host. No telemetry, no phone-home; read [SECURITY.md](SECURITY.md).\n\n## Development\n\n```bash\nnpm ci && npm test          # 16 unit tests, no token needed\nnpm run doctor              # live check against your workspace\nnpm run api-docs            # regenerate docs/API.md from lib/tools.js\n```\n\nPRs welcome — see [CONTRIBUTING.md](CONTRIBUTING.md). MIT.\n\n---\n\n<p align=\"center\">Also by the same author: <a href=\"https://github.com/jtalk22/slack-mcp-server\"><code>@jtalk22/slack-mcp</code></a> — catch up on Slack without reading it.</p>\n",
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "mcp:official/io.github.tvstat1/agent-data-provider",
+  "type": "mcp",
+  "name": "AgentsHub Web Search",
+  "description": "Live web search for AI agents. $0.001/call, x402 on Base, no API key.",
+  "author": "io.github.tvstat1",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/tvstat1/agent-data-provider",
+    "repo": "tvstat1/agent-data-provider"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.agentshub.dev/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-15T16:54:20.040702Z",
+    "score": 42
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

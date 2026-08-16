@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/wenlopes/zahne/explain-code",
+  "type": "skill",
+  "name": "explain-code",
+  "description": "Explica código com diagramas visuais e analogias. Use ao explicar como o código funciona, ensinar sobre uma base de código, ou quando o usuário pergunta \"como isso funciona?\"",
+  "author": "wenlopes",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/wenlopes/zahne/blob/HEAD/.claude/skills/explain-code/SKILL.md",
+    "repo": "wenlopes/zahne",
+    "path": ".claude/skills/explain-code/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-04-08T00:24:42Z",
+    "score": 35,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

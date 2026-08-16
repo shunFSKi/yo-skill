@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/QSD-Group/QSDsan/qsdsan-pr-audit",
+  "type": "skill",
+  "name": "qsdsan-pr-audit",
+  "description": "Use when reviewing, auditing, or updating QSDsan pull requests or contributor code that touches BioSTEAM/Thermosteam imports, stream/unit APIs, unit registries, or docs around Stream, SanStream, WasteStream, and SanUnit conventions.",
+  "author": "QSD-Group",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/QSD-Group/QSDsan/blob/HEAD/.claude/skills/qsdsan-pr-audit/SKILL.md",
+    "repo": "QSD-Group/QSDsan",
+    "path": ".claude/skills/qsdsan-pr-audit/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 43,
+    "pushed_at": "2026-07-23T00:12:49Z",
+    "score": 60,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 43
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

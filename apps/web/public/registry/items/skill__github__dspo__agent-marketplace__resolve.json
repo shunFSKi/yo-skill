@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/dspo/agent-marketplace/resolve",
+  "type": "skill",
+  "name": "resolve",
+  "description": "解决 PR/MR 上的评论和讨论 —— 定位 unresolved notes，修复或回复，推送更新（GitHub / GitLab 通用）",
+  "author": "dspo",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/dspo/agent-marketplace/blob/HEAD/plugins/gitwork/skills/resolve/SKILL.md",
+    "repo": "dspo/agent-marketplace",
+    "path": "plugins/gitwork/skills/resolve/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-22T07:51:38Z",
+    "score": 42,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

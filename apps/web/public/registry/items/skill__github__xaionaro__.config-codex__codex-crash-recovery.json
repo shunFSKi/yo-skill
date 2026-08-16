@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/xaionaro/.config-codex/codex-crash-recovery",
+  "type": "skill",
+  "name": "codex-crash-recovery",
+  "description": "Use when Codex CLI/session has just relaunched after a crash with unfinished work or active spawned agents.",
+  "author": "xaionaro",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/xaionaro/.config-codex/blob/HEAD/skills/codex-crash-recovery/SKILL.md",
+    "repo": "xaionaro/.config-codex",
+    "path": "skills/codex-crash-recovery/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-12T22:46:02Z",
+    "score": 45,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

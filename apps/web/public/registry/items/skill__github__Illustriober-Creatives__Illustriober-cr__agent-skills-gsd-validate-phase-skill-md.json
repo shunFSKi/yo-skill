@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Illustriober-Creatives/Illustriober-cr/agent-skills-gsd-validate-phase-skill-md",
+  "type": "skill",
+  "name": "agent-skills-gsd-validate-phase-skill-md",
+  "description": "Retroactively audit and fill Nyquist validation gaps for a completed phase",
+  "author": "Illustriober-Creatives",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Illustriober-Creatives/Illustriober-cr/blob/HEAD/agent/skills/gsd-validate-phase/SKILL.md",
+    "repo": "Illustriober-Creatives/Illustriober-cr",
+    "path": "agent/skills/gsd-validate-phase/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-04T17:10:48Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/WAJDA9/flutter-agent-skills/pubspec-manager",
+  "type": "skill",
+  "name": "pubspec-manager",
+  "description": "Safely adds dependencies to `pubspec.yaml` using the Flutter CLI. This is much safer than manually editing the `pubspec.yaml` file to ensure indentation and version conflicts are managed effectively.",
+  "author": "WAJDA9",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/WAJDA9/flutter-agent-skills/blob/HEAD/.agent/skills/pubspec-manager/SKILL.md",
+    "repo": "WAJDA9/flutter-agent-skills",
+    "path": ".agent/skills/pubspec-manager/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-04-09T10:58:33Z",
+    "score": 39
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

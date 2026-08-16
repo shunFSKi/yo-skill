@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/DeerAnna1/smartcare/drug-safety",
+  "type": "skill",
+  "name": "drug-safety",
+  "description": "基于药品标签与相互作用工具执行可追溯的用药安全检查（通过 MCP openfda-drug-safety 服务）",
+  "author": "DeerAnna1",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/DeerAnna1/smartcare/blob/HEAD/services/api/skills/public/drug-safety/SKILL.md",
+    "repo": "DeerAnna1/smartcare",
+    "path": "services/api/skills/public/drug-safety/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 3,
+    "pushed_at": "2026-07-04T06:38:48Z",
+    "score": 42,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 3
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

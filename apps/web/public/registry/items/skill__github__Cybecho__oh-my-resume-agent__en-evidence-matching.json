@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/Cybecho/oh-my-resume-agent/en-evidence-matching",
+  "type": "skill",
+  "name": "en-evidence-matching",
+  "description": "Run EN step 3 evidence matching using workspace cards -> workspace claim registry -> workspace profile priority.",
+  "author": "Cybecho",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Cybecho/oh-my-resume-agent/blob/HEAD/.agents/skills/en-evidence-matching/SKILL.md",
+    "repo": "Cybecho/oh-my-resume-agent",
+    "path": ".agents/skills/en-evidence-matching/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-04-27T04:36:36Z",
+    "score": 35,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

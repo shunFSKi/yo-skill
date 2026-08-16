@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/poly-gents/syncolab-skills/peer-review-feedback",
+  "type": "skill",
+  "name": "peer-review-feedback",
+  "description": "Adversarial reading, soundness / novelty / clarity scoring, blameless feedback.",
+  "author": "poly-gents",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/poly-gents/syncolab-skills/blob/HEAD/skills/peer-review-feedback/SKILL.md",
+    "repo": "poly-gents/syncolab-skills",
+    "path": "skills/peer-review-feedback/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-12T17:54:15Z",
+    "score": 42
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/shogogg/dotfiles/fetch-pr-review-comments",
+  "type": "skill",
+  "name": "fetch-pr-review-comments",
+  "description": "Fetches unresolved review comments from the GitHub PR for the current branch. Use when checking PR comments, addressing reviewer feedback, fixing review issues, or responding to code review.",
+  "author": "shogogg",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/shogogg/dotfiles/blob/HEAD/ai-agent/skills/fetch-pr-review-comments/SKILL.md",
+    "repo": "shogogg/dotfiles",
+    "path": "ai-agent/skills/fetch-pr-review-comments/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 4,
+    "pushed_at": "2026-07-07T08:32:44Z",
+    "score": 46,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 4
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

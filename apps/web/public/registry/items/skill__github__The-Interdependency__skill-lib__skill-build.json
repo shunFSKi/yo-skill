@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/The-Interdependency/skill-lib/skill-build",
+  "type": "skill",
+  "name": "skill-build",
+  "description": "Skill authoring and skill compliance workflow for The Interdependency skill-lib. Load this when creating a new SKILL.md, revising an existing skill, bringing repo skills into a shared compliance shape, designing a skill-specific test suite, deciding whether a skill is metadata-block or procedural, or asking the question set required before a skill can be accepted.",
+  "author": "The-Interdependency",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/The-Interdependency/skill-lib/blob/HEAD/skills/skill-build/SKILL.md",
+    "repo": "The-Interdependency/skill-lib",
+    "path": "skills/skill-build/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-14T04:23:25Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

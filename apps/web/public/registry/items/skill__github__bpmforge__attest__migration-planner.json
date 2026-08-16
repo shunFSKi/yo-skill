@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/bpmforge/attest/migration-planner",
+  "type": "skill",
+  "name": "migration-planner",
+  "description": "Database migration planner — compares two schema states (files or git refs), produces ordered migration steps with rollback plan per step. Proactive: before any schema change that touches existing tables.",
+  "author": "bpmforge",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/bpmforge/attest/blob/HEAD/skills/migration-planner/SKILL.md",
+    "repo": "bpmforge/attest",
+    "path": "skills/migration-planner/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-08-13T01:51:19Z",
+    "score": 49,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 2
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

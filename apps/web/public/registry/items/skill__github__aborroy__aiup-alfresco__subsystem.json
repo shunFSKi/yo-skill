@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/aborroy/aiup-alfresco/subsystem",
+  "type": "skill",
+  "name": "subsystem",
+  "description": "Scaffold a custom Alfresco subsystem (ChildApplicationContextFactory + default/instance properties) or, in authentication mode, configure a custom authentication chain / external IdP (LDAP, identity-service/OIDC, external). In-Process SDK (Maven) / config.",
+  "author": "aborroy",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/aborroy/aiup-alfresco/blob/HEAD/.cursor/skills/subsystem/SKILL.md",
+    "repo": "aborroy/aiup-alfresco",
+    "path": ".cursor/skills/subsystem/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 13,
+    "pushed_at": "2026-07-20T10:02:50Z",
+    "score": 55
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/LighghtEeloo/multorum/sirno-witness",
+  "type": "skill",
+  "name": "sirno-witness",
+  "description": "Create, refine, or review Sirno repository witnesses. Use for inserting or splitting `sirno:witness:<entry-id>:begin` blocks, linking code/tests/config to Sirno Lake entries, deciding whether a witness needs a new or more specific Sirno Lake entry, interpreting `sirno witness` output, or checking whether a Sirno entry has precise repository evidence.",
+  "author": "LighghtEeloo",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/LighghtEeloo/multorum/blob/HEAD/.agents/skills/sirno-witness/SKILL.md",
+    "repo": "LighghtEeloo/multorum",
+    "path": ".agents/skills/sirno-witness/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 25,
+    "pushed_at": "2026-05-18T13:24:55Z",
+    "score": 53
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

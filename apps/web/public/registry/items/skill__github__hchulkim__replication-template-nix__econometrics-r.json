@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/hchulkim/replication-template-nix/econometrics-r",
+  "type": "skill",
+  "name": "econometrics-r",
+  "description": "Implement or review econometrics workflows in R. Use when Codex needs to write R estimation scripts, translate an empirical design into R code, enforce reproducible R execution through `nix-shell`, or review R analysis output against project conventions.",
+  "author": "hchulkim",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/hchulkim/replication-template-nix/blob/HEAD/.agents/skills/econometrics-r/SKILL.md",
+    "repo": "hchulkim/replication-template-nix",
+    "path": ".agents/skills/econometrics-r/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-04-27T20:45:45Z",
+    "score": 39,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 2
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

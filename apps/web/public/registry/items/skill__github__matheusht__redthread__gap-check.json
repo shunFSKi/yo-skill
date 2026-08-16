@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/matheusht/redthread/gap-check",
+  "type": "skill",
+  "name": "gap-check",
+  "description": "Audit a plan for missing architecture, evaluation, safety, or verification coverage before implementation.",
+  "author": "matheusht",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/matheusht/redthread/blob/HEAD/.codex/skills/gap-check/SKILL.md",
+    "repo": "matheusht/redthread",
+    "path": ".codex/skills/gap-check/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 44,
+    "pushed_at": "2026-08-09T20:02:24Z",
+    "score": 60,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 44
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

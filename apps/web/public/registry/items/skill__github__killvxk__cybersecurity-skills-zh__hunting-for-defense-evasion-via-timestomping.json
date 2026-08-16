@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/killvxk/cybersecurity-skills-zh/hunting-for-defense-evasion-via-timestomping",
+  "type": "skill",
+  "name": "hunting-for-defense-evasion-via-timestomping",
+  "description": "通过比较 MFT 中的 $STANDARD_INFORMATION 与 $FILE_NAME 时间戳， 检测 NTFS 时间戳篡改（MITRE T1070.006）。使用 analyzeMFT 和 Python 识别具有异常时序模式的文件， 表明存在反取证时间戳篡改活动。",
+  "author": "killvxk",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/killvxk/cybersecurity-skills-zh/blob/HEAD/skills/hunting-for-defense-evasion-via-timestomping/SKILL.md",
+    "repo": "killvxk/cybersecurity-skills-zh",
+    "path": "skills/hunting-for-defense-evasion-via-timestomping/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 38,
+    "pushed_at": "2026-04-28T10:15:40Z",
+    "score": 49,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 38
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

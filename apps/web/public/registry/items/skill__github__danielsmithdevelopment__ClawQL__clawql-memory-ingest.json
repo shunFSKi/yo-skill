@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/danielsmithdevelopment/ClawQL/clawql-memory-ingest",
+  "type": "skill",
+  "name": "clawql-memory-ingest",
+  "description": "Persist durable session outcomes with memory_ingest using stable titles, append threading, and wikilinks.",
+  "author": "danielsmithdevelopment",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/danielsmithdevelopment/ClawQL/blob/HEAD/website/public/.well-known/agent-skills/clawql-memory-ingest/SKILL.md",
+    "repo": "danielsmithdevelopment/ClawQL",
+    "path": "website/public/.well-known/agent-skills/clawql-memory-ingest/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 12,
+    "pushed_at": "2026-08-14T05:52:01Z",
+    "score": 55
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

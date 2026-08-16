@@ -33,7 +33,7 @@
   "quality": {
     "stars": null,
     "pushed_at": "2026-08-14T23:51:48.068791Z",
-    "score": 52
+    "score": 42
   },
   "security": {
     "score": 100,
@@ -65,6 +65,6 @@
     "category": null,
     "featured": false
   },
-  "readme": "# sealed-mcp\n\nThin [MCP](https://modelcontextprotocol.io) stdio client for [Sealed](https://sealed.run) — the skill marketplace where **your skill runs sealed**.\n\nThis package is a pure proxy. It connects your MCP-capable agent to a remote Sealed server and exposes two tools:\n\n| Tool | What it does | Annotations |\n|---|---|---|\n| `list_skills` | Lists the public skill catalog (name, description, input schema, price per call) | `readOnlyHint: true` |\n| `run_skill` | Runs a skill **server-side** and returns only its output + price/mode meta. Each call spends wallet balance at the listed per-call price. | `readOnlyHint: false`, `destructiveHint: false` |\n\n**Skill bodies never reach this process.** Skills execute on Sealed's infrastructure; this client only carries your inputs up and the output back. There is no local execution mode — `SEALED_API_URL` is required.\n\nZero runtime dependencies. Plain Node 18+ (uses the global `fetch`).\n\n> npm naming: this package targets the unscoped name `sealed-mcp` and carries `mcpName: io.github.edwardyen724-g/sealed` for the official MCP registry. If that npm name is unavailable at publish time, the fallbacks are the scoped names `@sealed/mcp` or `@sealedrun/mcp` — update `package.json`, registry drafts, and install snippets together.\n\n## Install / configure\n\n### Claude Code\n\n```sh\nclaude mcp add sealed --env SEALED_API_URL=https://sealed.run --env SEALED_API_KEY=sealed_sk_… -- npx -y sealed-mcp\n```\n\n### Cursor / Windsurf\n\nAdd to `~/.cursor/mcp.json` (Cursor) or `~/.codeium/windsurf/mcp_config.json` (Windsurf):\n\n```json\n{\n  \"mcpServers\": {\n    \"sealed\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"sealed-mcp\"],\n      \"env\": {\n        \"SEALED_API_URL\": \"https://sealed.run\",\n        \"SEALED_API_KEY\": \"sealed_sk_…\"\n      }\n    }\n  }\n}\n```\n\n### Generic stdio MCP client\n\nSpawn the binary and speak newline-delimited JSON-RPC 2.0 over stdin/stdout (`initialize`, `tools/list`, `tools/call`):\n\n```sh\nSEALED_API_URL=https://sealed.run SEALED_API_KEY=sealed_sk_… npx -y sealed-mcp\n```\n\n## Environment variables\n\n| Variable | Required | Purpose |\n|---|---|---|\n| `SEALED_API_URL` | **Yes** | Base URL of the Sealed API (e.g. `https://sealed.run`). The client exits with an error if unset. |\n| `SEALED_API_KEY` | No | Your Sealed API key (`sealed_sk_…`), sent as the bearer token. Without it, calls run unauthenticated and most servers will reject paid runs. |\n\n## Errors you may see\n\nFixed, non-leaking error strings: `unauthorized` (bad/missing key), `insufficient funds` (top up your wallet), `output blocked by leak gate`, `unknown skill: <id>`, `cannot reach the Sealed API`. Server error bodies are never echoed.\n\n## Links\n\n- Website: https://sealed.run\n- Get an API key: sign up at your Sealed server's `/signup` endpoint (production emails you a single-use sign-in link that shows the key once)\n",
+  "readme": null,
   "status": "curated"
 }

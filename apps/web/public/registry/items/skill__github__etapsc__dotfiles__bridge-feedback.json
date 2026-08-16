@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/etapsc/dotfiles/bridge-feedback",
+  "type": "skill",
+  "name": "Bridge Feedback",
+  "description": "Process evaluation feedback - triage issues, decide iterate or launch. Invoke with $bridge-feedback in your prompt.",
+  "author": "etapsc",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/etapsc/dotfiles/blob/HEAD/.agents/skills/bridge-feedback/SKILL.md",
+    "repo": "etapsc/dotfiles",
+    "path": ".agents/skills/bridge-feedback/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-12T23:00:21Z",
+    "score": 45,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

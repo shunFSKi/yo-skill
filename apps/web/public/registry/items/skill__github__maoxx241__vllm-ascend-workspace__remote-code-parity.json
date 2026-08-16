@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/maoxx241/vllm-ascend-workspace/remote-code-parity",
+  "type": "skill",
+  "name": "remote-code-parity",
+  "description": "Ensure the remote runtime runs the exact current local workspace state before any remote smoke test, service launch, or benchmark. Triggered automatically before remote execution when direct local-to-container SSH works. Do not use for initial machine attach, generic Git topology work, or unrelated local tasks.",
+  "author": "maoxx241",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/maoxx241/vllm-ascend-workspace/blob/HEAD/.trae/skills/remote-code-parity/SKILL.md",
+    "repo": "maoxx241/vllm-ascend-workspace",
+    "path": ".trae/skills/remote-code-parity/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 28,
+    "pushed_at": "2026-08-12T01:30:42Z",
+    "score": 58,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 28
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

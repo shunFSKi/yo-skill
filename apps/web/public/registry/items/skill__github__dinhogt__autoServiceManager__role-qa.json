@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/dinhogt/autoServiceManager/role-qa",
+  "type": "skill",
+  "name": "role-qa",
+  "description": "Functional and non-functional validation before release. Use after observability handoff, for production releases, post-incident regression, or when gate-release-quality fails.",
+  "author": "dinhogt",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/dinhogt/autoServiceManager/blob/HEAD/.agents/skills/role-qa/SKILL.md",
+    "repo": "dinhogt/autoServiceManager",
+    "path": ".agents/skills/role-qa/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-13T23:52:41Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

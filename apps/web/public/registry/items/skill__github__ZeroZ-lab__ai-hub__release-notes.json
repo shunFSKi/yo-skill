@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/ZeroZ-lab/ai-hub/release-notes",
+  "type": "skill",
+  "name": "release-notes",
+  "description": "Generate release notes from change lists, PR summaries, or commit messages. Use when the user asks for release notes/发布说明/变更记录.",
+  "author": "ZeroZ-lab",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ZeroZ-lab/ai-hub/blob/HEAD/claude_agent_course/module_04_skills/projects/project_06_release_notes/.claude/skills/release-notes/SKILL.md",
+    "repo": "ZeroZ-lab/ai-hub",
+    "path": "claude_agent_course/module_04_skills/projects/project_06_release_notes/.claude/skills/release-notes/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-01-06T03:47:32Z",
+    "score": 33,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

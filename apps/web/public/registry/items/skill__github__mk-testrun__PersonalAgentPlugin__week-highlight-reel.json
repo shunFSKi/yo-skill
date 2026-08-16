@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/mk-testrun/PersonalAgentPlugin/week-highlight-reel",
+  "type": "skill",
+  "name": "week-highlight-reel",
+  "description": "Nutze um sonntags einen wöchentlichen \"Spotify-Wrapped\"-Rückblick zu erzeugen: fasst Mood-Trend (state/mood.jsonl), Commits/PRs (github-MCP) und die Highlights der Woche als week-<KW>.html zusammen. Leichtgewichtiges Home-Ritual, read-mostly; Output nach state/artifacts/.",
+  "author": "mk-testrun",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/mk-testrun/PersonalAgentPlugin/blob/HEAD/marketplaces/home/plugins/morning/skills/week-highlight-reel/SKILL.md",
+    "repo": "mk-testrun/PersonalAgentPlugin",
+    "path": "marketplaces/home/plugins/morning/skills/week-highlight-reel/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-11T16:13:27Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

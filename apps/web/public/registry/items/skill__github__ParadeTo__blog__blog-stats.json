@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/ParadeTo/blog/blog-stats",
+  "type": "skill",
+  "name": "blog-stats",
+  "description": "统计博客文章数据（文章数、总字数、标签分布、最近更新等）。当用户说\"统计博客数据\"、\"博客概况\"、\"blog stats\"时使用。",
+  "author": "ParadeTo",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ParadeTo/blog/blob/HEAD/.claude/skills/blog-stats/SKILL.md",
+    "repo": "ParadeTo/blog",
+    "path": ".claude/skills/blog-stats/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-06-04T01:30:30Z",
+    "score": 41,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 2
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

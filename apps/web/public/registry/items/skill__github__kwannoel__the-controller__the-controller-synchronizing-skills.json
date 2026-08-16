@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/kwannoel/the-controller/the-controller-synchronizing-skills",
+  "type": "skill",
+  "name": "the-controller-synchronizing-skills",
+  "description": "Use when a new skill has been added to the repo and needs to be symlinked into ~/.claude/skills/ and ~/.codex/skills/custom/ so Claude Code and Codex can discover it",
+  "author": "kwannoel",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/kwannoel/the-controller/blob/HEAD/skills/the-controller-synchronizing-skills/SKILL.md",
+    "repo": "kwannoel/the-controller",
+    "path": "skills/the-controller-synchronizing-skills/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 13,
+    "pushed_at": "2026-04-30T08:49:53Z",
+    "score": 45,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 13
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

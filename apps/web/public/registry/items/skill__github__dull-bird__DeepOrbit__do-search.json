@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/dull-bird/DeepOrbit/do-search",
+  "type": "skill",
+  "name": "do.search",
+  "description": "Perform fast lexical, filename, property, or phrase search across a DeepOrbit vault. Use for exact names, identifiers, tags, error text, regex-like lookup intent, or when semantic retrieval is unnecessary or unavailable.",
+  "author": "dull-bird",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/dull-bird/DeepOrbit/blob/HEAD/skills/do.search/SKILL.md",
+    "repo": "dull-bird/DeepOrbit",
+    "path": "skills/do.search/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 7,
+    "pushed_at": "2026-07-28T10:20:10Z",
+    "score": 53,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 7
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

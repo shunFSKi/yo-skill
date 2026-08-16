@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/T-R-I-B-U/la-cabane/verification-plan",
+  "type": "skill",
+  "name": "verification-plan",
+  "description": "Build a minimal, reliable validation plan for changes in this repository. Use before finalizing implementation or opening a PR.",
+  "author": "T-R-I-B-U",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/T-R-I-B-U/la-cabane/blob/HEAD/.claude/skills/verification-plan/SKILL.md",
+    "repo": "T-R-I-B-U/la-cabane",
+    "path": ".claude/skills/verification-plan/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-24T09:12:47Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

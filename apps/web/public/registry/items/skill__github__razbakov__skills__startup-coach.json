@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/razbakov/skills/startup-coach",
+  "type": "skill",
+  "name": "startup-coach",
+  "description": "RENAMED → use /product-coach instead. Install: claude install-skill https://github.com/razbakov/skills/tree/main/skills/product-coach",
+  "author": "razbakov",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/razbakov/skills/blob/HEAD/skills/startup-coach/SKILL.md",
+    "repo": "razbakov/skills",
+    "path": "skills/startup-coach/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 3,
+    "pushed_at": "2026-07-16T16:18:24Z",
+    "score": 45,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 3
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

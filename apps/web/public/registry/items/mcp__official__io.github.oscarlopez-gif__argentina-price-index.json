@@ -1,0 +1,54 @@
+{
+  "id": "mcp:official/io.github.oscarlopez-gif/argentina-price-index",
+  "type": "mcp",
+  "name": "argentina-price-index",
+  "description": "Daily Argentina food & beverage price index, source-cited from public retailer prices.",
+  "author": "io.github.oscarlopez-gif",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/oscarlopez-gif/argentina-price-index",
+    "repo": "oscarlopez-gif/argentina-price-index"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.oscar-lopez.com/mcp"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-15T18:57:08.226483Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# Paid Door — Argentina food & beverage price index (Cloudflare sandbox)\n\nA minimal, working test of the video's core mechanic: **one agent request becomes a paid transaction at the edge.** A Cloudflare Worker serves a live-computed price index from D1, gated by an x402-style `402 → pay → retry → data` loop. Payment is **mocked** (shared-secret HMAC) so the whole loop runs with zero wallet setup; swapping in real x402 is a localized change.\n\n> **Data is synthetic.** `seed/observations.sql` is generated placeholder data so the demo runs before a real scraper exists. Do not treat the numbers as real Argentine prices.\n\n## What's here\n\n```\npaid-door-index/\n├─ wrangler.jsonc         # Worker + D1 binding + sandbox vars\n├─ schema.sql            # price_observations + methodology (+ future index_series cache)\n├─ seed/\n│  ├─ generate.mjs       # deterministic synthetic data generator (60 SKUs x 30 days)\n│  └─ observations.sql   # generated seed (1,800 rows)\n├─ src/index.ts          # Worker: routes + live index math + mock x402 gate\n├─ agent/test-agent.mjs  # the paying \"buyer\": request → 402 → pay → retry → data\n└─ README.md\n```\n\n## Endpoints\n\n| Endpoint | Tier | Returns |\n|---|---|---|\n| `GET /v1/headline?country=AR&category=food_beverages` | free | latest index value + monthly rate (the teaser) |\n| `GET /v1/index?country=AR&category=food_beverages` | paid ($0.02) | full daily series |\n| `GET /v1/latest?country=AR&category=food_beverages` | paid ($0.02) | latest reading + methodology |\n| `POST /mcp` | — | MCP JSON-RPC: `initialize`, `tools/list`, `tools/call` |\n\n### MCP interface (what agents actually call)\n\nThe Worker also speaks **MCP over HTTP** at `/mcp`, exposing two tools:\n\n- `get_ar_food_headline` (free) — latest value + 30-day rate\n- `get_ar_food_price_index` (paid, $0.02 mock-x402) — full daily series; call once with no `_payment` to receive a challenge, then retry with `arguments._payment = {nonce, resource, amount, signature}`\n\nTest the full agent flow (with `npm run dev` running):\n\n```bash\nnpm run agent:mcp     # initialize → tools/list → free call → paid call (challenge → pay → data)\n```\n\n> **Production note:** `/mcp` here is a minimal JSON request/response subset of the Streamable HTTP transport (no SSE/sessions/auth). For a real deployment use the official MCP SDK or Cloudflare's `agents` `McpAgent`, and replace the mock HMAC with a real x402 facilitator.\n\nIndex math (`methodology_version = v0-simple-avg`): `index = 100 × mean(price_t / price_base)` over in-stock SKUs, base = first day in the window. Upgrade path baked into the schema: geometric mean within category + Laspeyres across categories.\n\n## Run it locally\n\nPrereqs: Node 18+ and a Cloudflare account (`npx wrangler login`).\n\n```bash\ncd paid-door-index\nnpm install\n\n# 1. Create the D1 database, then paste the printed database_id into wrangler.jsonc\nnpm run db:create\n\n# 2. Load schema + seed into LOCAL D1\nnpm run schema:local\nnpm run seed:gen        # (optional) regenerate observations.sql\nnpm run seed:local\n\n# 3. Start the Worker\nnpm run dev             # serves http://127.0.0.1:8787\n\n# 4. In a second terminal, run the paying agent\nnpm run agent\n```\n\nExpected agent output: the free headline, then a `402` with a price challenge, then a `200` with the full series and a `PAYMENT-RESPONSE` settlement header — one request turned into a transaction.\n\n## Deploy to your account\n\n```bash\nnpm run schema:remote\nnpm run seed:remote\nnpm run deploy\n# then point the agent at the deployed URL:\nBASE=https://paid-door-index.<your-subdomain>.workers.dev npm run agent\n```\n\nWatch live logs with `npx wrangler tail`.\n\n## Sandbox → real (later)\n\n1. **Real data:** replace `seed/generate.mjs` with a scheduled Worker that scrapes 1–2 Argentine online grocers daily into `price_observations`.\n2. **Real payment:** replace the HMAC mock in `src/index.ts` (`verifyPayment` / `challenge`) with a real x402 facilitator (`POST /verify`, `POST /settle`) per Cloudflare's Agents x402 docs.\n3. **Move the secret:** `npx wrangler secret put MOCK_PAYMENT_SECRET` instead of the plain var.\n4. **Expose as MCP** so any AI agent (including this assistant) can call `get_index` directly.\n5. **Materialize** `index_series` as a nightly cache once query volume grows.\n\n## Notes / caveats\n\n- Mock payment proves knowledge of a shared secret — it is **not** cryptographic on-chain settlement. It exists only to exercise the request/response shape.\n- No replay protection in the sandbox (any valid signature can be reused). Real x402 settlement handles this.\n- The synthetic monthly rate is intentionally noisy; single-endpoint inflation reads jump around, which is itself a good classroom point.\n",
+  "status": "curated"
+}

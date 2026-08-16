@@ -1,0 +1,64 @@
+{
+  "id": "mcp:official/io.github.ABWerks/pequod-mcp",
+  "type": "mcp",
+  "name": "pequod-mcp",
+  "description": "Complete US ETF holdings from SEC N-PORT filings + ticker/CUSIP/FIGI crosswalk. Primary source.",
+  "author": "io.github.ABWerks",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/ABWerks/pequod-mcp",
+    "repo": "ABWerks/pequod-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "pypi",
+    "command": "uvx",
+    "args": [
+      "pequod-mcp"
+    ],
+    "env": [
+      {
+        "name": "API_OpenFIGI",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-15T17:08:01.271579Z",
+    "score": 42
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

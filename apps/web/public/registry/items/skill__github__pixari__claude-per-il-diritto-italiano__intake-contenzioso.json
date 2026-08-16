@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/pixari/claude-per-il-diritto-italiano/intake-contenzioso",
+  "type": "skill",
+  "name": "intake-contenzioso",
+  "description": "Intake nuovo mandato contenzioso. Nessuna consulenza legale.",
+  "author": "pixari",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/pixari/claude-per-il-diritto-italiano/blob/HEAD/contenzioso-civile/skills/intake-contenzioso/SKILL.md",
+    "repo": "pixari/claude-per-il-diritto-italiano",
+    "path": "contenzioso-civile/skills/intake-contenzioso/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 6,
+    "pushed_at": "2026-06-03T08:57:43Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

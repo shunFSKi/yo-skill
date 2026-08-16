@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/KimAnhPhi/DreamHigh-Management-System/bmad-create-architecture",
+  "type": "skill",
+  "name": "bmad-create-architecture",
+  "description": "Create architecture solution design decisions for AI agent consistency. Use when the user says \"lets create architecture\" or \"create technical architecture\" or \"create a solution design\". Optional security baseline: architecture-security-profile (see workflow.md).",
+  "author": "KimAnhPhi",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/KimAnhPhi/DreamHigh-Management-System/blob/HEAD/.agent/skills/bmad-create-architecture/SKILL.md",
+    "repo": "KimAnhPhi/DreamHigh-Management-System",
+    "path": ".agent/skills/bmad-create-architecture/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-04-13T03:44:11Z",
+    "score": 35,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

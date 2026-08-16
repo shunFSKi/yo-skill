@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/uhlhosting/medusa-notification-postal/project-bootstrap",
+  "type": "skill",
+  "name": "project-bootstrap",
+  "description": "Single bootstrap skill for this Medusa plugin repository. Always read the repository root AGENTS.md first and treat it as the canonical source for project rules, coding conventions, testing, security, CI/CD, release, documentation, and plugin-specific guidance.",
+  "author": "uhlhosting",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/uhlhosting/medusa-notification-postal/blob/HEAD/.agents/skills/project-bootstrap/SKILL.md",
+    "repo": "uhlhosting/medusa-notification-postal",
+    "path": ".agents/skills/project-bootstrap/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-16T00:48:33Z",
+    "score": 48,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

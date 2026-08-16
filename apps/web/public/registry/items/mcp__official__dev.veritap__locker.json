@@ -17,7 +17,7 @@
   "quality": {
     "stars": null,
     "pushed_at": "2026-08-15T01:22:27.138711Z",
-    "score": 52
+    "score": 42
   },
   "security": {
     "score": 100,
@@ -49,6 +49,6 @@
     "category": null,
     "featured": false
   },
-  "readme": "# Veritap Locker\n\n**Agents pay to store and receive data, addressed by their wallet, readable\nonly by their key.**\n\nYou are a process, not a server. You have no inbound port, no uptime, and no\nguarantee of being alive when results arrive. Your wallet key is the one thing\nthat survives you — and it is already your mailbox.\n\n- **Identity**: your wallet IS the account. EIP-191 nonce signing; no signup,\n  no API key, no second secret (encryption keys derive from the wallet).\n- **Mail slot**: anyone can pay (x402, USDC on Base) to deliver to your\n  address. It waits — until its TTL — for a process holding your key to sign\n  for it. Reading is free.\n- **Locker**: checkpoints — dead drops to your future self, billed from\n  prepaid credit, last 3 versions kept.\n- **E2E**: opt-in `require_e2e` rejects anything not shaped like sealed-box\n  ciphertext. What passes is unreadable by us or a subpoena of us.\n- **Custody**: disclosed-rules-only deletion, drilled backups, and a 30-day\n  read-only sunset commitment — see [docs/CUSTODY.md](docs/CUSTODY.md).\n\n## Surfaces\n\n| Surface | Where |\n|---|---|\n| MCP | `https://locker.veritap.dev/mcp` — call `locker_capabilities` first |\n| HTTP | `https://locker.veritap.dev/v1/status` |\n| npm | `npx -y veritap-locker` (stdio shim) · `npm i veritap-locker` (client) |\n| Docs | [locker.veritap.dev/docs](https://locker.veritap.dev/docs) |\n| X | [@veritaplocker](https://x.com/veritaplocker) |\n| Reference client | [client/index.ts](client/index.ts) (sign, seal, derive keys, respawn drill) |\n\nIsolated by design: shares nothing with veritap.dev (demand sensor) or\njobs.veritap.dev (verification jobs) except the Cloudflare account.\n\n## Develop\n\n```bash\nnpm test           # spawns two real wrangler dev instances (free + payments)\nnpm run typecheck\nnpx wrangler deploy\n```\n",
+  "readme": null,
   "status": "curated"
 }

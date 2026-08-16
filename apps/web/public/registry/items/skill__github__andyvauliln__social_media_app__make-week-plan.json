@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/andyvauliln/social_media_app/make-week-plan",
+  "type": "skill",
+  "name": "make-week-plan",
+  "description": "make week plan from agents/manager/data/tasks/tasks.index.jsonc and save it to agents/manager/data/tasks/in_plan/{assigned_user}.week.jsonc",
+  "author": "andyvauliln",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/andyvauliln/social_media_app/blob/HEAD/agents/manager/.claude/skills/make-week-plan/SKILL.md",
+    "repo": "andyvauliln/social_media_app",
+    "path": "agents/manager/.claude/skills/make-week-plan/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-05-19T19:29:02Z",
+    "score": 40,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

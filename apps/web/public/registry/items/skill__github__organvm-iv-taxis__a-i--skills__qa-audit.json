@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/organvm-iv-taxis/a-i--skills/qa-audit",
+  "type": "skill",
+  "name": "qa-audit",
+  "description": "Verify claims in a session/PR/transcript against on-disk reality. Produce a verification report (verified / false-positive / false-negative / partial) with explicit owners. STOP at verification — do not execute remediation without explicit approval.",
+  "author": "organvm-iv-taxis",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/organvm-iv-taxis/a-i--skills/blob/HEAD/distributions/claude/skills/qa-audit/SKILL.md",
+    "repo": "organvm-iv-taxis/a-i--skills",
+    "path": "distributions/claude/skills/qa-audit/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 15,
+    "pushed_at": "2026-08-09T01:33:33Z",
+    "score": 56,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 15
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

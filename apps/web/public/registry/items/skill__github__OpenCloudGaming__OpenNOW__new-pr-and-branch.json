@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/OpenCloudGaming/OpenNOW/new-pr-and-branch",
+  "type": "skill",
+  "name": "new-pr-and-branch",
+  "description": "Create a new branch, commits changes, then opens pr against the dev branch.",
+  "author": "OpenCloudGaming",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/OpenCloudGaming/OpenNOW/blob/HEAD/.agents/skills/new-pr-and-branch/SKILL.md",
+    "repo": "OpenCloudGaming/OpenNOW",
+    "path": ".agents/skills/new-pr-and-branch/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2364,
+    "pushed_at": "2026-08-16T03:03:13Z",
+    "score": 82,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 2364
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "<h1 align=\"center\">OpenNOW</h1>\n\n<p align=\"center\">\n  <img src=\"logo.png\" alt=\"OpenNOW logo\" width=\"180\" />\n</p>\n\n<p align=\"center\">\n  <strong>An open-source desktop client for GeForce NOW.</strong>\n</p>\n\n<p align=\"center\">\n  Browse the catalog, tune your stream, and launch sessions from a community-built app.\n</p>\n\n<p align=\"center\">\n  <a href=\"https://github.com/OpenCloudGaming/OpenNOW/releases\">\n    <img src=\"https://img.shields.io/github/v/tag/OpenCloudGaming/OpenNOW?style=for-the-badge&label=Download&color=brightgreen\" alt=\"Download\">\n  </a>\n  <a href=\"https://testflight.apple.com/join/u1XPJKH2\">\n    <img src=\"https://img.shields.io/badge/iOS-TestFlight-0A84FF?style=for-the-badge&logo=apple&logoColor=white\" alt=\"Download OpenNOW on TestFlight\">\n  </a>\n  <a href=\"https://play.google.com/store/apps/details?id=com.opencloudgaming.opennow\">\n    <img src=\"https://img.shields.io/badge/Android-Google%20Play-3DDC84?style=for-the-badge&logo=android&logoColor=white\" alt=\"Download Android from Google Play\">\n  </a>\n  <a href=\"https://github.com/OpenCloudGaming/OpenNOW-Switch/releases/latest\">\n    <img src=\"https://img.shields.io/github/v/release/OpenCloudGaming/OpenNOW-Switch?style=for-the-badge&label=Nintendo%20Switch&color=E60012&logo=nintendoswitch&logoColor=white\" alt=\"Download OpenNOW for Nintendo Switch\">\n  </a>\n  <a href=\"https://opennow.zortos.me\">\n    <img src=\"https://img.shields.io/badge/Docs-opennow.zortos.me-blue?style=for-the-badge\" alt=\"Documentation\">\n  </a>\n  <a href=\"https://github.com/OpenCloudGaming/OpenNOW/actions/workflows/auto-build.yml\">\n    <img src=\"https://img.shields.io/github/actions/workflow/status/OpenCloudGaming/OpenNOW/auto-build.yml?style=for-the-badge&label=Auto%20Build\" alt=\"Auto Build\">\n  </a>\n  <a href=\"https://discord.gg/8EJYaJcNfD\">\n    <img src=\"https://img.shields.io/badge/Discord-Join%20Us-7289da?style=for-the-badge&logo=discord&logoColor=white\" alt=\"Discord\">\n  </a>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://github.com/OpenCloudGaming/OpenNOW/stargazers\">\n    <img src=\"https://img.shields.io/github/stars/OpenCloudGaming/OpenNOW?style=flat-square\" alt=\"Stars\">\n  </a>\n  <a href=\"https://github.com/OpenCloudGaming/OpenNOW/releases\">\n    <img src=\"https://img.shields.io/github/downloads/OpenCloudGaming/OpenNOW/total?style=flat-square\" alt=\"Downloads\">\n  </a>\n  <a href=\"LICENSE\">\n    <img src=\"https://img.shields.io/github/license/OpenCloudGaming/OpenNOW?style=flat-square\" alt=\"License\">\n  </a>\n</p>\n\n<p align=\"center\">\n  <img src=\"img.png\" alt=\"OpenNOW application preview\" />\n</p>\n\n> [!WARNING]\n> OpenNOW is under active development. Expect occasional bugs, rough edges, and platform-specific issues while the client matures.\n>\n> Native streamer / native streaming is experimental. It defaults to the web streamer path unless enabled, issues can be platform-specific, and users may see fallback to Chromium/WebRTC. Report native-streamer problems on [GitHub Issues](https://github.com/OpenCloudGaming/OpenNOW/issues) or [Discord](https://discord.gg/8EJYaJcNfD).\n\n> [!IMPORTANT]\n> OpenNOW is an independent community project and is not affiliated with, endorsed by, or sponsored by NVIDIA. NVIDIA and GeForce NOW are trademarks of NVIDIA Corporation. You must use your own GeForce NOW account.\n\n## Overview\n\nOpenNOW is a community-built Electron app for playing GeForce NOW from an open-source desktop client. The active desktop implementation lives in [`opennow-stable/`](opennow-stable).\n\n## Downloads\n\nGrab the latest desktop build from [GitHub Releases](https://github.com/OpenCloudGaming/OpenNOW/releases).\n\n### Run two instances on Windows\n\nOpenNOW remains single-instance by default. To open one additional, independent client, start the installed executable with the `--secondary` switch from PowerShell or a shortcut:\n\n```powershell\n& \"C:\\path\\to\\OpenNOW.exe\" --secondary\n```\n\nThe secondary window is titled **OpenNOW — Secondary** and uses a separate persistent profile ending in `-secondary`, including its own sign-in, settings, cookies, cache, device ID, and native-streamer runtime state. Launching the same command again focuses the existing secondary window, so at most one primary and one secondary profile run concurrently. Update OpenNOW from the primary instance; updates are disabled in the secondary instance to avoid competing over the installed application. Screenshots and recordings remain shared under `Pictures\\OpenNOW` and use collision-resistant filenames.\n\nEach simultaneous cloud stream must be allowed by its GeForce NOW account. In practice, use separate accounts when running two sessions because GeForce NOW can reject or replace concurrent sessions from the same account. Only one window can be focused for keyboard and mouse input at a time; Discord Rich Presence can show only one activity when both profiles enable it.\n\n- iOS beta: [join TestFlight](https://testflight.apple.com/join/u1XPJKH2). The SwiftUI prototype currently lives on the [`kief5555/ios` branch](https://github.com/OpenCloudGaming/OpenNOW/tree/kief5555/ios/ios/OpenNOWiOS) under `ios/OpenNOWiOS/`; that folder is not present on this branch.\n- Android: download from [Google Play](https://play.google.com/store/apps/details?id=com.opencloudgaming.opennow).\n- Nintendo Switch: download the latest native Horizon OS homebrew build from [OpenNOW-Switch Releases](https://github.com/OpenCloudGaming/OpenNOW-Switch/releases/latest). It supports controller-first catalog browsing and native WebRTC streaming with H.264 video, Opus audio, and low-latency input on modded Switch systems.\n\nFor macOS users looking for a more performant OpenNOW version, Jayian1890 maintains the separate [OpenNOW-Mac](https://github.com/OpenCloudGaming/OpenNOW-Mac) repository.\n\n## Documentation\n\nCanonical documentation lives at [opennow.zortos.me](https://opennow.zortos.me):\n\n- [Getting Started](https://opennow.zortos.me/guides/getting-started/)\n- [Development](https://opennow.zortos.me/development/)\n- [Configuration](https://opennow.zortos.me/reference/configuration/)\n- [WebRTC](https://opennow.zortos.me/reference/webrtc/)\n- [Native Streamer](https://opennow.zortos.me/reference/native-streamer/)\n- [Project Website](https://opennow.zortos.me/)\n\nThis repository intentionally does not carry duplicate long-form product, setup, development, native streamer, GStreamer packaging, or release workflow documentation.\n\n## Repository Layout\n\n```text\n.\n├── opennow-stable/          Active Electron desktop client\n├── native/opennow-streamer/ Native Rust streaming infrastructure\n├── locales/                 Crowdin-managed localization files\n├── .github/                 Workflows, templates, and contributor metadata\n├── AGENTS.md                Repository instructions for AI agents and contributors\n├── LICENSE                  Project license\n├── logo.png                 Project logo\n└── img.png                  App preview image\n```\n\n## Sponsors\n\nOpenNOW's CI usage is generously sponsored by [Blacksmith](https://www.blacksmith.sh/), helping keep builds and releases fast for the open-source project.\n\n## Contributing\n\nContributions are welcome. Read the [contributing guide](.github/CONTRIBUTING.md), keep changes focused, and explain user-facing impact clearly. When changing localized copy, edit only `locales/en.json`; Crowdin manages the other locale files.\n\n## Star History\n\n<a href=\"https://www.star-history.com/?repos=OpenCloudGaming%2FOpenNOW&type=date&legend=top-left\">\n <picture>\n   <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://api.star-history.com/chart?repos=OpenCloudGaming/OpenNOW&type=date&theme=dark&legend=top-left&sealed_token=13YQdHqPNeJl_PZ60Tn1heFHwLWvLm3sH5u-7HePhBdXpG1poEyGeM3QG_jf08kKYWxfy65fe7OZDjBzuhznLOS5gdEMLDUXY6D7NCLdFIpOTHrmG_JN8Q\" />\n   <source media=\"(prefers-color-scheme: light)\" srcset=\"https://api.star-history.com/chart?repos=OpenCloudGaming/OpenNOW&type=date&legend=top-left&sealed_token=13YQdHqPNeJl_PZ60Tn1heFHwLWvLm3sH5u-7HePhBdXpG1poEyGeM3QG_jf08kKYWxfy65fe7OZDjBzuhznLOS5gdEMLDUXY6D7NCLdFIpOTHrmG_JN8Q\" />\n   <img alt=\"Star History Chart\" src=\"https://api.star-history.com/chart?repos=OpenCloudGaming/OpenNOW&type=date&legend=top-left&sealed_token=13YQdHqPNeJl_PZ60Tn1heFHwLWvLm3sH5u-7HePhBdXpG1poEyGeM3QG_jf08kKYWxfy65fe7OZDjBzuhznLOS5gdEMLDUXY6D7NCLdFIpOTHrmG_JN8Q\" />\n </picture>\n</a>\n\n## License\n\nOpenNOW is licensed under the [MIT License](LICENSE).\n",
+  "status": "curated"
+}

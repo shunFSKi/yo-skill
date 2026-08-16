@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/Saggex/ECS_LAB_Creating-Apps-with-Github/security-review",
+  "type": "skill",
+  "name": "security-review",
+  "description": "Perform a security review of the codebase, checking for common vulnerabilities and best practices",
+  "author": "Saggex",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Saggex/ECS_LAB_Creating-Apps-with-Github/blob/HEAD/.github/skills/security-review/SKILL.md",
+    "repo": "Saggex/ECS_LAB_Creating-Apps-with-Github",
+    "path": ".github/skills/security-review/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-05-05T13:22:42Z",
+    "score": 32,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

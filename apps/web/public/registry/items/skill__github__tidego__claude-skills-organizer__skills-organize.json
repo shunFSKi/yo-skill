@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/tidego/claude-skills-organizer/skills-organize",
+  "type": "skill",
+  "name": "skills-organize",
+  "description": "Three-tier skill & plugin organizer. Automatically archives unused skills to reduce context noise, supports pin/unpin, promote/demote, rollback, clean, and custom usage windows.",
+  "author": "tidego",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/tidego/claude-skills-organizer/blob/HEAD/plugin/skills/skills-organize/SKILL.md",
+    "repo": "tidego/claude-skills-organizer",
+    "path": "plugin/skills/skills-organize/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-03-11T02:06:16Z",
+    "score": 38,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

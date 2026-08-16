@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/spacepacket1/e3d-pilot/review",
+  "type": "skill",
+  "name": "review",
+  "description": "Review staged changes for correctness, security, and style issues",
+  "author": "spacepacket1",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/spacepacket1/e3d-pilot/blob/HEAD/.devin/skills/review/SKILL.md",
+    "repo": "spacepacket1/e3d-pilot",
+    "path": ".devin/skills/review/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-15T18:09:10Z",
+    "score": 45,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

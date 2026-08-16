@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/metaforx/django-unfold-fobi/unfold-debug-cleanup",
+  "type": "skill",
+  "name": "unfold-debug-cleanup",
+  "description": "Triage and small fixes (tests, lint, small regressions) for django-unfold-modal. Use Sonnet.",
+  "author": "metaforx",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/metaforx/django-unfold-fobi/blob/HEAD/.agents/skills/unfold-debug-cleanup/SKILL.md",
+    "repo": "metaforx/django-unfold-fobi",
+    "path": ".agents/skills/unfold-debug-cleanup/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-06-01T12:53:16Z",
+    "score": 40,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

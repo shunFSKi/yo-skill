@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/venturalabs-ai/ventura.apis/link-audit",
+  "type": "skill",
+  "name": "link-audit",
+  "description": "Audit Ventura APIs provider and documentation links for canonical targets duplicates and stale endpoints. Use when maintaining or releasing the curated API index. Do not use when testing whether an API's runtime endpoint currently returns correct application data.",
+  "author": "venturalabs-ai",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/venturalabs-ai/ventura.apis/blob/HEAD/.github/skills/link-audit/SKILL.md",
+    "repo": "venturalabs-ai/ventura.apis",
+    "path": ".github/skills/link-audit/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-13T15:08:06Z",
+    "score": 48,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

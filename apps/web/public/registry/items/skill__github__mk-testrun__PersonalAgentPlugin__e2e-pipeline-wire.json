@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/mk-testrun/PersonalAgentPlugin/e2e-pipeline-wire",
+  "type": "skill",
+  "name": "e2e-pipeline-wire",
+  "description": "Nutze um eine ADO-Pipeline-Stage für E2E-Tests zu generieren: startet die App im Hintergrund (dotnet run), wartet auf Readiness, fährt die Playwright-Suite (localhost) und veröffentlicht Ergebnisse/Traces als Artefakt. Ergänzt e2e-playwright/e2e-codegen um die CI-Integration.",
+  "author": "mk-testrun",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/mk-testrun/PersonalAgentPlugin/blob/HEAD/marketplaces/work/plugins/testing/skills/e2e-pipeline-wire/SKILL.md",
+    "repo": "mk-testrun/PersonalAgentPlugin",
+    "path": "marketplaces/work/plugins/testing/skills/e2e-pipeline-wire/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-11T16:13:27Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

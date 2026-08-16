@@ -17,7 +17,7 @@
   "quality": {
     "stars": 106,
     "pushed_at": "2026-08-15T12:14:29Z",
-    "score": 73,
+    "score": 63,
     "star_history": [
       {
         "d": "2026-08-15",
@@ -55,6 +55,6 @@
     "category": "写作",
     "featured": false
   },
-  "readme": "# MUI Public\n\nMono-repository for the MUI organization with code that can be public.\\\nSee https://github.com/mui/mui-private for code that needs to be private.\n\n## Documentation\n\nYou can [read the Infra documentation here](./docs/README.md).\n\n## Applications\n\n### Frontend Public\n\n- URL: [frontend-public.mui.com](https://frontend-public.mui.com/)\n- Source: `/apps/code-infra-dashboard/`\n- Hosting: https://dashboard.render.com/web/srv-d5fq2j0gjchc73e9st5g\n- [Docs](./apps/code-infra-dashboard/#readme)\n\n### MUI Internal\n\n- URL: [mui-internal.netlify.app](https://mui-internal.netlify.app)\n- Source: `/docs/`\n- Hosting: https://app.netlify.com/projects/mui-internal/overview\n- [Docs](./docs/#readme)\n- Website for MUI internal packages, e.g. hosts docs-infra.\n  This is equivalent to https://backoffice.mui.com/ but for public logic.\n\n## Packages\n\n### [docs-infra](./packages/docs-infra/)\n\n- Source: `/packages/docs-infra/`\n- [Docs](./packages/docs-infra/README.md)\n\n### [code-infra](./packages/code-infra/)\n\n- Source: `/packages/code-infra/`\n- [Docs](./packages/code-infra/README.md)\n\n## Agent skills\n\nThis repo ships agent skills under [`skills/`](./skills/) (e.g. `mui-triage`). Install them into a repo's agent skills directory with the [`skills`](https://github.com/vercel-labs/skills) CLI:\n\n```bash\nnpx skills add mui/mui-public --skill mui-triage\n```\n\nNotes:\n\n- Omit `--skill <name>` to install every skill this repo ships.\n- Add `-g` to install into the global agent directory, or `--copy` where symlinks aren't supported (e.g. Windows). When a coding agent is detected, the install runs non-interactively.\n\nTo refresh installed skills later (`npx skills add` copies the content into your repo):\n\n```bash\nnpx skills update\n```\n\n## Versioning\n\nSteps:\n\n1. Checkout latest master\n1. Run `pnpm release:prepare`\n1. Run `pnpm release:version`\n1. Open PR with the changes\n\n## Publishing\n\nSteps:\n\n1. Merge versioning PR\n1. Checkout release commit on master\n1. Run `pnpm release:prepare`\n1. Run `pnpm release:publish`\n",
+  "readme": null,
   "status": "curated"
 }

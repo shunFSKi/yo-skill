@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/1122414/AutoWeb/guozhi-search",
+  "type": "skill",
+  "name": "guozhi-search",
+  "description": "操作果汁实验室 guozhivip.com/lab 公开搜索中转页。任务要求从果汁实验室搜索并跨站进入指定官方电商、电影、地图或其他网站时使用。",
+  "author": "1122414",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/1122414/AutoWeb/blob/HEAD/agent_skills/guozhi-search/SKILL.md",
+    "repo": "1122414/AutoWeb",
+    "path": "agent_skills/guozhi-search/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 4,
+    "pushed_at": "2026-08-02T16:00:29Z",
+    "score": 48
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

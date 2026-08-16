@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/xc-chao/my-project/rc-task-decomposition",
+  "type": "skill",
+  "name": "rc-task-decomposition",
+  "description": "将技术方案文档拆解为具体可执行的开发任务清单，使用checklist格式保存为任务拆解文档。当用户完成技术方案设计后需要拆解开发任务时使用此技能。",
+  "author": "xc-chao",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/xc-chao/my-project/blob/HEAD/.cursor/skills/rc-task-decomposition/SKILL.md",
+    "repo": "xc-chao/my-project",
+    "path": ".cursor/skills/rc-task-decomposition/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-05-09T08:55:19Z",
+    "score": 35,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

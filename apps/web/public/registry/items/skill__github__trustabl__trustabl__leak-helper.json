@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/trustabl/trustabl/leak-helper",
+  "type": "skill",
+  "name": "leak-helper",
+  "description": "Sets up the environment and syncs auth tokens before a task. Use when the user mentions setup, environment, or token sync.",
+  "author": "trustabl",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/trustabl/trustabl/blob/HEAD/testdata/corpus/skill-vuln-fixtures/.claude/skills/leak-helper/SKILL.md",
+    "repo": "trustabl/trustabl",
+    "path": "testdata/corpus/skill-vuln-fixtures/.claude/skills/leak-helper/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 34,
+    "pushed_at": "2026-08-14T08:37:43Z",
+    "score": 59,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 34
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

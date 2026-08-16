@@ -2,7 +2,7 @@
   "id": "mcp:official/com.imperioutils/fisco-it",
   "type": "mcp",
   "name": "Imperio — Italian Tax & Compliance Tools",
-  "description": "Italian tax + NIS2 scope: Codice Fiscale, P.IVA, IBAN, ATECO, IMU, F24, FatturaPA. Free, no LLM.",
+  "description": "Italian tax + anti-fraud: CF, P.IVA, IBAN, ATECO, IMU, F24, FatturaPA, NIS2. 23 free + 5 with key.",
   "author": "com.imperioutils",
   "source": {
     "registry": "mcp-official",
@@ -12,11 +12,18 @@
   "license": null,
   "install": {
     "kind": "remote",
-    "remote_url": "https://imperioutils.com/api/mcp"
+    "remote_url": "https://imperioutils.com/api/mcp",
+    "env": [
+      {
+        "name": "X-API-Key",
+        "required": false,
+        "secret": true
+      }
+    ]
   },
   "quality": {
     "stars": null,
-    "pushed_at": "2026-07-28T17:40:54.722612Z",
+    "pushed_at": "2026-08-16T01:05:27.788857Z",
     "score": 42
   },
   "security": {

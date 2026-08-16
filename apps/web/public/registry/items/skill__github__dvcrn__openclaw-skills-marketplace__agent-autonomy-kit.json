@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/dvcrn/openclaw-skills-marketplace/agent-autonomy-kit",
+  "type": "skill",
+  "name": "agent-autonomy-kit",
+  "description": "Stop waiting for prompts. Keep working.",
+  "author": "dvcrn",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/dvcrn/openclaw-skills-marketplace/blob/HEAD/plugins/ryancampbell--agent-autonomy-kit/skills/agent-autonomy-kit/SKILL.md",
+    "repo": "dvcrn/openclaw-skills-marketplace",
+    "path": "plugins/ryancampbell--agent-autonomy-kit/skills/agent-autonomy-kit/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 32,
+    "pushed_at": "2026-06-12T21:33:13Z",
+    "score": 48
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/motlin/claude-code-plugins/git-conflicts",
+  "type": "skill",
+  "name": "git-conflicts",
+  "description": "Resolve git merge or rebase conflicts and continue the operation.",
+  "author": "motlin",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/motlin/claude-code-plugins/blob/HEAD/plugins/git/skills/git-conflicts/SKILL.md",
+    "repo": "motlin/claude-code-plugins",
+    "path": "plugins/git/skills/git-conflicts/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 14,
+    "pushed_at": "2026-08-14T16:13:14Z",
+    "score": 53,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 14
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/liqiha0/dotfiles/personal-gitlab",
+  "type": "skill",
+  "name": "personal-gitlab",
+  "description": "私有 GitLab 实例操作约定（含多实例选择、仓库查询、Issue/MR 操作、克隆与推送）。在执行任何写操作前先确认目标实例；若上下文不足必须向用户确认，禁止盲目操作。",
+  "author": "liqiha0",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/liqiha0/dotfiles/blob/HEAD/dot_agents/skills/exact_personal/exact_personal-gitlab/SKILL.md.tmpl",
+    "repo": "liqiha0/dotfiles",
+    "path": "dot_agents/skills/exact_personal/exact_personal-gitlab/SKILL.md.tmpl"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-14T16:02:01Z",
+    "score": 42,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

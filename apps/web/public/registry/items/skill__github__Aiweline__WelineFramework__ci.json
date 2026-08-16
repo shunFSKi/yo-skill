@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Aiweline/WelineFramework/ci",
+  "type": "skill",
+  "name": "CI发布工程师-环境兼容与命令安全",
+  "description": "Make Weline commands and automation portable across macOS/Linux shells, Windows PowerShell, CI, and supported PHP versions. Use when quoting, argument construction, nested PHP processes, PATH differences, shell wrappers, deployment commands, or environment-specific failures are in scope; do not use it as a fallback transport when the required shell or host is unavailable.",
+  "author": "Aiweline",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Aiweline/WelineFramework/blob/HEAD/dev/ai/codex/plugins/weline-codex-plugin/skills/CI发布工程师-环境兼容与命令安全/SKILL.md",
+    "repo": "Aiweline/WelineFramework",
+    "path": "dev/ai/codex/plugins/weline-codex-plugin/skills/CI发布工程师-环境兼容与命令安全/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-11T16:20:18Z",
+    "score": 48
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

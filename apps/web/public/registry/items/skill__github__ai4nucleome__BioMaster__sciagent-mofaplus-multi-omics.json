@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/ai4nucleome/BioMaster/sciagent-mofaplus-multi-omics",
+  "type": "skill",
+  "name": "sciagent-mofaplus-multi-omics",
+  "description": "Multi-Omics Factor Analysis v2 (MOFA+) with mofapy2. Jointly decompose omics layers (scRNA, ATAC, proteomics, methylation) into latent factors capturing major variation. Multi-group designs. AnnData views → MOFA object → train → variance explained → correlate factors with metadata → visualize/cluster → enrich top loadings.",
+  "author": "ai4nucleome",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ai4nucleome/BioMaster/blob/HEAD/.opencode/bioskills/sciagent-mofaplus-multi-omics/SKILL.md",
+    "repo": "ai4nucleome/BioMaster",
+    "path": ".opencode/bioskills/sciagent-mofaplus-multi-omics/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 110,
+    "pushed_at": "2026-07-14T06:25:14Z",
+    "score": 58
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

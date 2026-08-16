@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/foreverwow001/agent-workflow-template/github-explorer",
+  "type": "skill",
+  "name": "github-explorer",
+  "description": "Use when safely searching, previewing, downloading, and rolling back external skill scripts from approved GitHub repositories.",
+  "author": "foreverwow001",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/foreverwow001/agent-workflow-template/blob/HEAD/.github/workflow-core/skills/github-explorer/SKILL.md",
+    "repo": "foreverwow001/agent-workflow-template",
+    "path": ".github/workflow-core/skills/github-explorer/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-05-06T07:43:03Z",
+    "score": 35,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

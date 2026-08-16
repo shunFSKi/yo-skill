@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Alexander-M-Dickerson/fins-agent/scaffold-week",
+  "type": "skill",
+  "name": "scaffold-week",
+  "description": "Use when a student says scaffold a week, standardize a weekly folder, or backfill fins2026/weekN with the standard weekly structure.",
+  "author": "Alexander-M-Dickerson",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Alexander-M-Dickerson/fins-agent/blob/HEAD/.qwen/skills/scaffold-week/SKILL.md",
+    "repo": "Alexander-M-Dickerson/fins-agent",
+    "path": ".qwen/skills/scaffold-week/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-06-09T00:44:07Z",
+    "score": 44
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

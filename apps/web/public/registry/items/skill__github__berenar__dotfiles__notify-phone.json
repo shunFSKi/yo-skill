@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/berenar/dotfiles/notify-phone",
+  "type": "skill",
+  "name": "notify-phone",
+  "description": "Send a push notification to the user's phone via ntfy.sh. Use proactively after completing any long-running task (builds, tests, deployments, large refactors), when the user explicitly asks to be notified, or when something requires immediate attention. Do not use for routine short interactions.",
+  "author": "berenar",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/berenar/dotfiles/blob/HEAD/dotfiles/agents/.agents/skills/notify-phone/SKILL.md",
+    "repo": "berenar/dotfiles",
+    "path": "dotfiles/agents/.agents/skills/notify-phone/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 6,
+    "pushed_at": "2026-08-13T08:32:33Z",
+    "score": 53,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 6
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

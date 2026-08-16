@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/GhostKellz/arch/systemd",
+  "type": "skill",
+  "name": "systemd",
+  "description": "Write and debug systemd services, timers, sockets, drop-ins, and socket-proxyd units. Use for service ordering, Requires/After, restart policy, bind timing, daemon-reload, journal inspection, and host-native integrations.",
+  "author": "GhostKellz",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/GhostKellz/arch/blob/HEAD/dotfiles/claude/skills/systemd/SKILL.md",
+    "repo": "GhostKellz/arch",
+    "path": "dotfiles/claude/skills/systemd/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-07-27T10:25:49Z",
+    "score": 48,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

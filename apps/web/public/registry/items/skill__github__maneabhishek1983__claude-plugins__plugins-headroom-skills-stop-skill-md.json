@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/maneabhishek1983/claude-plugins/plugins-headroom-skills-stop-skill-md",
+  "type": "skill",
+  "name": "plugins-headroom-skills-stop-skill-md",
+  "description": "Stop the background Headroom proxy. Use only when the user explicitly runs /headroom:stop.",
+  "author": "maneabhishek1983",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/maneabhishek1983/claude-plugins/blob/HEAD/plugins/headroom/skills/stop/SKILL.md",
+    "repo": "maneabhishek1983/claude-plugins",
+    "path": "plugins/headroom/skills/stop/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-05T14:03:42Z",
+    "score": 42,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

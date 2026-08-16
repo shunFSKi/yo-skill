@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/zenbuapps/zenbu-powers/conflict-resolver",
+  "type": "skill",
+  "name": "conflict-resolver",
+  "description": "分支衝突解決完整工作流程。涵蓋分支偵察、衝突分類（簡單/中等/困難）、 解法規劃與用戶確認、測試命令自動偵測、推送策略。 當 conflict-resolver agent 被啟動時自動載入。",
+  "author": "zenbuapps",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/zenbuapps/zenbu-powers/blob/HEAD/skills/conflict-resolver/SKILL.md",
+    "repo": "zenbuapps/zenbu-powers",
+    "path": "skills/conflict-resolver/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-13T07:57:09Z",
+    "score": 42,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

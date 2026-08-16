@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/HenriGrimm/Minnow/my-custom-skill",
+  "type": "skill",
+  "name": "my-custom-skill",
+  "description": "Describe what this skill does and when Minnow should apply it. Include example phrases users might say, such as \"help me with X\" or \"run Y workflow\".",
+  "author": "HenriGrimm",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/HenriGrimm/Minnow/blob/HEAD/src/skills/_template/SKILL.md",
+    "repo": "HenriGrimm/Minnow",
+    "path": "src/skills/_template/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 14,
+    "pushed_at": "2026-08-16T00:29:10Z",
+    "score": 56,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 14
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

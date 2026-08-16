@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/cembasaranoglu/crafting-system-claude/cursor-rules-compiler",
+  "type": "skill",
+  "name": "cursor-rules-compiler",
+  "description": "Generate or review AGENTS.md and `.cursor/rules/*.mdc` for a repository using source evidence, scoped rules, plan-mode guidance, and safety guardrails.",
+  "author": "cembasaranoglu",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/cembasaranoglu/crafting-system-claude/blob/HEAD/plugin/crafting-system/skills/cursor-rules-compiler/SKILL.md",
+    "repo": "cembasaranoglu/crafting-system-claude",
+    "path": "plugin/crafting-system/skills/cursor-rules-compiler/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 5,
+    "pushed_at": "2026-05-05T18:25:10Z",
+    "score": 42
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

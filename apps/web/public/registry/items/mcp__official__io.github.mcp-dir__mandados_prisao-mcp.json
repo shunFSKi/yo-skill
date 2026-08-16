@@ -1,0 +1,54 @@
+{
+  "id": "mcp:official/io.github.mcp-dir/mandados_prisao-mcp",
+  "type": "mcp",
+  "name": "Mandados de Prisão (CNJ)",
+  "description": "Checks for open arrest warrants in the CNJ national database for a person, from the CPF and name. Pl",
+  "author": "io.github.mcp-dir",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mcp-dir/mandados_prisao-mcp",
+    "repo": "mcp-dir/mandados_prisao-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://api.mcp.ai/p_mandados_prisao"
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-15T20:31:06.279989Z",
+    "score": 55
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "# Mandados de Prisão (CNJ)\n\n### Mandados de Prisão (CNJ) para Claude, ChatGPT e agentes de IA\n\nVerifica se há mandados de prisão em aberto no Banco Nacional do CNJ para uma pessoa, a partir do CPF e do nome. Hospedado pela plataforma, sem credenciais, pague por consulta com crédito pré-pago.\n\n- 📊 **1 ferramenta**\n- 🔒 **Somente leitura**\n- 💬 **Funciona com qualquer cliente MCP**: Claude Desktop, Cursor, VS Code, Cline, Continue\n- 🔑 **Login via magic-link (sem senha)**\n\n[English version](README.en.md) · [Documentação completa](docs/) · [Skill pra agentes](skills/)\n\n---\n\n## Instalar em 1 clique\n\n### Claude (Web e Desktop)\n\nA Anthropic unificou a instalação de MCPs em `claude.ai/customize/connectors`. **O mesmo link serve pra Claude Web e Claude Desktop** (basta estar logado):\n\n[➕ Abrir no Claude e conectar](https://claude.ai/new?modal=add-custom-connector#settings/customize-connectors)\n\n**Manual** (se o deeplink não abrir): [claude.ai/customize/connectors](https://claude.ai/customize/connectors?surface=cowork) → **+** → **Adicionar conector personalizado** → cole **Nome** `Mandados de Prisão (CNJ)` e **URL** `https://api.mcp.ai/p_mandados_prisao`.\n\n### Cursor\n\n[➕ Instalar Mandados de Prisão (CNJ) no Cursor](cursor://anysphere.cursor-deeplink/mcp/install?name=mandados_prisao&config=eyJ1cmwiOiJodHRwczovL2FwaS5tY3AuYWkvcF9tYW5kYWRvc19wcmlzYW8ifQ==)\n\n### VS Code (Copilot Chat)\n\n[➕ Instalar Mandados de Prisão (CNJ) no VS Code](vscode:mcp/install?name=mandados_prisao&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fapi.mcp.ai%2Fp_mandados_prisao%22%7D)\n\n### ChatGPT, Manus, OpenClaw e mais 40+ clientes\n\nFunciona em qualquer cliente MCP que suporte **MCP over HTTP**. A URL do servidor é sempre:\n\n```\nhttps://api.mcp.ai/p_mandados_prisao\n```\n\nDetalhes por cliente: [INSTALL.md](INSTALL.md).\n\n---\n\n## Exemplos de uso\n\n```\nHá mandado de prisão para o CPF 12345678909?\nMandados de prisão de João da Silva\n```\n\n---\n\n## 1 ferramenta disponível\n\n| Tool | Descrição |\n|---|---|\n| `mandados_prisao_consultar` | Verifica se há mandados de prisão em aberto no Banco Nacional do CNJ para uma pessoa, a partir do CPF e do nome. |\n\nDetalhe de cada tool: [docs/ferramentas.md](docs/ferramentas.md)\n\n---\n\n## Preços\n\nPré-pago (carteira de créditos), paga por uso. Veja [docs/precos.md](docs/precos.md).\n\n---\n\n## Privacidade & LGPD\n\n- **Somente leitura**, nenhuma ferramenta altera dados na origem.\n- **Sub-processadores**: o LLM host que você escolher (Claude, ChatGPT, Cursor, agente próprio). Lista completa em [docs/privacidade-lgpd.md](docs/privacidade-lgpd.md).\n- Os dados retornados pelas tools são enviados ao **LLM host que você escolher**, sub-processador fora do nosso controle. Recomendamos planos com opt-out de treinamento.\n\n---\n\n## Perguntas frequentes\n\n**O servidor é open source?**\nO servidor é proprietário (hosted). Este repositório é o wrapper público com manifestos, docs e skills — tudo MIT.\n\n**Posso usar com agente próprio (não Claude/Cursor)?**\nSim — qualquer cliente que suporte MCP over HTTP. URL: `https://api.mcp.ai/p_mandados_prisao`.\n\n\n---\n\n## Suporte\n\n- 📧 [mandados_prisao@mcp.ai](mailto:mandados_prisao@mcp.ai)\n- 🐛 [GitHub Issues](https://github.com/mcp-dir/mandados_prisao-mcp/issues)\n- 📄 [docs/](docs/)\n\n---\n\n## Licença\n\nMIT — veja [LICENSE](LICENSE). O servidor MCP em `api.mcp.ai/p_mandados_prisao` é proprietário (hosted); este repositório (manifestos, docs, skills) é MIT.\n",
+  "status": "curated"
+}

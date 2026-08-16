@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/wooden1234/fin-harness/usstock-screening",
+  "type": "skill",
+  "name": "usstock-screening",
+  "description": "通过自然语言查询进行美股筛选，支持行情指标、财务指标、行业概念、业绩预测、研报评级等多条件组合筛选。返回符合条件的相关美股数据。当用户询问美股筛选问题时，必须使用此技能。",
+  "author": "wooden1234",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/wooden1234/fin-harness/blob/HEAD/skills/usstock-screening/SKILL.md",
+    "repo": "wooden1234/fin-harness",
+    "path": "skills/usstock-screening/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-14T19:29:39Z",
+    "score": 45,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

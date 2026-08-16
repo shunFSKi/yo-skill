@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/wordbricks/onequery/code-review",
+  "type": "skill",
+  "name": "code-review",
+  "description": "Run a final code review on a pull request",
+  "author": "wordbricks",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/wordbricks/onequery/blob/HEAD/.agents/skills/code-review/SKILL.md",
+    "repo": "wordbricks/onequery",
+    "path": ".agents/skills/code-review/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 17,
+    "pushed_at": "2026-07-30T09:22:23Z",
+    "score": 53,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 17
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

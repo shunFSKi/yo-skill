@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/Layr-Labs/agent-kit-templates/email",
+  "type": "skill",
+  "name": "email",
+  "description": "Email for agents via EigenMail. Send and receive email from an agent-owned address. Use when the agent needs to communicate via email.",
+  "author": "Layr-Labs",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Layr-Labs/agent-kit-templates/blob/HEAD/media-agent/src/skills/agent/email/SKILL.md",
+    "repo": "Layr-Labs/agent-kit-templates",
+    "path": "media-agent/src/skills/agent/email/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-04-03T21:49:28Z",
+    "score": 39,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 2
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

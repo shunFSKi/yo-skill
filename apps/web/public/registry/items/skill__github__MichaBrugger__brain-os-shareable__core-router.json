@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/MichaBrugger/brain-os-shareable/core-router",
+  "type": "skill",
+  "name": "core-router",
+  "description": "Input routing logic that runs on every user message. Classifies intents, recalls brain context, dispatches to skills, and composes the response. This skill is loaded via CLAUDE.md on every conversation — you do NOT need to invoke it manually. If you're here, just follow the rules in RULES.md directly.",
+  "author": "MichaBrugger",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/MichaBrugger/brain-os-shareable/blob/HEAD/os/skills/core/router/SKILL.md",
+    "repo": "MichaBrugger/brain-os-shareable",
+    "path": "os/skills/core/router/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-09T13:11:22Z",
+    "score": 40,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

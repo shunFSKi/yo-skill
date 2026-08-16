@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/bianhaifeng789-hue/openclaw-config/lsp-service-complete",
+  "type": "skill",
+  "name": "lsp-service-complete",
+  "description": "LSP服务完整性检查。验证语言服务器协议配置完整性，确保代码分析功能正常。Use when checking LSP server configuration completeness.",
+  "author": "bianhaifeng789-hue",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/bianhaifeng789-hue/openclaw-config/blob/HEAD/skills-experimental/lsp-service-complete/SKILL.md",
+    "repo": "bianhaifeng789-hue/openclaw-config",
+    "path": "skills-experimental/lsp-service-complete/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-05-04T01:22:12Z",
+    "score": 32
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "mcp:official/com.linkonda/mcp",
+  "type": "mcp",
+  "name": "mcp",
+  "description": "Create and manage Linkonda short links and QR codes, with no per-visitor tracking.",
+  "author": "com.linkonda",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/mahmoudhalimeh/NanoLink-MCP",
+    "repo": "mahmoudhalimeh/NanoLink-MCP"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@veranoapp/linkonda-mcp"
+    ],
+    "env": [
+      {
+        "name": "LINKONDA_API_KEY",
+        "required": false,
+        "secret": true
+      },
+      {
+        "name": "LINKONDA_API_BASE_URL",
+        "required": false,
+        "secret": false
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-15T22:42:28.004387Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "# Linkonda MCP server\n\nCreate and manage [Linkonda](https://linkonda.com) short links from Claude, Claude Code, Cursor, or any other MCP client.\n\nLinkonda records a **total redirect count per link and nothing else** — no IP addresses, geolocation, device data, or referrers. That matters more than usual for an agent, which can generate links in bulk without building a visitor dataset you then have to secure, retain, and answer requests about.\n\n## Works without an API key\n\nMost shortener MCP servers refuse to start without credentials. This one shortens URLs immediately on install: anonymous links are capped per network and expire after 30 days. Add a key when you want links that persist and can be managed.\n\n| | No key | With `LINKONDA_API_KEY` |\n| --- | --- | --- |\n| `shorten_link` | ✅ 10 links, expire after 30 days | ✅ permanent, saved to your account |\n| `get_link_stats` | ✅ | ✅ |\n| `check_quota` | ✅ anonymous allowance | ✅ your plan |\n| `shorten_links_bulk`, `list_links`, `update_link`, `delete_link` | ✗ | ✅ |\n\nBearer authentication requires a paid plan — see [pricing](https://linkonda.com/pricing). Create a key in the dashboard under **API keys**; it is shown once.\n\n## Install\n\nAdd to your MCP client config (Claude Desktop: `claude_desktop_config.json`; Claude Code: `.mcp.json`):\n\n```json\n{\n  \"mcpServers\": {\n    \"linkonda\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@veranoapp/linkonda-mcp\"]\n    }\n  }\n}\n```\n\nTo use an API key, add it to the same entry:\n\n```json\n{\n  \"mcpServers\": {\n    \"linkonda\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@veranoapp/linkonda-mcp\"],\n      \"env\": { \"LINKONDA_API_KEY\": \"lk_your_key_here\" }\n    }\n  }\n}\n```\n\n| Variable | Default | Purpose |\n| --- | --- | --- |\n| `LINKONDA_API_KEY` | *(unset)* | Bearer key. Omit to run anonymously. |\n| `LINKONDA_API_BASE_URL` | `https://api.linkonda.com` | Point at another instance. |\n\n## Tools\n\n| Tool | What it does | Key required |\n| --- | --- | --- |\n| `shorten_link` | Shorten one URL | No |\n| `shorten_links_bulk` | Shorten up to 100 URLs in one request | Yes |\n| `list_links` | List your links with destinations and click counts | Yes |\n| `update_link` | Change a destination, or pause/resume a link | Yes |\n| `delete_link` | Permanently delete a link | Yes |\n| `get_link_stats` | Total redirect count for a link | No |\n| `check_quota` | Links live vs. plan allowance | No |\n\n`shorten_links_bulk` is partial-success: some entries can fail (quota, invalid URL) while others are created, and the tool reports both lists rather than only the successes.\n\n## What you cannot get\n\nThere is no per-visitor data to return, so there are no tools for geographic, device, or referrer breakdowns — that data is never collected. If your workflow needs click attribution, a tracking shortener is the right tool; see the [comparisons](https://linkonda.com/alternatives/bitly).\n\n## Development\n\n```bash\nnpm install\nnpm run build\nLINKONDA_API_KEY=lk_... npm start   # speaks MCP over stdio\n```\n\n`npm run typecheck` runs the compiler without emitting.\n",
+  "status": "curated"
+}

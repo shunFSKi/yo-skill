@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/LedgerHQ/ledger-live/run-tests",
+  "type": "skill",
+  "name": "run-tests",
+  "description": "Run unit tests scoped to files changed in the current branch. Use when the user asks to run tests, validate changes, or before a PR.",
+  "author": "LedgerHQ",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/LedgerHQ/ledger-live/blob/HEAD/.agents/skills/run-tests/SKILL.md",
+    "repo": "LedgerHQ/ledger-live",
+    "path": ".agents/skills/run-tests/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 610,
+    "pushed_at": "2026-08-14T16:57:26Z",
+    "score": 80
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "# Ledger Wallet\n\n**Previously known as \"Ledger Live\"**\n\nExternal developers: also see [Ledger Developer Portal](https://developers.ledger.com/docs/ledger-live/contributing/getting-started) for guides like [Blockchain Support guide](https://developers.ledger.com/docs/coin/general-process).\n\n## Apps\n\nThe repository houses the companion apps for [Ledger hardware wallet signers](https://shop.ledger.com) allowing users to manage crypto, install apps on device, update firmware, verify and sign transactions.\n\nDownload production apps from https://download.live.ledger.com\n\n- **[Ledger Wallet Desktop (LWD)](apps/ledger-live-desktop/README.md)** – Desktop app built with Electron.\n- **[Ledger Wallet Mobile (LWM)](apps/ledger-live-mobile/README.md)** – Android and iOS apps built with React Native.\n- **[Wallet CLI](apps/wallet-cli/README.md)** – Agent-optimized CLI toolset.\n\n## npm packages\n\nThe repo is also home to 150+ library packages that are consumed both internally by the apps and externally by third-party developers integrating with Ledger hardware.\n\nPublic packages are published to npm by [ldg-github-ci](https://www.npmjs.com/~ldg-github-ci).\n\n## Sibling repositories\n\nSeveral `@ledgerhq/*` packages consumed here are published from separate repositories:\n\n| Repository | Key packages |\n| --- | --- |\n| [device-sdk-ts](https://github.com/LedgerHQ/device-sdk-ts) | `@ledgerhq/device-management-kit`, `@ledgerhq/context-module`, `@ledgerhq/device-signer-kit-*`, `@ledgerhq/device-transport-kit-*`, `@ledgerhq/speculos-device-controller` |\n| [wallet-api](https://github.com/LedgerHQ/wallet-api) | `@ledgerhq/wallet-api-client`, `@ledgerhq/wallet-api-client-react`, `@ledgerhq/wallet-api-core`, `@ledgerhq/wallet-api-server`, `@ledgerhq/wallet-api-simulator` |\n| [coin-modules](https://github.com/LedgerHQ/coin-modules) | `@ledgerhq/coin-stellar`, `@ledgerhq/coin-xrp` |\n| [lumen](https://github.com/LedgerHQ/lumen) | `@ledgerhq/lumen-ui-react`, `@ledgerhq/lumen-ui-rnative`, `@ledgerhq/lumen-utils-shared`, `@ledgerhq/lumen-ui-*-visualization` |\n| [crypto-icons](https://github.com/LedgerHQ/crypto-icons) | `@ledgerhq/crypto-icons` |\n| [ledger-zcash-utils](https://github.com/LedgerHQ/ledger-zcash-utils) | `@ledgerhq/zcash-utils` |\n| [alpaca-coin-module](https://github.com/LedgerHQ/alpaca-coin-module) | `@ledgerhq/coin-module-framework` |\n\n## Getting started\n\nThe repo uses:\n\n- [mise](https://mise.jdx.dev/) for pinned local tool versions\n- [pnpm workspaces](https://pnpm.io/) for npm package management\n- [Nx](https://nx.dev/) for task orchestration and repo management\n- [Changesets](https://github.com/changesets/changesets) for changelogs and publishing\n\nTo install everything run:\n\n```bash\nmise install\npnpm i\n```\n\nWhat to run next depends on the workspace you're targeting. See [repo commands](docs/repo-commands.md) for build, dev, lint, and test recipes, or check the README in the relevant workspace.\n\n\n### Contributing & reviewing\n\n- [CONTRIBUTING.md](CONTRIBUTING.md) — for **PR authors**: branch conventions, the PR lifecycle, and quality gates before requesting review.\n- [REVIEWING.md](REVIEWING.md) — for **code-owner reviewers**: how to scope, what to look for, and how to give feedback.\n\n### Finding documentation\n\n1. **Repo-wide** — [AGENTS.md](AGENTS.md), then [docs/](docs/)\n2. **Task-specific (agents)** — [.agents/skills/](.agents/skills/)\n3. **Local** — README in the workspace or package you're working in\n\n### Overall structure\n\n| Path        | Purpose                                                                                                    |\n| ----------- | ---------------------------------------------------------------------------------------------------------- |\n| `.agents/`  | Shared agent-facing docs                                                                                   |\n| `apps/`     | Desktop, mobile and CLI apps                                                                               |\n| `devtools/` | Internal developer tooling and shell helpers                                                               |\n| `docs/`     | Repo-wide canonical docs                                                                                   |\n| `domain/`   | Domain packages (`entity/`, `api/`)\\*                                                                      |\n| `e2e/`      | E2E tests using [Detox](https://wix.github.io/Detox/) and [Speculos](https://github.com/LedgerHQ/speculos) |\n| `features/` | Features shared across apps\\*                                                                              |\n| `libs/`     | Shared libraries — the home for new shared code; `ledger-live-common` is maintenance-only\\*               |\n| `patches/`  | `patchedDependencies` auto-applied during pnpm install                                                     |\n| `scripts/`  | Repo-level utility scripts                                                                                 |\n| `shared/`   | Cross-cutting packages used in domain/, features/ and apps/\\*                                              |\n| `tests/`    | Dummy apps for testing (dapps, wallet)                                                                     |\n| `tools/`    | CI actions, GitHub bots and Nx plugins                                                                     |\n\n\\*Adding new code? See [libs/README.md](./libs/README.md).\n\n## Nightly releases\n\n- **Desktop binaries** and **Android APKs** are attached to build workflows – see [GitHub Actions](https://github.com/LedgerHQ/ledger-live/actions).\n- Authorised users can also access [Testflight](https://developer.apple.com/testflight/), [Firebase App Distribution](https://console.firebase.google.com/) and [ledger-live-build](https://github.com/LedgerHQ/ledger-live-build) repository.\n- Nightly **packages** are published with `@nightly` dist-tag, e.g. `npm i @ledgerhq/hw-app-eth@nightly`\n- More details on the Wiki: https://github.com/LedgerHQ/ledger-live/wiki/Release-Process#nightlies\n\n## License\n\nPlease check each project `LICENSE` file, most of them are under the MIT license.\n",
+  "status": "curated"
+}

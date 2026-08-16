@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/XTSoftwareLabs/neatcontext-plugins/neatcontext-disconnect",
+  "type": "skill",
+  "name": "neatcontext-disconnect",
+  "description": "Disconnect the NeatContext Context from the current Kimi Code session. Use when the user explicitly invokes this skill or asks to disconnect, detach, clear, or stop using the connected context.",
+  "author": "XTSoftwareLabs",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/XTSoftwareLabs/neatcontext-plugins/blob/HEAD/plugins/kimi-code/neatcontext/skills/disconnect/SKILL.md",
+    "repo": "XTSoftwareLabs/neatcontext-plugins",
+    "path": "plugins/kimi-code/neatcontext/skills/disconnect/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 11,
+    "pushed_at": "2026-08-16T04:29:01Z",
+    "score": 55,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 11
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/ippoan/claude-skills/review-with-opus",
+  "type": "skill",
+  "name": "review-with-opus",
+  "description": "実装が終わった差分をOpusにレビューさせる。バグ・設計の綻び・テスト漏れを指摘させたいときに使う",
+  "author": "ippoan",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ippoan/claude-skills/blob/HEAD/.claude/skills/review-with-opus/SKILL.md",
+    "repo": "ippoan/claude-skills",
+    "path": ".claude/skills/review-with-opus/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-03T08:54:59Z",
+    "score": 42,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/kernel/hypeman/test-agent",
+  "type": "skill",
+  "name": "test-agent",
+  "description": "Improve repository test quality by eliminating flakes first, then reducing slow-test redundancy, and finally optimizing longest tests while preserving coverage. Use when asked to repeatedly run CI-equivalent no-cache test cycles, diagnose flaky tests, and document findings in this skill's notes.",
+  "author": "kernel",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/kernel/hypeman/blob/HEAD/skills/test-agent/SKILL.md",
+    "repo": "kernel/hypeman",
+    "path": "skills/test-agent/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 316,
+    "pushed_at": "2026-08-16T00:23:44Z",
+    "score": 78,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 316
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "<p align=\"center\">\n\n```\n ██╗  ██╗  ██╗   ██╗  ██████╗   ███████╗  ███╗   ███╗   █████╗   ███╗   ██╗\n ██║  ██║  ╚██╗ ██╔╝  ██╔══██╗  ██╔════╝  ████╗ ████║  ██╔══██╗  ████╗  ██║\n ███████║   ╚████╔╝   ██████╔╝  █████╗    ██╔████╔██║  ███████║  ██╔██╗ ██║\n ██╔══██║    ╚██╔╝    ██╔═══╝   ██╔══╝    ██║╚██╔╝██║  ██╔══██║  ██║╚██╗██║\n ██║  ██║     ██║     ██║       ███████╗  ██║ ╚═╝ ██║  ██║  ██║  ██║ ╚████║\n ╚═╝  ╚═╝     ╚═╝     ╚═╝       ╚══════╝  ╚═╝     ╚═╝  ╚═╝  ╚═╝  ╚═╝  ╚═══╝\n```\n\n</p>\n\n<p align=\"center\">\n  <strong>Run containerized workloads in VMs, powered by Cloud Hypervisor, Firecracker, QEMU, and Apple Virtualization.framework.</strong>\n <img alt=\"GitHub License\" src=\"https://img.shields.io/github/license/kernel/hypeman\">\n  <a href=\"https://discord.gg/FBrveQRcud\"><img src=\"https://img.shields.io/discord/1342243238748225556?logo=discord&logoColor=white&color=7289DA\" alt=\"Discord\"></a>\n</p>\n\n---\n\n## Features\n\n- **Docker-compatible CLI** — `run`, `exec`, `stop`, `ps`, `logs`, `pull` work like you'd expect\n- **Multiple hypervisors** — Cloud Hypervisor, Firecracker, QEMU on Linux; Virtualization.framework on macOS\n- **Standby & restore** — snapshot a VM to disk and resume it in milliseconds\n- **Built-in ingress** — reverse proxy with TLS termination and subdomain routing\n- **GPU passthrough** — vGPU and VFIO device support\n- **OCI image support** — pull and run standard container images\n- **Remote registry push** — export cached images to any OCI registry (AWS ECR, Docker Hub, ghcr, ...) with docker-style borrowed credentials\n- **Remote API** — JWT-authenticated server with a separate CLI client\n\n## Requirements\n\n### Linux\n**KVM** virtualization support required. Supports Cloud Hypervisor, Firecracker, and QEMU as hypervisors.\n\n### macOS\n**macOS 11.0+** on Apple Silicon. Uses Apple's Virtualization.framework via the `vz` hypervisor.\nInstall Rosetta to run `linux/amd64` images on Apple Silicon:\n\n```bash\nsoftwareupdate --install-rosetta --agree-to-license\n```\n\n## Quick Start\n\nInstall Hypeman (Linux and macOS supported):\n\n```bash\ncurl -fsSL https://get.hypeman.sh | bash\n```\n\nThis installs the Hypeman server, CLI, and token tool. The installer:\n- Generates a YAML config file with a random JWT secret\n- Starts the server as a system service (launchd on macOS, systemd on Linux)\n- Creates a CLI config file (`~/.config/hypeman/cli.yaml`) with a pre-authenticated token\n\nNo environment variables needed -- just run `hypeman` commands immediately after install.\n\n## Remote CLI Access\n\nTo use the Hypeman CLI from a **different machine** than the server:\n\n**Homebrew (macOS):**\n```bash\nbrew install kernel/tap/hypeman\n```\n\n**Install script (Linux & macOS):**\n```bash\ncurl -fsSL https://get.hypeman.sh/cli | bash\n```\n\n**Go:**\n```bash\ngo install 'github.com/kernel/hypeman-cli/cmd/hypeman@latest'\n```\n\nThen create a CLI config file at `~/.config/hypeman/cli.yaml`:\n\n```yaml\nbase_url: http://<server-host>:4973\napi_key: \"<token>\"\n```\n\nTo generate a token, run `hypeman-token` on the server:\n\n```bash\nhypeman-token -user-id \"my-user\" -duration 8760h\n```\n\nEnvironment variables (`HYPEMAN_BASE_URL`, `HYPEMAN_API_KEY`) and CLI flags (`--base-url`) also work and take precedence over the config file.\n\n## Configuration\n\nHypeman is configured via YAML config files.\n\n| Component | Config File |\n|-----------|-------------|\n| Server | `/etc/hypeman/config.yaml` (Linux) or `~/.config/hypeman/config.yaml` (macOS) |\n| CLI | `~/.config/hypeman/cli.yaml` |\n\n\nSee [`config.example.yaml`](config.example.yaml) (Linux) and [`config.example.darwin.yaml`](config.example.darwin.yaml) (macOS) for all available server options.\n\nTo expose the API through Caddy on a public HTTPS hostname, configure the hostname and TLS in the server config. The hostname must also be included in `acme.allowed_domains`:\n\n```yaml\napi:\n  hostname: api.example.com\n  tls: true\n  redirect_http: true\n```\n\nWith this configuration, use `https://api.example.com` as the API base URL. Without it, the API is available on the server's configured port (4973 by default).\n\n## Usage\n\n```bash\n# Pull an image\nhypeman pull nginx:alpine\n\n# Boot a new VM (auto-pulls image if needed)\nhypeman run --name my-app nginx:alpine\n\n# On Linux amd64, use QEMU's minimal microvm backend.\n# It cannot use PCI devices or hotplug memory.\nhypeman run --hypervisor qemu-microvm --name my-microvm nginx:alpine\n\n# List running VMs\nhypeman ps\n\n# Show all VMs\nhypeman ps -a\n\n# View logs (supports VM name, ID, or partial ID)\nhypeman logs my-app\nhypeman logs -f my-app\n\n# Execute a command in a running VM\nhypeman exec my-app whoami\n\n# Shell into the VM\nhypeman exec -it my-app /bin/sh\n```\n\n### Pushing Images to Remote Registries\n\nA ready image can be exported asynchronously to any OCI registry through the\nremote API. Set the API base URL and API key used by the examples below:\n\n```bash\nexport HYPEMAN_BASE_URL=\"https://api.example.com\"\nexport HYPEMAN_API_KEY=\"<api-key>\"\n```\n\nCredentials use the Docker model:\n\n- If `credentials` is provided, the client lends `username`/`password` or\n  `registry_token` for this push only. Hypeman uses them in memory and never\n  persists or logs them.\n- If `credentials` is omitted, Hypeman uses the server's Docker keychain,\n  including `/root/.docker/config.json` or the configured service user's\n  `~/.docker/config.json` and any credential helpers.\n- If Hypeman restarts while a push using borrowed credentials is running, that\n  job fails instead of retrying without the original credentials. Anonymous\n  interrupted jobs can be recovered with the server's keychain.\n\nUse an HTTPS API URL when sending credentials. The `insecure` request field\ncontrols only the connection from Hypeman to the destination registry.\n\nFor example, push to ECR using a short-lived login password:\n\n```bash\nexport ECR_PASSWORD=\"$(aws ecr get-login-password --region us-east-1)\"\n\ncurl --fail-with-body --silent --show-error \\\n  -X POST \"$HYPEMAN_BASE_URL/pushes\" \\\n  -H \"Authorization: Bearer $HYPEMAN_API_KEY\" \\\n  -H \"Content-Type: application/json\" \\\n  --data \"{\n    \\\"image\\\": \\\"myapp:latest\\\",\n    \\\"target\\\": \\\"123456789.dkr.ecr.us-east-1.amazonaws.com/myapp:v1\\\",\n    \\\"credentials\\\": {\n      \\\"username\\\": \\\"AWS\\\",\n      \\\"password\\\": \\\"$ECR_PASSWORD\\\"\n    }\n  }\"\n```\n\nThe response contains a push `id`. Poll it until the status is `pushed` or\n`failed`:\n\n```bash\ncurl --fail-with-body --silent --show-error \\\n  \"$HYPEMAN_BASE_URL/pushes/<push-id>\" \\\n  -H \"Authorization: Bearer $HYPEMAN_API_KEY\"\n```\n\nPush jobs move through `queued`, `pushing`, and `pushed` or `failed`.\n`queue_position` is present while a job is queued; successful jobs report\n`layers`, `bytes`, and `completed_at`, while failed jobs report `error`.\n`GET /pushes` lists jobs newest first.\n\nSet `\"insecure\": true` only when the destination registry uses plain HTTP.\nHTTPS registries do not need this option. Invalid image names or targets return\n`400`, a missing image returns `404`, and only images in the `ready` state can\nbe pushed (`409 image_not_ready` otherwise).\n\nLayer blobs are preserved. OCI manifest digests are preserved too, while a\nDocker v2 manifest is converted to OCI and can therefore receive a new digest;\nuse the returned `digest` as the destination manifest digest.\n\nThe default limit is two concurrent pushes. Increase or lower it with:\n\n```yaml\nlimits:\n  max_concurrent_pushes: 2\n```\n\n### VM Lifecycle\n\n```bash\n# Stop the VM\nhypeman stop my-app\n\n# Start a stopped VM\nhypeman start my-app\n\n# Put the VM in standby (snapshot to disk, stop hypervisor)\nhypeman standby my-app\n\n# Restore the VM from standby\nhypeman restore my-app\n\n# Delete all VMs\nhypeman rm --force --all\n```\n\n### Ingress (Reverse Proxy)\n\nCreate a reverse proxy from the host to your VM:\n\n```bash\n# Create an ingress\nhypeman ingress create --name my-ingress my-app --hostname my-nginx-app --port 80 --host-port 8081\n\n# List ingresses\nhypeman ingress list\n\n# Test it\ncurl --header \"Host: my-nginx-app\" http://127.0.0.1:8081\n\n# Delete an ingress\nhypeman ingress delete my-ingress\n```\n\n### TLS & Subdomain Routing\n\n```bash\n# TLS-terminating ingress (requires DNS credentials in server config)\nhypeman ingress create --name my-tls-ingress my-app \\\n  --hostname hello.example.com -p 80 --host-port 7443 --tls\n\n# Test TLS\ncurl --resolve hello.example.com:7443:127.0.0.1 https://hello.example.com:7443\n\n# Subdomain-based routing\nhypeman ingress create --name subdomain-ingress '{instance}' \\\n  --hostname '{instance}.example.com' -p 80 --host-port 8443 --tls\n\n# Delete all ingresses\nhypeman ingress delete --all\n```\n\n### Advanced Logging\n\n```bash\n# View Cloud Hypervisor logs\nhypeman logs --source vmm my-app\n\n# View Hypeman operational logs\nhypeman logs --source hypeman my-app\n```\n\nFor all available commands, run `hypeman --help`.\n\n## Development\n\nSee [DEVELOPMENT.md](DEVELOPMENT.md) for build instructions, configuration options, and contributing guidelines.\n\n## License\n\nSee [LICENSE](LICENSE).\n",
+  "status": "curated"
+}

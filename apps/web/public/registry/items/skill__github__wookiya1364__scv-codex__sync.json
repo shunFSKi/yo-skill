@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/wookiya1364/scv-codex/sync",
+  "type": "skill",
+  "name": "sync",
+  "description": "Preview and sync SCV templates with merge-policy and marker preservation, then detect drift between active plans, tests, and code. Use when SCV templates or plans may be stale or the user invokes $scv:sync.",
+  "author": "wookiya1364",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/wookiya1364/scv-codex/blob/HEAD/plugins/scv/skills/sync/SKILL.md",
+    "repo": "wookiya1364/scv-codex",
+    "path": "plugins/scv/skills/sync/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-14T04:01:36Z",
+    "score": 48
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

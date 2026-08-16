@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/TBodyAltra/AgentPost/agentpost-client",
+  "type": "skill",
+  "name": "agentpost-client",
+  "description": "Connects a client AI agent to an AgentPost HTTP mail gateway—paste the onboarding prompt for connection info, fetch GET /api/v1/skill for full rules, register mailboxes, send and poll signed mail. Use when the user pastes an Agent onboarding prompt or asks to connect to an AgentPost server.",
+  "author": "TBodyAltra",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/TBodyAltra/AgentPost/blob/HEAD/.cursor/skills/agentpost-client/SKILL.md",
+    "repo": "TBodyAltra/AgentPost",
+    "path": ".cursor/skills/agentpost-client/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-06-05T04:21:35Z",
+    "score": 44,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 2
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

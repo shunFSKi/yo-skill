@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/xqdgithub/KibanaCli/kibana-config",
+  "type": "skill",
+  "name": "kibana-config",
+  "description": "Manages Kibana CLI connection credentials via kibana config set/get/clear and kibana auth test. Use when configuring Kibana URL, username, password, environment variables, or verifying authentication for kibana-cli.",
+  "author": "xqdgithub",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/xqdgithub/KibanaCli/blob/HEAD/skills/kibana-config/SKILL.md",
+    "repo": "xqdgithub/KibanaCli",
+    "path": "skills/kibana-config/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-13T08:38:37Z",
+    "score": 40,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

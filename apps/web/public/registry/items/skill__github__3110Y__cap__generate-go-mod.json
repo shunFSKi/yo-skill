@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/3110Y/cap/generate-go-mod",
+  "type": "skill",
+  "name": "generate-go-mod",
+  "description": "Инициализирует go.mod и добавляет необходимые зависимости.",
+  "author": "3110Y",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/3110Y/cap/blob/HEAD/.claude/skills/generate-go-mod/SKILL.md",
+    "repo": "3110Y/cap",
+    "path": ".claude/skills/generate-go-mod/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-04-22T22:16:35Z",
+    "score": 35,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

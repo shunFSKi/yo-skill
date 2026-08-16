@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/jellydn/my-ai-tools/code-reviewer",
+  "type": "skill",
+  "name": "code-reviewer",
+  "description": "Review code for quality, security, and best practices — read-only analysis",
+  "author": "jellydn",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/jellydn/my-ai-tools/blob/HEAD/configs/cline/skills/code-reviewer/SKILL.md",
+    "repo": "jellydn/my-ai-tools",
+    "path": "configs/cline/skills/code-reviewer/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 114,
+    "pushed_at": "2026-08-15T13:34:27Z",
+    "score": 61,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 114
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

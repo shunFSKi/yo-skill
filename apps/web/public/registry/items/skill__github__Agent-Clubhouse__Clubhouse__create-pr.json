@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/Agent-Clubhouse/Clubhouse/create-pr",
+  "type": "skill",
+  "name": "create-pr",
+  "description": "Create a pull request for the current branch using the project's configured source control provider",
+  "author": "Agent-Clubhouse",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Agent-Clubhouse/Clubhouse/blob/HEAD/.claude/skills/create-pr/SKILL.md",
+    "repo": "Agent-Clubhouse/Clubhouse",
+    "path": ".claude/skills/create-pr/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 6,
+    "pushed_at": "2026-08-14T20:02:58Z",
+    "score": 50,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 6
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

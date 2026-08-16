@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/atman-33/multi-agent-ff15/pr-assistant",
+  "type": "skill",
+  "name": "pr-assistant",
+  "description": "Analyzes git changes and assists with creating comprehensive pull requests. Use when user wants to create a PR, review changes before PR, or needs help drafting PR descriptions. Triggers on phrases like 'create PR', 'make a pull request', 'draft PR description', 'what changed in this branch', 'prepare PR'.",
+  "author": "atman-33",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/atman-33/multi-agent-ff15/blob/HEAD/.github/skills/pr-assistant/SKILL.md",
+    "repo": "atman-33/multi-agent-ff15",
+    "path": ".github/skills/pr-assistant/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 4,
+    "pushed_at": "2026-05-09T06:52:49Z",
+    "score": 41,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 4
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

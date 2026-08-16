@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/cjph96/AI/symfony-voters",
+  "type": "skill",
+  "name": "symfony-voters",
+  "description": "Implements and validates Symfony voters and resource authorization paths. Use when access depends on the current actor and domain object state. Do not use for simple role checks that do not need object-level authorization.",
+  "author": "cjph96",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/cjph96/AI/blob/HEAD/.agents/skills/symfony-voters/SKILL.md",
+    "repo": "cjph96/AI",
+    "path": ".agents/skills/symfony-voters/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-04-27T08:03:47Z",
+    "score": 35,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

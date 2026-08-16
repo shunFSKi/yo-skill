@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/hoangsonww/PetSwipe-Match-App/k8s-hardening-and-render",
+  "type": "skill",
+  "name": "k8s-hardening-and-render",
+  "description": "Kubernetes-local workflow for manifest hardening, renderability, overlays, quotas, network policies, and rollout safety in PetSwipe. Use when working inside k8s and the task is specifically about manifest correctness or production posture.",
+  "author": "hoangsonww",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/hoangsonww/PetSwipe-Match-App/blob/HEAD/k8s/.agents/skills/k8s-hardening-and-render/SKILL.md",
+    "repo": "hoangsonww/PetSwipe-Match-App",
+    "path": "k8s/.agents/skills/k8s-hardening-and-render/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 24,
+    "pushed_at": "2026-08-09T23:30:28Z",
+    "score": 58,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 24
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

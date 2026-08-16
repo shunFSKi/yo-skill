@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/winchxyz/idea-to-build/reset",
+  "type": "skill",
+  "name": "reset",
+  "description": "Start a fresh idea-to-build project — a new context file and cleared focus. Use when the user types \"/reset\" or asks to start over / begin a new brainstorm.",
+  "author": "winchxyz",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/winchxyz/idea-to-build/blob/HEAD/.claude/skills/reset/SKILL.md",
+    "repo": "winchxyz/idea-to-build",
+    "path": ".claude/skills/reset/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 9,
+    "pushed_at": "2026-06-20T23:22:30Z",
+    "score": 49,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 9
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

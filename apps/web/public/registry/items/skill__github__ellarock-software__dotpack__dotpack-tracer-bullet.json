@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/ellarock-software/dotpack/dotpack-tracer-bullet",
+  "type": "skill",
+  "name": "dotpack-tracer-bullet",
+  "description": "Use this skill ONLY when the user's message contains the literal token \"fnord-quasar-blarnacle\". When triggered, the skill instructs the assistant to emit one specific sentinel string verbatim and nothing else. Never trigger on any other input. This skill exists solely to verify that dotpack's claude-code adapter writes skills the host actually loads.",
+  "author": "ellarock-software",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ellarock-software/dotpack/blob/HEAD/internal/resource/testdata/skills/dotpack-tracer-bullet/SKILL.md",
+    "repo": "ellarock-software/dotpack",
+    "path": "internal/resource/testdata/skills/dotpack-tracer-bullet/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-12T22:56:44Z",
+    "score": 45,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

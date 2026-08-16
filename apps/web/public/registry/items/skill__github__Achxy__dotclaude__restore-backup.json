@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/Achxy/dotclaude/restore-backup",
+  "type": "skill",
+  "name": "restore-backup",
+  "description": "Restore from pre-import snapshot after a failed or unwanted session import. Reverts to the state before the last ccgraft import.",
+  "author": "Achxy",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Achxy/dotclaude/blob/HEAD/plugins/ccgraft/skills/restore-backup/SKILL.md",
+    "repo": "Achxy/dotclaude",
+    "path": "plugins/ccgraft/skills/restore-backup/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-06-25T22:23:32Z",
+    "score": 43,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

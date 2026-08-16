@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/tecer-ai/rbtv/tracer-codex",
+  "type": "skill",
+  "name": "tracer-codex",
+  "description": "A2 loader-follow tracer for the codex mirror pilot. Use when asked to invoke the tracer-codex skill or run the tracer. Reads and executes the tracer workflow file, which carries a unique sentinel the pilot checks for.",
+  "author": "tecer-ai",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/tecer-ai/rbtv/blob/HEAD/orchestration/models/mirror/_pilot-fixture/codex/.claude/skills/tracer-codex/SKILL.md",
+    "repo": "tecer-ai/rbtv",
+    "path": "orchestration/models/mirror/_pilot-fixture/codex/.claude/skills/tracer-codex/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-14T09:44:52Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/biocini/kitcat/deep-research",
+  "type": "skill",
+  "name": "deep-research",
+  "description": "Run a thorough, source-heavy investigation on a mathematics/PL topic. Use when the user asks for deep research, a comprehensive analysis, an in-depth report, or a multi-source investigation of a mathematical question. Produces a cited research brief with provenance tracking.",
+  "author": "biocini",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/biocini/kitcat/blob/HEAD/.agents/skills/euler/deep-research/SKILL.md",
+    "repo": "biocini/kitcat",
+    "path": ".agents/skills/euler/deep-research/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 21,
+    "pushed_at": "2026-08-10T02:09:20Z",
+    "score": 57,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 21
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

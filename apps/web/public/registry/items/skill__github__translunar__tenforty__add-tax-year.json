@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/translunar/tenforty/add-tax-year",
+  "type": "skill",
+  "name": "add-tax-year",
+  "description": "Port tenforty to a new tax year (forward or backfill) — fetch assets, dual-transcribe params, ingest tax tables, diff/probe mappings, flip the completeness gate green. Use when asked to add/support/backfill a tax year.",
+  "author": "translunar",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/translunar/tenforty/blob/HEAD/.claude/skills/add-tax-year/SKILL.md",
+    "repo": "translunar/tenforty",
+    "path": ".claude/skills/add-tax-year/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-14T23:36:41Z",
+    "score": 48,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "生活",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

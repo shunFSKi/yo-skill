@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/forge-town/skills/i18n-best-practice",
+  "type": "skill",
+  "name": "i18n-best-practice",
+  "description": "Must follow when 创建或重构 i18n 国际化代码，确保遵循 react-i18next 最佳实践（初始化配置、翻译文件结构、组件用法、SSR 同步、语言切换与测试 Mock）。",
+  "author": "forge-town",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/forge-town/skills/blob/HEAD/skills/i18n-best-practice/SKILL.md",
+    "repo": "forge-town/skills",
+    "path": "skills/i18n-best-practice/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 7,
+    "pushed_at": "2026-05-30T07:16:44Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

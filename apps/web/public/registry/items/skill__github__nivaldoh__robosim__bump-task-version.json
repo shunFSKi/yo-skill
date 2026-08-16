@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/nivaldoh/robosim/bump-task-version",
+  "type": "skill",
+  "name": "bump-task-version",
+  "description": "Detect a benchmark-breaking change to a robosim task (reward, success predicate, horizon, or reset distribution) and bump its versioned id (name-vN), flagging results for re-baseline. Use when editing an existing task's spec. STUB — to be filled when a task is first revised.",
+  "author": "nivaldoh",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/nivaldoh/robosim/blob/HEAD/.claude/skills/bump-task-version/SKILL.md",
+    "repo": "nivaldoh/robosim",
+    "path": ".claude/skills/bump-task-version/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-15T19:04:55Z",
+    "score": 40,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

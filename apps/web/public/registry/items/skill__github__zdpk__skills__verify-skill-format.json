@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/zdpk/skills/verify-skill-format",
+  "type": "skill",
+  "name": "verify-skill-format",
+  "description": "Verify SKILL.md files have valid frontmatter and consistent naming.",
+  "author": "zdpk",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/zdpk/skills/blob/HEAD/.claude/skills/verify-skill-format/SKILL.md",
+    "repo": "zdpk/skills",
+    "path": ".claude/skills/verify-skill-format/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-26T10:48:41Z",
+    "score": 37,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

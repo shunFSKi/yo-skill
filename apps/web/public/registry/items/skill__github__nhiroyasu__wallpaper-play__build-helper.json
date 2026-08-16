@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/nhiroyasu/wallpaper-play/build-helper",
+  "type": "skill",
+  "name": "build-helper",
+  "description": "Build and test helper for wallpaper-play. Use when Codex needs to run local macOS app build or XCTest from terminal with xcodebuild and format logs via xcbeautify.",
+  "author": "nhiroyasu",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/nhiroyasu/wallpaper-play/blob/HEAD/.agents/skills/build-helper/SKILL.md",
+    "repo": "nhiroyasu/wallpaper-play",
+    "path": ".agents/skills/build-helper/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 147,
+    "pushed_at": "2026-05-26T14:21:02Z",
+    "score": 70,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 147
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": "# Wallpaper Play\n\n![icon](previews/icon.png)\n\nThe wallpaper engine for macOS.\n\n# App Store\n<a href=\"https://apps.apple.com/us/app/wallpaper-play/id1638457121\" alt=\"app store\">\n<img src=\"./previews/mac_app_store_badge.svg\" width=180 />\n</a>\n\n# Feature\n\nThis app allows you to set videos as macOS wallpaper.\n\n## Contents that can be set as wallpaper\n\n- local video ( .mp4, .mov etc...)\n- youtube\n- website\n- camera\n\n## Previews\n### Video\n![video-preview](previews/localvideo-preview.gif)\n\n### YouTube\n![video-preview](previews/youtube-preview.gif)\n\n### Website\n![video-preview](previews/webpage-preview.gif)\n",
+  "status": "curated"
+}

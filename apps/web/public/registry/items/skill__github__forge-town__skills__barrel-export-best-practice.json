@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/forge-town/skills/barrel-export-best-practice",
+  "type": "skill",
+  "name": "barrel-export-best-practice",
+  "description": "Must follow when 编写或审查 index.ts/index.js 桶导出文件，确保所有导出遵循只做 re-export、无业务逻辑、命名导出等规范。",
+  "author": "forge-town",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/forge-town/skills/blob/HEAD/skills/barrel-export-best-practice/SKILL.md",
+    "repo": "forge-town/skills",
+    "path": "skills/barrel-export-best-practice/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 7,
+    "pushed_at": "2026-05-30T07:16:44Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

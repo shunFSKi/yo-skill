@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/Ernest-NA/ExamGen/create-feature",
+  "type": "skill",
+  "name": "create-feature",
+  "description": "Use this skill when implementing a new feature end to end, including design review, code changes, tests, and documentation updates.",
+  "author": "Ernest-NA",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Ernest-NA/ExamGen/blob/HEAD/starter-kits/forgeseed/repo-template/.agents/skills/create-feature/SKILL.md",
+    "repo": "Ernest-NA/ExamGen",
+    "path": "starter-kits/forgeseed/repo-template/.agents/skills/create-feature/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-03-29T13:18:05Z",
+    "score": 35
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

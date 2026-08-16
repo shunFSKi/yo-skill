@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/ominous-one/Lotview/lotview-tenant-isolation-auditor",
+  "type": "skill",
+  "name": "lotview-tenant-isolation-auditor",
+  "description": "Audit and test Lotview tenant isolation across all dealership-scoped data.",
+  "author": "ominous-one",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ominous-one/Lotview/blob/HEAD/.codex/skills/lotview-tenant-isolation-auditor/SKILL.md",
+    "repo": "ominous-one/Lotview",
+    "path": ".codex/skills/lotview-tenant-isolation-auditor/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-01T21:02:24Z",
+    "score": 37,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

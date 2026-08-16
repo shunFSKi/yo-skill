@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/erniebrodeur/pilot/help",
+  "type": "skill",
+  "name": "help",
+  "description": "Display Pilot's canonical capability guide. Use when the user explicitly asks for Pilot help, invokes Pilot's help skill, asks what Pilot can do, or makes a generic help request while Pilot is already active for the current task. Do not claim generic help requests when Pilot is inactive.",
+  "author": "erniebrodeur",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/erniebrodeur/pilot/blob/HEAD/plugins/pilot/skills/help/SKILL.md",
+    "repo": "erniebrodeur/pilot",
+    "path": "plugins/pilot/skills/help/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-10T17:34:18Z",
+    "score": 45,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

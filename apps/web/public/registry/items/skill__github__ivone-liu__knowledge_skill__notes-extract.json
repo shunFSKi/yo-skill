@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/ivone-liu/knowledge_skill/notes-extract",
+  "type": "skill",
+  "name": "notes-extract",
+  "description": "Extract and synthesize insights from matching notes in the shared knowledge-memory-router archive. Use when the user invokes /notes-extract with a topic or wants a distilled view of today's notes.",
+  "author": "ivone-liu",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/ivone-liu/knowledge_skill/blob/HEAD/openclaw-kmr-commands/skills/notes-extract/SKILL.md",
+    "repo": "ivone-liu/knowledge_skill",
+    "path": "openclaw-kmr-commands/skills/notes-extract/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-04-03T12:59:47Z",
+    "score": 35
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

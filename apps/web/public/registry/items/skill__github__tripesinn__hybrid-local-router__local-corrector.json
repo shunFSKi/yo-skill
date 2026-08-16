@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/tripesinn/hybrid-local-router/local-corrector",
+  "type": "skill",
+  "name": "local-corrector",
+  "description": "Déléguer des corrections ou modifications de fichiers à l'IA locale (oMLX) et vérifier le résultat.",
+  "author": "tripesinn",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/tripesinn/hybrid-local-router/blob/HEAD/.agents/skills/local-corrector/SKILL.md",
+    "repo": "tripesinn/hybrid-local-router",
+    "path": ".agents/skills/local-corrector/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-01T15:35:13Z",
+    "score": 37,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

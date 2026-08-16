@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/yadam/dotfiles/deslop",
+  "type": "skill",
+  "name": "deslop",
+  "description": "Removes extra comments and other code smells that a human wouldn't add. Use when the user asks to \"deslop the code\"",
+  "author": "yadam",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/yadam/dotfiles/blob/HEAD/workspaces/work/symlinks/claude/.claude/skills/deslop/SKILL.md",
+    "repo": "yadam/dotfiles",
+    "path": "workspaces/work/symlinks/claude/.claude/skills/deslop/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-06-15T01:28:54Z",
+    "score": 40,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

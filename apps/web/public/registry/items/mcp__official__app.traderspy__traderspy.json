@@ -1,0 +1,61 @@
+{
+  "id": "mcp:official/app.traderspy/traderspy",
+  "type": "mcp",
+  "name": "TraderSpy",
+  "description": "AI crypto signals, smart money whale positions, live futures prices and indicators",
+  "author": "app.traderspy",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/target1m/traderspy-mcp",
+    "repo": "target1m/traderspy-mcp"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.traderspy.app/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": true,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-15T20:34:26.849732Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# TraderSpy MCP — Crypto Smart Money & AI Signals\n\nConnect Claude, Claude Code, ChatGPT or any MCP client to TraderSpy's live crypto futures data:\nAI signals, whale positioning, market data and your own account — with one URL.\n\n**Every tool is read-only.** The connector cannot place, close or modify an order, and it has no\nwithdrawal or transfer tool. It answers questions; you place your trades yourself.\n\n## Features\n\n- **AI Trading Signals** — Real-time AI-powered crypto futures signals with entry/exit targets, stop loss, and confidence scores\n- **Smart Money Tracking** — Track whale/elite trader positions across Binance, Hyperliquid, Bybit, and OKX\n- **Elite Leaderboard** — Top traders ranked by SmartScore (weighted: PnL, win rate, ROI, consistency)\n- **Live Positions** — See what top traders are trading right now\n- **Market Stats** — Aggregate market statistics across tracked exchanges\n- **Market Data** — Real-time prices, OHLCV candles, and 13 technical indicators (RSI, MACD, EMA, Bollinger Bands, ATR, ADX, Stochastic, OBV, VWAP, CCI, MFI, Williams %R, SMA)\n- **Your Own Account** — Read your Hyperliquid balance, open positions and unrealized PnL (personal key required)\n- **Interactive Views** — In hosts that support MCP Apps, `get_signals` and `get_signal_details` render signal cards and charts instead of plain text\n\n## Quick Start\n\n### Claude Code\n\n**Option 1: Add MCP server directly**\n\n```bash\nclaude mcp add --transport http traderspy https://mcp.traderspy.app/mcp\n```\n\n**Option 2: Install as plugin**\n\nInside Claude Code, run:\n```\n/plugin marketplace add target1m/traderspy-mcp\n/plugin install traderspy@traderspy-mcp\n```\n\n### ChatGPT\n\n1. Go to [ChatGPT](https://chatgpt.com) → Settings → Connected Apps\n2. Click **\"Add MCP Server\"**\n3. Enter the server URL:\n   ```\n   https://mcp.traderspy.app/mcp\n   ```\n4. Complete the OAuth login flow to connect your TraderSpy account\n\n### Cursor\n\nAdd TraderSpy to your Cursor MCP config (`.cursor/mcp.json`):\n\n```json\n{\n  \"mcpServers\": {\n    \"traderspy\": {\n      \"type\": \"http\",\n      \"url\": \"https://mcp.traderspy.app/mcp\"\n    }\n  }\n}\n```\n\n### Windsurf / Other MCP Clients\n\nAdd the following to your MCP configuration:\n\n```json\n{\n  \"traderspy\": {\n    \"type\": \"http\",\n    \"url\": \"https://mcp.traderspy.app/mcp\"\n  }\n}\n```\n\n## Authentication\n\nTwo ways to connect, both tied to your TraderSpy account:\n\n- **Personal URL (recommended)** — generate it at [traderspy.app/mcp](https://traderspy.app/mcp) or in\n  Settings. The key is embedded in the URL (`https://mcp.traderspy.app/mcp?token=mcp_...`), so hosts\n  that ask for authentication can be left on \"None\". Shown once, revocable any time.\n- **OAuth** — supported for clients that drive the OAuth flow themselves.\n\nTreat the personal URL like a password: it grants read access to your account data. If it leaks,\nrevoke it on the same page and generate a new one.\n\n| Plan | Daily Limit | Data |\n|------|------------|------|\n| Free | 5 calls/day | Real-time |\n| Pro | 100 calls/day | Real-time |\n\nDon't have an account? [Sign up for free](https://traderspy.app) to get started.\n\n## Available Tools\n\n### Signals\n\n| Tool | Description |\n|------|-------------|\n| `get_signals` | Recent AI trading signals with filtering |\n| `get_signal_details` | Full signal details with AI review |\n| `get_signal_stats` | Signal performance statistics |\n\n### Smart Money\n\n| Tool | Description |\n|------|-------------|\n| `get_top_traders` | Ranked traders by exchange and metrics |\n| `get_elite_leaderboard` | Top 10 by SmartScore |\n| `get_trader_profile` | Trader profile with metrics and positions |\n| `get_trader_position_history` | Trader's closed trade history |\n| `get_positions` | Live and historical positions |\n| `get_market_stats` | Aggregate market statistics |\n| `get_exchanges` | List of tracked exchanges |\n\n### Market Data\n\n| Tool | Description |\n|------|-------------|\n| `get_price` | Real-time price, 24h high/low, volume, and change% for one or more symbols |\n| `get_candles` | OHLCV candles (1m, 5m, 15m, 1h, 4h, 1d) for charting and analysis |\n| `get_technical_indicators` | Compute RSI, MACD, EMA, SMA, Bollinger, ATR, ADX, Stochastic, OBV, VWAP, CCI, MFI, Williams %R |\n| `get_tracked_symbols` | List all crypto futures symbols with real-time data available |\n\n### Your Account\n\n| Tool | Description |\n|------|-------------|\n| `get_my_account` | Your Hyperliquid balance, open positions and unrealized PnL (read-only, personal key required) |\n\n## Example Prompts\n\n- \"What are the top crypto signals right now?\"\n- \"Show me the elite trader leaderboard\"\n- \"What are whales buying on Binance?\"\n- \"Get the signal performance stats for the last 24 hours\"\n- \"Show me BTC positions from top traders\"\n- \"Who are the most profitable traders on Hyperliquid this week?\"\n- \"What's the overall market sentiment — are more traders long or short on BTC?\"\n- \"What's the current price of BTC and ETH?\"\n- \"Show me the last 100 1h candles for SOLUSDT\"\n- \"Compute RSI and MACD for BTCUSDT on the 4h timeframe\"\n- \"Which symbols does TraderSpy track?\"\n- \"Show my TraderSpy account — balance, open positions and PnL\"\n\n## Links\n\n- [TraderSpy](https://traderspy.app) — Main platform\n- [GitHub](https://github.com/target1m/traderspy-mcp) — Plugin source code\n- [Privacy Policy](https://traderspy.app/privacy-policy) — How your data is handled\n- [Support](mailto:support@traderspy.app) — Contact us\n",
+  "status": "curated"
+}

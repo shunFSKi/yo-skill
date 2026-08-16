@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/n-ima/dagram/stack-conventions",
+  "type": "skill",
+  "name": "stack-conventions",
+  "description": "Dagram プロジェクトの技術スタック規約(TypeScript/React/React Flow/Zustand/zundo/Zod/Hono/Vite/Vitest/Playwright)。実装エージェント・task-workerがコードを書く前に読む、ディレクトリ構成・状態管理・スキーマ単一定義・セキュリティ不変条件の規約集。",
+  "author": "n-ima",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/n-ima/dagram/blob/HEAD/.claude/skills/stack-conventions/SKILL.md",
+    "repo": "n-ima/dagram",
+    "path": ".claude/skills/stack-conventions/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-12T12:23:33Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

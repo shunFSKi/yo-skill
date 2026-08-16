@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/josephjang/TarkovHelper/commit",
+  "type": "skill",
+  "name": "commit",
+  "description": "Create one or more repository commits by grouping working-tree changes by purpose, running the required build, staging explicit paths, and writing conventional messages. Use only when the user explicitly asks Codex to commit changes or invokes $commit; do not use for ordinary edits, reviews, or status requests.",
+  "author": "josephjang",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/josephjang/TarkovHelper/blob/HEAD/.agents/skills/commit/SKILL.md",
+    "repo": "josephjang/TarkovHelper",
+    "path": ".agents/skills/commit/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-16T02:35:36Z",
+    "score": 48,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

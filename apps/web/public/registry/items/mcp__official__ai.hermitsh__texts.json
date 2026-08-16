@@ -1,7 +1,7 @@
 {
   "id": "mcp:official/ai.hermitsh/texts",
   "type": "mcp",
-  "name": "texts",
+  "name": "Hermitsh Texts",
   "description": "Complete classical & world literature — search + cite exact passages, facing sources, 50+ languages.",
   "author": "ai.hermitsh",
   "source": {
@@ -11,13 +11,17 @@
   },
   "license": null,
   "install": {
-    "kind": "remote",
-    "remote_url": "https://hermitsh.ai/mcp"
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@hermitsh/texts-mcp"
+    ]
   },
   "quality": {
     "stars": null,
-    "pushed_at": "2026-07-05T01:08:15.235339Z",
-    "score": 40
+    "pushed_at": "2026-08-16T03:18:42.490589Z",
+    "score": 45
   },
   "security": {
     "score": 100,

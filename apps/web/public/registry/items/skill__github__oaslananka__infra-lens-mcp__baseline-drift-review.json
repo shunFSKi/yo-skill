@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/oaslananka/infra-lens-mcp/baseline-drift-review",
+  "type": "skill",
+  "name": "baseline-drift-review",
+  "description": "Baseline drift review workflow for infra-lens-mcp that compares current infrastructure state to recorded baselines and triages operational risk.",
+  "author": "oaslananka",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/oaslananka/infra-lens-mcp/blob/HEAD/.opencode/skills/baseline-drift-review/SKILL.md",
+    "repo": "oaslananka/infra-lens-mcp",
+    "path": ".opencode/skills/baseline-drift-review/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-07-22T17:40:07Z",
+    "score": 49,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 2
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

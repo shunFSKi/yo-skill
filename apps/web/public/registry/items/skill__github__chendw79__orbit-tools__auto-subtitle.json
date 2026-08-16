@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/chendw79/orbit-tools/auto-subtitle",
+  "type": "skill",
+  "name": "auto-subtitle",
+  "description": "视频自动字幕生成。从视频音频提取语音 → SRT字幕文件 → 嵌入到视频中。支持中文/英文/日文。 触发：\"加字幕\"、\"生成字幕\"、\"语音转文字\"、\"SRT\"",
+  "author": "chendw79",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/chendw79/orbit-tools/blob/HEAD/skills/auto-subtitle.skill/SKILL.md",
+    "repo": "chendw79/orbit-tools",
+    "path": "skills/auto-subtitle.skill/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-05-12T09:49:24Z",
+    "score": 32,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

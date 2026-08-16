@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/RB-chrismandich/Manifest/help",
+  "type": "skill",
+  "name": "help",
+  "description": "Search the generated offline catalog of all Manifest domain commands by name, category, or description without scanning sibling installed plugins.",
+  "author": "RB-chrismandich",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/RB-chrismandich/Manifest/blob/HEAD/plugins/manifest-workspace/skills/help/SKILL.md",
+    "repo": "RB-chrismandich/Manifest",
+    "path": "plugins/manifest-workspace/skills/help/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-13T21:29:52Z",
+    "score": 48
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

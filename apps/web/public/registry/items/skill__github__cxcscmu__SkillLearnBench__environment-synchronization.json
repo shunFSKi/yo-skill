@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/cxcscmu/SkillLearnBench/environment-synchronization",
+  "type": "skill",
+  "name": "environment_synchronization",
+  "description": "Synchronizes the Python environment with specific dependency versions defined in project files to ensure numerical reproducibility.",
+  "author": "cxcscmu",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/cxcscmu/SkillLearnBench/blob/HEAD/skills/b3-teacher-feedback-gemini-3.1-flash-lite-preview/nlp-paper-reproduction/run2_environment_synchronization/SKILL.md",
+    "repo": "cxcscmu/SkillLearnBench",
+    "path": "skills/b3-teacher-feedback-gemini-3.1-flash-lite-preview/nlp-paper-reproduction/run2_environment_synchronization/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 77,
+    "pushed_at": "2026-07-09T20:57:02Z",
+    "score": 57
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

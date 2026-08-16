@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/josefaidt/dotfiles/dotfiles",
+  "type": "skill",
+  "name": "dotfiles",
+  "description": "Fix a neovim or dotfiles configuration issue. Adds a task to ~/github.com/josefaidt/dotfiles/notes.md and implements the fix. Use when you notice a neovim issue and want to fix it in your dotfiles.",
+  "author": "josefaidt",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/josefaidt/dotfiles/blob/HEAD/claude/.claude/skills/dotfiles/SKILL.md",
+    "repo": "josefaidt/dotfiles",
+    "path": "claude/.claude/skills/dotfiles/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-08-15T18:06:23Z",
+    "score": 48,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

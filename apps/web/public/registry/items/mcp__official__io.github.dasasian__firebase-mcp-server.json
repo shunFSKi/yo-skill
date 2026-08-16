@@ -1,0 +1,58 @@
+{
+  "id": "mcp:official/io.github.dasasian/firebase-mcp-server",
+  "type": "mcp",
+  "name": "firebase-mcp-server",
+  "description": "MCP server for Firebase — Firestore, Storage, Auth, and Cloud Logging, with schema validation.",
+  "author": "io.github.dasasian",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/dasasian/firebase-mcp-server",
+    "repo": "dasasian/firebase-mcp-server"
+  },
+  "license": null,
+  "install": {
+    "kind": "npm",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@dasasian/firebase-mcp-server"
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-16T03:52:48.189891Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": "# Firebase MCP Server\n\n<p>\n  <a href=\"https://www.npmjs.com/package/@dasasian/firebase-mcp-server\"><img alt=\"npm\" src=\"https://img.shields.io/npm/v/@dasasian/firebase-mcp-server?style=flat-square&color=235a9b\"></a>\n  <a href=\"LICENSE\"><img alt=\"License: MIT\" src=\"https://img.shields.io/badge/license-MIT-235a9b?style=flat-square\"></a>\n  <a href=\"https://modelcontextprotocol.io\"><img alt=\"Model Context Protocol server\" src=\"https://img.shields.io/badge/MCP-server-235a9b?style=flat-square\"></a>\n  <img alt=\"Node 18+\" src=\"https://img.shields.io/badge/node-18%2B-5fa04e?style=flat-square\">\n</p>\n\nGeneral-purpose Model Context Protocol (MCP) server for Firebase (Firestore, Storage, Auth, Functions Logging) with schema-driven validation and context-efficient tools.\n\n## Features\n\n- **@ Mention Support** - Reference Firestore documents with `@firebase:firestore://users/user-123`\n- **Smart Autocomplete** - MRU cache tracks accessed documents for quick re-reference\n- **Auto-Discovery** - Shows both schema-based AND discovered collections\n- **Path-based schemas** - Follows Firebase `firestore.rules` convention\n- **Schema evolution** - Field status metadata (experimental → official → legacy)\n- **Hot reload** - File watching, no restart needed when schemas change\n- **Flexible validation** - Three modes: strict, warn (default), permissive\n- **Works without schemas** - Discovery mode for exploring unknown databases\n- **Context-efficient tools** - 99% token reduction for large datasets\n- **Index-aware queries** - Validates queries against `firestore.indexes.json`\n- **Functions logging** - SQL-like queries for Cloud Functions logs with aggregations and label filtering\n\n## Install\n\nAdd it to your MCP client (e.g. Claude Code) — runs via `npx`, no global install needed:\n\n```jsonc\n{\n  \"mcpServers\": {\n    \"firebase\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@dasasian/firebase-mcp-server\", \"start\", \"./firestore-schemas.json\"]\n    }\n  }\n}\n```\n\n`start` takes an optional schema config path (default `./firestore-schemas.json`) and an optional indexes path (default `./firestore.indexes.json`) — see [Schema Format](#schema-format). Firebase auth uses Application Default Credentials.\n\nOr install the CLI globally:\n\n```bash\nnpm install -g @dasasian/firebase-mcp-server\nfirebase-mcp start ./firestore-schemas.json\n```\n\n## Development (from source)\n\n```bash\nnpm install\nnpm run build\nnpm run cli -- start --config ./examples/basic/firestore-schemas.json\n```\n\n## @ Mention Support (Resources)\n\nReference Firestore documents directly in Claude Code:\n\n```\nWhat's the email for @firebase:firestore://users/user-123?\nShow me all posts: @firebase:firestore://posts/*\n```\n\n### How It Works\n\nWhen you type `@firebase` in Claude Code:\n\n**Shows schema-based collections** (with validation):\n- 📋 Users (User account documents)\n- 📋 Posts (Blog post documents)\n- 📋 Comments (Comments on posts)\n\n**Plus auto-discovered collections** (no schema):\n- 🔍 analytics\n- 🔍 sessions\n- 🔍 audit_logs\n\n### Configuration\n\n```bash\n# Enable/disable auto-discovery (default: true)\nexport FIRESTORE_AUTO_DISCOVER=true\n\n# Cache duration in seconds (default: 300 = 5 minutes)\nexport FIRESTORE_DISCOVERY_CACHE_TTL=300\n```\n\n**Auto-discovery cost**: ~$0.0003/day (negligible)\n\n## Tools\n\n### Core Tools (6)\n- `firestore_read` - Read single document\n- `firestore_export` - Batch export collections\n- `firestore_validate` - Schema validation\n- `firestore_import` - Import with dry-run\n- `firestore_update` - Safe field updates\n- `firestore_query` - Index-aware queries\n\n### Context-Efficient Tools (4)\n- `firestore_count` - Count without fetching documents (99.96% savings)\n- `firestore_select` - Field projection (90% savings)\n- `firestore_sum` - Aggregate without fetching (99.91% savings)\n- `firestore_stats` - Collection overview (99.3% savings)\n\n### Firebase Functions Tools (1)\n- `firebase_functions_logs` - Query Cloud Functions logs with SQL-like syntax\n\n**Example queries:**\n```json\n// Discover what functions exist\n{\"distinct\": \"functionName\"}\n\n// Show recent errors\n{\"where\": [{\"field\": \"severity\", \"operator\": \"==\", \"value\": \"ERROR\"}], \"limit\": 20}\n\n// Top error patterns with counts\n{\"groupBy\": [\"textPayload\"], \"aggregates\": [{\"field\": \"*\", \"operation\": \"count\", \"alias\": \"count\"}], \"where\": [{\"field\": \"severity\", \"operator\": \"==\", \"value\": \"ERROR\"}], \"orderBy\": [{\"field\": \"count\", \"direction\": \"desc\"}], \"limit\": 10}\n\n// Filter by custom labels (e.g., user, environment)\n{\"where\": [{\"field\": \"labels.user_id\", \"operator\": \"==\", \"value\": \"123\"}]}\n```\n\n## Schema Format\n\nSchemas follow Firebase's path-based convention:\n\n```json\n{\n  \"schemas\": {\n    \"/organizations/{organizationId}\": {\n      \"description\": \"Organization documents\",\n      \"schema\": {\n        \"type\": \"object\",\n        \"required\": [\"id\", \"name\"],\n        \"properties\": {\n          \"id\": { \"type\": \"string\" },\n          \"name\": { \"type\": \"string\" }\n        }\n      }\n    },\n    \"/organizations/{organizationId}/products/{productId}\": {\n      \"description\": \"Product catalog\",\n      \"schema\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"name\": { \"type\": \"string\" },\n          \"category\": {\n            \"type\": \"string\",\n            \"x-status\": \"legacy\",\n            \"x-replacedBy\": \"productType\"\n          },\n          \"productType\": {\n            \"type\": \"string\",\n            \"x-status\": \"experimental\"\n          }\n        }\n      },\n      \"timestampFields\": [\"createdAt\", \"updatedAt\"]\n    }\n  }\n}\n```\n\n## Documentation\n\n- [Installation Guide](docs/installation.md)\n- [@ Mention Support Guide](docs/resources-guide.md) - How to use `@firebase:firestore://` references\n- [Configuration Reference](docs/configuration.md)\n- [Schema Creation Guide](docs/schema-guide.md)\n- [Functions Logging Guide](docs/logging-guide.md) - Query Cloud Functions logs with SQL-like syntax, aggregations, and custom labels\n\n## License\n\nMIT\n",
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/vsetchinfc/agistra.dev/assumptions-audit",
+  "type": "skill",
+  "name": "assumptions-audit",
+  "description": "Use when: assumptions audit, audit assumptions, check for hidden assumptions, plan/ticket has ambiguous scope edges, pre-flight before finalizing a ticket, unstated assumptions, or 'what am I assuming'. Surfaces unstated assumptions, ambiguous scope edges, and untested preconditions in a finished plan/ticket/ADR before it is handed to Builder. Optional pass — Architect judges when to apply it; not a mandatory gate on every ticket.",
+  "author": "vsetchinfc",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/vsetchinfc/agistra.dev/blob/HEAD/.claude/skills/assumptions-audit/SKILL.md",
+    "repo": "vsetchinfc/agistra.dev",
+    "path": ".claude/skills/assumptions-audit/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 3,
+    "pushed_at": "2026-08-12T07:32:57Z",
+    "score": 50,
+    "star_history": [
+      {
+        "d": "2026-08-15",
+        "s": 3
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

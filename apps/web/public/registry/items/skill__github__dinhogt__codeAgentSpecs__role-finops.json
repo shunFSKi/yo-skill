@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/dinhogt/codeAgentSpecs/role-finops",
+  "type": "skill",
+  "name": "role-finops",
+  "description": "Pipeline stage finops — minimizes implementation cost after cloud selection. Use at stage-finops only. Do not use for cloud provider choice, sales strategy, SaaS approach, or profitability. Follow spec-skills-lib/roles/finops/spec.md and roles/_boundaries.md.",
+  "author": "dinhogt",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/dinhogt/codeAgentSpecs/blob/HEAD/.agents/skills/role-finops/SKILL.md",
+    "repo": "dinhogt/codeAgentSpecs",
+    "path": ".agents/skills/role-finops/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-07-06T23:18:25Z",
+    "score": 40
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": null,
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

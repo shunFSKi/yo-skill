@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/nestix6/Claude-skills/commit-message",
+  "type": "skill",
+  "name": "commit-message",
+  "description": "Writes commit messages. Use when creating a commit, writing a commit message, or when the user asks to summarize changes for a commit.",
+  "author": "nestix6",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/nestix6/Claude-skills/blob/HEAD/commit-message/SKILL.md",
+    "repo": "nestix6/Claude-skills",
+    "path": "commit-message/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-04T13:48:56Z",
+    "score": 45,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 0
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

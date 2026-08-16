@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/kyobankatu/GenshinImpactDPSCalculator/benchmark-genshin-optimization",
+  "type": "skill",
+  "name": "benchmark-genshin-optimization",
+  "description": "Validate and benchmark artifact optimization, ER convergence, rotation search, Java rollout throughput, Python client throughput, or PPO training performance with matched correctness and reproducibility controls. Use for optimizer changes, performance claims, profiling, scaling, or regression thresholds.",
+  "author": "kyobankatu",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/kyobankatu/GenshinImpactDPSCalculator/blob/HEAD/.claude/skills/benchmark-genshin-optimization/SKILL.md",
+    "repo": "kyobankatu/GenshinImpactDPSCalculator",
+    "path": ".claude/skills/benchmark-genshin-optimization/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-07T08:05:27Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

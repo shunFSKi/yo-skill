@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/noticesfromchat/macos-app-digest/init",
+  "type": "skill",
+  "name": "init",
+  "description": "Sets up a project for impeccable. Runs a multi-round discovery interview when context is missing and writes PRODUCT.md (strategic: users, brand, principles); offers DESIGN.md (visual: colors, typography, components) when code exists; pre-configures live mode; then recommends the best commands to run next. Every other command reads these files before doing work. Use once per project.",
+  "author": "noticesfromchat",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/noticesfromchat/macos-app-digest/blob/HEAD/.agents/skills/init/SKILL.md",
+    "repo": "noticesfromchat/macos-app-digest",
+    "path": ".agents/skills/init/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-14T16:17:14Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

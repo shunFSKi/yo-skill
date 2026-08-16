@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/goodwind-cz/aai/aai-interrogate",
+  "type": "skill",
+  "name": "aai-interrogate",
+  "description": "Use optionally at spec freeze (or when a plan feels underdetermined) to walk open decisions one question at a time — every question ships a recommended answer, codebase-resolvable ones are inferred silently, and each decision is appended to docs/ai/decisions.jsonl. Advisory only — never blocks.",
+  "author": "goodwind-cz",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/goodwind-cz/aai/blob/HEAD/.agents/skills/aai-interrogate/SKILL.md",
+    "repo": "goodwind-cz/aai",
+    "path": ".agents/skills/aai-interrogate/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-08-14T09:20:53Z",
+    "score": 45
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

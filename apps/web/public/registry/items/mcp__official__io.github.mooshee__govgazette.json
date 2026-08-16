@@ -17,7 +17,7 @@
   "quality": {
     "stars": null,
     "pushed_at": "2026-08-15T04:17:14.79755Z",
-    "score": 52
+    "score": 42
   },
   "security": {
     "score": 100,
@@ -49,6 +49,6 @@
     "category": "写作",
     "featured": false
   },
-  "readme": "# GovGazette MCP Server\n\n<!-- mcp-name: io.github.mooshee/govgazette -->\n\nGovGazette is a hosted MCP server for U.S. federal contract research and pursuit monitoring. Version 1.2.0 exposes 22 tools.\n\nConnect with Streamable HTTP:\n\n```text\nhttps://govgazette.com/mcp\n```\n\nSeventeen research tools work without an account:\n\n- `search_opportunities`\n- `resolve_identifier`\n- `lookup_reference`\n- `get_opportunity`\n- `get_opportunity_comps`\n- `search_awards`\n- `get_award`\n- `search_vendors`\n- `get_vendor`\n- `get_vendor_awards`\n- `get_opportunity_changes`\n- `search_exclusions`\n- `get_opportunity_extracted`\n- `search_extracted_facts`\n- `get_opportunity_documents`\n- `find_recompetes`\n- `get_market_summary`\n\nOAuth 2.1 with PKCE unlocks five account-scoped monitoring tools:\n\n- `get_watch_status`\n- `save_opportunity_search`\n- `update_saved_search`\n- `track_opportunity`\n- `update_tracked_opportunity`\n\nThe monitoring tools can create, update, and disable saved searches and tracked opportunities. They cannot delete records, change billing, or access another account.\n\n## Links\n\n- [Agent documentation](https://govgazette.com/agents?utm_source=github_mcp_repo&utm_medium=repository&utm_campaign=govgazette_agent_launch_2026_08)\n- [OpenAPI document](https://govgazette.com/api/agent/openapi.json)\n- [MCP protected resource metadata](https://govgazette.com/.well-known/oauth-protected-resource/mcp)\n- [Official MCP Registry listing](https://registry.modelcontextprotocol.io/?q=io.github.mooshee%2Fgovgazette)\n\nThis repository contains public discovery metadata for the hosted service. It does not contain the GovGazette application source.\n",
+  "readme": null,
   "status": "curated"
 }

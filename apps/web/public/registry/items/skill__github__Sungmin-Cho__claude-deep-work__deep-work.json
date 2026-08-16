@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/Sungmin-Cho/claude-deep-work/deep-work",
+  "type": "skill",
+  "name": "deep-work",
+  "description": "Primary Evidence-Driven Development entry point. Triggers on /deep-work \"task\", Skill({ skill: \"deep-work:deep-work\", args: \"task\" }), $deep-work:deep-work \"task\", or a request to start a new deep-work session. Compatibility alias for deep-work-orchestrator.",
+  "author": "Sungmin-Cho",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/Sungmin-Cho/claude-deep-work/blob/HEAD/skills/deep-work/SKILL.md",
+    "repo": "Sungmin-Cho/claude-deep-work",
+    "path": "skills/deep-work/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 10,
+    "pushed_at": "2026-08-13T14:14:44Z",
+    "score": 54,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 10
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

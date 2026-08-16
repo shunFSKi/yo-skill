@@ -1,0 +1,54 @@
+{
+  "id": "skill:github/bermingham85/warp-config/self-learning",
+  "type": "skill",
+  "name": "self-learning",
+  "description": "Post-task assessment that identifies opportunities to create new rules, skills, or index entries based on what was learned during execution.",
+  "author": "bermingham85",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/bermingham85/warp-config/blob/HEAD/claude-skills/self-learning/SKILL.md",
+    "repo": "bermingham85/warp-config",
+    "path": "claude-skills/self-learning/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 0,
+    "pushed_at": "2026-02-12T17:43:11Z",
+    "score": 30
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "办公",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/xyppyx/AgenticBI/analyze-sentiment",
+  "type": "skill",
+  "name": "analyze-sentiment",
+  "description": "Analyze Olist review sentiment using model-level NLP scores over Portuguese review text. Use for negative review analysis, customer satisfaction, bad-review categories, seller review diagnostics, and structured review insight for BI decisions. For Top 10 bad review categories and reasons, call this skill with min_score=1 and max_score=2 after or alongside extract_keywords. The skill reads review_sentiment_scores and can call the configured LLM to incrementally fill missing sentiment rows for the current business slice. Do NOT probe schema with SHOW, information_schema, or exploratory sql_query.",
+  "author": "xyppyx",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/xyppyx/AgenticBI/blob/HEAD/bi-agent-swarm/.claude/skills/analyze_sentiment/SKILL.md",
+    "repo": "xyppyx/AgenticBI",
+    "path": "bi-agent-swarm/.claude/skills/analyze_sentiment/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 1,
+    "pushed_at": "2026-06-15T05:22:12Z",
+    "score": 43,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 1
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "编程",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

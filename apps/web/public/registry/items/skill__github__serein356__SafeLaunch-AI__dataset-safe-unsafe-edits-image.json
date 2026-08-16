@@ -1,0 +1,60 @@
+{
+  "id": "skill:github/serein356/SafeLaunch-AI/dataset-safe-unsafe-edits-image",
+  "type": "skill",
+  "name": "dataset-safe-unsafe-edits-image",
+  "description": "Convert paired safe and unsafe counterfactual images from Advait-s06/safe-vs-unsafe-image-edits into unified image-safety JSONL. Use for small image Guard smoke tests and paired regression analysis.",
+  "author": "serein356",
+  "source": {
+    "registry": "github-search",
+    "url": "https://github.com/serein356/SafeLaunch-AI/blob/HEAD/.codex_image/skills/dataset-safe-unsafe-edits-image/SKILL.md",
+    "repo": "serein356/SafeLaunch-AI",
+    "path": ".codex_image/skills/dataset-safe-unsafe-edits-image/SKILL.md"
+  },
+  "license": null,
+  "install": {
+    "kind": "skill-dir"
+  },
+  "quality": {
+    "stars": 2,
+    "pushed_at": "2026-08-09T12:23:45Z",
+    "score": 49,
+    "star_history": [
+      {
+        "d": "2026-08-16",
+        "s": 2
+      }
+    ]
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "设计",
+    "featured": false
+  },
+  "readme": null,
+  "status": "curated"
+}

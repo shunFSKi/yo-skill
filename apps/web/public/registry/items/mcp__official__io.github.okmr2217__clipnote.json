@@ -1,0 +1,61 @@
+{
+  "id": "mcp:official/io.github.okmr2217/clipnote",
+  "type": "mcp",
+  "name": "Clipnote",
+  "description": "AIとのやり取りで生成したHTML/Markdown/プレーンテキストのクリップを一覧取得・参照・作成・更新できるMCPサーバー。",
+  "author": "io.github.okmr2217",
+  "source": {
+    "registry": "mcp-official",
+    "url": "https://github.com/okmr2217/clipnote",
+    "repo": "okmr2217/clipnote"
+  },
+  "license": null,
+  "install": {
+    "kind": "remote",
+    "remote_url": "https://mcp.clipnote.paritto.dev/mcp",
+    "env": [
+      {
+        "name": "Authorization",
+        "required": false,
+        "secret": true
+      }
+    ]
+  },
+  "quality": {
+    "stars": null,
+    "pushed_at": "2026-08-15T19:34:29.074724Z",
+    "score": 52
+  },
+  "security": {
+    "score": 100,
+    "scanned": true,
+    "checks": [
+      {
+        "name": "描述层注入",
+        "pass": true
+      },
+      {
+        "name": "敏感路径",
+        "pass": true
+      },
+      {
+        "name": "外部渗出",
+        "pass": true
+      },
+      {
+        "name": "危险执行",
+        "pass": true
+      },
+      {
+        "name": "配置风险",
+        "pass": true
+      }
+    ]
+  },
+  "tags": {
+    "category": "写作",
+    "featured": false
+  },
+  "readme": "# Clipnote\n\nAIとのやり取りで生成したHTML/Markdown/プレーンテキストを保存・公開管理するツール。テキストを貼り付けるだけで保存・URL共有できるほか、MCP（Model Context Protocol）でClaudeと直接つなぎ、会話からそのままクリップを作成・更新できます。\n\n## URL\n\n- Web（管理画面・LP・公開ページ外枠）: https://clipnote.paritto.dev\n- コンテンツ配信（iframe内、直接アクセス不要）: https://content.clipnote.paritto.dev\n- MCPサーバー: https://mcp.clipnote.paritto.dev\n\n## 主な機能\n\n- **クリップの保存・公開**: AIが生成したHTML/Markdown/プレーンテキストを貼り付けるかファイルをドロップして保存。Private/Publicを切り替えて共有用URLを発行できます。\n- **コレクション**: 複数のクリップをまとめて、ひとつのURLで公開できます。\n- **バージョン履歴**: 上書き保存しても過去の内容はいつでも復元・ダウンロードできます。\n- **MCP連携**: Claude Desktop / Claude Code / claude.aiから、クリップの一覧取得・取得・作成・更新をMCP経由で行えます（詳細は[apps/mcp](./apps/mcp)）。\n  - 接続方法は2種類: 管理画面（`/admin/api-keys`）で発行するAPIキー（Claude Desktop / Claude Code向け）、またはOAuth 2.1 + Dynamic Client Registration（claude.aiのカスタムコネクタ向け）。\n  - 連携中のアプリはいつでも同じ画面から確認・失効できます。\n\n## 構成\n\npnpm workspace + turborepoによるモノレポです。\n\n- `apps/web` — 管理画面・LP・公開ページ・OAuth認可サーバー（Next.js、Cloudflare Workers上で稼働）\n- `apps/content` — クリップ公開用の軽量API（Hono）\n- `apps/mcp` — MCPサーバー（Hono、Cloudflare Workers上で稼働）。APIキー認証とOAuth（JWT/JWKS検証）の両方に対応し、`list_pages` / `get_page` / `upload_page` / `update_page` の4ツールを提供\n- `packages/db` — D1スキーマ・マイグレーション（Drizzle）\n\n## クイックスタート\n\n```bash\npnpm install\ncp apps/web/.env.example apps/web/.env.local\ncp apps/content/.dev.vars.example apps/content/.dev.vars\npnpm --filter @clipnote/db db:migrate:local\npnpm dev\n```\n\n環境変数の値の設定方法・開発サーバー・デプロイ手順の詳細は [docs/development.md](./docs/development.md) を参照してください。\n\n## ドキュメント\n\n- 要件定義: [docs/requirements.md](./docs/requirements.md)\n- 詳細設計: [docs/design.md](./docs/design.md)\n- 開発・デプロイ手順: [docs/development.md](./docs/development.md)\n",
+  "status": "curated"
+}
