@@ -1,7 +1,10 @@
-# 市场数据定时同步：跑管线 → 有变化才提交本仓库（官网自动重建）
-# → 配了数据仓库则同步推送（桌面端海外分发源）。
+# 市场数据定时同步：跑管线 → 同步推送数据仓库（桌面端分发源）→ 触发 Gitee 镜像。
 #
-# 开箱状态：只跑前两步（本仓库数据刷新）即生效。
+# 2026-08-16 起不再回写本仓库：官网源码已转内网私有仓（apps/web 从本仓剔除），
+# 本仓不再持有 registry 数据副本；桌面端数据源 = 数据仓 raw URL（GitHub/Gitee/jsDelivr）。
+# 私有仓里 apps/web/public/registry 的构建期副本靠本地 pnpm fetch:registry 刷新
+# （GitHub Actions 跑在公网，够不到内网 Gitea，回写私有仓做不了）。
+#
 # 接入数据仓库：GitHub 仓库 Settings → Secrets and variables → Actions 里配：
 #   Variables: REGISTRY_REPO（本项目为 shunFSKi/yo-skill-registry）
 #   Secrets:   REGISTRY_TOKEN（对数据仓有写权限的 PAT）
@@ -20,7 +23,7 @@ on:
   workflow_dispatch: # 手动触发
 
 permissions:
-  contents: write # 回推本仓库用
+  contents: read # 本仓只读；数据仓推送走 REGISTRY_TOKEN
 
 jobs:
   sync:
@@ -37,34 +40,15 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
-      - name: 跑管线刷新 apps/web/public/registry
+      - name: 跑管线产出 registry 数据
         # 直接 node 跑，不走 pnpm 脚本：pnpm 11 在 CI 会先 "Recreating node_modules"
         #（verify-deps 重建）然后空跑退出 0，脚本根本没执行（2026-08-14 实测踩坑）。
         # 依赖解析不受影响：pnpm install 后包内 node_modules 软链已就位。
+        # 产物落在默认 OUT_DIR（apps/web/public/registry/，本仓已不跟踪，仅作中转）
         run: node tools/registry-pipeline/src/index.ts
         env:
           # GitHub 全量采集用（代码搜索 API 必须登录）；未配置则自动跳过该源
           GITHUB_TOKEN: ${{ secrets.REGISTRY_TOKEN }}
-
-      - name: 有变化才提交本仓库
-        run: |
-          if [ -z "$(git status --porcelain apps/web/public/registry)" ]; then
-            echo "数据无变化，不提交"
-            exit 0
-          fi
-          git config user.name "yo-skill-bot"
-          git config user.email "yo-skill-bot@users.noreply.github.com"
-          git add apps/web/public/registry
-          git commit -s -m "chore(registry): 定时刷新市场数据"
-          # 管线要跑约 2 小时，期间人工推送会抢占 main（2026-08-14 实测撞车：
-          # 数据 commit 已生成但 push 被 fetch first 拒绝，后续数据仓/Gitee 步全部跳过）。
-          # 推送前先 rebase 到最新 main，冲突概率极低（人工改动几乎不碰 registry 目录）。
-          for i in 1 2 3; do
-            git pull --rebase origin main && git push && exit 0
-            echo "push 失败，第 $i 次重试"
-            sleep 5
-          done
-          exit 1
 
       - name: 检出数据仓库（未配置则跳过）
         if: vars.REGISTRY_REPO != ''
