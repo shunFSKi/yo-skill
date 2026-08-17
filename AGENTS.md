@@ -31,7 +31,7 @@ skill-manager/
 │   └── desktop/                     # 桌面端 @yo-skill/desktop（Tauri 2 + React 18 + Vite；七屏：已安装/发现/详情/去重/设置/首次向导/恢复；36 个 IPC 命令；ARCHITECTURE.md 是架构真相源，AGENTS.md 是 L2 地图；视觉 = 原型 yo.css 逐字移植）
 ├── crates/                          # Rust 业务核心（Cargo workspace 成员，L2 地图见 crates/AGENTS.md）
 │   ├── vault/                       # 本地数据层：SQLite（可选 SQLCipher）+ Argon2id + API Key 字段级 AES-256-GCM + 快照
-│   ├── agent-adapter/               # 15 助手适配：检测 / Skill·MCP 扫描 / 模式 A/B 分发记账（junction/symlink/副本）
+│   ├── agent-adapter/               # 13 助手适配：检测 / Skill·MCP 扫描 / 模式 A/B 分发记账（junction/symlink/副本）
 │   ├── conflict-detector/           # 重复/冲突检测（同名归并 + 内容指纹 + 描述相似度）
 │   ├── skill-index/                 # 市场数据层：registry 拉取（数据仓 raw URL 多源兜底 GitHub→Gitee→jsDelivr / 本地目录）+ 搜索过滤排序
 │   └── sync-engine/                 # E2E 加密备份（YSBK 格式）+ LocalDirBackend（指向用户云盘即得云同步）
@@ -47,7 +47,7 @@ skill-manager/
 │   ├── themes.html                  # 五套候选配色对比页（2026-08-11 视觉定稿 V2 决策存档）
 │   ├── colors.html                  # 状态配色三选一对比页（2026-08-11 视觉定稿 V4 决策存档）
 │   ├── logos/                       # 主流 Agent 官方品牌 SVG（simple-icons 下载，本地引用无依赖）
-│   ├── index.html                   # 屏 1：主屏已安装（默认按助手看：15 个主流助手瓷砖墙 + 过滤框 + 全局搜索；统一视图：跨助手按名合并 Skill/MCP，Skill/MCP 分段切换；提醒条联动 dedupe 状态）
+│   ├── index.html                   # 屏 1：主屏已安装（默认按助手看：13 个主流助手瓷砖墙 + 过滤框 + 全局搜索；统一视图：跨助手按名合并 Skill/MCP，Skill/MCP 分段切换；提醒条联动 dedupe 状态）
 │   ├── skill.html                   # 屏 2：能力卡片详情（含存放方式选择：所有助手共用一份〔默认〕/ 每个助手单独放一份；源 README 面板；?name=&type=&from= 数据驱动）
 │   ├── dedupe.html                  # 屏 3：重复项合并页（2026-08-12 真交互：合并/三选一/保持现状真持久化 + 撤销，与主屏提醒条联动）
 │   ├── store.html                   # 屏 4：仓库「发现」页（Skill/MCP 分段切换 + 分类/搜索/排序真过滤 + 安装弹层全流程）
@@ -124,7 +124,7 @@ skill-manager/
 - 存储：**单一 Rust crate（`vault`）**——`rusqlite`（features: `bundled` + `backup` + `hooks`）+ **SQLCipher**（本地整库 AES-256 加密）+ Argon2id 派生密钥（连接时 `PRAGMA key`）。**排除官方 `tauri-plugin-sql`**（底层 sqlx 不支持 SQLite 加密）。云端 E2E 加密 vault 只存密文不变。`vault` crate 只服务 desktop（详见 `storage_architecture.md`）
 - Skill 收拢/分发机制（2026-08-12 用户确认）：**vault 中央库恒定单一事实源，用户选的是分发方式**——模式 A「所有助手共用一份」（**默认**：实体放 `~/.agents/skills/` 行业标准位，Codex/Gemini/OpenCode/Kimi/Copilot/Replit 零分发直接生效；不认的助手自动搭桥——macOS symlink / Windows junction（免管理员），失败降级 copy）/ 模式 B「每个助手单独放一份」（Cursor【文件监听不吃目录软链】、云同步盘、权限受限环境兜底，更新/卸载回写所有副本）；每个 skill 记账（模式 + 每助手入口类型），**更新不得静默改模式**（vercel skills #1199 教训）；界面话术不出现 symlink/junction/copy（竞品依据与 6 条工程纪律详见 `mavis-deep-research/20260812_115055_skill_storage_strategy/` §五）
 - 平台优先级：macOS 第一 / Windows 第二；**MVP 不做 Linux**（2026-08-12 用户改定：WebKitGTK 不稳定 + 空应用内存反超 Electron，Linux 是 Tauri 最弱平台，砍掉省跨平台测试负担；后续按社区需求再评估）；MVP **不做移动端**
-- Agent 支持面：**主流 Agent 全支持**（2026-08-12 用户改定，原"MVP 只支持 Claude Code + Codex"已推翻；原型演示 15 个：Claude Code / Codex / Gemini CLI / Cursor / Windsurf / GitHub Copilot / Kimi Code / Cline / Roo Code / Continue / Aider / Trae / Qwen Code / OpenCode / Replit，品牌色瓷砖 + 真实 logo），不做团队版；桌面端产品代码暂不开源（本调研工作区仓库与数据仓已开源，均不含产品代码）
+- Agent 支持面：**主流 Agent 全支持**（2026-08-12 用户改定，原"MVP 只支持 Claude Code + Codex"已推翻；原型演示 13 个：Claude Code / Codex / Gemini CLI / Cursor / Windsurf / GitHub Copilot / Kimi Code / Cline / Aider / Trae / Qwen Code / OpenCode / Replit——2026-08-17 用户改定移除 Roo Code / Continue，品牌色瓷砖 + 真实 logo），不做团队版；桌面端产品代码暂不开源（本调研工作区仓库与数据仓已开源，均不含产品代码）
 - 核心差异化：GUI + 云同步、6 维度冲突检测（同名 / 描述相似 / 调用链 / 优先级 / port / 语义）、Skill 对比推荐、MCP 一站式管理
 - 值得从 Cindy 抄的工程纪律：工具二进制按平台分发（独立 update 脚本 + pinned version + sha256 校验 + postinstall 钩子）、device-link 配对 UX、project-context 的全局/项目双层抽象、telemetry 集中在一个 `analytics/` 目录且默认 no-op
 
