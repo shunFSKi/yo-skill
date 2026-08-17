@@ -28,7 +28,7 @@ skill-manager/
 ├── package.json / pnpm-workspace.yaml / tsconfig.base.json  # pnpm monorepo 根（Node 22+ / pnpm 10+）
 ├── apps/
 │   ├── web/                         # 官网 Web 应用 @yo-skill/web（Next.js 15 App Router + React 18 + Tailwind + next-themes；落地页 + /api/waitlist + /market 真实数据市场（4 万+ 条：服务端过滤 URL 即状态 + 动态分类〔管线 10 类〕+ 四档排序 + 详情页头部 200 SSG/长尾 ISR，含源仓库 README + 三微章信任体系 + 可复制安装芯片 + 每 Agent 路径矩阵 + 同类推荐 + yoskill:// deeplink + 动态 OG + JSON-LD）+ /market/collections 策展页 + /api/v1 只读 API + llms.txt + RSS + 隐私/条款页 + 移动端汉堡导航 + account 占位；视觉「纸上墨字 + 一笔翡翠」，详见本目录 README）
-│   └── desktop/                     # 桌面端 @yo-skill/desktop（Tauri 2 + React 18 + Vite；七屏：已安装/发现/详情/去重/设置/首次向导/恢复；33 个 IPC 命令；ARCHITECTURE.md 是架构真相源，AGENTS.md 是 L2 地图；视觉 = 原型 yo.css 逐字移植）
+│   └── desktop/                     # 桌面端 @yo-skill/desktop（Tauri 2 + React 18 + Vite；七屏：已安装/发现/详情/去重/设置/首次向导/恢复；34 个 IPC 命令；ARCHITECTURE.md 是架构真相源，AGENTS.md 是 L2 地图；视觉 = 原型 yo.css 逐字移植）
 ├── crates/                          # Rust 业务核心（Cargo workspace 成员，L2 地图见 crates/AGENTS.md）
 │   ├── vault/                       # 本地数据层：SQLite（可选 SQLCipher）+ Argon2id + API Key 字段级 AES-256-GCM + 快照
 │   ├── agent-adapter/               # 15 助手适配：检测 / Skill·MCP 扫描 / 模式 A/B 分发记账（junction/symlink/副本）
